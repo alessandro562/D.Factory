@@ -4,7 +4,8 @@
 python3 deck/build.py      # sorgenti -> DFactory_SalesDeck.html (standalone)
 python3 deck/qa.py         # controlli automatici (overflow, palette, termini)
 python3 deck/render.py --contact-sheet   # -> PNG per slide + DFactory_SalesDeck.pdf
-python3 deck/build_web.py  # -> deck/web/, versione web da pubblicare come link
+python3 deck/build_web.py  # -> deck/web/, visualizzatore web (frammento)
+python3 deck/standalone.py # -> HTML autonomi da scaricare, a dipendenza zero
 ```
 
 ## Struttura
@@ -16,7 +17,8 @@ python3 deck/build_web.py  # -> deck/web/, versione web da pubblicare come link
 | `src/dash.html` | i 7 mockup di prodotto, come componenti riusabili (`<!--@DASH:NOME@-->`) |
 | `assets/` | lockup e marchio, nero e bianco su trasparente |
 | `fonts/` | Geist e Geist Mono variable woff2 (dal pacchetto npm `geist`) |
-| `web/` | visualizzatore web (frammento per Artifact, senza doctype/head/body) |
+| `web/` | visualizzatore web (frammento, senza doctype/head/body) |
+| `review/` | review commerciale del deck (frammento) |
 | `out/` | render intermedi, non versionati |
 
 `build.py` concatena i sorgenti, inserisce i mockup sui token `@@DASH_NOME@@` (e
@@ -100,3 +102,19 @@ adatta solo la cornice, via token, con override per `data-theme`.
 - **Tastiera:** frecce, PageUp/PageDown, spazio, Home, End, `O` indice, `Esc` chiude.
 - Il contatore segue la prima slide visibile sotto la barra, non quella "piu' centrata":
   su schermi stretti ne entrano diverse in viewport e il centro non basta a disambiguare.
+
+## File da consegnare
+
+`standalone.py` chiude i frammenti di `web/` e `review/` in documenti HTML completi, con
+doctype, `<head>`, titolo e favicon. Font e immagini sono gia' in base64, quindi i file
+funzionano **offline e inoltrati per email**, senza rete e senza cartelle di appoggio:
+
+| File | Cos'e' |
+|---|---|
+| `DFactory_SalesDeck.html` | il deck, scorrimento verticale semplice |
+| `DFactory_SalesDeck_Viewer.html` | il deck col visualizzatore (tastiera, indice a griglia) |
+| `DFactory_SalesDeck_Review.html` | la review commerciale, 23 rilievi |
+| `DFactory_SalesDeck.pdf` | il deck in PDF, 13.333x7.5in |
+
+I frammenti restano in `web/` e `review/` perche' servono anche alla pubblicazione come
+pagina ospitata; `standalone.py` non li modifica, li impacchetta.
