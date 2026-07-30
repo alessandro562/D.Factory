@@ -4,6 +4,7 @@
 python3 deck/build.py      # sorgenti -> DFactory_SalesDeck.html (standalone)
 python3 deck/qa.py         # controlli automatici (overflow, palette, termini)
 python3 deck/render.py --contact-sheet   # -> PNG per slide + DFactory_SalesDeck.pdf
+python3 deck/build_web.py  # -> deck/web/, versione web da pubblicare come link
 ```
 
 ## Struttura
@@ -15,6 +16,7 @@ python3 deck/render.py --contact-sheet   # -> PNG per slide + DFactory_SalesDeck
 | `src/dash.html` | i 7 mockup di prodotto, come componenti riusabili (`<!--@DASH:NOME@-->`) |
 | `assets/` | lockup e marchio, nero e bianco su trasparente |
 | `fonts/` | Geist e Geist Mono variable woff2 (dal pacchetto npm `geist`) |
+| `web/` | visualizzatore web (frammento per Artifact, senza doctype/head/body) |
 | `out/` | render intermedi, non versionati |
 
 `build.py` concatena i sorgenti, inserisce i mockup sui token `@@DASH_NOME@@` (e
@@ -83,3 +85,18 @@ npm install geist    # solo per rigenerare i font in deck/fonts/
 
 Chromium è già presente in questo ambiente (`/opt/pw-browsers/chromium-1194/`); `render.py`
 e `qa.py` lo usano via `executable_path` e ricadono sul default se assente.
+
+## Versione web
+
+`build_web.py` avvolge ogni slide in un contenitore scalabile e aggiunge la cornice del
+visualizzatore, riusando i token e il Geist Mono gia' presenti nel deck: nessun font e
+nessun colore nuovo. Le slide non si invertono col tema del lettore (sono l'opera), si
+adatta solo la cornice, via token, con override per `data-theme`.
+
+- La scala esatta la calcola il JS da `clientWidth` (`100vw` includerebbe la barra di
+  scorrimento e produrrebbe overflow orizzontale). Fallback CSS `--s:.72` se il JS non parte.
+- **Vista d'insieme:** stesso DOM, sola scala diversa (`body.ov`), quindi nessuna copia
+  delle 30 slide in miniatura.
+- **Tastiera:** frecce, PageUp/PageDown, spazio, Home, End, `O` indice, `Esc` chiude.
+- Il contatore segue la prima slide visibile sotto la barra, non quella "piu' centrata":
+  su schermi stretti ne entrano diverse in viewport e il centro non basta a disambiguare.
