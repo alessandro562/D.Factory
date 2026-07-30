@@ -245,15 +245,16 @@ def main() -> None:
         sys.exit("data URI del marchio non trovato")
 
     # ogni <section class="slide"> in un contenitore scalabile
-    chunks = re.findall(r'<section class="slide.*?</section>', html, re.S)
-    if len(chunks) != 30:
-        sys.exit(f"attese 30 slide, trovate {len(chunks)}")
+    chunks = re.findall(r'<section data-part=.*?</section>', html, re.S)
+    if not chunks:
+        sys.exit("nessuna slide trovata nel deck costruito")
     slots = []
     for i, c in enumerate(chunks, start=1):
-        m = re.search(r'DOC (\d+)/30</div>\s*<div class="c">([^<]+)</div>', c)
+        m = re.search(r'DOC (A?\d+)/A?\d+</div>\s*<div class="c">([^<]+)</div>', c)
         num = m.group(1) if m else f"{i:02d}"
         sec = m.group(2).strip() if m else ""
-        slots.append(f'<div class="slot" data-n="{num}" data-sec="{sec}" '
+        part = re.search(r'data-part="(\w+)"', c).group(1)
+        slots.append(f'<div class="slot" data-n="{num}" data-sec="{sec}" data-part="{part}" '
                      f'aria-label="Slide {num}, {sec}">{c}</div>')
 
     viewer_css = (VIEWER_CSS

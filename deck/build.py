@@ -177,12 +177,41 @@ def load_dash_components() -> dict:
     return comps
 
 
+def number_slides(html: str) -> str:
+    """Numera le slide in ordine di documento: nucleo 01.., appendice A01..
+
+    I numeri erano scritti a mano su ogni slide (masthead e cartiglio) e si rompevano a
+    ogni riordino. Qui si ricavano dalla posizione, con serie separate per le due parti.
+    """
+    parts = re.findall(r'<section data-part="(\w+)"', html)
+    tot_core = parts.count("nucleo")
+    tot_apx = parts.count("appendice")
+    seq = {"nucleo": 0, "appendice": 0}
+    out, pos = [], 0
+    for m in re.finditer(r'<section data-part="(\w+)"', html):
+        part = m.group(1)
+        seq[part] += 1
+        i = seq[part]
+        if part == "nucleo":
+            label, doc = f"{i:02d}", f"{i:02d}/{tot_core:02d}"
+        else:
+            label, doc = f"A{i:02d}", f"A{i:02d}/A{tot_apx:02d}"
+        end = html.find("</section>", m.end())
+        chunk = html[m.start():end]
+        chunk = chunk.replace("@@N@@", label, 1).replace("@@DOC@@", doc, 1)
+        out.append(html[pos:m.start()])
+        out.append(chunk)
+        pos = end
+    out.append(html[pos:])
+    return "".join(out)
+
+
 def main() -> None:
     html = "\n".join(
         (SRC / n).read_text(encoding="utf-8")
-        for n in ("00_head.html", "01_slides_01_10.html",
-                  "02_slides_11_20.html", "03_slides_21_30.html")
+        for n in ("00_head.html", "10_core.html", "20_appendice.html")
     )
+    html = number_slides(html)
 
     # mockup: prima si riempiono le chart generate, poi si inseriscono i componenti
     comps = load_dash_components()
@@ -222,8 +251,9 @@ def main() -> None:
         sys.exit(f"token non risolti: {sorted(leftover)}")
 
     OUT.write_text(html, encoding="utf-8")
-    n = html.count('<section class="slide')
-    print(f"{OUT.name}: {n} slide, {len(html) / 1024:.0f} KB")
+    n = html.count("<section data-part=")
+    core = html.count('data-part="nucleo"')
+    print(f"{OUT.name}: {n} slide ({core} nucleo + {n - core} appendice), {len(html) / 1024:.0f} KB")
 
 
 if __name__ == "__main__":

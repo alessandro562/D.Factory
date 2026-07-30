@@ -28,23 +28,17 @@ base64. L'HTML in uscita è standalone: **nessuna dipendenza CDN**.
 
 ## Convenzioni
 
-- **Editing per id DOM, non per numero visualizzato.** Gli id non seguono la numerazione a
-  schermo: l'offset nasce dalle slide inserite prima di `s07_super` (che resta l'id storico
-  della slide MAPST 4.0, oggi visualizzata come 08). Mappa completa:
+- **Nucleo e appendice.** `src/10_core.html` contiene le 18 slide che si presentano,
+  `src/20_appendice.html` le 17 di dettaglio tecnico. Ogni `<section>` porta
+  `data-part="nucleo"` o `data-part="appendice"`.
 
-  | id | # | id | # | id | # |
-  |---|---|---|---|---|---|
-  | `s01_cover` | 01 | `s11_velocita` | 12 | `s21_sensori` | 22 |
-  | `s02_perche_ora` | 02 | `s12_multi` | 13 | `s22_pacchetti` | 23 |
-  | `s03_problema` | 03 | `s13_oee` | 14 | `s23_roi` | 24 |
-  | `s04_gap` | 04 | `s14_distrib` | 15 | `s24_posizionamento` | 25 |
-  | `s05_soluzione` | 05 | `s15_costo` | 16 | `s25_differenziatori` | 26 |
-  | `s06_refyn` | 06 | `s16_stato` | 17 | `s26_prova` | 27 |
-  | `s06_architettura` | 07 | `s17_misura` | 18 | `s27_gruppo` | 28 |
-  | `s07_super` | 08 | `s18_brownfield` | 19 | `s28_prossimi` | 29 |
-  | `s08_platform` | 09 | `s19_report` | 20 | `s29_cta` | 30 |
-  | `s09_superv` | 10 | `s20_attivazione` | 21 | | |
-  | `s10_fermi` | 11 | | | | |
+- **La numerazione e' automatica.** Masthead e cartiglio usano i token `@@N@@` e `@@DOC@@`,
+  riempiti da `build.py` in base alla posizione: nucleo `01..18`, appendice `A01..A17`.
+  Riordinare o inserire una slide non richiede piu' di toccare i numeri a mano.
+
+- **Editing per id DOM, non per numero visualizzato.** Gli id restano stabili anche quando
+  la posizione cambia: `s07_super` e' ancora l'id storico della slide MAPST 4.0, oggi in
+  appendice. Per trovare una slide: `grep -n 'id="s..' src/*.html`.
 
 - **Modifiche via `str_replace` con guardia di unicità** sui file in `src/`, poi rebuild.
   Non editare `DFactory_SalesDeck.html`: è generato e viene sovrascritto.
