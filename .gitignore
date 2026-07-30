@@ -1,0 +1,3 @@
+# render intermedi: rigenerabili con deck/render.py
+deck/out/
+node_modules/
