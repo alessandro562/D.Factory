@@ -22,8 +22,15 @@ DOCS = [
         "src": ROOT / "web" / "DFactory_SalesDeck_web.html",
         "out": REPO / "DFactory_SalesDeck_Viewer.html",
         "title": "D.Factory · Sales Deck",
-        "desc": "Sales deck D.Factory, 30 slide, con Refyn come modulo di punta.",
+        "desc": "Sales deck D.Factory, 14 slide.",
         "emoji": "🏭",
+    },
+    {
+        "src": ROOT / "web" / "DFactory_DossierTecnico_web.html",
+        "out": REPO / "DFactory_DossierTecnico_Viewer.html",
+        "title": "D.Factory · Dossier tecnico",
+        "desc": "Dettaglio di prodotto, integrazione e delivery, 16 slide.",
+        "emoji": "🔧",
     },
     {
         "src": ROOT / "review" / "sales_review.html",

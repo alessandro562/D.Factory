@@ -1,44 +1,43 @@
-# Pipeline sales deck D.Factory
+# Pipeline deck D.Factory
+
+Due documenti distinti, stesso design system e stessa pipeline.
 
 ```
-python3 deck/build.py      # sorgenti -> DFactory_SalesDeck.html (standalone)
-python3 deck/qa.py         # controlli automatici (overflow, palette, termini)
-python3 deck/render.py --contact-sheet   # -> PNG per slide + DFactory_SalesDeck.pdf
-python3 deck/build_web.py  # -> deck/web/, visualizzatore web (frammento)
-python3 deck/standalone.py # -> HTML autonomi da scaricare, a dipendenza zero
+python3 deck/build.py      # -> DFactory_SalesDeck.html (14) + DFactory_DossierTecnico.html (16)
+python3 deck/qa.py         # checklist completa: struttura, contenuto, placeholder, stile, render
+python3 deck/render.py --contact-sheet   # PNG per slide + i due PDF + contact sheet
+python3 deck/build_web.py  # visualizzatori web (frammenti)
+python3 deck/standalone.py # HTML autonomi da scaricare, a dipendenza zero
 ```
 
 ## Struttura
 
 | Percorso | Cosa contiene |
 |---|---|
-| `src/00_head.html` | head, token font, design system CSS |
-| `src/01_slides_01_10.html` … `src/03_slides_21_30.html` | markup delle slide |
-| `src/dash.html` | i 7 mockup di prodotto, come componenti riusabili (`<!--@DASH:NOME@-->`) |
-| `assets/` | lockup e marchio, nero e bianco su trasparente |
-| `fonts/` | Geist e Geist Mono variable woff2 (dal pacchetto npm `geist`) |
-| `web/` | visualizzatore web (frammento, senza doctype/head/body) |
-| `review/` | review commerciale del deck (frammento) |
-| `out/` | render intermedi, non versionati |
-
-`build.py` concatena i sorgenti, inserisce i mockup sui token `@@DASH_NOME@@` (e
-`@@DASH_NOME_MINI@@` per la versione in scala), genera il markup ripetitivo delle chart
-(timeline 20 macchine, barre orarie, diagramma di flusso energia) e inlinea font e logo in
-base64. L'HTML in uscita è standalone: **nessuna dipendenza CDN**.
+| `src/00_head.html` | head, token font, design system CSS, stile placeholder |
+| `src/10_core.html` | le 14 slide del sales deck |
+| `src/20_dossier.html` | le 16 slide del dossier tecnico |
+| `src/dash.html` | i 7 mockup di prodotto, come componenti riusabili |
+| `src/_interno_matrice.html` | matrice competitiva, **non compilata**: materiale interno |
+| `assets/` `fonts/` | logo e Geist variable woff2 |
+| `web/` `review/` | frammenti per la pubblicazione web |
+| `out/sales/` `out/dossier/` | render intermedi, non versionati |
+| `MAPPATURA.md` | id DOM -> titolo -> destinazione |
 
 ## Convenzioni
 
-- **Nucleo e appendice.** `src/10_core.html` contiene le 18 slide che si presentano,
-  `src/20_appendice.html` le 17 di dettaglio tecnico. Ogni `<section>` porta
-  `data-part="nucleo"` o `data-part="appendice"`.
+- **Due documenti.** `10_core.html` e `20_dossier.html`. `build.py` produce un file per
+  ciascuno, con codice di cartiglio proprio (`DF-SLS` e `DF-TEC`).
 
-- **La numerazione e' automatica.** Masthead e cartiglio usano i token `@@N@@` e `@@DOC@@`,
-  riempiti da `build.py` in base alla posizione: nucleo `01..18`, appendice `A01..A17`.
-  Riordinare o inserire una slide non richiede piu' di toccare i numeri a mano.
+- **La numerazione e' automatica.** Masthead e cartiglio usano `@@N@@`, `@@DOC@@` e
+  `@@CODE@@`, riempiti in base alla posizione. Riordinare non richiede di toccare numeri.
+
+- **Placeholder.** I dati che il committente non ha ancora fornito si scrivono come
+  `[[PH_NN_NOME]]`: `build.py` li rende visibili con lo stile tratteggiato e li elenca a
+  fine build. **Non vanno mai riempiti con dati dedotti o stimati.**
 
 - **Editing per id DOM, non per numero visualizzato.** Gli id restano stabili anche quando
-  la posizione cambia: `s07_super` e' ancora l'id storico della slide MAPST 4.0, oggi in
-  appendice. Per trovare una slide: `grep -n 'id="s..' src/*.html`.
+  la posizione cambia. Per trovare una slide: `grep -n 'id="s' src/*.html`.
 
 - **Modifiche via `str_replace` con guardia di unicità** sui file in `src/`, poi rebuild.
   Non editare `DFactory_SalesDeck.html`: è generato e viene sovrascritto.

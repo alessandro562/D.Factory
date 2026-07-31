@@ -14,8 +14,12 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent
-SRC = ROOT.parent / "DFactory_SalesDeck.html"
-OUT = ROOT / "web" / "DFactory_SalesDeck_web.html"
+DOCS = [
+    {"src": ROOT.parent / "DFactory_SalesDeck.html",
+     "out": ROOT / "web" / "DFactory_SalesDeck_web.html", "label": "Sales Deck"},
+    {"src": ROOT.parent / "DFactory_DossierTecnico.html",
+     "out": ROOT / "web" / "DFactory_DossierTecnico_web.html", "label": "Dossier tecnico"},
+]
 
 THUMB_W = 232          # larghezza fissa della miniatura in vista d'insieme
 THUMB_SCALE = THUMB_W / 1280
@@ -229,7 +233,7 @@ VIEWER_JS = """
 """
 
 
-def main() -> None:
+def build(SRC, OUT, LABEL) -> None:
     if not SRC.exists():
         sys.exit(f"manca {SRC}: esegui prima deck/build.py")
     html = SRC.read_text(encoding="utf-8")
@@ -269,7 +273,7 @@ def main() -> None:
 
 <header class="vbar">
   <span class="mk" aria-hidden="true"></span>
-  <span class="id">D.Factory &middot; Sales Deck</span>
+  <span class="id">D.Factory &middot; {LABEL}</span>
   <span class="sub" id="v-sec">Cover</span>
   <span class="sp"></span>
   <span class="n" id="v-n">01<i>&thinsp;/&thinsp;30</i></span>
@@ -292,4 +296,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    for d in DOCS:
+        build(d["src"], d["out"], d["label"])

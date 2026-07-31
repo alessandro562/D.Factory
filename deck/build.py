@@ -8,7 +8,7 @@ Assembla il sales deck D.Factory in un singolo HTML standalone.
 - inlinea font Geist/Geist Mono e asset logo in base64 (nessuna dipendenza CDN)
 
 Uso:  python3 deck/build.py
-Out:  DFactory_SalesDeck.html
+Out:  DFactory_SalesDeck.html (14 slide) e DFactory_DossierTecnico.html
 """
 import base64
 import pathlib
@@ -19,7 +19,13 @@ ROOT = pathlib.Path(__file__).resolve().parent
 REPO = ROOT.parent
 SRC = ROOT / "src"
 ASSETS = ROOT / "assets"
-OUT = REPO / "DFactory_SalesDeck.html"
+# due documenti distinti: si mandano a interlocutori diversi, in momenti diversi
+DOCS = [
+    {"name": "sales", "src": "10_core.html", "out": REPO / "DFactory_SalesDeck.html",
+     "code": "DF-SLS", "title": "D.Factory · Sales Deck"},
+    {"name": "dossier", "src": "20_dossier.html", "out": REPO / "DFactory_DossierTecnico.html",
+     "code": "DF-TEC", "title": "D.Factory · Dossier tecnico"},
+]
 
 FONT_DIRS = [
     ROOT / "fonts",
@@ -177,28 +183,21 @@ def load_dash_components() -> dict:
     return comps
 
 
-def number_slides(html: str) -> str:
-    """Numera le slide in ordine di documento: nucleo 01.., appendice A01..
+def number_slides(html: str, code: str) -> str:
+    """Numera le slide in ordine di documento e applica il codice del cartiglio.
 
-    I numeri erano scritti a mano su ogni slide (masthead e cartiglio) e si rompevano a
-    ogni riordino. Qui si ricavano dalla posizione, con serie separate per le due parti.
+    I numeri erano scritti a mano su ogni slide e si rompevano a ogni riordino: qui si
+    ricavano dalla posizione. Ogni documento ha una serie propria, che parte da 01.
     """
-    parts = re.findall(r'<section data-part="(\w+)"', html)
-    tot_core = parts.count("nucleo")
-    tot_apx = parts.count("appendice")
-    seq = {"nucleo": 0, "appendice": 0}
-    out, pos = [], 0
-    for m in re.finditer(r'<section data-part="(\w+)"', html):
-        part = m.group(1)
-        seq[part] += 1
-        i = seq[part]
-        if part == "nucleo":
-            label, doc = f"{i:02d}", f"{i:02d}/{tot_core:02d}"
-        else:
-            label, doc = f"A{i:02d}", f"A{i:02d}/A{tot_apx:02d}"
+    tot = html.count("<section data-part=")
+    out, pos, seq = [], 0, 0
+    for m in re.finditer(r'<section data-part="\w+"', html):
+        seq += 1
         end = html.find("</section>", m.end())
         chunk = html[m.start():end]
-        chunk = chunk.replace("@@N@@", label, 1).replace("@@DOC@@", doc, 1)
+        chunk = (chunk.replace("@@N@@", f"{seq:02d}", 1)
+                      .replace("@@DOC@@", f"{seq:02d}/{tot:02d}", 1)
+                      .replace("@@CODE@@", code))
         out.append(html[pos:m.start()])
         out.append(chunk)
         pos = end
@@ -206,14 +205,26 @@ def number_slides(html: str) -> str:
     return "".join(out)
 
 
-def main() -> None:
-    html = "\n".join(
-        (SRC / n).read_text(encoding="utf-8")
-        for n in ("00_head.html", "10_core.html", "20_appendice.html")
-    )
-    html = number_slides(html)
+def placeholders(html: str) -> tuple:
+    """Rende visibili i token [[PH_XX_NOME]] con lo stile placeholder del deck.
 
-    # mockup: prima si riempiono le chart generate, poi si inseriscono i componenti
+    I dati che il committente non ha ancora fornito non vanno inventati ne' dedotti:
+    restano token leggibili, cosi' chi rilegge il deck sa esattamente cosa manca.
+    """
+    found = []
+
+    def render(m):
+        token = m.group(1)
+        found.append(token)
+        label = token.split("_", 2)[2].replace("_", " ").lower()
+        return f'<span class="ph ph-open" data-ph="{token}">da fornire: {label}</span>'
+
+    html = re.sub(r"\[\[(PH_\d+_[A-Z_]+)\]\]", render, html)
+    return html, found
+
+
+def build_components() -> dict:
+    """Mockup di prodotto, con le chart generate gia' innestate."""
     comps = load_dash_components()
     charts = {"multirows": multirows(), "hourbars": hourbars()}
     for name in comps:
@@ -226,16 +237,11 @@ def main() -> None:
                 attrs, _, after = rest.partition("></div>")
                 markup = f"{before}<div{attrs}>\n{generated}\n</div>{after}"
         comps[name] = markup
+    return comps
 
-    for name, markup in comps.items():
-        html = html.replace(f"@@DASH_{name}_MINI@@",
-                            '<div class="mini" style="width:518px;height:296px;position:relative;overflow:hidden">'
-                            '<div style="transform:scale(.74);transform-origin:0 0">'
-                            + markup + '</div></div>')
-        html = html.replace(f"@@DASH_{name}@@", markup)
 
-    # asset e font in base64
-    subs = {
+def assets() -> dict:
+    return {
         "@@FONT_SANS@@": data_uri(find_font("geist-sans/Geist-Variable.woff2"), "font/woff2"),
         "@@FONT_MONO@@": data_uri(find_font("geist-mono/GeistMono-Variable.woff2"), "font/woff2"),
         "@@LOCK_W@@": data_uri(ASSETS / "asset_lockup_white.png", "image/png"),
@@ -243,17 +249,47 @@ def main() -> None:
         "@@MARK_W@@": data_uri(ASSETS / "asset_mark_white.png", "image/png"),
         "@@MARK_B@@": data_uri(ASSETS / "asset_mark_black.png", "image/png"),
     }
-    for k, v in subs.items():
-        html = html.replace(k, v)
 
-    leftover = set(re.findall(r"@@[A-Z_0-9]+@@", html))
-    if leftover:
-        sys.exit(f"token non risolti: {sorted(leftover)}")
 
-    OUT.write_text(html, encoding="utf-8")
-    n = html.count("<section data-part=")
-    core = html.count('data-part="nucleo"')
-    print(f"{OUT.name}: {n} slide ({core} nucleo + {n - core} appendice), {len(html) / 1024:.0f} KB")
+def main() -> None:
+    head = (SRC / "00_head.html").read_text(encoding="utf-8")
+    comps, subs = build_components(), assets()
+    open_ph = {}
+
+    for doc in DOCS:
+        body = (SRC / doc["src"]).read_text(encoding="utf-8")
+        html = number_slides(head + body, doc["code"])
+        html = html.replace("<title>D.Factory · Sales Deck</title>",
+                            f"<title>{doc['title']}</title>")
+
+        for name, markup in comps.items():
+            html = html.replace(
+                f"@@DASH_{name}_MINI@@",
+                '<div class="mini" style="width:518px;height:296px;position:relative;overflow:hidden">'
+                '<div style="transform:scale(.74);transform-origin:0 0">' + markup + "</div></div>")
+            html = html.replace(f"@@DASH_{name}@@", markup)
+
+        html, found = placeholders(html)
+        open_ph[doc["name"]] = found
+
+        for k, v in subs.items():
+            html = html.replace(k, v)
+
+        leftover = set(re.findall(r"@@[A-Z_0-9]+@@", html)) | set(re.findall(r"\[\[PH_[^\]]+\]\]", html))
+        if leftover:
+            sys.exit(f"{doc['out'].name}: token non risolti: {sorted(leftover)}")
+
+        doc["out"].write_text(html, encoding="utf-8")
+        n = html.count("<section data-part=")
+        print(f"{doc['out'].name}: {n} slide, {len(html) / 1024:.0f} KB, "
+              f"{len(found)} placeholder aperti")
+
+    tot = sum(len(v) for v in open_ph.values())
+    if tot:
+        print(f"\nplaceholder da compilare ({tot}):")
+        for name, toks in open_ph.items():
+            for t in sorted(set(toks)):
+                print(f"  {name:<8} {t}")
 
 
 if __name__ == "__main__":

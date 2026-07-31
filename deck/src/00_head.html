@@ -149,6 +149,17 @@ body{font-family:"Geist",sans-serif;-webkit-font-smoothing:antialiased;text-rend
   padding:4px 8px;border:1px dashed var(--line2);color:var(--muted);border-radius:2px}
 .ph::before{content:"";width:5px;height:5px;background:var(--acid);flex:0 0 5px}
 .dark .ph{border-color:var(--dline2);color:var(--dmuted)}
+/* placeholder aperto: informazione che il committente deve ancora fornire.
+   Deve restare visibile e riconoscibile, mai riempita con dati dedotti. */
+.ph.ph-open{border-style:dashed;border-width:1px;border-color:var(--line2);
+  background:repeating-linear-gradient(135deg,transparent,transparent 5px,rgba(230,224,17,.13) 5px,rgba(230,224,17,.13) 10px)}
+.dark .ph.ph-open{border-color:var(--dline2);
+  background:repeating-linear-gradient(135deg,transparent,transparent 5px,rgba(230,224,17,.16) 5px,rgba(230,224,17,.16) 10px)}
+.ph-block{border:1px dashed var(--line2);padding:16px 18px;position:relative;
+  background:repeating-linear-gradient(135deg,transparent,transparent 7px,rgba(230,224,17,.09) 7px,rgba(230,224,17,.09) 14px)}
+.ph-block .ph-what{font:500 8.5px/1.5 "Geist Mono",monospace;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--muted)}
+.ph-block .ph-need{font-size:12.5px;line-height:1.5;color:var(--muted);margin-top:8px}
 
 /* stat */
 .stats{display:grid;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0}
