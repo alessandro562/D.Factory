@@ -1,0 +1,1489 @@
+<!-- =====================================================================
+     DOSSIER TECNICO v2 · 18 pagine, quattro sezioni.
+     1 prodotto e architettura · 2 funzioni · 3 integrazione e metodo
+     4 delivery e supporto. La sezione compare nel rail superiore.
+
+     Budget giallo ridotto a 2 ruoli per pagina. Sulle pagine scure il punto
+     del marchio ne consuma gia' uno.
+     ===================================================================== -->
+
+<!-- =====================================================================
+     01 · COPERTINA — scura · sezione 0
+     ===================================================================== -->
+<div class="slide slide--dark" id="d01_cover">
+  <div class="grid-bg"></div>
+
+  <div class="rail rail--t">
+    <span>Dossier tecnico · D.Factory</span>
+    <span>Documento di lavoro · non definitivo</span>
+  </div>
+
+  <div class="zone" style="top:150px">
+    <div class="grid12" style="align-items:start">
+      <div class="c5">
+        <h1 class="t-cover">Dossier<br>tecnico.</h1>
+        <p class="t-body" style="margin:26px 0 0;max-width:400px">Risponde a una domanda sola: può
+          funzionare davvero sul tuo impianto e cosa serve per implementarlo.</p>
+      </div>
+      <div class="c7">
+        <div class="matrix" style="grid-template-columns:auto 1fr">
+          <div class="matrix__h">Voce</div><div class="matrix__h">Contenuto</div>
+          <div>Destinatari</div><div>IT, OT, automazione, engineering, manutenzione, energy management</div>
+          <div>Perimetro</div><div>Architettura, dati, deployment, metodo di misura, delivery, supporto</div>
+          <div>Documento gemello</div><div>Sales deck: perché adesso, perché D.Factory, quale primo passo</div>
+          <div>Owner tecnico</div><div>D Factory S.r.l. · Collecchio (PR)</div>
+          <div>Stato</div><div>Bozza di lavoro. I campi marcati "da validare" non sono ancora confermati</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="zone" style="bottom:104px">
+    <div class="rule" style="margin-bottom:20px"></div>
+    <div class="grid12">
+      <div class="c2">
+        <a class="link-card" href="#d02_architettura_prodotto">
+          <span class="link-card__k">Sezione 1 · pag. 02</span>
+          <span class="link-card__t">Prodotto e architettura</span>
+        </a>
+      </div>
+      <div class="c2">
+        <a class="link-card" href="#d05_supervisione">
+          <span class="link-card__k">Sezione 2 · pag. 05</span>
+          <span class="link-card__t">Funzioni</span>
+        </a>
+      </div>
+      <div class="c2">
+        <a class="link-card" href="#d11_metodo_misura">
+          <span class="link-card__k">Sezione 3 · pag. 11</span>
+          <span class="link-card__t">Integrazione e metodo</span>
+        </a>
+      </div>
+      <div class="c2">
+        <a class="link-card" href="#d16_delivery_raci">
+          <span class="link-card__k">Sezione 4 · pag. 16</span>
+          <span class="link-card__t">Delivery e supporto</span>
+        </a>
+      </div>
+      <div class="c4">
+        <a class="link-card" href="DFactory_SalesDeck_v2.html#s01_cover">
+          <span class="link-card__k">Documento gemello</span>
+          <span class="link-card__t">Sales deck: il caso commerciale, l'offerta e il percorso in 12 slide.</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · D Factory S.r.l. · gruppo Clevertech</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     02 · ARCHITETTURA DI PRODOTTO — scura · sezione 1
+     ===================================================================== -->
+<div class="slide slide--dark" id="d02_architettura_prodotto">
+  <div class="rail rail--t">
+    <span>02 · Architettura di prodotto</span>
+    <span>Sezione 1 · prodotto e architettura</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Un prodotto, una piattaforma,<br>livelli chiari.</h2>
+  </div>
+
+  <div class="zone" style="top:200px;bottom:104px">
+    <div class="matrix" style="grid-template-columns:150px 1fr 150px">
+      <div class="matrix__h">Nome</div>
+      <div class="matrix__h">Che cosa indica</div>
+      <div class="matrix__h">Stato</div>
+
+      <div style="font-weight:600">D.Factory</div>
+      <div>La soluzione con cui il sistema viene proposto e contrattualizzato. È il nome che compare
+        nell'offerta.</div>
+      <div><span class="status status--ok">Disponibile</span></div>
+
+      <div style="font-weight:600">MAPST 4.0</div>
+      <div>La piattaforma tecnologica su cui il sistema è costruito. Compare nella documentazione
+        tecnica, non nella conversazione commerciale.</div>
+      <div><span class="status status--ok">Disponibile</span></div>
+
+      <div style="font-weight:600">Connect</div>
+      <div>Livello di visibilità: stato macchina, OEE di linea, vista multi-macchina. È il perimetro
+        minimo per avere un dato in tempo reale.</div>
+      <div><span class="status status--ok">Disponibile</span></div>
+
+      <div style="font-weight:600">Insights</div>
+      <div>Livello di analisi: cause di fermo, energia per stato e per vettore, costo e CO₂ per pezzo.</div>
+      <div><span class="status status--ok">Disponibile</span></div>
+
+      <div style="font-weight:600">Refyn</div>
+      <div>Servizi sul dato: lettura periodica dei numeri insieme al team del cliente. Non è un terzo
+        livello di prodotto e non abilita funzioni software aggiuntive.</div>
+      <div><span class="status status--road">In definizione</span></div>
+    </div>
+
+    <div class="rule" style="margin:18px 0 14px"></div>
+    <div class="grid12" style="align-items:start">
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Come leggere gli stati</div>
+        <p class="t-body-s" style="margin:0">Disponibile significa in esercizio su impianti reali oggi.
+          In definizione significa che il perimetro non è ancora scritto.</p>
+      </div>
+      <div class="c8">
+        <div class="slot">
+          <div class="slot__hd">Da validare · relazioni societarie e di prodotto</div>
+          <p class="slot__need" style="margin:0">La relazione formale fra il marchio D.Factory, la
+            piattaforma MAPST 4.0 e le società del gruppo non è documentata nel materiale disponibile.
+            Finché non lo è, questa pagina descrive solo la nomenclatura d'uso: [[PH_T01_ARCHITETTURA_PRODOTTO]]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · nomenclatura d'uso, non gerarchia societaria</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     03 · ARCHITETTURA TECNICA — chiara · sezione 1
+     ===================================================================== -->
+<div class="slide slide--light" id="d03_architettura_tecnica">
+  <div class="rail rail--t">
+    <span>03 · Architettura tecnica</span>
+    <span>Sezione 1 · prodotto e architettura</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Quattro sorgenti, un solo modello dati.</h2>
+  </div>
+
+  <div class="zone" style="top:176px">
+    <div class="panel panel--plain" style="height:268px;border:1px solid var(--l-line)">
+      <div class="panel__hd"><span>Dalla rete OT al posto di lavoro</span><span>Schema di flusso</span></div>
+      <svg viewBox="0 0 1090 178" role="img" style="display:block;width:100%;height:auto">
+        <title>Architettura tecnica di D.Factory</title>
+        <desc>Le sorgenti in rete OT passano da connettori e tag mapping al modello dati, che alimenta
+          applicazione e database on-premise sul server del cliente, e da lì dashboard, report ed export.</desc>
+
+        <text x="0" y="10" fill="rgba(10,10,10,.55)">RETE OT</text>
+        <text x="330" y="10" fill="rgba(10,10,10,.55)">LIVELLO INTERMEDIO</text>
+        <text x="600" y="10" fill="rgba(10,10,10,.55)">SERVER CLIENTE · ON-PREMISE</text>
+        <text x="905" y="10" fill="rgba(10,10,10,.55)">RETE IT · UTENTI</text>
+
+        <line x1="300" y1="20" x2="300" y2="178" stroke="rgba(10,10,10,.24)" stroke-width="1" stroke-dasharray="3 4"/>
+        <line x1="575" y1="20" x2="575" y2="178" stroke="rgba(10,10,10,.24)" stroke-width="1" stroke-dasharray="3 4"/>
+        <line x1="880" y1="20" x2="880" y2="178" stroke="rgba(10,10,10,.24)" stroke-width="1" stroke-dasharray="3 4"/>
+
+        <rect x="0" y="26" width="180" height="28" fill="none" stroke="rgba(10,10,10,.30)"/>
+        <text x="12" y="45" fill="rgba(10,10,10,.78)">PLC DI LINEA</text>
+        <rect x="0" y="62" width="180" height="28" fill="none" stroke="rgba(10,10,10,.30)"/>
+        <text x="12" y="81" fill="rgba(10,10,10,.78)">SENSORI ESISTENTI</text>
+        <rect x="0" y="98" width="180" height="28" fill="none" stroke="rgba(10,10,10,.30)"/>
+        <text x="12" y="117" fill="rgba(10,10,10,.78)">CONTATORI ENERGIA</text>
+        <rect x="0" y="134" width="180" height="28" fill="none" stroke="rgba(10,10,10,.30)"/>
+        <text x="12" y="153" fill="rgba(10,10,10,.78)">GESTIONALE · SOLA LETTURA</text>
+
+        <path d="M180,40 L330,40 M180,76 L330,76 M180,112 L330,112 M180,148 L330,148"
+              fill="none" stroke="rgba(10,10,10,.30)" stroke-width="1"/>
+        <path d="M322,36 L332,40 L322,44 Z M322,72 L332,76 L322,80 Z M322,108 L332,112 L322,116 Z M322,144 L332,148 L322,152 Z"
+              fill="rgba(10,10,10,.45)"/>
+
+        <rect x="334" y="26" width="200" height="136" fill="none" stroke="rgba(10,10,10,.45)"/>
+        <text x="348" y="52" fill="rgba(10,10,10,.78)">CONNETTORI</text>
+        <text x="348" y="76" fill="rgba(10,10,10,.78)">TAG MAPPING</text>
+        <text x="348" y="100" fill="rgba(10,10,10,.78)">NORMALIZZAZIONE</text>
+        <text x="348" y="124" fill="rgba(10,10,10,.55)">A CARICO D.FACTORY</text>
+        <text x="348" y="148" fill="rgba(10,10,10,.55)">FLUSSI IN LETTURA</text>
+
+        <path d="M534,94 L604,94" fill="none" stroke="rgba(10,10,10,.30)" stroke-width="1"/>
+        <path d="M596,90 L606,94 L596,98 Z" fill="rgba(10,10,10,.45)"/>
+
+        <rect x="608" y="26" width="216" height="136" fill="#E6E011" stroke="#E6E011"/>
+        <text x="622" y="52" fill="#0A0A0A">MODELLO DATI UNICO</text>
+        <text x="622" y="76" fill="#0A0A0A">DATABASE</text>
+        <text x="622" y="100" fill="#0A0A0A">APPLICAZIONE</text>
+        <text x="622" y="124" fill="#0A0A0A">ALBERO D'IMPIANTO</text>
+        <text x="622" y="148" fill="#0A0A0A">IL DATO RESTA QUI</text>
+
+        <path d="M824,94 L908,94" fill="none" stroke="rgba(10,10,10,.30)" stroke-width="1"/>
+        <path d="M900,90 L910,94 L900,98 Z" fill="rgba(10,10,10,.45)"/>
+
+        <rect x="912" y="26" width="178" height="28" fill="none" stroke="rgba(10,10,10,.30)"/>
+        <text x="924" y="45" fill="rgba(10,10,10,.78)">DASHBOARD PER RUOLO</text>
+        <rect x="912" y="62" width="178" height="28" fill="none" stroke="rgba(10,10,10,.30)"/>
+        <text x="924" y="81" fill="rgba(10,10,10,.78)">REPORT ITA · ENG</text>
+        <rect x="912" y="98" width="178" height="28" fill="none" stroke="rgba(10,10,10,.30)"/>
+        <text x="924" y="117" fill="rgba(10,10,10,.78)">EXPORT E FORMATI</text>
+        <rect x="912" y="134" width="178" height="28" fill="none" stroke="rgba(10,10,10,.30)"/>
+        <text x="924" y="153" fill="rgba(10,10,10,.78)">POSTAZIONI A BORDO LINEA</text>
+      </svg>
+      <div class="panel__ft">Nessun flusso in scrittura verso le macchine · nessuna uscita verso internet dalla linea</div>
+    </div>
+  </div>
+
+  <div class="zone" style="top:472px">
+    <div class="grid12" style="align-items:start">
+      <div class="c3">
+        <div class="lbl-s" style="margin-bottom:10px">Protocolli supportati</div>
+        <span class="chip">[[PH_T02_PROTOCOLLI_SUPPORTATI]]</span>
+        <p class="t-body-s" style="margin:10px 0 0">L'elenco per modello e versione si compila in audit.</p>
+      </div>
+      <div class="c3">
+        <div class="lbl-s" style="margin-bottom:10px">Porte e flussi di rete</div>
+        <span class="chip">[[PH_T03_PORTE_FLUSSI_RETE]]</span>
+        <p class="t-body-s" style="margin:10px 0 0">Da concordare con il tuo IT prima del pilota.</p>
+      </div>
+      <div class="c3">
+        <div class="lbl-s" style="margin-bottom:10px">Gestionale</div>
+        <p class="t-body-s" style="margin:0">Ordini, batch e anagrafiche letti tramite un livello
+          intermedio, senza toccare gli accessi già configurati.</p>
+      </div>
+      <div class="c3">
+        <div class="lbl-s" style="margin-bottom:10px">Albero d'impianto</div>
+        <p class="t-body-s" style="margin:0">Stabilimento, area, linea, macchina, asset. Lo stesso per
+          tutte le linee, ed è quello che rende confrontabili i numeri.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · porte e protocolli si dichiarano dopo l'audit, non prima</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     04 · CAPABILITY — chiara · sezione 1
+     ===================================================================== -->
+<div class="slide slide--light" id="d04_capability">
+  <div class="rail rail--t">
+    <span>04 · Capability</span>
+    <span>Sezione 1 · prodotto e architettura</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Cosa è disponibile oggi,<br>cosa è opzionale, cosa è roadmap.</h2>
+  </div>
+
+  <div class="zone zone--body">
+    <div class="grid12" style="align-items:start">
+      <div class="c8">
+        <div class="matrix matrix--tight" style="grid-template-columns:120px 1fr 108px">
+          <div class="matrix__h">Dominio</div><div class="matrix__h">Funzione</div><div class="matrix__h">Stato</div>
+
+          <div>Produzione</div><div>Monitoraggio di processo, avanzamento, dialogo con gli operatori</div>
+          <div><span class="status status--ok">Oggi</span></div>
+
+          <div>Confezionamento</div><div>Stati macchina PackML, assemblaggio, vista multi-macchina</div>
+          <div><span class="status status--ok">Oggi</span></div>
+
+          <div>Fermi e scarti</div><div>Cause classificate, tempo perso, OEE scomposto, logica buffer-aware</div>
+          <div><span class="status status--ok">Oggi</span></div>
+
+          <div>Tracciabilità</div><div>Tracciabilità di prodotto e di processo</div>
+          <div><span class="status status--ok">Oggi</span></div>
+
+          <div>Utility</div><div>Energia, acqua, gas, aria compressa, vapore per stato e per pezzo</div>
+          <div><span class="status status--ok">Oggi</span></div>
+
+          <div>Manutenzione</div><div>Dati e operazioni di manutenzione, storico interventi per asset</div>
+          <div><span class="status status--ok">Oggi</span></div>
+
+          <div>Qualità</div><div>Controlli a bordo linea, analisi di materie prime e consumabili</div>
+          <div><span class="status status--opt">Configurabile</span></div>
+
+          <div>Report</div><div>Report ITA ed ENG, export, Gantt di produzione</div>
+          <div><span class="status status--ok">Oggi</span></div>
+
+          <div>Servizi sul dato</div><div>Lettura periodica dei numeri con il team del cliente</div>
+          <div><span class="status status--road">In definizione</span></div>
+        </div>
+      </div>
+
+      <div class="c4">
+        <div class="panel" style="height:100%">
+          <div class="panel__hd"><span>Roadmap</span><span class="status status--road">Non oggi</span></div>
+          <ul class="lst">
+            <li>Manutenzione predittiva</li>
+            <li>Qualità predittiva</li>
+            <li>Dati e video da telecamere IP</li>
+            <li>Indicatori operatore</li>
+          </ul>
+          <p class="t-body-s" style="margin:14px 0 0">Nessuna di queste funzioni è disponibile oggi e
+            nessuna ha una data. Se una serve al tuo progetto, va detto adesso e non in fase di collaudo.</p>
+          <div class="panel__ft">Nessuna capacità di intelligenza artificiale nel prodotto attuale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · prerequisiti per funzione si dettagliano in audit</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     05 · SUPERVISIONE — scura · sezione 2
+     ===================================================================== -->
+<div class="slide slide--dark" id="d05_supervisione">
+  <div class="rail rail--t">
+    <span>05 · Supervisione di linea</span>
+    <span>Sezione 2 · funzioni · dati illustrativi</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Tutta la linea, in tempo reale.</h2>
+  </div>
+
+  <div class="zone zone--bodyhigh grid12">
+    <div class="c5">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Letture di linea</span><span>Refresh 5 s</span></div>
+        <div class="readout readout--acc" style="margin-bottom:18px">
+          <div class="readout__v">68,4<u>%</u></div>
+          <div class="readout__k">OEE di linea · gap a target 6,6 punti</div>
+        </div>
+        <div class="readout" style="margin-bottom:18px">
+          <div class="readout__v m">430<u> / 1.000</u></div>
+          <div class="readout__k">Ordine in corso · pezzi</div>
+        </div>
+        <div class="readout" style="margin-bottom:16px">
+          <div class="readout__v m">02:14:30</div>
+          <div class="readout__k">Tempo alla fine, su velocità attuale</div>
+        </div>
+        <div class="callout">
+          <span class="callout-num">1</span>
+          <p>Origine: stati letti dai PLC, pezzi dai sensori di linea.</p>
+        </div>
+        <div class="callout">
+          <span class="callout-num">2</span>
+          <p>Aggiornamento ogni 5 secondi, storico al minuto.</p>
+        </div>
+        <div class="callout" style="margin-bottom:0">
+          <span class="callout-num">3</span>
+          <p>Decisione: dove sta il gap, mentre il turno è aperto.</p>
+        </div>
+        <div class="panel__ft">Dati illustrativi</div>
+      </div>
+    </div>
+
+    <div class="c7">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Stato macchine · ultime 2 h</span><span>17 stati PackML</span></div>
+        <div class="tl">
+          <div class="tl__row"><div class="tl__name">Depalletizer</div><div class="tl__bar">
+            <span class="seg-run" style="flex:48"></span><span class="seg-idle" style="flex:5"></span>
+            <span class="seg-run" style="flex:47"></span></div></div>
+          <div class="tl__row"><div class="tl__name">Filler</div><div class="tl__bar">
+            <span class="seg-run" style="flex:52"></span><span class="seg-idle" style="flex:6"></span>
+            <span class="seg-run" style="flex:42"></span></div></div>
+          <div class="tl__row"><div class="tl__name">Capper</div><div class="tl__bar">
+            <span class="seg-run" style="flex:61"></span><span class="seg-held" style="flex:7"></span>
+            <span class="seg-run" style="flex:32"></span></div></div>
+          <div class="tl__row"><div class="tl__name">Labeler</div><div class="tl__bar">
+            <span class="seg-run" style="flex:34"></span><span class="seg-idle" style="flex:11"></span>
+            <span class="seg-run" style="flex:29"></span><span class="seg-held" style="flex:9"></span>
+            <span class="seg-run" style="flex:17"></span></div></div>
+          <div class="tl__row"><div class="tl__name">Case packer</div><div class="tl__bar">
+            <span class="seg-run" style="flex:70"></span><span class="seg-idle" style="flex:5"></span>
+            <span class="seg-run" style="flex:25"></span></div></div>
+          <div class="tl__row"><div class="tl__name">Palletizer</div><div class="tl__bar">
+            <span class="seg-run" style="flex:44"></span><span class="seg-held" style="flex:6"></span>
+            <span class="seg-run" style="flex:50"></span></div></div>
+        </div>
+        <div class="key" style="margin-top:18px">
+          <span><i class="seg-run"></i>Execute</span>
+          <span><i class="seg-held"></i>Held · bloccata da valle</span>
+          <span><i class="seg-idle"></i>Idle · in attesa da monte</span>
+        </div>
+        <div class="panel__ft">Il Labeler è la causa principale del gap di linea in questo turno</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · una riga per macchina, lo stesso asse dei tempi</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     06 · OEE E FERMI — scura · sezione 2
+     ===================================================================== -->
+<div class="slide slide--dark" id="d06_oee_fermi">
+  <div class="rail rail--t">
+    <span>06 · OEE e fermi</span>
+    <span>Sezione 2 · funzioni · dati illustrativi</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Macchina ferma non significa linea ferma.</h2>
+  </div>
+
+  <div class="zone zone--body grid12">
+    <div class="c6">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Cause di fermo · turno</span><span>Ordinate per tempo perso</span></div>
+        <div class="readout" style="margin-bottom:20px">
+          <div class="readout__v m">04:32</div>
+          <div class="readout__k">Tempo perso totale · 11 categorie</div>
+        </div>
+        <div class="barh"><div class="barh__name">Outfeed</div>
+          <div class="barh__track"><div class="barh__fill" style="width:100%"></div></div>
+          <div class="barh__val">01:19 · 11 ev.</div></div>
+        <div class="barh"><div class="barh__name">Infeed jam</div>
+          <div class="barh__track"><div class="barh__fill" style="width:81%"></div></div>
+          <div class="barh__val">01:04 · 8 ev.</div></div>
+        <div class="barh"><div class="barh__name">Carton mis-feed</div>
+          <div class="barh__track"><div class="barh__fill--2 barh__fill" style="width:54%"></div></div>
+          <div class="barh__val">00:43 · 19 ev.</div></div>
+        <div class="barh"><div class="barh__name">Glue temp low</div>
+          <div class="barh__track"><div class="barh__fill--2 barh__fill" style="width:41%"></div></div>
+          <div class="barh__val">00:33 · 7 ev.</div></div>
+        <div class="barh"><div class="barh__name">Vacuum loss</div>
+          <div class="barh__track"><div class="barh__fill--2 barh__fill" style="width:26%"></div></div>
+          <div class="barh__val">00:20 · 4 ev.</div></div>
+        <div class="panel__ft">Ordinate per tempo perso, non per frequenza: 19 eventi brevi pesano meno di 11 lunghi</div>
+      </div>
+    </div>
+
+    <div class="c6">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Buffer-aware</span><span>OEE macchina e OEE linea</span></div>
+        <svg viewBox="0 0 520 160" role="img" style="display:block;width:100%;height:auto;margin-bottom:16px">
+          <title>Il polmone assorbe il fermo macchina</title>
+          <desc>Nel primo caso il polmone è pieno e la linea continua. Nel secondo il polmone si svuota
+            e il fermo macchina diventa fermo linea.</desc>
+
+          <text x="0" y="12" fill="rgba(255,255,255,.44)">FERMO ASSORBITO · LA LINEA CONTINUA</text>
+          <text x="0" y="34" fill="rgba(255,255,255,.44)">MACCHINA</text>
+          <rect x="96" y="22" width="180" height="14" fill="rgba(255,255,255,.34)"/>
+          <rect x="276" y="22" width="52" height="14" fill="rgba(255,255,255,.13)"/>
+          <rect x="328" y="22" width="192" height="14" fill="rgba(255,255,255,.34)"/>
+          <text x="0" y="58" fill="rgba(255,255,255,.44)">LINEA</text>
+          <rect x="96" y="46" width="424" height="14" fill="rgba(255,255,255,.34)"/>
+          <text x="0" y="80" fill="rgba(255,255,255,.44)">POLMONE</text>
+          <rect x="276" y="70" width="52" height="8" fill="rgba(255,255,255,.22)"/>
+          <text x="336" y="79" fill="rgba(255,255,255,.44)">PIENO, ALIMENTA A VALLE</text>
+
+          <text x="0" y="108" fill="rgba(255,255,255,.44)">FERMO NON ASSORBITO · LA LINEA SI FERMA</text>
+          <text x="0" y="130" fill="rgba(255,255,255,.44)">MACCHINA</text>
+          <rect x="96" y="118" width="180" height="14" fill="rgba(255,255,255,.34)"/>
+          <rect x="276" y="118" width="120" height="14" fill="rgba(255,255,255,.13)"/>
+          <rect x="396" y="118" width="124" height="14" fill="rgba(255,255,255,.34)"/>
+          <text x="0" y="152" fill="rgba(255,255,255,.44)">LINEA</text>
+          <rect x="96" y="140" width="180" height="14" fill="rgba(255,255,255,.34)"/>
+          <rect x="276" y="140" width="120" height="14" fill="#E6E011"/>
+          <rect x="396" y="140" width="124" height="14" fill="rgba(255,255,255,.34)"/>
+        </svg>
+        <div class="matrix matrix--tight" style="grid-template-columns:1fr auto">
+          <div>OEE macchina, sul singolo asset</div><div>Conta ogni fermo</div>
+          <div>OEE di linea, sul flusso completo</div><div>Conta i fermi non assorbiti</div>
+          <div>Differenza fra i due</div><div>La capacità del polmone</div>
+        </div>
+        <div class="panel__ft">La formula si calibra in audit sul tuo modo di misurare</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · scontare due volte lo stesso fermo è l'errore più comune</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     07 · VELOCITA' E QUALITA' — scura · sezione 2
+     ===================================================================== -->
+<div class="slide slide--dark" id="d07_velocita_qualita">
+  <div class="rail rail--t">
+    <span>07 · Velocità e qualità</span>
+    <span>Sezione 2 · funzioni · dati illustrativi</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Velocità, qualità e micro-fermi<br>sullo stesso asse.</h2>
+  </div>
+
+  <div class="zone grid12" style="top:200px;bottom:104px">
+    <div class="c5">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Bottle Former · macchina 03</span><span>Formato 1,0 Lt</span></div>
+        <div class="readout readout--acc" style="margin-bottom:18px">
+          <div class="readout__v">11.840</div>
+          <div class="readout__k">Bottiglie/ora · 98,7% del target</div>
+        </div>
+        <div class="readout" style="margin-bottom:18px">
+          <div class="readout__v m">97,8<u>%</u></div>
+          <div class="readout__k">Qualità · 1.840 scarti su 84.300</div>
+        </div>
+        <div class="readout" style="margin-bottom:16px">
+          <div class="readout__v m">±214</div>
+          <div class="readout__k">Deviazione di velocità nel turno</div>
+        </div>
+
+        <div class="matrix matrix--tight" style="grid-template-columns:auto 1fr">
+          <div>Fonte</div><div>Sensori di conta e PLC</div>
+          <div>Granularità</div><div>Un punto al minuto</div>
+        </div>
+        <div class="panel__ft">Formato richiesto e formato in lavorazione coincidono</div>
+      </div>
+    </div>
+
+    <div class="c7">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Pezzi prodotti · ultimi 60 minuti</span><span>Target 12.000 bph</span></div>
+        <div class="spark">
+          <svg viewBox="0 0 560 148" preserveAspectRatio="none" role="img">
+            <title>Velocità reale contro target nell'ultima ora</title>
+            <desc>La curva resta vicina al target, con un micro-fermo di 38 secondi alle 07:18.</desc>
+            <line x1="0" y1="26" x2="560" y2="26" stroke="rgba(255,255,255,.28)" stroke-width="1" stroke-dasharray="4 4"/>
+            <line x1="0" y1="74" x2="560" y2="74" stroke="rgba(255,255,255,.13)" stroke-width="1"/>
+            <line x1="0" y1="122" x2="560" y2="122" stroke="rgba(255,255,255,.13)" stroke-width="1"/>
+            <path d="M0,48 L37,42 L74,37 L111,34 L148,54 L166,102 L184,51 L221,39 L258,36
+                     L295,40 L332,37 L369,34 L406,39 L443,36 L480,37 L517,32 L560,36
+                     L560,148 L0,148 Z" fill="rgba(230,224,17,.14)"/>
+            <path d="M0,48 L37,42 L74,37 L111,34 L148,54 L166,102 L184,51 L221,39 L258,36
+                     L295,40 L332,37 L369,34 L406,39 L443,36 L480,37 L517,32 L560,36"
+                  fill="none" stroke="#E6E011" stroke-width="2.5"/>
+            <path d="M0,137 L148,135 L166,131 L184,136 L332,138 L480,136 L560,137"
+                  fill="none" stroke="rgba(255,255,255,.34)" stroke-width="1.5"/>
+            <circle cx="166" cy="102" r="5" fill="#0A0A0A" stroke="#FFFFFF" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="key" style="margin-top:14px">
+          <span><i class="seg-run"></i>Pezzi prodotti</span>
+          <span><i class="seg-held"></i>Scarti</span>
+          <span>Tratteggio: target</span>
+        </div>
+        <div class="callout" style="margin-top:16px;margin-bottom:0">
+          <span class="callout-num">1</span>
+          <p>Il micro-fermo di 38 secondi alle 07:18 sta sotto la soglia che un operatore annota. Nel
+            dato c'è, e sommato sul mese pesa.</p>
+        </div>
+        <div class="panel__ft">Dati illustrativi</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · i micro-fermi si vedono solo se il dato è al minuto</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     08 · MULTI-IMPIANTO — scura · sezione 2
+     ===================================================================== -->
+<div class="slide slide--dark" id="d08_multi_impianto">
+  <div class="rail rail--t">
+    <span>08 · Vista multi-macchina</span>
+    <span>Sezione 2 · funzioni · dati illustrativi</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Tutto l'impianto, una sola vista.</h2>
+  </div>
+
+  <div class="zone zone--bodyhigh grid12">
+    <div class="c4">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Impianto</span><span>20 macchine</span></div>
+        <div class="readout readout--acc" style="margin-bottom:18px">
+          <div class="readout__v m">16<u> / 20</u></div>
+          <div class="readout__k">In produzione ora</div>
+        </div>
+        <div class="readout" style="margin-bottom:18px">
+          <div class="readout__v m">2</div>
+          <div class="readout__k">Ferme ora · Labeler-B e Case Packer</div>
+        </div>
+        <div class="readout" style="margin-bottom:16px">
+          <div class="readout__v m">71,8<u>%</u></div>
+          <div class="readout__k">OEE medio, ponderato sulle ore</div>
+        </div>
+        <div class="matrix matrix--tight" style="grid-template-columns:auto 1fr">
+          <div>Perimetro</div><div>Un sito, tutte le linee sullo stesso modello dati</div>
+          <div>Multi-sito</div><div>Da verificare sul progetto</div>
+        </div>
+        <div class="panel__ft">Il collo di bottiglia emerge nel tempo, non nell'istante</div>
+      </div>
+    </div>
+
+    <div class="c8">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Timeline impianto · stato per minuto</span><span>Una riga = una macchina</span></div>
+        <div class="tl tl--dense">
+        <div class="tl__row"><div class="tl__name">A01 Depalletizer</div><div class="tl__bar"><span class="seg-run" style="flex:46"></span><span class="seg-idle" style="flex:6"></span><span class="seg-run" style="flex:34"></span><span class="seg-held" style="flex:5"></span><span class="seg-run" style="flex:9"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A02 Rinser</div><div class="tl__bar"><span class="seg-run" style="flex:62"></span><span class="seg-held" style="flex:5"></span><span class="seg-run" style="flex:33"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A03 Filler</div><div class="tl__bar"><span class="seg-run" style="flex:41"></span><span class="seg-idle" style="flex:7"></span><span class="seg-run" style="flex:52"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A04 Capper</div><div class="tl__bar"><span class="seg-run" style="flex:74"></span><span class="seg-idle" style="flex:6"></span><span class="seg-run" style="flex:20"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A05 Labeler-A</div><div class="tl__bar"><span class="seg-run" style="flex:30"></span><span class="seg-idle" style="flex:8"></span><span class="seg-run" style="flex:44"></span><span class="seg-held" style="flex:5"></span><span class="seg-run" style="flex:13"></span></div></div>
+        <div class="tl__row tl__row--acc"><div class="tl__name">A06 Labeler-B</div><div class="tl__bar"><span class="seg-run" style="flex:22"></span><span class="seg-held" style="flex:11"></span><span class="seg-idle" style="flex:9"></span><span class="seg-run" style="flex:37"></span><span class="seg-held" style="flex:21"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A07 Inspector</div><div class="tl__bar"><span class="seg-run" style="flex:55"></span><span class="seg-idle" style="flex:7"></span><span class="seg-run" style="flex:38"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A08 Dryer</div><div class="tl__bar"><span class="seg-run" style="flex:88"></span><span class="seg-idle" style="flex:12"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A09 Shrink Wrap</div><div class="tl__bar"><span class="seg-run" style="flex:34"></span><span class="seg-idle" style="flex:9"></span><span class="seg-run" style="flex:41"></span><span class="seg-held" style="flex:6"></span><span class="seg-run" style="flex:10"></span></div></div>
+        <div class="tl__row"><div class="tl__name">B10 Tray Former</div><div class="tl__bar"><span class="seg-run" style="flex:18"></span><span class="seg-held" style="flex:8"></span><span class="seg-run" style="flex:58"></span><span class="seg-idle" style="flex:5"></span><span class="seg-run" style="flex:11"></span></div></div>
+        <div class="tl__row tl__row--acc"><div class="tl__name">B11 Case Packer</div><div class="tl__bar"><span class="seg-run" style="flex:26"></span><span class="seg-idle" style="flex:5"></span><span class="seg-run" style="flex:30"></span><span class="seg-held" style="flex:8"></span><span class="seg-run" style="flex:17"></span><span class="seg-held" style="flex:14"></span></div></div>
+        <div class="tl__row"><div class="tl__name">B12 Palletizer</div><div class="tl__bar"><span class="seg-run" style="flex:44"></span><span class="seg-idle" style="flex:6"></span><span class="seg-run" style="flex:50"></span></div></div>
+        <div class="tl__row"><div class="tl__name">B13 Stretch Wrap</div><div class="tl__bar"><span class="seg-run" style="flex:66"></span><span class="seg-idle" style="flex:7"></span><span class="seg-run" style="flex:27"></span></div></div>
+        <div class="tl__row"><div class="tl__name">B14 Riser</div><div class="tl__bar"><span class="seg-idle" style="flex:12"></span><span class="seg-run" style="flex:40"></span><span class="seg-held" style="flex:6"></span><span class="seg-run" style="flex:42"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C15 Pasteurizer</div><div class="tl__bar"><span class="seg-run" style="flex:79"></span><span class="seg-idle" style="flex:5"></span><span class="seg-run" style="flex:16"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C16 Chiller</div><div class="tl__bar"><span class="seg-run" style="flex:92"></span><span class="seg-idle" style="flex:8"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C17 CIP Skid</div><div class="tl__bar"><span class="seg-idle" style="flex:14"></span><span class="seg-run" style="flex:48"></span><span class="seg-idle" style="flex:6"></span><span class="seg-run" style="flex:32"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C18 Blow Molder</div><div class="tl__bar"><span class="seg-run" style="flex:58"></span><span class="seg-held" style="flex:5"></span><span class="seg-run" style="flex:37"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C19 Cap Sorter</div><div class="tl__bar"><span class="seg-run" style="flex:36"></span><span class="seg-idle" style="flex:9"></span><span class="seg-run" style="flex:55"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C20 Outfeed</div><div class="tl__bar"><span class="seg-idle" style="flex:8"></span><span class="seg-run" style="flex:47"></span><span class="seg-idle" style="flex:6"></span><span class="seg-run" style="flex:39"></span></div></div>
+        </div>
+        <div class="key" style="margin-top:14px">
+          <span><i class="seg-run"></i>Righe in evidenza</span>
+          <span><i style="background:rgba(255,255,255,.28)"></i>In produzione</span>
+          <span><i style="background:rgba(255,255,255,.62)"></i>Held</span>
+          <span><i style="background:rgba(255,255,255,.10)"></i>Idle · starved</span>
+        </div>
+        <div class="panel__ft">Dati illustrativi</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · venti macchine, lo stesso asse dei tempi</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     09 · DISTRIBUZIONE ENERGIA — scura · sezione 2
+     ===================================================================== -->
+<div class="slide slide--dark" id="d09_distribuzione_energia">
+  <div class="rail rail--t">
+    <span>09 · Distribuzione energia</span>
+    <span>Sezione 2 · funzioni · dati illustrativi</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Da chi entra, a chi consuma.</h2>
+  </div>
+
+  <div class="zone zone--body grid12">
+    <div class="c4">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Stabilimento · aprile</span><span>MWh</span></div>
+        <div class="readout readout--acc" style="margin-bottom:18px">
+          <div class="readout__v">408,84</div>
+          <div class="readout__k">MWh totali nel mese</div>
+        </div>
+        <div class="readout" style="margin-bottom:18px">
+          <div class="readout__v m">88,0</div>
+          <div class="readout__k">MWh da fotovoltaico · 12,0%</div>
+        </div>
+        <div class="callout">
+          <span class="callout-num">1</span>
+          <p>Misurato: i totali per sorgente e per area, letti dai contatori.</p>
+        </div>
+        <div class="callout">
+          <span class="callout-num">2</span>
+          <p>Calcolato: la ripartizione fra le utenze a valle.</p>
+        </div>
+        <div class="callout" style="margin-bottom:0">
+          <span class="callout-num">3</span>
+          <p>Decisione: su quale area conviene intervenire prima.</p>
+        </div>
+        <div class="panel__ft">Non solo quanta energia entra: dove finisce</div>
+      </div>
+    </div>
+
+    <div class="c8">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Diagramma di flusso · da dove entra a dove si consuma</span><span>Nastri ∝ kWh</span></div>
+        <div class="flow">
+          <svg viewBox="0 0 640 250" role="img">
+            <title>Distribuzione dell'energia dallo stabilimento alle utenze</title>
+            <desc>Rete e fotovoltaico alimentano il nodo di stabilimento, che distribuisce alle sette
+              utenze principali. Il nastro in evidenza è l'area Filling, che assorbe di più.</desc>
+            <rect x="6" y="18" width="9" height="134" fill="rgba(255,255,255,.34)"/>
+            <rect x="6" y="162" width="9" height="37" fill="rgba(255,255,255,.44)"/>
+            <rect x="300" y="18" width="9" height="164" fill="#FFFFFF"/>
+            <rect x="300" y="190" width="9" height="9" fill="rgba(255,255,255,.34)"/>
+            <path d="M15,18 C160,18 160,18 300,18 L300,146 C160,146 160,152 15,152 Z" fill="rgba(255,255,255,.14)"/>
+            <path d="M15,152 C160,152 160,190 300,190 L300,199 C160,199 160,199 15,199 Z" fill="rgba(255,255,255,.09)"/>
+            <path d="M15,162 C160,162 160,146 300,146 L300,182 C160,182 160,199 15,199 Z" fill="rgba(255,255,255,.20)"/>
+            <path d="M309,18 C450,18 450,20 520,20 L520,66 C450,66 450,64 309,64 Z" fill="rgba(230,224,17,.30)"/>
+            <path d="M309,64 C450,64 450,76 520,76 L520,112 C450,112 450,100 309,100 Z" fill="rgba(255,255,255,.20)"/>
+            <path d="M309,100 C450,100 450,122 520,122 L520,151 C450,151 450,129 309,129 Z" fill="rgba(255,255,255,.17)"/>
+            <path d="M309,129 C450,129 450,161 520,161 L520,185 C450,185 450,153 309,153 Z" fill="rgba(255,255,255,.15)"/>
+            <path d="M309,153 C450,153 450,195 520,195 L520,213 C450,213 450,171 309,171 Z" fill="rgba(255,255,255,.13)"/>
+            <path d="M309,171 C450,171 450,223 520,223 L520,232 C450,232 450,182 309,182 Z" fill="rgba(255,255,255,.12)"/>
+            <path d="M309,190 C450,190 450,240 520,240 L520,246 C450,246 450,199 309,199 Z" fill="rgba(255,255,255,.11)"/>
+            <rect x="520" y="20" width="9" height="46" fill="#E6E011"/>
+            <rect x="520" y="76" width="9" height="36" fill="rgba(255,255,255,.44)"/>
+            <rect x="520" y="122" width="9" height="29" fill="rgba(255,255,255,.38)"/>
+            <rect x="520" y="161" width="9" height="24" fill="rgba(255,255,255,.32)"/>
+            <rect x="520" y="195" width="9" height="18" fill="rgba(255,255,255,.26)"/>
+            <rect x="520" y="223" width="9" height="9" fill="rgba(255,255,255,.22)"/>
+            <rect x="520" y="240" width="9" height="6" fill="rgba(255,255,255,.18)"/>
+            <text x="0" y="12" fill="rgba(255,255,255,.44)">RETE · 320,8</text>
+            <text x="0" y="214" fill="rgba(255,255,255,.44)">FOTOVOLTAICO · 88,0</text>
+            <text x="300" y="12" fill="#FFFFFF">FACTORY</text>
+            <text x="538" y="47" fill="#FFFFFF">Filling 112,4</text>
+            <text x="538" y="98" fill="rgba(255,255,255,.44)">Mixing 86,1</text>
+            <text x="538" y="140" fill="rgba(255,255,255,.44)">Boiler 71,3</text>
+            <text x="538" y="176" fill="rgba(255,255,255,.44)">HVAC 58,0</text>
+            <text x="538" y="207" fill="rgba(255,255,255,.44)">Chiller 44,7</text>
+            <text x="538" y="231" fill="rgba(255,255,255,.44)">Purifier 21,4</text>
+            <text x="538" y="247" fill="rgba(255,255,255,.44)">Office 14,9</text>
+          </svg>
+        </div>
+        <div class="panel__ft">La larghezza del nastro è il consumo misurato, non una ripartizione contabile</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · cinque vettori, un solo albero d'impianto</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     10 · COSTO, CO2 E STATO — scura · sezione 2
+     Per unita' prodotta a sinistra, per stato macchina a destra.
+     ===================================================================== -->
+<div class="slide slide--dark" id="d10_costo_co2_stato">
+  <div class="rail rail--t">
+    <span>10 · Costo, CO₂ e stato macchina</span>
+    <span>Sezione 2 · funzioni · dati illustrativi</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Quanto costa produrre<br>e quanto spendi da fermo.</h2>
+  </div>
+
+  <div class="zone zone--body grid12">
+    <div class="c6">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Per unità prodotta · ottobre</span><span>12,8 M pezzi</span></div>
+        <div class="grid12" style="margin-bottom:20px">
+          <div class="c6"><div class="readout readout--acc">
+            <div class="readout__v m">0,029<u> €</u></div>
+            <div class="readout__k">Costo energia per pezzo</div>
+          </div></div>
+          <div class="c6"><div class="readout">
+            <div class="readout__v m">358,8<u> g</u></div>
+            <div class="readout__k">CO₂ per mille pezzi</div>
+          </div></div>
+        </div>
+        <div class="barh"><div class="barh__name">Elettricità</div>
+          <div class="barh__track"><div class="barh__fill--2 barh__fill" style="width:100%"></div></div>
+          <div class="barh__val">1.419 k · 155,0 k€</div></div>
+        <div class="barh"><div class="barh__name">Gas</div>
+          <div class="barh__track"><div class="barh__fill--2 barh__fill" style="width:37%"></div></div>
+          <div class="barh__val">528 k · 64,4 k€</div></div>
+        <div class="barh"><div class="barh__name">Vapore</div>
+          <div class="barh__track"><div class="barh__fill--2 barh__fill" style="width:31%"></div></div>
+          <div class="barh__val">548 k · 48,8 k€</div></div>
+        <div class="barh"><div class="barh__name">Acqua</div>
+          <div class="barh__track"><div class="barh__fill--2 barh__fill" style="width:19%"></div></div>
+          <div class="barh__val">380 k · 18,6 k€</div></div>
+        <div class="barh"><div class="barh__name">Aria compressa</div>
+          <div class="barh__track"><div class="barh__fill--2 barh__fill" style="width:15%"></div></div>
+          <div class="barh__val">286 k · 29,6 k€</div></div>
+        <div class="panel__ft">Cinque vettori, tracciati sul ciclo e divisi per i pezzi</div>
+      </div>
+    </div>
+
+    <div class="c6">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Per stato macchina · giorno</span><span>Area packaging · 2.840 kWh</span></div>
+        <div class="grid12" style="margin-bottom:18px">
+          <div class="c6"><div class="readout">
+            <div class="readout__v m">42<u>%</u></div>
+            <div class="readout__k">Consumata a macchina ferma</div>
+          </div></div>
+          <div class="c6"><div class="readout">
+            <div class="readout__v m">58<u>%</u></div>
+            <div class="readout__k">Indice di energia produttiva</div>
+          </div></div>
+        </div>
+        <div class="cols cols--fermo" style="height:120px">
+          <div class="cols__c" style="height:18.1%"><span class="seg-run" style="height:30.8%"></span><span class="seg-idle" style="height:46.2%"></span><span class="seg-held" style="height:15.4%"></span><span class="seg-idle" style="height:7.7%"></span></div>
+          <div class="cols__c" style="height:18.1%"><span class="seg-run" style="height:30.8%"></span><span class="seg-idle" style="height:46.2%"></span><span class="seg-held" style="height:15.4%"></span><span class="seg-idle" style="height:7.7%"></span></div>
+          <div class="cols__c" style="height:16.7%"><span class="seg-run" style="height:33.3%"></span><span class="seg-idle" style="height:41.7%"></span><span class="seg-held" style="height:16.7%"></span><span class="seg-idle" style="height:8.3%"></span></div>
+          <div class="cols__c" style="height:18.1%"><span class="seg-run" style="height:38.5%"></span><span class="seg-idle" style="height:38.5%"></span><span class="seg-held" style="height:15.4%"></span><span class="seg-idle" style="height:7.7%"></span></div>
+          <div class="cols__c" style="height:23.6%"><span class="seg-run" style="height:47.1%"></span><span class="seg-idle" style="height:23.5%"></span><span class="seg-held" style="height:11.8%"></span><span class="seg-idle" style="height:17.6%"></span></div>
+          <div class="cols__c" style="height:52.8%"><span class="seg-run" style="height:68.4%"></span><span class="seg-idle" style="height:10.5%"></span><span class="seg-held" style="height:7.9%"></span><span class="seg-idle" style="height:13.2%"></span></div>
+          <div class="cols__c" style="height:91.7%"><span class="seg-run" style="height:78.8%"></span><span class="seg-idle" style="height:7.6%"></span><span class="seg-held" style="height:9.1%"></span><span class="seg-idle" style="height:4.5%"></span></div>
+          <div class="cols__c" style="height:98.6%"><span class="seg-run" style="height:81.7%"></span><span class="seg-idle" style="height:5.6%"></span><span class="seg-held" style="height:9.9%"></span><span class="seg-idle" style="height:2.8%"></span></div>
+          <div class="cols__c" style="height:100.0%"><span class="seg-run" style="height:84.7%"></span><span class="seg-idle" style="height:5.6%"></span><span class="seg-held" style="height:6.9%"></span><span class="seg-idle" style="height:2.8%"></span></div>
+          <div class="cols__c" style="height:100.0%"><span class="seg-run" style="height:79.2%"></span><span class="seg-idle" style="height:6.9%"></span><span class="seg-held" style="height:11.1%"></span><span class="seg-idle" style="height:2.8%"></span></div>
+          <div class="cols__c" style="height:94.4%"><span class="seg-run" style="height:72.1%"></span><span class="seg-idle" style="height:8.8%"></span><span class="seg-held" style="height:13.2%"></span><span class="seg-idle" style="height:5.9%"></span></div>
+          <div class="cols__c" style="height:81.9%"><span class="seg-run" style="height:64.4%"></span><span class="seg-idle" style="height:15.3%"></span><span class="seg-held" style="height:10.2%"></span><span class="seg-idle" style="height:10.2%"></span></div>
+          <div class="cols__c" style="height:69.4%"><span class="seg-run" style="height:60.0%"></span><span class="seg-idle" style="height:22.0%"></span><span class="seg-held" style="height:10.0%"></span><span class="seg-idle" style="height:8.0%"></span></div>
+          <div class="cols__c" style="height:93.1%"><span class="seg-run" style="height:80.6%"></span><span class="seg-idle" style="height:7.5%"></span><span class="seg-held" style="height:9.0%"></span><span class="seg-idle" style="height:3.0%"></span></div>
+          <div class="cols__c" style="height:98.6%"><span class="seg-run" style="height:84.5%"></span><span class="seg-idle" style="height:5.6%"></span><span class="seg-held" style="height:7.0%"></span><span class="seg-idle" style="height:2.8%"></span></div>
+          <div class="cols__c" style="height:98.6%"><span class="seg-run" style="height:78.9%"></span><span class="seg-idle" style="height:7.0%"></span><span class="seg-held" style="height:9.9%"></span><span class="seg-idle" style="height:4.2%"></span></div>
+          <div class="cols__c" style="height:90.3%"><span class="seg-run" style="height:72.3%"></span><span class="seg-idle" style="height:9.2%"></span><span class="seg-held" style="height:13.8%"></span><span class="seg-idle" style="height:4.6%"></span></div>
+          <div class="cols__c" style="height:81.9%"><span class="seg-run" style="height:69.5%"></span><span class="seg-idle" style="height:11.9%"></span><span class="seg-held" style="height:10.2%"></span><span class="seg-idle" style="height:8.5%"></span></div>
+          <div class="cols__c" style="height:69.4%"><span class="seg-run" style="height:68.0%"></span><span class="seg-idle" style="height:16.0%"></span><span class="seg-held" style="height:10.0%"></span><span class="seg-idle" style="height:6.0%"></span></div>
+          <div class="cols__c" style="height:51.4%"><span class="seg-run" style="height:59.5%"></span><span class="seg-idle" style="height:24.3%"></span><span class="seg-held" style="height:10.8%"></span><span class="seg-idle" style="height:5.4%"></span></div>
+          <div class="cols__c" style="height:37.5%"><span class="seg-run" style="height:51.9%"></span><span class="seg-idle" style="height:29.6%"></span><span class="seg-held" style="height:11.1%"></span><span class="seg-idle" style="height:7.4%"></span></div>
+          <div class="cols__c" style="height:27.8%"><span class="seg-run" style="height:45.0%"></span><span class="seg-idle" style="height:35.0%"></span><span class="seg-held" style="height:15.0%"></span><span class="seg-idle" style="height:5.0%"></span></div>
+          <div class="cols__c" style="height:19.4%"><span class="seg-run" style="height:35.7%"></span><span class="seg-idle" style="height:42.9%"></span><span class="seg-held" style="height:14.3%"></span><span class="seg-idle" style="height:7.1%"></span></div>
+          <div class="cols__c" style="height:18.1%"><span class="seg-run" style="height:30.8%"></span><span class="seg-idle" style="height:46.2%"></span><span class="seg-held" style="height:15.4%"></span><span class="seg-idle" style="height:7.7%"></span></div>
+        </div>
+        <div class="cols__x"><span>00</span><span>06</span><span>12</span><span>18</span><span>23</span></div>
+        <div class="key" style="margin-top:14px">
+          <span><i class="sw-acc"></i>Idle · 18%</span>
+          <span><i style="background:rgba(255,255,255,.58)"></i>Held · 14%</span>
+          <span><i style="background:rgba(255,255,255,.20)"></i>Execute · 58%</span>
+          <span>Setup e stopped · 10%</span>
+        </div>
+        <div class="panel__ft">Quanto se ne recuperi si stabilisce in audit, asset per asset</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · perimetro, fattori emissivi e conteggio pezzi: pagina 11</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     11 · METODO DI MISURA — chiara · sezione 3
+     ===================================================================== -->
+<div class="slide slide--light" id="d11_metodo_misura">
+  <div class="ticks" style="top:0">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <div class="rail rail--t">
+    <span>11 · Metodo di misura</span>
+    <span>Sezione 3 · integrazione e metodo</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Misurata sul ciclo,<br>non stimata a coefficiente.</h2>
+  </div>
+
+  <div class="zone" style="top:250px">
+    <div class="stepper" style="margin-bottom:24px">
+      <div class="stepper__item stepper__item--acc">
+        <span class="stepper__n">01 · Lettura continua</span>
+        <p class="t-body-s" style="margin:0">I contatori leggono senza interruzione, su tutti i vettori
+          strumentati.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">02 · Associazione allo stato</span>
+        <p class="t-body-s" style="margin:0">Ogni lettura viene legata allo stato in cui si trova la
+          macchina in quel momento.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">03 · Conteggio pezzi</span>
+        <p class="t-body-s" style="margin:0">I pezzi buoni del periodo, contati con la regola che usi tu.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">04 · Normalizzazione</span>
+        <p class="t-body-s" style="margin:0">Consumo diviso per pezzi, sullo stesso intervallo e sullo
+          stesso perimetro.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">05 · Costo e CO₂</span>
+        <p class="t-body-s" style="margin:0">Applicazione dei prezzi dei vettori e dei fattori emissivi
+          documentati.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">06 · Validazione</span>
+        <p class="t-body-s" style="margin:0">Confronto con le tue letture di riferimento prima di
+          pubblicare i numeri.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="zone" style="top:412px">
+    <div class="grid12" style="align-items:start">
+      <div class="c5">
+        <div class="matrix matrix--tight" style="grid-template-columns:1fr auto">
+          <div class="matrix__h">Specifica di metodo</div><div class="matrix__h">Stato</div>
+          <div>Fattori emissivi e loro versione</div><div><span class="chip">[[PH_T11_METODO_FATTORI_GHG]]</span></div>
+          <div>Campionamento e dati mancanti</div><div><span class="chip">[[PH_T12_CAMPIONAMENTO_DATI_MANCANTI]]</span></div>
+          <div>Sincronizzazione temporale</div><div>Da definire in audit</div>
+          <div>Modifiche alla formula</div><div>Tracciate, con storico ricalcolabile</div>
+        </div>
+      </div>
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Cosa si può dire, e cosa no</div>
+        <ul class="lst">
+          <li>Il sistema supporta la misurazione e la rendicontazione energetica</li>
+          <li>I dati sono associabili ai fattori emissivi documentati, utili a Scope 1 e 2</li>
+          <li>Supporta processi coerenti con ISO 50001</li>
+          <li>Non è un software certificato ISO 50001, e la certificazione riguarda l'organizzazione</li>
+        </ul>
+      </div>
+      <div class="c3">
+        <div class="note">
+          <p>Il costo per pezzo dipende da come si contano i pezzi. La formula si fissa in audit, prima
+            che i numeri finiscano in un report: cambiarla dopo obbliga a rifare i confronti storici.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · si può partire dalla sola energia, senza la parte produzione</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     12 · BROWNFIELD — chiara · sezione 3
+     ===================================================================== -->
+<div class="slide slide--light" id="d12_brownfield">
+  <div class="rail rail--t">
+    <span>12 · Brownfield</span>
+    <span>Sezione 3 · integrazione e metodo</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Funziona sul brownfield che hai già.</h2>
+    <p class="t-h2" style="margin:14px 0 0;max-width:900px">Compatibilità verificata in audit, non
+      dichiarata a catalogo.</p>
+  </div>
+
+  <div class="zone" style="top:196px;bottom:104px">
+    <div class="matrix matrix--tight" style="grid-template-columns:170px 1fr 96px 108px 156px">
+      <div class="matrix__h">Categoria</div>
+      <div class="matrix__h">Come entra nel modello</div>
+      <div class="matrix__h">Supportato</div>
+      <div class="matrix__h">Condizionato</div>
+      <div class="matrix__h">Verifica in audit</div>
+
+      <div>Macchine PackML</div><div>17 stati nativi</div>
+      <div><span class="status status--ok">Sì</span></div><div></div><div>Versione dello standard</div>
+
+      <div>Macchine non-PackML</div><div>Modello ridotto a due stati: in marcia e non in marcia</div>
+      <div><span class="status status--ok">Sì</span></div><div></div><div>Tag esposti dal PLC</div>
+
+      <div>PLC e PC industriali</div><div>Lettura via Ethernet, multi-vendor</div>
+      <div><span class="status status--ok">Sì</span></div><div></div><div>Modello e firmware</div>
+
+      <div>Gestionale</div><div>Ordini e anagrafiche in sola lettura</div>
+      <div></div><div><span class="status status--opt">Caso per caso</span></div><div>Vincoli del fornitore</div>
+
+      <div>Contatori energia</div><div>Cinque vettori, dove esiste la strumentazione</div>
+      <div><span class="status status--ok">Sì</span></div><div></div><div>Copertura per asset</div>
+
+      <div>Protocolli</div><div>Multi-protocollo, connettori per modello</div>
+      <div></div><div><span class="status status--opt">Caso per caso</span></div><div>[[PH_T02_PROTOCOLLI_SUPPORTATI]]</div>
+
+      <div>Reti</div><div>Segmentazione OT e IT, sola lettura</div>
+      <div></div><div><span class="status status--opt">Caso per caso</span></div><div>[[PH_T03_PORTE_FLUSSI_RETE]]</div>
+
+      <div>Macchine legacy</div><div>Se espongono uno stato leggibile</div>
+      <div></div><div><span class="status status--opt">Caso per caso</span></div><div>Cosa espone davvero il PLC</div>
+    </div>
+
+    <div class="rule" style="margin:14px 0 12px"></div>
+    <div class="note">
+      <p>Il tag mapping è lavoro nostro ed è la parte che di solito blocca i progetti. In linea non entra
+        hardware proprietario D.Factory, ma servono comunque un server e, dove manca la misura, sensori.
+        Quello che non diciamo è che funzioni con ogni marca e protocollo.</p>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · nessuna fabbrica è pulita come nei disegni</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     13 · DEPLOYMENT E SICUREZZA — scura · sezione 3
+     ===================================================================== -->
+<div class="slide slide--dark" id="d13_deployment_security">
+  <div class="rail rail--t">
+    <span>13 · Deployment e sicurezza</span>
+    <span>Sezione 3 · integrazione e metodo</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">On-premise, con un perimetro IT esplicito.</h2>
+  </div>
+
+  <div class="zone zone--bodyhigh grid12">
+    <div class="c5">
+      <div class="lbl-s" style="margin-bottom:14px">Zone di rete</div>
+      <svg viewBox="0 0 440 214" role="img" style="display:block;width:100%;height:auto;margin-bottom:18px">
+        <title>Segmentazione delle zone di rete</title>
+        <desc>La rete OT ospita PLC, sensori e contatori. Il livello intermedio ospita connettori e tag
+          mapping e legge soltanto. La rete IT ospita server, database e postazioni utente. Nessun flusso
+          esce verso internet dalla linea.</desc>
+
+        <rect x="0" y="14" width="440" height="46" fill="none" stroke="rgba(255,255,255,.28)"/>
+        <text x="0" y="9" fill="rgba(255,255,255,.44)">RETE OT</text>
+        <text x="14" y="33" fill="rgba(255,255,255,.78)">PLC DI LINEA · SENSORI · CONTATORI ENERGIA</text>
+        <text x="14" y="51" fill="rgba(255,255,255,.44)">NESSUNA SCRITTURA VERSO LE MACCHINE</text>
+
+        <path d="M410,60 L410,78" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1"/>
+        <path d="M406,70 L410,80 L414,70 Z" fill="rgba(255,255,255,.44)"/>
+
+        <rect x="0" y="84" width="440" height="46" fill="none" stroke="rgba(255,255,255,.28)"/>
+        <text x="0" y="79" fill="rgba(255,255,255,.44)">LIVELLO INTERMEDIO</text>
+        <text x="14" y="103" fill="rgba(255,255,255,.78)">CONNETTORI · TAG MAPPING · NORMALIZZAZIONE</text>
+        <text x="14" y="121" fill="rgba(255,255,255,.44)">FLUSSI SOLO IN LETTURA</text>
+
+        <path d="M410,130 L410,148" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1"/>
+        <path d="M406,140 L410,150 L414,140 Z" fill="rgba(255,255,255,.44)"/>
+
+        <rect x="0" y="154" width="440" height="60" fill="none" stroke="rgba(255,255,255,.44)"/>
+        <text x="0" y="149" fill="rgba(255,255,255,.44)">RETE IT · SERVER DEL CLIENTE</text>
+        <text x="14" y="173" fill="rgba(255,255,255,.78)">APPLICAZIONE · DATABASE · MODELLO DATI</text>
+        <text x="14" y="191" fill="rgba(255,255,255,.78)">POSTAZIONI UTENTE E BORDO LINEA</text>
+        <text x="14" y="209" fill="rgba(255,255,255,.44)">NESSUNA USCITA VERSO INTERNET</text>
+      </svg>
+      <div class="note">
+        <p>Il dato di produzione resta in fabbrica, su un server tuo. Dato sul tuo server e software
+          utilizzabile per sempre non sono però la stessa cosa: lo storico resta tuo, i diritti d'uso
+          del software si definiscono in contratto.</p>
+      </div>
+    </div>
+
+    <div class="c7">
+      <div class="matrix matrix--tight" style="grid-template-columns:186px 1fr">
+        <div class="matrix__h">Voce</div><div class="matrix__h">Stato e responsabilità</div>
+        <div>Server e sistema operativo</div><div>PC industriale Linux, fornito dal cliente</div>
+        <div>Sizing</div><div><span class="chip">[[PH_T04_SIZING_SERVER]]</span></div>
+        <div>Porte e protocolli</div><div><span class="chip">[[PH_T03_PORTE_FLUSSI_RETE]]</span></div>
+        <div>Autenticazione e ruoli</div><div><span class="chip">[[PH_T05_AUTENTICAZIONE_RUOLI]]</span></div>
+        <div>Backup e retention</div><div><span class="chip">[[PH_T06_BACKUP_RETENTION]]</span></div>
+        <div>Aggiornamenti</div><div><span class="chip">[[PH_T07_UPDATE_PATCHING]]</span></div>
+        <div>Logging e audit trail</div><div><span class="chip">[[PH_T08_LOGGING_AUDIT_TRAIL]]</span></div>
+        <div>Supporto remoto</div><div><span class="chip">[[PH_T09_SUPPORTO_REMOTO]]</span></div>
+        <div>Proprietà del dato</div><div>Sul server del cliente, con export in ogni momento</div>
+        <div>Licenza a fine contratto</div><div><span class="chip">[[PH_T13_LICENZA_FINE_CONTRATTO]]</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · nessuna specifica dichiarata prima di averla verificata</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     14 · SENSORI — chiara · sezione 3
+     ===================================================================== -->
+<div class="slide slide--light" id="d14_sensori">
+  <div class="rail rail--t">
+    <span>14 · Strategia sensori</span>
+    <span>Sezione 3 · integrazione e metodo</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Misurare bene dove serve davvero.</h2>
+  </div>
+
+  <div class="zone zone--bodyhigh">
+    <div class="matrix" style="grid-template-columns:190px 1fr 1fr">
+      <div class="matrix__h">Criterio</div>
+      <div class="matrix__h">Clamp-on</div>
+      <div class="matrix__h">Strumentazione certificata</div>
+
+      <div>A cosa serve</div>
+      <div>Capire dove si concentra il consumo, seguire l'andamento</div>
+      <div>Far uscire un numero dall'azienda: cliente, ente, revisore</div>
+
+      <div>Precisione</div>
+      <div>Errore dell'ordine di qualche punto percentuale</div>
+      <div>Misura conforme, dove la norma o il contratto la richiedono</div>
+
+      <div>Installazione</div>
+      <div>Rapida, sulla tubazione o sul cavo esistente</div>
+      <div>Su impianto, con intervento pianificato</div>
+
+      <div>Fermo impianto</div>
+      <div>Nessuno</div>
+      <div>Fermo pianificato, nelle tue finestre</div>
+
+      <div>Costo</div>
+      <div>Contenuto, scala bene su molti asset</div>
+      <div>Più alto, si giustifica solo dove il dato esce</div>
+
+      <div>Manutenzione e taratura</div>
+      <div>Verifica periodica, a carico del cliente</div>
+      <div>Taratura secondo lo schema della strumentazione</div>
+
+      <div>Decisione che abilita</div>
+      <div>Dove intervenire e dove poi vale la pena misurare meglio</div>
+      <div>Rendicontazione e fatturazione interna</div>
+    </div>
+
+    <div class="rule" style="margin:18px 0 14px"></div>
+    <div class="grid12" style="align-items:start">
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:9px">Su MID e ISO 50001</div>
+        <p class="t-body-s" style="margin:0">MID riguarda la strumentazione, ISO 50001 il sistema di
+          gestione dell'organizzazione. Nessuna delle due certifica il software.</p>
+      </div>
+      <div class="c8">
+        <div class="note">
+          <p>La sensoristica non è il nostro prodotto: resta a carico tuo e la installa il tuo personale
+            tecnico. Si parte da quello che è già in linea e si sceglie asset per asset, in audit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · costo sensoristica: vedi sales deck, slide 09</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     15 · OUTPUT E INTEGRAZIONI — chiara · sezione 3
+     ===================================================================== -->
+<div class="slide slide--light" id="d15_output_integrazioni">
+  <div class="rail rail--t">
+    <span>15 · Output e integrazioni</span>
+    <span>Sezione 3 · integrazione e metodo</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Il dato esce in formati utilizzabili.</h2>
+  </div>
+
+  <div class="zone zone--bodyhigh">
+    <div class="matrix matrix--tight" style="grid-template-columns:170px 130px 150px 1fr 120px">
+      <div class="matrix__h">Output</div>
+      <div class="matrix__h">Formato</div>
+      <div class="matrix__h">Destinatario</div>
+      <div class="matrix__h">Granularità e accesso</div>
+      <div class="matrix__h">Disponibilità</div>
+
+      <div>Report di periodo</div><div>PDF, ITA ed ENG</div><div>Direzione, cliente finale</div>
+      <div>Turno, giorno, mese · dall'applicazione</div><div><span class="status status--ok">Oggi</span></div>
+
+      <div>Gantt di produzione</div><div>PDF</div><div>Programmazione</div>
+      <div>Ordine e linea · dall'applicazione</div><div><span class="status status--ok">Oggi</span></div>
+
+      <div>Vista 3D d'impianto</div><div>Applicazione</div><div>Operations</div>
+      <div>Navigabile sull'albero d'impianto</div><div><span class="status status--ok">Oggi</span></div>
+
+      <div>Dashboard per ruolo</div><div>Applicazione</div><div>Linea, uffici</div>
+      <div>Tempo reale e storico · per ruolo</div><div><span class="status status--ok">Oggi</span></div>
+
+      <div>Export tabellare</div><div>Da definire</div><div>Controllo di gestione, BI</div>
+      <div><span class="chip">[[PH_T10_API_FORMATI_EXPORT]]</span></div><div><span class="status status--opt">Da verificare</span></div>
+
+      <div>API verso terzi</div><div>Da definire</div><div>BI, data lake</div>
+      <div><span class="chip">[[PH_T10_API_FORMATI_EXPORT]]</span></div><div><span class="status status--opt">Da verificare</span></div>
+
+      <div>Integrazione ERP</div><div>Da definire</div><div>IT</div>
+      <div>Oggi la lettura è solo in ingresso</div>
+      <div><span class="status status--opt">Sul progetto</span></div>
+    </div>
+
+    <div class="rule" style="margin:18px 0 14px"></div>
+    <div class="grid12" style="align-items:start">
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:9px">Sul ritorno verso il gestionale</div>
+        <p class="t-body-s" style="margin:0">Una scrittura verso l'ERP è un'integrazione da verificare
+          sul progetto, non una funzione dichiarata.</p>
+      </div>
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:9px">Perché conta</div>
+        <p class="t-body-s" style="margin:0">Quello che vedi a schermo lo metti su un tavolo senza
+          rielaborarlo a mano.</p>
+      </div>
+      <div class="c4">
+        <a class="link-card" href="DFactory_SalesDeck_v2.html#s11_faq">
+          <span class="link-card__k">Sales deck · slide 11</span>
+          <span class="link-card__t">La versione breve di questa pagina, nella risposta su Excel e
+            Power BI.</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · nessun formato dichiarato senza averlo verificato</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     16 · DELIVERY E RACI — scura · sezione 4
+     ===================================================================== -->
+<div class="slide slide--dark" id="d16_delivery_raci">
+  <div class="rail rail--t">
+    <span>16 · Delivery e responsabilità</span>
+    <span>Sezione 4 · delivery e supporto</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Dal primo segnale al go-live operativo.</h2>
+  </div>
+
+  <div class="zone" style="top:186px">
+    <div class="stepper" style="margin-bottom:22px">
+      <div class="stepper__item stepper__item--acc">
+        <span class="stepper__n">01 · Audit</span>
+        <p class="t-body-s" style="margin:0">PLC, sensori e contatori esistenti.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">02 · Sensoristica</span>
+        <p class="t-body-s" style="margin:0">Solo dove l'audit l'ha indicata.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">03 · Connessione</span>
+        <p class="t-body-s" style="margin:0">Connettori e tag mapping.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">04 · Configurazione</span>
+        <p class="t-body-s" style="margin:0">Viste e formule sull'impianto.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">05 · Validazione</span>
+        <p class="t-body-s" style="margin:0">Confronto con le tue letture.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">06 · Formazione</span>
+        <p class="t-body-s" style="margin:0">Chi userà le viste ogni giorno.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">07 · Go-live</span>
+        <p class="t-body-s" style="margin:0">Esercizio con supporto attivo.</p>
+      </div>
+      <div class="stepper__item">
+        <span class="stepper__n">08 · Scale-up</span>
+        <p class="t-body-s" style="margin:0">Le altre linee, una alla volta.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="zone" style="top:310px">
+    <div class="grid12" style="align-items:start">
+      <div class="c5">
+        <div class="lbl-s" style="margin-bottom:12px">Le cinque milestone, senza confonderle</div>
+        <div class="matrix matrix--tight" style="grid-template-columns:170px 1fr">
+          <div>First signal</div><div>Primo segnale acquisito da una macchina</div>
+          <div>First usable data</div><div>Primo dato contestualizzato e verificato</div>
+          <div>Pilot live</div><div>Una linea con viste e KPI concordati</div>
+          <div>Operational go-live</div><div>Utenti formati, formule validate, supporto attivo</div>
+          <div>Scale-up</div><div>Estensione ad altre linee o siti</div>
+        </div>
+        <p class="t-body-s" style="margin:12px 0 0">Su una linea già strumentata il primo segnale può
+          arrivare in un paio di giorni. Il go-live operativo ha un altro calendario.</p>
+      </div>
+
+      <div class="c7">
+        <div class="lbl-s" style="margin-bottom:12px">Chi fa cosa</div>
+        <div class="raci" style="grid-template-columns:1fr 88px 88px 108px">
+          <div class="raci__h">Attività</div>
+          <div class="raci__h raci__c">D.Factory</div>
+          <div class="raci__h raci__c">Cliente</div>
+          <div class="raci__h raci__c">Terza parte</div>
+
+          <div>Accessi di rete e autorizzazioni</div><div class="raci__c">C</div><div class="raci__c">R</div><div class="raci__c">—</div>
+          <div>Installazione sensori e contatori</div><div class="raci__c">C</div><div class="raci__c">A</div><div class="raci__c">R</div>
+          <div>Tag mapping e connettori</div><div class="raci__c">R</div><div class="raci__c">C</div><div class="raci__c">—</div>
+          <div>Definizione e validazione KPI</div><div class="raci__c">R</div><div class="raci__c">A</div><div class="raci__c">—</div>
+          <div>Formazione degli utenti</div><div class="raci__c">R</div><div class="raci__c">C</div><div class="raci__c">—</div>
+          <div>Go-live operativo</div><div class="raci__c">R</div><div class="raci__c">A</div><div class="raci__c">—</div>
+          <div>Supporto in esercizio</div><div class="raci__c">R</div><div class="raci__c">C</div><div class="raci__c">—</div>
+        </div>
+        <div class="key" style="margin-top:14px">
+          <span>R · esegue</span><span>A · approva</span><span>C · consultato</span><span>— · non coinvolto</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="zone" style="bottom:104px">
+    <div class="note">
+      <p>I tempi dipendono da due cose sole: quanta sensoristica manca e quando si aprono le tue
+        finestre di fermo. Il calendario reale si scrive in audit, non in offerta.</p>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · ore a carico cliente per l'avvio: [[PH_07_ORE_CLIENTE]]</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     17 · CASO TECNICO — chiara · sezione 4
+     Stesso caso della slide 06 del sales deck. Struttura pronta, dati no.
+     ===================================================================== -->
+<div class="slide slide--light" id="d17_caso_tecnico">
+  <div class="rail rail--t">
+    <span>17 · Caso tecnico</span>
+    <span>Sezione 4 · delivery e supporto</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Un caso reale, spiegato tecnicamente.</h2>
+    <p class="t-h2" style="margin:14px 0 0;max-width:900px">È lo stesso impianto della slide 06 del
+      sales deck, letto dal lato dell'implementazione.</p>
+  </div>
+
+  <div class="zone zone--body">
+    <div class="slot">
+      <div class="slot__hd">Da compilare · [[PH_T14_CASO_TECNICO]]</div>
+      <div class="grid12">
+        <div class="c4">
+          <div class="case-grid" style="grid-template-columns:1fr">
+            <div><div class="case-grid__k">Contesto impianto</div>
+              <p class="case-grid__v">Settore, numero di linee e di macchine nel perimetro.</p></div>
+            <div><div class="case-grid__k">PLC e protocolli</div>
+              <p class="case-grid__v">Costruttori presenti, protocolli letti, presenza di PackML.</p></div>
+            <div><div class="case-grid__k">Tag acquisiti</div>
+              <p class="case-grid__v">Quanti punti dato per macchina e con quale frequenza.</p></div>
+          </div>
+        </div>
+        <div class="c4">
+          <div class="case-grid" style="grid-template-columns:1fr">
+            <div><div class="case-grid__k">Contatori e sensori</div>
+              <p class="case-grid__v">Cosa era già installato, cosa è stato aggiunto e da chi.</p></div>
+            <div><div class="case-grid__k">Architettura adottata</div>
+              <p class="case-grid__v">Server, segmentazione di rete, integrazione con il gestionale.</p></div>
+            <div><div class="case-grid__k">Ore a carico cliente</div>
+              <p class="case-grid__v">Quante ore del team IT e di reparto sono servite davvero.</p></div>
+          </div>
+        </div>
+        <div class="c4">
+          <div class="case-grid" style="grid-template-columns:1fr">
+            <div><div class="case-grid__k">First signal e pilot live</div>
+              <p class="case-grid__v">Le due date, distinte, con quello che è successo in mezzo.</p></div>
+            <div><div class="case-grid__k">Fermo impianto richiesto</div>
+              <p class="case-grid__v">Quanto, quando e per quale attività.</p></div>
+            <div><div class="case-grid__k">Criticità e risultato</div>
+              <p class="case-grid__v">Cosa non è andato liscio e come si è risolto, poi il risultato
+                tecnico e quello operativo.</p></div>
+          </div>
+        </div>
+      </div>
+      <p class="slot__need" style="margin:0">La struttura è quella richiesta da un reparto tecnico che
+        deve valutare il progetto. Nessun nome, numero, protocollo o risultato viene scritto qui prima di
+        essere confermato dal cliente e autorizzato alla pubblicazione.</p>
+    </div>
+
+    <div class="rule" style="margin:22px 0 18px"></div>
+    <div class="grid12" style="align-items:start">
+      <div class="c8">
+        <div class="lbl-s" style="margin-bottom:10px">Perché questa pagina resta vuota</div>
+        <p class="t-body-s" style="margin:0">Un caso tecnico inventato si riconosce alla seconda domanda
+          di un capo manutenzione. Meglio una struttura dichiaratamente da compilare che un racconto che
+          non regge in riunione.</p>
+      </div>
+      <div class="c4">
+        <a class="link-card" href="DFactory_SalesDeck_v2.html#s06_prova">
+          <span class="link-card__k">Sales deck · slide 06</span>
+          <span class="link-card__t">Lo stesso caso dal lato commerciale: problema, intervento,
+            risultato, orizzonte.</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · struttura pronta, dati da validare</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     18 · SUPPORTO E CHECKLIST — scura · sezione 4
+     ===================================================================== -->
+<div class="slide slide--dark" id="d18_supporto_audit">
+  <div class="grid-bg"></div>
+
+  <div class="rail rail--t">
+    <span>18 · Supporto e checklist</span>
+    <span>Sezione 4 · delivery e supporto</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Le informazioni per partire<br>e per restare in esercizio.</h2>
+  </div>
+
+  <div class="zone grid12" style="top:216px;bottom:228px">
+    <div class="c5">
+      <div class="lbl-s" style="margin-bottom:12px">Supporto in esercizio</div>
+      <div class="matrix matrix--tight" style="grid-template-columns:170px 1fr">
+        <div>Livelli di servizio</div><div><span class="chip">[[PH_08_SLA]]</span></div>
+        <div>Orari, severità e canali</div><div><span class="chip">[[PH_T15_ORARI_SEVERITA_SUPPORTO]]</span></div>
+        <div>Manutenzione software</div><div><span class="chip">[[PH_T07_UPDATE_PATCHING]]</span></div>
+        <div>Accesso remoto</div><div><span class="chip">[[PH_T09_SUPPORTO_REMOTO]]</span></div>
+        <div>Change request</div><div>Modalità definite in contratto</div>
+      </div>
+      <p class="t-body-s" style="margin:14px 0 0">Nessuno di questi valori si dichiara prima di averlo
+        concordato: un livello di servizio scritto a caso è peggio che non averlo.</p>
+    </div>
+
+    <div class="c7">
+      <div class="lbl-s" style="margin-bottom:12px">Checklist per l'audit · cosa portare in sala</div>
+      <div class="grid12">
+        <div class="c6">
+          <ul class="lst">
+            <li>Elenco dei PLC per linea, con marca e modello</li>
+            <li>Schemi di rete OT e IT, anche parziali</li>
+            <li>Elenco dei contatori energia e loro posizione</li>
+            <li>Sensori già presenti a bordo linea</li>
+            <li>Referenti IT e OT che possono decidere</li>
+            <li>Requisiti di reportistica, se ce ne sono</li>
+          </ul>
+        </div>
+        <div class="c6">
+          <ul class="lst">
+            <li>Modalità di accesso al gestionale</li>
+            <li>Le formule OEE che usi oggi, se ne usi</li>
+            <li>Come conti i pezzi buoni</li>
+            <li>Turni e calendario di produzione</li>
+            <li>Finestre di fermo disponibili nell'anno</li>
+            <li>Chi userà le viste, per ruolo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="zone" style="bottom:104px">
+    <div class="rule" style="margin-bottom:18px"></div>
+    <div class="grid12" style="align-items:start">
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Referente</div>
+        <div class="t-body" style="color:var(--d1)">Pablo Degl'Innocenti<br>
+          <span style="font-family:var(--f-data);font-size:12px;color:var(--d2)">pablo.deglinnocenti@marchianisrl.com</span></div>
+      </div>
+      <div class="c2">
+        <div class="lbl-s" style="margin-bottom:10px">Prenotazione</div>
+        <span class="chip">[[PH_18_BOOKING]]</span>
+      </div>
+      <div class="c2">
+        <div class="lbl-s" style="margin-bottom:10px">Sito</div>
+        <span class="chip">[[PH_17_DOMINIO]]</span>
+      </div>
+      <div class="c4">
+        <a class="link-card" href="DFactory_SalesDeck_v2.html#s01_cover">
+          <span class="link-card__k">Documento gemello</span>
+          <span class="link-card__t">Sales deck: perché adesso, l'offerta e il percorso dall'audit alla
+            scala.</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · D Factory S.r.l. · gruppo Clevertech</span>
+  </div>
+</div><!--/slide-->

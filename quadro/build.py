@@ -7,8 +7,8 @@ in testa a ogni documento. I font (Geist, Geist Mono, Instrument Serif) sono gia
 incorporati in base64 nel foglio: nessuna chiamata a CDN, i documenti funzionano
 anche senza rete.
 
-Uso:  python3 quadro/build.py
-Out:  DFactory_SalesDeck.html (14 slide) e DFactory_DossierTecnico.html (16)
+Uso:  python3 quadro/build.py [filtro]
+Out:  i quattro documenti; con un filtro solo quelli il cui nome lo contiene
 """
 import pathlib
 import re
@@ -19,10 +19,16 @@ REPO = ROOT.parent
 SYSTEM = ROOT / "dfactory-system.css"
 
 DOCS = [
+    # v1: resta compilabile, non si sovrascrive.
     {"src": ROOT / "src" / "sales.html", "out": REPO / "DFactory_SalesDeck.html",
      "title": "D.Factory · Sales Deck", "atteso": 14},
     {"src": ROOT / "src" / "dossier.html", "out": REPO / "DFactory_DossierTecnico.html",
      "title": "D.Factory · Dossier tecnico", "atteso": 16},
+    # v2: revisione congiunta, 12 slide e 18 pagine.
+    {"src": ROOT / "src" / "sales_v2.html", "out": REPO / "DFactory_SalesDeck_v2.html",
+     "title": "D.Factory · Sales Deck", "atteso": 12},
+    {"src": ROOT / "src" / "dossier_v2.html", "out": REPO / "DFactory_DossierTecnico_v2.html",
+     "title": "D.Factory · Dossier tecnico", "atteso": 18},
 ]
 
 SHELL = """<!DOCTYPE html>
@@ -74,10 +80,15 @@ def numera(html: str, tot: int) -> str:
 
 
 def main() -> None:
+    only = sys.argv[1] if len(sys.argv) > 1 else ""
     css = SYSTEM.read_text(encoding="utf-8")
     for d in DOCS:
         if not d["src"].exists():
+            if only and only not in d["out"].name:
+                continue
             sys.exit(f"{d['out'].name}: manca il sorgente {d['src'].name}")
+        if only and only not in d["out"].name:
+            continue
         body = d["src"].read_text(encoding="utf-8")
         n = body.count('<div class="slide')
         if n != d["atteso"]:
