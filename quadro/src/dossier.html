@@ -1,0 +1,1052 @@
+<!-- =====================================================================
+     DOSSIER TECNICO · budget giallo ridotto a 2 ruoli per slide.
+     Sulle slide scure il punto del marchio ne consuma gia' uno: resta spazio
+     per la sola serie dati. Niente led, niente bordi in accento sullo scuro.
+     ===================================================================== -->
+
+<!-- 01 · COPERTINA — T0 ridotta · scura ---------------------------------- -->
+<div class="slide slide--dark" id="d01_cover">
+  <div class="grid-bg"></div>
+
+  <div class="rail rail--t">
+    <span>Dossier tecnico</span>
+    <span>Supervisione 4.0 · linee F&amp;B</span>
+  </div>
+
+  <div class="zone" style="top:250px">
+    <div class="grid12" style="align-items:end">
+      <div class="c7">
+        <h1 class="t-cover">Dossier<br>tecnico.</h1>
+      </div>
+      <div class="c5">
+        <div class="lbl-s" style="margin-bottom:12px">A chi serve</div>
+        <p class="t-body" style="margin:0 0 26px">Alla funzione tecnica e all'IT del cliente. Risponde al dettaglio
+          di prodotto, di integrazione e di delivery: cosa legge il sistema, da quali sorgenti, come si installa e
+          con quali tempi.</p>
+        <div class="lbl-s" style="margin-bottom:12px">Documento complementare</div>
+        <p class="t-body" style="margin:0">Il sales deck risponde a cosa fa il sistema, per chi è e quanto costa.
+          Questo dossier risponde a come funziona.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · D Factory S.r.l. · Collecchio (PR)</span>
+  </div>
+</div><!--/slide-->
+
+<!-- 02 · ARCHITETTURA E DATI — T3 · scura -------------------------------- -->
+<div class="slide slide--dark" id="d02_architettura">
+  <div class="rail rail--t">
+    <span>02 · Architettura e dati</span>
+    <span>Quattro sorgenti · un solo modello</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Quattro sorgenti,<br>un solo modello dati.</h2>
+  </div>
+
+  <div class="zone zone--body">
+    <div class="grid12">
+      <div class="c3 colr">
+        <div class="lbl-s" style="margin-bottom:14px">01 · PLC di linea</div>
+        <p class="t-body-s">Stati macchina e allarmi, PackML/OMAC, 17 stati nativo. Lettura via Ethernet sulla rete
+          esistente, indipendentemente dalla marca.</p>
+      </div>
+      <div class="c3 colr">
+        <div class="lbl-s" style="margin-bottom:14px">02 · Sensori esistenti</div>
+        <p class="t-body-s">Pezzi, velocità, qualità: si parte da quello che è già in linea. I sensori mancanti si
+          aggiungono solo dove l'audit li ha indicati.</p>
+      </div>
+      <div class="c3 colr">
+        <div class="lbl-s" style="margin-bottom:14px">03 · Contatori energia</div>
+        <p class="t-body-s">Cinque vettori: elettricità, gas, vapore, aria compressa, acqua. Strumentazione MID a
+          richiesta dove il dato deve reggere in audit.</p>
+      </div>
+      <div class="c3 colr">
+        <div class="lbl-s" style="margin-bottom:14px">04 · Gestionale</div>
+        <p class="t-body-s">Ordini, batch e anagrafiche letti in sola lettura tramite un livello intermedio, senza
+          toccare gli accessi del cliente.</p>
+      </div>
+    </div>
+
+    <div class="rule" style="margin:34px 0 20px"></div>
+    <div class="grid12">
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Indipendente dal protocollo</div>
+        <p class="t-body-s">Su Ethernet, adattabile a qualsiasi macchina e protocollo. Costruttori diversi, stessa
+          piattaforma.</p>
+      </div>
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Tag mapping</div>
+        <p class="t-body-s">L'onboarding del dato è lavoro nostro: mappiamo i tag delle macchine del cliente, non
+          li mappa lui.</p>
+      </div>
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Albero d'impianto</div>
+        <p class="t-body-s">Navigabile: stabilimento, area, linea, macchina, fino al singolo asset.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@</span>
+  </div>
+</div><!--/slide-->
+
+<!-- 03 · CAPABILITY DI PIATTAFORMA — T3 · chiara ------------------------- -->
+<div class="slide slide--light" id="d03_capability">
+  <div class="ticks" style="top:0">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <div class="rail rail--t">
+    <span>03 · Capability di piattaforma</span>
+    <span>MAPST 4.0 · l'intero ciclo di linea</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">MAPST 4.0 copre l'intero ciclo di linea.</h2>
+    <p class="t-h2" style="margin:14px 0 0;max-width:920px">L'ultima colonna è roadmap dichiarata: oggi non
+      c'è, e lo diciamo prima e non in fase di collaudo.</p>
+  </div>
+
+  <div class="zone zone--body grid12">
+    <div class="c3 colr colr--acc">
+      <div class="lbl-s" style="margin-bottom:14px">Produzione</div>
+      <ul class="lst">
+        <li>Monitoraggio e analisi del processo</li>
+        <li>Confezionamento e assemblaggio</li>
+        <li>Analisi fermi macchina e scarti</li>
+        <li>Avanzamento e dialogo con gli operatori</li>
+        <li>Tracciabilità di prodotto e processo</li>
+      </ul>
+    </div>
+    <div class="c3 colr">
+      <div class="lbl-s" style="margin-bottom:14px">Consumi</div>
+      <ul class="lst">
+        <li>Utility: energia, acqua, gas, aria, vapore</li>
+        <li>Consumo per stato macchina e per pezzo</li>
+        <li>Analisi di materie prime e consumabili</li>
+      </ul>
+    </div>
+    <div class="c3 colr">
+      <div class="lbl-s" style="margin-bottom:14px">Manutenzione e qualità</div>
+      <ul class="lst">
+        <li>Gestione dati e operazioni di manutenzione</li>
+        <li>Storico interventi per asset</li>
+        <li>Controlli qualità a bordo linea</li>
+      </ul>
+    </div>
+    <div class="c3"><div class="panel" style="height:100%">
+      <div class="panel__hd"><span>Roadmap</span><span>Non disponibile oggi</span></div>
+      <ul class="lst">
+        <li>Manutenzione predittiva</li>
+        <li>Qualità predittiva</li>
+        <li>Dati e video con telecamere IP</li>
+        <li>Indicatori operatore, modulo Refyn</li>
+      </ul>
+      <div class="panel__ft">In via di definizione</div>
+    </div></div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@</span>
+  </div>
+</div><!--/slide-->
+
+<!-- 04 · SUPERVISIONE LINEA — T4 · scura --------------------------------- -->
+<div class="slide slide--dark" id="d04_superv">
+  <div class="rail rail--t">
+    <span>04 · Supervisione linea</span>
+    <span>Produzione · 1 / 4</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Tutta la linea, in tempo reale.</h2>
+  </div>
+
+  <div class="zone zone--body grid12">
+    <div class="c5">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Letture di linea</span><span>Refresh 5 s</span></div>
+        <div class="readout readout--acc" style="margin-bottom:26px">
+          <div class="readout__v">68,4<u>%</u></div>
+          <div class="readout__k">OEE di linea · gap vs target −6,6 pt</div>
+        </div>
+        <div class="readout" style="margin-bottom:26px">
+          <div class="readout__v m">430<u> / 1.000</u></div>
+          <div class="readout__k">Cartoni dell'ordine in corso</div>
+        </div>
+        <div class="readout">
+          <div class="readout__v m">02:14:30</div>
+          <div class="readout__k">Tempo alla fine, su velocità attuale</div>
+        </div>
+        <div class="panel__ft">Stato per macchina · ordine · tempo alla fine</div>
+      </div>
+    </div>
+
+    <div class="c7">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Stato macchine · ultime 2 h</span><span>17 stati PackML</span></div>
+        <div class="tl">
+          <div class="tl__row"><div class="tl__name">Depalletizer</div><div class="tl__bar">
+            <span class="seg-run" style="flex:96"></span><span class="seg-idle" style="flex:4"></span></div></div>
+          <div class="tl__row"><div class="tl__name">Rinser</div><div class="tl__bar">
+            <span class="seg-run" style="flex:91"></span><span class="seg-idle" style="flex:9"></span></div></div>
+          <div class="tl__row"><div class="tl__name">Filler / Capper</div><div class="tl__bar">
+            <span class="seg-run" style="flex:78"></span><span class="seg-held" style="flex:5"></span><span class="seg-run" style="flex:17"></span></div></div>
+          <div class="tl__row"><div class="tl__name">Labeler</div><div class="tl__bar">
+            <span class="seg-run" style="flex:54"></span><span class="seg-held" style="flex:19"></span><span class="seg-idle" style="flex:8"></span><span class="seg-run" style="flex:19"></span></div></div>
+          <div class="tl__row"><div class="tl__name">Shrink Wrapper</div><div class="tl__bar">
+            <span class="seg-run" style="flex:88"></span><span class="seg-idle" style="flex:12"></span></div></div>
+          <div class="tl__row"><div class="tl__name">Palletizer</div><div class="tl__bar">
+            <span class="seg-run" style="flex:62"></span><span class="seg-idle" style="flex:31"></span><span class="seg-held" style="flex:7"></span></div></div>
+        </div>
+        <div class="key" style="margin-top:22px">
+          <span><i class="seg-run"></i>In produzione</span>
+          <span><i class="seg-held"></i>Held · materiale</span>
+          <span><i class="seg-idle"></i>Idle · in attesa</span>
+        </div>
+        <div class="panel__ft">Il Labeler è la causa principale del gap di linea</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@</span>
+  </div>
+</div><!--/slide-->
+
+<!-- 05 · ANALISI FERMI — T4 · scura -------------------------------------- -->
+<div class="slide slide--dark" id="d05_fermi">
+  <div class="rail rail--t">
+    <span>05 · Analisi fermi</span>
+    <span>Produzione · 2 / 4</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Ogni fermo ha una causa.</h2>
+  </div>
+
+  <div class="zone zone--body grid12">
+    <div class="c5">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Letture del turno</span><span>11 categorie</span></div>
+        <div class="readout readout--acc" style="margin-bottom:26px">
+          <div class="readout__v">04:32</div>
+          <div class="readout__k">Tempo perso · 33% del tempo turno</div>
+        </div>
+        <div class="readout" style="margin-bottom:26px">
+          <div class="readout__v m">71</div>
+          <div class="readout__k">Fermi classificati per causa</div>
+        </div>
+        <div class="readout">
+          <div class="readout__v m">11<u> s</u></div>
+          <div class="readout__k">Durata media · micro-fermi ricorrenti</div>
+        </div>
+        <div class="panel__ft">Ordinati per tempo perso, non per frequenza</div>
+      </div>
+    </div>
+
+    <div class="c7">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>OEE scomposto per causa di fermo</span><span>hh:mm</span></div>
+        <div class="barh"><div class="barh__name">Outfeed operatore</div><div class="barh__track"><i class="barh__fill" style="width:100%"></i></div><div class="barh__val">01:18 · 11 ev.</div></div>
+        <div class="barh"><div class="barh__name">Infeed jam</div><div class="barh__track"><i class="barh__fill" style="width:82%"></i></div><div class="barh__val">01:04 · 9 ev.</div></div>
+        <div class="barh"><div class="barh__name">Carton min level</div><div class="barh__track"><i class="barh__fill barh__fill--2" style="width:55%"></i></div><div class="barh__val">00:43 · 18 ev.</div></div>
+        <div class="barh"><div class="barh__name">Glue temp low</div><div class="barh__track"><i class="barh__fill barh__fill--2" style="width:42%"></i></div><div class="barh__val">00:33 · 7 ev.</div></div>
+        <div class="barh"><div class="barh__name">Vacuum loss</div><div class="barh__track"><i class="barh__fill barh__fill--2" style="width:28%"></i></div><div class="barh__val">00:22 · 4 ev.</div></div>
+        <div class="barh" style="margin-bottom:0"><div class="barh__name">Altri sei tipi</div><div class="barh__track"><i class="barh__fill barh__fill--2" style="width:32%"></i></div><div class="barh__val">00:25 · 22 ev.</div></div>
+        <div class="panel__ft">Non un generico "la linea è ferma": ogni fermo ha un codice e una durata</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@</span>
+  </div>
+</div><!--/slide-->
+
+<!-- 06 · VELOCITÀ E QUALITÀ — T4 · scura --------------------------------- -->
+<div class="slide slide--dark" id="d06_velocita">
+  <div class="rail rail--t">
+    <span>06 · Velocità e qualità</span>
+    <span>Produzione · 3 / 4</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Sotto la linea, ogni macchina.</h2>
+  </div>
+
+  <div class="zone zone--body grid12">
+    <div class="c5">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Bottle Former · macchina 03</span><span>Formato 1,0 Lt</span></div>
+        <div class="readout readout--acc" style="margin-bottom:26px">
+          <div class="readout__v">11.840</div>
+          <div class="readout__k">Bottiglie/ora · 98,7% del target</div>
+        </div>
+        <div class="readout" style="margin-bottom:26px">
+          <div class="readout__v m">97,8<u>%</u></div>
+          <div class="readout__k">Qualità · 1.840 scarti su 84.300 pezzi</div>
+        </div>
+        <div class="readout">
+          <div class="readout__v m">±214</div>
+          <div class="readout__k">Deviazione di velocità nel turno</div>
+        </div>
+        <div class="panel__ft">Formato richiesto e formato in lavorazione coincidono</div>
+      </div>
+    </div>
+
+    <div class="c7">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Pezzi prodotti · ultimi 60 minuti</span><span>Target 12.000 bph</span></div>
+        <div class="spark">
+          <svg viewBox="0 0 560 190" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="0" y1="34" x2="560" y2="34" stroke="rgba(255,255,255,.28)" stroke-width="1" stroke-dasharray="4 4"/>
+            <line x1="0" y1="96" x2="560" y2="96" stroke="rgba(255,255,255,.13)" stroke-width="1"/>
+            <line x1="0" y1="158" x2="560" y2="158" stroke="rgba(255,255,255,.13)" stroke-width="1"/>
+            <path d="M0,62 L37,54 L74,48 L111,44 L148,70 L166,132 L184,66 L221,50 L258,46
+                     L295,52 L332,48 L369,44 L406,50 L443,46 L480,48 L517,42 L560,46
+                     L560,190 L0,190 Z" fill="rgba(230,224,17,.14)"/>
+            <path d="M0,62 L37,54 L74,48 L111,44 L148,70 L166,132 L184,66 L221,50 L258,46
+                     L295,52 L332,48 L369,44 L406,50 L443,46 L480,48 L517,42 L560,46"
+                  fill="none" stroke="#E6E011" stroke-width="2.5"/>
+            <path d="M0,176 L148,174 L166,168 L184,175 L332,177 L480,175 L560,176"
+                  fill="none" stroke="rgba(255,255,255,.34)" stroke-width="1.5"/>
+            <circle cx="166" cy="132" r="5" fill="#0A0A0A" stroke="#FFFFFF" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="key" style="margin-top:16px">
+          <span><i class="seg-run"></i>Pezzi prodotti</span>
+          <span><i class="seg-held"></i>Scarti</span>
+          <span>Micro-fermo 38 s alle 07:18</span>
+        </div>
+        <div class="panel__ft">Il micro-fermo non compare in nessun rapporto di reparto, ma nel dato c'è</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@</span>
+  </div>
+</div><!--/slide-->
+
+<!-- 07 · VISTA MULTI-MACCHINA — T4 · scura ------------------------------- -->
+<div class="slide slide--dark" id="d07_multi">
+  <div class="rail rail--t">
+    <span>07 · Vista multi-macchina</span>
+    <span>Produzione · 4 / 4</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Tutto l'impianto, in una vista.</h2>
+  </div>
+
+  <div class="zone zone--bodyhigh grid12">
+    <div class="c4">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Impianto</span><span>20 macchine</span></div>
+        <div class="readout readout--acc" style="margin-bottom:24px">
+          <div class="readout__v m">16<u> / 20</u></div>
+          <div class="readout__k">In produzione ora</div>
+        </div>
+        <div class="readout" style="margin-bottom:24px">
+          <div class="readout__v m">2</div>
+          <div class="readout__k">Ferme ora · Labeler-B e Case Packer</div>
+        </div>
+        <div class="readout">
+          <div class="readout__v m">71,8<u>%</u></div>
+          <div class="readout__k">OEE medio, ponderato sulle ore</div>
+        </div>
+        <div class="panel__ft">Il collo di bottiglia emerge nel tempo, non nell'istante</div>
+      </div>
+    </div>
+
+    <div class="c8">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Timeline impianto · stato per minuto</span><span>Una riga = una macchina</span></div>
+        <div class="tl tl--dense">
+        <div class="tl__row"><div class="tl__name">A01 Depalletizer</div><div class="tl__bar"><span class="seg-run" style="flex:46"></span><span class="seg-idle" style="flex:6"></span><span class="seg-run" style="flex:34"></span><span class="seg-held" style="flex:5"></span><span class="seg-run" style="flex:9"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A02 Rinser</div><div class="tl__bar"><span class="seg-run" style="flex:62"></span><span class="seg-held" style="flex:5"></span><span class="seg-run" style="flex:33"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A03 Filler</div><div class="tl__bar"><span class="seg-run" style="flex:41"></span><span class="seg-idle" style="flex:7"></span><span class="seg-run" style="flex:52"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A04 Capper</div><div class="tl__bar"><span class="seg-run" style="flex:74"></span><span class="seg-idle" style="flex:6"></span><span class="seg-run" style="flex:20"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A05 Labeler-A</div><div class="tl__bar"><span class="seg-run" style="flex:30"></span><span class="seg-idle" style="flex:8"></span><span class="seg-run" style="flex:44"></span><span class="seg-held" style="flex:5"></span><span class="seg-run" style="flex:13"></span></div></div>
+        <div class="tl__row tl__row--acc"><div class="tl__name">A06 Labeler-B</div><div class="tl__bar"><span class="seg-run" style="flex:22"></span><span class="seg-held" style="flex:11"></span><span class="seg-idle" style="flex:9"></span><span class="seg-run" style="flex:37"></span><span class="seg-held" style="flex:21"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A07 Inspector</div><div class="tl__bar"><span class="seg-run" style="flex:55"></span><span class="seg-idle" style="flex:7"></span><span class="seg-run" style="flex:38"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A08 Dryer</div><div class="tl__bar"><span class="seg-run" style="flex:88"></span><span class="seg-idle" style="flex:12"></span></div></div>
+        <div class="tl__row"><div class="tl__name">A09 Shrink Wrap</div><div class="tl__bar"><span class="seg-run" style="flex:34"></span><span class="seg-idle" style="flex:9"></span><span class="seg-run" style="flex:41"></span><span class="seg-held" style="flex:6"></span><span class="seg-run" style="flex:10"></span></div></div>
+        <div class="tl__row"><div class="tl__name">B10 Tray Former</div><div class="tl__bar"><span class="seg-run" style="flex:18"></span><span class="seg-held" style="flex:8"></span><span class="seg-run" style="flex:58"></span><span class="seg-idle" style="flex:5"></span><span class="seg-run" style="flex:11"></span></div></div>
+        <div class="tl__row tl__row--acc"><div class="tl__name">B11 Case Packer</div><div class="tl__bar"><span class="seg-run" style="flex:26"></span><span class="seg-idle" style="flex:5"></span><span class="seg-run" style="flex:30"></span><span class="seg-held" style="flex:8"></span><span class="seg-run" style="flex:17"></span><span class="seg-held" style="flex:14"></span></div></div>
+        <div class="tl__row"><div class="tl__name">B12 Palletizer</div><div class="tl__bar"><span class="seg-run" style="flex:44"></span><span class="seg-idle" style="flex:6"></span><span class="seg-run" style="flex:50"></span></div></div>
+        <div class="tl__row"><div class="tl__name">B13 Stretch Wrap</div><div class="tl__bar"><span class="seg-run" style="flex:66"></span><span class="seg-idle" style="flex:7"></span><span class="seg-run" style="flex:27"></span></div></div>
+        <div class="tl__row"><div class="tl__name">B14 Riser</div><div class="tl__bar"><span class="seg-idle" style="flex:12"></span><span class="seg-run" style="flex:40"></span><span class="seg-held" style="flex:6"></span><span class="seg-run" style="flex:42"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C15 Pasteurizer</div><div class="tl__bar"><span class="seg-run" style="flex:79"></span><span class="seg-idle" style="flex:5"></span><span class="seg-run" style="flex:16"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C16 Chiller</div><div class="tl__bar"><span class="seg-run" style="flex:92"></span><span class="seg-idle" style="flex:8"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C17 CIP Skid</div><div class="tl__bar"><span class="seg-idle" style="flex:14"></span><span class="seg-run" style="flex:48"></span><span class="seg-idle" style="flex:6"></span><span class="seg-run" style="flex:32"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C18 Blow Molder</div><div class="tl__bar"><span class="seg-run" style="flex:58"></span><span class="seg-held" style="flex:5"></span><span class="seg-run" style="flex:37"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C19 Cap Sorter</div><div class="tl__bar"><span class="seg-run" style="flex:36"></span><span class="seg-idle" style="flex:9"></span><span class="seg-run" style="flex:55"></span></div></div>
+        <div class="tl__row"><div class="tl__name">C20 Outfeed</div><div class="tl__bar"><span class="seg-idle" style="flex:8"></span><span class="seg-run" style="flex:47"></span><span class="seg-idle" style="flex:6"></span><span class="seg-run" style="flex:39"></span></div></div>
+        </div>
+        <div class="key" style="margin-top:14px">
+          <span><i class="seg-run"></i>Righe in evidenza</span>
+          <span><i style="background:rgba(255,255,255,.28)"></i>In produzione</span>
+          <span><i style="background:rgba(255,255,255,.62)"></i>Held</span>
+          <span><i style="background:rgba(255,255,255,.10)"></i>Idle · starved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@</span>
+  </div>
+</div><!--/slide-->
+
+<!-- 08 · DISTRIBUZIONE ENERGIA — T4 · scura ------------------------------ -->
+<div class="slide slide--dark" id="d08_distribuzione">
+  <div class="rail rail--t">
+    <span>08 · Distribuzione energia</span>
+    <span>Energia · 1 / 3</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Da chi entra, a chi consuma.</h2>
+  </div>
+
+  <div class="zone zone--body grid12">
+    <div class="c4">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Stabilimento · aprile</span><span>MWh</span></div>
+        <div class="readout readout--acc" style="margin-bottom:24px">
+          <div class="readout__v">408,84</div>
+          <div class="readout__k">MWh totali nel mese</div>
+        </div>
+        <div class="readout" style="margin-bottom:24px">
+          <div class="readout__v m">88,0</div>
+          <div class="readout__k">MWh da fotovoltaico · 12,0% di autoconsumo</div>
+        </div>
+        <div class="readout">
+          <div class="readout__v m">Filling</div>
+          <div class="readout__k">Area a maggiore assorbimento</div>
+        </div>
+        <div class="panel__ft">Non solo quanta energia entra: dove finisce e dove si disperde</div>
+      </div>
+    </div>
+
+    <div class="c8">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Diagramma di flusso · da dove entra a dove si consuma</span><span>Nastri ∝ kWh</span></div>
+        <div class="flow">
+          <svg viewBox="0 0 640 250" aria-hidden="true">
+            <!-- un solo soggetto in giallo: il nastro che assorbe di piu'.
+                 Il fotovoltaico resta neutro, ha la sua lettura a sinistra. -->
+            <!-- sorgenti -->
+            <rect x="6" y="18" width="9" height="134" fill="rgba(255,255,255,.34)"/>
+            <rect x="6" y="162" width="9" height="37" fill="rgba(255,255,255,.44)"/>
+            <!-- nodo fabbrica -->
+            <rect x="300" y="18" width="9" height="164" fill="#FFFFFF"/>
+            <rect x="300" y="190" width="9" height="9" fill="rgba(255,255,255,.34)"/>
+            <!-- nastri sorgente -> nodo -->
+            <path d="M15,18 C160,18 160,18 300,18 L300,146 C160,146 160,152 15,152 Z" fill="rgba(255,255,255,.14)"/>
+            <path d="M15,152 C160,152 160,190 300,190 L300,199 C160,199 160,199 15,199 Z" fill="rgba(255,255,255,.09)"/>
+            <path d="M15,162 C160,162 160,146 300,146 L300,182 C160,182 160,199 15,199 Z" fill="rgba(255,255,255,.20)"/>
+            <!-- nastri nodo -> utenze -->
+            <path d="M309,18 C450,18 450,20 520,20 L520,66 C450,66 450,64 309,64 Z" fill="rgba(230,224,17,.30)"/>
+            <path d="M309,64 C450,64 450,76 520,76 L520,112 C450,112 450,100 309,100 Z" fill="rgba(255,255,255,.20)"/>
+            <path d="M309,100 C450,100 450,122 520,122 L520,151 C450,151 450,129 309,129 Z" fill="rgba(255,255,255,.17)"/>
+            <path d="M309,129 C450,129 450,161 520,161 L520,185 C450,185 450,153 309,153 Z" fill="rgba(255,255,255,.15)"/>
+            <path d="M309,153 C450,153 450,195 520,195 L520,213 C450,213 450,171 309,171 Z" fill="rgba(255,255,255,.13)"/>
+            <path d="M309,171 C450,171 450,223 520,223 L520,232 C450,232 450,182 309,182 Z" fill="rgba(255,255,255,.12)"/>
+            <path d="M309,190 C450,190 450,240 520,240 L520,246 C450,246 450,199 309,199 Z" fill="rgba(255,255,255,.11)"/>
+            <!-- barre utenze -->
+            <rect x="520" y="20" width="9" height="46" fill="#E6E011"/>
+            <rect x="520" y="76" width="9" height="36" fill="rgba(255,255,255,.44)"/>
+            <rect x="520" y="122" width="9" height="29" fill="rgba(255,255,255,.38)"/>
+            <rect x="520" y="161" width="9" height="24" fill="rgba(255,255,255,.32)"/>
+            <rect x="520" y="195" width="9" height="18" fill="rgba(255,255,255,.26)"/>
+            <rect x="520" y="223" width="9" height="9" fill="rgba(255,255,255,.22)"/>
+            <rect x="520" y="240" width="9" height="6" fill="rgba(255,255,255,.18)"/>
+            <!-- etichette -->
+            <text x="0" y="12" fill="rgba(255,255,255,.44)">RETE · 320,8</text>
+            <text x="0" y="214" fill="rgba(255,255,255,.44)">FOTOVOLTAICO · 88,0</text>
+            <text x="300" y="12" fill="#FFFFFF">FACTORY</text>
+            <text x="538" y="47" fill="#FFFFFF">Filling 112,4</text>
+            <text x="538" y="98" fill="rgba(255,255,255,.44)">Mixing 86,1</text>
+            <text x="538" y="140" fill="rgba(255,255,255,.44)">Boiler 71,3</text>
+            <text x="538" y="176" fill="rgba(255,255,255,.44)">HVAC 58,0</text>
+            <text x="538" y="207" fill="rgba(255,255,255,.44)">Chiller 44,7</text>
+            <text x="538" y="231" fill="rgba(255,255,255,.44)">Purifier 21,4</text>
+            <text x="538" y="247" fill="rgba(255,255,255,.44)">Office 14,9</text>
+          </svg>
+        </div>
+        <div class="panel__ft">La larghezza del nastro è il consumo misurato, non una ripartizione</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@</span>
+  </div>
+</div><!--/slide-->
+
+<!-- 09 · COSTO E CO2 PER PEZZO — T4 · scura ------------------------------ -->
+<div class="slide slide--dark" id="d09_costo">
+  <div class="rail rail--t">
+    <span>09 · Costo e CO₂ per pezzo</span>
+    <span>Energia · 2 / 3</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Quanto costa produrre un pezzo.</h2>
+  </div>
+
+  <div class="zone zone--body grid12">
+    <div class="c5">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Ottobre · 12,6 M pezzi</span><span>€ · kg CO₂</span></div>
+        <div class="readout readout--acc" style="margin-bottom:26px">
+          <div class="readout__v">0,029<u> €</u></div>
+          <div class="readout__k">Costo energia per pezzo · −4,1% vs settembre</div>
+        </div>
+        <div class="readout" style="margin-bottom:26px">
+          <div class="readout__v m">0,21<u> kg</u></div>
+          <div class="readout__k">CO₂ per pezzo · Scope 1-2, fattori GHG</div>
+        </div>
+        <div class="readout">
+          <div class="readout__v m">358,8<u> k€</u></div>
+          <div class="readout__k">Spesa del mese · 2.634 t CO₂ equivalenti</div>
+        </div>
+        <div class="panel__ft">Misurato sul ciclo, non ripartito a coefficiente</div>
+      </div>
+    </div>
+
+    <div class="c7">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Consumo e costo per vettore</span><span>kWh · €</span></div>
+        <div class="barh"><div class="barh__name">Elettricità</div><div class="barh__track"><i class="barh__fill" style="width:92%"></i></div><div class="barh__val">1.414 k · 198,0 k€</div></div>
+        <div class="barh"><div class="barh__name">Gas</div><div class="barh__track"><i class="barh__fill barh__fill--2" style="width:58%"></i></div><div class="barh__val">920 k · 64,4 k€</div></div>
+        <div class="barh"><div class="barh__name">Vapore</div><div class="barh__track"><i class="barh__fill barh__fill--2" style="width:40%"></i></div><div class="barh__val">548 k · 48,0 k€</div></div>
+        <div class="barh"><div class="barh__name">Acqua</div><div class="barh__track"><i class="barh__fill barh__fill--2" style="width:22%"></i></div><div class="barh__val">300 k · 18,0 k€</div></div>
+        <div class="barh" style="margin-bottom:0"><div class="barh__name">Aria compressa</div><div class="barh__track"><i class="barh__fill barh__fill--2" style="width:15%"></i></div><div class="barh__val">208 k · 29,8 k€</div></div>
+        <div class="rule" style="margin:22px 0 14px"></div>
+        <div class="barh" style="margin-bottom:0"><div class="barh__name">Totale impianto</div><div class="barh__track" style="background:transparent"></div><div class="barh__val">3.514 k · 358,8 k€</div></div>
+        <div class="panel__ft">Cinque vettori tradotti in euro e CO₂ per unità prodotta</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@</span>
+  </div>
+</div><!--/slide-->
+
+<!-- 10 · ENERGIA PER STATO — T4 · scura ---------------------------------- -->
+<div class="slide slide--dark" id="d10_stato">
+  <div class="rail rail--t">
+    <span>10 · Energia per stato macchina</span>
+    <span>Energia · 3 / 3</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">L'energia che consumi da fermo.</h2>
+  </div>
+
+  <div class="zone zone--body grid12">
+    <div class="c5">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Area packaging · giorno</span><span>2.840 kWh</span></div>
+        <div class="readout readout--acc" style="margin-bottom:24px">
+          <div class="readout__v">42<u>%</u></div>
+          <div class="readout__k">Consumata a macchina ferma · 1.136 kWh</div>
+        </div>
+        <div class="readout" style="margin-bottom:24px">
+          <div class="readout__v m">58<u>%</u></div>
+          <div class="readout__k">Indice di energia produttiva · target 70%</div>
+        </div>
+        <div class="readout">
+          <div class="readout__v m">idle + held</div>
+          <div class="readout__k">Gli stati in cui la macchina è accesa e non produce</div>
+        </div>
+        <div class="panel__ft">Quanto se ne recuperi si stabilisce in audit, asset per asset</div>
+      </div>
+    </div>
+
+    <div class="c7">
+      <div class="panel panel--plain" style="height:100%">
+        <div class="panel__hd"><span>Andamento orario per stato macchina</span><span>kWh · 00-23</span></div>
+        <div class="cols cols--fermo" style="height:186px">
+          <div class="cols__c" style="height:18.1%"><span class="seg-run" style="height:30.8%"></span><span class="seg-idle" style="height:46.2%"></span><span class="seg-held" style="height:15.4%"></span><span class="seg-idle" style="height:7.7%"></span></div>
+          <div class="cols__c" style="height:18.1%"><span class="seg-run" style="height:30.8%"></span><span class="seg-idle" style="height:46.2%"></span><span class="seg-held" style="height:15.4%"></span><span class="seg-idle" style="height:7.7%"></span></div>
+          <div class="cols__c" style="height:16.7%"><span class="seg-run" style="height:33.3%"></span><span class="seg-idle" style="height:41.7%"></span><span class="seg-held" style="height:16.7%"></span><span class="seg-idle" style="height:8.3%"></span></div>
+          <div class="cols__c" style="height:18.1%"><span class="seg-run" style="height:38.5%"></span><span class="seg-idle" style="height:38.5%"></span><span class="seg-held" style="height:15.4%"></span><span class="seg-idle" style="height:7.7%"></span></div>
+          <div class="cols__c" style="height:23.6%"><span class="seg-run" style="height:47.1%"></span><span class="seg-idle" style="height:23.5%"></span><span class="seg-held" style="height:11.8%"></span><span class="seg-idle" style="height:17.6%"></span></div>
+          <div class="cols__c" style="height:52.8%"><span class="seg-run" style="height:68.4%"></span><span class="seg-idle" style="height:10.5%"></span><span class="seg-held" style="height:7.9%"></span><span class="seg-idle" style="height:13.2%"></span></div>
+          <div class="cols__c" style="height:91.7%"><span class="seg-run" style="height:78.8%"></span><span class="seg-idle" style="height:7.6%"></span><span class="seg-held" style="height:9.1%"></span><span class="seg-idle" style="height:4.5%"></span></div>
+          <div class="cols__c" style="height:98.6%"><span class="seg-run" style="height:81.7%"></span><span class="seg-idle" style="height:5.6%"></span><span class="seg-held" style="height:9.9%"></span><span class="seg-idle" style="height:2.8%"></span></div>
+          <div class="cols__c" style="height:100.0%"><span class="seg-run" style="height:84.7%"></span><span class="seg-idle" style="height:5.6%"></span><span class="seg-held" style="height:6.9%"></span><span class="seg-idle" style="height:2.8%"></span></div>
+          <div class="cols__c" style="height:100.0%"><span class="seg-run" style="height:79.2%"></span><span class="seg-idle" style="height:6.9%"></span><span class="seg-held" style="height:11.1%"></span><span class="seg-idle" style="height:2.8%"></span></div>
+          <div class="cols__c" style="height:94.4%"><span class="seg-run" style="height:72.1%"></span><span class="seg-idle" style="height:8.8%"></span><span class="seg-held" style="height:13.2%"></span><span class="seg-idle" style="height:5.9%"></span></div>
+          <div class="cols__c" style="height:81.9%"><span class="seg-run" style="height:64.4%"></span><span class="seg-idle" style="height:15.3%"></span><span class="seg-held" style="height:10.2%"></span><span class="seg-idle" style="height:10.2%"></span></div>
+          <div class="cols__c" style="height:69.4%"><span class="seg-run" style="height:60.0%"></span><span class="seg-idle" style="height:22.0%"></span><span class="seg-held" style="height:10.0%"></span><span class="seg-idle" style="height:8.0%"></span></div>
+          <div class="cols__c" style="height:93.1%"><span class="seg-run" style="height:80.6%"></span><span class="seg-idle" style="height:7.5%"></span><span class="seg-held" style="height:9.0%"></span><span class="seg-idle" style="height:3.0%"></span></div>
+          <div class="cols__c" style="height:98.6%"><span class="seg-run" style="height:84.5%"></span><span class="seg-idle" style="height:5.6%"></span><span class="seg-held" style="height:7.0%"></span><span class="seg-idle" style="height:2.8%"></span></div>
+          <div class="cols__c" style="height:98.6%"><span class="seg-run" style="height:78.9%"></span><span class="seg-idle" style="height:7.0%"></span><span class="seg-held" style="height:9.9%"></span><span class="seg-idle" style="height:4.2%"></span></div>
+          <div class="cols__c" style="height:90.3%"><span class="seg-run" style="height:72.3%"></span><span class="seg-idle" style="height:9.2%"></span><span class="seg-held" style="height:13.8%"></span><span class="seg-idle" style="height:4.6%"></span></div>
+          <div class="cols__c" style="height:81.9%"><span class="seg-run" style="height:69.5%"></span><span class="seg-idle" style="height:11.9%"></span><span class="seg-held" style="height:10.2%"></span><span class="seg-idle" style="height:8.5%"></span></div>
+          <div class="cols__c" style="height:69.4%"><span class="seg-run" style="height:68.0%"></span><span class="seg-idle" style="height:16.0%"></span><span class="seg-held" style="height:10.0%"></span><span class="seg-idle" style="height:6.0%"></span></div>
+          <div class="cols__c" style="height:51.4%"><span class="seg-run" style="height:59.5%"></span><span class="seg-idle" style="height:24.3%"></span><span class="seg-held" style="height:10.8%"></span><span class="seg-idle" style="height:5.4%"></span></div>
+          <div class="cols__c" style="height:37.5%"><span class="seg-run" style="height:51.9%"></span><span class="seg-idle" style="height:29.6%"></span><span class="seg-held" style="height:11.1%"></span><span class="seg-idle" style="height:7.4%"></span></div>
+          <div class="cols__c" style="height:27.8%"><span class="seg-run" style="height:45.0%"></span><span class="seg-idle" style="height:35.0%"></span><span class="seg-held" style="height:15.0%"></span><span class="seg-idle" style="height:5.0%"></span></div>
+          <div class="cols__c" style="height:19.4%"><span class="seg-run" style="height:35.7%"></span><span class="seg-idle" style="height:42.9%"></span><span class="seg-held" style="height:14.3%"></span><span class="seg-idle" style="height:7.1%"></span></div>
+          <div class="cols__c" style="height:18.1%"><span class="seg-run" style="height:30.8%"></span><span class="seg-idle" style="height:46.2%"></span><span class="seg-held" style="height:15.4%"></span><span class="seg-idle" style="height:7.7%"></span></div>
+        </div>
+        <div class="cols__x"><span>00</span><span>06</span><span>12</span><span>18</span><span>23</span></div>
+        <div class="key" style="margin-top:18px">
+          <span><i class="sw-acc"></i>Idle · 18%</span>
+          <span><i style="background:rgba(255,255,255,.58)"></i>Held · 14%</span>
+          <span><i style="background:rgba(255,255,255,.20)"></i>Execute · 58%</span>
+          <span>Setup e stopped · 10%</span>
+        </div>
+        <div class="panel__ft">La quota non produttiva diventa visibile, quindi attaccabile</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     11 · METODO DI MISURA — T3 · chiara
+     ===================================================================== -->
+<div class="slide slide--light" id="d11_misura">
+  <div class="rail rail--t">
+    <span>11 · Metodo di misura</span>
+    <span>Scope 1&ndash;2 · ISO 50001</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Misurata, non stimata.</h2>
+    <p class="t-h2" style="margin:14px 0 0;max-width:900px">L'energia non è un coefficiente applicato a
+      tavolino: si legge sul ciclo produttivo e si divide per i pezzi.</p>
+  </div>
+
+  <div class="zone zone--body">
+    <div class="grid12">
+      <div class="c3 colr colr--acc">
+        <div class="lbl-s" style="margin-bottom:14px">01 · Lettura sul ciclo</div>
+        <p class="t-body-s">I contatori leggono in continuo e ogni lettura viene associata allo stato in cui la
+          macchina si trova in quel momento. Non è un totale di fine mese diviso per le ore.</p>
+      </div>
+      <div class="c3 colr">
+        <div class="lbl-s" style="margin-bottom:14px">02 · Divisione per i pezzi</div>
+        <p class="t-body-s">Il consumo del periodo si divide per i pezzi prodotti nello stesso periodo. Il costo
+          energetico per pezzo diventa un dato di processo, non una ripartizione contabile.</p>
+      </div>
+      <div class="c3 colr">
+        <div class="lbl-s" style="margin-bottom:14px">03 · Scope 1 e 2 auditabili</div>
+        <p class="t-body-s">Dati energetici conformi ai fattori GHG, pronti per la rendicontazione quando è il tuo
+          cliente a chiederla e non quando la chiedi tu.</p>
+      </div>
+      <div class="c3 colr">
+        <div class="lbl-s" style="margin-bottom:14px">04 · ISO 50001</div>
+        <p class="t-body-s">Trasparenza energetica che supporta la norma. È il linguaggio in cui ragiona un energy
+          manager, e il motivo per cui il dato regge fuori dalla fabbrica.</p>
+      </div>
+    </div>
+
+    <div class="rule" style="margin:34px 0 20px"></div>
+    <div class="grid12">
+      <div class="c3">
+        <div class="lbl-s" style="margin-bottom:12px">Cinque vettori</div>
+        <ul class="lst">
+          <li>Elettricità</li>
+          <li>Gas</li>
+          <li>Vapore</li>
+          <li>Aria compressa</li>
+          <li>Acqua</li>
+        </ul>
+      </div>
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:12px">Si può partire dalla sola energia</div>
+        <p class="t-body-s" style="margin:0 0 14px">Il modulo energia si attiva anche senza la parte produzione:
+          è una porta d'ingresso più stretta, più rapida da mettere in esercizio e con un perimetro di audit
+          contenuto.</p>
+        <p class="t-body-s" style="margin:0">Ogni vettore è tracciato per costo e per CO<sub>2</sub>, con lo
+          stesso modello dati della produzione.</p>
+      </div>
+      <div class="c5">
+        <div class="lbl-s" style="margin-bottom:12px">Il confine del metodo</div>
+        <div class="note">
+          <p>Il costo per pezzo dipende da come si contano i pezzi. La formula si calibra in audit sul modo di
+            misurare che hai già, prima che i numeri finiscano in un report: cambiarla dopo significa rifare i
+            confronti storici.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · misura diretta, non coefficienti</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     12 · FIT SULL'IMPIANTO — T5 · chiara
+     ===================================================================== -->
+<div class="slide slide--light" id="d12_brownfield">
+  <div class="rail rail--t">
+    <span>12 · Fit sull'impianto</span>
+    <span>Brownfield · protocolli misti</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Funziona sulle macchine<br>che hai già, anche vecchie.</h2>
+  </div>
+
+  <div class="zone grid12" style="top:212px">
+    <div class="c4"><div class="panel" style="height:244px">
+      <div class="panel__hd"><span>01 · Standard misti</span><span>PackML e non</span></div>
+      <h3 class="t-h3" style="margin:0 0 10px">Macchine non-PackML</h3>
+      <p class="t-body-s" style="margin:0 0 14px">Gestite con un modello ridotto a due stati. Anche le macchine
+        senza standard entrano nel quadro, accanto a quelle che espongono i 17 stati nativi.</p>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <span class="chip">PackML · 17 stati</span>
+        <span class="chip chip--acc">Ridotto · 2 stati</span>
+      </div>
+      <div class="panel__ft">Nessuna macchina resta fuori dal conto</div>
+    </div></div>
+
+    <div class="c4"><div class="panel" style="height:244px">
+      <div class="panel__hd"><span>02 · Multi-costruttore</span><span>Un solo modello</span></div>
+      <h3 class="t-h3" style="margin:0 0 10px">Costruttori e protocolli diversi</h3>
+      <p class="t-body-s" style="margin:0 0 14px">Tutti nella stessa piattaforma e sullo stesso modello dati.
+        Da qui nascono confronti reali tra linee, invece di fogli separati che nessuno riconcilia.</p>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <span class="chip">n costruttori</span>
+        <span class="chip">1 modello dati</span>
+      </div>
+      <div class="panel__ft">Il confronto tra linee diventa possibile</div>
+    </div></div>
+
+    <div class="c4"><div class="panel" style="height:244px">
+      <div class="panel__hd"><span>03 · Rete esistente</span><span>Ethernet</span></div>
+      <h3 class="t-h3" style="margin:0 0 10px">PLC e PC, qualsiasi marca</h3>
+      <p class="t-body-s" style="margin:0 0 14px">Letti via Ethernet sulla rete che hai già, indipendentemente
+        dalla marca. Non introduciamo hardware nostro in linea e non sostituiamo quello che funziona.</p>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <span class="chip">Siemens compresa</span>
+      </div>
+      <div class="panel__ft">Zero hardware proprietario D.Factory</div>
+    </div></div>
+  </div>
+
+  <div class="zone" style="top:478px">
+    <div class="rule" style="margin-bottom:20px"></div>
+    <div class="grid12">
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Gestionale via livello intermedio</div>
+        <p class="t-body-s" style="margin:0">Ordini, batch e anagrafiche letti in sola lettura, senza toccare gli
+          accessi che il tuo IT ha già configurato.</p>
+      </div>
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Configurazione flessibile</div>
+        <p class="t-body-s" style="margin:0">Nessuna fabbrica è pulita come nei disegni. L'ambiente di
+          configurazione si adatta a quello che trova, non il contrario.</p>
+      </div>
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Il tag mapping è lavoro nostro</div>
+        <p class="t-body-s" style="margin:0">Mappiamo i tag delle tue macchine noi. È la parte che di solito
+          blocca i progetti, e non la scarichiamo sul tuo reparto tecnico.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · impianti esistenti, non fabbriche nuove</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     13 · REPORT E SOVRANITÀ DEL DATO — T3 · scura
+     Scura per scelta: senza, le posizioni 11-15 farebbero cinque chiare
+     consecutive e il collaudo del ritmo fallirebbe.
+     ===================================================================== -->
+<div class="slide slide--dark" id="d13_report">
+  <div class="rail rail--t">
+    <span>13 · Report e sovranità del dato</span>
+    <span>Export · on-premise</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Lo porti in riunione<br>e in audit.</h2>
+  </div>
+
+  <div class="zone zone--body">
+    <div class="grid12">
+      <div class="c5">
+        <div class="lbl-s" style="margin-bottom:14px">Cosa esce dal sistema</div>
+        <p class="t-body" style="margin:0 0 20px">Quello che vedi a schermo lo metti su un tavolo senza
+          rielaborarlo a mano. Gli export sono pronti all'uso, in italiano e in inglese.</p>
+        <ul class="lst">
+          <li>Report di periodo, ITA ed ENG</li>
+          <li>PDF per la riunione e per l'audit</li>
+          <li>Gantt di produzione</li>
+          <li>Vista 3D dell'impianto</li>
+        </ul>
+      </div>
+      <div class="c7">
+        <div class="lbl-s" style="margin-bottom:14px">Dove restano i dati</div>
+        <div class="note" style="margin-bottom:24px">
+          <p>Il sistema gira on-premise, su un server tuo, senza internet sulla linea di produzione. Il dato di
+            produzione resta in fabbrica: nessuna esposizione cloud sulla linea, nessun archivio che vive
+            altrove. Per molti capi stabilimento è un sollievo, non un limite.</p>
+        </div>
+        <div class="grid12">
+          <div class="c6">
+            <div class="lbl-s" style="margin-bottom:10px">Deployment</div>
+            <p class="t-body-s" style="margin:0">PC industriale Linux, rete isolata dalla produzione. Il perimetro
+              lo definisce il tuo IT insieme a noi.</p>
+          </div>
+          <div class="c6">
+            <div class="lbl-s" style="margin-bottom:10px">Se un giorno smetti</div>
+            <p class="t-body-s" style="margin:0">Lo storico è sul tuo server e ci resta. Non c'è un abbonamento
+              che tiene i dati in ostaggio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule" style="margin:32px 0 20px"></div>
+    <div class="grid12">
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Accessi e ruoli</div>
+        <p class="t-body-s" style="margin:0">Le viste si assegnano per ruolo: chi sta in linea vede la linea, chi
+          sta in ufficio vede il periodo.</p>
+      </div>
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Manutenzione e supporto</div>
+        <div><span class="lbl-s" style="margin-right:8px">Livelli di servizio</span>
+          <span class="chip">[[PH_08_SLA]]</span></div>
+      </div>
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Ore incluse lato cliente</div>
+        <div><span class="lbl-s" style="margin-right:8px">Per l'avvio</span>
+          <span class="chip">[[PH_07_ORE_CLIENTE]]</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · il dato di produzione resta in fabbrica</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     14 · ATTIVAZIONE — T7 · chiara
+     ===================================================================== -->
+<div class="slide slide--light" id="d14_attivazione">
+  <div class="rail rail--t">
+    <span>14 · Attivazione</span>
+    <span>Dal contratto al primo dato</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Cinque passi dal contratto<br>al primo dato.</h2>
+  </div>
+
+  <div class="zone grid12" style="top:220px">
+    <div class="c3 colr colr--acc">
+      <div class="lbl-s" style="margin-bottom:14px">Step 01 · D.Factory · ~1 settimana</div>
+      <h3 class="t-h3" style="margin:0 0 10px">Kick-off e audit</h3>
+      <p class="t-body-s" style="margin:0">Mappiamo PLC, sensori e contatori esistenti. Ne esce cosa è già
+        leggibile oggi e cosa manca davvero.</p>
+    </div>
+    <div class="c3 colr">
+      <div class="lbl-s" style="margin-bottom:14px">Step 02 · Cliente · variabile</div>
+      <h3 class="t-h3" style="margin:0 0 10px">Sensoristica</h3>
+      <p class="t-body-s" style="margin:0">Dove mancano sensori, li installa il tuo personale tecnico o il tuo
+        elettricista. È la voce che allunga i tempi, e dipende dalle tue finestre di fermo.</p>
+    </div>
+    <div class="c3 colr">
+      <div class="lbl-s" style="margin-bottom:14px">Step 03 · D.Factory · 1-2 settimane</div>
+      <h3 class="t-h3" style="margin:0 0 10px">Connessione</h3>
+      <p class="t-body-s" style="margin:0">Integriamo i tuoi sistemi nella piattaforma e facciamo il tag mapping
+        delle macchine.</p>
+    </div>
+    <div class="c3 colr">
+      <div class="lbl-s" style="margin-bottom:14px">Step 04 · D.Factory · ~1 settimana</div>
+      <h3 class="t-h3" style="margin:0 0 10px">Configurazione</h3>
+      <p class="t-body-s" style="margin:0">Viste adattate al tuo impianto e formazione alle persone che le
+        useranno tutti i giorni.</p>
+    </div>
+  </div>
+
+  <div class="zone" style="top:448px">
+    <div class="rule" style="margin-bottom:20px"></div>
+    <div class="grid12">
+      <div class="c3">
+        <div class="lbl-s" style="margin-bottom:12px">Step 05 · congiunto · continuo</div>
+        <p class="t-body-s" style="margin:0">Dati in tempo reale e supporto. Da qui in avanti il lavoro è
+          congiunto: le viste cambiano man mano che cambiano le domande.</p>
+      </div>
+      <div class="c3">
+        <div class="readout">
+          <div class="readout__v m">2 gg</div>
+          <div class="readout__k">Al primo dato, se la linea è già strumentata</div>
+        </div>
+      </div>
+      <div class="c2">
+        <div class="readout">
+          <div class="readout__v m">€ 0</div>
+          <div class="readout__k">Hardware proprietario in linea</div>
+        </div>
+      </div>
+      <div class="c4">
+        <div class="note">
+          <p>Se i sensori vanno installati i tempi si allungano di parecchio, perché il fermo impianto avviene in
+            finestre specifiche: agosto, festività, cambi formato lunghi. Il calendario reale si scrive in audit,
+            non qui.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · setup software, sensoristica a carico del cliente</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     15 · STRATEGIA SENSORI — T5 · chiara
+     ===================================================================== -->
+<div class="slide slide--light" id="d15_sensori">
+  <div class="ticks" style="top:0">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <div class="rail rail--t">
+    <span>15 · Strategia sensori</span>
+    <span>Clamp-on e certificati</span>
+  </div>
+
+  <div class="zone zone--title">
+    <h2 class="t-h1">Dove vale la pena<br>misurare bene.</h2>
+  </div>
+
+  <div class="zone grid12" style="top:212px">
+    <div class="c6"><div class="panel" style="height:246px">
+      <div class="panel__hd"><span>Clamp-on</span><span>Errore 1-5%</span></div>
+      <h3 class="t-h3" style="margin:0 0 12px">Installazione rapida</h3>
+      <p class="t-body-s" style="margin:0 0 14px">Si montano senza fermare la linea e in poco tempo. Il margine
+        d'errore li rende adatti dove ti serve l'andamento, non la fattura.</p>
+      <p class="t-body-s" style="margin:0">È la scelta giusta per capire dove si concentra il consumo e decidere
+        con dati alla mano dove poi vale la pena misurare meglio.</p>
+      <div class="panel__ft">Senza fermo linea · si parte quasi sempre da qui</div>
+    </div></div>
+
+    <div class="c6"><div class="panel" style="height:246px">
+      <div class="panel__hd"><span>Certificati</span><span>MID · ISO 50001</span></div>
+      <h3 class="t-h3" style="margin:0 0 12px">Misura legale</h3>
+      <p class="t-body-s" style="margin:0 0 14px">Richiedono un fermo pianificato, ma danno un dato che regge in
+        audit e copertura per la norma.</p>
+      <p class="t-body-s" style="margin:0">Li mettiamo dove il dato esce dall'azienda: verso un cliente che chiede
+        la rendicontazione, un ente, un revisore.</p>
+      <div class="panel__ft">Fermo pianificato · solo dove serve davvero</div>
+    </div></div>
+  </div>
+
+  <div class="zone" style="top:494px">
+    <div class="rule" style="margin-bottom:20px"></div>
+    <div class="grid12">
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Come si sceglie</div>
+        <p class="t-body-s" style="margin:0">Asset per asset, in audit. Asset diversi richiedono misure diverse,
+          e la scelta si fa prima del contratto.</p>
+      </div>
+      <div class="c3">
+        <div class="lbl-s" style="margin-bottom:10px">Chi la fornisce</div>
+        <p class="t-body-s" style="margin:0">La sensoristica resta a carico tuo e la installa il tuo personale
+          tecnico.</p>
+      </div>
+      <div class="c5">
+        <div class="note">
+          <p>Il compromesso tra precisione, costo e fermo impianto te lo diciamo per intero. Non proponiamo la
+            soluzione più cara per default, perché su molti asset non cambia la decisione che devi prendere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · precisione, costo, fermo impianto</span>
+  </div>
+</div><!--/slide-->
+
+<!-- =====================================================================
+     16 · RIFERIMENTO TECNICO — T10 ridotta · scura
+     ===================================================================== -->
+<div class="slide slide--dark" id="d16_chiusura">
+  <div class="grid-bg"></div>
+
+  <div class="rail rail--t">
+    <span>16 · Riferimento tecnico</span>
+    <span>Il resto si vede in linea</span>
+  </div>
+
+  <div class="zone" style="top:300px">
+    <h2 class="t-cover" style="max-width:820px">Il resto si vede<br>sulla tua <span class="em">linea</span>.</h2>
+    <p class="t-body" style="max-width:640px;margin:26px 0 0">
+      Questo dossier risponde a come funziona. Le domande che restano, e sono sempre le più specifiche,
+      si risolvono guardando i tuoi PLC e i tuoi contatori durante l'audit.</p>
+  </div>
+
+  <div class="zone" style="bottom:104px">
+    <div class="rule" style="margin-bottom:20px"></div>
+    <div class="grid12">
+      <div class="c4">
+        <div class="lbl-s" style="margin-bottom:10px">Referente</div>
+        <div class="t-body" style="color:var(--d1)">Pablo Degl'Innocenti<br>
+          <span style="font-family:var(--f-data);font-size:12px;color:var(--d2)">pablo.deglinnocenti@marchianisrl.com</span></div>
+      </div>
+      <div class="c3">
+        <div class="lbl-s" style="margin-bottom:10px">Prenota l'audit</div>
+        <span class="chip">[[PH_18_BOOKING]]</span>
+      </div>
+      <div class="c2">
+        <div class="lbl-s" style="margin-bottom:10px">Sito</div>
+        <span class="chip">[[PH_17_DOMINIO]]</span>
+      </div>
+      <div class="c3">
+        <div class="lbl-s" style="margin-bottom:10px">Sales deck</div>
+        <p class="t-body-s" style="margin:0">Cosa fa il sistema, per chi è e quanto costa. Documento
+          complementare a questo.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail rail--b">
+    <span class="wm">d<i>.</i>factory</span>
+    <span>Doc @@DOC@@ · D Factory S.r.l. · gruppo Clevertech</span>
+  </div>
+</div><!--/slide-->
