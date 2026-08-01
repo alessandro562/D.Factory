@@ -1,0 +1,121 @@
+<div class="doc">
+
+<!-- ===== CAMPIONE 2 · DOSSIER · ARCHITETTURA TECNICA ===== -->
+<div class="slide lt" id="d03_architettura" data-kind="dossier">
+  <div class="hd"><span>Architettura</span><span>03 / 17</span></div>
+  <div class="tt">Come i dati arrivano dalla linea alle persone che decidono.</div>
+
+  <svg class="body" width="1152" height="392" viewBox="0 0 1152 392" style="top:196px"
+       role="img" aria-labelledby="a3t a3d">
+    <title id="a3t">Architettura tecnica: dalla rete di linea agli utenti</title>
+    <desc id="a3d">PLC, dispositivi, sensori e contatori sulla rete di linea alimentano i
+      connettori. Da lì i dati raggiungono l'applicazione e il database sul server, che
+      servono dashboard, report ed export agli utenti. L'ERP resta opzionale e in lettura.</desc>
+
+    <!-- tre fasce, lette da sinistra a destra -->
+    <g font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.44)" letter-spacing="1.4">
+      <text x="0" y="12">RETE DI LINEA</text>
+      <text x="408" y="12">CONNETTORI</text>
+      <text x="726" y="12">SERVER · APPLICAZIONE</text>
+    </g>
+    <line x1="0" y1="26" x2="352" y2="26" stroke="rgba(10,10,10,.28)"/>
+    <line x1="408" y1="26" x2="670" y2="26" stroke="rgba(10,10,10,.28)"/>
+    <line x1="726" y1="26" x2="1152" y2="26" stroke="rgba(10,10,10,.28)"/>
+
+    <g font-family="Geist" font-size="17" fill="#0A0A0A">
+      <text x="0" y="74">PLC e dispositivi</text>
+      <text x="0" y="122">Sensori di conta</text>
+      <text x="0" y="170">Contatori di energia e utility</text>
+      <text x="0" y="218">Gestionale</text>
+    </g>
+    <g stroke="rgba(10,10,10,.28)" stroke-width="1.4" fill="none">
+      <path d="M290 68 L408 122"/><path d="M290 116 L408 128"/>
+      <path d="M290 164 L408 134"/><path d="M290 212 L408 140"/>
+    </g>
+
+    <rect x="408" y="96" width="262" height="72" fill="none" stroke="#0A0A0A" stroke-width="1.6"/>
+    <text x="430" y="128" font-family="Geist" font-size="18" fill="#0A0A0A">Connettori</text>
+    <text x="430" y="152" font-family="Geist" font-size="18" fill="#0A0A0A">e mappatura dei segnali</text>
+    <text x="408" y="196" font-family="Geist" font-size="15" fill="rgba(10,10,10,.66)">Lettura, senza scrittura verso le macchine</text>
+
+    <path d="M670 132 L720 132" stroke="#0A0A0A" stroke-width="1.6"/>
+    <polygon points="726,132 716,127 716,137" fill="#0A0A0A"/>
+
+    <rect x="726" y="88" width="426" height="88" fill="#0A0A0A"/>
+    <text x="750" y="124" font-family="Geist" font-size="19" fill="#fff">Applicazione e database</text>
+    <text x="750" y="152" font-family="Geist" font-size="16" fill="rgba(255,255,255,.74)">Sul server del progetto</text>
+    <circle cx="1122" cy="114" r="8" fill="#E6E011"/>
+
+    <!-- output verso gli utenti -->
+    <g stroke="rgba(10,10,10,.28)" stroke-width="1.4">
+      <path d="M810 176 L810 226"/><path d="M939 176 L939 226"/><path d="M1068 176 L1068 226"/>
+    </g>
+    <g font-family="Geist" font-size="17" fill="#0A0A0A" text-anchor="middle">
+      <text x="810" y="250">Dashboard</text><text x="939" y="250">Report</text><text x="1068" y="250">Export</text>
+    </g>
+    <text x="939" y="286" font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.44)" letter-spacing="1.3" text-anchor="middle">UTENTI DI LINEA E DI UFFICIO</text>
+
+    <!-- ERP: opzionale, tratteggiato -->
+    <rect x="408" y="248" width="262" height="60" fill="none" stroke="rgba(10,10,10,.44)"
+          stroke-width="1.6" stroke-dasharray="5 4"/>
+    <text x="430" y="286" font-family="Geist" font-size="17" fill="rgba(10,10,10,.66)">ERP · opzionale</text>
+    <path d="M670 278 L720 278 L720 176" stroke="rgba(10,10,10,.44)" stroke-width="1.4"
+          stroke-dasharray="5 4" fill="none"/>
+    <text x="408" y="334" font-family="Geist" font-size="15" fill="rgba(10,10,10,.66)">Possibile integrazione ERP, previa verifica</text>
+
+    <line x1="0" y1="360" x2="1152" y2="360" stroke="rgba(10,10,10,.13)"/>
+    <text x="0" y="386" font-family="Geist" font-size="15" fill="rgba(10,10,10,.66)">Compatibilità di protocolli e dispositivi verificata in audit sull'impianto reale.</text>
+  </svg>
+
+  <div class="ft"><span class="wm">d<i>.</i>factory</span><span>Dossier tecnico</span></div>
+</div>
+
+<!-- ===== CAMPIONE 3 · DOSSIER · REFYN ===== -->
+<div class="slide lt" id="d07_refyn" data-kind="dossier">
+  <div class="hd"><span>Refyn</span><span>07 / 17</span></div>
+  <div class="tt">Dalle analisi a un processo di miglioramento governato.</div>
+  <div class="body" style="top:200px">
+    <span class="dev">Modulo avanzato in sviluppo</span>
+  </div>
+
+  <div class="body" style="top:262px">
+    <div class="hr" style="background:var(--l-rule);height:2px"></div>
+    <div class="cols" style="gap:0;margin-top:26px">
+
+      <div class="col" style="padding-right:44px;border-right:1px solid var(--l-line)">
+        <div style="font-family:var(--mono);font-size:13px;letter-spacing:.14em;
+             text-transform:uppercase;color:var(--l3)">01</div>
+        <div style="font-size:26px;letter-spacing:-.025em;font-weight:600;margin-top:12px">Priorità</div>
+        <p class="bd" style="margin-top:14px">Le opportunità rilevate vengono ordinate per
+          impatto: quanta capacità si recupera, quanta energia si evita, quanto vale.</p>
+      </div>
+
+      <div class="col" style="padding:0 44px;border-right:1px solid var(--l-line)">
+        <div style="font-family:var(--mono);font-size:13px;letter-spacing:.14em;
+             text-transform:uppercase;color:var(--l3)">02</div>
+        <div style="font-size:26px;letter-spacing:-.025em;font-weight:600;margin-top:12px">Azioni</div>
+        <p class="bd" style="margin-top:14px">Ogni priorità diventa un'attività con
+          responsabile, linea o asset, target e scadenza. Lo stato resta visibile.</p>
+      </div>
+
+      <div class="col" style="padding-left:44px">
+        <div style="font-family:var(--mono);font-size:13px;letter-spacing:.14em;
+             text-transform:uppercase;color:var(--l3)">03</div>
+        <div style="font-size:26px;letter-spacing:-.025em;font-weight:600;margin-top:12px">Risultati</div>
+        <p class="bd" style="margin-top:14px">Il beneficio si verifica contro la baseline
+          precedente, sullo stesso perimetro e su un periodo dichiarato.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="body" style="bottom:88px">
+    <div class="hr"></div>
+    <p class="bd" style="margin-top:16px;max-width:900px">Senza la terza capacità le prime due
+      restano un'opinione: è la verifica del risultato che distingue un piano di miglioramento
+      da un elenco di buone intenzioni.</p>
+  </div>
+
+  <div class="ft"><span class="wm">d<i>.</i>factory</span><span>Dossier tecnico</span></div>
+</div>
+
+</div>

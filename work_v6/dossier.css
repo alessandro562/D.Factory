@@ -1,0 +1,103 @@
+/* ==========================================================================
+   D.FACTORY · DOSSIER TECNICO v6
+   Cambio di impianto rispetto al v5: sparisce la fascia laterale da 336px su
+   ogni pagina. Resta solo in copertina e nelle aperture di sezione.
+   Le pagine di contenuto hanno header sottile, titolo, contenuto a tutta
+   larghezza, footer discreto.
+   Corpo minimo 14px. Meno monospaziato. Nessuna etichetta di stato.
+   Canvas 1280x720. Font Geist incorporati. Nessuna richiesta di rete.
+   ========================================================================== */
+*{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --ink:#0A0A0A; --ink-2:#141414;
+  --paper:#FFFFFF; --paper-2:#F3F4F0;
+  --acid:#E6E011;
+  --d1:#FFFFFF; --d2:rgba(255,255,255,.74); --d3:rgba(255,255,255,.46);
+  --d-line:rgba(255,255,255,.15); --d-rule:rgba(255,255,255,.32);
+  --l1:#0A0A0A; --l2:rgba(10,10,10,.66); --l3:rgba(10,10,10,.44);
+  --l-line:rgba(10,10,10,.13); --l-rule:rgba(10,10,10,.28);
+  --ui:"Geist",-apple-system,sans-serif; --mono:"Geist Mono",Menlo,monospace;
+  --m:64px;
+}
+html{background:#181818}
+body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1}
+.doc{display:flex;flex-direction:column;align-items:center;gap:30px;padding:30px 0}
+.slide{width:1280px;height:720px;position:relative;overflow:hidden;flex:none}
+.lt{background:var(--paper);color:var(--l1)}
+.dk{background:var(--ink);color:var(--d1)}
+
+/* ---------- header sottile: una riga, in alto ---------- */
+.hd{position:absolute;left:var(--m);right:var(--m);top:44px;
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding-bottom:14px;border-bottom:1px solid var(--l-line);
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
+.lt .hd{color:var(--l3)} .dk .hd{color:var(--d3);border-bottom-color:var(--d-line)}
+
+/* ---------- titolo di pagina ---------- */
+.tt{position:absolute;left:var(--m);right:var(--m);top:104px;
+  font-size:38px;line-height:1.12;letter-spacing:-.03em;font-weight:600;max-width:900px}
+.tt--sm{font-size:32px}
+.sub{position:absolute;left:var(--m);top:auto;font-size:17px;line-height:1.5;
+  color:var(--l2);max-width:760px}
+.dk .sub{color:var(--d2)}
+
+/* ---------- contenuto a tutta larghezza ---------- */
+.body{position:absolute;left:var(--m);right:var(--m)}
+
+/* ---------- footer discreto ---------- */
+.ft{position:absolute;left:var(--m);right:var(--m);bottom:36px;
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-size:13px}
+.lt .ft{color:var(--l3)} .dk .ft{color:var(--d3)}
+.wm{font-family:var(--ui);font-weight:700;font-size:15px;letter-spacing:-.045em}
+.lt .wm{color:var(--l1)} .dk .wm{color:var(--d1)}
+.wm i{color:var(--acid);font-style:normal}
+
+/* ---------- fascia: solo copertina e aperture di sezione ---------- */
+.band{position:absolute;left:0;top:0;width:300px;height:720px;
+  padding:48px 34px 34px;display:flex;flex-direction:column}
+.lt .band{background:var(--paper-2);border-right:1px solid var(--l-line)}
+.dk .band{background:var(--ink-2);border-right:1px solid var(--d-line)}
+.field{position:absolute;left:300px;top:0;width:980px;height:720px}
+
+/* ---------- tipografia ---------- */
+.lbl{font-family:var(--mono);font-size:12.5px;letter-spacing:.13em;text-transform:uppercase}
+.lt .lbl{color:var(--l3)} .dk .lbl{color:var(--d3)}
+.bd{font-size:15px;line-height:1.6} .lt .bd{color:var(--l2)} .dk .bd{color:var(--d2)}
+.note{font-size:13px;line-height:1.5} .lt .note{color:var(--l3)} .dk .note{color:var(--d3)}
+.kpi{font-size:42px;line-height:1;letter-spacing:-.04em;font-weight:600}
+.kpi u{font-size:.36em;text-decoration:none;margin-left:.07em;letter-spacing:0}
+.hl{color:var(--acid)} .lt .hl{background:var(--acid);color:var(--ink);padding:0 .1em}
+
+/* ---------- tabella: massimo sei righe ---------- */
+.tb{display:grid;width:100%;font-size:15px;line-height:1.5}
+.tb>div{padding:14px 18px 14px 0;border-bottom:1px solid var(--l-line)}
+.dk .tb>div{border-bottom-color:var(--d-line)}
+.tb__h{font-family:var(--mono);font-size:12.5px;letter-spacing:.13em;
+  text-transform:uppercase;padding-bottom:10px!important;
+  border-bottom:1px solid var(--l-rule)!important}
+.lt .tb__h{color:var(--l3)} .dk .tb__h{color:var(--d3);border-bottom-color:var(--d-rule)!important}
+
+/* ---------- callout numerati: massimo tre ---------- */
+.co{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px}
+.co__n{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--acid);
+  width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex:none}
+.co__t{font-size:15px;line-height:1.5} .lt .co__t{color:var(--l2)} .dk .co__t{color:var(--d2)}
+
+/* ---------- l'unica nota di stato ammessa ---------- */
+.dev{display:inline-block;background:var(--acid);color:var(--ink);
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 11px}
+
+.hr{height:1px;background:var(--l-line)} .dk .hr{background:var(--d-line)}
+.cols{display:flex;gap:44px} .col{flex:1}
+a{color:inherit}
+
+@media print{
+  html,body{background:#fff}
+  .doc{gap:0;padding:0}
+  .slide{page-break-after:always;break-after:page}
+  .slide:last-child{page-break-after:auto}
+}
+@page{size:1280px 720px;margin:0}
