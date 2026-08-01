@@ -1,0 +1,167 @@
+[
+ {
+  "id": "s01_promessa",
+  "kind": "sales",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 53,
+  "fragments": 28,
+  "smallText": [],
+  "visualPct": 79.2,
+  "collisions": []
+ },
+ {
+  "id": "s02_punto_cieco",
+  "kind": "sales",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 53,
+  "fragments": 18,
+  "smallText": [],
+  "visualPct": 54.3,
+  "collisions": []
+ },
+ {
+  "id": "s03_come_funziona",
+  "kind": "sales",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 68,
+  "fragments": 21,
+  "smallText": [],
+  "visualPct": 61.3,
+  "collisions": []
+ },
+ {
+  "id": "s04_prodotto",
+  "kind": "sales",
+  "overflow": [],
+  "minText": 12,
+  "words": 56,
+  "fragments": 22,
+  "smallText": [],
+  "visualPct": 98.3,
+  "collisions": []
+ },
+ {
+  "id": "s05_decisioni",
+  "kind": "sales",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 64,
+  "fragments": 18,
+  "smallText": [],
+  "visualPct": 59.3,
+  "collisions": []
+ },
+ {
+  "id": "s06_differenziatore",
+  "kind": "sales",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 70,
+  "fragments": 20,
+  "smallText": [],
+  "visualPct": 52.7,
+  "collisions": []
+ },
+ {
+  "id": "s07_ipotesi_misure",
+  "kind": "sales",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 70,
+  "fragments": 19,
+  "smallText": [],
+  "visualPct": 55,
+  "collisions": []
+ },
+ {
+  "id": "s08_architettura",
+  "kind": "sales",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 57,
+  "fragments": 20,
+  "smallText": [],
+  "visualPct": 61,
+  "collisions": []
+ },
+ {
+  "id": "s09_valore",
+  "kind": "sales",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 65,
+  "fragments": 23,
+  "smallText": [],
+  "visualPct": 61,
+  "collisions": []
+ },
+ {
+  "id": "s10_percorso",
+  "kind": "sales",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 68,
+  "fragments": 23,
+  "smallText": [],
+  "visualPct": 55,
+  "collisions": []
+ },
+ {
+  "id": "s11_cta",
+  "kind": "sales",
+  "overflow": [],
+  "minText": 12,
+  "words": 68,
+  "fragments": 16,
+  "smallText": [],
+  "visualPct": 0,
+  "collisions": []
+ },
+ {
+  "id": "a01_offerta",
+  "kind": "appendix",
+  "overflow": [],
+  "minText": 12,
+  "words": 139,
+  "fragments": 33,
+  "smallText": [],
+  "visualPct": 50.2,
+  "collisions": []
+ },
+ {
+  "id": "a02_faq",
+  "kind": "appendix",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 165,
+  "fragments": 31,
+  "smallText": [],
+  "visualPct": 73.3,
+  "collisions": []
+ },
+ {
+  "id": "a03_ipotesi",
+  "kind": "appendix",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 131,
+  "fragments": 23,
+  "smallText": [],
+  "visualPct": 0,
+  "collisions": []
+ },
+ {
+  "id": "a04_legacy",
+  "kind": "appendix",
+  "overflow": [],
+  "minText": 12,
+  "words": 101,
+  "fragments": 28,
+  "smallText": [],
+  "visualPct": 50,
+  "collisions": []
+ }
+]

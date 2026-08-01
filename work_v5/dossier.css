@@ -1,0 +1,134 @@
+/* ==========================================================================
+   D.FACTORY · DOSSIER TECNICO v5
+   Grammatica diversa dal sales deck, identita' identica.
+   Impianto fisso: fascia di consultazione 336px + campo 944px con UN solo
+   diagramma o una sola vista grande. Il giallo marca una cosa per pagina.
+   Canvas 1280x720. Font Geist incorporati. Nessuna richiesta di rete.
+   ========================================================================== */
+*{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --ink:#0A0A0A; --ink-2:#141414; --ink-3:#1A1A1A;
+  --paper:#FFFFFF; --paper-2:#F2F3EF; --paper-3:#E9EAE4;
+  --acid:#E6E011;
+  --d1:#FFFFFF; --d2:rgba(255,255,255,.72); --d3:rgba(255,255,255,.44);
+  --d-line:rgba(255,255,255,.14); --d-rule:rgba(255,255,255,.30);
+  --l1:#0A0A0A; --l2:rgba(10,10,10,.64); --l3:rgba(10,10,10,.42);
+  --l-line:rgba(10,10,10,.12); --l-rule:rgba(10,10,10,.26);
+  --ui:"Geist",-apple-system,sans-serif; --mono:"Geist Mono",Menlo,monospace;
+}
+html{background:#181818}
+body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1}
+.doc{display:flex;flex-direction:column;align-items:center;gap:30px;padding:30px 0}
+.slide{width:1280px;height:720px;position:relative;overflow:hidden;flex:none}
+.dk{background:var(--ink);color:var(--d1)} .lt{background:var(--paper);color:var(--l1)}
+
+/* ---------- fascia di consultazione, sempre a sinistra ---------- */
+.band{position:absolute;left:0;top:0;width:336px;height:720px;
+  padding:44px 36px 34px;display:flex;flex-direction:column}
+/* pagine tabellari: la fascia si restringe e restituisce 88px al campo */
+.band--slim{width:248px;padding:44px 26px 34px}
+.band--slim .band__q{font-size:25px;margin-top:16px}
+.band--slim .band__a{font-size:14px;margin-top:14px}
+.dk .band{background:var(--ink-2);border-right:1px solid var(--d-line)}
+.lt .band{background:var(--paper-2);border-right:1px solid var(--l-line)}
+.band__sec{font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;
+  text-transform:uppercase}
+.dk .band__sec{color:var(--acid)} .lt .band__sec{color:var(--l3)}
+.band__q{font-size:30px;line-height:1.14;letter-spacing:-.028em;font-weight:600;
+  margin-top:20px}
+.band__a{font-size:15px;line-height:1.55;margin-top:18px}
+.dk .band__a{color:var(--d2)} .lt .band__a{color:var(--l2)}
+.band__ft{display:flex;justify-content:space-between;align-items:baseline;
+  padding-top:16px;border-top:1px solid var(--l-line)}
+.dk .band__ft{border-top-color:var(--d-line)}
+.spacer{flex:1}
+.wm{font-family:var(--ui);font-weight:700;font-size:15px;letter-spacing:-.045em}
+.dk .wm{color:var(--d1)} .lt .wm{color:var(--l1)}
+.wm i{color:var(--acid);font-style:normal}
+.pg{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em}
+.dk .pg{color:var(--d3)} .lt .pg{color:var(--l3)}
+
+/* ---------- campo: 944px a destra ---------- */
+.field{position:absolute;left:336px;top:0;width:944px;height:720px}
+.field--wide{left:248px;width:1032px}
+.field__hd{display:flex;justify-content:space-between;align-items:center;
+  padding:20px 40px;font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;
+  text-transform:uppercase;border-bottom:1px solid var(--l-line)}
+.lt .field__hd{color:var(--l3)} .dk .field__hd{color:var(--d3);border-bottom-color:var(--d-line)}
+.field__b{padding:30px 40px}
+
+/* ---------- tipografia comune ---------- */
+.lbl{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.dk .lbl{color:var(--d3)} .lt .lbl{color:var(--l3)}
+.note{font-size:12px;line-height:1.5}
+.dk .note{color:var(--d3)} .lt .note{color:var(--l3)}
+.bd{font-size:15px;line-height:1.6} .dk .bd{color:var(--d2)} .lt .bd{color:var(--l2)}
+.kpi{font-size:46px;line-height:1;letter-spacing:-.042em;font-weight:600}
+.kpi u{font-size:.34em;text-decoration:none;margin-left:.07em;letter-spacing:0}
+.hl{color:var(--acid)} .lt .hl{background:var(--acid);color:var(--ink);padding:0 .1em}
+
+/* ---------- stato: leggibile anche in scala di grigi ----------
+   la parola porta l'informazione, il peso del bordo la rinforza.       */
+.st{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.st::before{content:"";width:11px;height:11px;flex:none}
+.st--ok::before{background:var(--l1);border:2px solid var(--l1)}
+.st--opt::before{background:transparent;border:2px solid var(--l1)}
+.st--ver::before{background:transparent;border:2px dotted var(--l1)}
+.st--pd::before{background:transparent;border:2px solid var(--l1);
+  border-style:solid dashed}
+.st--road::before{background:transparent;border:1px solid rgba(10,10,10,.35)}
+.st--no::before{background:transparent;border:1px solid rgba(10,10,10,.22)}
+.dk .st--ok::before{background:var(--d1);border-color:var(--d1)}
+.dk .st--opt::before,.dk .st--ver::before,.dk .st--pd::before{border-color:var(--d1)}
+.dk .st--road::before{border-color:rgba(255,255,255,.40)}
+.dk .st{color:var(--d2)} .lt .st{color:var(--l2)}
+
+/* stato doppio: capability / packaging, su due righe strette */
+.st2{display:flex;flex-direction:column;gap:5px}
+.st2 .st{font-size:11.5px}
+/* badge di modulo, usato nelle pagine feature */
+.mod{display:inline-flex;gap:6px;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.08em;text-transform:uppercase;align-items:center}
+.mod b{font-weight:500;padding:2px 7px;border:1px solid currentColor}
+.mod b.on{background:var(--l1);color:var(--paper);border-color:var(--l1)}
+.dk .mod b.on{background:var(--d1);color:var(--ink);border-color:var(--d1)}
+
+/* ---------- matrice: max 5 colonne, max 8 righe ---------- */
+.mx{display:grid;gap:0;font-size:14px;line-height:1.5;width:100%}
+.mx>div{padding:14px 14px 14px 0;border-bottom:1px solid var(--l-line)}
+.dk .mx>div{border-bottom-color:var(--d-line)}
+.mx--tight>div{padding:10px 14px 10px 0}
+.mx__h{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;
+  text-transform:uppercase;padding-bottom:9px!important}
+.lt .mx__h{color:var(--l3);border-bottom:1px solid var(--l-rule)!important}
+.dk .mx__h{color:var(--d3);border-bottom:1px solid var(--d-rule)!important}
+.lt .mx>div{color:var(--l1)} .dk .mx>div{color:var(--d1)}
+
+/* ---------- blocco unico degli aperti ---------- */
+.open{border-top:2px solid var(--l-rule);padding-top:16px}
+.dk .open{border-top-color:var(--d-rule)}
+.open__l{font-family:var(--mono);font-size:12px;letter-spacing:.12em;
+  text-transform:uppercase;margin-bottom:12px}
+.lt .open__l{color:var(--l3)} .dk .open__l{color:var(--d3)}
+.open__i{font-size:14px;line-height:1.95}
+.lt .open__i{color:var(--l2)} .dk .open__i{color:var(--d2)}
+
+/* ---------- callout numerati sulla vista ---------- */
+.co{display:flex;gap:11px;align-items:flex-start;margin-bottom:15px}
+.co__n{font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--acid);
+  width:21px;height:21px;display:flex;align-items:center;justify-content:center;flex:none}
+.co__t{font-size:14px;line-height:1.5}
+.dk .co__t{color:var(--d2)} .lt .co__t{color:var(--l2)}
+
+.hr{height:1px;background:var(--l-line)} .dk .hr{background:var(--d-line)}
+a{color:inherit}
+
+@media print{
+  html,body{background:#fff}
+  .doc{gap:0;padding:0}
+  .slide{page-break-after:always;break-after:page}
+  .slide:last-child{page-break-after:auto}
+}
+@page{size:1280px 720px;margin:0}

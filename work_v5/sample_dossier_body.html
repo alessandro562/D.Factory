@@ -1,0 +1,120 @@
+<div class="doc">
+<!-- ============ CAMPIONE 2 · DOSSIER · ARCHITETTURA COMMERCIALE ============ -->
+<div class="slide lt" id="d02_architettura_commerciale" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione A · prodotto</div>
+    <div class="band__q">Come è fatta l'offerta, e a che punto è.</div>
+    <div class="band__a">Tre livelli cumulativi, ognuno con produzione ed energia.
+      I servizi sono un livello a parte.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Da decidere</div>
+      <div class="open__i">Perimetro di Connect e Insight<br>
+        Primo rilascio di Refyn<br>
+        Entitlement dei servizi</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">02 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Architettura commerciale</span><span>Brand · moduli · servizi · legacy</span></div>
+    <div class="field__b" style="padding:26px 40px">
+      <div class="mx" style="grid-template-columns:132px 1fr 186px">
+        <div class="mx__h">Nome</div><div class="mx__h">Che cosa indica</div><div class="mx__h">Stato</div>
+
+        <div style="font-size:19px">D.Factory</div>
+        <div>Il brand. Copertina, chiusura, riferimenti societari. Non è un prefisso dei moduli.</div>
+        <div><span class="st st--ok">Brand</span></div>
+
+        <div style="font-size:19px">Connect</div>
+        <div>Livello 1. Visibilità e baseline: stati, OEE di base, consumi, viste standard.</div>
+        <div><span class="st st--opt">Pilot release</span></div>
+
+        <div style="font-size:19px">Insight</div>
+        <div>Livello 2, include Connect. Diagnosi: cause, costo, correlazione produzione–energia.</div>
+        <div><span class="st st--opt">Pilot release</span></div>
+
+        <div style="font-size:19px;color:var(--l1)">Refyn</div>
+        <div>Livello 3, include Connect e Insight. Priorità, azioni e verifica dei benefici.</div>
+        <div><span class="st st--ver">In development</span></div>
+
+        <div style="font-size:19px">Servizi</div>
+        <div>Livello orizzontale, attivabile su tutti i moduli. Non è Refyn.</div>
+        <div><span class="st st--pd">Da definire</span></div>
+
+        <div style="font-size:19px">MAPST 4.0</div>
+        <div>Prodotto legacy di produzione. Resta attivo per l'installato.</div>
+        <div><span class="st st--ok">Proven legacy</span></div>
+
+        <div style="font-size:19px">MarEnergy</div>
+        <div>Prodotto legacy di energia. Resta attivo per l'installato.</div>
+        <div><span class="st st--ok">Proven legacy</span></div>
+      </div>
+      <p class="bd" style="margin-top:16px;font-size:14px">Migrazione volontaria,
+        nessuna dismissione prevista: pagina 30.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CAMPIONE 3 · DOSSIER · CAPABILITY MATRIX ============ -->
+<div class="slide lt" id="d06_capability" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione A · prodotto</div>
+    <div class="band__q">Chi contiene cosa, da dove viene, a che punto è.</div>
+    <div class="band__a">Due stati per riga. La <b>provenienza</b> dice se la capability
+      esiste già nel legacy. Lo <b>stato</b> dice a che punto è nel nuovo packaging. Non
+      coincidono.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Legenda</div>
+      <div class="open__i" style="font-size:13px;line-height:1.8">
+        <span class="st st--ok">Proven legacy</span><br>
+        <span class="st st--opt">Pilot release</span><br>
+        <span class="st st--pd">Project-dependent</span><br>
+        <span class="st st--ver">In development</span><br>
+        <span class="st st--road">Roadmap</span></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">06 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Capability matrix · estratto</span><span>Matrice completa: ModuleFeatureMatrix v5</span></div>
+    <div class="field__b" style="padding:22px 40px">
+      <div class="mx mx--tight" style="grid-template-columns:1fr 74px 74px 74px 132px 176px;font-size:13.5px">
+        <div class="mx__h">Funzione</div><div class="mx__h">Conn.</div><div class="mx__h">Insight</div>
+        <div class="mx__h">Refyn</div><div class="mx__h">Provenienza</div><div class="mx__h">Stato</div>
+
+        <div>Stato macchina e stato linea</div><div>✓</div><div>✓</div><div>✓</div>
+        <div>MAPST 4.0</div><div><span class="st st--ok">Proven legacy</span></div>
+
+        <div>Consumo per linea e per vettore</div><div>✓</div><div>✓</div><div>✓</div>
+        <div>MarEnergy</div><div><span class="st st--ok">Proven legacy</span></div>
+
+        <div>Pareto delle cause di fermo</div><div>—</div><div>✓</div><div>✓</div>
+        <div>MAPST 4.0</div><div><span class="st st--opt">Pilot release</span></div>
+
+        <div>Energia per stato macchina</div><div>Base</div><div>✓</div><div>✓</div>
+        <div>Legacy + sviluppo</div><div><span class="st st--pd">Project-dependent</span></div>
+
+        <div>Costo energetico per pezzo</div><div>—</div><div>✓</div><div>✓</div>
+        <div>Legacy + sviluppo</div><div><span class="st st--pd">Project-dependent</span></div>
+
+        <div>Ranking economico delle inefficienze</div><div>—</div><div>—</div><div>✓</div>
+        <div>Net-new</div><div><span class="st st--ver">In development</span></div>
+
+        <div>Benefit Tracking</div><div>—</div><div>—</div><div>✓</div>
+        <div>Net-new</div><div><span class="st st--ver">In development</span></div>
+
+        <div>Operational Performance Index</div><div>—</div><div>—</div><div>✓</div>
+        <div>Net-new</div><div><span class="st st--road">Roadmap</span></div>
+      </div>
+      <p class="bd" style="margin-top:14px;font-size:13.5px">Una riga può essere
+        <b>proven legacy</b> come capability e <b>pilot release</b> nel nuovo packaging: sono
+        due maturità diverse e non si escludono.</p>
+    </div>
+  </div>
+</div>
+
+</div>

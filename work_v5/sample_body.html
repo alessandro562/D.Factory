@@ -1,0 +1,169 @@
+<div class="doc">
+
+<!-- ============ CAMPIONE 1 · SALES · ARCHITETTURA DELL'OFFERTA ============ -->
+<div class="slide lt" id="s08_architettura">
+  <div class="z" style="top:60px"><div class="kicker">L'architettura dell'offerta</div></div>
+  <div class="z" style="top:114px;width:820px">
+    <h2 class="sm">Tre livelli cumulativi.<br>Produzione ed energia in tutti e tre.</h2>
+  </div>
+
+  <svg width="1152" height="344" viewBox="0 0 1152 344"
+       style="position:absolute;left:64px;top:270px" role="img" aria-labelledby="s8t s8d">
+    <title id="s8t">I tre livelli dell'offerta e il livello orizzontale dei servizi</title>
+    <desc id="s8d">Connect dà visibilità, Insight aggiunge diagnosi e quantificazione, Refyn
+      aggiunge priorità, azioni e verifica dei benefici. Ogni livello include il precedente e
+      contiene sia produzione sia energia. I servizi a valore aggiunto sono attivabili su
+      tutti e tre.</desc>
+
+  <!-- tre scalini crescenti: l'altezza dice la profondità, la larghezza l'inclusione -->
+  <rect x="0" y="176" width="1152" height="60" fill="#0A0A0A"/>
+  <rect x="0" y="100" width="768" height="76" fill="rgba(10,10,10,.72)"/>
+  <rect x="0" y="24" width="384" height="76" fill="rgba(10,10,10,.42)"/>
+
+  <text x="28" y="66" font-family="Geist" font-size="26" fill="#fff">Connect</text>
+  <text x="28" y="92" font-family="Geist" font-size="16" fill="rgba(255,255,255,.80)">Che cosa sta succedendo</text>
+  <text x="412" y="142" font-family="Geist" font-size="26" fill="#fff">Insight</text>
+  <text x="412" y="168" font-family="Geist" font-size="16" fill="rgba(255,255,255,.80)">Perché, e quanto pesa</text>
+  <text x="796" y="212" font-family="Geist" font-size="26" fill="#E6E011">Refyn</text>
+  <text x="796" y="238" font-family="Geist" font-size="16" fill="rgba(255,255,255,.80)">Cosa conviene fare</text>
+
+  <!-- stato di ciascun livello, allineato a destra del proprio scalino -->
+  <g font-family="Geist Mono" font-size="12.5" letter-spacing="1.2">
+    <text x="356" y="46" fill="rgba(255,255,255,.72)" text-anchor="end">PILOT RELEASE</text>
+    <text x="740" y="122" fill="rgba(255,255,255,.72)" text-anchor="end">PILOT RELEASE</text>
+    <text x="1124" y="198" fill="#E6E011" text-anchor="end">IN SVILUPPO</text>
+  </g>
+
+  <!-- la base comune a tutti e tre -->
+  <line x1="0" y1="264" x2="1152" y2="264" stroke="rgba(10,10,10,.26)"/>
+  <text x="0" y="292" font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.42)" letter-spacing="1.3">IN OGNI LIVELLO</text>
+  <text x="220" y="294" font-family="Geist" font-size="18" fill="#0A0A0A">Produzione e OEE · energia e utility</text>
+
+  <text x="0" y="330" font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.42)" letter-spacing="1.3">SU OGNI LIVELLO</text>
+  <text x="220" y="332" font-family="Geist" font-size="18" fill="#0A0A0A">Servizi a valore aggiunto, attivabili</text>
+  </svg>
+
+  <div class="rail"><span class="wm">d<i>.</i>factory</span>
+    <span>08 / 11 · dettaglio in appendice A1</span></div>
+</div>
+
+<!-- ============ CAMPIONE 2 · DOSSIER · ARCHITETTURA COMMERCIALE ============ -->
+<div class="slide lt" id="d02_architettura_commerciale" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione A · prodotto</div>
+    <div class="band__q">Come è fatta l'offerta, e a che punto è.</div>
+    <div class="band__a">Tre livelli cumulativi: Insight include Connect, Refyn include
+      entrambi. Ogni livello contiene produzione ed energia. I servizi sono un livello a
+      parte, attivabile su tutti.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Da decidere</div>
+      <div class="open__i">Perimetro esatto di Connect e Insight<br>
+        Quali oggetti entrano nel primo rilascio di Refyn<br>
+        Entitlement dei servizi per modulo</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">02 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Architettura commerciale</span><span>Brand · moduli · servizi · legacy</span></div>
+    <div class="field__b" style="padding:26px 40px">
+      <div class="mx" style="grid-template-columns:132px 1fr 186px">
+        <div class="mx__h">Nome</div><div class="mx__h">Che cosa indica</div><div class="mx__h">Stato</div>
+
+        <div style="font-size:19px">D.Factory</div>
+        <div>Il brand. Compare in copertina, in chiusura e nei riferimenti societari, non come prefisso dei moduli.</div>
+        <div><span class="st st--ok">Brand</span></div>
+
+        <div style="font-size:19px">Connect</div>
+        <div>Livello 1. Visibilità e baseline: stati, OEE di base, consumi, storico, viste standard.</div>
+        <div><span class="st st--opt">Pilot release</span></div>
+
+        <div style="font-size:19px">Insight</div>
+        <div>Livello 2, include Connect. Diagnosi e quantificazione: cause, costo, correlazione produzione–energia.</div>
+        <div><span class="st st--opt">Pilot release</span></div>
+
+        <div style="font-size:19px;color:var(--l1)">Refyn</div>
+        <div>Livello 3, include Connect e Insight. Priorità, azioni e verifica dei benefici.</div>
+        <div><span class="st st--ver">In development</span></div>
+
+        <div style="font-size:19px">Servizi</div>
+        <div>Livello orizzontale, attivabile su tutti i moduli. Non è Refyn e non ne è un sinonimo.</div>
+        <div><span class="st st--pd">Da definire</span></div>
+
+        <div style="font-size:19px">MAPST 4.0</div>
+        <div>Prodotto legacy di produzione. Resta attivo per i clienti esistenti.</div>
+        <div><span class="st st--ok">Proven legacy</span></div>
+
+        <div style="font-size:19px">MarEnergy</div>
+        <div>Prodotto legacy di energia. Resta attivo per i clienti esistenti.</div>
+        <div><span class="st st--ok">Proven legacy</span></div>
+      </div>
+      <p class="bd" style="margin-top:16px;font-size:14px">La migrazione dal legacy è
+        volontaria. Nessuna dismissione è prevista: vedi pagina 30.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CAMPIONE 3 · DOSSIER · CAPABILITY MATRIX ============ -->
+<div class="slide lt" id="d06_capability" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione A · prodotto</div>
+    <div class="band__q">Chi contiene cosa, da dove viene, a che punto è.</div>
+    <div class="band__a">Due stati per riga. La <b>provenienza</b> dice se la capability
+      esiste già nel legacy. Lo <b>stato</b> dice a che punto è nel nuovo packaging. Non
+      coincidono.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Legenda</div>
+      <div class="open__i" style="font-size:13px;line-height:1.8">
+        <span class="st st--ok">Proven legacy</span><br>
+        <span class="st st--opt">Pilot release</span><br>
+        <span class="st st--pd">Project-dependent</span><br>
+        <span class="st st--ver">In development</span><br>
+        <span class="st st--road">Roadmap</span></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">06 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Capability matrix · estratto</span><span>Matrice completa: ModuleFeatureMatrix v5</span></div>
+    <div class="field__b" style="padding:22px 40px">
+      <div class="mx mx--tight" style="grid-template-columns:1fr 74px 74px 74px 132px 176px;font-size:13.5px">
+        <div class="mx__h">Funzione</div><div class="mx__h">Conn.</div><div class="mx__h">Insight</div>
+        <div class="mx__h">Refyn</div><div class="mx__h">Provenienza</div><div class="mx__h">Stato</div>
+
+        <div>Stato macchina e stato linea</div><div>✓</div><div>✓</div><div>✓</div>
+        <div>MAPST 4.0</div><div><span class="st st--ok">Proven legacy</span></div>
+
+        <div>Consumo per linea e per vettore</div><div>✓</div><div>✓</div><div>✓</div>
+        <div>MarEnergy</div><div><span class="st st--ok">Proven legacy</span></div>
+
+        <div>Pareto delle cause di fermo</div><div>—</div><div>✓</div><div>✓</div>
+        <div>MAPST 4.0</div><div><span class="st st--opt">Pilot release</span></div>
+
+        <div>Energia per stato macchina</div><div>Base</div><div>✓</div><div>✓</div>
+        <div>Legacy + sviluppo</div><div><span class="st st--pd">Project-dependent</span></div>
+
+        <div>Costo energetico per pezzo</div><div>—</div><div>✓</div><div>✓</div>
+        <div>Legacy + sviluppo</div><div><span class="st st--pd">Project-dependent</span></div>
+
+        <div>Ranking economico delle inefficienze</div><div>—</div><div>—</div><div>✓</div>
+        <div>Net-new</div><div><span class="st st--ver">In development</span></div>
+
+        <div>Benefit Tracking</div><div>—</div><div>—</div><div>✓</div>
+        <div>Net-new</div><div><span class="st st--ver">In development</span></div>
+
+        <div>Operational Performance Index</div><div>—</div><div>—</div><div>✓</div>
+        <div>Net-new</div><div><span class="st st--road">Roadmap</span></div>
+      </div>
+      <p class="bd" style="margin-top:14px;font-size:13.5px">Una riga può essere
+        <b>proven legacy</b> come capability e <b>pilot release</b> nel nuovo packaging: sono
+        due maturità diverse e non si escludono.</p>
+    </div>
+  </div>
+</div>
+
+</div>

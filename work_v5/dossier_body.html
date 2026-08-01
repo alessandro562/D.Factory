@@ -1,0 +1,1600 @@
+<div class="doc">
+<!-- =====================================================================
+     D.FACTORY · DOSSIER TECNICO v5 · 31 pagine, cinque sezioni.
+     A prodotto e maturita' · B funzioni proven e pilot · C Refyn in sviluppo
+     D integrazione e IT · E servizi, delivery e migrazione.
+     Impianto: fascia di consultazione 336px (sezione, domanda, risposta
+     breve, pagina) + campo 944px con UN solo diagramma o una sola vista.
+     Le voci non ancora definite sono raccolte in un blocco unico per
+     pagina, mai in chip sparsi. Nessun token di compilazione visibile.
+     ===================================================================== -->
+
+<!-- ================== 01 · COPERTINA — scura, senza fascia ================== -->
+<div class="slide dk" id="d01_cover" data-kind="dossier">
+  <div style="position:absolute;left:64px;top:72px;width:520px">
+    <div class="lbl" style="color:var(--acid)">Dossier tecnico · D.Factory</div>
+    <h1 style="font-size:62px;line-height:1.02;letter-spacing:-.038em;font-weight:600;margin-top:30px">
+      Può funzionare<br>sul tuo impianto,<br>e cosa serve.</h1>
+    <p class="bd" style="font-size:18px;margin-top:28px;max-width:430px">Architettura, dati,
+      deployment, metodo di misura, delivery e supporto. Documento di lavoro: le voci non
+      ancora concordate sono dichiarate come tali.</p>
+  </div>
+
+  <div style="position:absolute;right:64px;top:96px;width:520px">
+    <div class="mx" style="grid-template-columns:auto 1fr">
+      <div class="mx__h">Voce</div><div class="mx__h">Contenuto</div>
+      <div style="padding-right:24px">Destinatari</div><div>IT, OT, automazione, engineering, manutenzione, energy management</div>
+      <div style="padding-right:24px">Perimetro</div><div>Connect, Insight e Refyn su una linea F&amp;B, estendibile allo stabilimento</div>
+      <div style="padding-right:24px">Owner tecnico</div><div>D Factory S.r.l. · Collecchio (PR)</div>
+      <div style="padding-right:24px">Documento gemello</div><div>Sales deck: perché adesso, quale primo passo · 11 slide</div>
+    </div>
+  </div>
+
+  <div style="position:absolute;left:64px;right:64px;bottom:96px">
+    <div class="hr" style="margin-bottom:22px"></div>
+    <div style="display:flex;gap:28px">
+      <a href="#d02_architettura_commerciale" style="flex:1;text-decoration:none">
+        <div class="lbl">Sezione A · 02</div>
+        <div style="font-size:17px;margin-top:8px">Prodotto e maturità</div></a>
+      <a href="#d07_supervisione" style="flex:1;text-decoration:none">
+        <div class="lbl">Sezione B · 07</div>
+        <div style="font-size:17px;margin-top:8px">Funzioni</div></a>
+      <a href="#d15_opportunity" style="flex:1;text-decoration:none">
+        <div class="lbl">Sezione C · 15</div>
+        <div style="font-size:17px;margin-top:8px">Refyn, in sviluppo</div></a>
+      <a href="#d19_brownfield_macchine" style="flex:1;text-decoration:none">
+        <div class="lbl">Sezione D · 19</div>
+        <div style="font-size:17px;margin-top:8px">Integrazione e IT</div></a>
+      <a href="#d25_servizi" style="flex:1;text-decoration:none">
+        <div class="lbl">Sezione E · 25</div>
+        <div style="font-size:17px;margin-top:8px">Servizi e delivery</div></a>
+    </div>
+  </div>
+
+  <div style="position:absolute;left:64px;right:64px;bottom:36px;display:flex;
+              justify-content:space-between;align-items:baseline">
+    <span class="wm">d<i>.</i>factory</span>
+    <span class="pg">01 / 31 · D.Factory · D Factory S.r.l.</span></div>
+</div>
+
+<!-- ==== 02 · ARCHITETTURA COMMERCIALE — chiara ==== -->
+<div class="slide lt" id="d02_architettura_commerciale" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione A · prodotto</div>
+    <div class="band__q">Come è fatta l'offerta, e a che punto è.</div>
+    <div class="band__a">Tre livelli cumulativi, ognuno con produzione ed energia. I servizi sono un livello a parte.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Da decidere</div>
+      <div class="open__i">Perimetro di Connect e Insight<br>Primo rilascio di Refyn<br>Entitlement dei servizi</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">02 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Architettura commerciale</span><span>Brand · moduli · servizi · legacy</span></div>
+    <div class="field__b" style="padding:26px 40px">
+      <div class="mx" style="grid-template-columns:132px 1fr 186px">
+        <div class="mx__h">Nome</div><div class="mx__h">Che cosa indica</div><div class="mx__h">Stato</div>
+        <div style="font-size:19px">D.Factory</div>
+        <div>Il brand. Copertina, chiusura, riferimenti societari. Non è un prefisso dei moduli.</div>
+        <div><span class="st st--ok">Brand</span></div>
+        <div style="font-size:19px">Connect</div>
+        <div>Livello 1. Visibilità e baseline: stati, OEE di base, consumi, viste standard.</div>
+        <div><span class="st st--opt">Pilot release</span></div>
+        <div style="font-size:19px">Insight</div>
+        <div>Livello 2, include Connect. Diagnosi: cause, costo, correlazione produzione–energia.</div>
+        <div><span class="st st--opt">Pilot release</span></div>
+        <div style="font-size:19px">Refyn</div>
+        <div>Livello 3, include Connect e Insight. Priorità, azioni e verifica dei benefici.</div>
+        <div><span class="st st--ver">In development</span></div>
+        <div style="font-size:19px">Servizi</div>
+        <div>Livello orizzontale, attivabile su tutti i moduli. Non è Refyn.</div>
+        <div><span class="st st--pd">Da definire</span></div>
+        <div style="font-size:19px">MAPST 4.0</div>
+        <div>Prodotto legacy di produzione. Resta attivo per l'installato.</div>
+        <div><span class="st st--ok">Proven legacy</span></div>
+        <div style="font-size:19px">MarEnergy</div>
+        <div>Prodotto legacy di energia. Resta attivo per l'installato.</div>
+        <div><span class="st st--ok">Proven legacy</span></div>
+      </div>
+      <p class="bd" style="margin-top:16px;font-size:14px">Migrazione volontaria, nessuna
+        dismissione prevista: pagina 30.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==== 03 · PROVENIENZA DELLE CAPABILITY — chiara ==== -->
+<div class="slide lt" id="d03_provenienza" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione A · prodotto</div>
+    <div class="band__q">Da dove vengono le funzioni che vedi.</div>
+    <div class="band__a">Quasi tutto ciò che è disponibile oggi nasce in MAPST 4.0 e MarEnergy, prodotti in esercizio su impianti reali. Il packaging è nuovo; molte capability no.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Perché la distinzione conta</div>
+      <div class="open__i">Una funzione può essere matura come capability e nuova come pacchetto. Chi valuta il rischio tecnico guarda la prima, chi valuta il contratto guarda la seconda.</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">03 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Continuità legacy</span><span>Capability · packaging</span></div>
+    <svg width="864" height="560" viewBox="0 0 864 560" style="margin:30px 40px"
+         role="img" aria-labelledby="d3pt d3pd">
+      <title id="d3pt">Provenienza delle capability dai prodotti legacy</title>
+      <desc id="d3pd">Le capability di produzione arrivano da MAPST 4.0, quelle di energia da
+        MarEnergy. Confluiscono nel nuovo packaging modulare, che aggiunge funzioni net-new
+        ancora in sviluppo.</desc>
+
+      <text x="0" y="14" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.3">PRODOTTI LEGACY · IN ESERCIZIO</text>
+      <rect x="0" y="36" width="320" height="84" fill="none" stroke="#0A0A0A" stroke-width="1.6"/>
+      <text x="22" y="70" font-family="Geist" font-size="20" fill="#0A0A0A">MAPST 4.0</text>
+      <text x="22" y="98" font-family="Geist" font-size="15" fill="rgba(10,10,10,.64)">Produzione, stati, OEE, fermi</text>
+      <rect x="0" y="146" width="320" height="84" fill="none" stroke="#0A0A0A" stroke-width="1.6"/>
+      <text x="22" y="180" font-family="Geist" font-size="20" fill="#0A0A0A">MarEnergy</text>
+      <text x="22" y="208" font-family="Geist" font-size="15" fill="rgba(10,10,10,.64)">Energia, utility, consumi</text>
+
+      <g stroke="rgba(10,10,10,.42)" stroke-width="1.6" fill="none">
+        <path d="M320 78 L470 120"/><path d="M320 188 L470 146"/>
+      </g>
+      <polygon points="476,122 466,117 466,127" fill="rgba(10,10,10,.42)"/>
+      <polygon points="476,144 466,139 466,149" fill="rgba(10,10,10,.42)"/>
+
+      <rect x="476" y="90" width="388" height="86" fill="#0A0A0A"/>
+      <text x="498" y="126" font-family="Geist" font-size="20" fill="#fff">Connect · Insight</text>
+      <text x="498" y="154" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">Packaging nuovo, capability provate</text>
+
+      <text x="476" y="228" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.3">FUNZIONI NET-NEW</text>
+      <rect x="476" y="250" width="388" height="72" fill="none" stroke="#0A0A0A" stroke-width="1.6" stroke-dasharray="5 4"/>
+      <text x="498" y="284" font-family="Geist" font-size="20" fill="#0A0A0A">Refyn</text>
+      <text x="498" y="308" font-family="Geist" font-size="15" fill="rgba(10,10,10,.64)">Priorità, azioni, benefici</text>
+      <circle cx="838" cy="278" r="8" fill="#E6E011"/>
+
+      <line x1="0" y1="380" x2="864" y2="380" stroke="rgba(10,10,10,.26)"/>
+      <g font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.3">
+        <text x="0" y="414">CAPABILITY</text><text x="300" y="414">PACKAGING</text><text x="620" y="414">COSA SIGNIFICA</text>
+      </g>
+      <g font-family="Geist" font-size="15" fill="#0A0A0A">
+        <text x="0" y="446">Proven legacy</text><text x="300" y="446">Pilot release</text>
+        <text x="620" y="446">Funziona già, confezionata da poco</text>
+        <text x="0" y="478">Legacy estesa</text><text x="300" y="478">Project-dependent</text>
+        <text x="620" y="478">Dipende da dati e impianto</text>
+        <text x="0" y="510">Net-new</text><text x="300" y="510">In development</text>
+        <text x="620" y="510">Non disponibile oggi</text>
+      </g>
+      <text x="0" y="552" font-family="Geist" font-size="14" fill="rgba(10,10,10,.64)">Il dettaglio funzione per funzione è alla pagina 06 e nella Module Feature Matrix.</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ============= 03 · ARCHITETTURA TECNICA — chiara ============= -->
+<div class="slide lt" id="d04_architettura_tecnica" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione A · prodotto</div>
+    <div class="band__q">Da dove arrivano i dati e dove restano.</div>
+    <div class="band__a">Quattro sorgenti, un livello intermedio in sola lettura, un contesto
+      operativo unico che risiede sul server del progetto.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Da definire nel solution design</div>
+      <div class="open__i">Protocolli per modello e versione<br>Porte e flussi di rete</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">04 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Flusso dei dati</span><span>Dalla rete OT al posto di lavoro</span></div>
+    <svg width="864" height="596" viewBox="0 0 864 596" style="margin:22px 40px"
+         role="img" aria-labelledby="d3t d3d">
+      <title id="d3t">Architettura tecnica: sorgenti, connettori, contesto operativo, output</title>
+      <desc id="d3d">Le sorgenti in rete OT passano da connettori e tag mapping al contesto operativo
+        unico, che risiede sul server del cliente in rete IT e alimenta viste, report ed export.</desc>
+
+      <g font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.42)" letter-spacing="1.4">
+        <text x="0" y="12">RETE OT</text><text x="384" y="12">LIVELLO INTERMEDIO</text>
+        <text x="0" y="272">RETE IT · SERVER DEL CLIENTE</text>
+      </g>
+      <line x1="0" y1="24" x2="330" y2="24" stroke="rgba(10,10,10,.26)"/>
+      <line x1="384" y1="24" x2="864" y2="24" stroke="rgba(10,10,10,.26)"/>
+      <line x1="0" y1="284" x2="490" y2="284" stroke="rgba(10,10,10,.26)"/>
+      <line x1="534" y1="284" x2="864" y2="284" stroke="rgba(10,10,10,.26)"/>
+
+      <g font-family="Geist" font-size="16" fill="#0A0A0A">
+        <text x="0" y="74">PLC di linea</text><text x="0" y="120">Sensori esistenti</text>
+        <text x="0" y="166">Contatori energia</text><text x="0" y="212">Gestionale · sola lettura</text>
+      </g>
+      <g stroke="rgba(10,10,10,.26)" stroke-width="1.4" fill="none">
+        <path d="M256 68 L384 130"/><path d="M256 114 L384 136"/>
+        <path d="M256 160 L384 142"/><path d="M256 206 L384 148"/>
+      </g>
+      <rect x="384" y="100" width="256" height="78" fill="none" stroke="#0A0A0A" stroke-width="1.6"/>
+      <text x="406" y="132" font-family="Geist" font-size="18" fill="#0A0A0A">Connettori</text>
+      <text x="406" y="158" font-family="Geist" font-size="18" fill="#0A0A0A">e tag mapping</text>
+      <text x="384" y="204" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)"
+            letter-spacing="1.2">SOLO IN LETTURA · A CARICO D.FACTORY</text>
+
+      <path d="M512 178 L512 322" stroke="#0A0A0A" stroke-width="1.6"/>
+      <polygon points="512,322 507,314 517,314" fill="#0A0A0A"/>
+
+      <rect x="0" y="322" width="864" height="94" fill="#0A0A0A"/>
+      <text x="24" y="362" font-family="Geist" font-size="22" fill="#fff">Un contesto operativo unico</text>
+      <text x="24" y="392" font-family="Geist" font-size="16" fill="rgba(255,255,255,.72)">Stabilimento · area · linea · macchina · asset</text>
+      <circle cx="828" cy="356" r="8" fill="#E6E011"/>
+      <text x="576" y="396" font-family="Geist Mono" font-size="12" fill="#E6E011" letter-spacing="1.2">STORICO SUL SERVER DEL PROGETTO</text>
+
+      <g stroke="rgba(10,10,10,.26)" stroke-width="1.4">
+        <path d="M144 416 L144 470"/><path d="M432 416 L432 470"/><path d="M720 416 L720 470"/>
+      </g>
+      <g font-family="Geist" font-size="17" fill="#0A0A0A">
+        <text x="144" y="496" text-anchor="middle">Viste per ruolo</text>
+        <text x="432" y="496" text-anchor="middle">Report ITA · ENG</text>
+        <text x="720" y="496" text-anchor="middle">Export</text>
+      </g>
+      <line x1="0" y1="540" x2="864" y2="540" stroke="rgba(10,10,10,.12)"/>
+      <text x="0" y="572" font-family="Geist" font-size="14" fill="rgba(10,10,10,.64)">Nessun flusso in scrittura verso le macchine. Nel perimetro concordato con il tuo IT non è previsto traffico verso internet dalla rete di linea.</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ============ 04 · PUNTI DI ACQUISIZIONE — chiara ============ -->
+<div class="slide lt" id="d05_acquisizione" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione A · prodotto</div>
+    <div class="band__q">Dove il dato viene preso, fisicamente.</div>
+    <div class="band__a">Nessun hardware D.Factory entra a bordo linea. Si legge da quello che il tuo impianto gia' espone, e si aggiunge misura solo dove non c'e'.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Da verificare in audit</div>
+      <div class="open__i">Quali tag ogni PLC espone davvero<br>Copertura dei contatori per asset<br>Punti dove serve aggiungere misura</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">05 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Linea di confezionamento</span><span>Punti di prelievo del dato</span></div>
+    <svg width="864" height="576" viewBox="0 0 864 576" style="margin:26px 40px"
+         role="img" aria-labelledby="d4t d4d">
+      <title id="d4t">Punti di acquisizione del dato su una linea di confezionamento</title>
+      <desc id="d4d">Su ogni macchina il dato di stato arriva dal PLC via Ethernet. I pezzi
+        arrivano dai sensori di conta gia' presenti. L'energia arriva dai contatori di quadro,
+        dove esistono, o da pinze amperometriche aggiunte in audit.</desc>
+
+      <!-- silhouette di linea: cinque macchine e i polmoni fra una e l'altra -->
+      <g fill="none" stroke="#0A0A0A" stroke-width="1.8">
+        <rect x="0" y="150" width="122" height="96"/><rect x="180" y="150" width="122" height="96"/>
+        <rect x="360" y="150" width="122" height="96"/><rect x="540" y="150" width="122" height="96"/>
+        <rect x="720" y="150" width="122" height="96"/>
+      </g>
+      <g font-family="Geist" font-size="15" fill="#0A0A0A" text-anchor="middle">
+        <text x="61" y="204">Filler</text><text x="241" y="204">Capper</text>
+        <text x="421" y="204">Labeler</text><text x="601" y="204">Case packer</text>
+        <text x="781" y="204">Palletizer</text>
+      </g>
+      <!-- polmoni: il nastro fra due macchine -->
+      <g stroke="rgba(10,10,10,.42)" stroke-width="1.4" stroke-dasharray="4 4">
+        <line x1="122" y1="198" x2="180" y2="198"/><line x1="302" y1="198" x2="360" y2="198"/>
+        <line x1="482" y1="198" x2="540" y2="198"/><line x1="662" y1="198" x2="720" y2="198"/>
+      </g>
+      <text x="151" y="278" font-family="Geist Mono" font-size="11.5"
+            fill="rgba(10,10,10,.42)" text-anchor="middle" letter-spacing="1">POLMONE</text>
+
+      <!-- prelievo 1: stato dal PLC, sopra la linea -->
+      <line x1="0" y1="96" x2="864" y2="96" stroke="rgba(10,10,10,.26)"/>
+      <g stroke="#0A0A0A" stroke-width="1.4">
+        <line x1="61" y1="150" x2="61" y2="96"/><line x1="241" y1="150" x2="241" y2="96"/>
+        <line x1="421" y1="150" x2="421" y2="96"/><line x1="601" y1="150" x2="601" y2="96"/>
+        <line x1="781" y1="150" x2="781" y2="96"/>
+      </g>
+      <g fill="#0A0A0A">
+        <rect x="54" y="89" width="14" height="14"/><rect x="234" y="89" width="14" height="14"/>
+        <rect x="414" y="89" width="14" height="14"/><rect x="594" y="89" width="14" height="14"/>
+        <rect x="774" y="89" width="14" height="14"/>
+      </g>
+      <text x="0" y="74" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)"
+            letter-spacing="1.3">STATO MACCHINA · DAL PLC, VIA ETHERNET, IN SOLA LETTURA</text>
+
+      <!-- prelievo 2: pezzi dal sensore di conta, in uscita -->
+      <circle cx="852" cy="198" r="9" fill="#E6E011"/>
+      <line x1="842" y1="198" x2="864" y2="198" stroke="#E6E011" stroke-width="2"/>
+      <text x="852" y="282" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.64)"
+            text-anchor="end" letter-spacing="1.2">PEZZI · SENSORE DI CONTA IN USCITA</text>
+
+      <!-- prelievo 3: energia dal quadro, sotto la linea -->
+      <line x1="0" y1="330" x2="864" y2="330" stroke="rgba(10,10,10,.26)"/>
+      <g stroke="#0A0A0A" stroke-width="1.4">
+        <line x1="61" y1="246" x2="61" y2="330"/><line x1="421" y1="246" x2="421" y2="330"/>
+      </g>
+      <g fill="none" stroke="#0A0A0A" stroke-width="1.8">
+        <circle cx="61" cy="330" r="8"/><circle cx="421" cy="330" r="8"/>
+      </g>
+      <text x="0" y="360" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)"
+            letter-spacing="1.3">ENERGIA · CONTATORE DI QUADRO, DOVE ESISTE</text>
+
+      <line x1="0" y1="418" x2="864" y2="418" stroke="rgba(10,10,10,.12)"/>
+      <g font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.3">
+        <text x="0" y="452">GIA' PRESENTE</text><text x="330" y="452">DA VERIFICARE</text>
+        <text x="640" y="452">DA AGGIUNGERE</text>
+      </g>
+      <g font-family="Geist" font-size="15" fill="#0A0A0A">
+        <text x="0" y="484">PLC e rete OT</text><text x="0" y="510">Sensori di conta</text>
+        <text x="330" y="484">Tag effettivamente esposti</text><text x="330" y="510">Contatori per asset</text>
+        <text x="640" y="484">Misura di energia dove manca</text>
+        <text x="640" y="510">Sensori di conta dove manca</text>
+      </g>
+      <text x="0" y="558" font-family="Geist" font-size="14" fill="rgba(10,10,10,.64)">Lo schema e' la struttura tipo di una linea di confezionamento. La mappa della tua linea si costruisce in audit.</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ==== 06 · CAPABILITY MATRIX — chiara ==== -->
+<div class="slide lt" id="d06_capability" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione A · prodotto</div>
+    <div class="band__q">Chi contiene cosa, da dove viene, a che punto è.</div>
+    <div class="band__a">Due stati per riga. La <b>provenienza</b> dice se la capability esiste già nel legacy. Lo <b>stato</b> dice a che punto è nel nuovo packaging.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Legenda</div>
+      <div class="open__i" style="font-size:12.5px;line-height:1.75">
+        <span class="st st--ok">Proven legacy</span><br>
+        <span class="st st--opt">Pilot release</span><br>
+        <span class="st st--pd">Project-dependent</span><br>
+        <span class="st st--ver">In development</span><br>
+        <span class="st st--road">Roadmap</span></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">06 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Capability matrix · estratto</span><span>Completa: Module Feature Matrix v5</span></div>
+    <div class="field__b" style="padding:22px 40px">
+      <div class="mx mx--tight" style="grid-template-columns:1fr 68px 68px 68px 130px 168px;font-size:13.5px">
+        <div class="mx__h">Funzione</div><div class="mx__h">Conn.</div><div class="mx__h">Insight</div>
+        <div class="mx__h">Refyn</div><div class="mx__h">Provenienza</div><div class="mx__h">Stato</div>
+        <div>Stato macchina e stato linea</div><div>✓</div><div>✓</div><div>✓</div>
+        <div>MAPST 4.0</div><div><span class="st st--ok">Proven legacy</span></div>
+        <div>Consumo per linea e per vettore</div><div>✓</div><div>✓</div><div>✓</div>
+        <div>MarEnergy</div><div><span class="st st--ok">Proven legacy</span></div>
+        <div>Pareto delle cause di fermo</div><div>—</div><div>✓</div><div>✓</div>
+        <div>MAPST 4.0</div><div><span class="st st--opt">Pilot release</span></div>
+        <div>Energia per stato macchina</div><div>Base</div><div>✓</div><div>✓</div>
+        <div>Legacy + sviluppo</div><div><span class="st st--pd">Project-dependent</span></div>
+        <div>Costo energetico per pezzo</div><div>—</div><div>✓</div><div>✓</div>
+        <div>Legacy + sviluppo</div><div><span class="st st--pd">Project-dependent</span></div>
+        <div>Ranking economico delle inefficienze</div><div>—</div><div>—</div><div>✓</div>
+        <div>Net-new</div><div><span class="st st--ver">In development</span></div>
+        <div>Benefit Tracking</div><div>—</div><div>—</div><div>✓</div>
+        <div>Net-new</div><div><span class="st st--ver">In development</span></div>
+        <div>Operational Performance Index</div><div>—</div><div>—</div><div>✓</div>
+        <div>Net-new</div><div><span class="st st--road">Roadmap</span></div>
+      </div>
+      <p class="bd" style="margin-top:14px;font-size:13.5px">Una riga può essere
+        <b>proven legacy</b> come capability e <b>pilot release</b> nel packaging: due maturità
+        diverse, non si escludono.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============= 05 · SUPERVISIONE DI LINEA — scura ============= -->
+<div class="slide dk" id="d07_supervisione" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione B · funzioni</div>
+    <div class="band__q">Cosa vedo mentre il turno è aperto.</div>
+    <div class="spacer"></div>
+    <div class="co"><span class="co__n">1</span>
+      <span class="co__t">Stati letti dai PLC, pezzi dai sensori di conta.</span></div>
+    <div class="co"><span class="co__n">2</span>
+      <span class="co__t">Aggiornamento ogni 5 secondi, storico al minuto.</span></div>
+    <div class="co"><span class="co__n">3</span>
+      <span class="co__t">Il Labeler è la causa del gap di linea in questo turno.</span></div>
+    <div class="spacer"></div>
+    <div class="note">Dati illustrativi. I valori si calibrano sulla tua linea in audit.</div>
+    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">07 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Linea 04 · supervisione</span><span>Aggiornamento configurato</span></div>
+    <div class="field__b viz" style="padding:26px 40px">
+      <div style="display:flex;gap:44px;align-items:flex-end">
+        <div><div class="kpi" style="color:var(--acid)">68,4<u>%</u></div>
+          <div class="lbl" style="margin-top:10px">OEE di linea</div></div>
+        <div><div class="kpi">430<u>/1.000</u></div>
+          <div class="lbl" style="margin-top:10px">Ordine in corso · pezzi</div></div>
+        <div><div class="kpi">02:14</div>
+          <div class="lbl" style="margin-top:10px">Alla fine, su velocità attuale</div></div>
+      </div>
+      <svg width="864" height="378" viewBox="0 0 864 378" style="margin-top:28px" aria-hidden="true">
+        <g font-family="Geist Mono" font-size="12.5" fill="rgba(255,255,255,.44)" letter-spacing="1.3">
+          <text x="0" y="34">DEPALLETIZER</text><text x="0" y="88">FILLER</text>
+          <text x="0" y="142">CAPPER</text><text x="0" y="196">LABELER</text>
+          <text x="0" y="250">CASE PACKER</text><text x="0" y="304">PALLETIZER</text>
+        </g>
+        <g>
+          <rect x="152" y="18" width="712" height="20" fill="rgba(255,255,255,.78)"/>
+          <rect x="152" y="72" width="712" height="20" fill="rgba(255,255,255,.78)"/>
+          <rect x="152" y="126" width="712" height="20" fill="rgba(255,255,255,.78)"/>
+          <rect x="152" y="180" width="314" height="20" fill="rgba(255,255,255,.78)"/>
+          <rect x="466" y="180" width="102" height="20" fill="#E6E011"/>
+          <rect x="568" y="180" width="296" height="20" fill="rgba(255,255,255,.78)"/>
+          <rect x="152" y="234" width="388" height="20" fill="rgba(255,255,255,.78)"/>
+          <rect x="540" y="234" width="62" height="20" fill="rgba(255,255,255,.26)"/>
+          <rect x="602" y="234" width="262" height="20" fill="rgba(255,255,255,.78)"/>
+          <rect x="152" y="288" width="712" height="20" fill="rgba(255,255,255,.78)"/>
+        </g>
+        <line x1="466" y1="10" x2="466" y2="330" stroke="#E6E011" stroke-width="1.4"/>
+        <g font-family="Geist Mono" font-size="12.5" fill="rgba(255,255,255,.44)" letter-spacing="1.2">
+          <text x="152" y="352">06:00</text><text x="330" y="352">07:00</text>
+          <text x="508" y="352">08:00</text><text x="686" y="352">09:00</text><text x="822" y="352">10:00</text>
+        </g>
+        <g font-family="Geist Mono" font-size="12" fill="rgba(255,255,255,.44)" letter-spacing="1.1">
+          <text x="152" y="376">EXECUTE</text><text x="300" y="376">HELD · BLOCCATA DA VALLE</text>
+          <text x="560" y="376">IDLE · IN ATTESA DA MONTE</text>
+        </g>
+        <rect x="132" y="366" width="11" height="11" fill="rgba(255,255,255,.78)"/>
+        <rect x="280" y="366" width="11" height="11" fill="#E6E011"/>
+        <rect x="540" y="366" width="11" height="11" fill="rgba(255,255,255,.26)"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============= 06 · OEE, FERMI E POLMONE — chiara ============= -->
+<div class="slide lt" id="d08_oee_fermi" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione B · funzioni</div>
+    <div class="band__q">Quali cause pesano davvero.</div>
+    <div class="band__a">Ordinate per tempo perso, non per numero di eventi: 19 eventi brevi
+      pesano meno di 11 lunghi. È la lettura che cambia le priorità del giorno dopo.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Fermo macchina e fermo linea</div>
+      <div class="open__i">La logica che distingue i due, modellando i polmoni, è di Refyn
+        ed è in sviluppo: pagina 17.</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">08 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Cause di fermo · turno</span><span>Insight · pilot release</span></div>
+    <svg width="864" height="576" viewBox="0 0 864 576" style="margin:26px 40px"
+         role="img" aria-labelledby="d8t d8d">
+      <title id="d8t">Cause di fermo del turno, ordinate per tempo perso</title>
+      <desc id="d8d">Cinque cause con il tempo perso e il numero di eventi. L'ordinamento per
+        tempo perso porta in cima una causa che per frequenza sarebbe terza.</desc>
+
+      <text x="0" y="14" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.4">TEMPO PERSO TOTALE · 04:32 SU 11 CATEGORIE</text>
+      <g font-family="Geist" font-size="18" fill="#0A0A0A">
+        <text x="0" y="76">Outfeed</text><text x="0" y="164">Infeed jam</text>
+        <text x="0" y="252">Carton mis-feed</text><text x="0" y="340">Glue temp low</text>
+        <text x="0" y="428">Vacuum loss</text>
+      </g>
+      <g>
+        <rect x="230" y="52" width="516" height="30" fill="#E6E011"/>
+        <rect x="230" y="140" width="418" height="30" fill="rgba(10,10,10,.72)"/>
+        <rect x="230" y="228" width="280" height="30" fill="rgba(10,10,10,.56)"/>
+        <rect x="230" y="316" width="215" height="30" fill="rgba(10,10,10,.42)"/>
+        <rect x="230" y="404" width="130" height="30" fill="rgba(10,10,10,.30)"/>
+      </g>
+      <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.72)">
+        <text x="762" y="74">01:19</text><text x="664" y="162">01:04</text>
+        <text x="526" y="250">00:43</text><text x="461" y="338">00:33</text>
+        <text x="376" y="426">00:20</text>
+      </g>
+      <g font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.42)" letter-spacing="1.1">
+        <text x="230" y="104">11 EVENTI</text><text x="230" y="192">8 EVENTI</text>
+        <text x="230" y="280">19 EVENTI</text><text x="230" y="368">7 EVENTI</text>
+        <text x="230" y="456">4 EVENTI</text>
+      </g>
+      <line x1="0" y1="492" x2="864" y2="492" stroke="rgba(10,10,10,.12)"/>
+      <text x="0" y="524" font-family="Geist" font-size="16" fill="#0A0A0A">Carton mis-feed è la causa più frequente e la terza per impatto.</text>
+      <text x="0" y="552" font-family="Geist" font-size="15" fill="rgba(10,10,10,.64)">Ordinare per frequenza avrebbe mandato la squadra sul problema sbagliato.</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ============ 07 · VELOCITÀ, QUALITÀ, MICRO-FERMI — chiara ============ -->
+<div class="slide lt" id="d09_velocita_qualita" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione B · funzioni</div>
+    <div class="band__q">Come si vedono i micro-fermi.</div>
+    <div class="band__a">Un punto al minuto, da sensori di conta e PLC. Il micro-fermo di 38
+      secondi delle 07:18 sta sotto la soglia che un operatore annota: nel dato c'è, e sommato
+      sul mese pesa.</div>
+    <div class="spacer"></div>
+    <div style="display:flex;gap:30px">
+      <div><div class="kpi" style="font-size:34px">97,8<u>%</u></div>
+        <div class="lbl" style="margin-top:8px">Qualità</div></div>
+      <div><div class="kpi" style="font-size:34px">±214</div>
+        <div class="lbl" style="margin-top:8px">Deviazione nel turno</div></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="note">Dati illustrativi</div>
+    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">09 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Bottle Former · macchina 03</span><span>Formato 1,0 L · target 12.000 bph</span></div>
+    <svg width="864" height="574" viewBox="0 0 864 574" style="margin:26px 40px"
+         role="img" aria-labelledby="d7t d7d">
+      <title id="d7t">Velocità reale contro target nell'ultima ora</title>
+      <desc id="d7d">La curva resta vicina al target con un micro-fermo di 38 secondi alle
+        07:18, sotto la soglia di annotazione manuale.</desc>
+
+      <text x="0" y="14" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.4">PEZZI PRODOTTI · ULTIMI 60 MINUTI</text>
+      <line x1="0" y1="120" x2="864" y2="120" stroke="rgba(10,10,10,.26)" stroke-dasharray="6 5"/>
+      <text x="864" y="112" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" text-anchor="end" letter-spacing="1.2">TARGET 12.000 BPH</text>
+
+      <rect x="352" y="40" width="34" height="300" fill="rgba(230,224,17,.14)"/>
+      <polyline fill="none" stroke="#0A0A0A" stroke-width="2.6"
+        points="0,142 48,136 96,146 144,138 192,132 240,144 288,138 336,140 352,148
+                362,286 374,292 386,180 400,146 448,138 496,144 544,136 592,142 640,134
+                688,140 736,136 784,144 832,138 864,140"/>
+      <circle cx="374" cy="292" r="7" fill="#E6E011"/>
+      <line x1="386" y1="292" x2="470" y2="292" stroke="#E6E011" stroke-width="1.4"/>
+      <text x="482" y="288" font-family="Geist" font-size="16" fill="#0A0A0A">Micro-fermo di 38 s</text>
+      <text x="482" y="310" font-family="Geist" font-size="14" fill="rgba(10,10,10,.64)">alle 07:18. Nessuno lo annota.</text>
+
+      <line x1="0" y1="340" x2="864" y2="340" stroke="rgba(10,10,10,.26)"/>
+      <g font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.42)" letter-spacing="1.2">
+        <text x="0" y="364">06:20</text><text x="270" y="364">07:00</text>
+        <text x="540" y="364">07:40</text><text x="812" y="364">08:20</text>
+      </g>
+
+      <line x1="0" y1="412" x2="864" y2="412" stroke="rgba(10,10,10,.12)"/>
+      <g font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.4">
+        <text x="0" y="446">FONTE</text><text x="288" y="446">GRANULARITÀ</text>
+        <text x="576" y="446">SCARTI</text>
+      </g>
+      <g font-family="Geist" font-size="16" fill="#0A0A0A">
+        <text x="0" y="478">Sensori di conta e PLC</text>
+        <text x="288" y="478">Un punto al minuto</text>
+        <text x="576" y="478">1.840 su 84.300</text>
+      </g>
+      <text x="0" y="536" font-family="Geist" font-size="14" fill="rgba(10,10,10,.64)">Formato richiesto e formato in lavorazione coincidono. Una deviazione fra i due è essa stessa un evento da registrare.</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ============ 08 · VISTA MULTI-MACCHINA — scura ============ -->
+<div class="slide dk" id="d10_multi_impianto" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione B · funzioni</div>
+    <div class="band__q">Come si legge tutto l'impianto.</div>
+    <div class="band__a">Una riga per macchina, lo stesso asse dei tempi. Il collo di
+      bottiglia emerge nel tempo, non nell'istante.</div>
+    <div class="spacer"></div>
+    <div style="display:flex;gap:30px">
+      <div><div class="kpi" style="font-size:34px">16<u>/20</u></div>
+        <div class="lbl" style="margin-top:8px">In produzione ora</div></div>
+      <div><div class="kpi" style="font-size:34px">71,8<u>%</u></div>
+        <div class="lbl" style="margin-top:8px">OEE medio ponderato</div></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Perimetro</div>
+      <div class="open__i">Un sito, tutte le linee sulla stessa base di lettura.<br>
+        Multi-sito da verificare sul progetto.</div>
+    </div>
+    <div class="band__ft" style="margin-top:20px"><span class="wm">d<i>.</i>factory</span><span class="pg">10 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Impianto · 20 macchine</span><span>Stato per minuto · dati illustrativi</span></div>
+    <svg class="viz" width="864" height="600" viewBox="0 0 864 600" style="margin:20px 40px" aria-hidden="true">
+      <g font-family="Geist Mono" font-size="11.5" fill="rgba(255,255,255,.44)" letter-spacing=".9">
+        <text x="0" y="22">A01 DEPALLETIZER</text><text x="0" y="50">A02 RINSER</text>
+        <text x="0" y="78">A03 FILLER</text><text x="0" y="106">A04 CAPPER</text>
+        <text x="0" y="134">A05 LABELER-A</text><text x="0" y="162">A06 LABELER-B</text>
+        <text x="0" y="190">A07 INSPECTOR</text><text x="0" y="218">A08 DRYER</text>
+        <text x="0" y="246">A09 SHRINK WRAP</text><text x="0" y="274">B10 TRAY FORMER</text>
+        <text x="0" y="302">B11 CASE PACKER</text><text x="0" y="330">B12 PALLETIZER</text>
+        <text x="0" y="358">B13 STRETCH WRAP</text><text x="0" y="386">B14 RISER</text>
+        <text x="0" y="414">C15 PASTEURIZER</text><text x="0" y="442">C16 CHILLER</text>
+        <text x="0" y="470">C17 CIP SKID</text><text x="0" y="498">C18 BLOW MOLDER</text>
+        <text x="0" y="526">C19 CAP SORTER</text><text x="0" y="554">C20 OUTFEED</text>
+      </g>
+      <g fill="rgba(255,255,255,.72)">
+        <rect x="176" y="10" width="688" height="16"/><rect x="176" y="38" width="688" height="16"/>
+        <rect x="176" y="66" width="688" height="16"/><rect x="176" y="94" width="688" height="16"/>
+        <rect x="176" y="122" width="688" height="16"/>
+        <rect x="176" y="178" width="688" height="16"/><rect x="176" y="206" width="688" height="16"/>
+        <rect x="176" y="234" width="688" height="16"/><rect x="176" y="262" width="688" height="16"/>
+        <rect x="176" y="318" width="688" height="16"/><rect x="176" y="346" width="688" height="16"/>
+        <rect x="176" y="374" width="688" height="16"/><rect x="176" y="402" width="688" height="16"/>
+        <rect x="176" y="430" width="688" height="16"/><rect x="176" y="458" width="688" height="16"/>
+        <rect x="176" y="486" width="688" height="16"/><rect x="176" y="514" width="688" height="16"/>
+        <rect x="176" y="542" width="688" height="16"/>
+      </g>
+      <rect x="176" y="150" width="270" height="16" fill="rgba(255,255,255,.72)"/>
+      <rect x="446" y="150" width="122" height="16" fill="#E6E011"/>
+      <rect x="568" y="150" width="296" height="16" fill="rgba(255,255,255,.72)"/>
+      <rect x="176" y="290" width="336" height="16" fill="rgba(255,255,255,.72)"/>
+      <rect x="512" y="290" width="92" height="16" fill="rgba(255,255,255,.26)"/>
+      <rect x="604" y="290" width="260" height="16" fill="rgba(255,255,255,.72)"/>
+      <line x1="446" y1="4" x2="446" y2="566" stroke="#E6E011" stroke-width="1.3"/>
+      <g font-family="Geist Mono" font-size="12" fill="rgba(255,255,255,.44)" letter-spacing="1.2">
+        <text x="176" y="586">06:00</text><text x="412" y="586">07:18</text><text x="820" y="586">10:00</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<!-- ============ 09 · DISTRIBUZIONE ENERGIA — chiara ============ -->
+<div class="slide lt" id="d11_distribuzione_energia" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione B · funzioni</div>
+    <div class="band__q">Dove finisce l'energia che entra.</div>
+    <div class="band__a">La larghezza del nastro è il consumo misurato dai contatori, non una
+      ripartizione contabile. La suddivisione fra le utenze a valle è calcolata.</div>
+    <div class="spacer"></div>
+    <div><div class="kpi" style="font-size:38px">408,84<u>MWh</u></div>
+      <div class="lbl" style="margin-top:8px">Totali nel mese</div></div>
+    <div style="margin-top:22px"><div class="kpi" style="font-size:38px">88,0<u>MWh</u></div>
+      <div class="lbl" style="margin-top:8px">Da fotovoltaico · 12,0 %</div></div>
+    <div class="spacer"></div>
+    <div class="note">Dati illustrativi</div>
+    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">11 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Stabilimento · aprile</span><span>Da dove entra, a chi consuma</span></div>
+    <svg width="864" height="576" viewBox="0 0 864 576" style="margin:26px 40px"
+         role="img" aria-labelledby="d9t d9d">
+      <title id="d9t">Distribuzione dell'energia dallo stabilimento alle utenze</title>
+      <desc id="d9d">Rete e fotovoltaico alimentano il nodo di stabilimento, che distribuisce
+        alle sette utenze principali. Il nastro in evidenza e' l'area Filling, che assorbe di piu'.</desc>
+
+      <!-- ingressi -->
+      <rect x="0" y="150" width="20" height="150" fill="rgba(10,10,10,.78)"/>
+      <text x="0" y="140" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.2">RETE · 320,8</text>
+      <rect x="0" y="316" width="20" height="42" fill="rgba(10,10,10,.42)"/>
+      <text x="0" y="378" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.2">FOTOVOLTAICO · 88,0</text>
+      <path d="M20 150 L300 116 L300 300 L20 300 Z" fill="rgba(10,10,10,.16)"/>
+      <path d="M20 316 L300 300 L300 352 L20 358 Z" fill="rgba(10,10,10,.10)"/>
+
+      <!-- nodo -->
+      <rect x="300" y="116" width="26" height="236" fill="#0A0A0A"/>
+      <text x="313" y="104" font-family="Geist" font-size="17" fill="#0A0A0A" text-anchor="middle">Stabilimento</text>
+
+      <!-- uscite, ampiezza proporzionale ai kWh -->
+      <path d="M326 116 L640 116 L640 180 L326 180 Z" fill="#E6E011"/>
+      <path d="M326 180 L640 180 L640 229 L326 229 Z" fill="rgba(10,10,10,.30)"/>
+      <path d="M326 229 L640 229 L640 270 L326 270 Z" fill="rgba(10,10,10,.24)"/>
+      <path d="M326 270 L640 270 L640 303 L326 303 Z" fill="rgba(10,10,10,.20)"/>
+      <path d="M326 303 L640 303 L640 328 L326 328 Z" fill="rgba(10,10,10,.16)"/>
+      <path d="M326 328 L640 328 L640 340 L326 340 Z" fill="rgba(10,10,10,.13)"/>
+      <path d="M326 340 L640 340 L640 352 L326 352 Z" fill="rgba(10,10,10,.10)"/>
+
+      <g font-family="Geist" font-size="16" fill="#0A0A0A">
+        <text x="656" y="154">Filling</text><text x="656" y="211">Mixing</text>
+        <text x="656" y="256">Boiler</text><text x="656" y="293">HVAC</text>
+        <text x="656" y="324">Chiller</text><text x="656" y="350">Purifier</text>
+        <text x="656" y="376">Office</text>
+      </g>
+      <g font-family="Geist Mono" font-size="13" fill="rgba(10,10,10,.64)">
+        <text x="864" y="154" text-anchor="end">112,4</text><text x="864" y="211" text-anchor="end">86,1</text>
+        <text x="864" y="256" text-anchor="end">71,3</text><text x="864" y="293" text-anchor="end">58,0</text>
+        <text x="864" y="324" text-anchor="end">44,7</text><text x="864" y="350" text-anchor="end">21,4</text>
+        <text x="864" y="376" text-anchor="end">14,9</text>
+        <g stroke="rgba(10,10,10,.26)" stroke-width="1">
+          <line x1="640" y1="334" x2="648" y2="345"/><line x1="640" y1="346" x2="648" y2="371"/>
+        </g>
+      </g>
+
+      <line x1="0" y1="440" x2="864" y2="440" stroke="rgba(10,10,10,.12)"/>
+      <g font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.4">
+        <text x="0" y="474">MISURATO</text><text x="288" y="474">CALCOLATO</text><text x="576" y="474">DECISIONE</text>
+      </g>
+      <g font-family="Geist" font-size="15" fill="#0A0A0A">
+        <text x="0" y="506">Totali per sorgente</text><text x="0" y="528">e per area, dai contatori</text>
+        <text x="288" y="506">La ripartizione fra</text><text x="288" y="528">le utenze a valle</text>
+        <text x="576" y="506">Su quale area conviene</text><text x="576" y="528">intervenire prima</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<!-- ============ 10 · COSTO E CO2 PER PEZZO — chiara ============ -->
+<div class="slide lt" id="d12_costo_co2_stato" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione B · funzioni</div>
+    <div class="band__q">Quanto costa un pezzo e quanto spendi da fermo.</div>
+    <div class="band__a">Cinque vettori, tracciati sul ciclo dove esiste la strumentazione e
+      divisi per i pezzi buoni del periodo.</div>
+    <div class="spacer"></div>
+    <div><div class="kpi" style="font-size:38px">0,029<u>€</u></div>
+      <div class="lbl" style="margin-top:8px">Costo energetico per pezzo</div></div>
+    <div style="margin-top:22px"><div class="kpi" style="font-size:38px">358,8<u>g</u></div>
+      <div class="lbl" style="margin-top:8px">CO₂ per mille pezzi</div></div>
+    <div class="spacer"></div>
+    <div class="note">Dati illustrativi · perimetro, fattori emissivi e conteggio pezzi: pagina 12</div>
+    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">12 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Ottobre · 12,8 M pezzi</span><span>Per vettore e per stato macchina</span></div>
+    <svg width="864" height="576" viewBox="0 0 864 576" style="margin:26px 40px"
+         role="img" aria-labelledby="d10t d10d">
+      <title id="d10t">Consumo per vettore e ripartizione per stato macchina</title>
+      <desc id="d10d">Cinque vettori energetici con il rispettivo costo, e la quota di energia
+        assorbita a macchina ferma rispetto a quella assorbita in produzione.</desc>
+
+      <text x="0" y="12" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.4">PER VETTORE · COSTO DEL MESE</text>
+      <g font-family="Geist" font-size="16" fill="#0A0A0A">
+        <text x="0" y="56">Elettricità</text><text x="0" y="104">Gas</text>
+        <text x="0" y="152">Vapore</text><text x="0" y="200">Aria compressa</text>
+        <text x="0" y="248">Acqua</text>
+      </g>
+      <g fill="rgba(10,10,10,.78)">
+        <rect x="180" y="38" width="470" height="22"/><rect x="180" y="86" width="195" height="22"/>
+        <rect x="180" y="134" width="148" height="22"/><rect x="180" y="182" width="90" height="22"/>
+        <rect x="180" y="230" width="56" height="22"/>
+      </g>
+      <g font-family="Geist Mono" font-size="13" fill="rgba(10,10,10,.64)">
+        <text x="666" y="56">155,0 k€</text><text x="391" y="104">64,4 k€</text>
+        <text x="344" y="152">48,8 k€</text><text x="286" y="200">29,6 k€</text>
+        <text x="252" y="248">18,6 k€</text>
+      </g>
+
+      <line x1="0" y1="304" x2="864" y2="304" stroke="rgba(10,10,10,.26)"/>
+      <text x="0" y="338" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.4">PER STATO MACCHINA · AREA PACKAGING · 2.840 KWH/GIORNO</text>
+
+      <rect x="0" y="366" width="501" height="46" fill="rgba(10,10,10,.78)"/>
+      <rect x="501" y="366" width="156" height="46" fill="#E6E011"/>
+      <rect x="657" y="366" width="121" height="46" fill="rgba(10,10,10,.30)"/>
+      <rect x="778" y="366" width="86" height="46" fill="rgba(10,10,10,.16)"/>
+      <g font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.64)" letter-spacing="1.1">
+        <text x="0" y="438">EXECUTE · 58 %</text><text x="501" y="438">IDLE · 18 %</text>
+        <text x="657" y="438">HELD · 14 %</text><text x="778" y="438">SETUP · 10 %</text>
+      </g>
+
+      <line x1="0" y1="482" x2="864" y2="482" stroke="rgba(10,10,10,.12)"/>
+      <text x="0" y="518" font-family="Geist" font-size="24" fill="#0A0A0A">Il 42 % è consumato a macchina ferma.</text>
+      <text x="0" y="552" font-family="Geist" font-size="15" fill="rgba(10,10,10,.64)">Quanto di questo si possa recuperare si stabilisce in audit, asset per asset. Non è una percentuale che si dichiara a priori.</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ============ 11 · METODO DI MISURA — scura ============ -->
+<div class="slide dk" id="d13_metodo_misura" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione B · funzioni</div>
+    <div class="band__q">Come si arriva a quei numeri.</div>
+    <div class="band__a">Il costo per pezzo dipende da come si contano i pezzi. La formula si
+      fissa in audit: cambiarla dopo obbliga a rifare i confronti storici.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Da definire nel solution design</div>
+      <div class="open__i">Fattori emissivi e loro versione<br>Campionamento e dati mancanti<br>
+        Sincronizzazione temporale</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">13 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Dal contatore al report</span><span>Sei passi</span></div>
+    <svg width="864" height="586" viewBox="0 0 864 586" style="margin:22px 40px"
+         role="img" aria-labelledby="d11t d11d">
+      <title id="d11t">I sei passi del metodo di misura</title>
+      <desc id="d11d">Lettura continua, associazione allo stato macchina, conteggio pezzi,
+        normalizzazione, applicazione di prezzi e fattori emissivi, validazione con le letture
+        di riferimento del cliente.</desc>
+
+      <line x1="18" y1="24" x2="18" y2="392" stroke="rgba(255,255,255,.30)"/>
+      <g fill="rgba(255,255,255,.82)">
+        <circle cx="18" cy="30" r="7"/><circle cx="18" cy="102" r="7"/><circle cx="18" cy="174" r="7"/>
+        <circle cx="18" cy="246" r="7"/><circle cx="18" cy="318" r="7"/>
+      </g>
+      <circle cx="18" cy="390" r="7" fill="#E6E011"/>
+
+      <g font-family="Geist Mono" font-size="12" fill="rgba(255,255,255,.44)" letter-spacing="1.3">
+        <text x="52" y="22">01</text><text x="52" y="94">02</text><text x="52" y="166">03</text>
+        <text x="52" y="238">04</text><text x="52" y="310">05</text><text x="52" y="382">06</text>
+      </g>
+      <g font-family="Geist" font-size="19" fill="#fff">
+        <text x="106" y="24">Lettura continua</text><text x="106" y="96">Associazione allo stato</text>
+        <text x="106" y="168">Conteggio pezzi</text><text x="106" y="240">Normalizzazione</text>
+        <text x="106" y="312">Costo e CO₂</text><text x="106" y="384">Validazione</text>
+      </g>
+      <g font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">
+        <text x="106" y="50">Su tutti i vettori strumentati, senza interruzione</text>
+        <text x="106" y="122">Ogni lettura legata allo stato della macchina in quel momento</text>
+        <text x="106" y="194">I pezzi buoni, contati con la regola che usi tu</text>
+        <text x="106" y="266">Consumo diviso per pezzi, stesso intervallo e stesso perimetro</text>
+        <text x="106" y="338">Prezzi dei vettori e fattori emissivi documentati</text>
+        <text x="106" y="410">Confronto con le tue letture di riferimento</text>
+      </g>
+
+      <line x1="0" y1="462" x2="864" y2="462" stroke="rgba(255,255,255,.30)"/>
+      <text x="0" y="496" font-family="Geist Mono" font-size="12" fill="rgba(255,255,255,.44)" letter-spacing="1.4">COSA SI PUÒ DIRE, E COSA NO</text>
+      <g font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">
+        <text x="0" y="528">I dati sono associabili ai fattori emissivi documentati, utili a Scope 1 e 2.</text>
+        <text x="0" y="552">Supporta processi coerenti con ISO 50001, ma non è un software certificato:</text>
+        <text x="0" y="576">la norma riguarda l'organizzazione.</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<!-- ==== 14 · CORRELAZIONE PRODUZIONE-ENERGIA — scura ==== -->
+<div class="slide dk" id="d14_correlazione" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione B · funzioni</div>
+    <div class="band__q">Che cosa nasce dal leggerle insieme.</div>
+    <div class="band__a">È la componente distintiva dell'offerta: nessuna delle due letture, da sola, dice quanto costa un minuto di fermo.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Prerequisito</div>
+      <div class="open__i">La misura di energia deve essere associabile allo stato macchina sullo stesso asse dei tempi. Dove non lo è, la correlazione non si calcola.</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">14 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Analisi congiunta</span><span>Insight · project-dependent</span></div>
+    <div class="field__b" style="padding:26px 40px">
+      <div class="mx" style="grid-template-columns:1fr 150px 168px">
+        <div class="mx__h">Che cosa si ottiene</div><div class="mx__h">Modulo minimo</div><div class="mx__h">Stato</div>
+        <div>Energia consumata durante i fermi</div><div>Insight</div>
+        <div><span class="st st--pd">Project-dependent</span></div>
+        <div>Energia per pezzo buono</div><div>Insight</div>
+        <div><span class="st st--pd">Project-dependent</span></div>
+        <div>Relazione fra stato macchina e consumo</div><div>Insight</div>
+        <div><span class="st st--pd">Project-dependent</span></div>
+        <div>Costo della riduzione di velocità</div><div>Insight</div>
+        <div><span class="st st--ver">In development</span></div>
+        <div>Costo combinato di capacità persa ed energia non produttiva</div><div>Insight</div>
+        <div><span class="st st--ver">In development</span></div>
+        <div>Ranking economico delle inefficienze</div><div>Refyn</div>
+        <div><span class="st st--ver">In development</span></div>
+      </div>
+      <div class="hr" style="margin:22px 0 16px"></div>
+      <p class="bd" style="font-size:15px">Il fermo delle 07:18 costa due volte: i pezzi non
+        prodotti e l'energia assorbita mentre non si produce. Finché le due letture stanno in
+        sistemi separati, la seconda metà del conto non viene fatta da nessuno.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==== 15 · OPPORTUNITY PRIORITIZATION — scura ==== -->
+<div class="slide dk" id="d15_opportunity" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione C · Refyn</div>
+    <div class="band__q">Come si decide da dove cominciare.</div>
+    <div class="band__a">Non esiste oggi. È il primo dei quattro oggetti previsti da Refyn e serve a ordinare le inefficienze per valore, non per rumore.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Stato</div>
+      <div class="open__i">In development. Non disponibile, non collaudato, non vendibile come funzione presente.</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">15 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Opportunity Prioritization</span><span>Refyn · in development</span></div>
+    <svg width="864" height="556" viewBox="0 0 864 556" style="margin:30px 40px"
+         role="img" aria-labelledby="d15t d15d">
+      <title id="d15t">Criteri di ordinamento delle opportunità</title>
+      <desc id="d15d">Ogni inefficienza rilevata viene pesata su nove criteri e restituita
+        come elenco ordinato con motivazione, valore stimato e attendibilità del dato.</desc>
+
+      <text x="0" y="14" font-family="Geist Mono" font-size="12" fill="rgba(255,255,255,.44)" letter-spacing="1.3">CRITERI DI PESATURA</text>
+      <g font-family="Geist" font-size="16" fill="#fff">
+        <text x="0" y="52">Capacità recuperabile</text><text x="300" y="52">Frequenza</text><text x="600" y="52">Affidabilità del dato</text>
+        <text x="0" y="88">Energia evitabile</text><text x="300" y="88">Durata</text><text x="600" y="88">Effort indicativo</text>
+        <text x="0" y="124">Costo economico</text><text x="300" y="124">Area coinvolta</text><text x="600" y="124">Impatto atteso</text>
+      </g>
+      <line x1="0" y1="164" x2="864" y2="164" stroke="rgba(255,255,255,.30)"/>
+
+      <text x="0" y="200" font-family="Geist Mono" font-size="12" fill="rgba(255,255,255,.44)" letter-spacing="1.3">OUTPUT · ELENCO ORDINATO</text>
+      <g>
+        <rect x="0" y="222" width="640" height="30" fill="#E6E011"/>
+        <rect x="0" y="268" width="470" height="30" fill="rgba(255,255,255,.62)"/>
+        <rect x="0" y="314" width="352" height="30" fill="rgba(255,255,255,.46)"/>
+        <rect x="0" y="360" width="228" height="30" fill="rgba(255,255,255,.32)"/>
+      </g>
+      <g font-family="Geist" font-size="15" fill="#0A0A0A">
+        <text x="14" y="243">01 · Outfeed · fermi lunghi ricorrenti</text>
+      </g>
+      <g font-family="Geist" font-size="15" fill="#0A0A0A">
+        <text x="14" y="289">02 · Consumo a macchina ferma, area filling</text>
+        <text x="14" y="335">03 · Riduzione di velocità sul formato 1,0 L</text>
+        <text x="14" y="381">04 · Micro-fermi al case packer</text>
+      </g>
+      <g font-family="Geist Mono" font-size="13" fill="rgba(255,255,255,.72)">
+        <text x="664" y="243">alta</text><text x="500" y="289">alta</text>
+        <text x="382" y="335">media</text><text x="258" y="381">media</text>
+      </g>
+      <text x="760" y="200" font-family="Geist Mono" font-size="12" fill="rgba(255,255,255,.44)" letter-spacing="1.3" text-anchor="end">ATTENDIBILITÀ</text>
+
+      <line x1="0" y1="428" x2="864" y2="428" stroke="rgba(255,255,255,.14)"/>
+      <text x="0" y="462" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">Ogni voce porta con sé la motivazione, il valore stimato, l'attendibilità del dato che la</text>
+      <text x="0" y="486" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">sostiene e lo stato di avanzamento. Senza attendibilità dichiarata, una priorità è un'opinione.</text>
+      <text x="0" y="534" font-family="Geist Mono" font-size="12" fill="#E6E011" letter-spacing="1.3">RAPPRESENTAZIONE DI CONCETTO · LA FUNZIONE NON È IMPLEMENTATA</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ==== 16 · ACTION MANAGEMENT E BENEFIT TRACKING — scura ==== -->
+<div class="slide dk" id="d16_action_benefit" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione C · Refyn</div>
+    <div class="band__q">Dall'opportunità all'azione, e alla verifica.</div>
+    <div class="band__a">Due oggetti distinti: uno governa l'intervento, l'altro ne misura l'effetto. Senza il secondo, il miglioramento resta un'affermazione.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Stato</div>
+      <div class="open__i">Entrambi in development. Il modello di calcolo del beneficio non è ancora fissato.</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">16 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Action Management · Benefit Tracking</span><span>Refyn · in development</span></div>
+    <div class="field__b" style="padding:26px 40px">
+      <div class="mx" style="grid-template-columns:1fr 1fr">
+        <div class="mx__h">Action Management · campi previsti</div>
+        <div class="mx__h">Benefit Tracking · misure previste</div>
+        <div>Responsabile, data, linea o asset</div><div>Baseline del periodo precedente</div>
+        <div>Baseline e target</div><div>Periodo di osservazione successivo</div>
+        <div>Scadenza e stato</div><div>Variazione di OEE</div>
+        <div>Evidenze e commenti</div><div>Capacità recuperata, energia evitata</div>
+        <div>Risultato</div><div>Costo evitato e valore economico</div>
+        <div>Beneficio annualizzato</div><div>Qualità del confronto</div>
+      </div>
+      <div class="hr" style="margin:20px 0 14px"></div>
+      <p class="bd" style="font-size:14px">Il campo che decide la credibilità dell'intero
+        oggetto è l'ultimo: senza una misura della qualità del confronto, un beneficio
+        dichiarato non è distinguibile da una coincidenza stagionale.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==== 17 · OEE DI LINEA AVANZATO — chiara ==== -->
+<div class="slide lt" id="d17_oee_avanzato" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione C · Refyn</div>
+    <div class="band__q">Perché macchina ferma non è linea ferma.</div>
+    <div class="band__a">Il polmone, o buffer, a valle continua ad alimentare la linea finché ha materiale. Se assorbe il fermo, la linea non si ferma e l'OEE di linea non si sconta due volte.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Stato</div>
+      <div class="open__i">In development. Oggi la distinzione fra fermo macchina e fermo linea non è modellata nel prodotto.</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">17 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Logica buffer-aware</span><span>Refyn · in development</span></div>
+    <svg width="864" height="556" viewBox="0 0 864 556" style="margin:30px 40px"
+         role="img" aria-labelledby="d17t d17d">
+      <title id="d17t">Il polmone assorbe il fermo macchina</title>
+      <desc id="d17d">Con il polmone pieno il fermo della macchina non ferma la linea. Con il
+        polmone svuotato lo stesso fermo diventa fermo di linea.</desc>
+
+      <text x="0" y="14" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.4">CASO 1 · POLMONE PIENO</text>
+      <rect x="0" y="36" width="182" height="62" fill="none" stroke="#0A0A0A" stroke-width="1.6"/>
+      <text x="91" y="73" font-family="Geist" font-size="16" fill="#0A0A0A" text-anchor="middle">Macchina ferma</text>
+      <path d="M182 67 L240 67" stroke="#0A0A0A" stroke-width="1.6"/>
+      <rect x="240" y="36" width="156" height="62" fill="#0A0A0A"/>
+      <text x="318" y="73" font-family="Geist" font-size="16" fill="#fff" text-anchor="middle">Polmone pieno</text>
+      <path d="M396 67 L454 67" stroke="#0A0A0A" stroke-width="1.6"/>
+      <polygon points="454,67 446,62 446,72" fill="#0A0A0A"/>
+      <rect x="454" y="36" width="182" height="62" fill="none" stroke="#0A0A0A" stroke-width="1.6"/>
+      <text x="545" y="73" font-family="Geist" font-size="16" fill="#0A0A0A" text-anchor="middle">La linea continua</text>
+
+      <text x="0" y="162" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.4">CASO 2 · POLMONE SVUOTATO</text>
+      <rect x="0" y="184" width="182" height="62" fill="none" stroke="#0A0A0A" stroke-width="1.6"/>
+      <text x="91" y="221" font-family="Geist" font-size="16" fill="#0A0A0A" text-anchor="middle">Macchina ferma</text>
+      <path d="M182 215 L240 215" stroke="#0A0A0A" stroke-width="1.6"/>
+      <rect x="240" y="184" width="156" height="62" fill="none" stroke="rgba(10,10,10,.42)" stroke-width="1.6" stroke-dasharray="5 4"/>
+      <text x="318" y="221" font-family="Geist" font-size="16" fill="rgba(10,10,10,.64)" text-anchor="middle">Polmone vuoto</text>
+      <path d="M396 215 L454 215" stroke="#E6E011" stroke-width="2.6"/>
+      <polygon points="454,215 446,210 446,220" fill="#E6E011"/>
+      <rect x="454" y="184" width="182" height="62" fill="#E6E011"/>
+      <text x="545" y="221" font-family="Geist" font-size="16" fill="#0A0A0A" text-anchor="middle">La linea si ferma</text>
+
+      <text x="690" y="70" font-family="Geist" font-size="18" fill="#0A0A0A">La differenza</text>
+      <text x="690" y="94" font-family="Geist" font-size="18" fill="#0A0A0A">fra i due OEE</text>
+      <text x="690" y="118" font-family="Geist" font-size="18" fill="#0A0A0A">è la capacità</text>
+      <text x="690" y="142" font-family="Geist" font-size="18" fill="#0A0A0A">del polmone.</text>
+
+      <line x1="0" y1="300" x2="864" y2="300" stroke="rgba(10,10,10,.26)"/>
+      <text x="0" y="334" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.4">FUNZIONI PREVISTE IN QUESTO OGGETTO</text>
+      <g font-family="Geist" font-size="15" fill="#0A0A0A">
+        <text x="0" y="368">Distinzione fermo macchina / fermo linea</text>
+        <text x="440" y="368">Propagazione degli eventi a valle</text>
+        <text x="0" y="398">Modellazione della capacità dei polmoni</text>
+        <text x="440" y="398">Identificazione del collo di bottiglia</text>
+        <text x="0" y="428">Confronto perdita locale / impatto finale</text>
+        <text x="440" y="428">Line balancing</text>
+      </g>
+      <g font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.2">
+        <text x="700" y="428">ROADMAP</text>
+      </g>
+      <line x1="0" y1="462" x2="864" y2="462" stroke="rgba(10,10,10,.12)"/>
+      <rect x="0" y="486" width="470" height="28" fill="#E6E011"/>
+      <text x="14" y="506" font-family="Geist Mono" font-size="12.5" fill="#0A0A0A" letter-spacing="1.2">IN DEVELOPMENT · NON DISPONIBILE OGGI</text>
+      <text x="0" y="546" font-family="Geist" font-size="14" fill="rgba(10,10,10,.64)">La formula OEE si calibra comunque in audit sul modo di misurare del cliente.</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ==== 18 · ROADMAP CONTROLLATA — chiara ==== -->
+<div class="slide lt" id="d18_roadmap" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione C · Refyn</div>
+    <div class="band__q">Cosa non facciamo, e non promettiamo.</div>
+    <div class="band__a">Un elenco di esclusioni è più utile di un elenco di intenzioni. Queste funzioni non esistono, non sono in sviluppo e non entrano in un contratto.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Sulla diagnostica</div>
+      <div class="open__i">La prima fase prevista usa regole, statistica, deviazioni e pattern. Nessun modello di apprendimento.</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">18 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Roadmap controllata</span><span>Stato dichiarato per ciascuna voce</span></div>
+    <div class="field__b" style="padding:24px 40px">
+      <div class="mx mx--tight" style="grid-template-columns:1fr 1fr 176px">
+        <div class="mx__h">Funzione</div><div class="mx__h">Condizione per valutarla</div><div class="mx__h">Stato</div>
+        <div>Benchmarking interno fra linee, turni, siti</div>
+        <div>Perimetro multi-sito consolidato</div><div><span class="st st--road">Roadmap</span></div>
+        <div>Operational Performance Index</div>
+        <div>Definizione delle componenti e verifica HR</div><div><span class="st st--road">Roadmap</span></div>
+        <div>Line balancing</div><div>Modellazione dei polmoni completata</div>
+        <div><span class="st st--road">Roadmap</span></div>
+        <div>Manutenzione e qualità predittive</div><div>Nessuna</div>
+        <div><span class="st st--no">Not offered</span></div>
+        <div>Raccomandazioni automatiche, simulazioni, forecast</div><div>Nessuna</div>
+        <div><span class="st st--no">Not offered</span></div>
+        <div>Benchmark cross-client</div><div>Modello legale, privacy e anonimizzazione</div>
+        <div><span class="st st--no">Not offered</span></div>
+        <div>Intelligenza artificiale, assistente in linguaggio naturale</div><div>Nessuna</div>
+        <div><span class="st st--no">Not offered</span></div>
+        <div>Video e streaming da telecamere IP</div><div>Nessuna</div>
+        <div><span class="st st--no">Not offered</span></div>
+      </div>
+      <p class="bd" style="margin-top:14px;font-size:13.5px">Se una di queste funzioni è
+        determinante per il tuo progetto, va detto adesso e non in fase di collaudo.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 13 · BROWNFIELD · MACCHINE — chiara ============ -->
+<div class="slide lt" id="d19_brownfield_macchine" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione D · integrazione</div>
+    <div class="band__q">Funziona sul brownfield che hai gia'.</div>
+    <div class="band__a">Brownfield: impianti gia' in esercizio, con macchine di costruttori e generazioni diverse. Compatibilita' verificata in audit, non a catalogo.</div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">19 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Macchine, PLC e misura</span><span>1 di 2</span></div>
+    <div class="field__b" style="padding:26px 40px">
+      <div class="mx" style="grid-template-columns:210px 1fr 200px">
+        <div class="mx__h">Categoria</div><div class="mx__h">Come entra nel modello</div><div class="mx__h">Stato</div>
+
+        <div>Macchine PackML</div><div>Stati PackML dove la macchina li espone</div>
+        <div><span class="st st--ok">Supportato</span></div>
+        <div>Macchine non-PackML</div><div>Modello ridotto a due stati: in marcia e non in marcia</div>
+        <div><span class="st st--ok">Supportato</span></div>
+        <div>PLC e PC industriali</div><div>Lettura via Ethernet, multi-vendor</div>
+        <div><span class="st st--inf">Dipende dal modello</span></div>
+        <div>Contatori energia</div><div>Cinque vettori, dove esiste la strumentazione</div>
+        <div><span class="st st--inf">Dipende dalla copertura</span></div>
+        <div>Macchine legacy</div><div>Solo se espongono uno stato leggibile dal PLC</div>
+        <div><span class="st st--ver">Verifica in audit</span></div>
+      </div>
+      <p class="bd" style="margin-top:20px;font-size:14px">A bordo linea non entra hardware
+        proprietario D.Factory. Servono pero' un server e, dove manca la misura, sensori.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 14 · BROWNFIELD · RETE — chiara ============ -->
+<div class="slide lt" id="d20_brownfield_rete" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione D · integrazione</div>
+    <div class="band__q">Rete, gestionale e tag mapping.</div>
+    <div class="band__a">Il tag mapping e' lavoro nostro ed e' la parte che di solito blocca i progetti.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Quello che non diciamo</div>
+      <div class="open__i">Che funzioni con ogni marca e ogni protocollo. Multi-vendor non significa compatibile con tutto.</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">20 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Rete e sistemi</span><span>2 di 2</span></div>
+    <div class="field__b" style="padding:26px 40px">
+      <div class="mx" style="grid-template-columns:180px 1fr 176px">
+        <div class="mx__h">Categoria</div><div class="mx__h">Come entra nel modello</div><div class="mx__h">Stato</div>
+
+        <div>Reti OT e IT</div><div>Segmentate, flussi in sola lettura verso l'alto</div>
+        <div><span class="st st--inf">Dipende dalla rete</span></div>
+        <div>Gestionale</div><div>Ordini e anagrafiche in sola lettura, tramite livello intermedio</div>
+        <div><span class="st st--opt">Caso per caso</span></div>
+        <div>Protocolli</div><div>Connettori per modello e versione</div>
+        <div><span class="st st--ver">Verifica in audit</span></div>
+        <div>Scrittura verso l'ERP</div><div>Oggi la lettura e' solo in ingresso</div>
+        <div><span class="st st--road">Sul progetto</span></div>
+      </div>
+      <div class="hr" style="margin:22px 0 16px"></div>
+      <div class="mx" style="grid-template-columns:1fr 176px">
+        <div class="mx__h">Cosa serve dal tuo lato</div><div class="mx__h">Chi lo fornisce</div>
+        <div>Elenco dei PLC per linea, con marca e modello</div><div>OT</div>
+        <div>Schemi di rete OT e IT, anche parziali</div><div>IT</div>
+        <div>Modalita' di accesso al gestionale</div><div>IT</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 15 · DEPLOYMENT · ZONE DI RETE — chiara ============ -->
+<div class="slide lt" id="d21_deployment" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione D · integrazione</div>
+    <div class="band__q">Cosa chiede al tuo IT.</div>
+    <div class="band__a">Il dato di produzione resta in fabbrica, su un server tuo. Le tre zone restano separate e i flussi fra loro vanno in una direzione sola.</div>
+    <div class="spacer"></div>
+    <div class="note">Le voci che il tuo IT deve approvare, una per una,
+      sono nella pagina seguente.</div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">21 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Zone di rete</span><span>Assetto previsto · da confermare in solution design</span></div>
+    <svg width="864" height="560" viewBox="0 0 864 560" style="margin:36px 40px"
+         role="img" aria-labelledby="d21t d21d">
+      <title id="d21t">Segmentazione delle zone di rete</title>
+      <desc id="d21d">Rete OT, livello intermedio e rete IT restano separati. I flussi fra le
+        zone sono solo in lettura e non esiste un percorso verso internet dalla rete di linea.</desc>
+
+      <rect x="0" y="0" width="864" height="132" fill="#F2F3EF"/>
+      <text x="24" y="36" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.4">ZONA 1 · RETE OT</text>
+      <text x="24" y="72" font-family="Geist" font-size="20" fill="#0A0A0A">PLC di linea · sensori · contatori energia</text>
+      <text x="24" y="102" font-family="Geist" font-size="15" fill="rgba(10,10,10,.64)">Nessun flusso in scrittura verso le macchine</text>
+
+      <path d="M432 132 L432 172" stroke="#E6E011" stroke-width="2.4"/>
+      <polygon points="432,180 424,169 440,169" fill="#E6E011"/>
+      <text x="452" y="164" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.64)" letter-spacing="1.2">SOLO LETTURA</text>
+
+      <rect x="0" y="188" width="864" height="132" fill="#F2F3EF"/>
+      <text x="24" y="224" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.4">ZONA 2 · LIVELLO INTERMEDIO</text>
+      <text x="24" y="260" font-family="Geist" font-size="20" fill="#0A0A0A">Connettori · tag mapping · normalizzazione</text>
+      <text x="24" y="290" font-family="Geist" font-size="15" fill="rgba(10,10,10,.64)">A carico D.Factory</text>
+
+      <path d="M432 320 L432 360" stroke="#E6E011" stroke-width="2.4"/>
+      <polygon points="432,368 424,357 440,357" fill="#E6E011"/>
+      <text x="452" y="352" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.64)" letter-spacing="1.2">SOLO LETTURA</text>
+
+      <rect x="0" y="376" width="864" height="132" fill="#0A0A0A"/>
+      <text x="24" y="412" font-family="Geist Mono" font-size="12" fill="rgba(255,255,255,.44)" letter-spacing="1.4">ZONA 3 · RETE IT · SERVER DEL CLIENTE</text>
+      <text x="24" y="448" font-family="Geist" font-size="20" fill="#fff">Applicazione · database · contesto operativo</text>
+      <text x="24" y="478" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">Postazioni utente e bordo linea</text>
+
+      <text x="0" y="546" font-family="Geist" font-size="15" fill="rgba(10,10,10,.64)">Nel perimetro concordato con il tuo IT non è previsto traffico verso internet dalla rete di linea.</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ============ 16 · SPECIFICHE IT — chiara ============ -->
+<div class="slide lt" id="d22_specifiche_it" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione D · integrazione</div>
+    <div class="band__q">Le voci che il tuo IT deve approvare.</div>
+    <div class="band__a">Nessuna di queste voci si dichiara prima di averla concordata. Qui c'e' l'elenco completo, con chi la chiude e quando.</div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">22 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Specifiche IT</span><span>Voce · stato · chi decide · quando si chiude</span></div>
+    <div class="field__b" style="padding:24px 40px">
+      <div class="mx mx--tight" style="grid-template-columns:1fr 240px 130px 170px;font-size:13.5px">
+        <div class="mx__h">Voce</div><div class="mx__h">Stato oggi</div>
+        <div class="mx__h">Chi decide</div><div class="mx__h">Si chiude in</div>
+
+        <div>Server e sistema operativo</div><div>PC industriale, sistema operativo da confermare</div>
+        <div>Cliente</div><div>Definito</div>
+        <div>Sizing del server</div><div>Dipende da linee e frequenza</div>
+        <div>Congiunto</div><div>Solution design</div>
+        <div>Protocolli e modelli PLC</div><div>Per modello e versione</div>
+        <div>D.Factory</div><div>Audit</div>
+        <div>Porte e direzione dei flussi</div><div>Sola lettura, OT verso IT</div>
+        <div>IT cliente</div><div>Solution design</div>
+        <div>Autenticazione e ruoli</div><div>Secondo le policy interne</div>
+        <div>IT cliente</div><div>Solution design</div>
+        <div>Backup, retention, patching</div><div>Secondo le policy interne</div>
+        <div>IT cliente</div><div>Solution design</div>
+        <div>Logging e audit trail</div><div>Da concordare</div>
+        <div>Congiunto</div><div>Solution design</div>
+        <div>Accesso remoto</div><div>Da concordare, disattivabile</div>
+        <div>IT cliente</div><div>Contratto</div>
+        <div>Licenza a fine contratto</div><div>Distinta dalla policy sul dato</div>
+        <div>Legale</div><div>Contratto</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 14 · STRATEGIA SENSORI — scura ============ -->
+<div class="slide dk" id="d23_sensori" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione D · integrazione</div>
+    <div class="band__q">Dove serve misurare bene davvero.</div>
+    <div class="band__a">La sensoristica non è il nostro prodotto: resta a carico tuo e la
+      installa il tuo personale tecnico. Si parte da quello che è già in linea e si sceglie
+      asset per asset, in audit.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Su MID e ISO 50001</div>
+      <div class="open__i">MID riguarda la strumentazione, ISO 50001 il sistema di gestione
+        dell'organizzazione. Nessuna delle due certifica il software.</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">23 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Clamp-on o strumentazione certificata</span><span>Sei criteri</span></div>
+    <div class="field__b">
+      <div class="mx" style="grid-template-columns:150px 1fr 1fr">
+        <div class="mx__h">Criterio</div><div class="mx__h">Clamp-on</div><div class="mx__h">Certificata</div>
+
+        <div>A cosa serve</div><div>Capire dove si concentra il consumo</div>
+        <div>Far uscire un numero dall'azienda</div>
+        <div>Precisione</div><div>Errore di qualche punto percentuale</div>
+        <div>Conforme, dove la norma la richiede</div>
+        <div>Installazione</div><div>Sulla tubazione o sul cavo esistente</div>
+        <div>Su impianto, con intervento pianificato</div>
+        <div>Fermo impianto</div><div>Nessuno</div><div>Fermo pianificato, nelle tue finestre</div>
+        <div>Costo</div><div>Contenuto, scala bene su molti asset</div>
+        <div>Più alto, si giustifica dove il dato esce</div>
+        <div>Taratura</div><div>Verifica periodica, a carico tuo</div>
+        <div>Secondo lo schema della strumentazione</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 15 · OUTPUT E INTEGRAZIONI — chiara ============ -->
+<div class="slide lt" id="d24_output_integrazioni" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione D · integrazione</div>
+    <div class="band__q">In che forma esce il dato.</div>
+    <div class="band__a">Quello che vedi a schermo lo porti su un tavolo senza rielaborarlo a
+      mano. Verso il gestionale oggi la lettura è solo in ingresso.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Da definire nel solution design</div>
+      <div class="open__i">Formati di export tabellare<br>API verso sistemi terzi<br>
+        Eventuale scrittura verso l'ERP, da verificare sul progetto</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">24 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Output</span><span>Formato e destinatario</span></div>
+    <div class="field__b">
+      <div class="mx" style="grid-template-columns:1fr 130px 1fr 150px">
+        <div class="mx__h">Output</div><div class="mx__h">Formato</div>
+        <div class="mx__h">Destinatario</div><div class="mx__h">Stato</div>
+
+        <div>Report di periodo</div><div>PDF · ITA, ENG</div><div>Direzione, cliente finale</div>
+        <div><span class="st st--ok">Disponibile</span></div>
+        <div>Gantt di produzione</div><div>PDF</div><div>Programmazione</div>
+        <div><span class="st st--ok">Disponibile</span></div>
+        <div>Vista 3D d'impianto</div><div>Applicazione</div><div>Operations</div>
+        <div><span class="st st--ok">Disponibile</span></div>
+        <div>Dashboard per ruolo</div><div>Applicazione</div><div>Linea, uffici</div>
+        <div><span class="st st--ok">Disponibile</span></div>
+        <div>Export tabellare</div><div>Da definire</div><div>Controllo di gestione, BI</div>
+        <div><span class="st st--ver">Da verificare</span></div>
+        <div>API verso terzi</div><div>Da definire</div><div>BI, data lake</div>
+        <div><span class="st st--ver">Da verificare</span></div>
+        <div>Integrazione ERP</div><div>Da definire</div><div>IT</div>
+        <div><span class="st st--ver">Sul progetto</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==== 25 · CATALOGO SERVIZI — chiara ==== -->
+<div class="slide lt" id="d25_servizi" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione E · delivery</div>
+    <div class="band__q">Cosa si può attivare, su qualsiasi modulo.</div>
+    <div class="band__a">I servizi sono un livello orizzontale. Non sono Refyn e non ne sono un sinonimo: si attivano su Connect, su Insight e su Refyn.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Da definire</div>
+      <div class="open__i">Che cosa è compreso nel canone di ciascun modulo. Finché non è deciso, i servizi si presentano come attivabili, mai come inclusi.</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">25 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Servizi a valore aggiunto</span><span>Deliverable · frequenza · modello</span></div>
+    <div class="field__b" style="padding:22px 40px">
+      <div class="mx mx--tight" style="grid-template-columns:210px 1fr 150px 116px;font-size:13.5px">
+        <div class="mx__h">Servizio</div><div class="mx__h">Deliverable</div>
+        <div class="mx__h">Frequenza</div><div class="mx__h">Modello</div>
+        <div>Data Readiness Assessment</div><div>Mappa dati, gap, prerequisiti</div>
+        <div>Una tantum</div><div>Progetto</div>
+        <div>Setup &amp; Integration</div><div>Connessioni, mapping, validazione</div>
+        <div>Una tantum</div><div>Progetto</div>
+        <div>KPI &amp; Formula Design</div><div>KPI, formule, baseline, fattori</div>
+        <div>Una tantum, rivedibile</div><div>Progetto</div>
+        <div>Data Quality Review</div><div>Completezza, coerenza, anomalie di segnale</div>
+        <div>Mensile o trimestrale</div><div>Recurring</div>
+        <div>Performance Review</div><div>OEE, fermi, scarti, priorità</div>
+        <div>Mensile o trimestrale</div><div>Recurring</div>
+        <div>Energy Review</div><div>Consumi, fuori produzione, costo</div>
+        <div>Mensile o trimestrale</div><div>Recurring</div>
+        <div>Improvement Sprint</div><div>Analisi, piano, verifica</div>
+        <div>Periodico</div><div>Progetto</div>
+        <div>Executive Report</div><div>Sintesi direzionale e priorità</div>
+        <div>Mensile o trimestrale</div><div>Recurring</div>
+      </div>
+      <p class="bd" style="margin-top:12px;font-size:13px">Altri quattro servizi — Training
+        &amp; Adoption, Premium Support, Scale-up, Legacy Migration — nel Services Catalogue v5.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 19 · MILESTONE E TEMPI — chiara ============ -->
+<div class="slide lt" id="d26_milestone" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione E · delivery</div>
+    <div class="band__q">Dal primo segnale al go-live.</div>
+    <div class="band__a">I tempi dipendono da due cose sole: quanta sensoristica manca e quando si aprono le tue finestre di fermo. Il calendario reale si scrive in audit.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Da definire nel solution design</div>
+      <div class="open__i">Ore a carico del cliente per l'avvio<br>Calendario delle finestre di fermo</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">26 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Le cinque milestone</span><span>Da non confondere fra loro</span></div>
+    <div class="field__b" style="padding:40px">
+      <svg width="864" height="380" viewBox="0 0 864 380" role="img" aria-labelledby="d19t d19d">
+        <title id="d19t">Le cinque milestone del progetto</title>
+        <desc id="d19d">First signal, first usable data, pilot live, operational go-live e
+          scale-up sono cinque momenti distinti, con condizioni diverse.</desc>
+        <line x1="10" y1="30" x2="10" y2="330" stroke="rgba(10,10,10,.26)"/>
+        <g fill="rgba(10,10,10,.82)">
+          <circle cx="10" cy="30" r="8"/><circle cx="10" cy="105" r="8"/>
+          <circle cx="10" cy="180" r="8"/><circle cx="10" cy="255" r="8"/></g>
+        <circle cx="10" cy="330" r="8" fill="#E6E011"/>
+        <g font-family="Geist" font-size="20" fill="#0A0A0A">
+          <text x="44" y="24">First signal</text><text x="44" y="99">First usable data</text>
+          <text x="44" y="174">Pilot live</text><text x="44" y="249">Operational go-live</text>
+          <text x="44" y="324">Scale-up</text></g>
+        <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.64)">
+          <text x="44" y="50">Primo segnale acquisito da una macchina</text>
+          <text x="44" y="125">Primo dato contestualizzato e verificato con te</text>
+          <text x="44" y="200">Una linea con viste e KPI concordati</text>
+          <text x="44" y="275">Utenti formati, formule validate, supporto attivo</text>
+          <text x="44" y="350">Estensione ad altre linee o ad altri siti</text></g>
+      </svg>
+      <div class="hr" style="margin:22px 0 16px"></div>
+      <p class="bd" style="font-size:15px">Su una linea gia' strumentata il primo segnale puo'
+        arrivare in un paio di giorni. Il go-live operativo ha un altro calendario: le due cose
+        non vanno confuse in offerta.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 20 · RESPONSABILITA' — chiara ============ -->
+<div class="slide lt" id="d27_raci" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione E · delivery</div>
+    <div class="band__q">Chi fa cosa.</div>
+    <div class="band__a">La riga che genera piu' sorprese e' la seconda: i sensori li installa il tuo personale tecnico o una terza parte, non noi.</div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">27 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Matrice di responsabilita'</span><span>R esegue · A approva · C consultato</span></div>
+    <div class="field__b" style="padding:30px 40px">
+      <div class="mx" style="grid-template-columns:1fr 140px 140px 150px">
+        <div class="mx__h">Attivita'</div><div class="mx__h">D.Factory</div>
+        <div class="mx__h">Cliente</div><div class="mx__h">Terza parte</div>
+        <div>Accessi di rete e autorizzazioni</div><div>C</div><div>R</div><div>—</div>
+        <div>Installazione sensori e contatori</div><div>C</div><div>A</div><div>R</div>
+        <div>Tag mapping e connettori</div><div>R</div><div>C</div><div>—</div>
+        <div>Definizione e validazione KPI</div><div>R</div><div>A</div><div>—</div>
+        <div>Formazione degli utenti</div><div>R</div><div>C</div><div>—</div>
+        <div>Go-live operativo</div><div>R</div><div>A</div><div>—</div>
+        <div>Supporto in esercizio</div><div>R</div><div>C</div><div>—</div>
+      </div>
+      <p class="note" style="margin-top:14px">— non coinvolto</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 17 · CRITERI DI ACCETTAZIONE DEL PILOT — scura ============ -->
+<div class="slide dk" id="d28_criteri_pilot" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione E · delivery</div>
+    <div class="band__q">Quando il pilot si può dire riuscito.</div>
+    <div class="band__a">I criteri si concordano prima di iniziare, non alla fine. Se uno non
+      è soddisfatto, il pilot non passa alla fase successiva.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Perché qui non c'è un caso cliente</div>
+      <div class="open__i">Nessun nome o risultato viene pubblicato prima di essere autorizzato
+        dal cliente. Un caso inventato si riconosce alla seconda domanda.</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">28 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Criteri di accettazione</span><span>Sei condizioni verificabili</span></div>
+    <div class="field__b">
+      <div class="mx" style="grid-template-columns:1fr 300px">
+        <div class="mx__h">Condizione</div><div class="mx__h">Come si verifica</div>
+
+        <div>Ogni macchina del perimetro espone uno stato leggibile</div>
+        <div>Elenco PLC dell'audit</div>
+        <div>Gli stati letti corrispondono a quelli osservati in linea</div>
+        <div>Sessione a bordo linea</div>
+        <div>Il conteggio pezzi coincide con il tuo</div>
+        <div>Un turno completo</div>
+        <div>La formula OEE riproduce il valore che calcoli oggi</div>
+        <div>Un periodo storico noto</div>
+        <div>Le letture energetiche coincidono con i contatori</div>
+        <div>Il periodo di fatturazione</div>
+        <div>Chi userà le viste sa usarle</div>
+        <div>Formazione con verifica</div>
+      </div>
+      <p class="bd" style="margin-top:20px;font-size:14px">Le soglie di tolleranza si fissano
+        in audit, insieme al perimetro.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 22 · SUPPORTO IN ESERCIZIO — chiara ============ -->
+<div class="slide lt" id="d29_supporto" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione E · delivery</div>
+    <div class="band__q">Cosa succede dopo il go-live.</div>
+    <div class="band__a">Nessun livello di servizio si dichiara prima di averlo concordato: un SLA scritto a caso e' peggio che non averlo.</div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">29 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Supporto</span><span>Voce · stato · quando si chiude</span></div>
+    <div class="field__b" style="padding:30px 40px">
+      <div class="mx" style="grid-template-columns:1fr 220px 140px 150px">
+        <div class="mx__h">Voce</div><div class="mx__h">Stato oggi</div>
+        <div class="mx__h">Chi risponde</div><div class="mx__h">Si chiude in</div>
+        <div>Livelli di servizio</div><div>Da concordare</div><div>Commerciale</div><div>Contratto</div>
+        <div>Orari, severita' e canali</div><div>Da concordare</div><div>Commerciale</div><div>Contratto</div>
+        <div>Manutenzione software</div><div>Da concordare con l'IT</div><div>Congiunto</div><div>Solution design</div>
+        <div>Accesso remoto</div><div>Da concordare, disattivabile</div><div>IT cliente</div><div>Contratto</div>
+        <div>Change request</div><div>Modalita' in contratto</div><div>Congiunto</div><div>Contratto</div>
+        <div>Formazione di nuovi utenti</div><div>Su richiesta</div><div>D.Factory</div><div>Contratto</div>
+      </div>
+      <div class="hr" style="margin:26px 0 18px"></div>
+      <div class="lbl">Referente</div>
+      <div style="font-size:19px;margin-top:8px">Pablo Degl'Innocenti</div>
+      <div class="bd" style="font-size:14px">pablo.deglinnocenti@marchianisrl.com</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==== 30 · MIGRAZIONE LEGACY — chiara ==== -->
+<div class="slide lt" id="d30_migrazione" data-kind="dossier">
+  <div class="band">
+    <div class="band__sec">Sezione E · delivery</div>
+    <div class="band__q">Chi ha già MAPST 4.0 o MarEnergy.</div>
+    <div class="band__a">Il legacy resta attivo e supportato. La migrazione è volontaria, si valuta per impianto e non ha una scadenza imposta.</div>
+    <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Da verificare per progetto</div>
+      <div class="open__i">Preservazione dello storico<br>Mapping funzionale uno-a-uno<br>Proposta economica del passaggio</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">30 / 31</span></div>
+  </div>
+
+  <div class="field">
+    <div class="field__hd"><span>Migrazione volontaria</span><span>Nessuna dismissione prevista</span></div>
+    <div class="field__b" style="padding:26px 40px">
+      <div class="mx" style="grid-template-columns:200px 1fr 168px">
+        <div class="mx__h">Passo</div><div class="mx__h">Che cosa comporta</div><div class="mx__h">Stato</div>
+        <div>Mantenimento del legacy</div>
+        <div>MAPST 4.0 e MarEnergy restano in esercizio e supportati. Nessuna scadenza.</div>
+        <div><span class="st st--ok">Garantito</span></div>
+        <div>Assessment dell'installato</div>
+        <div>Rilievo di macchine, tag, contatori e viste in uso oggi.</div>
+        <div><span class="st st--opt">Servizio</span></div>
+        <div>Mapping funzionale</div>
+        <div>Corrispondenza fra le funzioni in uso e i moduli nuovi.</div>
+        <div><span class="st st--pd">Per progetto</span></div>
+        <div>Preservazione dello storico</div>
+        <div>Trasferimento dei dati pregressi nel nuovo impianto di lettura.</div>
+        <div><span class="st st--ver">Da verificare</span></div>
+        <div>Proposta economica</div>
+        <div>Condizioni del passaggio, senza aumento automatico sul legacy.</div>
+        <div><span class="st st--pd">Da definire</span></div>
+      </div>
+      <div class="hr" style="margin:20px 0 14px"></div>
+      <p class="bd" style="font-size:14px"><b>Quello che non facciamo:</b> nessuna dismissione
+        forzata, nessuna scadenza imposta, nessun aumento automatico di canone per chi resta
+        sul legacy.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 23 · CHECKLIST PER L'AUDIT — chiara ============ -->
+<div class="slide lt" id="d31_checklist" data-kind="dossier">
+  <div class="band band--slim">
+    <div class="band__sec">Sezione E · delivery</div>
+    <div class="band__q">Cosa portare in sala.</div>
+    <div class="band__a">Con questo materiale l'audit si chiude in una sessione. Senza, servono due giri.</div>
+    <div class="spacer"></div>
+    <div class="note">Documento gemello: sales deck, il percorso dall'audit
+      alla scala.</div>
+    <div class="spacer"></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">31 / 31</span></div>
+  </div>
+
+  <div class="field field--wide">
+    <div class="field__hd"><span>Checklist per l'audit</span><span>Documenti · decisioni · persone</span></div>
+    <div class="field__b" style="padding:30px 40px">
+      <div class="mx" style="grid-template-columns:1fr 1fr 150px">
+        <div class="mx__h">Documenti</div><div class="mx__h">Decisioni e persone</div>
+        <div class="mx__h">Chi lo porta</div>
+        <div>Elenco dei PLC per linea, con marca e modello</div>
+        <div>Referenti IT e OT che possono decidere</div><div>OT · Direzione</div>
+        <div>Schemi di rete OT e IT, anche parziali</div>
+        <div>Le formule OEE che usi oggi, se ne usi</div><div>IT · Produzione</div>
+        <div>Elenco dei contatori energia e posizione</div>
+        <div>Come conti i pezzi buoni</div><div>Energy · Produzione</div>
+        <div>Sensori gia' presenti a bordo linea</div>
+        <div>Requisiti di reportistica, se ce ne sono</div><div>Manutenzione</div>
+        <div>Turni e calendario di produzione</div>
+        <div>Modalita' di accesso al gestionale</div><div>Produzione · IT</div>
+        <div>Finestre di fermo disponibili nell'anno</div>
+        <div>Chi usera' le viste, per ruolo</div><div>Produzione</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
