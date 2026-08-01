@@ -16,7 +16,7 @@
 
   --d1:#FFFFFF; --d2:rgba(255,255,255,.72); --d3:rgba(255,255,255,.44);
   --d-line:rgba(255,255,255,.14); --d-rule:rgba(255,255,255,.30);
-  --l1:#0A0A0A; --l2:rgba(10,10,10,.62); --l3:rgba(10,10,10,.42);
+  --l1:#0A0A0A; --l2:rgba(10,10,10,.74); --l3:rgba(10,10,10,.56);
   --l-line:rgba(10,10,10,.12); --l-rule:rgba(10,10,10,.26);
 
   --ui:"Geist",-apple-system,BlinkMacSystemFont,sans-serif;
@@ -43,11 +43,11 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;
   text-transform:none;color:inherit}
 .dk .wm{color:var(--d1)} .lt .wm,.ac .wm{color:var(--l1)}
 .wm i{color:var(--acid);font-style:normal}
+.wm--txt{letter-spacing:-.02em}
 .ac .wm i{color:var(--paper)}
 
 /* ---------- tipografia ---------- */
-.kicker{font-family:var(--mono);font-size:13px;letter-spacing:.2em;
-  text-transform:uppercase;font-weight:500}
+.kicker{font-size:15px;letter-spacing:.06em;font-weight:500}
 .dk .kicker{color:var(--acid)} .lt .kicker{color:var(--l3)} .ac .kicker{color:rgba(10,10,10,.55)}
 h1{font-size:64px;line-height:1.02;letter-spacing:-.038em;font-weight:600}
 h2{font-size:52px;line-height:1.06;letter-spacing:-.034em;font-weight:600}
@@ -89,14 +89,12 @@ h2.sm{font-size:44px}
 /* ---------- colonna dell'offerta: tre livelli, peso identico ---------- */
 .lv{flex:1;display:flex;flex-direction:column}
 .lv__n{font-size:30px;letter-spacing:-.03em;font-weight:600}
-.lv__v{font-family:var(--mono);font-size:14px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--l3);margin-top:10px}
+.lv__v{font-size:15px;letter-spacing:.04em;color:var(--l2);margin-top:10px}
 .lv__i{font-size:17px;line-height:1.85;margin-top:20px}
 .lt .lv__i{color:var(--l2)}
 /* l'unica nota di stato ammessa in tutto il documento */
-.dev{display:inline-block;background:var(--acid);color:var(--ink);
-  font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;
-  padding:5px 11px;margin-top:14px;align-self:flex-start}
+.dev{display:inline-flex;align-items:center;gap:9px;font-size:15px;color:var(--l2)}
+.dev::before{content:"";width:10px;height:10px;background:var(--acid);flex:none}
 
 /* ---------- stampa ---------- */
 @media print{

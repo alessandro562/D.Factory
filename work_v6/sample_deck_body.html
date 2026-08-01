@@ -1,45 +1,62 @@
 <div class="doc">
 
-<!-- ===== CAMPIONE 1 · SALES SLIDE 6 · L'OFFERTA ===== -->
+<!-- =====================================================================
+     CAMPIONE 1 · SALES · L'OFFERTA
+     Visual: architettura cumulativa per contenimento. Connect sta dentro
+     Insight, che sta dentro Refyn. Le uniche linee sono CONFINI (i tre
+     riquadri annidati) e SEPARATORI (le due fasce in basso). Nessun
+     connettore, quindi nessuna freccia e nessuna diagonale.
+     ===================================================================== -->
 <div class="slide lt" id="s06_offerta">
-  <div class="z" style="top:60px"><div class="kicker">L'offerta</div></div>
-  <div class="z" style="top:112px;width:900px">
-    <h2 class="sm">Tre livelli.<br>La stessa base di produzione ed energia.</h2>
+  <div class="z" style="top:56px"><div class="kicker">L'offerta</div></div>
+  <div class="z" style="top:104px;width:900px">
+    <h2 class="sm">Tre livelli.<br>Ognuno contiene il precedente.</h2>
   </div>
 
-  <!-- tre colonne di peso identico: nessun gradino, nessuna gerarchia visiva -->
-  <div class="z" style="top:280px">
-    <div class="hr" style="background:var(--l-rule);height:2px"></div>
-    <div class="cols" style="gap:0;margin-top:26px">
+  <svg width="1152" height="208" viewBox="0 0 1152 208"
+       style="position:absolute;left:64px;top:272px" role="img" aria-labelledby="o1t o1d">
+    <title id="o1t">I tre livelli dell'offerta, annidati per contenimento</title>
+    <desc id="o1d">Connect e' il riquadro interno: supervisione, OEE e consumi, baseline.
+      Insight lo contiene e aggiunge cause, correlazioni, costo e CO2. Refyn contiene entrambi
+      e aggiunge priorita', azioni e verifica dei benefici.</desc>
 
-      <div class="lv" style="padding-right:44px;border-right:1px solid var(--l-line)">
-        <div class="lv__n">Connect</div>
-        <div class="lv__v">Vede</div>
-        <div class="lv__i">Baseline<br>OEE e consumi<br>Supervisione</div>
-      </div>
+    <!-- CONFINE esterno · Refyn -->
+    <rect x="0" y="0" width="1152" height="208" fill="#F3F4F0" stroke="#0A0A0A" stroke-width="1.6"/>
+    <text x="24" y="34" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A">Refyn</text>
+    <rect x="104" y="20" width="10" height="10" fill="#E6E011"/>
+    <text x="124" y="34" font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">in sviluppo</text>
+    <text x="1128" y="34" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)"
+          text-anchor="end">aggiunge priorità, azioni, verifica dei benefici</text>
 
-      <div class="lv" style="padding:0 44px;border-right:1px solid var(--l-line)">
-        <div class="lv__n">Insight</div>
-        <div class="lv__v">Spiega</div>
-        <div class="lv__i">Cause<br>Correlazioni<br>Costo e CO₂</div>
-      </div>
+    <!-- CONFINE intermedio · Insight -->
+    <rect x="28" y="48" width="1096" height="132" fill="rgba(10,10,10,.09)" stroke="#0A0A0A" stroke-width="1.6"/>
+    <text x="52" y="82" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A">Insight</text>
+    <text x="1100" y="82" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)"
+          text-anchor="end">aggiunge cause, correlazioni, costo e CO₂</text>
 
-      <div class="lv" style="padding-left:44px">
-        <div class="lv__n">Refyn</div>
-        <div class="lv__v">Migliora</div>
-        <div class="lv__i">Priorità<br>Azioni<br>Verifica dei benefici</div>
-        <div class="dev">In sviluppo</div>
-      </div>
+    <!-- CONFINE interno · Connect -->
+    <rect x="56" y="96" width="1040" height="68" fill="#0A0A0A"/>
+    <text x="80" y="137" font-family="Geist" font-size="24" font-weight="600" fill="#fff">Connect</text>
+    <text x="1072" y="137" font-family="Geist" font-size="16" fill="rgba(255,255,255,.78)"
+          text-anchor="end">supervisione, OEE e consumi, baseline</text>
+  </svg>
+
+  <!-- SEPARATORI: le due fasce comuni, a tutta larghezza -->
+  <div class="z" style="top:524px">
+    <div class="hr"></div>
+    <div style="display:flex;gap:32px;padding-top:16px">
+      <div style="width:196px;font-size:15px;font-weight:500;color:var(--l2)">In ogni livello</div>
+      <div style="font-size:17px">Produzione, OEE, energia, utility e storico</div>
+    </div>
+    <div class="hr" style="margin-top:16px"></div>
+    <div style="display:flex;gap:32px;padding-top:16px">
+      <div style="width:196px;font-size:15px;font-weight:500;color:var(--l2)">Su ogni livello</div>
+      <div style="font-size:17px">Servizi opzionali di assessment, integrazione, configurazione KPI,
+        review, formazione e supporto</div>
     </div>
   </div>
 
-  <div class="z" style="bottom:92px">
-    <div class="hr"></div>
-    <p style="font-size:17px;margin-top:18px;color:var(--l2)">Insight comprende Connect.
-      Refyn comprende Connect e Insight. Servizi opzionali attivabili su tutti i livelli.</p>
-  </div>
-
-  <div class="rail"><span class="wm">d<i>.</i>factory</span><span>06 / 09</span></div>
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>06 / 09</span></div>
 </div>
 
 </div>

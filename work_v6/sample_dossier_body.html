@@ -1,121 +1,195 @@
 <div class="doc">
 
-<!-- ===== CAMPIONE 2 · DOSSIER · ARCHITETTURA TECNICA ===== -->
+<!-- =====================================================================
+     CAMPIONE 2 · DOSSIER · ARCHITETTURA TECNICA
+     Quattro livelli, letti dall'alto in basso: sorgenti, acquisizione,
+     deployment, utilizzo.
+     Grammatica delle linee:
+       CONNETTORE  linea ortogonale, parte dal bordo di un box, arriva al
+                   bordo di un box, ha una freccia.
+       CONFINE     il riquadro dell'ambiente server.
+       SEPARATORE  la riga sotto l'header e quella sopra la legenda.
+     Il bus raccoglie le tre sorgenti OT e scende una volta sola.
+     Tratteggio riservato ai flussi opzionali, dichiarato in legenda.
+     ===================================================================== -->
 <div class="slide lt" id="d03_architettura" data-kind="dossier">
-  <div class="hd"><span>Architettura</span><span>03 / 17</span></div>
-  <div class="tt">Come i dati arrivano dalla linea alle persone che decidono.</div>
+  <div class="hd"><b>Architettura tecnica</b><span class="pg">03 / 17</span></div>
+  <div class="tt tt--sm">Dalla linea alle persone che decidono, in quattro livelli.</div>
 
-  <svg class="body" width="1152" height="392" viewBox="0 0 1152 392" style="top:196px"
+  <svg class="body" width="1152" height="452" viewBox="0 0 1152 452" style="top:180px"
        role="img" aria-labelledby="a3t a3d">
-    <title id="a3t">Architettura tecnica: dalla rete di linea agli utenti</title>
-    <desc id="a3d">PLC, dispositivi, sensori e contatori sulla rete di linea alimentano i
-      connettori. Da lì i dati raggiungono l'applicazione e il database sul server, che
-      servono dashboard, report ed export agli utenti. L'ERP resta opzionale e in lettura.</desc>
+    <title id="a3t">Architettura tecnica in quattro livelli</title>
+    <desc id="a3d">Le sorgenti di linea confluiscono su un bus comune che alimenta il livello
+      di acquisizione. Da lì un flusso unico raggiunge l'ambiente server, dove applicazione e
+      database sono distinti. Dall'applicazione i dati raggiungono dashboard, report ed
+      export. Il gestionale ERP è un'integrazione opzionale in lettura.</desc>
 
-    <!-- tre fasce, lette da sinistra a destra -->
-    <g font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.44)" letter-spacing="1.4">
-      <text x="0" y="12">RETE DI LINEA</text>
-      <text x="408" y="12">CONNETTORI</text>
-      <text x="726" y="12">SERVER · APPLICAZIONE</text>
-    </g>
-    <line x1="0" y1="26" x2="352" y2="26" stroke="rgba(10,10,10,.28)"/>
-    <line x1="408" y1="26" x2="670" y2="26" stroke="rgba(10,10,10,.28)"/>
-    <line x1="726" y1="26" x2="1152" y2="26" stroke="rgba(10,10,10,.28)"/>
-
-    <g font-family="Geist" font-size="17" fill="#0A0A0A">
-      <text x="0" y="74">PLC e dispositivi</text>
-      <text x="0" y="122">Sensori di conta</text>
-      <text x="0" y="170">Contatori di energia e utility</text>
-      <text x="0" y="218">Gestionale</text>
-    </g>
-    <g stroke="rgba(10,10,10,.28)" stroke-width="1.4" fill="none">
-      <path d="M290 68 L408 122"/><path d="M290 116 L408 128"/>
-      <path d="M290 164 L408 134"/><path d="M290 212 L408 140"/>
+    <!-- etichette di livello, colonna sinistra -->
+    <g font-family="Geist" font-size="14" font-weight="500" fill="rgba(10,10,10,.56)">
+      <text x="0" y="40">01 · Sorgenti</text>
+      <text x="0" y="164">02 · Acquisizione</text>
+      <text x="0" y="256">03 · Deployment</text>
+      <text x="0" y="398">04 · Utilizzo</text>
     </g>
 
-    <rect x="408" y="96" width="262" height="72" fill="none" stroke="#0A0A0A" stroke-width="1.6"/>
-    <text x="430" y="128" font-family="Geist" font-size="18" fill="#0A0A0A">Connettori</text>
-    <text x="430" y="152" font-family="Geist" font-size="18" fill="#0A0A0A">e mappatura dei segnali</text>
-    <text x="408" y="196" font-family="Geist" font-size="15" fill="rgba(10,10,10,.66)">Lettura, senza scrittura verso le macchine</text>
-
-    <path d="M670 132 L720 132" stroke="#0A0A0A" stroke-width="1.6"/>
-    <polygon points="726,132 716,127 716,137" fill="#0A0A0A"/>
-
-    <rect x="726" y="88" width="426" height="88" fill="#0A0A0A"/>
-    <text x="750" y="124" font-family="Geist" font-size="19" fill="#fff">Applicazione e database</text>
-    <text x="750" y="152" font-family="Geist" font-size="16" fill="rgba(255,255,255,.74)">Sul server del progetto</text>
-    <circle cx="1122" cy="114" r="8" fill="#E6E011"/>
-
-    <!-- output verso gli utenti -->
-    <g stroke="rgba(10,10,10,.28)" stroke-width="1.4">
-      <path d="M810 176 L810 226"/><path d="M939 176 L939 226"/><path d="M1068 176 L1068 226"/>
+    <!-- ---------- 01 sorgenti ---------- -->
+    <g fill="none" stroke="#0A0A0A" stroke-width="1.5">
+      <rect x="150" y="18" width="196" height="46"/>
+      <rect x="370" y="18" width="196" height="46"/>
+      <rect x="590" y="18" width="240" height="46"/>
     </g>
-    <g font-family="Geist" font-size="17" fill="#0A0A0A" text-anchor="middle">
-      <text x="810" y="250">Dashboard</text><text x="939" y="250">Report</text><text x="1068" y="250">Export</text>
+    <rect x="912" y="18" width="240" height="46" fill="none" stroke="rgba(10,10,10,.56)"
+          stroke-width="1.5"/>
+    <g font-family="Geist" font-size="16" fill="#0A0A0A" text-anchor="middle">
+      <text x="248" y="47">PLC e dispositivi</text>
+      <text x="468" y="47">Sensori di conta</text>
+      <text x="710" y="47">Contatori energia e utility</text>
     </g>
-    <text x="939" y="286" font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.44)" letter-spacing="1.3" text-anchor="middle">UTENTI DI LINEA E DI UFFICIO</text>
+    <text x="1032" y="47" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)"
+          text-anchor="middle">Gestionale ERP</text>
 
-    <!-- ERP: opzionale, tratteggiato -->
-    <rect x="408" y="248" width="262" height="60" fill="none" stroke="rgba(10,10,10,.44)"
-          stroke-width="1.6" stroke-dasharray="5 4"/>
-    <text x="430" y="286" font-family="Geist" font-size="17" fill="rgba(10,10,10,.66)">ERP · opzionale</text>
-    <path d="M670 278 L720 278 L720 176" stroke="rgba(10,10,10,.44)" stroke-width="1.4"
-          stroke-dasharray="5 4" fill="none"/>
-    <text x="408" y="334" font-family="Geist" font-size="15" fill="rgba(10,10,10,.66)">Possibile integrazione ERP, previa verifica</text>
+    <!-- CONNETTORI: dal bordo inferiore di ogni sorgente al bus -->
+    <g stroke="#0A0A0A" stroke-width="1.5">
+      <path d="M248 64 L248 100"/><path d="M468 64 L468 100"/><path d="M710 64 L710 100"/>
+      <path d="M248 100 L710 100"/>
+    </g>
+    <text x="730" y="96" font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">bus di linea</text>
 
-    <line x1="0" y1="360" x2="1152" y2="360" stroke="rgba(10,10,10,.13)"/>
-    <text x="0" y="386" font-family="Geist" font-size="15" fill="rgba(10,10,10,.66)">Compatibilità di protocolli e dispositivi verificata in audit sull'impianto reale.</text>
+    <!-- CONNETTORE: dal bus al box di acquisizione, una discesa sola -->
+    <path d="M400 100 L400 134" stroke="#0A0A0A" stroke-width="1.5"/>
+    <polygon points="400,140 394,130 406,130" fill="#0A0A0A"/>
+
+    <!-- ---------- 02 acquisizione ---------- -->
+    <rect x="280" y="140" width="240" height="56" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+    <text x="400" y="166" font-family="Geist" font-size="16" fill="#0A0A0A" text-anchor="middle">Connettori e mappatura</text>
+    <text x="400" y="186" font-family="Geist" font-size="16" fill="#0A0A0A" text-anchor="middle">dei segnali</text>
+    <text x="548" y="196" font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">lettura, senza scrittura verso le macchine</text>
+
+    <!-- CONNETTORE opzionale: ERP verso l'acquisizione, ortogonale -->
+    <path d="M1032 64 L1032 168 L526 168" fill="none" stroke="rgba(10,10,10,.56)"
+          stroke-width="1.5" stroke-dasharray="5 4"/>
+    <polygon points="520,168 530,162 530,174" fill="rgba(10,10,10,.56)"/>
+    <text x="1020" y="158" font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)"
+          text-anchor="end">integrazione con il gestionale, opzionale</text>
+
+    <!-- CONNETTORE: acquisizione verso ambiente server -->
+    <path d="M400 196 L400 224" stroke="#0A0A0A" stroke-width="1.5"/>
+    <polygon points="400,230 394,220 406,220" fill="#0A0A0A"/>
+
+    <!-- ---------- 03 deployment · CONFINE dell'ambiente ---------- -->
+    <rect x="150" y="230" width="700" height="132" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+    <text x="166" y="254" font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">Ambiente e server del progetto</text>
+    <rect x="174" y="268" width="292" height="72" fill="#0A0A0A"/>
+    <text x="320" y="311" font-family="Geist" font-size="17" fill="#fff" text-anchor="middle">Applicazione</text>
+    <rect x="534" y="268" width="292" height="72" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+    <text x="680" y="311" font-family="Geist" font-size="17" fill="#0A0A0A" text-anchor="middle">Database</text>
+    <!-- CONNETTORE bidirezionale fra applicazione e database -->
+    <path d="M472 304 L528 304" stroke="#0A0A0A" stroke-width="1.5"/>
+    <polygon points="466,304 476,298 476,310" fill="#0A0A0A"/>
+    <polygon points="534,304 524,298 524,310" fill="#0A0A0A"/>
+
+    <!-- CONNETTORE: dall'applicazione al bus di distribuzione -->
+    <path d="M320 340 L320 380 L780 380" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+    <g stroke="#0A0A0A" stroke-width="1.5">
+      <path d="M320 380 L320 404"/><path d="M550 380 L550 404"/><path d="M780 380 L780 404"/>
+    </g>
+    <g fill="#0A0A0A">
+      <polygon points="320,410 314,400 326,400"/><polygon points="550,410 544,400 556,400"/>
+      <polygon points="780,410 774,400 786,400"/>
+    </g>
+
+    <!-- ---------- 04 utilizzo ---------- -->
+    <g fill="none" stroke="#0A0A0A" stroke-width="1.5">
+      <rect x="222" y="410" width="196" height="42"/>
+      <rect x="452" y="410" width="196" height="42"/>
+      <rect x="682" y="410" width="196" height="42"/>
+    </g>
+    <g font-family="Geist" font-size="16" fill="#0A0A0A" text-anchor="middle">
+      <text x="320" y="437">Dashboard</text><text x="550" y="437">Report</text>
+      <text x="780" y="437">Export</text>
+    </g>
+
+    <!-- legenda del tratteggio -->
+    <g transform="translate(912,404)">
+      <path d="M0 8 L34 8" stroke="#0A0A0A" stroke-width="1.5"/>
+      <text x="44" y="13" font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">flusso previsto</text>
+      <path d="M0 34 L34 34" stroke="rgba(10,10,10,.56)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="44" y="39" font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">flusso opzionale</text>
+    </g>
   </svg>
 
-  <div class="ft"><span class="wm">d<i>.</i>factory</span><span>Dossier tecnico</span></div>
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span>
+    <span>Compatibilità di protocolli e dispositivi verificata in audit · possibile integrazione ERP, previa verifica</span></div>
 </div>
 
-<!-- ===== CAMPIONE 3 · DOSSIER · REFYN ===== -->
+<!-- =====================================================================
+     CAMPIONE 3 · DOSSIER · REFYN
+     Visual: ciclo operativo. Tre stati, tre connettori in avanti e un
+     connettore di ritorno che chiude il ciclo. Tutte le linee sono
+     CONNETTORI ortogonali con direzione dichiarata.
+     ===================================================================== -->
 <div class="slide lt" id="d07_refyn" data-kind="dossier">
-  <div class="hd"><span>Refyn</span><span>07 / 17</span></div>
-  <div class="tt">Dalle analisi a un processo di miglioramento governato.</div>
-  <div class="body" style="top:200px">
+  <div class="hd"><b>Refyn</b><span class="pg">07 / 17</span></div>
+  <div class="tt tt--sm">Un ciclo che si chiude: priorità, azioni, verifica.</div>
+  <div class="body" style="top:170px">
     <span class="dev">Modulo avanzato in sviluppo</span>
   </div>
 
-  <div class="body" style="top:262px">
-    <div class="hr" style="background:var(--l-rule);height:2px"></div>
-    <div class="cols" style="gap:0;margin-top:26px">
+  <svg class="body" width="1152" height="300" viewBox="0 0 1152 300" style="top:224px"
+       role="img" aria-labelledby="r7t r7d">
+    <title id="r7t">Il ciclo operativo di Refyn</title>
+    <desc id="r7d">Le priorità generano azioni, le azioni vengono verificate contro la
+      baseline e il beneficio verificato aggiorna le priorità del periodo successivo.</desc>
 
-      <div class="col" style="padding-right:44px;border-right:1px solid var(--l-line)">
-        <div style="font-family:var(--mono);font-size:13px;letter-spacing:.14em;
-             text-transform:uppercase;color:var(--l3)">01</div>
-        <div style="font-size:26px;letter-spacing:-.025em;font-weight:600;margin-top:12px">Priorità</div>
-        <p class="bd" style="margin-top:14px">Le opportunità rilevate vengono ordinate per
-          impatto: quanta capacità si recupera, quanta energia si evita, quanto vale.</p>
-      </div>
+    <!-- CONNETTORE di ritorno: chiude il ciclo, passa sopra i tre stati -->
+    <path d="M1012 74 L1012 20 L140 20 L140 68" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+    <polygon points="140,74 134,64 146,64" fill="#0A0A0A"/>
+    <text x="576" y="14" font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)"
+          text-anchor="middle">il beneficio verificato aggiorna le priorità del periodo successivo</text>
 
-      <div class="col" style="padding:0 44px;border-right:1px solid var(--l-line)">
-        <div style="font-family:var(--mono);font-size:13px;letter-spacing:.14em;
-             text-transform:uppercase;color:var(--l3)">02</div>
-        <div style="font-size:26px;letter-spacing:-.025em;font-weight:600;margin-top:12px">Azioni</div>
-        <p class="bd" style="margin-top:14px">Ogni priorità diventa un'attività con
-          responsabile, linea o asset, target e scadenza. Lo stato resta visibile.</p>
-      </div>
+    <!-- i tre stati -->
+    <rect x="0" y="74" width="280" height="76" fill="#0A0A0A"/>
+    <text x="140" y="121" font-family="Geist" font-size="22" font-weight="600" fill="#fff" text-anchor="middle">Priorità</text>
+    <rect x="436" y="74" width="280" height="76" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+    <text x="576" y="121" font-family="Geist" font-size="22" font-weight="600" fill="#0A0A0A" text-anchor="middle">Azioni</text>
+    <rect x="872" y="74" width="280" height="76" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+    <text x="1012" y="121" font-family="Geist" font-size="22" font-weight="600" fill="#0A0A0A" text-anchor="middle">Verifica</text>
 
-      <div class="col" style="padding-left:44px">
-        <div style="font-family:var(--mono);font-size:13px;letter-spacing:.14em;
-             text-transform:uppercase;color:var(--l3)">03</div>
-        <div style="font-size:26px;letter-spacing:-.025em;font-weight:600;margin-top:12px">Risultati</div>
-        <p class="bd" style="margin-top:14px">Il beneficio si verifica contro la baseline
-          precedente, sullo stesso perimetro e su un periodo dichiarato.</p>
-      </div>
-    </div>
-  </div>
+    <!-- CONNETTORI in avanti -->
+    <path d="M280 112 L424 112" stroke="#0A0A0A" stroke-width="1.5"/>
+    <polygon points="430,112 420,106 420,118" fill="#0A0A0A"/>
+    <path d="M716 112 L860 112" stroke="#0A0A0A" stroke-width="1.5"/>
+    <polygon points="866,112 856,106 856,118" fill="#0A0A0A"/>
 
-  <div class="body" style="bottom:88px">
+    <!-- il contenuto di ogni stato -->
+    <g font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">
+      <text x="0" y="200">Impatto potenziale</text>
+      <text x="0" y="228">Energia potenzialmente evitabile</text>
+      <text x="0" y="256">Valore stimato</text>
+
+      <text x="436" y="200">Responsabile, linea o asset</text>
+      <text x="436" y="228">Baseline e target</text>
+      <text x="436" y="256">Scadenza e stato</text>
+
+      <text x="872" y="200">Beneficio verificato</text>
+      <text x="872" y="228">Confronto con la baseline</text>
+      <text x="872" y="256">Periodo di osservazione</text>
+    </g>
+    <!-- SEPARATORI sotto ogni stato -->
+    <g stroke="rgba(10,10,10,.13)" stroke-width="1">
+      <path d="M0 168 L280 168"/><path d="M436 168 L716 168"/><path d="M872 168 L1152 168"/>
+    </g>
+  </svg>
+
+  <div class="body" style="top:556px">
     <div class="hr"></div>
-    <p class="bd" style="margin-top:16px;max-width:900px">Senza la terza capacità le prime due
-      restano un'opinione: è la verifica del risultato che distingue un piano di miglioramento
-      da un elenco di buone intenzioni.</p>
+    <div class="bd" style="padding-top:16px;max-width:880px">Se la verifica non conferma il beneficio,
+      l'azione torna in lista con i dati del periodo osservato: il ciclo successivo riparte da una
+      priorità aggiornata, non da una stima.</div>
   </div>
 
-  <div class="ft"><span class="wm">d<i>.</i>factory</span><span>Dossier tecnico</span></div>
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span>
+    <span>Rappresentazione del funzionamento previsto · il modulo non è ancora disponibile</span></div>
 </div>
 
 </div>

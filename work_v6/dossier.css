@@ -15,7 +15,7 @@
   --acid:#E6E011;
   --d1:#FFFFFF; --d2:rgba(255,255,255,.74); --d3:rgba(255,255,255,.46);
   --d-line:rgba(255,255,255,.15); --d-rule:rgba(255,255,255,.32);
-  --l1:#0A0A0A; --l2:rgba(10,10,10,.66); --l3:rgba(10,10,10,.44);
+  --l1:#0A0A0A; --l2:rgba(10,10,10,.74); --l3:rgba(10,10,10,.56);
   --l-line:rgba(10,10,10,.13); --l-rule:rgba(10,10,10,.28);
   --ui:"Geist",-apple-system,sans-serif; --mono:"Geist Mono",Menlo,monospace;
   --m:64px;
@@ -31,8 +31,10 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
 .hd{position:absolute;left:var(--m);right:var(--m);top:44px;
   display:flex;justify-content:space-between;align-items:baseline;
   padding-bottom:14px;border-bottom:1px solid var(--l-line);
-  font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
-.lt .hd{color:var(--l3)} .dk .hd{color:var(--d3);border-bottom-color:var(--d-line)}
+  font-size:14px;letter-spacing:.06em}
+.hd b{font-weight:500}
+.hd .pg{font-family:var(--mono);font-size:13px;letter-spacing:.1em}
+.lt .hd{color:var(--l2)} .dk .hd{color:var(--d3);border-bottom-color:var(--d-line)}
 
 /* ---------- titolo di pagina ---------- */
 .tt{position:absolute;left:var(--m);right:var(--m);top:104px;
@@ -62,7 +64,7 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
 .field{position:absolute;left:300px;top:0;width:980px;height:720px}
 
 /* ---------- tipografia ---------- */
-.lbl{font-family:var(--mono);font-size:12.5px;letter-spacing:.13em;text-transform:uppercase}
+.lbl{font-size:14px;letter-spacing:.06em;font-weight:500}
 .lt .lbl{color:var(--l3)} .dk .lbl{color:var(--d3)}
 .bd{font-size:15px;line-height:1.6} .lt .bd{color:var(--l2)} .dk .bd{color:var(--d2)}
 .note{font-size:13px;line-height:1.5} .lt .note{color:var(--l3)} .dk .note{color:var(--d3)}
@@ -74,8 +76,7 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
 .tb{display:grid;width:100%;font-size:15px;line-height:1.5}
 .tb>div{padding:14px 18px 14px 0;border-bottom:1px solid var(--l-line)}
 .dk .tb>div{border-bottom-color:var(--d-line)}
-.tb__h{font-family:var(--mono);font-size:12.5px;letter-spacing:.13em;
-  text-transform:uppercase;padding-bottom:10px!important;
+.tb__h{font-size:14px;letter-spacing:.06em;font-weight:500;padding-bottom:10px!important;
   border-bottom:1px solid var(--l-rule)!important}
 .lt .tb__h{color:var(--l3)} .dk .tb__h{color:var(--d3);border-bottom-color:var(--d-rule)!important}
 
@@ -86,9 +87,8 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
 .co__t{font-size:15px;line-height:1.5} .lt .co__t{color:var(--l2)} .dk .co__t{color:var(--d2)}
 
 /* ---------- l'unica nota di stato ammessa ---------- */
-.dev{display:inline-block;background:var(--acid);color:var(--ink);
-  font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;
-  padding:5px 11px}
+.dev{display:inline-flex;align-items:center;gap:9px;font-size:14px;color:var(--l2)}
+.dev::before{content:"";width:10px;height:10px;background:var(--acid);flex:none}
 
 .hr{height:1px;background:var(--l-line)} .dk .hr{background:var(--d-line)}
 .cols{display:flex;gap:44px} .col{flex:1}
