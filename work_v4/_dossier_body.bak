@@ -24,7 +24,7 @@
       <div style="padding-right:24px">Destinatari</div><div>IT, OT, automazione, engineering, manutenzione, energy management</div>
       <div style="padding-right:24px">Perimetro</div><div>Una linea di confezionamento F&amp;B, estendibile allo stabilimento</div>
       <div style="padding-right:24px">Owner tecnico</div><div>D Factory S.r.l. · Collecchio (PR)</div>
-      <div style="padding-right:24px">Documento gemello</div><div>Sales deck: perché adesso, quale primo passo · 10 slide</div>
+      <div style="padding-right:24px">Documento gemello</div><div>Sales deck: perché adesso, quale primo passo</div>
     </div>
   </div>
 
@@ -34,14 +34,14 @@
       <a href="#d02_architettura_prodotto" style="flex:1;text-decoration:none">
         <div class="lbl">Sezione 1 · pag. 02</div>
         <div style="font-size:19px;margin-top:8px">Prodotto e architettura</div></a>
-      <a href="#d06_supervisione" style="flex:1;text-decoration:none">
-        <div class="lbl">Sezione 2 · pag. 06</div>
+      <a href="#d05_supervisione" style="flex:1;text-decoration:none">
+        <div class="lbl">Sezione 2 · pag. 05</div>
         <div style="font-size:19px;margin-top:8px">Funzioni</div></a>
-      <a href="#d12_metodo_misura" style="flex:1;text-decoration:none">
-        <div class="lbl">Sezione 3 · pag. 12</div>
+      <a href="#d11_metodo_misura" style="flex:1;text-decoration:none">
+        <div class="lbl">Sezione 3 · pag. 11</div>
         <div style="font-size:19px;margin-top:8px">Integrazione e metodo</div></a>
-      <a href="#d19_milestone" style="flex:1;text-decoration:none">
-        <div class="lbl">Sezione 4 · pag. 19</div>
+      <a href="#d16_delivery_raci" style="flex:1;text-decoration:none">
+        <div class="lbl">Sezione 4 · pag. 16</div>
         <div style="font-size:19px;margin-top:8px">Delivery e supporto</div></a>
     </div>
   </div>
@@ -49,7 +49,7 @@
   <div style="position:absolute;left:64px;right:64px;bottom:36px;display:flex;
               justify-content:space-between;align-items:baseline">
     <span class="wm">d<i>.</i>factory</span>
-    <span class="pg">01 / 23 · D Factory S.r.l. · gruppo Clevertech</span></div>
+    <span class="pg">01 / 18 · D Factory S.r.l. · gruppo Clevertech</span></div>
 </div>
 
 <!-- ============ 02 · ARCHITETTURA DI PRODOTTO — chiara ============ -->
@@ -66,7 +66,7 @@
         Questa pagina descrive la nomenclatura d'uso, non una gerarchia societaria.</div>
     </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">02 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">02 / 18</span></div>
   </div>
 
   <div class="field">
@@ -112,7 +112,7 @@
       <div class="open__i">Protocolli per modello e versione<br>Porte e flussi di rete</div>
     </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">03 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">03 / 18</span></div>
   </div>
 
   <div class="field">
@@ -169,100 +169,9 @@
   </div>
 </div>
 
-<!-- ============ 04 · PUNTI DI ACQUISIZIONE — chiara ============ -->
-<div class="slide lt" id="d04_acquisizione" data-kind="dossier">
-  <div class="band">
-    <div class="band__sec">Sezione 1 · prodotto</div>
-    <div class="band__q">Dove il dato viene preso, fisicamente.</div>
-    <div class="band__a">Nessun hardware D.Factory entra a bordo linea. Si legge da quello che il tuo impianto gia' espone, e si aggiunge misura solo dove non c'e'.</div>
-    <div class="spacer"></div>
-    <div class="open">
-      <div class="open__l">Da verificare in audit</div>
-      <div class="open__i">Quali tag ogni PLC espone davvero<br>Copertura dei contatori per asset<br>Punti dove serve aggiungere misura</div>
-    </div>
-    <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">04 / 23</span></div>
-  </div>
-
-  <div class="field">
-    <div class="field__hd"><span>Linea di confezionamento</span><span>Punti di prelievo del dato</span></div>
-    <svg width="864" height="576" viewBox="0 0 864 576" style="margin:26px 40px"
-         role="img" aria-labelledby="d4t d4d">
-      <title id="d4t">Punti di acquisizione del dato su una linea di confezionamento</title>
-      <desc id="d4d">Su ogni macchina il dato di stato arriva dal PLC via Ethernet. I pezzi
-        arrivano dai sensori di conta gia' presenti. L'energia arriva dai contatori di quadro,
-        dove esistono, o da pinze amperometriche aggiunte in audit.</desc>
-
-      <!-- silhouette di linea: cinque macchine e i polmoni fra una e l'altra -->
-      <g fill="none" stroke="#0A0A0A" stroke-width="1.8">
-        <rect x="0" y="150" width="122" height="96"/><rect x="180" y="150" width="122" height="96"/>
-        <rect x="360" y="150" width="122" height="96"/><rect x="540" y="150" width="122" height="96"/>
-        <rect x="720" y="150" width="122" height="96"/>
-      </g>
-      <g font-family="Geist" font-size="15" fill="#0A0A0A" text-anchor="middle">
-        <text x="61" y="204">Filler</text><text x="241" y="204">Capper</text>
-        <text x="421" y="204">Labeler</text><text x="601" y="204">Case packer</text>
-        <text x="781" y="204">Palletizer</text>
-      </g>
-      <!-- polmoni: il nastro fra due macchine -->
-      <g stroke="rgba(10,10,10,.42)" stroke-width="1.4" stroke-dasharray="4 4">
-        <line x1="122" y1="198" x2="180" y2="198"/><line x1="302" y1="198" x2="360" y2="198"/>
-        <line x1="482" y1="198" x2="540" y2="198"/><line x1="662" y1="198" x2="720" y2="198"/>
-      </g>
-      <text x="151" y="278" font-family="Geist Mono" font-size="11.5"
-            fill="rgba(10,10,10,.42)" text-anchor="middle" letter-spacing="1">POLMONE</text>
-
-      <!-- prelievo 1: stato dal PLC, sopra la linea -->
-      <line x1="0" y1="96" x2="864" y2="96" stroke="rgba(10,10,10,.26)"/>
-      <g stroke="#0A0A0A" stroke-width="1.4">
-        <line x1="61" y1="150" x2="61" y2="96"/><line x1="241" y1="150" x2="241" y2="96"/>
-        <line x1="421" y1="150" x2="421" y2="96"/><line x1="601" y1="150" x2="601" y2="96"/>
-        <line x1="781" y1="150" x2="781" y2="96"/>
-      </g>
-      <g fill="#0A0A0A">
-        <rect x="54" y="89" width="14" height="14"/><rect x="234" y="89" width="14" height="14"/>
-        <rect x="414" y="89" width="14" height="14"/><rect x="594" y="89" width="14" height="14"/>
-        <rect x="774" y="89" width="14" height="14"/>
-      </g>
-      <text x="0" y="74" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)"
-            letter-spacing="1.3">STATO MACCHINA · DAL PLC, VIA ETHERNET, IN SOLA LETTURA</text>
-
-      <!-- prelievo 2: pezzi dal sensore di conta, in uscita -->
-      <circle cx="852" cy="198" r="9" fill="#E6E011"/>
-      <line x1="842" y1="198" x2="864" y2="198" stroke="#E6E011" stroke-width="2"/>
-      <text x="852" y="282" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.64)"
-            text-anchor="end" letter-spacing="1.2">PEZZI · SENSORE DI CONTA IN USCITA</text>
-
-      <!-- prelievo 3: energia dal quadro, sotto la linea -->
-      <line x1="0" y1="330" x2="864" y2="330" stroke="rgba(10,10,10,.26)"/>
-      <g stroke="#0A0A0A" stroke-width="1.4">
-        <line x1="61" y1="246" x2="61" y2="330"/><line x1="421" y1="246" x2="421" y2="330"/>
-      </g>
-      <g fill="none" stroke="#0A0A0A" stroke-width="1.8">
-        <circle cx="61" cy="330" r="8"/><circle cx="421" cy="330" r="8"/>
-      </g>
-      <text x="0" y="360" font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)"
-            letter-spacing="1.3">ENERGIA · CONTATORE DI QUADRO, DOVE ESISTE</text>
-
-      <line x1="0" y1="418" x2="864" y2="418" stroke="rgba(10,10,10,.12)"/>
-      <g font-family="Geist Mono" font-size="12" fill="rgba(10,10,10,.42)" letter-spacing="1.3">
-        <text x="0" y="452">GIA' PRESENTE</text><text x="330" y="452">DA VERIFICARE</text>
-        <text x="640" y="452">DA AGGIUNGERE</text>
-      </g>
-      <g font-family="Geist" font-size="15" fill="#0A0A0A">
-        <text x="0" y="484">PLC e rete OT</text><text x="0" y="510">Sensori di conta</text>
-        <text x="330" y="484">Tag effettivamente esposti</text><text x="330" y="510">Contatori per asset</text>
-        <text x="640" y="484">Misura di energia dove manca</text>
-        <text x="640" y="510">Sensori di conta dove manca</text>
-      </g>
-      <text x="0" y="558" font-family="Geist" font-size="14" fill="rgba(10,10,10,.64)">Lo schema e' la struttura tipo di una linea di confezionamento. La mappa della tua linea si costruisce in audit.</text>
-    </svg>
-  </div>
-</div>
-
 <!-- ================== 04 · CAPABILITY — scura ================== -->
-<div class="slide dk" id="d05_capability" data-kind="dossier">
-  <div class="band band--slim">
+<div class="slide dk" id="d04_capability" data-kind="dossier">
+  <div class="band">
     <div class="band__sec">Sezione 1 · prodotto</div>
     <div class="band__q">Cosa è disponibile oggi, cosa è roadmap.</div>
     <div class="band__a">Se una funzione di roadmap serve al tuo progetto, va detto adesso e
@@ -275,10 +184,10 @@
         indicatori operatore.</div>
     </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">05 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">04 / 18</span></div>
   </div>
 
-  <div class="field field--wide">
+  <div class="field">
     <div class="field__hd"><span>Capability</span><span>Per dominio</span></div>
     <div class="field__b">
       <div class="mx" style="grid-template-columns:190px 1fr 168px">
@@ -304,7 +213,7 @@
 </div>
 
 <!-- ============= 05 · SUPERVISIONE DI LINEA — scura ============= -->
-<div class="slide dk" id="d06_supervisione" data-kind="dossier">
+<div class="slide dk" id="d05_supervisione" data-kind="dossier">
   <div class="band">
     <div class="band__sec">Sezione 2 · funzioni</div>
     <div class="band__q">Cosa vedo mentre il turno è aperto.</div>
@@ -317,7 +226,7 @@
       <span class="co__t">Il Labeler è la causa del gap di linea in questo turno.</span></div>
     <div class="spacer"></div>
     <div class="note">Dati illustrativi. I valori si calibrano sulla tua linea in audit.</div>
-    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">06 / 23</span></div>
+    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">05 / 18</span></div>
   </div>
 
   <div class="field">
@@ -367,7 +276,7 @@
 </div>
 
 <!-- ============= 06 · OEE, FERMI E POLMONE — chiara ============= -->
-<div class="slide lt" id="d07_oee_fermi" data-kind="dossier">
+<div class="slide lt" id="d06_oee_fermi" data-kind="dossier">
   <div class="band">
     <div class="band__sec">Sezione 2 · funzioni</div>
     <div class="band__q">Perché macchina ferma non è linea ferma.</div>
@@ -381,7 +290,7 @@
         numeri finiscano in un report.</div>
     </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">07 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">06 / 18</span></div>
   </div>
 
   <div class="field">
@@ -445,7 +354,7 @@
 </div>
 
 <!-- ============ 07 · VELOCITÀ, QUALITÀ, MICRO-FERMI — chiara ============ -->
-<div class="slide lt" id="d08_velocita_qualita" data-kind="dossier">
+<div class="slide lt" id="d07_velocita_qualita" data-kind="dossier">
   <div class="band">
     <div class="band__sec">Sezione 2 · funzioni</div>
     <div class="band__q">Come si vedono i micro-fermi.</div>
@@ -461,7 +370,7 @@
     </div>
     <div class="spacer"></div>
     <div class="note">Dati illustrativi</div>
-    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">08 / 23</span></div>
+    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">07 / 18</span></div>
   </div>
 
   <div class="field">
@@ -508,7 +417,7 @@
 </div>
 
 <!-- ============ 08 · VISTA MULTI-MACCHINA — scura ============ -->
-<div class="slide dk" id="d09_multi_impianto" data-kind="dossier">
+<div class="slide dk" id="d08_multi_impianto" data-kind="dossier">
   <div class="band">
     <div class="band__sec">Sezione 2 · funzioni</div>
     <div class="band__q">Come si legge tutto l'impianto.</div>
@@ -527,7 +436,7 @@
       <div class="open__i">Un sito, tutte le linee sullo stesso modello dati.
         Multi-sito da verificare sul progetto.</div>
     </div>
-    <div class="band__ft" style="margin-top:20px"><span class="wm">d<i>.</i>factory</span><span class="pg">09 / 23</span></div>
+    <div class="band__ft" style="margin-top:20px"><span class="wm">d<i>.</i>factory</span><span class="pg">08 / 18</span></div>
   </div>
 
   <div class="field">
@@ -572,7 +481,7 @@
 </div>
 
 <!-- ============ 09 · DISTRIBUZIONE ENERGIA — chiara ============ -->
-<div class="slide lt" id="d10_distribuzione_energia" data-kind="dossier">
+<div class="slide lt" id="d09_distribuzione_energia" data-kind="dossier">
   <div class="band">
     <div class="band__sec">Sezione 2 · funzioni</div>
     <div class="band__q">Dove finisce l'energia che entra.</div>
@@ -585,7 +494,7 @@
       <div class="lbl" style="margin-top:8px">Da fotovoltaico · 12,0 %</div></div>
     <div class="spacer"></div>
     <div class="note">Dati illustrativi</div>
-    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">10 / 23</span></div>
+    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">09 / 18</span></div>
   </div>
 
   <div class="field">
@@ -647,7 +556,7 @@
 </div>
 
 <!-- ============ 10 · COSTO E CO2 PER PEZZO — chiara ============ -->
-<div class="slide lt" id="d11_costo_co2_stato" data-kind="dossier">
+<div class="slide lt" id="d10_costo_co2_stato" data-kind="dossier">
   <div class="band">
     <div class="band__sec">Sezione 2 · funzioni</div>
     <div class="band__q">Quanto costa un pezzo e quanto spendi da fermo.</div>
@@ -659,8 +568,8 @@
     <div style="margin-top:22px"><div class="kpi" style="font-size:38px">358,8<u>g</u></div>
       <div class="lbl" style="margin-top:8px">CO₂ per mille pezzi</div></div>
     <div class="spacer"></div>
-    <div class="note">Dati illustrativi · perimetro, fattori emissivi e conteggio pezzi: pagina 12</div>
-    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">11 / 23</span></div>
+    <div class="note">Dati illustrativi · perimetro, fattori emissivi e conteggio pezzi: pagina 11</div>
+    <div class="band__ft" style="margin-top:16px"><span class="wm">d<i>.</i>factory</span><span class="pg">10 / 18</span></div>
   </div>
 
   <div class="field">
@@ -708,7 +617,7 @@
 </div>
 
 <!-- ============ 11 · METODO DI MISURA — scura ============ -->
-<div class="slide dk" id="d12_metodo_misura" data-kind="dossier">
+<div class="slide dk" id="d11_metodo_misura" data-kind="dossier">
   <div class="band">
     <div class="band__sec">Sezione 3 · metodo</div>
     <div class="band__q">Come si arriva a quei numeri.</div>
@@ -721,7 +630,7 @@
         Sincronizzazione temporale</div>
     </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">12 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">11 / 18</span></div>
   </div>
 
   <div class="field">
@@ -769,100 +678,75 @@
   </div>
 </div>
 
-<!-- ============ 13 · BROWNFIELD · MACCHINE — chiara ============ -->
-<div class="slide lt" id="d13_brownfield_macchine" data-kind="dossier">
-  <div class="band band--slim">
-    <div class="band__sec">Sezione 3 · integrazione</div>
-    <div class="band__q">Funziona sul brownfield che hai gia'.</div>
-    <div class="band__a">Brownfield: impianti gia' in esercizio, con macchine di costruttori e generazioni diverse. Compatibilita' verificata in audit, non a catalogo.</div>
-    <div class="spacer"></div>
-    <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">13 / 23</span></div>
-  </div>
-
-  <div class="field field--wide">
-    <div class="field__hd"><span>Macchine, PLC e misura</span><span>1 di 2</span></div>
-    <div class="field__b" style="padding:26px 40px">
-      <div class="mx" style="grid-template-columns:210px 1fr 200px">
-        <div class="mx__h">Categoria</div><div class="mx__h">Come entra nel modello</div><div class="mx__h">Stato</div>
-
-        <div>Macchine PackML</div><div>17 stati nativi, letti dal PLC</div>
-        <div><span class="st st--ok">Supportato</span></div>
-        <div>Macchine non-PackML</div><div>Modello ridotto a due stati: in marcia e non in marcia</div>
-        <div><span class="st st--ok">Supportato</span></div>
-        <div>PLC e PC industriali</div><div>Lettura via Ethernet, multi-vendor</div>
-        <div><span class="st st--inf">Dipende dal modello</span></div>
-        <div>Contatori energia</div><div>Cinque vettori, dove esiste la strumentazione</div>
-        <div><span class="st st--inf">Dipende dalla copertura</span></div>
-        <div>Macchine legacy</div><div>Solo se espongono uno stato leggibile dal PLC</div>
-        <div><span class="st st--ver">Verifica in audit</span></div>
-      </div>
-      <p class="bd" style="margin-top:20px;font-size:14px">A bordo linea non entra hardware
-        proprietario D.Factory. Servono pero' un server e, dove manca la misura, sensori.</p>
-    </div>
-  </div>
-</div>
-
-<!-- ============ 14 · BROWNFIELD · RETE — chiara ============ -->
-<div class="slide lt" id="d14_brownfield_rete" data-kind="dossier">
+<!-- ============ 12 · BROWNFIELD — chiara ============ -->
+<div class="slide lt" id="d12_brownfield" data-kind="dossier">
   <div class="band">
     <div class="band__sec">Sezione 3 · integrazione</div>
-    <div class="band__q">Rete, gestionale e tag mapping.</div>
-    <div class="band__a">Il tag mapping e' lavoro nostro ed e' la parte che di solito blocca i progetti.</div>
+    <div class="band__q">Funziona sul brownfield che hai già.</div>
+    <div class="band__a">Brownfield: impianti già in esercizio, con macchine di costruttori e
+      generazioni diverse. Compatibilità verificata in audit, non a catalogo.</div>
     <div class="spacer"></div>
     <div class="open">
       <div class="open__l">Quello che non diciamo</div>
-      <div class="open__i">Che funzioni con ogni marca e ogni protocollo. Multi-vendor non significa compatibile con tutto.</div>
+      <div class="open__i">Che funzioni con ogni marca e ogni protocollo. Multi-vendor non
+        significa compatibile con tutto.</div>
     </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">14 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">12 / 18</span></div>
   </div>
 
   <div class="field">
-    <div class="field__hd"><span>Rete e sistemi</span><span>2 di 2</span></div>
-    <div class="field__b" style="padding:26px 40px">
-      <div class="mx" style="grid-template-columns:180px 1fr 176px">
+    <div class="field__hd"><span>Compatibilità</span><span>Sette categorie</span></div>
+    <div class="field__b">
+      <div class="mx" style="grid-template-columns:174px 1fr 150px">
         <div class="mx__h">Categoria</div><div class="mx__h">Come entra nel modello</div><div class="mx__h">Stato</div>
 
-        <div>Reti OT e IT</div><div>Segmentate, flussi in sola lettura verso l'alto</div>
-        <div><span class="st st--inf">Dipende dalla rete</span></div>
+        <div>Macchine PackML</div><div>17 stati nativi</div>
+        <div><span class="st st--ok">Supportato</span></div>
+        <div>Macchine non-PackML</div><div>Modello ridotto a due stati</div>
+        <div><span class="st st--ok">Supportato</span></div>
+        <div>PLC e PC industriali</div><div>Lettura via Ethernet, multi-vendor</div>
+        <div><span class="st st--ok">Supportato</span></div>
+        <div>Contatori energia</div><div>Cinque vettori, dove esiste la strumentazione</div>
+        <div><span class="st st--ok">Supportato</span></div>
         <div>Gestionale</div><div>Ordini e anagrafiche in sola lettura, tramite livello intermedio</div>
         <div><span class="st st--opt">Caso per caso</span></div>
-        <div>Protocolli</div><div>Connettori per modello e versione</div>
+        <div>Reti</div><div>Segmentazione OT e IT, flussi in sola lettura</div>
+        <div><span class="st st--opt">Caso per caso</span></div>
+        <div>Macchine legacy</div><div>Solo se espongono uno stato leggibile dal PLC</div>
         <div><span class="st st--ver">Verifica in audit</span></div>
-        <div>Scrittura verso l'ERP</div><div>Oggi la lettura e' solo in ingresso</div>
-        <div><span class="st st--road">Sul progetto</span></div>
       </div>
-      <div class="hr" style="margin:22px 0 16px"></div>
-      <div class="mx" style="grid-template-columns:1fr 176px">
-        <div class="mx__h">Cosa serve dal tuo lato</div><div class="mx__h">Chi lo fornisce</div>
-        <div>Elenco dei PLC per linea, con marca e modello</div><div>OT</div>
-        <div>Schemi di rete OT e IT, anche parziali</div><div>IT</div>
-        <div>Modalita' di accesso al gestionale</div><div>IT</div>
-      </div>
+      <p class="bd" style="margin-top:18px;font-size:14px">Il tag mapping è lavoro nostro ed è
+        la parte che di solito blocca i progetti. A bordo linea non entra hardware proprietario:
+        servono però un server e, dove manca la misura, sensori.</p>
     </div>
   </div>
 </div>
 
-<!-- ============ 15 · DEPLOYMENT · ZONE DI RETE — chiara ============ -->
-<div class="slide lt" id="d15_deployment" data-kind="dossier">
+<!-- ============ 13 · DEPLOYMENT E SICUREZZA — chiara ============ -->
+<div class="slide lt" id="d13_deployment_security" data-kind="dossier">
   <div class="band">
     <div class="band__sec">Sezione 3 · integrazione</div>
     <div class="band__q">Cosa chiede al tuo IT.</div>
-    <div class="band__a">Il dato di produzione resta in fabbrica, su un server tuo. Le tre zone restano separate e i flussi fra loro vanno in una direzione sola.</div>
+    <div class="band__a">Il dato di produzione resta in fabbrica, su un server tuo. Lo storico
+      è tuo; i diritti d'uso del software si definiscono in contratto: non sono la stessa cosa.</div>
     <div class="spacer"></div>
-    <div class="note">Le voci che il tuo IT deve approvare, una per una,
-      sono nella pagina seguente.</div>
+    <div class="open">
+      <div class="open__l">Da definire nel solution design</div>
+      <div class="open__i">Sizing del server<br>Porte e protocolli<br>Autenticazione e ruoli<br>
+        Backup e retention<br>Aggiornamenti e patching<br>Logging e audit trail<br>
+        Accesso remoto per il supporto<br>Licenza a fine contratto</div>
+    </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">15 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">13 / 18</span></div>
   </div>
 
   <div class="field">
     <div class="field__hd"><span>Zone di rete</span><span>On-premise · PC industriale Linux del cliente</span></div>
     <svg width="864" height="560" viewBox="0 0 864 560" style="margin:36px 40px"
-         role="img" aria-labelledby="d15t d15d">
-      <title id="d15t">Segmentazione delle zone di rete</title>
-      <desc id="d15d">Rete OT, livello intermedio e rete IT restano separati. I flussi fra le
+         role="img" aria-labelledby="d13t d13d">
+      <title id="d13t">Segmentazione delle zone di rete</title>
+      <desc id="d13d">Rete OT, livello intermedio e rete IT restano separati. I flussi fra le
         zone sono solo in lettura e non esiste un percorso verso internet dalla rete di linea.</desc>
 
       <rect x="0" y="0" width="864" height="132" fill="#F2F3EF"/>
@@ -893,50 +777,9 @@
   </div>
 </div>
 
-<!-- ============ 16 · SPECIFICHE IT — chiara ============ -->
-<div class="slide lt" id="d16_specifiche_it" data-kind="dossier">
-  <div class="band band--slim">
-    <div class="band__sec">Sezione 3 · integrazione</div>
-    <div class="band__q">Le voci che il tuo IT deve approvare.</div>
-    <div class="band__a">Nessuna di queste voci si dichiara prima di averla concordata. Qui c'e' l'elenco completo, con chi la chiude e quando.</div>
-    <div class="spacer"></div>
-    <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">16 / 23</span></div>
-  </div>
-
-  <div class="field field--wide">
-    <div class="field__hd"><span>Specifiche IT</span><span>Voce · stato · chi decide · quando si chiude</span></div>
-    <div class="field__b" style="padding:24px 40px">
-      <div class="mx mx--tight" style="grid-template-columns:1fr 240px 130px 170px;font-size:13.5px">
-        <div class="mx__h">Voce</div><div class="mx__h">Stato oggi</div>
-        <div class="mx__h">Chi decide</div><div class="mx__h">Si chiude in</div>
-
-        <div>Server e sistema operativo</div><div>PC industriale Linux del cliente</div>
-        <div>Cliente</div><div>Definito</div>
-        <div>Sizing del server</div><div>Dipende da linee e frequenza</div>
-        <div>Congiunto</div><div>Solution design</div>
-        <div>Protocolli e modelli PLC</div><div>Per modello e versione</div>
-        <div>D.Factory</div><div>Audit</div>
-        <div>Porte e direzione dei flussi</div><div>Sola lettura, OT verso IT</div>
-        <div>IT cliente</div><div>Solution design</div>
-        <div>Autenticazione e ruoli</div><div>Secondo le policy interne</div>
-        <div>IT cliente</div><div>Solution design</div>
-        <div>Backup, retention, patching</div><div>Secondo le policy interne</div>
-        <div>IT cliente</div><div>Solution design</div>
-        <div>Logging e audit trail</div><div>Da concordare</div>
-        <div>Congiunto</div><div>Solution design</div>
-        <div>Accesso remoto</div><div>Da concordare, disattivabile</div>
-        <div>IT cliente</div><div>Contratto</div>
-        <div>Licenza a fine contratto</div><div>Distinta dal possesso del dato</div>
-        <div>Legale</div><div>Contratto</div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ============ 14 · STRATEGIA SENSORI — scura ============ -->
-<div class="slide dk" id="d17_sensori" data-kind="dossier">
-  <div class="band band--slim">
+<div class="slide dk" id="d14_sensori" data-kind="dossier">
+  <div class="band">
     <div class="band__sec">Sezione 3 · integrazione</div>
     <div class="band__q">Dove serve misurare bene davvero.</div>
     <div class="band__a">La sensoristica non è il nostro prodotto: resta a carico tuo e la
@@ -949,10 +792,10 @@
         dell'organizzazione. Nessuna delle due certifica il software.</div>
     </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">17 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">14 / 18</span></div>
   </div>
 
-  <div class="field field--wide">
+  <div class="field">
     <div class="field__hd"><span>Clamp-on o strumentazione certificata</span><span>Sei criteri</span></div>
     <div class="field__b">
       <div class="mx" style="grid-template-columns:150px 1fr 1fr">
@@ -975,8 +818,8 @@
 </div>
 
 <!-- ============ 15 · OUTPUT E INTEGRAZIONI — chiara ============ -->
-<div class="slide lt" id="d18_output_integrazioni" data-kind="dossier">
-  <div class="band band--slim">
+<div class="slide lt" id="d15_output_integrazioni" data-kind="dossier">
+  <div class="band">
     <div class="band__sec">Sezione 3 · integrazione</div>
     <div class="band__q">In che forma esce il dato.</div>
     <div class="band__a">Quello che vedi a schermo lo porti su un tavolo senza rielaborarlo a
@@ -988,10 +831,10 @@
         Eventuale scrittura verso l'ERP, da verificare sul progetto</div>
     </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">18 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">15 / 18</span></div>
   </div>
 
-  <div class="field field--wide">
+  <div class="field">
     <div class="field__hd"><span>Output</span><span>Formato e destinatario</span></div>
     <div class="field__b">
       <div class="mx" style="grid-template-columns:1fr 130px 1fr 150px">
@@ -1017,85 +860,65 @@
   </div>
 </div>
 
-<!-- ============ 19 · MILESTONE E TEMPI — chiara ============ -->
-<div class="slide lt" id="d19_milestone" data-kind="dossier">
+<!-- ============ 16 · DELIVERY E RESPONSABILITÀ — chiara ============ -->
+<div class="slide lt" id="d16_delivery_raci" data-kind="dossier">
   <div class="band">
     <div class="band__sec">Sezione 4 · delivery</div>
-    <div class="band__q">Dal primo segnale al go-live.</div>
-    <div class="band__a">I tempi dipendono da due cose sole: quanta sensoristica manca e quando si aprono le tue finestre di fermo. Il calendario reale si scrive in audit.</div>
+    <div class="band__q">Chi fa cosa, e in quanto tempo.</div>
+    <div class="band__a">I tempi dipendono da due cose sole: quanta sensoristica manca e
+      quando si aprono le tue finestre di fermo. Il calendario reale si scrive in audit.</div>
     <div class="spacer"></div>
     <div class="open">
       <div class="open__l">Da definire nel solution design</div>
       <div class="open__i">Ore a carico del cliente per l'avvio<br>Calendario delle finestre di fermo</div>
     </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">19 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">16 / 18</span></div>
   </div>
 
   <div class="field">
-    <div class="field__hd"><span>Le cinque milestone</span><span>Da non confondere fra loro</span></div>
-    <div class="field__b" style="padding:40px">
-      <svg width="864" height="380" viewBox="0 0 864 380" role="img" aria-labelledby="d19t d19d">
-        <title id="d19t">Le cinque milestone del progetto</title>
-        <desc id="d19d">First signal, first usable data, pilot live, operational go-live e
-          scale-up sono cinque momenti distinti, con condizioni diverse.</desc>
-        <line x1="10" y1="30" x2="10" y2="330" stroke="rgba(10,10,10,.26)"/>
-        <g fill="rgba(10,10,10,.82)">
-          <circle cx="10" cy="30" r="8"/><circle cx="10" cy="105" r="8"/>
-          <circle cx="10" cy="180" r="8"/><circle cx="10" cy="255" r="8"/></g>
-        <circle cx="10" cy="330" r="8" fill="#E6E011"/>
-        <g font-family="Geist" font-size="20" fill="#0A0A0A">
-          <text x="44" y="24">First signal</text><text x="44" y="99">First usable data</text>
-          <text x="44" y="174">Pilot live</text><text x="44" y="249">Operational go-live</text>
-          <text x="44" y="324">Scale-up</text></g>
-        <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.64)">
-          <text x="44" y="50">Primo segnale acquisito da una macchina</text>
-          <text x="44" y="125">Primo dato contestualizzato e verificato con te</text>
-          <text x="44" y="200">Una linea con viste e KPI concordati</text>
-          <text x="44" y="275">Utenti formati, formule validate, supporto attivo</text>
-          <text x="44" y="350">Estensione ad altre linee o ad altri siti</text></g>
+    <div class="field__hd"><span>Le cinque milestone</span><span>Da non confondere</span></div>
+    <div class="field__b" style="padding:26px 40px">
+      <svg width="864" height="150" viewBox="0 0 864 150" aria-hidden="true">
+        <line x1="10" y1="30" x2="854" y2="30" stroke="rgba(10,10,10,.26)"/>
+        <g fill="rgba(10,10,10,.78)">
+          <circle cx="10" cy="30" r="7"/><circle cx="221" cy="30" r="7"/>
+          <circle cx="432" cy="30" r="7"/><circle cx="643" cy="30" r="7"/></g>
+        <circle cx="854" cy="30" r="7" fill="#E6E011"/>
+        <g font-family="Geist" font-size="16" fill="#0A0A0A">
+          <text x="0" y="66">First signal</text><text x="211" y="66">First usable data</text>
+          <text x="422" y="66">Pilot live</text><text x="633" y="66">Operational go-live</text>
+          <text x="864" y="66" text-anchor="end">Scale-up</text></g>
+        <g font-family="Geist" font-size="13.5" fill="rgba(10,10,10,.64)">
+          <text x="0" y="94">Primo segnale</text><text x="0" y="112">da una macchina</text>
+          <text x="211" y="94">Primo dato</text><text x="211" y="112">verificato con te</text>
+          <text x="422" y="94">Una linea con viste</text><text x="422" y="112">e KPI concordati</text>
+          <text x="633" y="94">Utenti formati,</text><text x="633" y="112">formule validate</text>
+          <text x="864" y="94" text-anchor="end">Altre linee</text>
+          <text x="864" y="112" text-anchor="end">o altri siti</text></g>
+        <text x="0" y="144" font-family="Geist" font-size="13.5" fill="rgba(10,10,10,.64)">Su una linea già strumentata il primo segnale può arrivare in un paio di giorni. Il go-live operativo ha un altro calendario.</text>
       </svg>
-      <div class="hr" style="margin:22px 0 16px"></div>
-      <p class="bd" style="font-size:15px">Su una linea gia' strumentata il primo segnale puo'
-        arrivare in un paio di giorni. Il go-live operativo ha un altro calendario: le due cose
-        non vanno confuse in offerta.</p>
-    </div>
-  </div>
-</div>
 
-<!-- ============ 20 · RESPONSABILITA' — chiara ============ -->
-<div class="slide lt" id="d20_raci" data-kind="dossier">
-  <div class="band band--slim">
-    <div class="band__sec">Sezione 4 · delivery</div>
-    <div class="band__q">Chi fa cosa.</div>
-    <div class="band__a">La riga che genera piu' sorprese e' la seconda: i sensori li installa il tuo personale tecnico o una terza parte, non noi.</div>
-    <div class="spacer"></div>
-    <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">20 / 23</span></div>
-  </div>
+      <div class="hr" style="margin:22px 0 18px"></div>
 
-  <div class="field field--wide">
-    <div class="field__hd"><span>Matrice di responsabilita'</span><span>R esegue · A approva · C consultato</span></div>
-    <div class="field__b" style="padding:30px 40px">
-      <div class="mx" style="grid-template-columns:1fr 140px 140px 150px">
-        <div class="mx__h">Attivita'</div><div class="mx__h">D.Factory</div>
+      <div class="mx" style="grid-template-columns:1fr 110px 110px 110px">
+        <div class="mx__h">Attività</div><div class="mx__h">D.Factory</div>
         <div class="mx__h">Cliente</div><div class="mx__h">Terza parte</div>
         <div>Accessi di rete e autorizzazioni</div><div>C</div><div>R</div><div>—</div>
         <div>Installazione sensori e contatori</div><div>C</div><div>A</div><div>R</div>
         <div>Tag mapping e connettori</div><div>R</div><div>C</div><div>—</div>
         <div>Definizione e validazione KPI</div><div>R</div><div>A</div><div>—</div>
         <div>Formazione degli utenti</div><div>R</div><div>C</div><div>—</div>
-        <div>Go-live operativo</div><div>R</div><div>A</div><div>—</div>
         <div>Supporto in esercizio</div><div>R</div><div>C</div><div>—</div>
       </div>
-      <p class="note" style="margin-top:14px">— non coinvolto</p>
+      <p class="note" style="margin-top:12px">R esegue · A approva · C consultato · — non coinvolto</p>
     </div>
   </div>
 </div>
 
 <!-- ============ 17 · CRITERI DI ACCETTAZIONE DEL PILOT — scura ============ -->
-<div class="slide dk" id="d21_criteri_pilot" data-kind="dossier">
-  <div class="band band--slim">
+<div class="slide dk" id="d17_criteri_pilot" data-kind="dossier">
+  <div class="band">
     <div class="band__sec">Sezione 4 · delivery</div>
     <div class="band__q">Quando il pilot si può dire riuscito.</div>
     <div class="band__a">I criteri si concordano prima di iniziare, non alla fine. Se uno non
@@ -1107,10 +930,10 @@
         dal cliente. Un caso inventato si riconosce alla seconda domanda.</div>
     </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">21 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">17 / 18</span></div>
   </div>
 
-  <div class="field field--wide">
+  <div class="field">
     <div class="field__hd"><span>Criteri di accettazione</span><span>Sei condizioni verificabili</span></div>
     <div class="field__b">
       <div class="mx" style="grid-template-columns:1fr 300px">
@@ -1135,69 +958,59 @@
   </div>
 </div>
 
-<!-- ============ 22 · SUPPORTO IN ESERCIZIO — chiara ============ -->
-<div class="slide lt" id="d22_supporto" data-kind="dossier">
+<!-- ============ 18 · SUPPORTO E CHECKLIST — chiara ============ -->
+<div class="slide lt" id="d18_supporto_audit" data-kind="dossier">
   <div class="band">
     <div class="band__sec">Sezione 4 · delivery</div>
-    <div class="band__q">Cosa succede dopo il go-live.</div>
-    <div class="band__a">Nessun livello di servizio si dichiara prima di averlo concordato: un SLA scritto a caso e' peggio che non averlo.</div>
+    <div class="band__q">Cosa serve per partire e per restare in esercizio.</div>
+    <div class="band__a">Nessun livello di servizio si dichiara prima di averlo concordato.</div>
     <div class="spacer"></div>
+    <div class="open">
+      <div class="open__l">Da definire in contratto</div>
+      <div class="open__i">Livelli di servizio<br>Orari, severità e canali<br>
+        Manutenzione software e patching<br>Accesso remoto<br>Modalità di change request</div>
+    </div>
     <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">22 / 23</span></div>
+    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">18 / 18</span></div>
   </div>
 
   <div class="field">
-    <div class="field__hd"><span>Supporto</span><span>Voce · stato · quando si chiude</span></div>
-    <div class="field__b" style="padding:30px 40px">
-      <div class="mx" style="grid-template-columns:1fr 220px 140px 150px">
-        <div class="mx__h">Voce</div><div class="mx__h">Stato oggi</div>
-        <div class="mx__h">Chi risponde</div><div class="mx__h">Si chiude in</div>
-        <div>Livelli di servizio</div><div>Da concordare</div><div>Commerciale</div><div>Contratto</div>
-        <div>Orari, severita' e canali</div><div>Da concordare</div><div>Commerciale</div><div>Contratto</div>
-        <div>Manutenzione software</div><div>Da concordare con l'IT</div><div>Congiunto</div><div>Solution design</div>
-        <div>Accesso remoto</div><div>Da concordare, disattivabile</div><div>IT cliente</div><div>Contratto</div>
-        <div>Change request</div><div>Modalita' in contratto</div><div>Congiunto</div><div>Contratto</div>
-        <div>Formazione di nuovi utenti</div><div>Su richiesta</div><div>D.Factory</div><div>Contratto</div>
+    <div class="field__hd"><span>Checklist per l'audit</span><span>Cosa portare in sala</span></div>
+    <div class="field__b">
+      <div style="display:flex;gap:44px">
+        <div style="flex:1">
+          <div class="lbl">Documenti</div>
+          <div style="font-size:15px;line-height:2.15;margin-top:12px">
+            Elenco dei PLC per linea, con marca e modello<br>
+            Schemi di rete OT e IT, anche parziali<br>
+            Elenco dei contatori energia e posizione<br>
+            Sensori già presenti a bordo linea<br>
+            Turni e calendario di produzione<br>
+            Finestre di fermo disponibili nell'anno</div>
+        </div>
+        <div style="flex:1">
+          <div class="lbl">Decisioni e persone</div>
+          <div style="font-size:15px;line-height:2.15;margin-top:12px">
+            Referenti IT e OT che possono decidere<br>
+            Le formule OEE che usi oggi, se ne usi<br>
+            Come conti i pezzi buoni<br>
+            Requisiti di reportistica, se ce ne sono<br>
+            Modalità di accesso al gestionale<br>
+            Chi userà le viste, per ruolo</div>
+        </div>
       </div>
-      <div class="hr" style="margin:26px 0 18px"></div>
-      <div class="lbl">Referente</div>
-      <div style="font-size:19px;margin-top:8px">Pablo Degl'Innocenti</div>
-      <div class="bd" style="font-size:14px">pablo.deglinnocenti@marchianisrl.com</div>
-    </div>
-  </div>
-</div>
-
-<!-- ============ 23 · CHECKLIST PER L'AUDIT — chiara ============ -->
-<div class="slide lt" id="d23_checklist" data-kind="dossier">
-  <div class="band band--slim">
-    <div class="band__sec">Sezione 4 · delivery</div>
-    <div class="band__q">Cosa portare in sala.</div>
-    <div class="band__a">Con questo materiale l'audit si chiude in una sessione. Senza, servono due giri.</div>
-    <div class="spacer"></div>
-    <div class="note">Documento gemello: sales deck, il percorso dall'audit
-      alla scala.</div>
-    <div class="spacer"></div>
-    <div class="band__ft"><span class="wm">d<i>.</i>factory</span><span class="pg">23 / 23</span></div>
-  </div>
-
-  <div class="field field--wide">
-    <div class="field__hd"><span>Checklist per l'audit</span><span>Documenti · decisioni · persone</span></div>
-    <div class="field__b" style="padding:30px 40px">
-      <div class="mx" style="grid-template-columns:1fr 1fr 150px">
-        <div class="mx__h">Documenti</div><div class="mx__h">Decisioni e persone</div>
-        <div class="mx__h">Chi lo porta</div>
-        <div>Elenco dei PLC per linea, con marca e modello</div>
-        <div>Referenti IT e OT che possono decidere</div><div>OT · Direzione</div>
-        <div>Schemi di rete OT e IT, anche parziali</div>
-        <div>Le formule OEE che usi oggi, se ne usi</div><div>IT · Produzione</div>
-        <div>Elenco dei contatori energia e posizione</div>
-        <div>Come conti i pezzi buoni</div><div>Energy · Produzione</div>
-        <div>Sensori gia' presenti a bordo linea</div>
-        <div>Requisiti di reportistica, se ce ne sono</div><div>Manutenzione</div>
-        <div>Turni e calendario di produzione</div>
-        <div>Modalita' di accesso al gestionale</div><div>Produzione · IT</div>
-        <div>Finestre di fermo disponibili nell'anno</div>
-        <div>Chi usera' le viste, per ruolo</div><div>Produzione</div>
+      <div class="hr" style="margin:24px 0 18px"></div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end">
+        <div>
+          <div class="lbl">Referente</div>
+          <div style="font-size:19px;margin-top:8px">Pablo Degl'Innocenti</div>
+          <div class="bd" style="font-size:14px">pablo.deglinnocenti@marchianisrl.com</div>
+        </div>
+        <div style="text-align:right">
+          <div class="lbl">Documento gemello</div>
+          <div style="font-size:15px;margin-top:8px;max-width:300px">Sales deck: perché adesso,
+            il percorso dall'audit alla scala</div>
+        </div>
       </div>
     </div>
   </div>

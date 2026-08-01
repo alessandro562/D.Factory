@@ -26,6 +26,10 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
 /* ---------- fascia di consultazione, sempre a sinistra ---------- */
 .band{position:absolute;left:0;top:0;width:336px;height:720px;
   padding:44px 36px 34px;display:flex;flex-direction:column}
+/* pagine tabellari: la fascia si restringe e restituisce 88px al campo */
+.band--slim{width:248px;padding:44px 26px 34px}
+.band--slim .band__q{font-size:25px;margin-top:16px}
+.band--slim .band__a{font-size:14px;margin-top:14px}
 .dk .band{background:var(--ink-2);border-right:1px solid var(--d-line)}
 .lt .band{background:var(--paper-2);border-right:1px solid var(--l-line)}
 .band__sec{font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;
@@ -47,6 +51,7 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
 
 /* ---------- campo: 944px a destra ---------- */
 .field{position:absolute;left:336px;top:0;width:944px;height:720px}
+.field--wide{left:248px;width:1032px}
 .field__hd{display:flex;justify-content:space-between;align-items:center;
   padding:20px 40px;font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;
   text-transform:uppercase;border-bottom:1px solid var(--l-line)}
@@ -71,17 +76,20 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
 .st--ok::before{background:var(--l1);border:2px solid var(--l1)}
 .st--opt::before{background:transparent;border:2px solid var(--l1)}
 .st--ver::before{background:transparent;border:2px dotted var(--l1)}
+.st--inf::before{background:transparent;border:2px solid var(--l1);
+  border-style:solid dashed}
 .st--road::before{background:transparent;border:1px solid rgba(10,10,10,.35)}
 .dk .st--ok::before{background:var(--d1);border-color:var(--d1)}
-.dk .st--opt::before,.dk .st--ver::before{border-color:var(--d1)}
+.dk .st--opt::before,.dk .st--ver::before,.dk .st--inf::before{border-color:var(--d1)}
 .dk .st--road::before{border-color:rgba(255,255,255,.40)}
 .dk .st{color:var(--d2)} .lt .st{color:var(--l2)}
 
 /* ---------- matrice: max 5 colonne, max 8 righe ---------- */
-.mx{display:grid;gap:0;font-size:13.5px;line-height:1.45;width:100%}
+.mx{display:grid;gap:0;font-size:14px;line-height:1.5;width:100%}
 .mx>div{padding:14px 14px 14px 0;border-bottom:1px solid var(--l-line)}
 .dk .mx>div{border-bottom-color:var(--d-line)}
-.mx__h{font-family:var(--mono);font-size:12px;letter-spacing:.12em;
+.mx--tight>div{padding:10px 14px 10px 0}
+.mx__h{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;
   text-transform:uppercase;padding-bottom:9px!important}
 .lt .mx__h{color:var(--l3);border-bottom:1px solid var(--l-rule)!important}
 .dk .mx__h{color:var(--d3);border-bottom:1px solid var(--d-rule)!important}
@@ -93,14 +101,14 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
 .open__l{font-family:var(--mono);font-size:12px;letter-spacing:.12em;
   text-transform:uppercase;margin-bottom:12px}
 .lt .open__l{color:var(--l3)} .dk .open__l{color:var(--d3)}
-.open__i{font-size:13.5px;line-height:1.95}
+.open__i{font-size:14px;line-height:1.95}
 .lt .open__i{color:var(--l2)} .dk .open__i{color:var(--d2)}
 
 /* ---------- callout numerati sulla vista ---------- */
 .co{display:flex;gap:11px;align-items:flex-start;margin-bottom:15px}
 .co__n{font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--acid);
   width:21px;height:21px;display:flex;align-items:center;justify-content:center;flex:none}
-.co__t{font-size:13.5px;line-height:1.45}
+.co__t{font-size:14px;line-height:1.5}
 .dk .co__t{color:var(--d2)} .lt .co__t{color:var(--l2)}
 
 .hr{height:1px;background:var(--l-line)} .dk .hr{background:var(--d-line)}

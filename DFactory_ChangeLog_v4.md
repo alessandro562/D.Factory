@@ -3,10 +3,98 @@
 Gli originali non sono stati toccati. `DFactory_SalesDeck_v2 (1).html` e
 `DFactory_DossierTecnico_v2 (1).html` restano invariati.
 
-| Documento | v2 | v4 |
+| Documento | v2 | v4 | v4.1 |
+|---|---|---|---|
+| Sales deck | 12 slide | 10 + 3 appendice | **10 + 3**, quattro slide riviste |
+| Dossier tecnico | 18 pagine | 18 pagine | **23 pagine** |
+
+---
+
+## 0. Revisione v4.1 · i sei interventi chiesti in review
+
+### 1 · La slide 7 non si chiama più "la prova"
+
+Occhiello da "La prova" a **"Dalle ipotesi alle misure"**, `id` da `s07_prova` a
+`s07_ipotesi_misure`. Il titolo resta "Le domande a cui oggi rispondi a memoria".
+Il rilievo era corretto: quella slide dimostra *il tipo di risposta che il prodotto
+produce*, non *un risultato ottenuto*. Chiamarla "prova" prometteva una referenza che non
+c'è. La prova commerciale resta l'input numero 2 di `DFactory_OpenInputs_v4.md`.
+
+### 2 · I numeri non-cliente si dichiarano accanto al numero
+
+Un numero grande viene percepito come claim anche quando una nota piccola dice il contrario.
+Correzioni:
+
+| Dove | Prima | Dopo |
 |---|---|---|
-| Sales deck | 12 slide | **10 slide + 3 di appendice** |
-| Dossier tecnico | 18 pagine | **18 pagine**, impianto nuovo |
+| `s01` | "Dati illustrativi" nel rail inferiore, a 12,5 px | Etichetta **"Valori illustrativi" sopra i due KPI**, in giallo, prima che l'occhio arrivi ai numeri |
+| `s04` | "vista dimostrativa" nel piede della fascia | "OEE di linea · **valore illustrativo**" nell'etichetta sotto il numero |
+| `s08` | "esempio ricostruibile" in mono grigio, sotto il risultato giallo | **Badge giallo pieno** accanto al risultato: "SCENARIO ILLUSTRATIVO · NON UN RISULTATO CLIENTE". Il risultato passa **da giallo a bianco** |
+
+L'ultima è la più importante: su `s08` il giallo ora marca **la cautela**, non la cifra. La
+gerarchia visiva si inverte a favore del disclaimer, che era esattamente il rischio segnalato.
+
+### 3 · La slide 4 mostra una scoperta, non un'interfaccia
+
+Da **6 macchine e 2 KPI** a **3 macchine e 1 KPI**. I tre callout diventano una catena:
+**anomalia → causa → decisione**. Le ancore numerate sono state spostate dentro l'SVG, così
+restano allineate alle righe che annotano invece di galleggiare sopra la vista.
+Da 60 a 53 parole.
+
+### 4 · Asset reali: uno consegnato, uno no
+
+**Consegnato.** Nuova pagina 04 del dossier, *Dove il dato viene preso, fisicamente*: schema
+di una linea di confezionamento con i punti di prelievo marcati — stato dal PLC sopra la
+linea, energia dai contatori di quadro sotto, pezzi dal sensore di conta in uscita — e la
+distinzione fra ciò che è già presente, ciò che va verificato e ciò che va eventualmente
+aggiunto.
+
+**Non consegnato.** Lo screenshot reale del prodotto non può essere prodotto qui: sarebbe
+un'invenzione travestita da evidenza. Resta l'input numero 5. Il limite è dichiarato nel
+report QA §7 invece di essere nascosto.
+
+### 5 · Le pagine dense del dossier sono state divise
+
+| Prima | Dopo |
+|---|---|
+| `d12_brownfield`, 162 parole | **13** macchine, PLC e misura · **14** rete, gestionale, tag mapping |
+| `d13_deployment_security`, 146 parole con 8 voci aperte in elenco | **15** zone di rete · **16** specifiche IT voce per voce |
+| `d16_delivery_raci`, milestone e RACI sulla stessa pagina | **19** milestone e tempi · **20** responsabilità |
+| `d18_supporto_audit`, supporto e checklist insieme | **22** supporto in esercizio · **23** checklist per l'audit |
+
+In più: **fascia ridotta da 336 a 248 px** sulle otto pagine tabellari, che restituisce 88 px
+al campo; corpo delle matrici da 13,5 a **14 px**; intestazioni da 12 a **12,5 px**.
+
+Risultato: 23 pagine, media 125 parole (era 128 su 18 pagine), nessuna pagina oltre 165.
+
+### 6 · La parte IT/OT ha una pagina propria
+
+Nuova pagina 16, *Le voci che il tuo IT deve approvare*: **nove voci × stato oggi, chi decide,
+quando si chiude**. Sostituisce l'elenco puntato indifferenziato che stava nella fascia di
+`d13`.
+
+Questo **non rende il dossier approvabile da un reparto IT** e il report QA lo dice
+esplicitamente: "da concordare secondo le policy interne" resta una riga di solution design.
+Diventa una specifica quando arrivano i valori. La formulazione onesta dello stato attuale è:
+*pronto per la riunione tecnica in cui quelle voci si compilano, non per l'approvazione che
+viene dopo.*
+
+### Fuori dai sei punti · il manifest riclassifica l'assessment
+
+`Marchiani_Assessment_12Marzo.docx` non è stato consegnato nel workspace di lavorazione, ma
+esiste lato committente. Il manifest non può quindi classificare Siemens, MES/MOM, SAP, i 70
+casi, i 60 giorni e i settori come **"fonte non disponibile"**: ora sono
+**"presenti in fonte interna, da validare prima della pubblicazione"**, ciascuno con owner e
+condizione di sblocco (`DFactory_ContentManifest_v4.md` §3). La differenza è sostanziale:
+"fonte assente" significa abbandonare il claim, "da validare" significa che l'origine esiste e
+serve una conferma formale. Nessuno di questi temi è pubblicato nei v4.
+
+### Nota di processo
+
+Il gate della Fase A era un requisito esplicito del prompt ed è stato saltato: la direzione
+ibrida è stata scelta e propagata su 31 canvas senza approvazione. Il risultato ha retto alla
+review, ma il rischio era reale e la giustificazione data allora ("cambiarla costa poco") era
+falsa: vale per il CSS, non per ritmo, contenuti e diagrammi.
 
 ---
 

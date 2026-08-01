@@ -3,11 +3,11 @@
   "id": "d01_cover",
   "kind": "dossier",
   "overflow": [],
-  "minText": 12,
-  "words": 102,
+  "minText": 12.5,
+  "words": 104,
   "fragments": 27,
   "smallText": [],
-  "visualPct": 20.7,
+  "visualPct": 23,
   "collisions": []
  },
  {
@@ -18,7 +18,7 @@
   "words": 153,
   "fragments": 29,
   "smallText": [],
-  "visualPct": 43.4,
+  "visualPct": 46.3,
   "collisions": []
  },
  {
@@ -33,18 +33,29 @@
   "collisions": []
  },
  {
-  "id": "d04_capability",
+  "id": "d04_acquisizione",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 11.5,
+  "words": 143,
+  "fragments": 32,
+  "smallText": [],
+  "visualPct": 72,
+  "collisions": []
+ },
+ {
+  "id": "d05_capability",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
   "words": 131,
   "fragments": 36,
   "smallText": [],
-  "visualPct": 49.6,
+  "visualPct": 55.5,
   "collisions": []
  },
  {
-  "id": "d05_supervisione",
+  "id": "d06_supervisione",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
@@ -55,18 +66,18 @@
   "collisions": []
  },
  {
-  "id": "d06_oee_fermi",
+  "id": "d07_oee_fermi",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
-  "words": 149,
+  "words": 151,
   "fragments": 36,
   "smallText": [],
   "visualPct": 72.5,
   "collisions": []
  },
  {
-  "id": "d07_velocita_qualita",
+  "id": "d08_velocita_qualita",
   "kind": "dossier",
   "overflow": [],
   "minText": 11.6,
@@ -77,7 +88,7 @@
   "collisions": []
  },
  {
-  "id": "d08_multi_impianto",
+  "id": "d09_multi_impianto",
   "kind": "dossier",
   "overflow": [],
   "minText": 11.6,
@@ -88,7 +99,7 @@
   "collisions": []
  },
  {
-  "id": "d09_distribuzione_energia",
+  "id": "d10_distribuzione_energia",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
@@ -99,7 +110,7 @@
   "collisions": []
  },
  {
-  "id": "d10_costo_co2_stato",
+  "id": "d11_costo_co2_stato",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
@@ -110,7 +121,7 @@
   "collisions": []
  },
  {
-  "id": "d11_metodo_misura",
+  "id": "d12_metodo_misura",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
@@ -121,80 +132,124 @@
   "collisions": []
  },
  {
-  "id": "d12_brownfield",
+  "id": "d13_brownfield_macchine",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
-  "words": 160,
-  "fragments": 36,
+  "words": 121,
+  "fragments": 28,
   "smallText": [],
-  "visualPct": 49.6,
+  "visualPct": 41.4,
   "collisions": []
  },
  {
-  "id": "d13_deployment_security",
+  "id": "d14_brownfield_rete",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
-  "words": 146,
-  "fragments": 30,
+  "words": 139,
+  "fragments": 34,
+  "smallText": [],
+  "visualPct": 59.9,
+  "collisions": []
+ },
+ {
+  "id": "d15_deployment",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 125,
+  "fragments": 22,
   "smallText": [],
   "visualPct": 70,
   "collisions": []
  },
  {
-  "id": "d14_sensori",
+  "id": "d16_specifiche_it",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 148,
+  "fragments": 49,
+  "smallText": [],
+  "visualPct": 56.5,
+  "collisions": []
+ },
+ {
+  "id": "d17_sensori",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
   "words": 150,
   "fragments": 32,
   "smallText": [],
-  "visualPct": 41.6,
+  "visualPct": 47.2,
   "collisions": []
  },
  {
-  "id": "d15_output_integrazioni",
+  "id": "d18_output_integrazioni",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
   "words": 122,
   "fragments": 45,
   "smallText": [],
-  "visualPct": 49.6,
+  "visualPct": 55.5,
   "collisions": []
  },
  {
-  "id": "d16_delivery_raci",
+  "id": "d19_milestone",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
-  "words": 112,
-  "fragments": 41,
+  "words": 137,
+  "fragments": 23,
   "smallText": [],
-  "visualPct": 41.6,
+  "visualPct": 47.5,
   "collisions": []
  },
  {
-  "id": "d17_criteri_pilot",
+  "id": "d20_raci",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 89,
+  "fragments": 42,
+  "smallText": [],
+  "visualPct": 54.1,
+  "collisions": []
+ },
+ {
+  "id": "d21_criteri_pilot",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
   "words": 151,
   "fragments": 26,
   "smallText": [],
-  "visualPct": 41.6,
+  "visualPct": 47.2,
   "collisions": []
  },
  {
-  "id": "d18_supporto_audit",
+  "id": "d22_supporto",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12.5,
+  "words": 97,
+  "fragments": 40,
+  "smallText": [],
+  "visualPct": 42.8,
+  "collisions": []
+ },
+ {
+  "id": "d23_checklist",
   "kind": "dossier",
   "overflow": [],
   "minText": 12,
-  "words": 151,
-  "fragments": 34,
+  "words": 134,
+  "fragments": 31,
   "smallText": [],
-  "visualPct": 0,
+  "visualPct": 47.2,
   "collisions": []
  }
 ]

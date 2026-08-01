@@ -5,6 +5,15 @@ commerciale completo". Ordinato per impatto sulla vendita, non per facilità.
 
 ---
 
+## 0. Il file che sbloccherebbe più cose
+
+`Marchiani_Assessment_12Marzo.docx` esiste lato committente ma non è stato consegnato nel
+workspace di lavorazione. **Consegnarlo è l'azione singola a più alto rendimento**: contiene
+Siemens, l'evoluzione MES/MOM, SAP, il numero di casi, i tempi di consegna e i settori. Nessuno
+di quei temi è automaticamente pubblicabile, ma con il file in mano la validazione diventa una
+verifica voce per voce invece che una ricostruzione. Owner e condizioni di sblocco sono già
+mappati in `DFactory_ContentManifest_v4.md` §3.
+
 ## 1. Bloccanti · senza questi il deck chiede fiducia
 
 | # | Input | Owner | Dove sbloccherebbe | Cosa cambia |
@@ -109,7 +118,7 @@ perché il primo a notarlo è il controllo di gestione del cliente.
 | Contenuto | Perché non c'è |
 |---|---|
 | 10 clienti · ~70 macchine · ~30 linee · 24 mesi · 0 dismissioni | Non validati formalmente. Il prompt lo vieta esplicitamente |
-| Siemens, SAP, Patent Box, 70 casi, consegna in 60 giorni, settori oltre F&B | L'assessment che li conteneva non è nel workspace. Nessuna fonte |
+| Siemens, SAP, Patent Box, 70 casi, consegna in 60 giorni, settori oltre F&B | **Presenti nell'assessment interno, non validati per l'uso esterno.** Il file non è stato consegnato nel workspace, quindi non è stato letto: i temi restano "da validare" con owner assegnato, vedi manifest §3 |
 | Qualsiasi importo, forbice o listino | Il Context Brief li dichiara ipotesi non validate |
 | ROI ≈ 69.000 €/anno, payback < 6 mesi | Non ricostruibile senza margine orario e investimento |
 | Matrice competitiva | Zerynth, Miraitek e 40Factory hanno moduli di monitoraggio energetico: una matrice che li marcasse "assente" sarebbe falsa |
