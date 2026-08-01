@@ -1,0 +1,62 @@
+/* ==========================================================================
+   DIREZIONE B — DATA OPERATING SYSTEM · il prodotto prima di tutto
+   Il canvas e' occupato dalla vista di prodotto, ritagliata e ingrandita.
+   Il testo vive in una fascia stretta, sopra o accanto, mai in card.
+   Il giallo marca la SCOPERTA dentro la vista, non decora.
+   ========================================================================== */
+*{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --ink:#0A0A0A; --chrome:#141414; --chrome-2:#1C1C1C;
+  --paper:#FFFFFF; --paper-2:#F2F3EF;
+  --acid:#E6E011;
+  --d1:#FFFFFF; --d2:rgba(255,255,255,.72); --d3:rgba(255,255,255,.44);
+  --d-line:rgba(255,255,255,.13);
+  --l1:#0A0A0A; --l2:rgba(10,10,10,.62); --l3:rgba(10,10,10,.40);
+  --l-line:rgba(10,10,10,.11);
+  --ui:"Geist",-apple-system,sans-serif; --mono:"Geist Mono",Menlo,monospace;
+}
+html{background:#1b1b1b}
+body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1}
+.doc{display:flex;flex-direction:column;align-items:center;gap:28px;padding:28px 0}
+.slide{width:1280px;height:720px;position:relative;overflow:hidden;flex:none}
+.dk{background:var(--ink);color:var(--d1)} .lt{background:var(--paper);color:var(--l1)}
+
+/* fascia editoriale: sempre 336px, sempre a un lato */
+.band{position:absolute;top:0;bottom:0;width:336px;padding:56px 40px;
+  display:flex;flex-direction:column}
+.band--l{left:0} .band--r{right:0}
+.dk .band{background:var(--chrome);border-right:1px solid var(--d-line)}
+.dk .band--r{border-right:0;border-left:1px solid var(--d-line)}
+.lt .band{background:var(--paper-2);border-right:1px solid var(--l-line)}
+.lt .band--r{border-right:0;border-left:1px solid var(--l-line)}
+
+.kicker{font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.dk .kicker{color:var(--acid)} .lt .kicker{color:var(--l3)}
+h1{font-size:56px;line-height:1.03;letter-spacing:-.035em;font-weight:600}
+h2{font-size:40px;line-height:1.07;letter-spacing:-.03em;font-weight:600}
+.sup{font-size:18px;line-height:1.5} .dk .sup{color:var(--d2)} .lt .sup{color:var(--l2)}
+.lbl{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.dk .lbl{color:var(--d3)} .lt .lbl{color:var(--l3)}
+.note{font-size:12px;line-height:1.45} .dk .note{color:var(--d3)} .lt .note{color:var(--l3)}
+.hl{color:var(--acid)} .lt .hl{background:var(--acid);color:var(--ink);padding:0 .12em}
+.wm{font-family:var(--ui);font-weight:700;font-size:16px;letter-spacing:-.04em}
+.wm i{color:var(--acid);font-style:normal}
+.spacer{flex:1}
+
+/* --- chrome della vista di prodotto --- */
+.app{position:absolute;background:var(--chrome);border:1px solid var(--d-line)}
+.app__bar{display:flex;justify-content:space-between;align-items:center;
+  padding:13px 20px;border-bottom:1px solid var(--d-line);
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--d3)}
+.kpi{font-size:56px;line-height:.92;letter-spacing:-.045em;font-weight:600}
+.kpi u{font-size:.34em;text-decoration:none;margin-left:.08em;letter-spacing:0}
+
+/* --- callout numerati sulla vista --- */
+.co{position:absolute;display:flex;gap:11px;align-items:flex-start;max-width:280px}
+.co__n{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--acid);
+  width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex:none}
+.co__t{font-size:15px;line-height:1.4;color:var(--d1);
+  background:rgba(10,10,10,.86);padding:3px 9px}
+.lt .co__t{color:var(--l1);background:rgba(255,255,255,.9)}

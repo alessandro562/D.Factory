@@ -1,0 +1,66 @@
+/* ==========================================================================
+   DIREZIONE A — INDUSTRIAL SIGNAL · linea e tempo
+   Il visual dominante e' sempre una scena nel tempo. Nessuna card.
+   L'informazione sta direttamente sul canvas, separata da spazio e filetti.
+   Il giallo marca UN evento per canvas.
+   ========================================================================== */
+*{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --ink:#0A0A0A; --ink-2:#151515;
+  --paper:#FFFFFF; --paper-2:#F4F5F1;
+  --acid:#E6E011;
+
+  --d1:#FFFFFF; --d2:rgba(255,255,255,.70); --d3:rgba(255,255,255,.42);
+  --d-line:rgba(255,255,255,.14); --d-rule:rgba(255,255,255,.30);
+  --l1:#0A0A0A; --l2:rgba(10,10,10,.62); --l3:rgba(10,10,10,.40);
+  --l-line:rgba(10,10,10,.12); --l-rule:rgba(10,10,10,.26);
+
+  --ui:"Geist",-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:"Geist Mono",Menlo,monospace;
+
+  --m:64px;              /* margine di pagina */
+}
+
+html{background:#1b1b1b}
+body{font-family:var(--ui);-webkit-font-smoothing:antialiased;
+     font-feature-settings:"tnum" 1;}
+.doc{display:flex;flex-direction:column;align-items:center;gap:28px;padding:28px 0}
+
+.slide{width:1280px;height:720px;position:relative;overflow:hidden;flex:none}
+.dk{background:var(--ink);color:var(--d1)}
+.lt{background:var(--paper);color:var(--l1)}
+
+/* ---- rail: minimo, una riga sola, mai due ---- */
+.rail{position:absolute;left:var(--m);right:var(--m);bottom:38px;
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.13em;
+  text-transform:uppercase}
+.dk .rail{color:var(--d3)} .lt .rail{color:var(--l3)}
+.wm{font-family:var(--ui);font-weight:700;font-size:16px;letter-spacing:-.04em;
+  text-transform:none}
+.wm i{color:var(--acid);font-style:normal}
+
+/* ---- tipografia ---- */
+.kicker{font-family:var(--mono);font-size:13px;letter-spacing:.2em;
+  text-transform:uppercase;font-weight:500}
+.dk .kicker{color:var(--acid)} .lt .kicker{color:var(--l3)}
+h1{font-size:64px;line-height:1.02;letter-spacing:-.035em;font-weight:600}
+h2{font-size:54px;line-height:1.05;letter-spacing:-.032em;font-weight:600}
+.sup{font-size:19px;line-height:1.5;font-weight:400;max-width:430px}
+.dk .sup{color:var(--d2)} .lt .sup{color:var(--l2)}
+.lbl{font-family:var(--mono);font-size:13px;letter-spacing:.1em;
+  text-transform:uppercase}
+.dk .lbl{color:var(--d3)} .lt .lbl{color:var(--l3)}
+.note{font-size:12px;line-height:1.45}
+.dk .note{color:var(--d3)} .lt .note{color:var(--l3)}
+.hl{color:var(--acid)}
+.lt .hl{background:var(--acid);color:var(--ink);padding:0 .12em}
+
+/* ---- numeri ---- */
+.big{font-size:88px;line-height:.9;letter-spacing:-.05em;font-weight:600}
+.big u{font-size:.36em;text-decoration:none;letter-spacing:0;margin-left:.08em}
+.mid{font-size:40px;line-height:1;letter-spacing:-.04em;font-weight:600}
+
+/* ---- zone ---- */
+.z{position:absolute;left:var(--m);right:var(--m)}

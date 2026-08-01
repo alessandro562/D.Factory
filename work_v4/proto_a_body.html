@@ -1,0 +1,349 @@
+<div class="doc">
+
+<!-- ============================ A1 · COVER ============================ -->
+<div class="slide dk" id="a1_cover">
+  <!-- visual dominante: 700x720 = 55% del canvas, esce dal bordo destro -->
+  <svg width="760" height="720" viewBox="0 0 760 720" style="position:absolute;right:0;top:0"
+       role="img" aria-labelledby="a1t a1d">
+    <title id="a1t">Turno mattina di una linea di confezionamento</title>
+    <desc id="a1d">Cinque macchine sullo stesso asse dei tempi. Alle 07:18 il Labeler si ferma
+      per nove minuti e il fermo si propaga a valle.</desc>
+    <g font-family="Geist Mono" font-size="13" fill="rgba(255,255,255,.42)"
+       letter-spacing="1.4">
+      <text x="0" y="150">DEPALLETIZER</text>
+      <text x="0" y="230">FILLER</text>
+      <text x="0" y="310">CAPPER</text>
+      <text x="0" y="390">LABELER</text>
+      <text x="0" y="470">CASE PACKER</text>
+    </g>
+    <!-- barre di stato: bianco = in marcia, tratteggio = fermo -->
+    <g>
+      <rect x="150" y="132" width="610" height="26" fill="rgba(255,255,255,.82)"/>
+      <rect x="150" y="212" width="610" height="26" fill="rgba(255,255,255,.82)"/>
+      <rect x="150" y="292" width="610" height="26" fill="rgba(255,255,255,.82)"/>
+      <!-- LABELER: il fermo -->
+      <rect x="150" y="372" width="238" height="26" fill="rgba(255,255,255,.82)"/>
+      <rect x="388" y="372" width="86" height="26" fill="#E6E011"/>
+      <rect x="474" y="372" width="286" height="26" fill="rgba(255,255,255,.82)"/>
+      <!-- CASE PACKER: propagazione, il polmone assorbe solo in parte -->
+      <rect x="150" y="452" width="292" height="26" fill="rgba(255,255,255,.82)"/>
+      <rect x="442" y="452" width="54" height="26" fill="rgba(255,255,255,.26)"/>
+      <rect x="496" y="452" width="264" height="26" fill="rgba(255,255,255,.82)"/>
+    </g>
+    <!-- marcatore dell'evento -->
+    <line x1="388" y1="96" x2="388" y2="530" stroke="#E6E011" stroke-width="1.5"/>
+    <circle cx="388" cy="385" r="19" fill="none" stroke="#E6E011" stroke-width="1.5"/>
+    <text x="388" y="82" font-family="Geist Mono" font-size="13" fill="#E6E011"
+          letter-spacing="1.4" text-anchor="middle">07:18</text>
+    <text x="406" y="562" font-family="Geist" font-size="17" fill="#fff">Fermo di 9 minuti.</text>
+    <text x="406" y="586" font-family="Geist" font-size="17" fill="rgba(255,255,255,.70)">Nessuno lo ha annotato.</text>
+    <!-- asse -->
+    <line x1="150" y1="512" x2="760" y2="512" stroke="rgba(255,255,255,.14)"/>
+    <g font-family="Geist Mono" font-size="12.5" fill="rgba(255,255,255,.42)" letter-spacing="1.2">
+      <text x="150" y="534">06:00</text><text x="303" y="534">07:00</text>
+      <text x="456" y="534">08:00</text><text x="609" y="534">09:00</text>
+    </g>
+  </svg>
+
+  <div class="z" style="top:64px;right:auto;width:420px">
+    <div class="kicker">D.Factory · supervisione 4.0</div>
+  </div>
+
+  <div class="z" style="top:148px;right:auto;width:440px">
+    <h1>Dalla linea<br>al margine,<br>nello stesso dato.</h1>
+    <p class="sup" style="margin-top:24px">Produzione ed energia sullo stesso asse dei tempi.
+      Per stabilimenti F&amp;B multi-linea.</p>
+  </div>
+
+  <div class="z" style="bottom:104px;right:auto;width:420px;display:flex;gap:56px">
+    <div><div class="big">68,4<u>%</u></div><div class="lbl" style="margin-top:10px">OEE di linea</div></div>
+    <div><div class="big">0,029<u>€</u></div><div class="lbl" style="margin-top:10px">Costo energia / pezzo</div></div>
+  </div>
+
+  <div class="rail"><span class="wm">d<i>.</i>factory</span>
+    <span>Dati illustrativi · D Factory S.r.l. · Collecchio</span></div>
+</div>
+
+<!-- ======================= A2 · IL PUNTO CIECO ======================= -->
+<div class="slide dk" id="a2_punto_cieco">
+  <div class="z" style="top:64px"><div class="kicker">Il punto cieco</div></div>
+  <div class="z" style="top:118px;width:660px">
+    <h2>La linea si ferma.<br>L'energia no.</h2>
+  </div>
+  <div style="position:absolute;right:64px;top:130px;width:400px">
+    <p class="sup" style="max-width:400px">Nove minuti a zero pezzi con il
+      <span class="hl">62 % della potenza ancora assorbita</span>. In bolletta è un costo,
+      in produzione non è mai esistito.</p>
+  </div>
+
+  <svg width="1152" height="330" viewBox="0 0 1152 330"
+       style="position:absolute;left:64px;top:308px" role="img" aria-labelledby="a2t a2d">
+    <title id="a2t">Pezzi prodotti e potenza assorbita nello stesso turno</title>
+    <desc id="a2d">Durante il fermo delle 07:18 la produzione scende a zero mentre la
+      potenza assorbita resta al 62 per cento del valore di marcia.</desc>
+    <!-- fascia dell'evento -->
+    <rect x="322" y="0" width="96" height="258" fill="rgba(230,224,17,.10)"/>
+    <line x1="322" y1="0" x2="322" y2="258" stroke="#E6E011" stroke-width="1.2"/>
+    <line x1="418" y1="0" x2="418" y2="258" stroke="#E6E011" stroke-width="1.2"/>
+
+    <!-- serie 1: pezzi prodotti, crolla -->
+    <polyline fill="none" stroke="#fff" stroke-width="2.4"
+      points="0,74 54,70 107,78 161,72 215,68 268,74 322,72 340,196 370,240 400,238 418,196
+              472,80 526,72 580,76 634,70 688,74 741,68 795,72 849,70 903,76 957,70 1011,72 1065,68 1119,72"/>
+    <!-- serie 2: potenza assorbita, resta alta -->
+    <polyline fill="none" stroke="rgba(255,255,255,.34)" stroke-width="2.4" stroke-dasharray="7 5"
+      points="0,150 54,146 107,152 161,148 215,144 268,150 322,148 340,168 370,176 400,176 418,170
+              472,152 526,148 580,150 634,146 688,150 741,146 795,148 849,146 903,150 957,146 1011,148 1065,144 1119,148"/>
+
+    <line x1="0" y1="258" x2="1152" y2="258" stroke="rgba(255,255,255,.14)"/>
+    <g font-family="Geist Mono" font-size="12.5" fill="rgba(255,255,255,.42)" letter-spacing="1.2">
+      <text x="0" y="280">06:00</text><text x="268" y="280">07:00</text>
+      <text x="536" y="280">08:00</text><text x="804" y="280">09:00</text>
+      <text x="1064" y="280">10:00</text>
+    </g>
+    <!-- etichette di serie, sulla curva -->
+    <text x="1000" y="56" font-family="Geist" font-size="17" fill="#fff" text-anchor="end">Pezzi prodotti</text>
+    <text x="1000" y="134" font-family="Geist" font-size="17" fill="rgba(255,255,255,.70)" text-anchor="end">Potenza assorbita</text>
+    <!-- callout unico -->
+    <text x="370" y="316" font-family="Geist Mono" font-size="13" fill="#E6E011"
+          letter-spacing="1.4" text-anchor="middle">9 MIN</text>
+  </svg>
+
+  <div class="rail"><span class="wm">d<i>.</i>factory</span><span>Dati illustrativi · 02</span></div>
+</div>
+
+<!-- ==================== A3 · IL PRODOTTO IN AZIONE ==================== -->
+<div class="slide dk" id="a3_prodotto">
+  <div class="z" style="top:60px;width:620px">
+    <div class="kicker">Il prodotto in azione</div>
+    <h2 style="font-size:44px;margin-top:16px">Il turno, mentre<br>puoi ancora cambiarlo.</h2>
+  </div>
+
+  <!-- vista prodotto ricostruita, 1088x372 -->
+  <div class="viz" style="position:absolute;left:64px;top:288px;width:1152px;height:372px;
+              background:#151515;border:1px solid rgba(255,255,255,.16)">
+    <div style="display:flex;justify-content:space-between;align-items:center;
+                padding:13px 20px;border-bottom:1px solid rgba(255,255,255,.16)">
+      <span class="lbl" style="font-size:12.5px">Linea 04 · supervisione</span>
+      <span class="lbl" style="font-size:12.5px">Aggiornamento 5 s</span>
+    </div>
+    <div style="display:flex;height:326px">
+      <div style="width:250px;padding:24px 20px;border-right:1px solid rgba(255,255,255,.16)">
+        <div class="big" style="font-size:62px;color:var(--acid)">68,4<u>%</u></div>
+        <div class="lbl" style="margin-top:10px">OEE di linea</div>
+        <div style="height:1px;background:rgba(255,255,255,.14);margin:24px 0"></div>
+        <div class="mid">−6,6</div>
+        <div class="lbl" style="margin-top:8px">Punti dal target</div>
+      </div>
+      <div style="flex:1;padding:24px 20px">
+        <svg width="840" height="278" viewBox="0 0 840 278" aria-hidden="true">
+          <g font-family="Geist Mono" font-size="12.5" fill="rgba(255,255,255,.42)" letter-spacing="1.2">
+            <text x="0" y="34">DEPALLETIZER</text><text x="0" y="82">FILLER</text>
+            <text x="0" y="130">CAPPER</text><text x="0" y="178">LABELER</text>
+            <text x="0" y="226">CASE PACKER</text>
+          </g>
+          <g>
+            <rect x="132" y="20" width="708" height="18" fill="rgba(255,255,255,.72)"/>
+            <rect x="132" y="68" width="708" height="18" fill="rgba(255,255,255,.72)"/>
+            <rect x="132" y="116" width="708" height="18" fill="rgba(255,255,255,.72)"/>
+            <rect x="132" y="164" width="286" height="18" fill="rgba(255,255,255,.72)"/>
+            <rect x="418" y="164" width="96" height="18" fill="#E6E011"/>
+            <rect x="514" y="164" width="326" height="18" fill="rgba(255,255,255,.72)"/>
+            <rect x="132" y="212" width="352" height="18" fill="rgba(255,255,255,.72)"/>
+            <rect x="484" y="212" width="60" height="18" fill="rgba(255,255,255,.26)"/>
+            <rect x="544" y="212" width="296" height="18" fill="rgba(255,255,255,.72)"/>
+          </g>
+          <line x1="418" y1="10" x2="418" y2="248" stroke="#E6E011" stroke-width="1.2"/>
+          <g font-family="Geist Mono" font-size="12.5" fill="rgba(255,255,255,.42)" letter-spacing="1.2">
+            <text x="132" y="268">06:00</text><text x="404" y="268">07:18</text><text x="800" y="268">10:00</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- tre callout numerati, allineati al bordo destro del titolo -->
+  <div class="z" style="top:112px;left:auto;right:64px;width:430px">
+    <div style="display:flex;gap:14px;margin-bottom:20px">
+      <span style="font-family:var(--mono);font-size:13px;color:var(--acid)">01</span>
+      <span style="font-size:17px;line-height:1.4">Stati dai PLC, pezzi dai sensori.</span></div>
+    <div style="display:flex;gap:14px;margin-bottom:20px">
+      <span style="font-family:var(--mono);font-size:13px;color:var(--acid)">02</span>
+      <span style="font-size:17px;line-height:1.4">Una riga per macchina, un solo asse.</span></div>
+    <div style="display:flex;gap:14px">
+      <span style="font-family:var(--mono);font-size:13px;color:var(--acid)">03</span>
+      <span style="font-size:17px;line-height:1.4">Il Labeler apre il gap del turno.</span></div>
+  </div>
+
+  <div class="rail"><span class="wm">d<i>.</i>factory</span><span>Vista dimostrativa · dati illustrativi · 03</span></div>
+</div>
+
+<!-- ================== A4 · IL VALORE, DUE LEVE (chiara) ================== -->
+<div class="slide lt" id="a4_valore">
+  <div class="z" style="top:64px"><div class="kicker">Dove nasce il ritorno</div></div>
+  <div class="z" style="top:118px;width:640px">
+    <h2>Due leve, sullo stesso<br>evento.</h2>
+  </div>
+  <div style="position:absolute;right:64px;top:130px;width:400px">
+    <p class="sup" style="max-width:400px;color:var(--l2)">Gli input li hai già, tranne il
+      margine per ora di linea. Il risultato si calcola sulla tua linea in audit, non qui.</p>
+  </div>
+
+  <svg width="1152" height="300" viewBox="0 0 1152 300"
+       style="position:absolute;left:64px;top:308px" role="img" aria-labelledby="a4t a4d">
+    <title id="a4t">Le due leve del ritorno</title>
+    <desc id="a4d">Il tempo di fermo recuperato produce capacita'. L'energia assorbita da
+      fermo produce costo evitato. Le due leve nascono dallo stesso evento misurato.</desc>
+    <!-- evento -->
+    <rect x="0" y="112" width="230" height="76" fill="#0A0A0A"/>
+    <text x="24" y="146" font-family="Geist" font-size="19" fill="#fff">Un fermo</text>
+    <text x="24" y="170" font-family="Geist" font-size="19" fill="rgba(255,255,255,.70)">misurato</text>
+    <!-- biforcazione -->
+    <path d="M230 150 L300 150 L300 66 L392 66" fill="none" stroke="#0A0A0A" stroke-width="1.6"/>
+    <path d="M230 150 L300 150 L300 234 L392 234" fill="none" stroke="#0A0A0A" stroke-width="1.6"/>
+    <polygon points="392,66 384,61 384,71" fill="#0A0A0A"/>
+    <polygon points="392,234 384,229 384,239" fill="#0A0A0A"/>
+    <!-- ramo 1 -->
+    <text x="406" y="48" font-family="Geist Mono" font-size="13" fill="rgba(10,10,10,.40)" letter-spacing="1.4">LEVA 01 · CAPACITÀ</text>
+    <text x="406" y="80" font-family="Geist" font-size="22" fill="#0A0A0A">Ore di linea recuperate</text>
+    <line x1="406" y1="100" x2="1152" y2="100" stroke="rgba(10,10,10,.12)"/>
+    <text x="406" y="126" font-family="Geist" font-size="17" fill="rgba(10,10,10,.62)">ore/anno × punti di OEE × margine orario</text>
+    <!-- ramo 2 -->
+    <text x="406" y="216" font-family="Geist Mono" font-size="13" fill="rgba(10,10,10,.40)" letter-spacing="1.4">LEVA 02 · ENERGIA</text>
+    <text x="406" y="248" font-family="Geist" font-size="22" fill="#0A0A0A">Consumo fuori produzione</text>
+    <line x1="406" y1="268" x2="1152" y2="268" stroke="rgba(10,10,10,.12)"/>
+    <text x="406" y="294" font-family="Geist" font-size="17" fill="rgba(10,10,10,.62)">bolletta di linea × quota da fermo × quota attaccabile</text>
+    <!-- segnale giallo: il punto in comune -->
+    <circle cx="300" cy="150" r="7" fill="#E6E011"/>
+  </svg>
+
+  <div class="rail"><span class="wm">d<i>.</i>factory</span><span>04</span></div>
+</div>
+
+<!-- ============ A5 · DOSSIER — ARCHITETTURA TECNICA (chiara) ============ -->
+<div class="slide lt" id="a5_architettura" data-kind="dossier">
+  <div class="z" style="top:56px;display:flex;justify-content:space-between;align-items:baseline">
+    <div><div class="kicker">Sezione 1 · architettura</div>
+      <h2 style="font-size:38px;margin-top:14px">Da dove arrivano i dati e dove restano.</h2></div>
+    <div class="lbl">Pag. 03</div>
+  </div>
+
+  <svg width="1152" height="368" viewBox="0 0 1152 368"
+       style="position:absolute;left:64px;top:180px" role="img" aria-labelledby="a5t a5d">
+    <title id="a5t">Flusso dei dati dalla rete OT al posto di lavoro</title>
+    <desc id="a5d">Le sorgenti in rete OT passano da connettori e tag mapping al modello dati
+      unico, che risiede sul server del cliente e alimenta viste, report ed export.</desc>
+    <!-- tre fasce di rete -->
+    <g font-family="Geist Mono" font-size="12.5" letter-spacing="1.4" fill="rgba(10,10,10,.40)">
+      <text x="0" y="16">RETE OT</text>
+      <text x="404" y="16">LIVELLO INTERMEDIO</text>
+      <text x="700" y="16">RETE IT · SERVER DEL CLIENTE</text>
+    </g>
+    <line x1="0" y1="28" x2="360" y2="28" stroke="rgba(10,10,10,.26)"/>
+    <line x1="404" y1="28" x2="656" y2="28" stroke="rgba(10,10,10,.26)"/>
+    <line x1="700" y1="28" x2="1152" y2="28" stroke="rgba(10,10,10,.26)"/>
+
+    <!-- sorgenti -->
+    <g font-family="Geist" font-size="17" fill="#0A0A0A">
+      <text x="0" y="82">PLC di linea</text>
+      <text x="0" y="130">Sensori esistenti</text>
+      <text x="0" y="178">Contatori energia</text>
+      <text x="0" y="226">Gestionale · sola lettura</text>
+    </g>
+    <g stroke="rgba(10,10,10,.26)" stroke-width="1.4" fill="none">
+      <path d="M250 76 L404 148"/><path d="M250 124 L404 148"/>
+      <path d="M250 172 L404 148"/><path d="M250 220 L404 148"/>
+    </g>
+
+    <!-- livello intermedio -->
+    <rect x="404" y="112" width="252" height="72" fill="none" stroke="#0A0A0A" stroke-width="1.6"/>
+    <text x="424" y="142" font-family="Geist" font-size="19" fill="#0A0A0A">Connettori</text>
+    <text x="424" y="166" font-family="Geist" font-size="19" fill="#0A0A0A">e tag mapping</text>
+    <text x="404" y="208" font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.40)"
+          letter-spacing="1.2">SOLO IN LETTURA · A CARICO D.FACTORY</text>
+
+    <!-- modello dati -->
+    <path d="M656 148 L700 148" stroke="#0A0A0A" stroke-width="1.6"/>
+    <polygon points="700,148 692,143 692,153" fill="#0A0A0A"/>
+    <rect x="700" y="96" width="452" height="104" fill="#0A0A0A"/>
+    <text x="724" y="134" font-family="Geist" font-size="22" fill="#fff">Un solo modello dati</text>
+    <text x="724" y="164" font-family="Geist" font-size="17" fill="rgba(255,255,255,.70)">Stabilimento · area · linea · macchina</text>
+    <circle cx="1120" cy="120" r="7" fill="#E6E011"/>
+    <text x="700" y="224" font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.40)"
+          letter-spacing="1.2">IL DATO RESTA QUI</text>
+
+    <!-- output -->
+    <g font-family="Geist" font-size="17" fill="#0A0A0A">
+      <text x="700" y="290">Viste per ruolo</text>
+      <text x="890" y="290">Report ITA · ENG</text>
+      <text x="1064" y="290">Export</text>
+    </g>
+    <g stroke="rgba(10,10,10,.26)" stroke-width="1.4">
+      <path d="M760 200 L760 268"/><path d="M950 200 L950 268"/><path d="M1090 200 L1090 268"/>
+    </g>
+    <line x1="0" y1="330" x2="1152" y2="330" stroke="rgba(10,10,10,.12)"/>
+    <text x="0" y="356" font-family="Geist" font-size="15" fill="rgba(10,10,10,.62)">Nessun flusso in
+      scrittura verso le macchine. Nessun flusso verso internet dalla rete di linea, nel perimetro concordato con il tuo IT.</text>
+  </svg>
+
+  <div class="rail"><span class="wm">d<i>.</i>factory</span>
+    <span>Dossier tecnico · sezione 1 · pag. 03</span></div>
+</div>
+
+<!-- ============ A6 · DOSSIER — DEPLOYMENT E SICUREZZA (chiara) ============ -->
+<div class="slide lt" id="a6_deployment" data-kind="dossier">
+  <div class="z" style="top:56px;display:flex;justify-content:space-between;align-items:baseline">
+    <div><div class="kicker">Sezione 3 · integrazione</div>
+      <h2 style="font-size:38px;margin-top:14px">Cosa chiede al tuo IT.</h2></div>
+    <div class="lbl">Pag. 13</div>
+  </div>
+
+  <svg width="700" height="376" viewBox="0 0 700 376"
+       style="position:absolute;left:64px;top:176px" role="img" aria-labelledby="a6t a6d">
+    <title id="a6t">Segmentazione delle zone di rete</title>
+    <desc id="a6d">Rete OT, livello intermedio e rete IT restano separati. I flussi fra le
+      zone sono solo in lettura e non esiste un percorso verso internet dalla linea.</desc>
+    <rect x="0" y="0" width="700" height="104" fill="#F4F5F1"/>
+    <text x="20" y="34" font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.40)" letter-spacing="1.4">ZONA 1 · RETE OT</text>
+    <text x="20" y="66" font-family="Geist" font-size="19" fill="#0A0A0A">PLC, sensori, contatori energia</text>
+    <text x="20" y="90" font-family="Geist" font-size="15" fill="rgba(10,10,10,.62)">Nessuna scrittura verso le macchine</text>
+
+    <rect x="0" y="136" width="700" height="104" fill="#F4F5F1"/>
+    <text x="20" y="170" font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.40)" letter-spacing="1.4">ZONA 2 · LIVELLO INTERMEDIO</text>
+    <text x="20" y="202" font-family="Geist" font-size="19" fill="#0A0A0A">Connettori, tag mapping, normalizzazione</text>
+    <text x="20" y="226" font-family="Geist" font-size="15" fill="rgba(10,10,10,.62)">Flussi solo in lettura</text>
+
+    <rect x="0" y="272" width="700" height="104" fill="#0A0A0A"/>
+    <text x="20" y="306" font-family="Geist Mono" font-size="12.5" fill="rgba(255,255,255,.42)" letter-spacing="1.4">ZONA 3 · RETE IT · SERVER DEL CLIENTE</text>
+    <text x="20" y="338" font-family="Geist" font-size="19" fill="#fff">Applicazione, database, modello dati</text>
+    <text x="20" y="362" font-family="Geist" font-size="15" fill="rgba(255,255,255,.70)">PC industriale Linux fornito dal cliente</text>
+
+    <!-- frecce unidirezionali fra le zone -->
+    <path d="M350 104 L350 130" stroke="#E6E011" stroke-width="2"/>
+    <polygon points="350,136 343,127 357,127" fill="#E6E011"/>
+    <path d="M350 240 L350 266" stroke="#E6E011" stroke-width="2"/>
+    <polygon points="350,272 343,263 357,263" fill="#E6E011"/>
+    <text x="366" y="126" font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.62)" letter-spacing="1.2">LETTURA</text>
+    <text x="366" y="262" font-family="Geist Mono" font-size="12.5" fill="rgba(10,10,10,.62)" letter-spacing="1.2">LETTURA</text>
+  </svg>
+
+  <!-- unica area secondaria: il blocco degli aperti, non otto chip sparsi -->
+  <div style="position:absolute;right:64px;top:176px;width:388px">
+    <div style="font-size:17px;line-height:1.5;color:var(--l1);padding-bottom:20px;
+                border-bottom:1px solid var(--l-rule)">
+      Il dato di produzione resta in fabbrica, su un server tuo. Lo storico è tuo; i diritti
+      d'uso del software si definiscono in contratto.</div>
+    <div class="lbl" style="margin-top:26px">Da definire nel solution design</div>
+    <div style="font-size:15px;line-height:1.9;color:var(--l2);margin-top:14px">
+      Sizing del server<br>Porte e protocolli<br>Autenticazione e ruoli<br>
+      Backup e retention<br>Aggiornamenti e patching<br>Logging e audit trail<br>
+      Accesso remoto per il supporto<br>Licenza a fine contratto</div>
+    <div class="note" style="margin-top:22px">Nessuna di queste voci si dichiara prima di
+      averla concordata con il tuo IT.</div>
+  </div>
+
+  <div class="rail"><span class="wm">d<i>.</i>factory</span>
+    <span>Dossier tecnico · sezione 3 · pag. 13</span></div>
+</div>
+
+</div>

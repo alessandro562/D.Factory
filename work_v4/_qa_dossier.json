@@ -1,0 +1,200 @@
+[
+ {
+  "id": "d01_cover",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 102,
+  "fragments": 27,
+  "smallText": [],
+  "visualPct": 20.7,
+  "collisions": []
+ },
+ {
+  "id": "d02_architettura_prodotto",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 153,
+  "fragments": 29,
+  "smallText": [],
+  "visualPct": 43.4,
+  "collisions": []
+ },
+ {
+  "id": "d03_architettura_tecnica",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 129,
+  "fragments": 29,
+  "smallText": [],
+  "visualPct": 74.5,
+  "collisions": []
+ },
+ {
+  "id": "d04_capability",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 131,
+  "fragments": 36,
+  "smallText": [],
+  "visualPct": 49.6,
+  "collisions": []
+ },
+ {
+  "id": "d05_supervisione",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 78,
+  "fragments": 23,
+  "smallText": [],
+  "visualPct": 73.2,
+  "collisions": []
+ },
+ {
+  "id": "d06_oee_fermi",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 149,
+  "fragments": 36,
+  "smallText": [],
+  "visualPct": 72.5,
+  "collisions": []
+ },
+ {
+  "id": "d07_velocita_qualita",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 11.6,
+  "words": 118,
+  "fragments": 30,
+  "smallText": [],
+  "visualPct": 71.8,
+  "collisions": []
+ },
+ {
+  "id": "d08_multi_impianto",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 11.6,
+  "words": 62,
+  "fragments": 17,
+  "smallText": [],
+  "visualPct": 75,
+  "collisions": []
+ },
+ {
+  "id": "d09_distribuzione_energia",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 98,
+  "fragments": 42,
+  "smallText": [],
+  "visualPct": 72,
+  "collisions": []
+ },
+ {
+  "id": "d10_costo_co2_stato",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 129,
+  "fragments": 34,
+  "smallText": [],
+  "visualPct": 72,
+  "collisions": []
+ },
+ {
+  "id": "d11_metodo_misura",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 165,
+  "fragments": 35,
+  "smallText": [],
+  "visualPct": 73.3,
+  "collisions": []
+ },
+ {
+  "id": "d12_brownfield",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 160,
+  "fragments": 36,
+  "smallText": [],
+  "visualPct": 49.6,
+  "collisions": []
+ },
+ {
+  "id": "d13_deployment_security",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 146,
+  "fragments": 30,
+  "smallText": [],
+  "visualPct": 70,
+  "collisions": []
+ },
+ {
+  "id": "d14_sensori",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 150,
+  "fragments": 32,
+  "smallText": [],
+  "visualPct": 41.6,
+  "collisions": []
+ },
+ {
+  "id": "d15_output_integrazioni",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 122,
+  "fragments": 45,
+  "smallText": [],
+  "visualPct": 49.6,
+  "collisions": []
+ },
+ {
+  "id": "d16_delivery_raci",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 112,
+  "fragments": 41,
+  "smallText": [],
+  "visualPct": 41.6,
+  "collisions": []
+ },
+ {
+  "id": "d17_criteri_pilot",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 151,
+  "fragments": 26,
+  "smallText": [],
+  "visualPct": 41.6,
+  "collisions": []
+ },
+ {
+  "id": "d18_supporto_audit",
+  "kind": "dossier",
+  "overflow": [],
+  "minText": 12,
+  "words": 151,
+  "fragments": 34,
+  "smallText": [],
+  "visualPct": 0,
+  "collisions": []
+ }
+]
