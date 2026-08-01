@@ -121,44 +121,45 @@ h2.sm{font-size:44px}
 <div class="doc">
 
 <!-- =====================================================================
-     CAMPIONE 1 · SALES · L'OFFERTA
+     CAMPIONE 1 · SALES · L’OFFERTA
      Visual: architettura cumulativa per contenimento. Connect sta dentro
      Insight, che sta dentro Refyn. Le uniche linee sono CONFINI (i tre
      riquadri annidati) e SEPARATORI (le due fasce in basso). Nessun
      connettore, quindi nessuna freccia e nessuna diagonale.
+     I tre livelli hanno lo stesso trattamento: stesso tratto, stesso
+     corpo, stessa colonna per il testo. La progressione di valore e'
+     affidata a una rampa di tono che cresce verso l’esterno, cioe' verso
+     il livello che contiene di piu'. Nessun livello e' evidenziato.
      ===================================================================== -->
 <div class="slide lt" id="s06_offerta">
-  <div class="z" style="top:56px"><div class="kicker">L'offerta</div></div>
-  <div class="z" style="top:104px;width:900px">
-    <h2 class="sm">Tre livelli.<br>Ognuno contiene il precedente.</h2>
+  <div class="z" style="top:56px"><div class="kicker">L’offerta</div></div>
+  <div class="z" style="top:104px;width:960px">
+    <h2 class="sm">Tre livelli.<br>Una base comune, capacità crescenti.</h2>
   </div>
 
   <svg width="1152" height="208" viewBox="0 0 1152 208"
        style="position:absolute;left:64px;top:272px" role="img" aria-labelledby="o1t o1d">
-    <title id="o1t">I tre livelli dell'offerta, annidati per contenimento</title>
-    <desc id="o1d">Connect e' il riquadro interno: supervisione, OEE e consumi, baseline.
-      Insight lo contiene e aggiunge cause, correlazioni, costo e CO2. Refyn contiene entrambi
-      e aggiunge priorita', azioni e verifica dei benefici.</desc>
+    <title id="o1t">I tre livelli dell’offerta, annidati per contenimento</title>
+    <desc id="o1d">Connect è il riquadro interno e porta supervisione, OEE e consumi,
+      baseline. Insight lo contiene e aggiunge cause, correlazioni, costo e CO₂. Refyn
+      contiene entrambi e aggiunge priorità, azioni e verifica dei benefici. Il tono cresce
+      verso l’esterno: ogni livello contiene il precedente e aggiunge capacità.</desc>
 
     <!-- CONFINE esterno · Refyn -->
-    <rect x="0" y="0" width="1152" height="208" fill="#F3F4F0" stroke="#0A0A0A" stroke-width="1.6"/>
+    <rect x="0" y="0" width="1152" height="208" fill="#E2E3DD" stroke="#0A0A0A" stroke-width="1.6"/>
     <text x="24" y="34" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A">Refyn</text>
-    <rect x="104" y="20" width="10" height="10" fill="#E6E011"/>
-    <text x="124" y="34" font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">in sviluppo</text>
-    <text x="1128" y="34" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)"
-          text-anchor="end">aggiunge priorità, azioni, verifica dei benefici</text>
+    <text x="112" y="34" font-family="Geist" font-size="15" fill="rgba(10,10,10,.56)">in sviluppo</text>
+    <text x="280" y="34" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">aggiunge priorità, azioni, verifica dei benefici</text>
 
     <!-- CONFINE intermedio · Insight -->
-    <rect x="28" y="48" width="1096" height="132" fill="rgba(10,10,10,.09)" stroke="#0A0A0A" stroke-width="1.6"/>
+    <rect x="28" y="48" width="1096" height="132" fill="#EFF0EB" stroke="#0A0A0A" stroke-width="1.6"/>
     <text x="52" y="82" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A">Insight</text>
-    <text x="1100" y="82" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)"
-          text-anchor="end">aggiunge cause, correlazioni, costo e CO₂</text>
+    <text x="280" y="82" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">aggiunge cause, correlazioni, costo e CO₂</text>
 
     <!-- CONFINE interno · Connect -->
-    <rect x="56" y="96" width="1040" height="68" fill="#0A0A0A"/>
-    <text x="80" y="137" font-family="Geist" font-size="24" font-weight="600" fill="#fff">Connect</text>
-    <text x="1072" y="137" font-family="Geist" font-size="16" fill="rgba(255,255,255,.78)"
-          text-anchor="end">supervisione, OEE e consumi, baseline</text>
+    <rect x="56" y="96" width="1040" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.6"/>
+    <text x="80" y="137" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A">Connect</text>
+    <text x="280" y="137" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">supervisione, OEE e consumi, baseline</text>
   </svg>
 
   <!-- SEPARATORI: le due fasce comuni, a tutta larghezza -->
@@ -172,7 +173,7 @@ h2.sm{font-size:44px}
     <div style="display:flex;gap:32px;padding-top:16px">
       <div style="width:196px;font-size:15px;font-weight:500;color:var(--l2)">Su ogni livello</div>
       <div style="font-size:17px">Servizi opzionali di assessment, integrazione, configurazione KPI,
-        review, formazione e supporto</div>
+        analisi periodiche, formazione e supporto</div>
     </div>
   </div>
 

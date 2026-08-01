@@ -30,7 +30,8 @@ JS = r"""
   for (const slide of document.querySelectorAll('.slide')) {
     const sb = slide.getBoundingClientRect();
     const rec = { id: slide.id, kind: slide.dataset.kind || 'sales', overflow: [],
-                  minText: 999, words: 0, fragments: 0,
+                  minText: 999, minCont: 999, minMeta: 999, minSvg: 999,
+                  words: 0, fragments: 0,
                   smallText: [], visualPct: 0, collisions: [] };
 
     // ---- testo: cammina i nodi di testo, misura il corpo effettivo ----
@@ -48,17 +49,30 @@ JS = r"""
       }
       if (hidden) continue;
 
-      // corpo effettivo: per gli SVG applica il fattore di scala del viewBox
+      // corpo effettivo: per gli SVG applica il fattore di scala del viewBox,
+      // cioe' quanto il testo misura davvero sul canvas renderizzato
       let fs = parseFloat(getComputedStyle(p).fontSize);
       const svg = p.ownerSVGElement || (p.tagName.toLowerCase() === 'svg' ? p : null);
       if (svg) {
         const vb = svg.viewBox && svg.viewBox.baseVal;
         if (vb && vb.width) fs = fs * (svg.getBoundingClientRect().width / vb.width);
       }
-      rec.minText = Math.min(rec.minText, Math.round(fs * 10) / 10);
-      // la soglia dipende dal tipo di canvas: filtrata lato Python
-      const isNote = !!(p.closest('.note') || p.classList.contains('note'));
-      if (fs < 12.5) rec.smallText.push([t.slice(0, 40), Math.round(fs * 10) / 10, isNote]);
+      fs = Math.round(fs * 10) / 10;
+
+      // tre popolazioni distinte, con soglie diverse:
+      //   svg   testo dentro un SVG, misurato dopo la scala del viewBox
+      //   meta  intestazione, piede, numerazione, filigrana, note di margine
+      //   cont  tutto il resto, cioe' il contenuto della pagina
+      const isMeta = !!(p.closest('.hd, .ft, .rail, .note') ||
+                        p.classList.contains('note') || p.classList.contains('pg') ||
+                        p.classList.contains('wm'));
+      const bucket = svg ? 'svg' : (isMeta ? 'meta' : 'cont');
+      rec.minText = Math.min(rec.minText, fs);
+      if (bucket === 'svg')  rec.minSvg  = Math.min(rec.minSvg, fs);
+      if (bucket === 'meta') rec.minMeta = Math.min(rec.minMeta, fs);
+      if (bucket === 'cont') rec.minCont = Math.min(rec.minCont, fs);
+      // la soglia dipende dal tipo di canvas e dalla popolazione: filtrata lato Python
+      if (fs < 15) rec.smallText.push([t.slice(0, 40), fs, bucket]);
 
       const words = t.split(/\s+/).filter(w => /[\p{L}\p{N}]/u.test(w));
       rec.words += words.length;
@@ -151,52 +165,72 @@ def run(html):
         # link interni
         anchors = pg.eval_on_selector_all('a[href^="#"]', 'a => a.map(x => x.getAttribute("href"))')
         ids = pg.eval_on_selector_all('[id]', 'e => e.map(x => x.id)')
+        # apostrofi e accenti: il controllo include title e desc degli SVG, che sono
+        # invisibili a schermo ma fanno parte del documento e li legge lo screen reader
+        texts = pg.evaluate(r"""() => {
+          const out = [];
+          for (const s of document.querySelectorAll('.slide'))
+            for (const n of s.querySelectorAll('title, desc, *'))
+              if (n.children.length === 0 && n.textContent.trim())
+                out.push([s.id, n.tagName.toLowerCase(), n.textContent.replace(/\s+/g,' ').trim()]);
+          return out;
+        }""")
         b.close()
     broken = [a for a in anchors if a[1:] not in ids]
-    return data, console, requests, broken, ids
+    typo = [(sid, tag, t) for sid, tag, t in texts
+            if "'" in t or any(x in t for x in ("e' ", "a' ", "i' ", "o' ", "u' "))]
+    return data, console, requests, broken, ids, typo
 
 
 # soglie per tipo di canvas:
-#   (max parole, target, % visual minima, px minimi, px minimi per label/tabella)
-# Sales: label >= 12,5 px · note 11-12 px.
-# Dossier: corpo >= 13,5 px · label e tabelle >= 11,5 px.
-LIMITS = {'sales':    (65, '55-65',  0, 12.4, 12.4),
-          'dossier':  (125, '<=125',  0, 12.4, 12.4),
-          'appendix': (125, '<=125',  0, 12.4, 12.4)}
+#   (max parole, target, % visual minima, min contenuti, min metadati, min SVG)
+# Il corpo minimo si misura su tre popolazioni distinte, perche' hanno funzioni
+# diverse: il contenuto si legge in proiezione, i metadati si consultano da vicino,
+# il testo SVG va misurato dopo la scala del viewBox e non come e' scritto nel file.
+# Deck: contenuti >= 15 px, testo SVG >= 14 px, metadati >= 12,4 px.
+# Dossier: contenuti >= 14 px come da brief, testo SVG >= 13 px, metadati >= 12,4 px.
+LIMITS = {'sales':    (65,  '55-65', 0, 15.0, 12.4, 14.0),
+          'dossier':  (125, '<=125', 0, 14.0, 12.4, 13.0),
+          'appendix': (125, '<=125', 0, 14.0, 12.4, 13.0)}
 
 
 def report(html, default='sales'):
-    data, console, reqs, broken, ids = run(html)
+    data, console, reqs, broken, ids, typo = run(html)
     print(f'\n=== {os.path.basename(html)} · {len(data)} canvas ===')
     print(f'console errors: {console or "none"} · network requests: {reqs or "none"} '
           f'· broken anchors: {broken or "none"} · duplicate ids: '
           f'{ {i for i in ids if ids.count(i)>1} or "none"}')
-    print(f'{"id":34s}{"words":>6}{"frag":>6}{"minpx":>7}{"vis%":>7}  flags')
+    print(f'apostrofi diritti o accenti scritti con apostrofo: {len(typo) or "nessuno"}')
+    for sid, tag, t in typo[:6]:
+        print(f'      ! {sid} <{tag}> "{t[:70]}"')
+    print(f'{"id":30s}{"words":>6}{"frag":>6}{"cont":>7}{"meta":>7}{"svg":>7}{"vis%":>7}  flags')
     tot = 0
     bad = 0
     for r in data:
-        wmax, wtarget, vmin, tmin, lmin = LIMITS[r.get('kind', default)]
-        # filtra il testo piccolo con la soglia del tipo di canvas
-        r['smallText'] = [s for s in r['smallText']
-                          if s[1] < (10.9 if s[2] else lmin)]
+        wmax, wtarget, vmin, cmin, mmin, smin = LIMITS[r.get('kind', default)]
+        floor = {'cont': cmin, 'meta': mmin, 'svg': smin}
+        # filtra il testo piccolo con la soglia della sua popolazione
+        r['smallText'] = [s for s in r['smallText'] if s[1] < floor[s[2]]]
         flags = []
         if r['overflow']: flags.append(f'OVERFLOW×{len(r["overflow"])}')
         if r['collisions']: flags.append(f'COLLIS×{len(r["collisions"])}')
         if r['words'] > wmax: flags.append(f'words>{wmax}')
-        if r['minText'] < tmin: flags.append(f'text<{tmin}')
-        if r['smallText']: flags.append(f'small×{len(r["smallText"])}')
+        if r['minCont'] < cmin: flags.append(f'cont<{cmin}')
+        if r['minMeta'] < mmin: flags.append(f'meta<{mmin}')
+        if r['minSvg'] < smin: flags.append(f'svg<{smin}')
         if r['visualPct'] < vmin: flags.append(f'visual<{vmin}%')
         if flags: bad += 1
         tot += r['words']
-        print(f'{r["id"]:34s}{r["words"]:>6}{r["fragments"]:>6}{r["minText"]:>7}'
-              f'{r["visualPct"]:>7}  {" ".join(flags)}')
+        fmt = lambda v: '—' if v == 999 else f'{v}'
+        print(f'{r["id"]:30s}{r["words"]:>6}{r["fragments"]:>6}{fmt(r["minCont"]):>7}'
+              f'{fmt(r["minMeta"]):>7}{fmt(r["minSvg"]):>7}{r["visualPct"]:>7}  {" ".join(flags)}')
         for o in r['overflow'][:4]:
             print(f'      ! overflow {o["tag"]}.{o["cls"]} dx={o["dx"]} dy={o["dy"]} "{o["txt"]}"')
         for c in r['collisions'][:4]:
             print(f'      ! collisione {c["a"]} / {c["b"]} {c["ox"]}×{c["oy"]}px '
                   f'"{c["at"]}" ~ "{c["bt"]}"')
         for s in r['smallText'][:4]:
-            print(f'      ! testo {s[1]}px "{s[0]}"')
+            print(f'      ! testo {s[2]} {s[1]}px "{s[0]}"')
     print(f'--- media parole: {tot/len(data):.0f} · canvas con flag: {bad}/{len(data)}')
     return data
 
