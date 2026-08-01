@@ -1,63 +1,274 @@
 <div class="doc">
 
 <!-- =====================================================================
-     CAMPIONE 1 · SALES · L’OFFERTA
-     Visual: architettura cumulativa per contenimento. Connect sta dentro
-     Insight, che sta dentro Refyn. Le uniche linee sono CONFINI (i tre
-     riquadri annidati) e SEPARATORI (le due fasce in basso). Nessun
-     connettore, quindi nessuna freccia e nessuna diagonale.
-     I tre livelli hanno lo stesso trattamento: stesso tratto, stesso
-     corpo, stessa colonna per il testo. La progressione di valore e'
-     affidata a una rampa di tono che cresce verso l’esterno, cioe' verso
-     il livello che contiene di piu'. Nessun livello e' evidenziato.
+     CAMPIONE 1 · COVER
+     Il prodotto entra subito: la copertina e' una vista di turno con un
+     fermo reale sopra. Il giallo marca l’evento, non decora.
+     Le viste sono ricostruzioni, dichiarate come tali.
      ===================================================================== -->
-<div class="slide lt" id="s06_offerta">
-  <div class="z" style="top:56px"><div class="kicker">L’offerta</div></div>
-  <div class="z" style="top:104px;width:960px">
-    <h2 class="sm">Tre livelli.<br>Una base comune, capacità crescenti.</h2>
+<div class="slide dk" id="s01_cover">
+  <div class="z" style="top:52px;display:flex;justify-content:space-between;align-items:baseline">
+    <span class="wm" style="font-size:19px">D<i>.</i>Factory</span>
+    <span class="note">Vista ricostruita · dati illustrativi</span>
   </div>
 
-  <svg width="1152" height="208" viewBox="0 0 1152 208"
-       style="position:absolute;left:64px;top:272px" role="img" aria-labelledby="o1t o1d">
-    <title id="o1t">I tre livelli dell’offerta, annidati per contenimento</title>
-    <desc id="o1d">Connect è il riquadro interno e porta supervisione, OEE e consumi,
-      baseline. Insight lo contiene e aggiunge cause, correlazioni, costo e CO₂. Refyn
-      contiene entrambi e aggiunge priorità, azioni e verifica dei benefici. Il tono cresce
-      verso l’esterno: ogni livello contiene il precedente e aggiunge capacità.</desc>
+  <div class="z" style="top:120px;width:1040px">
+    <h1>Ogni fermata ha una causa.<br>E un costo.</h1>
+  </div>
+  <div class="z" style="top:268px"><div class="sup">Supervisione di produzione ed energia
+    per le linee food &amp; beverage.</div></div>
 
-    <!-- CONFINE esterno · Refyn -->
-    <rect x="0" y="0" width="1152" height="208" fill="#E2E3DD" stroke="#0A0A0A" stroke-width="1.6"/>
-    <text x="24" y="34" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A">Refyn</text>
-    <text x="112" y="34" font-family="Geist" font-size="15" fill="rgba(10,10,10,.56)">in sviluppo</text>
-    <text x="280" y="34" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">aggiunge priorità, azioni, verifica dei benefici</text>
+  <!-- la vista esce dai margini e viene tagliata dal bordo: e' una schermata,
+       non un’illustrazione messa dentro una cornice -->
+  <svg data-ui="1" width="1280" height="420" viewBox="0 0 1280 420"
+       style="position:absolute;left:0;top:300px" role="img" aria-labelledby="c1t c1d">
+    <title id="c1t">Vista di turno ricostruita</title>
+    <desc id="c1d">Tre macchine di una linea di confezionamento lungo il turno. Sulla
+      tappatrice un fermo di diciotto minuti alle 11:24, con la causa a fianco. Sotto,
+      il consumo orario di energia della linea.</desc>
 
-    <!-- CONFINE intermedio · Insight -->
-    <rect x="28" y="48" width="1096" height="132" fill="#EFF0EB" stroke="#0A0A0A" stroke-width="1.6"/>
-    <text x="52" y="82" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A">Insight</text>
-    <text x="280" y="82" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">aggiunge cause, correlazioni, costo e CO₂</text>
+    <rect x="0" y="0" width="1280" height="420" fill="#141414"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(255,255,255,.14)" stroke-width="1.5"/>
+    <text x="64" y="44" font-family="Geist" font-size="15" font-weight="600" fill="#FFFFFF">Linea 1 · Confezionamento</text>
+    <text x="1216" y="44" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)"
+          text-anchor="end">Turno 06:00 – 14:00</text>
+    <path d="M0 64 L1280 64" stroke="rgba(255,255,255,.14)"/>
 
-    <!-- CONFINE interno · Connect -->
-    <rect x="56" y="96" width="1040" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.6"/>
-    <text x="80" y="137" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A">Connect</text>
-    <text x="280" y="137" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">supervisione, OEE e consumi, baseline</text>
+    <!-- fondo delle tracce -->
+    <g fill="rgba(255,255,255,.08)">
+      <rect x="250" y="104" width="750" height="40"/>
+      <rect x="250" y="164" width="750" height="40"/>
+      <rect x="250" y="224" width="750" height="40"/>
+    </g>
+    <!-- marcia -->
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="250" y="104" width="348" height="40"/><rect x="626" y="104" width="374" height="40"/>
+      <rect x="250" y="164" width="644" height="40"/><rect x="918" y="164" width="82" height="40"/>
+      <rect x="250" y="224" width="505" height="40"/><rect x="784" y="224" width="216" height="40"/>
+    </g>
+    <!-- l’evento: il fermo della tappatrice e il cursore sul suo istante -->
+    <rect x="755" y="224" width="29" height="40" fill="#E6E011"/>
+    <path d="M769 88 L769 278" stroke="#E6E011" stroke-width="1.5"/>
+
+    <g font-family="Geist" font-size="14" fill="rgba(255,255,255,.72)">
+      <text x="64" y="129">Riempitrice</text>
+      <text x="64" y="189">Etichettatrice</text>
+      <text x="64" y="249">Tappatrice</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">
+      <text x="250" y="292">06:00</text>
+      <text x="625" y="292" text-anchor="middle">10:00</text>
+      <text x="1000" y="292" text-anchor="end">14:00</text>
+    </g>
+
+    <path d="M1040 64 L1040 320" stroke="rgba(255,255,255,.14)"/>
+    <rect x="1064" y="104" width="12" height="12" fill="#E6E011"/>
+    <text x="1064" y="168" font-family="Geist" font-size="28" font-weight="600" fill="#FFFFFF">11:24</text>
+    <text x="1064" y="200" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">Fermo 18 minuti</text>
+    <text x="1064" y="228" font-family="Geist" font-size="14" fill="rgba(255,255,255,.44)">Mancanza tappi a monte</text>
+
+    <!-- la sezione successiva, tagliata dal bordo del canvas -->
+    <path d="M0 320 L1280 320" stroke="rgba(255,255,255,.14)"/>
+    <text x="64" y="352" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">Energia · kWh per ora</text>
+    <g fill="rgba(255,255,255,.30)">
+      <rect x="250" y="382" width="52" height="38"/><rect x="314" y="374" width="52" height="46"/>
+      <rect x="378" y="388" width="52" height="32"/><rect x="442" y="370" width="52" height="50"/>
+      <rect x="506" y="378" width="52" height="42"/><rect x="570" y="366" width="52" height="54"/>
+      <rect x="634" y="384" width="52" height="36"/><rect x="698" y="376" width="52" height="44"/>
+      <rect x="762" y="392" width="52" height="28"/><rect x="826" y="372" width="52" height="48"/>
+      <rect x="890" y="380" width="52" height="40"/><rect x="954" y="386" width="52" height="34"/>
+    </g>
+  </svg>
+</div>
+
+
+<!-- =====================================================================
+     CAMPIONE 2 · IL PRODOTTO IN AZIONE
+     Una sola idea: il fermo, la sua causa e il suo costo stanno nella
+     stessa schermata. Punto focale unico, l’evento in giallo.
+     ===================================================================== -->
+<div class="slide lt" id="s04_prodotto">
+  <div class="z" style="top:60px;width:1040px">
+    <h2 class="sm">Il fermo, la causa e il costo<br>nella stessa schermata.</h2>
+  </div>
+
+  <svg data-ui="1" width="1152" height="420" viewBox="0 0 1152 420"
+       style="position:absolute;left:64px;top:196px" role="img" aria-labelledby="p2t p2d">
+    <title id="p2t">Dettaglio di un fermo, vista ricostruita</title>
+    <desc id="p2d">La finestra dalle dieci a mezzogiorno sulle tre macchine della linea.
+      Il fermo della tappatrice è selezionato: durata diciotto minuti, causa mancanza tappi
+      a monte, mancata produzione stimata milleduecentoquaranta euro. Sotto, la curva
+      dell’OEE che scende nell’intervallo del fermo.</desc>
+
+    <rect x="0" y="0" width="1152" height="420" fill="#FFFFFF" stroke="rgba(10,10,10,.16)"/>
+    <rect x="1" y="1" width="1150" height="51" fill="#F3F4F0"/>
+    <text x="24" y="33" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">Linea 1 · Confezionamento</text>
+    <text x="1128" y="33" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)"
+          text-anchor="end">10:00 – 12:00</text>
+    <path d="M0 52 L1152 52" stroke="rgba(10,10,10,.16)"/>
+
+    <g fill="rgba(10,10,10,.07)">
+      <rect x="200" y="84" width="544" height="34"/>
+      <rect x="200" y="134" width="544" height="34"/>
+      <rect x="200" y="184" width="544" height="34"/>
+    </g>
+    <g fill="#0A0A0A">
+      <rect x="200" y="84" width="544" height="34"/>
+      <rect x="200" y="134" width="544" height="34"/>
+      <rect x="200" y="184" width="380" height="34"/><rect x="662" y="184" width="82" height="34"/>
+    </g>
+    <rect x="580" y="184" width="82" height="34" fill="#E6E011"/>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">
+      <text x="24" y="106">Riempitrice</text>
+      <text x="24" y="156">Etichettatrice</text>
+      <text x="24" y="206">Tappatrice</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">
+      <text x="200" y="246">10:00</text>
+      <text x="472" y="246" text-anchor="middle">11:00</text>
+      <text x="744" y="246" text-anchor="end">12:00</text>
+    </g>
+
+    <!-- l’OEE nella stessa finestra: la curva scende dove c’e' il fermo -->
+    <path d="M0 268 L768 268" stroke="rgba(10,10,10,.12)"/>
+    <text x="24" y="296" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">OEE nella finestra</text>
+    <text x="744" y="296" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">71,4%</text>
+    <path d="M200 328 L245 324 L290 332 L335 326 L380 330 L425 324 L470 328 L515 332
+             L560 338 L580 364 L620 384 L662 380 L700 348 L744 332"
+          fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+    <path d="M580 312 L580 396 M662 312 L662 396" stroke="rgba(10,10,10,.20)" stroke-dasharray="3 3"/>
+
+    <path d="M768 52 L768 420" stroke="rgba(10,10,10,.16)"/>
+    <rect x="792" y="84" width="12" height="12" fill="#E6E011"/>
+    <text x="792" y="132" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A">11:24 – 11:42</text>
+    <text x="792" y="162" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">Fermo 18 minuti</text>
+    <path d="M792 190 L1128 190" stroke="rgba(10,10,10,.12)"/>
+    <text x="792" y="218" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Causa</text>
+    <text x="792" y="244" font-family="Geist" font-size="18" fill="#0A0A0A">Mancanza tappi a monte</text>
+    <path d="M792 272 L1128 272" stroke="rgba(10,10,10,.12)"/>
+    <text x="792" y="300" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Mancata produzione stimata</text>
+    <text x="792" y="340" font-family="Geist" font-size="30" font-weight="600" fill="#0A0A0A">1.240 €</text>
+    <text x="792" y="368" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">18 min · 62 pz/min · 1,11 €/pz</text>
   </svg>
 
-  <!-- SEPARATORI: le due fasce comuni, a tutta larghezza -->
-  <div class="z" style="top:524px">
-    <div class="hr"></div>
-    <div style="display:flex;gap:32px;padding-top:16px">
-      <div style="width:196px;font-size:15px;font-weight:500;color:var(--l2)">In ogni livello</div>
-      <div style="font-size:17px">Produzione, OEE, energia, utility e storico</div>
-    </div>
-    <div class="hr" style="margin-top:16px"></div>
-    <div style="display:flex;gap:32px;padding-top:16px">
-      <div style="width:196px;font-size:15px;font-weight:500;color:var(--l2)">Su ogni livello</div>
-      <div style="font-size:17px">Servizi opzionali di assessment, integrazione, configurazione KPI,
-        analisi periodiche, formazione e supporto</div>
-    </div>
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span style="font-family:var(--ui);font-size:13px;letter-spacing:0;text-transform:none">Vista ricostruita · dati illustrativi</span></div>
+</div>
+
+
+<!-- =====================================================================
+     CAMPIONE 3 · CONNECT · INSIGHT · REFYN
+     Non una tassonomia: tre viste dello stesso prodotto, ognuna con la
+     domanda a cui risponde. Le tre viste crescono in altezza perche' ogni
+     livello comprende il precedente.
+     Il giallo segue un solo filo lungo le tre viste: la tappatrice ferma,
+     la causa che pesa di piu', l’azione il cui beneficio e' verificato.
+     ===================================================================== -->
+<div class="slide lt" id="s06_offerta">
+  <div class="z" style="top:60px;width:1040px">
+    <h2 class="sm">Dalla linea alla decisione verificata.</h2>
   </div>
 
-  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>06 / 09</span></div>
+  <div style="position:absolute;left:64px;top:270px;width:336px">
+    <span style="font-size:21px;font-weight:600;letter-spacing:-.02em">Connect</span>
+    <div style="font-size:15px;color:var(--l2);margin-top:5px">Che cosa sta succedendo?</div>
+  </div>
+  <div style="position:absolute;left:418px;top:222px;width:372px">
+    <span style="font-size:21px;font-weight:600;letter-spacing:-.02em">Insight</span>
+    <div style="font-size:15px;color:var(--l2);margin-top:5px">Perché succede e quanto pesa?</div>
+  </div>
+  <div style="position:absolute;left:808px;top:174px;width:408px">
+    <span style="font-size:21px;font-weight:600;letter-spacing:-.02em">Refyn</span><span
+      style="font-size:15px;color:var(--l3);margin-left:12px">in sviluppo</span>
+    <div style="font-size:15px;color:var(--l2);margin-top:5px">Che cosa facciamo e ha funzionato?</div>
+  </div>
+
+  <!-- CONNECT · stato ora -->
+  <svg data-ui="1" width="336" height="216" viewBox="0 0 336 216"
+       style="position:absolute;left:64px;top:324px" role="img" aria-labelledby="v1t v1d">
+    <title id="v1t">Vista Connect ricostruita</title>
+    <desc id="v1d">Lo stato delle tre macchine adesso: la tappatrice è ferma. OEE di turno
+      settantuno virgola quattro per cento.</desc>
+    <rect x="0" y="0" width="336" height="216" fill="#FFFFFF" stroke="rgba(10,10,10,.16)"/>
+    <rect x="1" y="1" width="334" height="35" fill="#F3F4F0"/>
+    <text x="16" y="24" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Stato attuale</text>
+    <g font-family="Geist" font-size="13" fill="#0A0A0A">
+      <text x="16" y="72">Riempitrice</text><text x="16" y="104">Etichettatrice</text>
+      <text x="16" y="136">Tappatrice</text>
+    </g>
+    <g fill="#0A0A0A">
+      <rect x="150" y="62" width="170" height="12"/><rect x="150" y="94" width="170" height="12"/>
+    </g>
+    <rect x="150" y="126" width="170" height="12" fill="#E6E011"/>
+    <path d="M16 162 L320 162" stroke="rgba(10,10,10,.12)"/>
+    <text x="16" y="192" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">OEE</text>
+    <text x="320" y="196" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">71,4%</text>
+  </svg>
+
+  <!-- INSIGHT · cause e peso -->
+  <svg data-ui="1" width="372" height="264" viewBox="0 0 372 264"
+       style="position:absolute;left:418px;top:276px" role="img" aria-labelledby="v2t v2d">
+    <title id="v2t">Vista Insight ricostruita</title>
+    <desc id="v2d">Le cause di fermo degli ultimi sette giorni, ordinate per costo. La
+      mancanza tappi pesa quattromilacento euro.</desc>
+    <rect x="0" y="0" width="372" height="264" fill="#FFFFFF" stroke="rgba(10,10,10,.16)"/>
+    <rect x="1" y="1" width="370" height="35" fill="#F3F4F0"/>
+    <text x="16" y="24" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Cause di fermo · 7 giorni</text>
+
+    <g font-family="Geist" font-size="13" fill="#0A0A0A">
+      <text x="16" y="76">Mancanza tappi</text><text x="16" y="116">Cambio formato</text>
+      <text x="16" y="156">Micro-fermate</text><text x="16" y="196">Manutenzione</text>
+    </g>
+    <rect x="150" y="64" width="104" height="16" fill="#E6E011"/>
+    <g fill="#0A0A0A">
+      <rect x="150" y="104" width="66" height="16"/><rect x="150" y="144" width="48" height="16"/>
+      <rect x="150" y="184" width="30" height="16"/>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.74)" text-anchor="end">
+      <text x="356" y="76">4.100 €</text><text x="356" y="116">2.600 €</text>
+      <text x="356" y="156">1.900 €</text><text x="356" y="196">1.200 €</text>
+    </g>
+    <path d="M16 222 L356 222" stroke="rgba(10,10,10,.12)"/>
+    <text x="16" y="248" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Totale</text>
+    <text x="356" y="248" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">9.800 €</text>
+  </svg>
+
+  <!-- REFYN · azioni e verifica -->
+  <svg data-ui="1" width="408" height="312" viewBox="0 0 408 312"
+       style="position:absolute;left:808px;top:228px" role="img" aria-labelledby="v3t v3d">
+    <title id="v3t">Vista Refyn ricostruita</title>
+    <desc id="v3d">Le azioni aperte sulla linea. La prima ha un beneficio verificato di due
+      virgola uno punti di OEE, le altre sono in verifica o da avviare.</desc>
+    <rect x="0" y="0" width="408" height="312" fill="#FFFFFF" stroke="rgba(10,10,10,.16)"/>
+    <rect x="1" y="1" width="406" height="35" fill="#F3F4F0"/>
+    <text x="16" y="24" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Azioni</text>
+
+    <text x="16" y="80" font-family="Geist" font-size="15" fill="#0A0A0A">Kit tappi a bordo linea</text>
+    <rect x="272" y="68" width="10" height="10" fill="#E6E011"/>
+    <text x="392" y="78" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">+2,1 pt OEE</text>
+    <text x="392" y="102" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)"
+          text-anchor="end">verificato</text>
+    <path d="M16 126 L392 126" stroke="rgba(10,10,10,.12)"/>
+
+    <text x="16" y="168" font-family="Geist" font-size="15" fill="#0A0A0A">Riduzione micro-fermate</text>
+    <text x="392" y="168" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)"
+          text-anchor="end">in verifica</text>
+    <path d="M16 200 L392 200" stroke="rgba(10,10,10,.12)"/>
+
+    <text x="16" y="242" font-family="Geist" font-size="15" fill="#0A0A0A">Setup cambio formato</text>
+    <text x="392" y="242" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)"
+          text-anchor="end">da avviare</text>
+    <path d="M16 274 L392 274" stroke="rgba(10,10,10,.12)"/>
+  </svg>
+
+  <div class="z" style="top:576px"><div style="font-size:15px;color:var(--l2)">Ogni livello
+    comprende il precedente · Servizi specialistici attivabili su tutti i livelli</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span style="font-family:var(--ui);font-size:13px;letter-spacing:0;text-transform:none">Viste ricostruite · dati illustrativi</span></div>
 </div>
 
 </div>

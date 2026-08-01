@@ -30,8 +30,8 @@ JS = r"""
   for (const slide of document.querySelectorAll('.slide')) {
     const sb = slide.getBoundingClientRect();
     const rec = { id: slide.id, kind: slide.dataset.kind || 'sales', overflow: [],
-                  minText: 999, minCont: 999, minMeta: 999, minSvg: 999,
-                  words: 0, fragments: 0,
+                  minText: 999, minCont: 999, minMeta: 999, minSvg: 999, minUi: 999,
+                  words: 0, wordsUi: 0, wordsMeta: 0, fragments: 0,
                   smallText: [], visualPct: 0, collisions: [] };
 
     // ---- testo: cammina i nodi di testo, misura il corpo effettivo ----
@@ -59,23 +59,32 @@ JS = r"""
       }
       fs = Math.round(fs * 10) / 10;
 
-      // tre popolazioni distinte, con soglie diverse:
-      //   svg   testo dentro un SVG, misurato dopo la scala del viewBox
+      // quattro popolazioni distinte, con soglie diverse:
+      //   ui    testo dentro una vista di prodotto: e' il contenuto della
+      //         schermata, non il messaggio della slide. Uno screenshot vero
+      //         porta le sue etichette e nessuno le conta come copy.
+      //   svg   testo dentro un diagramma, misurato dopo la scala del viewBox
       //   meta  intestazione, piede, numerazione, filigrana, note di margine
-      //   cont  tutto il resto, cioe' il contenuto della pagina
+      //   cont  tutto il resto, cioe' il testo che parla al lettore
+      const isUi = !!p.closest('svg[data-ui]');
       const isMeta = !!(p.closest('.hd, .ft, .rail, .note') ||
                         p.classList.contains('note') || p.classList.contains('pg') ||
                         p.classList.contains('wm'));
-      const bucket = svg ? 'svg' : (isMeta ? 'meta' : 'cont');
+      const bucket = isUi ? 'ui' : (svg ? 'svg' : (isMeta ? 'meta' : 'cont'));
       rec.minText = Math.min(rec.minText, fs);
+      if (bucket === 'ui')   rec.minUi   = Math.min(rec.minUi, fs);
       if (bucket === 'svg')  rec.minSvg  = Math.min(rec.minSvg, fs);
       if (bucket === 'meta') rec.minMeta = Math.min(rec.minMeta, fs);
       if (bucket === 'cont') rec.minCont = Math.min(rec.minCont, fs);
       // la soglia dipende dal tipo di canvas e dalla popolazione: filtrata lato Python
       if (fs < 15) rec.smallText.push([t.slice(0, 40), fs, bucket]);
 
+      // il copy e' quello che parla al lettore: non il testo di una schermata,
+      // non la filigrana e il piede che stanno su ogni slide
       const words = t.split(/\s+/).filter(w => /[\p{L}\p{N}]/u.test(w));
       rec.words += words.length;
+      if (bucket === 'ui') rec.wordsUi += words.length;
+      if (bucket === 'meta') rec.wordsMeta += words.length;
       seen.push(t);
     }
     rec.fragments = seen.length;
@@ -187,11 +196,15 @@ def run(html):
 # Il corpo minimo si misura su tre popolazioni distinte, perche' hanno funzioni
 # diverse: il contenuto si legge in proiezione, i metadati si consultano da vicino,
 # il testo SVG va misurato dopo la scala del viewBox e non come e' scritto nel file.
-# Deck: contenuti >= 15 px, testo SVG >= 14 px, metadati >= 12,4 px.
-# Dossier: contenuti >= 14 px come da brief, testo SVG >= 13 px, metadati >= 12,4 px.
-LIMITS = {'sales':    (65,  '55-65', 0, 15.0, 12.4, 14.0),
-          'dossier':  (125, '<=125', 0, 14.0, 12.4, 13.0),
-          'appendix': (125, '<=125', 0, 14.0, 12.4, 13.0)}
+# (max parole di copy, target, % visual minima, min contenuti, min metadati,
+#  min diagrammi, min viste di prodotto)
+# Il tetto di parole vale sul copy: il testo dentro una vista di prodotto e'
+# parte della schermata, come in uno screenshot vero, e si misura a parte.
+# Deck: contenuti >= 15 px, diagrammi >= 14 px, viste >= 11,5 px, metadati >= 12,4 px.
+# Dossier: contenuti >= 14 px come da brief, diagrammi >= 13 px.
+LIMITS = {'sales':    (40,  '25-40', 0, 15.0, 12.4, 14.0, 11.4),
+          'dossier':  (125, '<=125', 0, 14.0, 12.4, 13.0, 11.4),
+          'appendix': (125, '<=125', 0, 14.0, 12.4, 13.0, 11.4)}
 
 
 def report(html, default='sales'):
@@ -203,27 +216,31 @@ def report(html, default='sales'):
     print(f'apostrofi diritti o accenti scritti con apostrofo: {len(typo) or "nessuno"}')
     for sid, tag, t in typo[:6]:
         print(f'      ! {sid} <{tag}> "{t[:70]}"')
-    print(f'{"id":30s}{"words":>6}{"frag":>6}{"cont":>7}{"meta":>7}{"svg":>7}{"vis%":>7}  flags')
+    print(f'{"id":26s}{"copy":>6}{"vista":>6}{"cont":>7}{"meta":>7}{"diag":>7}'
+          f'{"vista":>7}{"vis%":>7}  flags')
     tot = 0
     bad = 0
     for r in data:
-        wmax, wtarget, vmin, cmin, mmin, smin = LIMITS[r.get('kind', default)]
-        floor = {'cont': cmin, 'meta': mmin, 'svg': smin}
+        wmax, wtarget, vmin, cmin, mmin, smin, umin = LIMITS[r.get('kind', default)]
+        floor = {'cont': cmin, 'meta': mmin, 'svg': smin, 'ui': umin}
         # filtra il testo piccolo con la soglia della sua popolazione
         r['smallText'] = [s for s in r['smallText'] if s[1] < floor[s[2]]]
+        copy = r['words'] - r['wordsUi'] - r['wordsMeta']
         flags = []
         if r['overflow']: flags.append(f'OVERFLOW×{len(r["overflow"])}')
         if r['collisions']: flags.append(f'COLLIS×{len(r["collisions"])}')
-        if r['words'] > wmax: flags.append(f'words>{wmax}')
+        if copy > wmax: flags.append(f'copy>{wmax}')
         if r['minCont'] < cmin: flags.append(f'cont<{cmin}')
         if r['minMeta'] < mmin: flags.append(f'meta<{mmin}')
-        if r['minSvg'] < smin: flags.append(f'svg<{smin}')
+        if r['minSvg'] < smin: flags.append(f'diag<{smin}')
+        if r['minUi'] < umin: flags.append(f'vista<{umin}')
         if r['visualPct'] < vmin: flags.append(f'visual<{vmin}%')
         if flags: bad += 1
-        tot += r['words']
+        tot += copy
         fmt = lambda v: '—' if v == 999 else f'{v}'
-        print(f'{r["id"]:30s}{r["words"]:>6}{r["fragments"]:>6}{fmt(r["minCont"]):>7}'
-              f'{fmt(r["minMeta"]):>7}{fmt(r["minSvg"]):>7}{r["visualPct"]:>7}  {" ".join(flags)}')
+        print(f'{r["id"]:26s}{copy:>6}{r["wordsUi"]:>6}{fmt(r["minCont"]):>7}'
+              f'{fmt(r["minMeta"]):>7}{fmt(r["minSvg"]):>7}{fmt(r["minUi"]):>7}'
+              f'{r["visualPct"]:>7}  {" ".join(flags)}')
         for o in r['overflow'][:4]:
             print(f'      ! overflow {o["tag"]}.{o["cls"]} dx={o["dx"]} dy={o["dy"]} "{o["txt"]}"')
         for c in r['collisions'][:4]:
