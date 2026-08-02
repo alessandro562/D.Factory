@@ -1,0 +1,1086 @@
+<div class="doc">
+<!-- =====================================================================
+     D.FACTORY · SALES DECK v6 · 9 slide
+     Benchmark visuale: slide 03. Prodotto protagonista, pochi testi, un
+     solo evento evidenziato, relazione diretta fra dato operativo, causa
+     e impatto economico.
+     Le viste sono ricostruzioni dichiarate: nessun risultato di cliente.
+     DATASET ILLUSTRATIVO, coerente in tutto il deck e ricostruibile:
+       linea 1 · confezionamento · riempitrice, etichettatrice, tappatrice
+       500 pz/min · margine unitario 0,14 EUR/pz  ->  70 EUR al minuto
+       evento 11:24-11:42 · 18 min · mancanza tappi  ->  1.260 EUR
+       7 giorni: tappi 14 ev · 96 min · 6.720
+                 cambio formato 4 ev · 62 min · 4.340
+                 micro-fermate 38 ev · 41 min · 2.870
+                 manutenzione 2 ev · 25 min · 1.750
+                 totale 58 ev · 224 min · 15.680  ·  quota prima causa 43%
+       energia 95 kW in marcia · 38 kW a linea ferma · 0,22 EUR/kWh
+                720 kWh per turno (calcolati dai fermi)  ->  158 EUR
+       anno 46 settimane  ->  96 x 70 x 46 = 309.120 EUR
+     I parametri sono dichiarati per esteso nel piede della slide 07.
+     Un solo indicatore temporale verticale, sempre giallo, sempre
+     sull'istante dell'evento: slide 01, 03, 04, 09.
+     ===================================================================== -->
+
+
+<!-- ============================ 01 · COVER ============================ -->
+<div class="slide dk" id="s01_cover">
+  <div class="z" style="top:52px"><span class="wm" style="font-size:19px">D<i>.</i>Factory</span></div>
+
+  <div class="z" style="top:88px;width:1040px">
+    <h1>Ogni fermata ha una causa.<br>E un costo.</h1>
+  </div>
+  <div class="z" style="top:218px"><div class="sup">Supervisione di produzione ed energia
+    per le linee food &amp; beverage.</div></div>
+
+  <svg data-ui="1" width="1280" height="420" viewBox="0 0 1280 420"
+       style="position:absolute;left:0;top:264px" role="img" aria-labelledby="c1t c1d">
+    <title id="c1t">Vista di turno ricostruita</title>
+    <desc id="c1d">Tre macchine di una linea di confezionamento lungo il turno, con il
+      consumo orario di energia sotto. Sulla tappatrice un fermo di diciotto minuti alle
+      11:24 e la causa a fianco. Un indicatore verticale segna l’istante del fermo su
+      entrambe le sezioni.</desc>
+
+    <rect x="0" y="0" width="1280" height="420" fill="#141414"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(255,255,255,.14)" stroke-width="1.5"/>
+    <text x="64" y="34" font-family="Geist" font-size="15" font-weight="600" fill="#FFFFFF">Linea 1 · Confezionamento</text>
+    <text x="1216" y="34" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)"
+          text-anchor="end">vista ricostruita · dati illustrativi</text>
+    <text x="298" y="34" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">turno 06:00 – 14:00</text>
+    <path d="M0 52 L1280 52" stroke="rgba(255,255,255,.14)"/>
+
+    <g fill="rgba(255,255,255,.09)">
+      <rect x="250" y="84" width="750" height="34"/>
+      <rect x="250" y="132" width="750" height="34"/>
+      <rect x="250" y="180" width="750" height="34"/>
+    </g>
+    <!-- gli stessi cinque fermi elencati sulla slide 02, alle loro ore -->
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="250" y="84" width="112" height="34"/><rect x="370" y="84" width="386" height="34"/>
+      <rect x="784" y="84" width="146" height="34"/><rect x="935" y="84" width="65" height="34"/>
+      <rect x="250" y="132" width="112" height="34"/><rect x="370" y="132" width="386" height="34"/>
+      <rect x="784" y="132" width="146" height="34"/><rect x="935" y="132" width="65" height="34"/>
+      <rect x="250" y="180" width="112" height="34"/><rect x="370" y="180" width="386" height="34"/>
+      <rect x="784" y="180" width="146" height="34"/><rect x="935" y="180" width="65" height="34"/>
+    </g>
+    <rect x="756" y="180" width="28" height="34" fill="#E6E011"/>
+
+    <g font-family="Geist" font-size="14" fill="rgba(255,255,255,.72)">
+      <text x="64" y="105">Riempitrice</text>
+      <text x="64" y="153">Etichettatrice</text>
+      <text x="64" y="201">Tappatrice</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">
+      <text x="250" y="240">06:00</text>
+      <text x="625" y="240" text-anchor="middle">10:00</text>
+      <text x="1000" y="240" text-anchor="end">14:00</text>
+    </g>
+
+    <path d="M1040 52 L1040 292" stroke="rgba(255,255,255,.14)"/>
+    <rect x="1064" y="84" width="12" height="12" fill="#E6E011"/>
+    <text x="1064" y="144" font-family="Geist" font-size="26" font-weight="600" fill="#FFFFFF">11:24</text>
+    <text x="1064" y="176" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">Fermo 18 minuti</text>
+    <text x="1064" y="202" font-family="Geist" font-size="14" fill="rgba(255,255,255,.44)">Mancanza tappi a monte</text>
+
+    <!-- l’energia e' una sezione intera, con il suo asse: non un taglio -->
+    <path d="M0 292 L1280 292" stroke="rgba(255,255,255,.14)"/>
+    <text x="64" y="324" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">Energia · kWh per ora</text>
+    <!-- altezze proporzionali ai kWh dell'ora, base a zero: l'ora del fermo
+         e' l'unica che scende davvero -->
+    <g fill="rgba(255,255,255,.46)">
+      <rect x="250" y="332" width="82" height="46"/><rect x="344" y="334" width="82" height="44"/>
+      <rect x="438" y="332" width="82" height="46"/><rect x="532" y="332" width="82" height="46"/>
+      <rect x="626" y="332" width="82" height="46"/><rect x="720" y="340" width="82" height="38"/>
+      <rect x="814" y="332" width="82" height="46"/><rect x="908" y="333" width="82" height="45"/>
+    </g>
+    <path d="M250 336 L1000 336" stroke="rgba(255,255,255,.30)"/>
+    <g font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.44)" text-anchor="end">
+      <text x="238" y="338">95</text><text x="238" y="382">0</text>
+    </g>
+    <text x="761" y="328" font-family="Geist" font-size="13" fill="#FFFFFF"
+          text-anchor="middle">78 kWh</text>
+    <!-- l’indicatore sta sull’istante dichiarato, 11:24, non a meta’ del blocco -->
+    <path d="M756 76 L756 378" stroke="#E6E011" stroke-width="1.5"/>
+  </svg>
+
+</div>
+
+
+<!-- ========================= 02 · PUNTO CIECO =========================
+     Questa NON e' una schermata di D.Factory: e' il rapporto che il cliente
+     ha oggi. Niente riquadro dell'applicazione, niente barra di testata:
+     un documento, con i filetti di un elenco stampato. La colonna della
+     causa e' fatta di campi vuoti, non di trattini: si vede che manca
+     qualcosa da scrivere. La riga delle 11:24 e' lo stesso fermo che la
+     slide 03 mostrera' con la sua causa. -->
+<div class="slide lt" id="s02_punto_cieco">
+  <div class="z" style="top:56px;width:1000px">
+    <h2 class="sm">Il fermo si vede.<br>La causa no.</h2>
+  </div>
+  <div class="z" style="top:176px"><div class="sup">Senza causa, il fermo si ripete.</div></div>
+
+  <svg data-ui="1" width="1280" height="400" viewBox="0 0 1280 400"
+       style="position:absolute;left:0;top:250px" role="img" aria-labelledby="b2t b2d">
+    <title id="b2t">Rapporto di fine turno, esempio ricostruito</title>
+    <desc id="b2d">Il rapporto che arriva oggi a fine turno: cinque fermi per quarantadue
+      minuti complessivi, con la durata di ciascuno. La colonna della causa è fatta di
+      campi vuoti: nessuna causa registrata.</desc>
+
+    <text x="64" y="20" font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">Rapporto di fine turno · Linea 1 · 06:00 – 14:00</text>
+    <text x="1216" y="20" font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)"
+          text-anchor="end">come arriva oggi</text>
+    <path d="M64 36 L1216 36" stroke="rgba(10,10,10,.30)"/>
+
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">
+      <text x="64" y="70">Ora</text><text x="200" y="70">Macchina</text>
+      <text x="430" y="70">Durata</text><text x="700" y="70">Causa</text>
+    </g>
+    <path d="M64 84 L1216 84" stroke="rgba(10,10,10,.14)"/>
+
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="64" y="130">07:12</text><text x="200" y="130">Riempitrice</text>
+      <text x="64" y="196">11:24</text><text x="200" y="196">Tappatrice</text>
+      <text x="64" y="262">13:15</text><text x="200" y="262">Riempitrice</text>
+    </g>
+    <g fill="rgba(10,10,10,.46)">
+      <rect x="430" y="119" width="23" height="12"/>
+      <rect x="430" y="185" width="81" height="12"/>
+      <rect x="430" y="251" width="14" height="12"/>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)" text-anchor="end">
+      <text x="640" y="130">5 min</text><text x="640" y="196">18 min</text><text x="640" y="262">3 min</text>
+    </g>
+    <g stroke="rgba(10,10,10,.30)">
+      <path d="M700 134 L1150 134"/><path d="M700 200 L1150 200"/><path d="M700 266 L1150 266"/>
+    </g>
+    <g stroke="rgba(10,10,10,.12)">
+      <path d="M64 156 L1216 156"/><path d="M64 222 L1216 222"/>
+    </g>
+
+    <path d="M64 344 L1216 344" stroke="rgba(10,10,10,.30)"/>
+    <text x="64" y="382" font-family="Geist" font-size="17" fill="rgba(10,10,10,.74)">3 fermi · 26 minuti</text>
+    <rect x="1054" y="371" width="11" height="11" fill="#E6E011"/>
+    <text x="1216" y="382" font-family="Geist" font-size="17" fill="#0A0A0A"
+          text-anchor="end">0 cause registrate</text>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Esempio di rapporto di turno · dati illustrativi</span><span>02 / 12</span></div>
+</div>
+
+
+
+<!-- ==================== 03 · CHE COS’È D.FACTORY =====================
+     Una sola interfaccia composita, non un diagramma: stato e produzione,
+     energia per stato, impatto economico. Tre callout, un solo giallo. -->
+<div class="slide dk" id="s03_cosa_e">
+  <div class="z" style="top:48px;width:1100px">
+    <h2 class="sm">Produzione, energia e costi<br>nello stesso contesto operativo.</h2>
+  </div>
+  <div class="z" style="top:160px;width:1000px"><div class="cp">D.Factory acquisisce e
+    contestualizza dati da PLC, sensori, contatori e gestionali per rendere leggibili
+    performance, consumi e perdite.</div></div>
+
+  <svg data-ui="1" width="1280" height="420" viewBox="0 0 1280 420"
+       style="position:absolute;left:0;top:236px" role="img" aria-labelledby="c3t c3d">
+    <title id="c3t">Vista composita ricostruita</title>
+    <desc id="c3d">Una sola schermata con tre letture dello stesso turno: lo stato delle tre
+      macchine con l’OEE, l’energia divisa fra marcia e linea ferma, e l’impatto economico
+      del fermo e dei consumi.</desc>
+
+    <rect x="0" y="0" width="1280" height="420" fill="#141414"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(255,255,255,.14)" stroke-width="1.5"/>
+    <text x="64" y="34" font-family="Geist" font-size="15" font-weight="600" fill="#FFFFFF">Linea 1 · Confezionamento</text>
+    <text x="1216" y="34" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)"
+          text-anchor="end">turno 06:00 – 14:00</text>
+    <path d="M0 52 L1280 52" stroke="rgba(255,255,255,.14)"/>
+    <path d="M520 52 L520 420" stroke="rgba(255,255,255,.14)"/>
+    <path d="M920 52 L920 420" stroke="rgba(255,255,255,.14)"/>
+
+    <!-- 01 · stato e produzione -->
+    <text x="64" y="86" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">01 · Stato e produzione</text>
+    <g fill="rgba(255,255,255,.09)">
+      <rect x="230" y="112" width="270" height="14"/><rect x="230" y="140" width="270" height="14"/>
+      <rect x="230" y="168" width="270" height="14"/>
+    </g>
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="230" y="112" width="189" height="14"/><rect x="460" y="112" width="40" height="14"/>
+      <rect x="230" y="140" width="189" height="14"/><rect x="460" y="140" width="40" height="14"/>
+      <rect x="230" y="168" width="189" height="14"/><rect x="460" y="168" width="40" height="14"/>
+    </g>
+    <rect x="419" y="168" width="41" height="14" fill="#E6E011"/>
+    <g font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.72)">
+      <text x="64" y="123">Riempitrice</text><text x="64" y="151">Etichettatrice</text>
+      <text x="64" y="179">Tappatrice</text>
+    </g>
+    <text x="64" y="238" font-family="Geist" font-size="30" font-weight="600" fill="#FFFFFF">71,4%</text>
+    <text x="64" y="266" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">OEE del turno</text>
+    <text x="64" y="320" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">454 min in marcia</text>
+    <text x="64" y="346" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">26 min di fermo</text>
+
+    <!-- 02 · energia e utility -->
+    <text x="560" y="86" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">02 · Energia e utility</text>
+    <text x="560" y="132" font-family="Geist" font-size="30" font-weight="600" fill="#FFFFFF">735<tspan font-size="17"> kWh</tspan></text>
+    <text x="560" y="158" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">elettricità del turno</text>
+    <rect x="560" y="188" width="313" height="20" fill="rgba(255,255,255,.82)"/>
+    <rect x="873" y="188" width="7" height="20" fill="rgba(255,255,255,.40)"/>
+    <text x="560" y="232" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">719 kWh in marcia</text>
+    <text x="560" y="258" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">16 kWh a linea ferma</text>
+    <path d="M560 292 L880 292" stroke="rgba(255,255,255,.14)"/>
+    <text x="560" y="320" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">Altri vettori configurabili</text>
+    <text x="560" y="346" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">gas · vapore · aria compressa · acqua</text>
+
+    <!-- 03 · impatto economico -->
+    <text x="960" y="86" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">03 · Impatto economico</text>
+    <text x="960" y="140" font-family="Geist" font-size="34" font-weight="600" fill="#FFFFFF">1.820 €</text>
+    <text x="960" y="166" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">margine perso stimato</text>
+    <text x="960" y="188" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.44)">26 min × 70 €/min</text>
+    <path d="M960 216 L1216 216" stroke="rgba(255,255,255,.14)"/>
+    <text x="960" y="262" font-family="Geist" font-size="28" font-weight="600" fill="#FFFFFF">162 €</text>
+    <text x="960" y="288" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">costo energetico del turno</text>
+    <text x="960" y="310" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.44)">735 kWh × 0,22 €/kWh</text>
+    <path d="M960 338 L1216 338" stroke="rgba(255,255,255,.14)"/>
+    <text x="960" y="368" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">Causa associata al fermo</text>
+    <text x="960" y="392" font-family="Geist" font-size="15" fill="#FFFFFF">Mancanza tappi a monte</text>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Vista ricostruita · dati illustrativi</span><span>03 / 12</span></div>
+</div>
+
+<!-- ====================== 03 · PRODOTTO IN AZIONE ===================== -->
+<div class="slide lt" id="s04_prodotto">
+  <div class="z" style="top:48px;width:1040px">
+    <h2 class="sm">Il fermo, la causa e il costo<br>nella stessa schermata.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="488" viewBox="0 0 1280 488"
+       style="position:absolute;left:0;top:164px" role="img" aria-labelledby="p3t p3d">
+    <title id="p3t">Dettaglio di un fermo, vista ricostruita</title>
+    <desc id="p3d">La finestra dalle dieci a mezzogiorno sulle tre macchine della linea.
+      Il fermo della tappatrice è selezionato: durata diciotto minuti, causa associata
+      mancanza tappi a monte, margine perso stimato milleduecentosessanta euro. Sotto, la
+      curva dell’OEE che scende nell’intervallo del fermo. Un solo indicatore verticale
+      attraversa la timeline e la curva.</desc>
+
+    <rect x="0" y="0" width="1280" height="488" fill="#FFFFFF"/>
+    <rect x="0" y="0" width="1280" height="56" fill="#F3F4F0"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <path d="M0 487.25 L1280 487.25" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <text x="64" y="36" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">Linea 1 · Confezionamento</text>
+    <text x="1216" y="36" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)"
+          text-anchor="end">10:00 – 12:00</text>
+    <path d="M0 56 L1280 56" stroke="rgba(10,10,10,.16)"/>
+
+    <g fill="rgba(10,10,10,.07)">
+      <rect x="280" y="92" width="580" height="38"/>
+      <rect x="280" y="148" width="580" height="38"/>
+      <rect x="280" y="204" width="580" height="38"/>
+    </g>
+    <!-- il fermo della tappatrice ferma la linea: le tre tracce si
+         interrompono insieme, e il giallo dice quale macchina l’ha causato -->
+    <g fill="#0A0A0A">
+      <rect x="280" y="92" width="406" height="38"/><rect x="773" y="92" width="87" height="38"/>
+      <rect x="280" y="148" width="406" height="38"/><rect x="773" y="148" width="87" height="38"/>
+      <rect x="280" y="204" width="406" height="38"/><rect x="773" y="204" width="87" height="38"/>
+    </g>
+    <rect x="686" y="204" width="87" height="38" fill="#E6E011"/>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">
+      <text x="64" y="116">Riempitrice</text>
+      <text x="64" y="172">Etichettatrice</text>
+      <text x="64" y="228">Tappatrice</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">
+      <text x="280" y="272">10:00</text>
+      <text x="570" y="272" text-anchor="middle">11:00</text>
+      <text x="860" y="272" text-anchor="end">12:00</text>
+    </g>
+
+    <path d="M0 296 L880 296" stroke="rgba(10,10,10,.12)"/>
+    <text x="64" y="326" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">OEE nella finestra · %</text>
+    <g stroke="rgba(10,10,10,.10)">
+      <path d="M280 356 L860 356"/><path d="M280 450 L860 450"/>
+    </g>
+    <g font-family="Geist" font-size="12.5" fill="rgba(10,10,10,.56)" text-anchor="end">
+      <text x="268" y="360">80</text><text x="268" y="454">60</text>
+    </g>
+    <!-- la discesa comincia sull’indicatore, non prima -->
+    <path d="M280 376 L328 371 L376 380 L424 373 L472 378 L520 371 L568 376 L616 381
+             L664 384 L686 386 L706 424 L740 444 L773 438 L812 398 L860 378"
+          fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+
+    <!-- un solo indicatore temporale: attraversa le macchine e la curva OEE -->
+    <path d="M686 84 L686 456" stroke="#E6E011" stroke-width="1.5"/>
+
+    <path d="M880 56 L880 488" stroke="rgba(10,10,10,.16)"/>
+    <rect x="904" y="92" width="12" height="12" fill="#E6E011"/>
+    <text x="904" y="150" font-family="Geist" font-size="26" font-weight="600" fill="#0A0A0A">11:24 – 11:42</text>
+    <text x="904" y="182" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">Fermo 18 minuti</text>
+    <path d="M904 212 L1216 212" stroke="rgba(10,10,10,.12)"/>
+    <text x="904" y="242" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Causa associata</text>
+    <text x="904" y="272" font-family="Geist" font-size="19" fill="#0A0A0A">Mancanza tappi a monte</text>
+    <path d="M904 302 L1216 302" stroke="rgba(10,10,10,.12)"/>
+    <text x="904" y="332" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Margine perso stimato</text>
+    <text x="904" y="382" font-family="Geist" font-size="34" font-weight="600" fill="#0A0A0A">1.260 €</text>
+    <text x="904" y="412" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">18 min · 500 pz/min · 0,14 €/pz</text>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Vista ricostruita · dati illustrativi</span><span>04 / 12</span></div>
+</div>
+
+
+<!-- ================ 04 · PRODUZIONE ED ENERGIA INSIEME ================ -->
+<div class="slide dk" id="s05_energia">
+  <div class="z" style="top:48px;width:1040px">
+    <h2 class="sm">La linea si ferma.<br>L’energia continua a scorrere.</h2>
+  </div>
+
+  <div class="z" style="top:152px"><div class="cp">Lo stesso minuto pesa su capacità e consumi.</div></div>
+
+  <svg data-ui="1" width="1280" height="440" viewBox="0 0 1280 480"
+       style="position:absolute;left:0;top:206px" role="img" aria-labelledby="e4t e4d">
+    <title id="e4t">Produzione ed energia sulla stessa finestra, vista ricostruita</title>
+    <desc id="e4d">Nella finestra dalle dieci a mezzogiorno la produzione scende a zero fra
+      le 11:24 e le 11:42, mentre l’assorbimento resta a trentotto chilowatt. Le due curve
+      condividono l’asse dei tempi e lo stesso indicatore verticale.</desc>
+
+    <rect x="0" y="0" width="1280" height="480" fill="#141414"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(255,255,255,.14)" stroke-width="1.5"/>
+    <text x="64" y="36" font-family="Geist" font-size="15" font-weight="600" fill="#FFFFFF">Linea 1 · 10:00 – 12:00</text>
+    <text x="1216" y="36" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)"
+          text-anchor="end">Produzione ed energia</text>
+    <path d="M0 56 L1280 56" stroke="rgba(255,255,255,.14)"/>
+
+    <!-- produzione: area piena fino allo zero, cosi' il crollo si legge per
+         quello che e' -->
+    <!-- produzione: area piena fino allo zero, con la tacca che la serie tocca -->
+    <text x="64" y="90" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">Produzione · pz/min</text>
+    <path d="M200 128 L1216 128" stroke="rgba(255,255,255,.14)"/>
+    <path d="M200 230 L1216 230" stroke="rgba(255,255,255,.30)"/>
+    <g font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.56)" text-anchor="end">
+      <text x="184" y="132">500</text><text x="184" y="234">0</text>
+    </g>
+    <path d="M200 230 L200 128 L400 128 L400 133 L640 133 L640 129 L911 129 L911 230
+             L1064 230 L1064 128 L1160 128 L1160 130 L1216 130 L1216 230 Z"
+          fill="rgba(255,255,255,.82)"/>
+    <text x="987" y="218" font-family="Geist" font-size="13" fill="#FFFFFF"
+          text-anchor="middle">0 pz/min</text>
+
+    <path d="M0 268 L1280 268" stroke="rgba(255,255,255,.14)"/>
+
+    <!-- energia: stessa costruzione, stessa base a zero. L’area sotto la curva
+         resta piena durante il fermo: e' il punto della slide -->
+    <text x="64" y="298" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">Energia · kW</text>
+    <path d="M200 320 L1216 320" stroke="rgba(255,255,255,.14)"/>
+    <path d="M200 416 L1216 416" stroke="rgba(255,255,255,.30)"/>
+    <g font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.56)" text-anchor="end">
+      <text x="184" y="324">95</text><text x="184" y="420">0</text>
+    </g>
+    <path d="M200 416 L200 320 L400 324 L640 322 L911 320 L911 416 Z" fill="rgba(255,255,255,.22)"/>
+    <path d="M911 416 L911 320 L940 378 L1000 378 L1064 378 L1064 416 Z" fill="rgba(255,255,255,.22)"/>
+    <path d="M1064 416 L1064 378 L1090 324 L1160 321 L1216 320 L1216 416 Z" fill="rgba(255,255,255,.22)"/>
+    <path d="M200 320 L400 324 L640 322 L911 320" fill="none" stroke="rgba(255,255,255,.82)" stroke-width="1.8"/>
+    <path d="M911 320 L940 378 L1000 378 L1064 378" fill="none" stroke="#E6E011" stroke-width="2.6"/>
+    <path d="M1064 378 L1090 324 L1160 321 L1216 320" fill="none" stroke="rgba(255,255,255,.82)" stroke-width="1.8"/>
+
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">
+      <text x="200" y="462">10:00</text>
+      <text x="708" y="462" text-anchor="middle">11:00</text>
+      <text x="1216" y="462" text-anchor="end">12:00</text>
+    </g>
+
+    <!-- l’indicatore porta la sua ora e arriva fino all’asse dei tempi -->
+    <text x="911" y="80" font-family="Geist" font-size="13" fill="#FFFFFF"
+          text-anchor="middle">11:24 · 18 minuti</text>
+    <path d="M911 88 L911 448" stroke="#E6E011" stroke-width="1.5"/>
+    <text x="987" y="442" font-family="Geist" font-size="15" fill="#FFFFFF"
+          text-anchor="middle">38 kW a linea ferma</text>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Vista ricostruita · dati illustrativi</span><span>05 / 12</span></div>
+</div>
+
+
+<!-- ================= 05 · DALL’EVENTO ALLA DECISIONE ================== -->
+<div class="slide lt" id="s06_decisione">
+  <div class="z" style="top:48px;width:1040px">
+    <h2 class="sm">Un fermo è una causa.<br>Quattordici sono una priorità.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="470" viewBox="0 0 1280 470"
+       style="position:absolute;left:0;top:182px" role="img" aria-labelledby="d5t d5d">
+    <title id="d5t">Cause di fermo ordinate per costo, vista ricostruita</title>
+    <desc id="d5d">Su sette giorni la mancanza tappi vale quattordici eventi, novantasei
+      minuti e seimilasettecentoventi euro: il quarantatré per cento del costo di fermo
+      della linea.</desc>
+
+    <rect x="0" y="0" width="1280" height="470" fill="#FFFFFF"/>
+    <rect x="0" y="0" width="1280" height="56" fill="#F3F4F0"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <path d="M0 469.25 L1280 469.25" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <text x="64" y="36" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">Cause di fermo · Linea 1 · ultimi 7 giorni</text>
+    <text x="1216" y="36" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)"
+          text-anchor="end">ordinate per costo</text>
+    <path d="M0 56 L1280 56" stroke="rgba(10,10,10,.16)"/>
+
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">
+      <text x="64" y="92">Causa</text>
+      <text x="700" y="92" text-anchor="end">Eventi</text>
+      <text x="850" y="92" text-anchor="end">Durata</text>
+      <text x="1216" y="92" text-anchor="end">Costo</text>
+    </g>
+    <path d="M64 106 L1216 106" stroke="rgba(10,10,10,.26)"/>
+
+    <rect x="64" y="140" width="11" height="11" fill="#E6E011"/>
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="90" y="152">Mancanza tappi</text>
+      <text x="90" y="216">Cambio formato</text>
+      <text x="90" y="280">Micro-fermate</text>
+      <text x="90" y="344">Manutenzione</text>
+    </g>
+    <rect x="870" y="140" width="220" height="16" fill="#E6E011"/>
+    <g fill="#0A0A0A">
+      <rect x="870" y="204" width="142" height="16"/>
+      <rect x="870" y="268" width="94" height="16"/>
+      <rect x="870" y="332" width="57" height="16"/>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)" text-anchor="end">
+      <text x="700" y="152">14</text><text x="850" y="152">96 min</text>
+      <text x="700" y="216">4</text><text x="850" y="216">62 min</text>
+      <text x="700" y="280">38</text><text x="850" y="280">41 min</text>
+      <text x="700" y="344">2</text><text x="850" y="344">25 min</text>
+    </g>
+    <g font-family="Geist" font-size="17" font-weight="600" fill="#0A0A0A" text-anchor="end">
+      <text x="1216" y="152">6.720 €</text><text x="1216" y="216">4.340 €</text>
+      <text x="1216" y="280">2.870 €</text><text x="1216" y="344">1.750 €</text>
+    </g>
+    <g stroke="rgba(10,10,10,.12)">
+      <path d="M64 180 L1216 180"/><path d="M64 244 L1216 244"/><path d="M64 308 L1216 308"/>
+    </g>
+    <path d="M64 376 L1216 376" stroke="rgba(10,10,10,.26)"/>
+    <text x="64" y="416" font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">Il 43% del costo viene da una causa sola</text>
+    <text x="1216" y="418" font-family="Geist" font-size="22" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">15.680 €</text>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Vista ricostruita · dati illustrativi</span><span>06 / 12</span></div>
+</div>
+
+
+
+<!-- ==================== 07 · AMPIEZZA DEL PRODOTTO ====================
+     Una sola vista a mosaico: sei riquadri della stessa dashboard, non sei
+     card. Ogni riquadro e' una mini-interfaccia con il suo dato. -->
+<div class="slide dk" id="s07_ampiezza">
+  <div class="z" style="top:48px;width:1100px">
+    <h2 class="sm">Non solo fermi.<br>La linea, il turno e il pezzo.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="452" viewBox="0 0 1280 452"
+       style="position:absolute;left:0;top:176px" role="img" aria-labelledby="a7t a7d">
+    <title id="a7t">Sei riquadri della stessa dashboard, ricostruiti</title>
+    <desc id="a7d">Stato di macchina e linea, OEE e velocità, fermi e micro-fermate, consumi
+      e utility, costo energetico e CO2 per mille pezzi, confronti fra le macchine del turno.</desc>
+
+    <rect x="0" y="0" width="1280" height="452" fill="#141414"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(255,255,255,.14)" stroke-width="1.5"/>
+    <text x="64" y="34" font-family="Geist" font-size="15" font-weight="600" fill="#FFFFFF">Linea 1 · Confezionamento</text>
+    <text x="1216" y="34" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)"
+          text-anchor="end">turno 06:00 – 14:00</text>
+    <path d="M0 52 L1280 52" stroke="rgba(255,255,255,.14)"/>
+    <g stroke="rgba(255,255,255,.14)">
+      <path d="M448 52 L448 452"/><path d="M832 52 L832 452"/><path d="M0 252 L1280 252"/>
+    </g>
+
+    <!-- 1 · stato macchina e linea -->
+    <text x="64" y="84" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.44)">Stato macchina e linea</text>
+    <g fill="rgba(255,255,255,.09)">
+      <rect x="180" y="108" width="220" height="12"/><rect x="180" y="136" width="220" height="12"/>
+      <rect x="180" y="164" width="220" height="12"/>
+    </g>
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="180" y="108" width="154" height="12"/><rect x="367" y="108" width="33" height="12"/>
+      <rect x="180" y="136" width="220" height="12"/>
+      <rect x="180" y="164" width="154" height="12"/><rect x="367" y="164" width="33" height="12"/>
+    </g>
+    <g font-family="Geist" font-size="12" fill="rgba(255,255,255,.56)">
+      <text x="64" y="118">Riempitrice</text><text x="64" y="146">Etichettatrice</text>
+      <text x="64" y="174">Tappatrice</text>
+    </g>
+    <text x="64" y="212" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">3 macchine · 1 linea</text>
+
+    <!-- 2 · OEE e velocità -->
+    <text x="480" y="84" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.44)">OEE e velocità</text>
+    <text x="480" y="128" font-family="Geist" font-size="34" font-weight="600" fill="#FFFFFF">71,4%</text>
+    <g font-family="Geist" font-size="12" fill="rgba(255,255,255,.56)">
+      <text x="480" y="164">disponibilità</text><text x="480" y="188">prestazione</text>
+      <text x="480" y="212">qualità</text>
+    </g>
+    <g fill="rgba(255,255,255,.09)">
+      <rect x="600" y="154" width="200" height="10"/><rect x="600" y="178" width="200" height="10"/>
+      <rect x="600" y="202" width="200" height="10"/>
+    </g>
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="600" y="154" width="189" height="10"/><rect x="600" y="178" width="158" height="10"/>
+      <rect x="600" y="202" width="191" height="10"/>
+    </g>
+
+    <!-- 3 · fermi e micro-fermate -->
+    <text x="864" y="84" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.44)">Fermi e micro-fermate</text>
+    <rect x="864" y="120" width="352" height="26" fill="rgba(255,255,255,.09)"/>
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="864" y="120" width="52" height="26"/><rect x="920" y="120" width="118" height="26"/>
+      <rect x="1051" y="120" width="107" height="26"/><rect x="1160" y="120" width="56" height="26"/>
+    </g>
+    <rect x="1038" y="120" width="13" height="26" fill="#E6E011"/>
+    <g fill="rgba(255,255,255,.40)">
+      <rect x="916" y="120" width="4" height="26"/><rect x="1158" y="120" width="2" height="26"/>
+      <rect x="982" y="120" width="3" height="26"/><rect x="1100" y="120" width="3" height="26"/>
+    </g>
+    <text x="864" y="176" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">3 fermi · 26 minuti</text>
+    <text x="864" y="204" font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">micro-fermate rilevate a parte</text>
+
+    <!-- 4 · consumi e utility -->
+    <text x="64" y="284" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.44)">Consumi e utility</text>
+    <text x="64" y="326" font-family="Geist" font-size="28" font-weight="600" fill="#FFFFFF">735<tspan font-size="16"> kWh</tspan></text>
+    <rect x="64" y="346" width="336" height="14" fill="rgba(255,255,255,.82)"/>
+    <text x="64" y="392" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.44)">vettori configurabili</text>
+    <g fill="none" stroke="rgba(255,255,255,.30)">
+      <rect x="64" y="404" width="76" height="24"/><rect x="150" y="404" width="76" height="24"/>
+      <rect x="236" y="404" width="76" height="24"/><rect x="322" y="404" width="78" height="24"/>
+    </g>
+    <g font-family="Geist" font-size="12" fill="rgba(255,255,255,.56)" text-anchor="middle">
+      <text x="102" y="420">gas</text><text x="188" y="420">vapore</text>
+      <text x="274" y="420">aria</text><text x="361" y="420">acqua</text>
+    </g>
+
+    <!-- 5 · costo energetico e CO2 -->
+    <text x="480" y="284" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.44)">Costo energetico e CO₂</text>
+    <g font-family="Geist" font-size="22" font-weight="600" fill="#FFFFFF">
+      <text x="480" y="326">3,2</text><text x="480" y="366">0,71</text><text x="480" y="406">1,13</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.56)">
+      <text x="560" y="326">kWh / 1.000 pz</text><text x="560" y="366">€ / 1.000 pz</text>
+      <text x="560" y="406">kgCO₂e / 1.000 pz</text>
+    </g>
+    <text x="800" y="428" font-family="Geist" font-size="12" fill="rgba(255,255,255,.44)"
+          text-anchor="end">CO₂ calcolata</text>
+
+    <!-- 6 · confronti -->
+    <text x="864" y="284" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.44)">Confronti per turno, prodotto e linea</text>
+    <g font-family="Geist" font-size="12" fill="rgba(255,255,255,.56)">
+      <text x="864" y="326">Tappatrice</text><text x="864" y="360">Riempitrice</text>
+      <text x="864" y="394">Etichettatrice</text>
+    </g>
+    <g fill="rgba(255,255,255,.09)">
+      <rect x="990" y="314" width="226" height="14"/><rect x="990" y="348" width="226" height="14"/>
+      <rect x="990" y="382" width="226" height="14"/>
+    </g>
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="990" y="314" width="226" height="14"/><rect x="990" y="348" width="100" height="14"/>
+    </g>
+    <g font-family="Geist" font-size="12" fill="rgba(255,255,255,.72)">
+      <text x="990" y="424">minuti di fermo nel turno · 18 · 8 · 0</text>
+    </g>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Viste ricostruite · dati illustrativi</span><span>07 / 12</span></div>
+</div>
+
+<!-- ================== 06 · CONNECT · INSIGHT · REFYN ==================
+     Non tre riquadri affiancati: UNA sola finestra che si allunga. I tre
+     livelli sono tre sezioni della stessa schermata, numerate nell’ordine
+     in cui si aggiungono. Il giallo compare una volta sola, sul fermo che
+     Connect vede: e' lo stesso evento di tutto il deck. -->
+<div class="slide lt" id="s08_offerta">
+  <div class="z" style="top:48px;width:1040px">
+    <h2 class="sm">Dalla linea alla decisione verificata.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="470" viewBox="0 0 1280 470"
+       style="position:absolute;left:0;top:136px" role="img" aria-labelledby="o6t o6d">
+    <title id="o6t">La stessa finestra ai tre livelli, ricostruita</title>
+    <desc id="o6d">Una sola schermata in tre sezioni. Connect mostra lo stato delle tre
+      macchine, l’OEE e l’assorbimento. Insight aggiunge le cause associate con il loro
+      costo e l’energia del turno. Refyn aggiunge l’azione con la sua baseline, il periodo
+      di osservazione e il risultato ancora da leggere.</desc>
+
+    <rect x="0" y="0" width="1280" height="470" fill="#FFFFFF"/>
+    <rect x="0" y="0" width="1280" height="52" fill="#F3F4F0"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <path d="M0 469.25 L1280 469.25" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <text x="64" y="33" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">Linea 1 · Confezionamento</text>
+    <text x="1216" y="33" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)"
+          text-anchor="end">10:00 – 12:00</text>
+    <path d="M0 52 L1280 52" stroke="rgba(10,10,10,.16)"/>
+
+    <!-- 01 · Connect -->
+    <text x="64" y="84" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">01 · Connect</text>
+    <text x="212" y="84" font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">Che cosa sta succedendo?</text>
+    <g fill="rgba(10,10,10,.07)">
+      <rect x="430" y="106" width="570" height="14"/><rect x="430" y="130" width="570" height="14"/>
+      <rect x="430" y="154" width="570" height="14"/>
+    </g>
+    <g fill="#0A0A0A">
+      <rect x="430" y="106" width="399" height="14"/><rect x="915" y="106" width="85" height="14"/>
+      <rect x="430" y="130" width="399" height="14"/><rect x="915" y="130" width="85" height="14"/>
+      <rect x="430" y="154" width="399" height="14"/><rect x="915" y="154" width="85" height="14"/>
+    </g>
+    <rect x="829" y="154" width="86" height="14" fill="#E6E011"/>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.74)">
+      <text x="64" y="117">Riempitrice</text><text x="64" y="141">Etichettatrice</text>
+      <text x="64" y="165">Tappatrice</text>
+    </g>
+    <text x="1216" y="128" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">OEE 71,4%</text>
+    <text x="1216" y="152" font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)"
+          text-anchor="end">38 kW a linea ferma</text>
+    <path d="M0 190 L1280 190" stroke="rgba(10,10,10,.16)"/>
+
+    <!-- 02 · Insight -->
+    <text x="64" y="222" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">02 · Insight</text>
+    <text x="212" y="222" font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">Perché succede e quanto pesa?</text>
+    <text x="64" y="262" font-family="Geist" font-size="14" fill="#0A0A0A">Mancanza tappi · 14 eventi in 7 giorni</text>
+    <rect x="430" y="250" width="220" height="14" fill="#0A0A0A"/>
+    <text x="1216" y="262" font-family="Geist" font-size="16" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">6.720 €</text>
+    <path d="M64 282 L1216 282" stroke="rgba(10,10,10,.10)"/>
+    <text x="64" y="308" font-family="Geist" font-size="14" fill="#0A0A0A">Energia del turno · 735 kWh</text>
+    <rect x="430" y="296" width="70" height="14" fill="rgba(10,10,10,.34)"/>
+    <text x="1216" y="308" font-family="Geist" font-size="16" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">162 €</text>
+    <path d="M0 330 L1280 330" stroke="rgba(10,10,10,.16)"/>
+
+    <!-- 03 · Refyn -->
+    <text x="64" y="362" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">03 · Refyn</text>
+    <text x="212" y="362" font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">Cosa conviene fare e con quale risultato?</text>
+    <text x="1216" y="362" font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)"
+          text-anchor="end">in sviluppo</text>
+    <text x="64" y="404" font-family="Geist" font-size="16" fill="#0A0A0A">Kit tappi a bordo linea</text>
+    <text x="1216" y="404" font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)"
+          text-anchor="end">in corso</text>
+    <path d="M64 424 L1216 424" stroke="rgba(10,10,10,.10)"/>
+    <text x="64" y="450" font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">Baseline 96 min · verifica a 4 settimane · risultato da leggere</text>
+  </svg>
+
+  <div class="z" style="top:626px"><div style="font-size:18px;color:var(--l2)">Ogni livello
+    comprende il precedente · Servizi specialistici attivabili su tutti i livelli</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Vista ricostruita · dati illustrativi</span><span>08 / 12</span></div>
+</div>
+
+
+
+<!-- ====================== 09 · PERCHÉ D.FACTORY ======================
+     Tre prove in tre fasce, non tre card. Nessun cliente, nessun logo,
+     nessun numero non validato. -->
+<div class="slide dk" id="s09_perche">
+  <div class="z" style="top:48px;width:1100px">
+    <h2 class="sm">Nato sull’impianto,<br>non in una dashboard.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="420" viewBox="0 0 1280 420"
+       style="position:absolute;left:0;top:172px" role="img" aria-labelledby="p9t p9d">
+    <title id="p9t">Tre prove</title>
+    <desc id="p9d">Produzione ed energia sulla stessa lettura temporale, partenza dai
+      segnali già presenti sull’impianto, piattaforma affiancata da assessment,
+      configurazione e review.</desc>
+    <g stroke="rgba(255,255,255,.14)">
+      <path d="M0 140 L1280 140"/><path d="M0 280 L1280 280"/>
+    </g>
+
+    <!-- 1 · produzione ed energia sulla stessa lettura -->
+    <text x="64" y="46" font-family="Geist" font-size="19" font-weight="600" fill="#FFFFFF">Produzione ed energia</text>
+    <text x="64" y="80" font-family="Geist" font-size="18" fill="rgba(255,255,255,.72)">La stessa lettura temporale, non due strumenti.</text>
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="700" y="40" width="180" height="14"/><rect x="920" y="40" width="296" height="14"/>
+    </g>
+    <rect x="880" y="40" width="40" height="14" fill="#E6E011"/>
+    <rect x="700" y="68" width="516" height="14" fill="rgba(255,255,255,.30)"/>
+    <rect x="880" y="68" width="40" height="14" fill="rgba(255,255,255,.60)"/>
+    <g font-family="Geist" font-size="12" fill="rgba(255,255,255,.44)">
+      <text x="616" y="51">produzione</text><text x="616" y="79">energia</text>
+      <text x="700" y="108">stesso asse dei tempi, stesso evento</text>
+    </g>
+
+    <!-- 2 · brownfield -->
+    <text x="64" y="186" font-family="Geist" font-size="19" font-weight="600" fill="#FFFFFF">Brownfield</text>
+    <text x="64" y="220" font-family="Geist" font-size="18" fill="rgba(255,255,255,.72)">Si parte da PLC, sensori e contatori esistenti,</text>
+    <text x="64" y="246" font-family="Geist" font-size="18" fill="rgba(255,255,255,.72)">previa verifica.</text>
+    <g fill="none" stroke="rgba(255,255,255,.40)">
+      <rect x="700" y="176" width="118" height="38"/><rect x="830" y="176" width="118" height="38"/>
+      <rect x="960" y="176" width="118" height="38"/><rect x="1090" y="176" width="126" height="38"/>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.72)" text-anchor="middle">
+      <text x="759" y="200">PLC</text><text x="889" y="200">sensori</text>
+      <text x="1019" y="200">contatori</text><text x="1153" y="200">gestionale</text>
+    </g>
+    <text x="700" y="244" font-family="Geist" font-size="12" fill="rgba(255,255,255,.44)">quello che c’è già, verificato in audit</text>
+
+    <!-- 3 · software e competenze -->
+    <text x="64" y="326" font-family="Geist" font-size="19" font-weight="600" fill="#FFFFFF">Software e competenze</text>
+    <text x="64" y="360" font-family="Geist" font-size="18" fill="rgba(255,255,255,.72)">La piattaforma con assessment,</text>
+    <text x="64" y="386" font-family="Geist" font-size="18" fill="rgba(255,255,255,.72)">configurazione e review.</text>
+    <rect x="700" y="316" width="200" height="38" fill="rgba(255,255,255,.82)"/>
+    <text x="800" y="340" font-family="Geist" font-size="13" fill="#0A0A0A" text-anchor="middle">piattaforma</text>
+    <g fill="none" stroke="rgba(255,255,255,.40)">
+      <rect x="912" y="316" width="98" height="38"/><rect x="1022" y="316" width="98" height="38"/>
+      <rect x="1132" y="316" width="84" height="38"/>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.72)" text-anchor="middle">
+      <text x="961" y="340">assessment</text><text x="1071" y="340">configura</text><text x="1174" y="340">review</text>
+    </g>
+    <text x="700" y="384" font-family="Geist" font-size="12" fill="rgba(255,255,255,.44)">il software da solo non chiude una causa</text>
+  </svg>
+
+  <div class="z" style="top:614px"><div class="note">Evolve le competenze sviluppate con
+    MAPST 4.0 e MarEnergy.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>09 / 12</span></div>
+</div>
+
+<!-- ======================= 07 · VALORE ILLUSTRATIVO =================== -->
+<div class="slide dk" id="s10_valore">
+  <div class="z" style="top:56px;width:1040px">
+    <h2 class="sm">Una causa non chiusa<br>costa un anno intero.</h2>
+  </div>
+
+  <div class="viz" style="left:0;top:168px;width:1280px;height:420px;padding:0 64px">
+    <div style="font-size:30px;letter-spacing:-.02em;color:var(--d2)">96 min a settimana
+      &nbsp;×&nbsp; 70 € al minuto &nbsp;×&nbsp; 46 settimane</div>
+    <div style="font-size:130px;line-height:.88;letter-spacing:-.05em;font-weight:600;
+      color:var(--acid);margin-top:22px">309.120<span style="font-size:.32em;margin-left:.06em"> €</span></div>
+    <div style="font-size:18px;color:var(--d2);margin-top:18px">Margine perso in un anno.</div>
+    <div class="hr" style="margin-top:34px"></div>
+    <div style="display:flex;gap:64px;margin-top:26px">
+      <div style="width:520px">
+        <div style="font-size:18px;color:var(--d3)">Capacità potenzialmente recuperabile</div>
+        <div style="font-size:34px;font-weight:600;letter-spacing:-.03em;margin-top:8px">154.560 €</div>
+        <div style="font-size:18px;color:var(--d2);margin-top:6px">se la causa si dimezza</div>
+      </div>
+      <div>
+        <div style="font-size:18px;color:var(--d3)">Energia potenzialmente evitabile</div>
+        <div style="font-size:34px;font-weight:600;letter-spacing:-.03em;margin-top:8px">810 €</div>
+        <div style="font-size:18px;color:var(--d2);margin-top:6px">dai 16 kWh per turno a linea ferma</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Scenario illustrativo · non risultato cliente</span><span>10 / 12</span></div>
+</div>
+
+
+
+<!-- ================ 11 · PILOT E MODELLO COMMERCIALE =================
+     Tre momenti, non un Gantt. Sotto, la struttura economica: quali voci
+     esistono, non quanto costano. Nessun importo non approvato. -->
+<div class="slide lt" id="s11_pilot">
+  <div class="z" style="top:48px;width:1100px">
+    <h2 class="sm">Una linea. Una baseline.<br>Una decisione di scala.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="440" viewBox="0 0 1280 440"
+       style="position:absolute;left:0;top:172px" role="img" aria-labelledby="q1t q1d">
+    <title id="q1t">I tre momenti del pilot e la struttura economica</title>
+    <desc id="q1d">Verifica, pilot e decisione di scala in sequenza, con quello che ciascun
+      momento produce. Sotto, le tre voci del modello economico: avvio una tantum, canone
+      annuale per modulo e perimetro, servizi specialistici opzionali.</desc>
+
+    <rect x="0" y="0" width="1280" height="440" fill="#FFFFFF"/>
+    <rect x="0" y="0" width="1280" height="52" fill="#F3F4F0"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <path d="M0 439.25 L1280 439.25" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <text x="64" y="33" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">Percorso del pilot · una linea</text>
+    <text x="1216" y="33" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)"
+          text-anchor="end">durate da definire in solution design</text>
+    <path d="M0 52 L1280 52" stroke="rgba(10,10,10,.16)"/>
+
+    <!-- i tre momenti, in sequenza -->
+    <rect x="64" y="92" width="316" height="64" fill="#0A0A0A"/>
+    <text x="88" y="131" font-family="Geist" font-size="20" font-weight="600" fill="#FFFFFF">Verifica</text>
+    <rect x="482" y="92" width="316" height="64" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+    <text x="506" y="131" font-family="Geist" font-size="20" font-weight="600" fill="#0A0A0A">Pilot</text>
+    <rect x="900" y="92" width="316" height="64" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+    <text x="924" y="131" font-family="Geist" font-size="20" font-weight="600" fill="#0A0A0A">Decisione di scala</text>
+    <g stroke="#0A0A0A" stroke-width="1.5">
+      <path d="M380 124 L470 124"/><path d="M798 124 L888 124"/>
+    </g>
+    <g fill="#0A0A0A">
+      <polygon points="476,124 466,118 466,130"/><polygon points="894,124 884,118 884,130"/>
+    </g>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">
+      <text x="64" y="192">Dati e segnali disponibili</text>
+      <text x="64" y="218">Contatori e sensori</text>
+      <text x="64" y="244">Perimetro della linea</text>
+      <text x="482" y="192">Baseline di produzione ed energia</text>
+      <text x="482" y="218">Cause associate e consumi</text>
+      <text x="482" y="244">Prime priorità</text>
+      <text x="900" y="192">Risultati contro la baseline</text>
+      <text x="900" y="218">Gap ancora aperti</text>
+      <text x="900" y="244">Proposta di estensione</text>
+    </g>
+
+    <path d="M0 292 L1280 292" stroke="rgba(10,10,10,.16)"/>
+    <text x="64" y="322" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Struttura economica</text>
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="64" y="362">Avvio</text><text x="64" y="396">Canone annuale</text>
+      <text x="64" y="430">Servizi specialistici</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">
+      <text x="330" y="362">una tantum · audit, setup, integrazione, configurazione</text>
+      <text x="330" y="396">per modulo e perimetro · Connect, Insight o Refyn</text>
+      <text x="330" y="430">opzionali · review, KPI, formazione, supporto, scale-up</text>
+    </g>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Struttura economica · importi non ancora approvati</span><span>11 / 12</span></div>
+</div>
+
+
+<!-- ========================== 12 · CALL TO ACTION =====================
+     Cosa succede dopo: chi serve, cosa si prepara, cosa restituiamo. A
+     destra quanto vale la linea, con la stessa timeline dell’apertura. -->
+<div class="slide dk" id="s12_cta">
+  <div class="z" style="top:56px;width:1100px">
+    <h1>Partiamo dalla linea<br>che costa di più.</h1>
+  </div>
+  <div class="z" style="top:190px;width:980px"><div class="sup">Condividiamo il perimetro
+    della prima linea e verifichiamo dati, integrazione e potenziale economico.</div></div>
+
+  <svg data-ui="1" width="1280" height="400" viewBox="0 0 1280 400"
+       style="position:absolute;left:0;top:250px" role="img" aria-labelledby="z2t z2d">
+    <title id="z2t">Che cosa serve al primo incontro e quanto vale la linea</title>
+    <desc id="z2d">A sinistra chi coinvolgere, che cosa preparare e che cosa restituiamo. A
+      destra la vista di turno della linea con il suo costo di fermo su sette giorni e su
+      un anno da una sola causa.</desc>
+
+    <rect x="0" y="0" width="1280" height="400" fill="#141414"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(255,255,255,.14)" stroke-width="1.5"/>
+    <text x="64" y="34" font-family="Geist" font-size="15" font-weight="600" fill="#FFFFFF">Il primo incontro</text>
+    <text x="1216" y="34" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)"
+          text-anchor="end">Linea 1 · potenziale</text>
+    <path d="M0 52 L1280 52" stroke="rgba(255,255,255,.14)"/>
+    <path d="M800 52 L800 400" stroke="rgba(255,255,255,.14)"/>
+
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">
+      <text x="64" y="94">Chi coinvolgere</text><text x="64" y="182">Cosa preparare</text>
+      <text x="64" y="298">Cosa restituiamo</text>
+    </g>
+    <g font-family="Geist" font-size="16" fill="rgba(255,255,255,.82)">
+      <text x="64" y="126">Produzione · manutenzione · energia · IT/OT</text>
+      <text x="64" y="214">Schema linea · elenco PLC · contatori</text>
+      <text x="64" y="240">Dati di produzione già disponibili</text>
+      <text x="64" y="330">Perimetro · gap · ipotesi pilot</text>
+      <text x="64" y="356">Proposta economica</text>
+    </g>
+    <g stroke="rgba(255,255,255,.12)">
+      <path d="M64 148 L736 148"/><path d="M64 264 L736 264"/>
+    </g>
+
+    <!-- quanto vale la linea, con la stessa timeline dell’apertura -->
+    <g fill="rgba(255,255,255,.09)">
+      <rect x="864" y="92" width="352" height="12"/><rect x="864" y="112" width="352" height="12"/>
+      <rect x="864" y="132" width="352" height="12"/>
+    </g>
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="864" y="92" width="53" height="12"/><rect x="868" y="92" width="0" height="12"/>
+      <rect x="921" y="92" width="176" height="12"/><rect x="1110" y="92" width="106" height="12"/>
+      <rect x="864" y="112" width="53" height="12"/><rect x="921" y="112" width="176" height="12"/>
+      <rect x="1110" y="112" width="106" height="12"/>
+      <rect x="864" y="132" width="53" height="12"/><rect x="921" y="132" width="176" height="12"/>
+      <rect x="1110" y="132" width="106" height="12"/>
+    </g>
+    <rect x="1097" y="132" width="13" height="12" fill="#E6E011"/>
+    <text x="864" y="168" font-family="Geist" font-size="12" fill="rgba(255,255,255,.44)">turno 06:00 – 14:00</text>
+
+    <text x="864" y="248" font-family="Geist" font-size="30" font-weight="600" fill="#FFFFFF">15.680 €</text>
+    <text x="864" y="272" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">costo di fermo · ultimi 7 giorni</text>
+    <text x="864" y="344" font-family="Geist" font-size="30" font-weight="600" fill="#FFFFFF">309.120 €</text>
+    <text x="864" y="368" font-family="Geist" font-size="13" fill="rgba(255,255,255,.44)">all’anno, da una sola causa</text>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Scenario illustrativo · non risultato cliente</span><span>12 / 12</span></div>
+</div>
+
+
+<!-- ===================== A1 · CONFRONTO PACCHETTI =====================
+     L’unica matrice ammessa in tutto il deck, e sta in appendice. -->
+<div class="slide lt" id="a1_pacchetti">
+  <div class="z" style="top:48px;width:1100px">
+    <h2 class="sm">Che cosa comprende ogni livello.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="440" viewBox="0 0 1280 392"
+       style="position:absolute;left:0;top:132px" role="img" aria-labelledby="m1t m1d">
+    <title id="m1t">Perimetro dei tre livelli</title>
+    <desc id="m1d">Otto capacità confrontate su Connect, Insight e Refyn. Insight comprende
+      Connect, Refyn comprende entrambi.</desc>
+
+    <g font-family="Geist" font-size="14" font-weight="500" fill="rgba(10,10,10,.56)">
+      <text x="64" y="26">Capacità</text>
+      <text x="836" y="26" text-anchor="middle">Connect</text>
+      <text x="1000" y="26" text-anchor="middle">Insight</text>
+      <text x="1164" y="26" text-anchor="middle">Refyn</text>
+    </g>
+    <path d="M64 42 L1216 42" stroke="rgba(10,10,10,.26)"/>
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="64" y="76">Stato macchina e linea</text>
+      <text x="64" y="120">OEE, conteggi e storico</text>
+      <text x="64" y="164">Consumi e utility</text>
+      <text x="64" y="208">Cause, micro-fermate e velocità</text>
+      <text x="64" y="252">Energia per stato e costo per pezzo</text>
+      <text x="64" y="296">KPI, formule e confronti avanzati</text>
+      <text x="64" y="340">Priorità e gestione azioni</text>
+      <text x="64" y="384">Verifica dei benefici</text>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)" text-anchor="middle">
+      <text x="836" y="76">Incluso</text><text x="1000" y="76">Incluso</text><text x="1164" y="76">Incluso</text>
+      <text x="836" y="120">Incluso</text><text x="1000" y="120">Incluso</text><text x="1164" y="120">Incluso</text>
+      <text x="836" y="164">Incluso</text><text x="1000" y="164">Incluso</text><text x="1164" y="164">Incluso</text>
+      <text x="836" y="208">Base</text><text x="1000" y="208">Avanzato</text><text x="1164" y="208">Avanzato</text>
+      <text x="836" y="252">Configurabile</text><text x="1000" y="252">Incluso</text><text x="1164" y="252">Incluso</text>
+      <text x="836" y="296">Non incluso</text><text x="1000" y="296">Incluso</text><text x="1164" y="296">Incluso</text>
+      <text x="836" y="340">Non incluso</text><text x="1000" y="340">Non incluso</text><text x="1164" y="340">Previsto</text>
+      <text x="836" y="384">Non incluso</text><text x="1000" y="384">Non incluso</text><text x="1164" y="384">Previsto</text>
+    </g>
+    <g stroke="rgba(10,10,10,.12)">
+      <path d="M64 92 L1216 92"/><path d="M64 136 L1216 136"/><path d="M64 180 L1216 180"/>
+      <path d="M64 224 L1216 224"/><path d="M64 268 L1216 268"/><path d="M64 312 L1216 312"/>
+      <path d="M64 356 L1216 356"/>
+    </g>
+  </svg>
+
+  <div class="z" style="top:596px"><div class="cp">Insight comprende Connect. Refyn comprende
+    Connect e Insight. Refyn è il modulo avanzato in sviluppo. Il perimetro effettivo dipende
+    dai dati disponibili e dalla configurazione dell’impianto.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>A1</span></div>
+</div>
+
+
+<!-- ========================= A2 · SERVIZI ============================= -->
+<div class="slide lt" id="a2_servizi">
+  <div class="z" style="top:48px;width:1100px">
+    <h2 class="sm">Il software misura.<br>I servizi accelerano il risultato.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="420" viewBox="0 0 1280 352"
+       style="position:absolute;left:0;top:170px" role="img" aria-labelledby="v2t v2d">
+    <title id="v2t">Quattro famiglie di servizi</title>
+    <desc id="v2d">Configurare, controllare, migliorare e scalare: tre servizi per famiglia,
+      attivabili su tutti e tre i livelli.</desc>
+    <g font-family="Geist" font-size="20" font-weight="600" fill="#0A0A0A">
+      <text x="64" y="44">Configurare</text><text x="64" y="132">Controllare</text>
+      <text x="64" y="220">Migliorare</text><text x="64" y="308">Scalare</text>
+    </g>
+    <g font-family="Geist" font-size="17" fill="rgba(10,10,10,.74)">
+      <text x="380" y="44">Assessment e perimetrazione · setup e integrazione · KPI e formule</text>
+      <text x="380" y="132">Data quality review · performance review · energy review</text>
+      <text x="380" y="220">Improvement sprint · executive report · verifica dei benefici</text>
+      <text x="380" y="308">Formazione · supporto · estensione ad altre linee e siti</text>
+    </g>
+    <g stroke="rgba(10,10,10,.12)">
+      <path d="M64 76 L1216 76"/><path d="M64 164 L1216 164"/><path d="M64 252 L1216 252"/>
+    </g>
+  </svg>
+
+  <div class="z" style="top:596px"><div class="cp">I servizi sono attivabili su Connect,
+    Insight e Refyn.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>A2</span></div>
+</div>
+
+
+<!-- ========================= A3 · PRICING =============================
+     Struttura, non importi: le cifre non sono approvate e i placeholder
+     non compaiono in un documento che va al cliente. -->
+<div class="slide lt" id="a3_pricing">
+  <div class="z" style="top:48px;width:1100px">
+    <h2 class="sm">Una struttura semplice:<br>avvio, canone, servizi.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="420" viewBox="0 0 1280 330"
+       style="position:absolute;left:0;top:172px" role="img" aria-labelledby="r3t r3d">
+    <title id="r3t">Le tre voci del modello economico</title>
+    <desc id="r3d">Una tantum di avvio, canone ricorrente per sito, linea e livello, servizi
+      opzionali.</desc>
+    <g font-family="Geist" font-size="20" font-weight="600" fill="#0A0A0A">
+      <text x="64" y="44">Una tantum</text><text x="64" y="148">Ricorrente</text>
+      <text x="64" y="252">Opzionale</text>
+    </g>
+    <g font-family="Geist" font-size="17" fill="rgba(10,10,10,.74)">
+      <text x="380" y="44">Audit e assessment · setup e mapping · integrazione</text>
+      <text x="380" y="72">Configurazione · eventuale sensoristica · formazione iniziale</text>
+      <text x="380" y="148">Canone base per stabilimento · canone per linea</text>
+      <text x="380" y="176">Livello Connect, Insight o Refyn · supporto standard</text>
+      <text x="380" y="252">Review periodiche · KPI personalizzati · improvement sprint</text>
+      <text x="380" y="280">Executive reporting · supporto premium · scale-up</text>
+    </g>
+    <g stroke="rgba(10,10,10,.12)">
+      <path d="M64 104 L1216 104"/><path d="M64 208 L1216 208"/>
+    </g>
+  </svg>
+
+  <div class="z" style="top:604px">
+    <div class="hr"></div>
+    <div style="font-size:22px;font-weight:600;letter-spacing:-.02em;padding-top:18px">Canone
+      base per sito + canone per linea + livello modulo + servizi opzionali</div>
+  </div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Importi in corso di approvazione</span><span>A3</span></div>
+</div>
+
+
+<!-- ==================== A4 · ASSUNZIONI E FAQ ========================= -->
+<div class="slide lt" id="a4_faq">
+  <div class="z" style="top:48px;width:1100px">
+    <h2 class="sm">Le sei domande che arrivano sempre.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="440" viewBox="0 0 1280 440"
+       style="position:absolute;left:0;top:150px" role="img" aria-labelledby="f4t f4d">
+    <title id="f4t">Sei domande e sei risposte</title>
+    <desc id="f4d">Fermo linea, sensori, macchine di marche diverse, residenza dei dati,
+      integrazione con il gestionale, passaggio dal pilot alla scala.</desc>
+    <g font-family="Geist" font-size="17" font-weight="600" fill="#0A0A0A">
+      <text x="64" y="30">Serve fermare la linea?</text>
+      <text x="64" y="106">Servono sensori nuovi?</text>
+      <text x="64" y="182">Funziona su macchine di marche diverse?</text>
+      <text x="64" y="258">Dove risiedono i dati?</text>
+      <text x="64" y="334">Si integra con il gestionale?</text>
+      <text x="64" y="410">Come si passa dal pilot alla scala?</text>
+    </g>
+    <g font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">
+      <text x="560" y="30">La lettura dei segnali non richiede scrittura verso le macchine.</text>
+      <text x="560" y="56">Eventuali interventi si pianificano con la produzione.</text>
+      <text x="560" y="106">Si parte da quello che c’è. Dove il dato manca o non è affidabile,</text>
+      <text x="560" y="132">il progetto può prevedere contatori o sensori aggiuntivi.</text>
+      <text x="560" y="182">L’approccio è multi-vendor e la compatibilità viene verificata</text>
+      <text x="560" y="208">durante l’audit tecnico, impianto per impianto.</text>
+      <text x="560" y="258">Nell’ambiente di deployment concordato con il vostro IT.</text>
+      <text x="560" y="284">Modello, sicurezza e retention si chiudono nel solution design.</text>
+      <text x="560" y="334">È possibile un’integrazione con ERP o gestionale, previa</text>
+      <text x="560" y="360">verifica tecnica del punto di innesto.</text>
+      <text x="560" y="410">Il pilot chiude con risultati, gap e proposta di estensione.</text>
+    </g>
+    <g stroke="rgba(10,10,10,.12)">
+      <path d="M64 76 L1216 76"/><path d="M64 152 L1216 152"/><path d="M64 228 L1216 228"/>
+      <path d="M64 304 L1216 304"/><path d="M64 380 L1216 380"/>
+    </g>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>A4</span></div>
+</div>
+
+</div>
