@@ -151,8 +151,10 @@ JS = r"""
               : { l: r.left, t: r.top, r: r.right, b: r.bottom };
     }
     const area = bb ? (bb.r - bb.l) * (bb.b - bb.t) : 0;
-    // "area utile" = canvas meno margini laterali e fasce di rail
-    rec.visualPct = Math.round(area / (1152 * 600) * 1000) / 10;
+    // misurata sull'intero canvas, non su un'area utile ridotta: e' la
+    // quota di superficie della slide occupata da interfacce, grafici,
+    // timeline o numeri, cioe' la grandezza che il brief mette a target
+    rec.visualPct = Math.round(area / (1280 * 720) * 1000) / 10;
     out.push(rec);
   }
   return out;

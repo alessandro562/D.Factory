@@ -45,6 +45,8 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;
 .wm i{color:var(--acid);font-style:normal}
 .wm--txt{letter-spacing:-.02em}
 .ac .wm i{color:var(--paper)}
+/* la dichiarazione di ricostruzione: nel piede, in tondo, non in maiuscoletto */
+.rail .nt{font-family:var(--ui);font-size:12.5px;letter-spacing:0;text-transform:none}
 
 /* ---------- tipografia ---------- */
 .kicker{font-size:15px;letter-spacing:.06em;font-weight:500}
