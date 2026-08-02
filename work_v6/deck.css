@@ -43,6 +43,9 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;
   text-transform:none;color:inherit}
 .dk .wm{color:var(--d1)} .lt .wm,.ac .wm{color:var(--l1)}
 .wm i{color:var(--acid);font-style:normal}
+/* nel piede il punto della filigrana e' neutro: il giallo si accende solo
+   dove c'e' qualcosa da guardare */
+.dk .rail .wm i{color:var(--d1)} .lt .rail .wm i{color:var(--l1)}
 .wm--txt{letter-spacing:-.02em}
 .ac .wm i{color:var(--paper)}
 /* la dichiarazione di ricostruzione: nel piede, in tondo, non in maiuscoletto */
