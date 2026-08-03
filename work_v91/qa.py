@@ -32,7 +32,7 @@ JS = r"""
     const rec = { id: slide.id, kind: slide.dataset.kind || 'sales', overflow: [],
                   minText: 999, minCont: 999, minMeta: 999, minSvg: 999, minUi: 999,
                   words: 0, wordsUi: 0, wordsMeta: 0, wordsPh: 0, placeholders: 0, fragments: 0, clipped: [],
-                  smallText: [], visualPct: 0, collisions: [], clipped: [] };
+                  smallText: [], visualPct: 0, collisions: [] };
 
     // ---- testo: cammina i nodi di testo, misura il corpo effettivo ----
     const seen = [];
@@ -260,6 +260,7 @@ def report(html, default='sales'):
         flags = []
         if r['overflow']: flags.append(f'OVERFLOW×{len(r["overflow"])}')
         if r['collisions']: flags.append(f'COLLIS×{len(r["collisions"])}')
+        if r.get('clipped'): flags.append(f'CLIP×{len(r["clipped"])}')
         if copy > wmax: flags.append(f'copy>{wmax}')
         if r['minCont'] < cmin: flags.append(f'cont<{cmin}')
         if r['minMeta'] < mmin: flags.append(f'meta<{mmin}')

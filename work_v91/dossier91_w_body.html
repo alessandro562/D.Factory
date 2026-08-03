@@ -1,0 +1,1091 @@
+<div class="doc">
+<div class="slide dk" id="p01_cover" data-kind="dossier">
+  <div class="z" style="position:absolute;left:64px;top:64px">
+    <span class="wm" style="font-size:19px">D<i>.</i>Factory</span>
+  </div>
+  <div style="position:absolute;left:64px;top:146px;width:900px">
+    <div style="font-size:42px;line-height:1.12;letter-spacing:-.03em;font-weight:600">Dossier tecnico
+      preliminare<br>per assessment e solution design</div>
+    <div class="sub" style="margin-top:20px;max-width:760px">Acquisizione, supervisione e analisi
+      integrata di produzione ed energia.</div>
+  </div>
+
+  <div style="position:absolute;left:64px;top:340px;width:520px">
+    <div class="lbl">Le quattro sezioni</div>
+    <div class="sp" style="margin-top:14px;line-height:1.9">
+      1 · Prodotto — pagine 02–06<br>
+      2 · Dati e architettura — pagine 07–09<br>
+      3 · Misure e analisi — pagine 10–12<br>
+      4 · Delivery e supporto — pagine 13–14</div>
+    <div class="lbl" style="margin-top:34px">Emesso da</div>
+    <div class="sp" style="margin-top:12px;line-height:1.9" data-ed="working">{{PH_COMPANY_LEGAL_NAME}}<br>{{PH_CONTACT_NAME}} · {{PH_CONTACT_EMAIL}}<br>{{PH_VERSION_DATE}}</div>
+    
+  </div>
+  <div style="position:absolute;left:672px;top:340px;width:544px">
+    <div class="lbl">Destinatari</div>
+    <div class="sp" style="margin-top:14px;line-height:1.9">Operations · Engineering · IT/OT<br>
+      Manutenzione · Energia · Procurement tecnico</div>
+    <div class="lbl" style="margin-top:26px">Annessi tecnici</div>
+    <div class="sp" style="margin-top:12px;line-height:1.8">A1 compatibilità · A2 dimensionamento<br>A3 sicurezza e governo · A4 dizionario KPI</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Le viste di prodotto sono ricostruzioni con dati illustrativi, dichiarate pagina per pagina</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_COMPANY_LEGAL_NAME}}</span> <span class="ph">{{PH_CONTACT_NAME}}</span> <span class="ph">{{PH_CONTACT_EMAIL}}</span> <span class="ph">{{PH_VERSION_DATE}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p02_overview" data-kind="dossier">
+  <div class="hd">
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">02 / 14</div>
+  </div>
+
+  <div class="tt tt--sm">Dal segnale all&rsquo;informazione utilizzabile.
+    <div class="sub" style="margin-top:14px">Che cosa acquisisce, come contestualizza il dato
+      e quali output restituisce.</div>
+  </div>
+
+  <svg class="hero" style="top:206px" width="880" height="356" viewBox="0 0 880 356"
+       role="img" aria-labelledby="a1t a1d">
+    <title id="a1t">Acquisisce, contestualizza, restituisce</title>
+    <desc id="a1d">Un unico flusso da sinistra a destra, diviso in tre passaggi numerati.
+      Le sorgenti già presenti in impianto entrano nel primo; nel secondo ogni evento
+      riceve gli stessi sette attributi; dal terzo escono viste, indicatori e report.</desc>
+
+    <!-- un solo pannello, tre sezioni numerate: e' un flusso, non una matrice -->
+    <rect x="64" y="0" width="800" height="300" fill="#F3F4F0"/>
+    <g stroke="rgba(10,10,10,.13)">
+      <path d="M331 20 L331 78"/><path d="M331 102 L331 280"/>
+      <path d="M598 20 L598 78"/><path d="M598 102 L598 280"/>
+    </g>
+
+    <g font-family="Geist Mono" font-size="13" fill="rgba(10,10,10,.42)">
+      <text x="88" y="42">01</text><text x="355" y="42">02</text><text x="622" y="42">03</text>
+    </g>
+    <g font-family="Geist" font-size="20" font-weight="600" fill="#0A0A0A">
+      <text x="88" y="72">Acquisisce</text><text x="355" y="72">Contestualizza</text><text x="622" y="72">Restituisce</text>
+    </g>
+    <!-- una sola linea attraversa i tre passaggi: e' la spina del flusso,
+         e i due triangoli sui divisori danno il verso di lettura -->
+    <path d="M88 90 L840 90" stroke="rgba(10,10,10,.13)"/>
+    <g fill="#0A0A0A"><path d="M325 83 L337 90 L325 97 Z"/><path d="M592 83 L604 90 L592 97 Z"/></g>
+
+    <g font-family="Geist" font-size="15" fill="#0A0A0A">
+      <text x="88" y="120">controllori</text><text x="88" y="146">contatori</text><text x="88" y="172">ordini</text>
+      <text x="355" y="120">tempo</text><text x="355" y="146">macchina</text><text x="355" y="172">prodotto</text>
+      <text x="355" y="198">ordine</text><text x="355" y="224">stato</text><text x="355" y="250">causa</text>
+      <text x="355" y="276">turno</text>
+      <text x="622" y="120">viste operative</text><text x="622" y="146">indicatori</text><text x="622" y="172">report ed export</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">
+      <text x="88" y="204">stati, conteggi, energia,</text><text x="88" y="226">prodotto e cadenza</text>
+      <text x="622" y="204">linea, macchina e turno;</text><text x="622" y="226">OEE, fermi e consumi;</text>
+      <text x="622" y="248">file e integrazioni</text>
+    </g>
+
+    <path d="M64 322 L864 322" stroke="rgba(10,10,10,.13)"/>
+    <text x="64" y="344" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">Lo schema descrive il metodo: perimetro, punti di misura e anagrafiche si definiscono nel solution design.</text>
+  </svg>
+
+  <div class="aside" style="top:206px">
+    <div class="blk">
+      <div class="lbl">Che cosa richiede</div>
+      <div class="sp">Accesso in sola lettura ai controllori<br>Punti di misura per le utility<br>Anagrafiche di prodotto e ordine<br>Un ambiente di deployment concordato con IT</div>
+    </div>
+    <div class="blk">
+      <div class="lbl">Che cosa non richiede</div>
+      <div class="sp">Non presuppone la sostituzione delle macchine. Eventuali adeguamenti ai segnali vengono verificati in audit.</div>
+    </div>
+    <div class="hr" style="margin-bottom:18px"></div>
+    <div class="lbl" style="margin-bottom:8px">Definito nel solution design</div>
+    <div class="sp">Ambiente e sizing · protocolli e porte · autenticazione ·
+      backup e retention · integrazioni · supporto remoto.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>schema di funzionamento</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_DEPLOYMENT_MODEL}}</span> <span class="ph">{{PH_DATA_OWNERSHIP}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p03_livelli" data-kind="dossier">
+  <div class="hd">
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">03 / 14</div>
+  </div>
+
+  <div class="tt tt--sm">Connect, Insight e Refyn sulla stessa base dati.
+    <div class="sub" style="margin-top:14px">Tre gradi di valore estratti da una sola
+      acquisizione, non tre prodotti separati.</div>
+  </div>
+
+  <svg class="diag" style="top:206px" width="800" height="384" viewBox="0 0 800 384"
+       role="img" aria-labelledby="b3t b3d">
+    <title id="b3t">I tre livelli e la base dati comune</title>
+    <desc id="b3d">Connect, Insight e Refyn si appoggiano alla stessa base di produzione,
+      energia e storico. Ogni livello comprende il precedente.</desc>
+
+    <path d="M88 40 L88 330" stroke="rgba(10,10,10,.30)" fill="none"/>
+    <g stroke="rgba(10,10,10,.30)" fill="none">
+      <path d="M88 46 L112 46"/><path d="M88 138 L112 138"/><path d="M88 230 L112 230"/>
+      <path d="M88 330 L112 330"/>
+    </g>
+
+    <g fill="#F3F4F0">
+      <rect x="112" y="8" width="678" height="76"/><rect x="112" y="100" width="678" height="76"/>
+      <rect x="112" y="192" width="678" height="76"/>
+    </g>
+    <g font-family="Geist" font-size="20" font-weight="600" fill="#0A0A0A">
+      <text x="136" y="42">Connect</text><text x="136" y="134">+ Insight</text><text x="136" y="226">+ Refyn</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.58)">
+      <text x="136" y="66">stato, OEE, produzione, consumi, storico</text>
+      <text x="136" y="158">cause, correlazioni, energia per stato, costo e CO₂</text>
+      <text x="136" y="250">priorità, azioni, verifica dei benefici</text>
+    </g>
+    <text x="766" y="226" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)"
+          text-anchor="end">modulo avanzato</text>
+
+    <rect x="112" y="300" width="678" height="60" fill="#E9EAE5"/>
+    <text x="136" y="326" font-family="Geist" font-size="16" font-weight="600" fill="#0A0A0A">Base dati operativa</text>
+    <text x="136" y="348" font-family="Geist" font-size="14" fill="rgba(10,10,10,.58)">una sola acquisizione: produzione, energia, storico</text>
+  </svg>
+
+  <div class="spec" style="top:206px">
+    <div class="lbl" style="margin-bottom:6px">Che cosa aggiunge ogni livello</div>
+    <div class="row"><b>Connect</b><span>vede e misura</span></div>
+    <div class="row"><b>Insight</b><span>spiega e quantifica</span></div>
+    <div class="row"><b>Refyn</b><span>guida e verifica</span></div>
+    <div class="lbl" style="margin:26px 0 12px">Servizi specialistici</div>
+    <div class="sp">Attivabili su tutti e tre i livelli: assessment, configurazione dei KPI,
+      review, formazione e scale-up.</div>
+    <div class="note" style="margin-top:22px">Ogni livello comprende il precedente e lavora
+      sugli stessi dati. Il perimetro effettivo dipende dai segnali disponibili.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Schema dei livelli · perimetro da confermare in audit</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SERVICES_INCLUDED}}</span> <span class="ph">{{PH_REFYN_PRICING_MODEL}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p04_connect" data-kind="dossier">
+  <div class="hd">
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">04 / 14</div>
+  </div>
+
+  <div class="tt tt--sm">Connect rende visibile ci&ograve; che sta succedendo.
+    <div class="sub" style="margin-top:14px">Che cosa gira, che cosa &egrave; fermo, da quanto
+      e per quale causa: nella stessa schermata.</div>
+  </div>
+
+  <svg class="hero" data-ui="1" style="top:206px" width="880" height="392" viewBox="0 0 880 392"
+       role="img" aria-labelledby="a2t a2d">
+    <title id="a2t">Vista Connect ricostruita</title>
+    <desc id="a2d">Stato corrente delle tre macchine della linea, timeline del turno con i due
+      fermi già avvenuti ed elenco degli eventi con durata e causale. Ricostruzione grafica,
+      dati illustrativi.</desc>
+
+    <rect x="0" y="0" width="880" height="392" fill="#141414"/>
+    <text x="64" y="30" font-family="Geist" font-size="15" font-weight="600" fill="#FFFFFF">Linea 1 · Confezionamento</text>
+    <text x="300" y="30" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)">turno 06:00 – 14:00</text>
+    <text x="816" y="30" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)" text-anchor="end">aggiornato 11:33</text>
+    <path d="M0 48 L880 48" stroke="rgba(255,255,255,.16)"/>
+
+    <text x="64" y="80" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)">Stato di linea</text>
+    <text x="340" y="80" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)">06:00</text>
+    <text x="816" y="80" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)" text-anchor="end">14:00</text>
+
+    <g font-family="Geist" font-size="13.5" fill="rgba(255,255,255,.74)">
+      <text x="64" y="115">Riempitrice</text><text x="64" y="157">Etichettatrice</text><text x="64" y="199">Tappatrice</text>
+    </g>
+    <g fill="rgba(255,255,255,.74)">
+      <rect x="196" y="102" width="9" height="9"/><rect x="196" y="144" width="9" height="9"/>
+    </g>
+    <rect x="196" y="186" width="9" height="9" fill="#E6E011"/>
+    <g font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.74)">
+      <text x="214" y="111">in marcia</text><text x="214" y="153">in marcia</text>
+    </g>
+    <text x="214" y="195" font-family="Geist" font-size="12.5" fill="#FFFFFF">ferma da 9 min</text>
+
+    <!-- timeline · il turno si interrompe su tutta la linea, il giallo dice chi -->
+    <g fill="rgba(255,255,255,.10)">
+      <rect x="340" y="96" width="476" height="22"/><rect x="340" y="138" width="476" height="22"/>
+      <rect x="340" y="180" width="476" height="22"/>
+    </g>
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="340" y="96" width="71" height="22"/><rect x="416" y="96" width="245" height="22"/>
+      <rect x="340" y="138" width="71" height="22"/><rect x="416" y="138" width="245" height="22"/>
+      <rect x="340" y="180" width="71" height="22"/><rect x="416" y="180" width="245" height="22"/>
+    </g>
+    <rect x="411" y="138" width="5" height="22" fill="#E6E011"/>
+    <rect x="661" y="180" width="9" height="22" fill="#E6E011"/>
+    <path d="M670 92 L670 206" stroke="rgba(255,255,255,.48)"/>
+    <text x="670" y="222" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)" text-anchor="middle">adesso</text>
+
+    <path d="M0 250 L880 250" stroke="rgba(255,255,255,.16)"/>
+    <text x="64" y="278" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)">Fermi del turno</text>
+    <g font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)">
+      <text x="180" y="278">durata</text><text x="330" y="278">macchina</text><text x="520" y="278">causa associata</text>
+    </g>
+    <path d="M64 292 L816 292" stroke="rgba(255,255,255,.16)"/>
+
+    <g font-family="Geist Mono" font-size="13" fill="#FFFFFF"><text x="64" y="322">11:24</text></g>
+    <text x="180" y="322" font-family="Geist" font-size="13.5" fill="#FFFFFF">in corso · 9 min</text>
+    <text x="330" y="322" font-family="Geist" font-size="13.5" fill="rgba(255,255,255,.74)">Tappatrice</text>
+    <text x="520" y="322" font-family="Geist" font-size="13.5" fill="#FFFFFF">Mancanza tappi</text>
+    <path d="M64 340 L816 340" stroke="rgba(255,255,255,.16)"/>
+
+    <g font-family="Geist Mono" font-size="13" fill="rgba(255,255,255,.74)"><text x="64" y="370">07:12</text></g>
+    <text x="180" y="370" font-family="Geist" font-size="13.5" fill="rgba(255,255,255,.74)">5 min</text>
+    <text x="330" y="370" font-family="Geist" font-size="13.5" fill="rgba(255,255,255,.74)">Etichettatrice</text>
+    <text x="520" y="370" font-family="Geist" font-size="13.5" fill="rgba(255,255,255,.48)">Causa da assegnare</text>
+
+    <g fill="#FFFFFF"><circle cx="30" cy="150" r="12"/><circle cx="850" cy="150" r="12"/><circle cx="30" cy="274" r="12"/></g>
+    <g font-family="Geist" font-size="13" font-weight="600" fill="#0A0A0A" text-anchor="middle">
+      <text x="30" y="155">1</text><text x="850" y="155">2</text><text x="30" y="279">3</text>
+    </g>
+  </svg>
+
+  <div class="aside" style="top:206px">
+    <div class="blk">
+      <div class="lbl">Le tre aree</div>
+      <div class="sp"><b>1</b>&ensp;Stato di linea, che cosa gira adesso<br><br>
+        <b>2</b>&ensp;Timeline del turno, quando si &egrave; fermata<br><br>
+        <b>3</b>&ensp;Causa associata, perch&eacute; e per quanto</div>
+    </div>
+    <div class="hr" style="margin-bottom:18px"></div>
+    <div class="blk">
+      <div class="lbl">Chi la usa</div>
+      <div class="sp">Conduttore di linea, capoturno, responsabile di produzione</div>
+    </div>
+    <div class="blk">
+      <div class="lbl">Che decisione abilita</div>
+      <div class="sp">Intervenire sul fermo in corso e assegnare la causa mentre &egrave; ancora nota</div>
+    </div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>vista ricostruita · dati illustrativi</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_CONNECT_EXACT_SCOPE}}</span> <span class="ph">{{PH_CONNECT_REPORTS}}</span> <span class="ph">{{PH_CONNECT_ALERTS}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p05_insight" data-kind="dossier">
+  <div class="hd">
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">05 / 14</div>
+  </div>
+
+  <div class="tt tt--sm">Insight spiega dove si perde capacità e valore.
+    <div class="sub" style="margin-top:14px">Le cause ordinate per impatto economico, non per
+      frequenza.</div>
+  </div>
+
+  <svg class="hero" data-ui="1" style="top:206px" width="880" height="340" viewBox="0 0 880 340"
+       role="img" aria-labelledby="b5t b5d">
+    <title id="b5t">Ranking delle cause di fermo, vista ricostruita</title>
+    <desc id="b5d">Su sette giorni la mancanza tappi vale quattordici eventi, novantasei
+      minuti e seimilasettecentoventi euro: il quarantatré per cento del costo di fermo della
+      linea. Dati illustrativi.</desc>
+
+    <rect x="0" y="0" width="880" height="340" fill="#FFFFFF"/>
+    <rect x="0" y="0" width="880" height="44" fill="#F3F4F0"/>
+    <path d="M0 .75 L880 .75" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <path d="M0 339.25 L880 339.25" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <text x="64" y="28" font-family="Geist" font-size="14" font-weight="600" fill="#0A0A0A">Cause di fermo · Linea 1 · ultimi 7 giorni</text>
+    <text x="816" y="28" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)"
+          text-anchor="end">ordinate per costo</text>
+    <path d="M0 44 L880 44" stroke="rgba(10,10,10,.16)"/>
+
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">
+      <text x="64" y="76">Causa</text><text x="430" y="76" text-anchor="end">Eventi</text>
+      <text x="530" y="76" text-anchor="end">Durata</text><text x="816" y="76" text-anchor="end">Costo</text>
+    </g>
+    <path d="M64 90 L816 90" stroke="rgba(10,10,10,.26)"/>
+
+    <rect x="64" y="114" width="11" height="11" fill="#E6E011"/>
+    <g font-family="Geist" font-size="15" fill="#0A0A0A">
+      <text x="88" y="124">Mancanza tappi</text><text x="88" y="168">Cambio formato</text>
+      <text x="88" y="212">Micro-fermate</text><text x="88" y="256">Manutenzione</text>
+    </g>
+    <rect x="560" y="112" width="200" height="14" fill="#E6E011"/>
+    <g fill="#0A0A0A">
+      <rect x="560" y="156" width="129" height="14"/><rect x="560" y="200" width="85" height="14"/>
+      <rect x="560" y="244" width="52" height="14"/>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)" text-anchor="end">
+      <text x="430" y="124">14</text><text x="530" y="124">96 min</text>
+      <text x="430" y="168">4</text><text x="530" y="168">62 min</text>
+      <text x="430" y="212">38</text><text x="530" y="212">41 min</text>
+      <text x="430" y="256">2</text><text x="530" y="256">25 min</text>
+    </g>
+    <g font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A" text-anchor="end">
+      <text x="816" y="124">6.720 €</text><text x="816" y="168">4.340 €</text>
+      <text x="816" y="212">2.870 €</text><text x="816" y="256">1.750 €</text>
+    </g>
+    <g stroke="rgba(10,10,10,.12)">
+      <path d="M64 142 L816 142"/><path d="M64 186 L816 186"/><path d="M64 230 L816 230"/>
+    </g>
+    <path d="M64 274 L816 274" stroke="rgba(10,10,10,.26)"/>
+    <text x="64" y="306" font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">Il 43% del costo viene da una causa sola</text>
+    <text x="816" y="308" font-family="Geist" font-size="20" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">15.680 €</text>
+  </svg>
+
+  <div class="aside" style="top:206px">
+    <div class="blk">
+      <div class="lbl">Che cosa aggiunge</div>
+      <div class="sp">Cause associate e validate<br>Correlazione con l’energia<br>Costo
+        energetico per pezzo e CO₂<br>Confronti fra turni e formati</div>
+    </div>
+    <div class="hr" style="margin-bottom:18px"></div>
+    <div class="blk">
+      <div class="lbl">Come ordina</div>
+      <div class="sp">Per impatto economico: quattordici fermi brevi possono pesare più di un
+        fermo lungo.</div>
+    </div>
+    <div class="note">La causa è associata all’evento e validata da chi la conosce.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Vista ricostruita · dati illustrativi</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_INSIGHT_EXACT_SCOPE}}</span> <span class="ph">{{PH_COST_CALCULATION_METHOD}}</span> <span class="ph">{{PH_CO2_METHOD}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p06_refyn" data-kind="dossier">
+  <div class="hd">
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">06 / 14</div>
+  </div>
+
+  <div class="tt tt--sm">Un ciclo che si chiude: priorità, azioni, verifica.
+    <div class="sub" style="margin-top:14px">I risultati aggiornano le priorità del ciclo
+      successivo.</div>
+  </div>
+
+  <svg class="diag" style="top:210px" width="800" height="360" viewBox="0 0 800 360"
+       role="img" aria-labelledby="b6t b6d">
+    <title id="b6t">Il ciclo operativo di Refyn</title>
+    <desc id="b6d">Le priorità generano azioni, le azioni vengono verificate contro la
+      baseline e i risultati aggiornano le priorità del ciclo successivo. Rappresentazione
+      del funzionamento previsto.</desc>
+
+    <path d="M632 62 L632 20 L164 20 L164 56" fill="none" stroke="#0A0A0A" stroke-width="1.8"/>
+    <polygon points="164,62 158,52 170,52" fill="#0A0A0A"/>
+
+    <g fill="none" stroke="#0A0A0A" stroke-width="1.5">
+      <rect x="64" y="62" width="200" height="68"/><rect x="298" y="62" width="200" height="68"/>
+      <rect x="532" y="62" width="200" height="68"/>
+    </g>
+    <g font-family="Geist" font-size="20" font-weight="600" fill="#0A0A0A" text-anchor="middle">
+      <text x="164" y="103">Priorità</text><text x="398" y="103">Azioni</text><text x="632" y="103">Verifica</text>
+    </g>
+    <g stroke="#0A0A0A" stroke-width="1.5">
+      <path d="M264 96 L286 96"/><path d="M498 96 L520 96"/>
+    </g>
+    <g fill="#0A0A0A">
+      <polygon points="292,96 282,90 282,102"/><polygon points="526,96 516,90 516,102"/>
+    </g>
+
+    <g stroke="rgba(10,10,10,.13)">
+      <path d="M64 158 L264 158"/><path d="M298 158 L498 158"/><path d="M532 158 L732 158"/>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.78)">
+      <text x="64" y="188">Impatto potenziale</text><text x="64" y="214">Energia evitabile</text>
+      <text x="64" y="240">Impatto economico</text>
+      <text x="298" y="188">Responsabile e ambito</text><text x="298" y="214">Baseline e target</text>
+      <text x="298" y="240">Scadenza e stato</text>
+      <text x="532" y="188">Beneficio verificato</text><text x="532" y="214">Confronto con la baseline</text>
+      <text x="532" y="240">Periodo di osservazione</text>
+    </g>
+
+    <path d="M64 296 L790 296" stroke="rgba(10,10,10,.13)"/>
+    <text x="64" y="326" font-family="Geist" font-size="14" fill="rgba(10,10,10,.58)">Se il beneficio non è confermato, l’azione viene riesaminata con una baseline aggiornata.</text>
+  </svg>
+
+  <div class="spec" style="top:206px">
+    <div class="dev">Modulo avanzato in sviluppo</div>
+    <div class="box" style="margin-top:20px" data-ed="working">
+      <div class="note">Perimetro del primo rilascio {{PH_REFYN_MVP_SCOPE}}<br>
+        Accesso al pilot {{PH_REFYN_PILOT_RULES}}<br>Rilascio previsto {{PH_REFYN_RELEASE_TARGET}}</div>
+    </div>
+    <div class="lbl" style="margin:22px 0 6px">Che cosa porta con sé un’azione</div>
+    <div class="row"><b>Responsabile</b><span>e ambito</span></div>
+    <div class="row"><b>Baseline</b><span>e target</span></div>
+    <div class="row"><b>Scadenza</b><span>e stato</span></div>
+    <div class="row"><b>Beneficio</b><span>verificato o no</span></div>
+    <div class="note" style="margin-top:22px">La verifica confronta il periodo osservato con
+      la baseline dichiarata all’apertura dell’azione: senza baseline non c’è beneficio
+      dimostrabile.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Rappresentazione del funzionamento previsto</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_REFYN_MVP_SCOPE}}</span> <span class="ph">{{PH_REFYN_PILOT_RULES}}</span> <span class="ph">{{PH_REFYN_RELEASE_TARGET}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p07_sorgenti" data-kind="dossier">
+  <div class="band" style="height:190px">
+    <div class="hd">
+      <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+      <div class="pg">07 / 14</div>
+    </div>
+    <div class="lbl" style="position:absolute;left:64px;top:100px">Sezione 2 · Dati e architettura</div>
+    <div class="say" style="top:126px">Il dato che non esiste non si analizza: si misura.</div>
+  </div>
+
+  <div class="tt tt--sm" style="top:222px">Da dove leggiamo, e dove il dato va aggiunto.</div>
+
+  <div class="tb full" style="top:290px;grid-template-columns:280px 210px 210px 240px 212px">
+    <div class="tb__h">Punto di misura</div><div class="tb__h">PLC e stati</div>
+    <div class="tb__h">Conta pezzi</div><div class="tb__h">Contatore energia</div>
+    <div class="tb__h">Che cosa manca</div>
+
+    <div><b>Riempitrice</b></div><div>già presente</div><div>già presente</div>
+    <div>da verificare</div><div>affidabilità del contatore</div>
+
+    <div><b>Etichettatrice</b></div><div>già presente</div><div>da verificare</div>
+    <div>da aggiungere</div><div>misura dedicata</div>
+
+    <div><b>Tappatrice</b></div><div>già presente</div><div>già presente</div>
+    <div>da aggiungere</div><div>misura dedicata</div>
+
+    <div><b>Quadro di linea</b></div><div>—</div><div>—</div>
+    <div>già presente</div><div>—</div>
+  </div>
+
+  <div class="box full" style="top:552px">
+    <div class="lbl" style="margin-bottom:8px">Quando serve nuova sensoristica</div>
+    <div class="note">Quando il segnale non esiste, o esiste e non è affidabile. Precisione,
+      installazione, proprietà dello strumento e calibrazione si decidono in audit; la
+      sensoristica è una voce separata dal software. Se l’installazione richiede un fermo
+      linea, va pianificata con la produzione.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Schema di linea tipo · la classificazione riguarda l’impianto, non il prodotto</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_STANDARD_SIGNAL_LIST}}</span> <span class="ph">{{PH_SENSOR_ACCURACY_REQUIREMENTS}}</span> <span class="ph">{{PH_METERING_STANDARDS}}</span> <span class="ph">{{PH_SENSOR_PRICING_RULE}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p08_architettura" data-kind="dossier">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">08 / 14</div>
+  </div>
+
+  <div class="tt tt--sm">Dove risiede e come comunica con la rete di stabilimento.
+    <div class="sub" style="margin-top:14px">La configurazione standard privilegia l’acquisizione in sola lettura. Eventuali scambi ulteriori vengono definiti nel solution design.</div>
+  </div>
+
+  <svg class="diag" style="top:222px" width="800" height="404" viewBox="0 0 800 404"
+       role="img" aria-labelledby="a3t a3d">
+    <title id="a3t">Schema logico di architettura e deployment</title>
+    <desc id="a3d">Quattro livelli: impianto, acquisizione, applicazione e dati, utenti.
+      Fra impianto e acquisizione c’è il confine di rete. Il collegamento con il gestionale
+      è tratteggiato perché opzionale.</desc>
+
+    <g font-family="Geist" font-size="13.5" fill="rgba(10,10,10,.58)" text-anchor="end">
+      <text x="158" y="56">Impianto</text><text x="158" y="163">Acquisizione</text>
+      <text x="158" y="248">Applicazione</text><text x="158" y="348">Utenti</text>
+    </g>
+
+    <g fill="#F3F4F0">
+      <rect x="186" y="20" width="188" height="64"/><rect x="394" y="20" width="188" height="64"/>
+      <rect x="602" y="20" width="188" height="64"/>
+    </g>
+    <g font-family="Geist" font-size="14" font-weight="500" fill="#0A0A0A">
+      <text x="204" y="48">Controllori</text><text x="412" y="48">Contatori</text><text x="620" y="48">Sensori aggiuntivi</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">
+      <text x="204" y="70">stati e conteggi</text><text x="412" y="70">energia e utility</text>
+      <text x="620" y="70">dove il dato manca</text>
+    </g>
+
+    <g stroke="rgba(10,10,10,.30)" fill="none">
+      <path d="M280 84 L280 98 L696 98 L696 84"/><path d="M488 84 L488 130"/>
+    </g>
+    <path d="M186 114 L790 114" stroke="rgba(10,10,10,.30)" stroke-width="1.5"/>
+    <text x="170" y="119" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)" text-anchor="end">confine di rete</text>
+
+    <rect x="186" y="130" width="604" height="64" fill="#F3F4F0"/>
+    <text x="204" y="158" font-family="Geist" font-size="14" font-weight="500" fill="#0A0A0A">Acquisizione in sola lettura</text>
+    <text x="204" y="180" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">configurazione standard · normalizzazione e marcatura temporale</text>
+
+    <g stroke="rgba(10,10,10,.30)" fill="none">
+      <path d="M488 194 L488 206"/><path d="M332 216 L332 206 L644 206 L644 216"/>
+    </g>
+
+    <g fill="#F3F4F0"><rect x="186" y="216" width="292" height="64"/><rect x="498" y="216" width="292" height="64"/></g>
+    <g font-family="Geist" font-size="14" font-weight="500" fill="#0A0A0A">
+      <text x="204" y="244">Elaborazione e regole</text><text x="516" y="244">Archivio storico</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">
+      <text x="204" y="266">stati, cause, indicatori</text><text x="516" y="266">serie storiche ed eventi</text>
+    </g>
+    <path d="M478 248 L498 248" stroke="rgba(10,10,10,.30)"/>
+
+    <g stroke="rgba(10,10,10,.30)" fill="none">
+      <path d="M332 280 L332 296"/><path d="M644 280 L644 296"/>
+      <path d="M280 296 L644 296"/><path d="M280 296 L280 314"/><path d="M488 296 L488 314"/>
+    </g>
+    <path d="M644 296 L696 296 L696 314" stroke="rgba(10,10,10,.30)" stroke-width="1.2"
+          stroke-dasharray="5 5" fill="none"/>
+
+    <g fill="#F3F4F0">
+      <rect x="186" y="314" width="188" height="60"/><rect x="394" y="314" width="188" height="60"/>
+      <rect x="602" y="314" width="188" height="60"/>
+    </g>
+    <g font-family="Geist" font-size="14" font-weight="500" fill="#0A0A0A">
+      <text x="204" y="342">Postazioni di linea</text><text x="412" y="342">Uffici</text><text x="620" y="342">Gestionale</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">
+      <text x="204" y="362">conduttori e capiturno</text><text x="412" y="362">produzione ed energia</text>
+      <text x="620" y="362">scambio opzionale</text>
+    </g>
+    <text x="790" y="396" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)" text-anchor="end">il tratteggio indica il flusso opzionale</text>
+  </svg>
+
+  <div class="spec" style="top:222px">
+    <div class="lbl" style="margin-bottom:6px">Definito dal prodotto</div>
+    <div class="row"><b>Verso le macchine</b><span data-ed="working">{{PH_READ_ONLY_POLICY}}</span></div>
+    <div class="row"><b>Sensoristica</b><span>solo dove manca il dato</span></div>
+    <div class="row"><b>Impianto esistente</b><span>nessuna sostituzione</span></div>
+    <div class="lbl" style="margin:26px 0 12px">Da chiudere nel solution design</div>
+    <div class="sp">— Collocazione dell&rsquo;ambiente<br>— Segmentazione e regole di rete<br>— Autenticazione e ruoli<br>— Orizzonte di conservazione<br>— Formato e frequenza degli export</div>
+    <div class="note" style="margin-top:22px">Il modello di deployment, la residenza e il trattamento dei dati vengono concordati con l’IT e formalizzati nel solution design.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>schema logico · non &egrave; un disegno di rete</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_DEPLOYMENT_MODEL}}</span> <span class="ph">{{PH_SERVER_OWNER}}</span> <span class="ph">{{PH_SUPPORTED_OS}}</span> <span class="ph">{{PH_REQUIRED_PORTS}}</span> <span class="ph">{{PH_ERP_INTEGRATION_METHODS}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p09_contesto" data-kind="dossier">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">09 / 14</div>
+  </div>
+
+  <div class="tt tt--sm">Lo stesso evento, lo stesso tempo, lo stesso prodotto.
+    <div class="sub" style="margin-top:14px">Senza un tempo comune le cinque letture non si
+      incontrano.</div>
+  </div>
+
+  <svg class="hero" data-ui="1" style="top:206px" width="880" height="330" viewBox="0 0 880 330"
+       role="img" aria-labelledby="b9t b9d">
+    <title id="b9t">Un evento allineato su cinque tracce</title>
+    <desc id="b9d">Lo stesso intervallo delle 11:24 letto su produzione, stato macchina,
+      energia, ordine e causa. Vista ricostruita, dati illustrativi.</desc>
+
+    <rect x="0" y="0" width="880" height="330" fill="#141414"/>
+    <text x="64" y="30" font-family="Geist" font-size="14" font-weight="600" fill="#FFFFFF">Linea 1 · finestra 10:00 – 12:00</text>
+    <text x="816" y="30" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)"
+          text-anchor="end">cinque tracce, un solo asse</text>
+    <path d="M0 46 L880 46" stroke="rgba(255,255,255,.16)"/>
+
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)">
+      <text x="64" y="86">Produzione</text><text x="64" y="134">Stato macchina</text>
+      <text x="64" y="182">Energia</text><text x="64" y="230">Ordine e formato</text>
+      <text x="64" y="278">Causa</text>
+    </g>
+    <g fill="rgba(255,255,255,.10)">
+      <rect x="230" y="70" width="586" height="20"/><rect x="230" y="118" width="586" height="20"/>
+      <rect x="230" y="166" width="586" height="20"/><rect x="230" y="214" width="586" height="20"/>
+      <rect x="230" y="262" width="586" height="20"/>
+    </g>
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="230" y="70" width="270" height="20"/><rect x="560" y="70" width="256" height="20"/>
+      <rect x="230" y="118" width="270" height="20"/><rect x="560" y="118" width="256" height="20"/>
+      <rect x="230" y="214" width="586" height="20"/>
+    </g>
+    <rect x="230" y="166" width="586" height="20" fill="rgba(255,255,255,.30)"/>
+    <rect x="500" y="166" width="60" height="20" fill="rgba(255,255,255,.56)"/>
+    <rect x="500" y="262" width="60" height="20" fill="#E6E011"/>
+    <g font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.74)">
+      <text x="572" y="84">0 pz/min</text><text x="572" y="132">fermo</text>
+      <text x="572" y="180">38 kW</text><text x="572" y="228">ordine 4471 · formato 0,5 L</text>
+      <text x="572" y="276">mancanza tappi</text>
+    </g>
+    <path d="M500 58 L500 292" stroke="#E6E011" stroke-width="1.5"/>
+    <text x="500" y="54" font-family="Geist" font-size="12.5" fill="#FFFFFF" text-anchor="middle">11:24</text>
+    <g font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)">
+      <text x="230" y="316">10:00</text><text x="523" y="316" text-anchor="middle">11:00</text>
+      <text x="816" y="316" text-anchor="end">12:00</text>
+    </g>
+  </svg>
+
+  <div class="aside" style="top:206px">
+    <div class="blk">
+      <div class="lbl">I sette attributi</div>
+      <div class="sp">tempo · macchina · prodotto · ordine · stato · causa · turno</div>
+    </div>
+    <div class="hr" style="margin-bottom:18px"></div>
+    <div class="blk">
+      <div class="lbl">Tre controlli sulla qualità</div>
+      <div class="sp"><b>1</b>&ensp;Completezza della serie<br><br><b>2</b>&ensp;Coerenza fra
+        sorgenti diverse<br><br><b>3</b>&ensp;Validazione della causa da parte di chi la
+        conosce</div>
+    </div>
+    <div class="note">La causa è proposta sulla base dello stato e validata da chi la conosce. Senza queste chiavi il dato grezzo resta un numero: non si attribuisce una perdita a un formato, n&eacute; un consumo a uno stato.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Vista ricostruita · dati illustrativi</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_TIME_SYNC_REQUIREMENT}}</span> <span class="ph">{{PH_STANDARD_TAG_MODEL}}</span> <span class="ph">{{PH_CAUSE_VALIDATION_PROCESS}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p10_oee" data-kind="dossier">
+  <div class="band" style="height:190px">
+    <div class="hd">
+      <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+      <div class="pg">10 / 14</div>
+    </div>
+    <div class="lbl" style="position:absolute;left:64px;top:100px">Sezione 3 · Misure e analisi</div>
+    <div class="say" style="top:126px">Una misura vale quanto il perimetro che dichiara.</div>
+  </div>
+
+  <div class="tt tt--sm" style="top:222px">L&rsquo;OEE dice quanto, le perdite dicono dove.
+    <div class="sub" style="margin-top:12px">Tre fattori dichiarati, quattro perdite ordinate per costo.</div>
+  </div>
+
+  <svg class="diag" style="top:322px" width="800" height="306" viewBox="0 0 800 306"
+       role="img" aria-labelledby="a4t a4d">
+    <title id="a4t">Scomposizione dell’OEE di linea</title>
+    <desc id="a4d">Il tempo pianificato scende di gradino in gradino: prima la
+      disponibilità, poi il ritmo, poi la qualità. Ogni barra è lunga quanto la
+      percentuale scritta accanto; in giallo la capacità persa in quel passaggio.
+      Turno illustrativo.</desc>
+
+    <text x="64" y="16" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">OEE di linea · collo di bottiglia: riempitrice</text>
+
+    <!-- la barra e' lunga quanto la percentuale scritta a destra: cumulativa,
+         non il fattore. Il fattore sta nella riga piccola sotto l'etichetta. -->
+    <rect x="250" y="28" width="496" height="38" fill="rgba(10,10,10,.13)"/>
+    <rect x="250" y="90" width="469" height="38" fill="rgba(10,10,10,.13)"/>
+    <rect x="719" y="90" width="27" height="38" fill="#E6E011"/>
+    <rect x="250" y="152" width="371" height="38" fill="rgba(10,10,10,.13)"/>
+    <rect x="621" y="152" width="98" height="38" fill="#E6E011"/>
+    <rect x="250" y="214" width="354" height="38" fill="#0A0A0A"/>
+    <rect x="604" y="214" width="17" height="38" fill="#E6E011"/>
+
+    <g font-family="Geist" font-size="13.5" fill="rgba(10,10,10,.78)" text-anchor="end">
+      <text x="238" y="52">Tempo pianificato</text>
+      <text x="238" y="108">Tempo di marcia</text><text x="238" y="176">Ritmo effettivo</text>
+      <text x="238" y="238">Pezzi conformi</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)" text-anchor="end">
+      <text x="238" y="124">disponibilit&#224; 94,6%</text><text x="238" y="192">performance 79%</text>
+      <text x="238" y="254">qualit&#224; 95,6%</text>
+    </g>
+
+    <g font-family="Geist" font-size="13.5" fill="rgba(10,10,10,.78)">
+      <text x="760" y="52">100%</text><text x="760" y="114">94,6%</text><text x="760" y="176">74,7%</text>
+    </g>
+    <text x="760" y="238" font-family="Geist" font-size="13.5" font-weight="600" fill="#0A0A0A">71,4%</text>
+
+    <path d="M64 276 L790 276" stroke="rgba(10,10,10,.13)"/>
+    <text x="64" y="298" font-family="Geist" font-size="13.5" fill="rgba(10,10,10,.78)">OEE del turno: 94,6% &#215; 79% &#215; 95,6% = <tspan font-weight="600" fill="#0A0A0A">71,4%</tspan> · in giallo la capacit&#224; persa a ogni gradino</text>
+  </svg>
+
+  <div class="spec spec--tight" style="top:326px">
+    <div class="lbl" style="margin-bottom:6px">Sette giorni, per costo</div>
+    <div class="row"><b>Mancanza tappi</b><span>96 min · 6.720 &euro;</span></div>
+    <div class="row"><b>Cambio formato</b><span>62 min · 4.340 &euro;</span></div>
+    <div class="row"><b>Micro-fermate</b><span>41 min · 2.870 &euro;</span></div>
+    <div class="row"><b>Manutenzione</b><span>25 min · 1.750 &euro;</span></div>
+    <div class="row"><b>Totale</b><span>224 min · 15.680 &euro;</span></div>
+    <div class="note" style="margin-top:20px">La prima causa vale il 43% del costo: &egrave; da l&igrave; che parte la priorit&agrave;.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>dataset illustrativo · turno e settimana tipo</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_OEE_CALENDAR_RULES}}</span> <span class="ph">{{PH_IDEAL_CYCLE_TIME_RULE}}</span> <span class="ph">{{PH_GOOD_COUNT_RULE}}</span> <span class="ph">{{PH_LINE_OEE_AGGREGATION}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p11_energia" data-kind="dossier">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">11 / 14</div>
+  </div>
+
+  <div class="tt tt--sm">Dal consumo al costo energetico del pezzo.
+    <div class="sub" style="margin-top:14px">Lo stesso turno letto in kWh, in euro e in CO&#8322;e.</div>
+  </div>
+
+  <svg class="diag" style="top:206px" width="800" height="410" viewBox="0 0 800 410"
+       role="img" aria-labelledby="a5t a5d">
+    <title id="a5t">Dal consumo per stato al costo per mille pezzi</title>
+    <desc id="a5d">Sopra, la potenza assorbita in marcia e a impianto fermo. Sotto, la catena
+      che porta dall’energia del turno al costo e alle emissioni per mille pezzi.</desc>
+
+    <text x="64" y="16" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">Potenza assorbita per stato</text>
+    <g font-family="Geist" font-size="13.5" fill="rgba(10,10,10,.78)" text-anchor="end">
+      <text x="172" y="56">In marcia</text><text x="172" y="108">A impianto fermo</text>
+    </g>
+    <rect x="186" y="32" width="560" height="34" fill="rgba(10,10,10,.13)"/>
+    <rect x="186" y="84" width="224" height="34" fill="rgba(10,10,10,.13)"/>
+    <g font-family="Geist" font-size="14" font-weight="500" fill="#0A0A0A">
+      <text x="756" y="55">95 kW</text><text x="420" y="107">38 kW</text>
+    </g>
+    <text x="64" y="146" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">Nel turno: 454 minuti in marcia, 26 di fermo &#8594; 719 + 16 = 735 kWh</text>
+
+    <path d="M64 168 L790 168" stroke="rgba(10,10,10,.13)"/>
+    <text x="64" y="196" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">Il turno in tre numeri, ognuno con il suo calcolo</text>
+
+    <g fill="#F3F4F0"><rect x="64" y="212" width="230" height="88"/><rect x="312" y="212" width="230" height="88"/>
+      <rect x="560" y="212" width="230" height="88"/></g>
+    <g font-family="Geist" font-size="26" font-weight="600" fill="#0A0A0A" text-anchor="middle">
+      <text x="179" y="256">735 kWh</text><text x="427" y="256">162 &euro;</text><text x="675" y="256">227.000 pz</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)" text-anchor="middle">
+      <text x="179" y="282">719 in marcia + 16 a fermo</text><text x="427" y="282">735 kWh &#215; 0,22 &euro;/kWh</text>
+      <text x="675" y="282">454 min &#215; 500 pz/min</text>
+    </g>
+
+    <rect x="64" y="316" width="726" height="86" fill="#F3F4F0"/>
+    <rect x="64" y="316" width="4" height="86" fill="#E6E011"/>
+    <text x="88" y="346" font-family="Geist" font-size="13.5" font-weight="600" fill="#0A0A0A">Per 1.000 pezzi</text>
+    <g font-family="Geist" font-size="22" font-weight="600" fill="#0A0A0A">
+      <text x="300" y="351">3,2 kWh</text><text x="470" y="351">0,71 &euro;</text><text x="620" y="351">1,13 kgCO&#8322;e</text>
+    </g>
+    <text x="88" y="380" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">735 &#247; 227.000 &#215; 1.000, poi &#215; 0,22 &euro;/kWh · CO&#8322; calcolata o stimata con 0,35 kgCO&#8322;e/kWh</text>
+  </svg>
+
+  <div class="spec spec--tight" style="top:206px">
+    <div class="lbl" style="margin-bottom:6px">Parametri del calcolo</div>
+    <div class="row"><b>Cadenza nominale</b><span>500 pz/min</span></div>
+    <div class="row"><b>Potenza in marcia</b><span>95 kW</span></div>
+    <div class="row"><b>Potenza a fermo</b><span>38 kW</span></div>
+    <div class="row"><b>Prezzo energia</b><span>0,22 &euro;/kWh</span></div>
+    <div class="row"><b>Fattore di emissione</b><span>0,35 kgCO&#8322;e/kWh</span></div>
+    <div class="row"><b>Durata del turno</b><span>480 min</span></div>
+    <div class="row"><b>Fermo nel turno</b><span>26 min</span></div>
+    <div class="box" style="margin-top:24px"><div class="note">Prezzo e fattore di emissione arrivano dal contratto di fornitura. Il perimetro della potenza a impianto fermo — linea, macchine o ausiliari — si dichiara nel solution design.</div></div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>dataset illustrativo · parametri da confermare</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_ENERGY_PRICE_SOURCE}}</span> <span class="ph">{{PH_EMISSION_FACTOR_SOURCE}}</span> <span class="ph">{{PH_CO2_METHOD}}</span> <span class="ph">{{PH_COST_ALLOCATION_RULE}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p12_output" data-kind="dossier">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">12 / 14</div>
+  </div>
+
+  <div class="tt tt--sm">Il dato esce nella forma in cui viene usato.
+    <div class="sub" style="margin-top:14px">Ogni output ha un destinatario e una decisione che
+      rende possibile.</div>
+  </div>
+
+  <div class="tb full" style="top:216px;grid-template-columns:340px 320px 492px">
+    <div class="tb__h">Output</div><div class="tb__h">Chi lo usa</div><div class="tb__h">Che decisione abilita</div>
+
+    <div><b>Dashboard a bordo linea</b></div><div>Operatori e capiturno</div><div>Intervenire adesso</div>
+    <div><b>Report programmati</b></div><div>Produzione ed energia</div><div>Confrontare i periodi</div>
+    <div><b>Export CSV ed Excel</b></div><div>Continuous improvement</div><div>Analizzare fuori dallo strumento</div>
+    <div><b>PDF di periodo</b></div><div>Direzione</div><div>Decidere dove investire</div>
+    <div><b>Integrazioni</b></div><div>IT e sistemi a valle</div><div>Portare il dato dove serve</div>
+  </div>
+
+  <div class="box full" style="top:520px">
+    <div class="note">Un output senza destinatario è un file che nessuno apre: la
+      configurazione parte da chi deve decidere, non dall’elenco dei formati. Le integrazioni
+      con il gestionale sono possibili previa verifica del punto di innesto — perimetro,
+      formato e frequenza si chiudono nel solution design.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Struttura degli output · perimetro da confermare</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_EXPORT_FORMATS}}</span> <span class="ph">{{PH_API_AVAILABILITY}}</span> <span class="ph">{{PH_REPORT_CATALOGUE}}</span> <span class="ph">{{PH_ERP_INTEGRATION_METHODS}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p13_pilot" data-kind="dossier">
+  <div class="band" style="height:190px">
+    <div class="hd">
+      <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span class="on"><i>4</i>Delivery e supporto</span></div>
+      <div class="pg">13 / 14</div>
+    </div>
+    <div class="lbl" style="position:absolute;left:64px;top:100px">Sezione 4 · Delivery e supporto</div>
+    <div class="say" style="top:126px">Il pilot non si chiude con una demo, ma con una decisione.</div>
+  </div>
+
+  <div class="tt tt--sm" style="top:222px">Una linea, quattro deliverable, criteri dichiarati.</div>
+
+  <svg class="diag" style="top:300px" width="800" height="300" viewBox="0 0 800 300"
+       role="img" aria-labelledby="c3t c3d">
+    <title id="c3t">I quattro deliverable del pilot</title>
+    <desc id="c3d">Mappa dei dati, baseline di produzione ed energia, prime cause e priorità,
+      decisione di scala: quattro deliverable in sequenza.</desc>
+
+    <g fill="none" stroke="#0A0A0A" stroke-width="1.5">
+      <rect x="64" y="10" width="166" height="66"/><rect x="256" y="10" width="166" height="66"/>
+      <rect x="448" y="10" width="166" height="66"/>
+    </g>
+    <rect x="640" y="10" width="150" height="66" fill="#0A0A0A"/>
+    <g font-family="Geist" font-size="14" text-anchor="middle" fill="#0A0A0A">
+      <text x="147" y="38">Mappa dati</text><text x="147" y="58">e segnali</text>
+      <text x="339" y="38">Baseline produzione</text><text x="339" y="58">ed energia</text>
+      <text x="531" y="38">Prime cause</text><text x="531" y="58">e priorità</text>
+    </g>
+    <g font-family="Geist" font-size="14" text-anchor="middle" fill="#FFFFFF">
+      <text x="715" y="38">Decisione</text><text x="715" y="58">di scala</text>
+    </g>
+    <g stroke="#0A0A0A" stroke-width="1.5">
+      <path d="M230 43 L246 43"/><path d="M422 43 L438 43"/><path d="M614 43 L630 43"/>
+    </g>
+    <g fill="#0A0A0A">
+      <polygon points="252,43 242,37 242,49"/><polygon points="444,43 434,37 434,49"/>
+      <polygon points="636,43 626,37 626,49"/>
+    </g>
+
+    <path d="M64 116 L790 116" stroke="rgba(10,10,10,.13)"/>
+    <text x="64" y="146" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">Le fasi che li producono</text>
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.78)">
+      <text x="64" y="178">Kickoff · raccolta dati · configurazione · validazione</text>
+      <text x="64" y="204">Verifica con gli utenti · chiusura</text>
+    </g>
+    <path d="M64 236 L790 236" stroke="rgba(10,10,10,.13)"/>
+    <text x="64" y="266" font-family="Geist" font-size="15" fill="rgba(10,10,10,.78)">La proposta di estensione si discute con chi dovrà usarla.</text>
+  </svg>
+
+  <div class="spec spec--tight" style="top:300px">
+    <div class="lbl" style="margin-bottom:6px">Criteri di uscita</div>
+    <div class="row"><b>Dati completi</b><span>serie senza buchi</span></div>
+    <div class="row"><b>Formule approvate</b><span>dizionario firmato</span></div>
+    <div class="row"><b>Cause validate</b><span>da chi le conosce</span></div>
+    <div class="row"><b>Report condiviso</b><span>con gli utenti reali</span></div>
+    <div class="note" style="margin-top:20px">Durata, partecipanti e condizioni economiche si
+      fissano nella proposta di pilot.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Struttura del pilot · durate da confermare</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_PILOT_DURATION}}</span> <span class="ph">{{PH_PILOT_SCOPE}}</span> <span class="ph">{{PH_PILOT_SUCCESS_CRITERIA}}</span> <span class="ph">{{PH_PILOT_PRICE}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="p14_servizi" data-kind="dossier">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span class="on"><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">14 / 14</div>
+  </div>
+
+  <div class="tt tt--sm">Il progetto continua dopo il go-live.
+    <div class="sub" style="margin-top:14px">Sei servizi, il deliverable di ciascuno e il
+      modello con cui vengono erogati.</div>
+  </div>
+
+  <div class="tb full" style="top:216px;grid-template-columns:320px 592px 240px">
+    <div class="tb__h">Servizio</div><div class="tb__h">Che cosa produce</div><div class="tb__h">Modello</div>
+
+    <div><b>Assessment e perimetrazione</b></div>
+    <div>Mappa di asset, sorgenti e gap, perimetro e ipotesi economica</div><div>una tantum</div>
+    <div><b>Setup e integrazione</b></div>
+    <div>Connettori, mapping, dashboard, formule, utenti e test</div><div>una tantum</div>
+    <div><b>KPI e formule</b></div>
+    <div>Dizionario KPI, fattori, responsabilità e regole di revisione</div><div>una tantum o periodico</div>
+    <div><b>Performance ed energy review</b></div>
+    <div>Cause principali, energia fuori produzione, costo per pezzo, priorità</div><div>ricorrente</div>
+    <div><b>Formazione e adozione</b></div>
+    <div>Onboarding, procedure, materiali e sessioni di aggiornamento</div><div>una tantum o ricorrente</div>
+    <div><b>Supporto e scale-up</b></div>
+    <div>Supporto, change request, nuove linee e nuovi siti</div><div>ricorrente o a progetto</div>
+  </div>
+
+  <div class="box full" style="top:576px">
+    
+    <div class="note" data-ed="working">Orari {{PH_SUPPORT_HOURS}} · canali {{PH_SUPPORT_CHANNELS}} ·
+      tempi di risposta {{PH_SLA_RESPONSE_TIMES}} · aggiornamenti {{PH_UPDATE_POLICY}} ·
+      supporto remoto {{PH_REMOTE_SUPPORT_POLICY}}</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Condizioni da formalizzare nella proposta</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SUPPORT_HOURS}}</span> <span class="ph">{{PH_SLA_RESPONSE_TIMES}}</span> <span class="ph">{{PH_UPDATE_POLICY}}</span> <span class="ph">{{PH_SERVICES_INCLUDED}}</span> <span class="ph">{{PH_SERVICES_OPTIONAL}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="pa1_compatibilita" data-kind="appendix">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">ANNESSO A1</div>
+  </div>
+
+  <div class="tt tt--sm">La compatibilità si verifica sull’impianto reale.
+    <div class="sub" style="margin-top:14px">Che cosa viene controllato macchina per macchina,
+      con quale metodo e in che momento.</div>
+  </div>
+
+  <div class="tb full" style="top:206px;grid-template-columns:340px 592px 220px">
+    <div class="tb__h">Che cosa si verifica</div><div class="tb__h">Come</div><div class="tb__h">Quando</div>
+
+    <div><b>Costruttore e modello del controllore</b></div>
+    <div>Inventario compilato con la manutenzione</div><div>audit tecnico</div>
+    <div><b>Protocollo e versione</b></div>
+    <div><span data-ed="working">{{PH_SUPPORTED_PROTOCOLS}} · {{PH_PROTOCOL_VERSIONS}}</span></div><div>audit tecnico</div>
+    <div><b>Tag disponibili e loro significato</b></div>
+    <div>Confronto con la documentazione e con chi la conduce</div><div>audit tecnico</div>
+    <div><b>Frequenza di lettura sostenibile</b></div>
+    <div>Test sul carico reale della rete di stabilimento</div><div>audit tecnico</div>
+    <div><b>Gateway e regole firewall</b></div>
+    <div><span data-ed="working">{{PH_GATEWAY_REQUIREMENTS}} · {{PH_FIREWALL_RULES}}</span></div><div>solution design</div>
+    <div><b>Punti di misura dell’energia</b></div>
+    <div>Verifica del quadro e dei contatori esistenti</div><div>audit tecnico</div>
+    <div><b>Punto di innesto verso il gestionale</b></div>
+    <div>Verifica con l’IT di formato e direzione dello scambio</div><div>solution design</div>
+  </div>
+
+  <div class="box full" style="top:602px">
+    <div class="note">Un elenco generico di protocolli non dice se un impianto è leggibile: conta la versione installata su quella macchina e i tag che espone.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Annesso A1 · esito compilato durante l’audit tecnico</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SUPPORTED_PROTOCOLS}}</span> <span class="ph">{{PH_PROTOCOL_VERSIONS}}</span> <span class="ph">{{PH_REQUIRED_PORTS}}</span> <span class="ph">{{PH_READ_ONLY_POLICY}}</span> <span class="ph">{{PH_GATEWAY_REQUIREMENTS}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="pa2_sizing" data-kind="appendix">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">ANNESSO A2</div>
+  </div>
+
+  <div class="tt tt--sm">Il dimensionamento si calcola, non si sceglie a listino.
+    <div class="sub" style="margin-top:14px">Cinque grandezze determinano la taglia
+      dell’ambiente.</div>
+  </div>
+
+  <svg class="diag" style="top:216px" width="800" height="380" viewBox="0 0 800 380"
+       role="img" aria-labelledby="z2t z2d">
+    <title id="z2t">Dalle cinque grandezze alla taglia dell’ambiente</title>
+    <desc id="z2d">Numero di tag, frequenza di campionamento, orizzonte di conservazione,
+      numero di linee e utenti concorrenti determinano insieme la taglia dell’ambiente.</desc>
+
+    <g fill="#F3F4F0">
+      <rect x="64" y="10" width="230" height="52"/><rect x="64" y="72" width="230" height="52"/>
+      <rect x="64" y="134" width="230" height="52"/><rect x="64" y="196" width="230" height="52"/>
+      <rect x="64" y="258" width="230" height="52"/>
+    </g>
+    <g font-family="Geist" font-size="15" fill="#0A0A0A">
+      <text x="86" y="42">Numero di tag</text><text x="86" y="104">Frequenza di campionamento</text>
+      <text x="86" y="166">Orizzonte di conservazione</text><text x="86" y="228">Numero di linee</text>
+      <text x="86" y="290">Utenti concorrenti</text>
+    </g>
+
+    <g stroke="rgba(10,10,10,.30)" fill="none">
+      <path d="M294 36 L360 36 L360 160"/><path d="M294 98 L360 98"/>
+      <path d="M294 160 L440 160"/><path d="M294 222 L360 222 L360 160"/>
+      <path d="M294 284 L360 284 L360 160"/>
+    </g>
+
+    <rect x="440" y="120" width="230" height="80" fill="#0A0A0A"/>
+    <text x="555" y="155" font-family="Geist" font-size="16" font-weight="600" fill="#FFFFFF"
+          text-anchor="middle">Taglia dell’ambiente</text>
+    <text x="555" y="178" font-family="Geist" font-size="13" fill="rgba(255,255,255,.74)"
+          text-anchor="middle">CPU · memoria · storage</text>
+
+    <path d="M670 160 L720 160" stroke="rgba(10,10,10,.30)" fill="none"/>
+    <g font-family="Geist" font-size="15" fill="#0A0A0A">
+      <text x="736" y="132">S</text><text x="736" y="166">M</text><text x="736" y="200">L</text>
+    </g>
+    <g stroke="rgba(10,10,10,.30)" fill="none">
+      <path d="M720 160 L720 126 L730 126"/><path d="M720 160 L730 160"/><path d="M720 160 L720 194 L730 194"/>
+    </g>
+
+    <path d="M64 340 L790 340" stroke="rgba(10,10,10,.13)"/>
+    <text x="64" y="366" font-family="Geist" font-size="14" fill="rgba(10,10,10,.58)">Le tre taglie sono la conseguenza delle cinque grandezze, non un catalogo da cui scegliere.</text>
+  </svg>
+
+  <div class="spec spec--tight" style="top:216px">
+    
+    
+    
+    
+    
+    
+    <div class="lbl" style="margin:0 0 6px" data-ed="working">Valori da chiudere</div>
+    <div class="row" data-ed="working"><b>CPU minima</b><span>{{PH_MIN_CPU}}</span></div>
+    <div class="row" data-ed="working"><b>RAM minima</b><span>{{PH_MIN_RAM}}</span></div>
+    <div class="row" data-ed="working"><b>Storage minimo</b><span>{{PH_MIN_STORAGE}}</span></div>
+    <div class="row" data-ed="working"><b>Retention</b><span>{{PH_RETENTION_DEFAULT}}</span></div>
+    
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Annesso A2 · metodo di dimensionamento</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_MIN_CPU}}</span> <span class="ph">{{PH_MIN_RAM}}</span> <span class="ph">{{PH_MIN_STORAGE}}</span> <span class="ph">{{PH_STORAGE_GROWTH_RULE}}</span> <span class="ph">{{PH_HIGH_AVAILABILITY}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="pa3_governo" data-kind="appendix">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">ANNESSO A3</div>
+  </div>
+
+  <div class="tt tt--sm">Che cosa si decide, e chi lo decide.
+    <div class="sub" style="margin-top:14px">Otto ambiti che si chiudono nel solution design
+      insieme al vostro IT.</div>
+  </div>
+
+  <div class="tb full" style="top:212px;grid-template-columns:264px 396px 300px 192px">
+    <div class="tb__h">Ambito</div><div class="tb__h">Che cosa si definisce</div><div class="tb__h">Valore</div><div class="tb__h">Chi decide</div>
+
+    <div><b>Autenticazione</b></div><div>Metodo e integrazione con la directory aziendale</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_AUTHENTICATION_MODEL}}</span></div><div>IT del cliente</div>
+    <div><b>Ruoli e permessi</b></div><div>Chi vede, chi configura, chi modifica le formule</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_ROLE_MODEL}}</span></div><div>Operations e IT</div>
+    <div><b>Registro degli accessi</b></div><div>Che cosa viene registrato e per quanto tempo</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_AUDIT_LOGGING}}</span></div><div>IT del cliente</div>
+    <div><b>Cifratura</b></div><div>Dati in transito e dati a riposo</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_DATA_ENCRYPTION_AT_REST}}</span></div><div>IT del cliente</div>
+    <div><b>Backup e ripristino</b></div><div>Frequenza, ritenzione e prova di ripristino</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_BACKUP_POLICY}}</span></div><div>IT del cliente</div>
+    <div><b>Conservazione</b></div><div>Orizzonte per le serie storiche e per gli eventi</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_RETENTION_DEFAULT}}</span></div><div>Operations e IT</div>
+    <div><b>Proprietà del dato</b></div><div>Titolarità, esportabilità e formati</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_DATA_OWNERSHIP}}</span></div><div>Legale</div>
+    <div><b>Fine contratto</b></div><div>Export finale e cancellazione</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_END_OF_CONTRACT_DATA}}</span></div><div>Legale</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Annesso A3 · decisioni di progetto, non parametri fissi del prodotto</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_PATCHING_POLICY}}</span> <span class="ph">{{PH_RPO}}</span> <span class="ph">{{PH_RTO}}</span> <span class="ph">{{PH_LICENSE_RIGHTS}}</span> <span class="ph">{{PH_DATA_EXPORT_AT_EXIT}}</span></span></div>
+</div>
+
+
+<div class="slide lt" id="pa4_kpi" data-kind="appendix">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">ANNESSO A4</div>
+  </div>
+
+  <div class="tt tt--sm">Ogni indicatore ha una formula scritta.
+    <div class="sub" style="margin-top:14px">Dizionario KPI: formula, unit&agrave;, sorgente e frequenza.</div>
+  </div>
+
+  <div class="tb" style="position:absolute;left:64px;width:1152px;top:202px;
+       grid-template-columns:180px 340px 108px 260px 128px 136px">
+    <div class="tb__h">Indicatore</div><div class="tb__h">Formula</div><div class="tb__h">Unit&agrave;</div>
+    <div class="tb__h">Sorgente</div><div class="tb__h">Frequenza</div><div class="tb__h">Owner</div>
+
+    <div><b>Disponibilit&agrave;</b></div><div>tempo di marcia &#247; tempo pianificato</div><div>%</div>
+    <div>stati, calendario</div><div>turno</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_KPI_OWNER}}</span></div>
+
+    <div><b>Performance</b></div><div>pezzi &#215; tempo ciclo ideale &#247; marcia</div><div>%</div>
+    <div>conteggi, cadenza</div><div>turno</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_KPI_OWNER}}</span></div>
+
+    <div><b>Qualit&agrave;</b></div><div>pezzi conformi &#247; pezzi totali</div><div>%</div>
+    <div>conteggi, scarti</div><div>turno</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_KPI_OWNER}}</span></div>
+
+    <div><b>OEE</b></div><div>disponibilit&agrave; &#215; performance &#215; qualit&agrave;</div><div>%</div>
+    <div>i tre fattori sopra</div><div>turno</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_KPI_OWNER}}</span></div>
+
+    <div><b>Consumo specifico</b></div><div>energia &#247; pezzi &#215; 1.000</div><div>kWh/1.000&#8239;pz</div>
+    <div>contatori, conteggi</div><div>turno</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_KPI_OWNER}}</span></div>
+
+    <div><b>Perdita del fermo</b></div><div>durata &#215; cadenza &#215; margine unitario</div><div>&euro;</div>
+    <div>eventi, parametri</div><div>evento</div><div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_KPI_OWNER}}</span></div>
+  </div>
+
+  <div class="box" style="position:absolute;left:64px;width:1152px;top:556px">
+    <div class="note">Il tempo pianificato, le fermate programmate e la cadenza di riferimento
+      di ogni formato si concordano prima del go-live: due stabilimenti che li contano in modo
+      diverso non hanno lo stesso OEE.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>annesso A4 · dizionario KPI</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_KPI_OWNER}}</span> <span class="ph">{{PH_KPI_VERSION}}</span> <span class="ph">{{PH_KPI_APPROVAL_DATE}}</span> <span class="ph">{{PH_OEE_DEFINITION_OWNER}}</span></span></div>
+</div>
+
+</div>
