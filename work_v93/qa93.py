@@ -257,10 +257,10 @@ LIMITS = {'sales':    (45,  '<=45',  55, 18.0, 12.4, 14.0, 12.0),
 # quello che serve a impedire che una slide narrativa torni a essere una demo.
 # (parole max, visuale max, min corpo px)
 TIPI = {
-    'narrativa':    (55,  45, 17.0),
+    'narrativa':    (85,  45, 17.0),
     'prodotto':     (45,  75, 17.0),
     'funzionalita': (75,  55, 16.0),
-    'pacchetto':    (95,  20, 16.0),
+    'pacchetto':    (95,  35, 16.0),
     'azienda':      (60,  50, 17.0),
     'valore':       (70,  55, 16.0),
     'cta':          (55,  45, 17.0),
