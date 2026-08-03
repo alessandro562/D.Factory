@@ -1,0 +1,82 @@
+<!-- ================= P10 · MODELLO DI CONTESTO · spiegazione · dk ========
+     Storyboard P10: un evento al centro, i nove attributi disposti attorno.
+     Non una timeline: quella lettura e' gia' su Connect e nel deck, e
+     ridimostrare il fermo qui sarebbe la terza volta.
+     E' il cuore tecnico del prodotto e per questo e' l'unica pagina scura
+     della sezione 2. La causa e' associata e validata, mai «rilevata
+     automaticamente». -->
+<div class="slide dk" id="p10_contesto" data-kind="dossier" data-tipo="spiegazione">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">10 / 17</div>
+  </div>
+
+  <div class="tt tt--sm" style="width:1000px">Tempo, asset, prodotto e stato nello stesso
+    modello</div>
+
+  <div style="position:absolute;left:64px;top:172px;width:520px">
+    <div class="par par--hi">Un conteggio senza contesto non si pu&ograve; confrontare. Lo
+      stesso numero di pezzi pu&ograve; appartenere a un formato veloce o a uno lento, a un
+      turno pieno o a uno interrotto, a un ordine in tolleranza o a uno fuori specifica. Per
+      questo ogni evento acquisito riceve un insieme fisso di attributi prima di essere
+      archiviato. Sono quegli attributi a rendere possibili l&rsquo;aggregazione, il confronto e
+      l&rsquo;attribuzione di un costo: senza di loro il dato resta un numero.</div>
+  </div>
+
+  <svg width="536" height="380" viewBox="0 0 536 380"
+       style="position:absolute;left:680px;top:172px" role="img" aria-labelledby="m10t m10d">
+    <title id="m10t">L&rsquo;evento e i suoi nove attributi</title>
+    <desc id="m10d">Al centro l&rsquo;evento acquisito. Attorno, i nove attributi che lo
+      accompagnano: timestamp, sito, linea, macchina, prodotto, ordine, turno, stato e causa.
+      La causa &egrave; associata e validata da chi la conosce, non rilevata automaticamente.</desc>
+
+    <!-- l'evento in testa, i nove attributi che lo accompagnano sotto -->
+    <rect x="128" y="0" width="280" height="60" fill="#FFFFFF"/>
+    <text x="268" y="28" font-family="Geist" font-size="18" font-weight="600" fill="#0A0A0A"
+          text-anchor="middle">Evento acquisito</text>
+    <text x="268" y="48" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)"
+          text-anchor="middle">stato, conteggio o misura dal campo</text>
+
+    <g stroke="rgba(255,255,255,.34)" fill="none">
+      <path d="M268 60 L268 84"/><path d="M84 84 L452 84"/>
+      <path d="M84 84 L84 100"/><path d="M268 84 L268 100"/><path d="M452 84 L452 100"/>
+    </g>
+
+    <g fill="rgba(255,255,255,.07)">
+      <rect x="0" y="100" width="168" height="88"/><rect x="184" y="100" width="168" height="88"/>
+      <rect x="368" y="100" width="168" height="88"/>
+      <rect x="0" y="196" width="168" height="88"/><rect x="184" y="196" width="168" height="88"/>
+      <rect x="368" y="196" width="168" height="88"/>
+      <rect x="0" y="292" width="168" height="88"/><rect x="184" y="292" width="168" height="88"/>
+    </g>
+    <!-- la causa: unico attributo che non arriva dal campo, unico segno giallo -->
+    <rect x="368" y="292" width="168" height="88" fill="rgba(230,224,17,.16)"/>
+    <rect x="368" y="292" width="4" height="88" fill="#E6E011"/>
+
+    <g font-family="Geist Mono" font-size="13" fill="rgba(255,255,255,.44)">
+      <text x="20" y="130">01</text><text x="204" y="130">02</text><text x="388" y="130">03</text>
+      <text x="20" y="226">04</text><text x="204" y="226">05</text><text x="388" y="226">06</text>
+      <text x="20" y="322">07</text><text x="204" y="322">08</text><text x="388" y="322">09</text>
+    </g>
+    <g font-family="Geist" font-size="17" font-weight="500" fill="#FFFFFF">
+      <text x="20" y="164">timestamp</text><text x="204" y="164">sito</text><text x="388" y="164">linea</text>
+      <text x="20" y="260">macchina</text><text x="204" y="260">prodotto</text><text x="388" y="260">ordine</text>
+      <text x="20" y="356">turno</text><text x="204" y="356">stato</text><text x="388" y="356">causa</text>
+    </g>
+  </svg>
+
+  <div style="position:absolute;left:680px;top:572px;width:536px">
+    <div class="note">La causa &egrave; proposta sulla base dello stato e validata da chi la
+      conosce: non viene rilevata automaticamente. &Egrave; l&rsquo;unico dei nove attributi che
+      non arriva dal campo.</div>
+  </div>
+
+  <div style="position:absolute;left:64px;top:512px;width:520px">
+    <div class="lbl" style="margin-bottom:10px">Che cosa rende possibile</div>
+    <div class="sp">Aggregare eventi diversi sullo stesso perimetro &middot; confrontare turni,
+      formati e linee &middot; attribuire a ogni evento una durata, una perdita e un costo</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>modello di contesto &middot; nove attributi per ogni evento</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_TIME_SYNC_REQUIREMENT}}</span> <span class="ph">{{PH_STANDARD_TAG_MODEL}}</span> <span class="ph">{{PH_CAUSE_VALIDATION_PROCESS}}</span></span></div>
+</div>

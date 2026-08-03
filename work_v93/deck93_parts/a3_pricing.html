@@ -1,0 +1,76 @@
+<!-- ================= A3 · STRUTTURA ECONOMICA · appendice · lt ==========
+     Condizionata a G2. Ogni importo e' un segnaposto: nessun prezzo e' stato
+     inventato. Finche' G2 e' aperto questa appendice non entra nella client
+     edition e la numerazione delle appendici scala di uno.
+     Rispetto alla V9.2 il corpo minimo sale a 14 px: la tabella non e' una
+     vista di prodotto e viene misurata con la soglia dei diagrammi. -->
+<div data-ph-page="G2" class="slide lt" id="a3_pricing" data-tipo="appendice">
+  <div class="z" style="top:44px;width:1152px">
+    <h2 class="sm">Avvio, canone, servizi.</h2>
+  </div>
+
+  <svg width="1152" height="482" viewBox="0 0 1152 482"
+       style="position:absolute;left:64px;top:126px" role="img" aria-labelledby="a3t a3d">
+    <title id="a3t">Le voci del modello economico</title>
+    <desc id="a3d">Una tantum di avvio, canone ricorrente per sito, linea e livello, servizi
+      opzionali, condizioni contrattuali. Ogni importo &egrave; un segnaposto: nessun prezzo
+      &egrave; stato inventato.</desc>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
+      <text x="0" y="14">Voce</text><text x="496" y="14">Che cosa comprende</text>
+      <text x="1152" y="14" text-anchor="end">Importo</text>
+    </g>
+    <path d="M0 28 L1152 28" stroke="rgba(10,10,10,.26)"/>
+
+    <text x="0" y="62" font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)"
+          letter-spacing="1">UNA TANTUM</text>
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="0" y="98">Audit e perimetrazione</text><text x="0" y="138">Setup della prima linea</text>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">
+      <text x="496" y="98">mappa dei dati, gap, ipotesi economica</text>
+      <text x="496" y="138">connettori, mapping, formule, utenti</text>
+    </g>
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.72)" text-anchor="end">
+      <text x="1152" y="98">{{PH_AUDIT_PRICE}}</text><text x="1152" y="138">{{PH_SETUP_FIRST_LINE}}</text>
+    </g>
+    <path d="M0 160 L1152 160" stroke="rgba(10,10,10,.12)"/>
+
+    <text x="0" y="192" font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)"
+          letter-spacing="1">RICORRENTE</text>
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="0" y="228">Canone base per sito</text><text x="0" y="268">Livello Connect</text>
+      <text x="0" y="308">Livello Insight</text><text x="0" y="348">Linee successive</text>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">
+      <text x="496" y="228">ambiente, utenti, supporto standard</text>
+      <text x="496" y="268">stato, OEE, produzione, consumi, storico</text>
+      <text x="496" y="308">cause, correlazioni, costo energetico, CO&#8322;</text>
+      <text x="496" y="348">ogni linea collegata dopo la prima</text>
+    </g>
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.72)" text-anchor="end">
+      <text x="1152" y="228">{{PH_SITE_BASE_FEE}}</text><text x="1152" y="268">{{PH_CONNECT_ANNUAL_FEE}}</text>
+      <text x="1152" y="308">{{PH_INSIGHT_ANNUAL_FEE}}</text><text x="1152" y="348">{{PH_ADDITIONAL_LINE_FEE}}</text>
+    </g>
+    <path d="M0 370 L1152 370" stroke="rgba(10,10,10,.12)"/>
+
+    <text x="0" y="402" font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)"
+          letter-spacing="1">OPZIONALE E CONTRATTO</text>
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="0" y="438">Refyn</text><text x="288" y="438">Supporto premium</text>
+      <text x="576" y="438">Durata contrattuale</text><text x="864" y="438">Rinnovo</text>
+    </g>
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.72)">
+      <text x="0" y="470">{{PH_REFYN_PRICING_MODEL}}</text><text x="288" y="470">{{PH_PREMIUM_SUPPORT_FEE}}</text>
+      <text x="576" y="470">{{PH_CONTRACT_TERM}}</text><text x="864" y="470">{{PH_RENEWAL_TERMS}}</text>
+    </g>
+  </svg>
+
+  <div class="z" style="top:622px"><div class="note">Nessun importo &egrave; stato inventato:
+    ogni voce resta un segnaposto finch&eacute; il modello commerciale non &egrave;
+    approvato.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Appendice esclusa dalla client edition finch&eacute; gli importi non sono approvati</span><span>A3</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_PRICE_VALIDITY}}</span> <span class="ph">{{PH_PAYMENT_TERMS}}</span> <span class="ph">{{PH_AUDIT_CREDIT_POLICY}}</span></span></div>
+</div>

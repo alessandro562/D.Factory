@@ -1,0 +1,1443 @@
+<div class="doc">
+
+<!-- ================= S01 · PROMESSA · narrativa · dk =================
+     Storyboard S01 e review §4: la vista di turno scende a prova di sfondo,
+     la headline domina. Della dashboard V9.2 resta la banda delle tre
+     macchine con l'evento marcato: e' la prova, non il messaggio. -->
+<div class="slide dk" id="s01_promessa" data-tipo="narrativa">
+  <div class="z" style="top:52px"><span class="wm" style="font-size:19px">D<i>.</i>Factory</span></div>
+
+  <div class="z" style="top:132px;width:1120px">
+    <h1>Dalla linea al margine,<br>nello stesso dato.</h1>
+  </div>
+  <div class="z" style="top:274px;width:1000px"><div class="sup" style="font-size:22px">D.Factory
+    unisce produzione, energia e costi per trasformare i segnali dell&rsquo;impianto in decisioni
+    operative.</div></div>
+
+  <svg data-ui="1" width="1280" height="230" viewBox="0 0 1280 230"
+       style="position:absolute;left:0;top:408px" role="img" aria-labelledby="k1t k1d">
+    <title id="k1t">Vista di turno ricostruita</title>
+    <desc id="k1d">Le tre macchine della linea lungo il turno di otto ore. Un solo fermo &egrave;
+      marcato: quello che nella stessa lettura porta con s&eacute; causa, durata e margine perso.</desc>
+
+    <rect x="0" y="0" width="1280" height="230" fill="#141414"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(255,255,255,.16)" stroke-width="1.5"/>
+    <text x="64" y="32" font-family="Geist" font-size="14" font-weight="600" fill="#FFFFFF">Linea 1 &middot; Confezionamento</text>
+    <text x="306" y="32" font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)">turno 06:00 &ndash; 14:00</text>
+    <text x="1216" y="32" font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)"
+          text-anchor="end">vista ricostruita &middot; dati illustrativi</text>
+    <path d="M0 50 L1280 50" stroke="rgba(255,255,255,.16)"/>
+
+    <g fill="rgba(255,255,255,.09)">
+      <rect x="210" y="80" width="690" height="26"/><rect x="210" y="118" width="690" height="26"/>
+      <rect x="210" y="156" width="690" height="26"/>
+    </g>
+    <g fill="rgba(255,255,255,.82)">
+      <rect x="210" y="80" width="465" height="26"/><rect x="700" y="80" width="200" height="26"/>
+      <rect x="210" y="118" width="465" height="26"/><rect x="700" y="118" width="200" height="26"/>
+      <rect x="210" y="156" width="465" height="26"/><rect x="700" y="156" width="200" height="26"/>
+    </g>
+    <rect x="675" y="156" width="25" height="26" fill="#E6E011"/>
+    <g font-family="Geist" font-size="13.5" fill="rgba(255,255,255,.74)">
+      <text x="64" y="98">Riempitrice</text><text x="64" y="136">Etichettatrice</text>
+      <text x="64" y="174">Tappatrice</text>
+    </g>
+    <g font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)">
+      <text x="210" y="206">06:00</text><text x="555" y="206" text-anchor="middle">10:00</text>
+      <text x="900" y="206" text-anchor="end">14:00</text>
+    </g>
+
+    <path d="M960 50 L960 230" stroke="rgba(255,255,255,.16)"/>
+    <text x="1024" y="98" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)">Margine del turno</text>
+    <text x="1024" y="140" font-family="Geist" font-size="32" font-weight="600" fill="#FFFFFF">1.820 &euro;</text>
+    <text x="1024" y="166" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)">perso in 26 minuti di fermo</text>
+  </svg>
+
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_COMPANY_BRAND_FORM}}</span> <span class="ph">{{PH_DATASET_VALIDATOR}}</span> <span class="ph">{{PH_DATASET_VALIDATION_DATE}}</span></span></div>
+</div>
+
+
+<!-- ================= S02 · IL PROBLEMA DI OGGI · narrativa · lt =========
+     Storyboard S02 e §11.1: tre fratture, non quattro sorgenti tecniche.
+     Nessuna finta dashboard: tre flussi che non si incontrano. -->
+<div class="slide lt" id="s02_problema" data-tipo="narrativa">
+  <div class="z" style="top:48px;width:1100px">
+    <h2 class="sm">I dati esistono.<br>Le decisioni restano frammentate.</h2>
+  </div>
+
+  <div class="z cols" style="top:222px">
+    <div class="col">
+      <div class="nu">Produzione</div>
+      <div class="cp" style="margin-top:16px">Sa che la linea ha perso capacit&agrave;,
+        ma non sempre ne conosce il costo.</div>
+    </div>
+    <div class="col">
+      <div class="nu">Energia</div>
+      <div class="cp" style="margin-top:16px">Vede il consumo, ma non sempre sa a quale
+        stato produttivo appartiene.</div>
+    </div>
+    <div class="col">
+      <div class="nu">Direzione</div>
+      <div class="cp" style="margin-top:16px">Riceve indicatori diversi, in tempi diversi,
+        senza una priorit&agrave; comune.</div>
+    </div>
+  </div>
+
+  <svg width="1152" height="150" viewBox="0 0 1152 150"
+       style="position:absolute;left:64px;top:376px" role="img" aria-labelledby="p2t p2d">
+    <title id="p2t">Tre letture che non si incontrano</title>
+    <desc id="p2d">Tre linee parallele procedono senza toccarsi. A destra il punto in cui
+      dovrebbe nascere la decisione resta vuoto.</desc>
+    <g stroke="rgba(10,10,10,.26)">
+      <path d="M0 20.5 L880 20.5"/><path d="M0 60.5 L880 60.5"/><path d="M0 100.5 L880 100.5"/>
+    </g>
+    <g fill="#0A0A0A"><rect x="0" y="15" width="11" height="11"/>
+      <rect x="0" y="55" width="11" height="11"/><rect x="0" y="95" width="11" height="11"/></g>
+    <rect x="946" y="14" width="206" height="94" fill="none" stroke="rgba(10,10,10,.26)"
+          stroke-dasharray="5 5"/>
+    <text x="1049" y="58" font-family="Geist" font-size="15" fill="rgba(10,10,10,.56)"
+          text-anchor="middle">nessuna</text>
+    <text x="1049" y="80" font-family="Geist" font-size="15" fill="rgba(10,10,10,.56)"
+          text-anchor="middle">priorit&#224; comune</text>
+    <text x="0" y="140" font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">tre letture della stessa linea, su tempi e perimetri diversi</text>
+  </svg>
+
+  <div class="z" style="top:566px;width:1100px">
+    <div class="mid" style="font-size:34px">Il problema non &egrave; raccogliere altri dati.
+      &Egrave; dare agli stessi dati un significato condiviso.</div>
+  </div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>02 / 15</span></div>
+</div>
+
+
+<!-- ================= S03 · VISIONE DI PRODOTTO · narrativa · lt ========
+     Storyboard S03 e §11.2: Segnali → Contesto → Evidenza → Decisione,
+     schema editoriale. Non deve sembrare architettura IT: nessun riquadro
+     che imiti un'applicazione, nessun confine di rete. -->
+<div class="slide lt" id="s03_visione" data-tipo="narrativa">
+  <div class="z" style="top:48px;width:1140px">
+    <h2 class="sm">Un solo contesto operativo per macchina,<br>linea, turno e prodotto.</h2>
+  </div>
+
+  <div class="z" style="top:186px;width:1000px"><div class="cp">D.Factory acquisisce dati da
+    PLC, sensori, contatori e sistemi gestionali. Li allinea nel tempo, li associa a macchina,
+    linea, prodotto, ordine, stato e causa, e li restituisce come informazioni operative,
+    indicatori e priorit&agrave;.</div></div>
+
+  <svg width="1152" height="196" viewBox="0 0 1152 196"
+       style="position:absolute;left:64px;top:320px" role="img" aria-labelledby="v3t v3d">
+    <title id="v3t">Dal segnale alla decisione</title>
+    <desc id="v3d">Quattro stazioni su una linea orizzontale: segnali, contesto, evidenza,
+      decisione. Sotto ciascuna, tre esempi di che cosa contiene.</desc>
+    <path d="M0 12.5 L1152 12.5" stroke="rgba(10,10,10,.26)"/>
+    <g fill="#0A0A0A">
+      <rect x="0" y="6" width="13" height="13"/><rect x="304" y="6" width="13" height="13"/>
+      <rect x="608" y="6" width="13" height="13"/></g>
+    <rect x="912" y="6" width="13" height="13" fill="#E6E011"/>
+    <g font-family="Geist" font-size="30" font-weight="600" fill="#0A0A0A" letter-spacing="-1">
+      <text x="0" y="62">Segnali</text><text x="304" y="62">Contesto</text>
+      <text x="608" y="62">Evidenza</text><text x="912" y="62">Decisione</text>
+    </g>
+    <g font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">
+      <text x="0" y="106">Stati e conteggi</text><text x="0" y="134">Energia e utility</text>
+      <text x="0" y="162">Ordini e anagrafiche</text>
+      <text x="304" y="106">Macchina e linea</text><text x="304" y="134">Prodotto e ordine</text>
+      <text x="304" y="162">Turno, stato, causa</text>
+      <text x="608" y="106">Fermi e perdite</text><text x="608" y="134">OEE e consumi</text>
+      <text x="608" y="162">Costo dell&#8217;evento</text>
+      <text x="912" y="106">Che cosa chiudere</text><text x="912" y="134">In che ordine</text>
+      <text x="912" y="162">Con quale verifica</text>
+    </g>
+  </svg>
+
+  <div class="z" style="top:560px;width:1100px">
+    <div class="mid" style="font-size:32px">Lo stesso dato, letto una volta sola,
+      da tutti quelli che devono decidere.</div>
+  </div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>03 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_REAL_SCREENSHOT_NEW_UI}}</span></span></div>
+</div>
+
+
+<!-- ==================================================================
+     S04 · TRASFORMAZIONE · D2
+     Review §4.1: cerniera narrativa, non tabella prima/dopo.
+     Fondo nero a sinistra, bianco a destra, titolo su bianco. Il giallo
+     marca il punto di passaggio. Corpo delle coppie da 18 a 23 px (+28%).
+     Chiusura grande in basso.
+     ================================================================== -->
+<div class="slide lt" id="s04_trasformazione" data-tipo="narrativa">
+  <div class="z" style="top:44px;width:1100px">
+    <h2 class="sm">Dalla lettura separata<br>a una gestione condivisa.</h2>
+  </div>
+
+  <!-- OGGI · fondo nero, testo attenuato: e' lo stato che si lascia -->
+  <div class="dk" style="position:absolute;left:0;top:190px;width:596px;height:366px">
+    <div style="position:absolute;left:64px;top:30px;width:480px">
+      <div class="lbl" style="color:var(--d3)">Oggi</div>
+      <div class="tf__t" style="margin-top:38px">Il fermo viene ricostruito dopo.</div>
+      <div class="tf__t" style="margin-top:28px">Produzione ed energia restano separate.</div>
+      <div class="tf__t" style="margin-top:28px">Le cause non sono confrontabili.</div>
+      <div class="tf__t" style="margin-top:28px">Le priorit&agrave; dipendono dalla percezione.</div>
+      <div class="tf__t" style="margin-top:28px">I risultati sono difficili da verificare.</div>
+    </div>
+  </div>
+
+  <!-- la cucitura: unico segnale giallo della slide, e ha un significato -->
+  <div style="position:absolute;left:596px;top:190px;width:12px;height:366px;background:var(--acid)"></div>
+
+  <!-- CON D.FACTORY · fondo bianco, testo pieno -->
+  <div style="position:absolute;left:664px;top:220px;width:552px">
+    <div class="lbl">Con D.Factory</div>
+    <div class="tf__t tf__t--on" style="margin-top:38px">L&rsquo;evento viene contestualizzato.</div>
+    <div class="tf__t tf__t--on" style="margin-top:28px">Produzione ed energia condividono il tempo.</div>
+    <div class="tf__t tf__t--on" style="margin-top:28px">Le cause vengono ordinate per impatto.</div>
+    <div class="tf__t tf__t--on" style="margin-top:28px">Le priorit&agrave; partono dal valore.</div>
+    <div class="tf__t tf__t--on" style="margin-top:28px">Le azioni vengono confrontate con una baseline.</div>
+  </div>
+
+  <div class="z" style="top:592px;width:1100px">
+    <div class="mid">Da dati separati a una gestione condivisa.</div>
+  </div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>04 / 15</span></div>
+</div>
+
+
+<div class="slide lt" id="s05_prodotto" data-tipo="prodotto">
+  <div class="z" style="top:48px;width:1152px">
+    <h2 class="sm">Il fermo, la causa e il costo<br>nello stesso momento.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="488" viewBox="0 0 1280 488"
+       style="position:absolute;left:0;top:164px" role="img" aria-labelledby="p3t p3d">
+    <title id="p3t">Dettaglio di un fermo, vista ricostruita</title>
+    <desc id="p3d">La finestra dalle dieci a mezzogiorno sulle tre macchine della linea.
+      Il fermo della tappatrice è selezionato: durata diciotto minuti, causa associata
+      mancanza tappi a monte, margine perso stimato milleduecentosessanta euro. Sotto, la
+      curva dell’OEE che scende nell’intervallo del fermo. Un solo indicatore verticale
+      attraversa la timeline e la curva.</desc>
+
+    <rect x="0" y="0" width="1280" height="488" fill="#FFFFFF"/>
+    <rect x="0" y="0" width="1280" height="56" fill="#F3F4F0"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <path d="M0 487.25 L1280 487.25" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <text x="64" y="36" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">Linea 1 · Confezionamento</text>
+    <text x="1216" y="36" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)"
+          text-anchor="end">10:00 – 12:00</text>
+    <path d="M0 56 L1280 56" stroke="rgba(10,10,10,.16)"/>
+
+    <g fill="rgba(10,10,10,.07)">
+      <rect x="280" y="92" width="580" height="38"/>
+      <rect x="280" y="148" width="580" height="38"/>
+      <rect x="280" y="204" width="580" height="38"/>
+    </g>
+    <!-- il fermo della tappatrice ferma la linea: le tre tracce si
+         interrompono insieme, e il giallo dice quale macchina l’ha causato -->
+    <g fill="#0A0A0A">
+      <rect x="280" y="92" width="406" height="38"/><rect x="773" y="92" width="87" height="38"/>
+      <rect x="280" y="148" width="406" height="38"/><rect x="773" y="148" width="87" height="38"/>
+      <rect x="280" y="204" width="406" height="38"/><rect x="773" y="204" width="87" height="38"/>
+    </g>
+    <rect x="686" y="204" width="87" height="38" fill="#E6E011"/>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">
+      <text x="64" y="116">Riempitrice</text>
+      <text x="64" y="172">Etichettatrice</text>
+      <text x="64" y="228">Tappatrice</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">
+      <text x="280" y="272">10:00</text>
+      <text x="570" y="272" text-anchor="middle">11:00</text>
+      <text x="860" y="272" text-anchor="end">12:00</text>
+    </g>
+
+    <path d="M0 296 L880 296" stroke="rgba(10,10,10,.12)"/>
+    <text x="64" y="326" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">OEE nella finestra · %</text>
+    <g stroke="rgba(10,10,10,.10)">
+      <path d="M280 356 L860 356"/><path d="M280 450 L860 450"/>
+    </g>
+    <g font-family="Geist" font-size="12.5" fill="rgba(10,10,10,.56)" text-anchor="end">
+      <text x="268" y="360">80</text><text x="268" y="454">60</text>
+    </g>
+    <!-- la discesa comincia sull’indicatore, non prima -->
+    <path d="M280 376 L328 371 L376 380 L424 373 L472 378 L520 371 L568 376 L616 381
+             L664 384 L686 386 L706 424 L740 444 L773 438 L812 398 L860 378"
+          fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+
+    <!-- un solo indicatore temporale: attraversa le macchine e la curva OEE -->
+    <path d="M686 84 L686 456" stroke="#E6E011" stroke-width="1.5"/>
+
+    <path d="M880 56 L880 488" stroke="rgba(10,10,10,.16)"/>
+    <rect x="904" y="92" width="12" height="12" fill="#E6E011"/>
+    <text x="904" y="150" font-family="Geist" font-size="26" font-weight="600" fill="#0A0A0A">11:24 – 11:42</text>
+    <text x="904" y="182" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">Fermo 18 minuti</text>
+    <path d="M904 212 L1216 212" stroke="rgba(10,10,10,.12)"/>
+    <text x="904" y="242" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Causa associata</text>
+    <text x="904" y="272" font-family="Geist" font-size="19" fill="#0A0A0A">Mancanza tappi a monte</text>
+    <path d="M904 302 L1216 302" stroke="rgba(10,10,10,.12)"/>
+    <text x="904" y="332" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Margine perso stimato</text>
+    <text x="904" y="382" font-family="Geist" font-size="34" font-weight="600" fill="#0A0A0A">1.260 €</text>
+    <text x="904" y="412" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">18 min · 500 pz/min · 0,14 €/pz</text>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Vista ricostruita · dati illustrativi</span><span>05 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_REAL_SCREENSHOT_MAPST}}</span></span></div>
+</div>
+
+
+<!-- ================= S06 · UN EVENTO, QUATTRO LETTURE · prodotto · dk ===
+     Storyboard S06: fusione di v05_energia e v07_ampiezza della V9.2. Una
+     sola timeline con l'intervallo marcato, quattro letture sotto. Non due
+     dashboard sovrapposte: l'imbuto dichiara che la fascia inferiore e' lo
+     stesso intervallo, letto in quattro modi. -->
+<div class="slide dk" id="s06_quattro_letture" data-tipo="prodotto">
+  <div class="z" style="top:48px;width:1120px">
+    <h2 class="sm">Lo stesso evento pesa su capacit&agrave;,<br>energia, costo e servizio.</h2>
+  </div>
+  <div class="z" style="top:162px;width:1040px"><div class="cp">Le quattro letture escono dallo
+    stesso intervallo, senza ricalcoli e senza cambiare strumento.</div></div>
+
+  <svg data-ui="1" width="1280" height="436" viewBox="0 0 1280 436"
+       style="position:absolute;left:0;top:210px" role="img" aria-labelledby="q6t q6d">
+    <title id="q6t">Un intervallo di fermo letto su quattro assi</title>
+    <desc id="q6d">Il turno dalle sei alle quattordici con l&rsquo;intervallo dalle 11:24 alle
+      11:42 marcato. Sotto, lo stesso intervallo letto come capacit&agrave; persa, energia
+      assorbita a linea ferma, costo e impatto sull&rsquo;OEE del turno. Vista ricostruita,
+      dati illustrativi.</desc>
+
+    <rect x="0" y="0" width="1280" height="436" fill="#141414"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(255,255,255,.16)" stroke-width="1.5"/>
+    <text x="64" y="32" font-family="Geist" font-size="15" font-weight="600" fill="#FFFFFF">Linea 1 &middot; Confezionamento</text>
+    <text x="1216" y="32" font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)"
+          text-anchor="end">turno 06:00 &ndash; 14:00</text>
+    <path d="M0 52 L1280 52" stroke="rgba(255,255,255,.16)"/>
+
+    <!-- la timeline del turno: un solo intervallo marcato -->
+    <text x="64" y="118" font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)">Intervallo osservato</text>
+    <rect x="280" y="100" width="936" height="24" fill="rgba(255,255,255,.09)"/>
+    <rect x="280" y="100" width="632" height="24" fill="rgba(255,255,255,.82)"/>
+    <rect x="947" y="100" width="269" height="24" fill="rgba(255,255,255,.82)"/>
+    <rect x="912" y="100" width="35" height="24" fill="#E6E011"/>
+    <text x="929" y="92" font-family="Geist" font-size="13" fill="#FFFFFF"
+          text-anchor="middle">11:24 &ndash; 11:42</text>
+    <g font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)">
+      <text x="280" y="146">06:00</text>
+      <text x="1216" y="146" text-anchor="end">14:00</text>
+    </g>
+
+    <!-- l'imbuto: la fascia inferiore e' quell'intervallo, non un'altra vista -->
+    <g stroke="rgba(255,255,255,.30)" fill="none">
+      <path d="M912 128 L64 190"/><path d="M947 128 L1216 190"/>
+    </g>
+    <path d="M0 196 L1280 196" stroke="rgba(255,255,255,.16)"/>
+
+    <g stroke="rgba(255,255,255,.16)">
+      <path d="M332 212 L332 396"/><path d="M624 212 L624 396"/><path d="M916 212 L916 396"/>
+    </g>
+
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)">
+      <text x="64" y="230">Capacit&#224;</text><text x="356" y="230">Energia</text>
+      <text x="648" y="230">Costo</text><text x="940" y="230">Impatto operativo</text>
+    </g>
+    <g font-family="Geist" font-size="38" font-weight="600" fill="#FFFFFF" letter-spacing="-1.4">
+      <text x="64" y="288">18<tspan font-size="21"> min</tspan></text>
+      <text x="356" y="288">11,4<tspan font-size="21"> kWh</tspan></text>
+      <text x="648" y="288">1.260<tspan font-size="21"> &euro;</tspan></text>
+      <text x="940" y="288">71,4<tspan font-size="21">%</tspan></text>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">
+      <text x="64" y="322">9.000 pezzi non prodotti</text>
+      <text x="356" y="322">38 kW a linea ferma</text>
+      <text x="648" y="322">margine perso sul fermo</text>
+      <text x="940" y="322">OEE del turno</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)">
+      <text x="64" y="352">500 pz/min &times; 18 min</text>
+      <text x="356" y="352">38 kW &times; 18 min &divide; 60</text>
+      <text x="648" y="352">18 min &times; 70 &euro;/min</text>
+      <text x="648" y="374">energia improduttiva 2,5 &euro;</text>
+      <text x="940" y="352">senza questo fermo sarebbe 74,3%</text>
+    </g>
+
+    <path d="M0 396 L1280 396" stroke="rgba(255,255,255,.16)"/>
+    <text x="64" y="422" font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)">Nessun valore &egrave; annualizzato: quello che si vede &egrave; l&#8217;intervallo osservato.</text>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Vista ricostruita &middot; dati illustrativi</span><span>06 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_DATASET_STOPPED_POWER}}</span> <span class="ph">{{PH_REAL_SCREENSHOT_MARENERGY}}</span></span></div>
+</div>
+
+
+<!-- ================= S07 · DALL'EVENTO ALLA PRIORITA' · valore · lt =====
+     Storyboard S07 e regola §5.1 dell'audit: questa slide e' di tipo valore,
+     non prodotto. Titolo e paragrafo dominano, il ranking sta sotto ed e' un
+     grafico, non una schermata: nessuna intestazione di applicazione. E' cosi'
+     che le slide tecniche consecutive restano due (S05, S06). -->
+<div class="slide lt" id="s07_priorita" data-tipo="valore">
+  <div class="z" style="top:48px;width:1140px">
+    <h2 class="sm">Il valore non &egrave; vedere un fermo.<br>&Egrave; sapere quale problema
+      chiudere per primo.</h2>
+  </div>
+
+  <div class="z cols" style="top:196px">
+    <div class="col" style="flex:1.15">
+      <div class="cp">D.Factory aggrega frequenza, durata, perdita di capacit&agrave; e consumo
+        per trasformare gli eventi in una lista di priorit&agrave; leggibile.</div>
+    </div>
+    <div class="col">
+      <div class="cp">La prima causa vale il 43% del costo di fermo della settimana.
+        Le micro-fermate sono 38 eventi e valgono meno della met&agrave;.</div>
+    </div>
+  </div>
+
+  <svg width="1152" height="292" viewBox="0 0 1152 292"
+       style="position:absolute;left:64px;top:326px" role="img" aria-labelledby="pr7t pr7d">
+    <title id="pr7t">Cause di fermo ordinate per costo stimato</title>
+    <desc id="pr7d">Su sette giorni: mancanza tappi quattordici eventi e novantasei minuti,
+      cambio formato quattro eventi e sessantadue minuti, micro-fermate trentotto eventi e
+      quarantuno minuti, manutenzione due eventi e venticinque minuti. La prima causa vale
+      il quarantatr&eacute; per cento del costo di fermo della settimana. Scenario
+      illustrativo.</desc>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
+      <text x="26" y="16">Causa</text>
+      <text x="560" y="16" text-anchor="end">Eventi</text>
+      <text x="700" y="16" text-anchor="end">Durata</text>
+      <text x="1152" y="16" text-anchor="end">Costo stimato</text>
+    </g>
+    <path d="M0 30 L1152 30" stroke="rgba(10,10,10,.26)"/>
+
+    <rect x="0" y="56" width="12" height="12" fill="#E6E011"/>
+    <g font-family="Geist" font-size="17" fill="#0A0A0A">
+      <text x="26" y="67">Mancanza tappi</text>
+      <text x="26" y="121">Cambio formato</text>
+      <text x="26" y="175">Micro-fermate</text>
+      <text x="26" y="229">Manutenzione</text>
+    </g>
+    <rect x="760" y="55" width="200" height="14" fill="#E6E011"/>
+    <g fill="#0A0A0A">
+      <rect x="760" y="109" width="129" height="14"/>
+      <rect x="760" y="163" width="85" height="14"/>
+      <rect x="760" y="217" width="52" height="14"/>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)" text-anchor="end">
+      <text x="560" y="67">14</text><text x="700" y="67">96 min</text>
+      <text x="560" y="121">4</text><text x="700" y="121">62 min</text>
+      <text x="560" y="175">38</text><text x="700" y="175">41 min</text>
+      <text x="560" y="229">2</text><text x="700" y="229">25 min</text>
+    </g>
+    <g font-family="Geist" font-size="17" font-weight="600" fill="#0A0A0A" text-anchor="end">
+      <text x="1152" y="67">6.720 &euro;</text><text x="1152" y="121">4.340 &euro;</text>
+      <text x="1152" y="175">2.870 &euro;</text><text x="1152" y="229">1.750 &euro;</text>
+    </g>
+    <g stroke="rgba(10,10,10,.12)">
+      <path d="M0 86 L1152 86"/><path d="M0 140 L1152 140"/><path d="M0 194 L1152 194"/>
+    </g>
+    <path d="M0 248 L1152 248" stroke="rgba(10,10,10,.26)"/>
+    <text x="0" y="278" font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">Sette giorni &middot; 58 eventi &middot; 224 minuti</text>
+    <text x="1152" y="280" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">15.680 &euro;</text>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Scenario illustrativo &middot; non risultato cliente</span><span>07 / 15</span></div>
+</div>
+
+
+<!-- ================= S08 · MAPPA DELLE FUNZIONALITA' · funzionalita · dk =
+     Storyboard S08: cinque fasce editoriali attraversate da una linea
+     continua, un microsegno per area. Nessuna mini-dashboard, nessun grafico.
+     La quinta area porta il rimando a S11 e non ripete lo stato «in sviluppo»:
+     nel deck quella dicitura esiste una volta sola, su S11.
+     Le fasce stanno nei margini del documento e non a pieno vivo: a pieno vivo
+     la superficie visiva saliva al 67% e il tetto del tipo e' 55%. -->
+<div class="slide dk" id="s08_mappa" data-tipo="funzionalita">
+  <div class="z" style="top:48px;width:1140px">
+    <h2 class="sm">Una piattaforma, cinque aree di capacit&agrave;.</h2>
+  </div>
+
+  <svg width="1152" height="436" viewBox="0 0 1152 436"
+       style="position:absolute;left:64px;top:172px" role="img" aria-labelledby="m8t m8d">
+    <title id="m8t">Le cinque aree di capacit&agrave; della piattaforma</title>
+    <desc id="m8d">Supervisione, performance, energia e utility, analisi e priorit&agrave;,
+      miglioramento. Ogni area porta i cinque temi che la compongono. L&rsquo;ultima area
+      vive nel livello Refyn.</desc>
+
+    <!-- 01 · supervisione -->
+    <path d="M0 .5 L1152 .5" stroke="rgba(255,255,255,.16)"/>
+    <rect x="0" y="30" width="10" height="10" fill="rgba(255,255,255,.44)"/>
+    <text x="28" y="40" font-family="Geist Mono" font-size="14" fill="rgba(255,255,255,.44)">01</text>
+    <text x="72" y="42" font-family="Geist" font-size="23" font-weight="600" fill="#FFFFFF"
+          letter-spacing="-.6">Supervisione</text>
+    <text x="396" y="42" font-family="Geist" font-size="16" fill="rgba(255,255,255,.72)">stato macchina e linea &middot; produzione &middot; avanzamento &middot; eventi &middot; storico</text>
+
+    <!-- 02 · performance -->
+    <path d="M0 86.5 L1152 86.5" stroke="rgba(255,255,255,.16)"/>
+    <rect x="0" y="116" width="10" height="10" fill="rgba(255,255,255,.44)"/>
+    <text x="28" y="126" font-family="Geist Mono" font-size="14" fill="rgba(255,255,255,.44)">02</text>
+    <text x="72" y="128" font-family="Geist" font-size="23" font-weight="600" fill="#FFFFFF"
+          letter-spacing="-.6">Performance</text>
+    <text x="396" y="128" font-family="Geist" font-size="16" fill="rgba(255,255,255,.72)">OEE &middot; disponibilit&#224; &middot; velocit&#224; &middot; micro-fermate &middot; qualit&#224; e scarti</text>
+
+    <!-- 03 · energia e utility -->
+    <path d="M0 172.5 L1152 172.5" stroke="rgba(255,255,255,.16)"/>
+    <rect x="0" y="202" width="10" height="10" fill="rgba(255,255,255,.44)"/>
+    <text x="28" y="212" font-family="Geist Mono" font-size="14" fill="rgba(255,255,255,.44)">03</text>
+    <text x="72" y="214" font-family="Geist" font-size="23" font-weight="600" fill="#FFFFFF"
+          letter-spacing="-.6">Energia e utility</text>
+    <text x="396" y="214" font-family="Geist" font-size="16" fill="rgba(255,255,255,.72)">consumi &middot; energia per stato &middot; costo energetico &middot; consumi specifici &middot; CO&#8322;</text>
+
+    <!-- 04 · analisi e priorita' -->
+    <path d="M0 258.5 L1152 258.5" stroke="rgba(255,255,255,.16)"/>
+    <rect x="0" y="288" width="10" height="10" fill="rgba(255,255,255,.44)"/>
+    <text x="28" y="298" font-family="Geist Mono" font-size="14" fill="rgba(255,255,255,.44)">04</text>
+    <text x="72" y="300" font-family="Geist" font-size="23" font-weight="600" fill="#FFFFFF"
+          letter-spacing="-.6">Analisi e priorit&#224;</text>
+    <text x="396" y="300" font-family="Geist" font-size="16" fill="rgba(255,255,255,.72)">cause &middot; confronti &middot; correlazioni &middot; impatto economico &middot; ranking</text>
+
+    <!-- 05 · miglioramento · l'unico segno giallo: l'area che vive in Refyn -->
+    <path d="M0 344.5 L1152 344.5" stroke="rgba(255,255,255,.16)"/>
+    <rect x="0" y="374" width="10" height="10" fill="#E6E011"/>
+    <text x="28" y="384" font-family="Geist Mono" font-size="14" fill="rgba(255,255,255,.44)">05</text>
+    <text x="72" y="386" font-family="Geist" font-size="23" font-weight="600" fill="#FFFFFF"
+          letter-spacing="-.6">Miglioramento</text>
+    <text x="396" y="386" font-family="Geist" font-size="16" fill="rgba(255,255,255,.72)">priorit&#224; &middot; azioni &middot; owner &middot; target &middot; verifica dei benefici</text>
+    <text x="1152" y="386" font-family="Geist" font-size="14" fill="rgba(255,255,255,.44)"
+          text-anchor="end">vive in Refyn &middot; 11</text>
+
+    <path d="M0 430.5 L1152 430.5" stroke="rgba(255,255,255,.16)"/>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>08 / 15</span></div>
+</div>
+
+
+<!-- ==================================================================
+     S09 · CONNECT · D2
+     Review §4.2: tre verbi al posto di tre etichette, fascia risultato di
+     grande peso, attivazione su una riga, nessun microtesto sopra il nome.
+     Fondo bianco, un solo segmento giallo, composizione aperta (§5.2).
+     ================================================================== -->
+<div class="slide lt" id="s09_connect" data-tipo="pacchetto">
+  <div class="z" style="top:56px;width:700px;right:auto"><div class="pk__n">Connect</div></div>
+  <div class="z" style="top:136px;width:820px;right:auto"><div class="pk__p">Rende affidabile
+    ci&ograve; che sta succedendo.</div></div>
+
+  <div style="position:absolute;right:64px;top:72px;width:400px">
+    <div class="lvl"><i class="on ac"></i><i></i><i></i></div>
+    <div class="note" style="margin-top:12px;text-align:right">livello 1 di 3</div>
+  </div>
+
+  <div class="z hr" style="top:212px"></div>
+
+  <div class="z cols" style="top:238px">
+    <div class="col">
+      <div class="nu">Vede</div>
+      <div class="fn" style="margin-top:18px">Stato macchina e linea<br>
+        Timeline di marcia e fermo<br>Eventi e cause associate<br>
+        Avanzamento della produzione</div>
+    </div>
+    <div class="col">
+      <div class="nu">Misura</div>
+      <div class="fn" style="margin-top:18px">OEE di macchina e linea<br>
+        Disponibilit&agrave;, performance e qualit&agrave;<br>Consumi di energia e utility<br>
+        Conteggi e velocit&agrave;</div>
+    </div>
+    <div class="col">
+      <div class="nu">Rende disponibile</div>
+      <div class="fn" style="margin-top:18px">Storico per turno, prodotto e linea<br>
+        Dashboard operative<br>Report standard<br>Export dei dati</div>
+    </div>
+  </div>
+
+  <!-- la fascia del risultato: e' la conclusione della slide -->
+  <div class="resb" style="top:418px;height:112px;background:var(--paper-2)">
+    <div style="position:absolute;left:64px;top:26px;width:900px">
+      <div class="lbl">Risultato</div>
+      <div class="res" style="margin-top:14px">Una baseline affidabile e condivisa.</div>
+    </div>
+  </div>
+
+  <div class="z" style="top:562px;width:1152px">
+    <div class="lbl">Come si attiva</div>
+    <div class="act" style="margin-top:12px">Assessment &middot; setup &middot; configurazione &middot;
+      canone ricorrente</div>
+  </div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>09 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_CONNECT_EXACT_SCOPE}}</span> <span class="ph">{{PH_SERVICES_INCLUDED}}</span> <span class="ph">{{PH_CONNECT_ANNUAL_FEE}}</span></span></div>
+</div>
+
+
+<!-- ==================================================================
+     S10 · INSIGHT · D2
+     Review §4.3: tre domande al posto di tre categorie, differenza di scala
+     fra domande e funzioni, fascia risultato piu' marcata.
+     Fondo grigio chiarissimo, due segmenti, densita' controllata (§5.2).
+     ================================================================== -->
+<div class="slide lt" id="s10_insight" data-tipo="pacchetto" style="background:var(--paper-2)">
+  <div class="z" style="top:56px;width:700px;right:auto"><div class="pk__n">Insight</div></div>
+  <div class="z" style="top:136px;width:900px;right:auto"><div class="pk__p">Spiega dove si perde
+    capacit&agrave;, energia e valore.</div></div>
+
+  <div style="position:absolute;right:64px;top:72px;width:400px">
+    <div class="lvl"><i class="on"></i><i class="on ac"></i><i></i></div>
+    <div class="note" style="margin-top:12px;text-align:right">livello 2 di 3 &middot; comprende Connect</div>
+  </div>
+
+  <div class="z hr" style="top:212px"></div>
+
+  <div class="z cols" style="top:238px">
+    <div class="col">
+      <div class="pk__p" style="font-size:22px">Dove si perde?</div>
+      <div class="fn" style="margin-top:20px">Cause di fermo<br>Micro-fermate<br>
+        Perdite di velocit&agrave;<br>Blocking e starvation</div>
+    </div>
+    <div class="col">
+      <div class="pk__p" style="font-size:22px">Quanto pesa?</div>
+      <div class="fn" style="margin-top:20px">Energia per stato<br>Consumo specifico<br>
+        Costo energetico per pezzo<br>CO&#8322; calcolata o stimata</div>
+    </div>
+    <div class="col">
+      <div class="pk__p" style="font-size:22px">Cosa viene prima?</div>
+      <div class="fn" style="margin-top:20px">KPI e formule configurabili<br>Correlazioni<br>
+        Ranking e priorit&agrave; economiche<br>Confronti fra linee e periodi</div>
+    </div>
+  </div>
+
+  <!-- fascia piu' marcata di Connect: nero su tutta la larghezza -->
+  <div class="resb dk" style="top:418px;height:112px;background:var(--ink)">
+    <div style="position:absolute;left:64px;top:26px;width:900px">
+      <div class="lbl">Risultato</div>
+      <div class="res" style="margin-top:14px">Sapere dove intervenire e perch&eacute;.</div>
+    </div>
+  </div>
+
+  <div class="z" style="top:562px;width:1152px">
+    <div class="lbl">Come si attiva</div>
+    <div class="act" style="margin-top:12px">Comprende Connect &middot; capacit&agrave; analitiche
+      aggiuntive &middot; review specialistiche</div>
+  </div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>10 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_INSIGHT_EXACT_SCOPE}}</span> <span class="ph">{{PH_COST_CALCULATION_METHOD}}</span> <span class="ph">{{PH_INSIGHT_ANNUAL_FEE}}</span></span></div>
+</div>
+
+
+<!-- ==================================================================
+     S11 · REFYN · D2
+     Review §4.4: tre parole grandi collegate da una linea con ritorno, un
+     solo accento giallo sulla verifica, stato accanto al nome in testo
+     leggibile, nessun badge isolato. Fondo nero, tre segmenti (§5.2).
+     Il ciclo e' un asse con ritorno, non un diagramma da consulenza.
+     ================================================================== -->
+<div class="slide dk" id="s11_refyn" data-tipo="pacchetto">
+  <div class="z" style="top:56px;width:250px;right:auto"><div class="pk__n">Refyn</div></div>
+  <!-- lo stato accanto al nome, in testo leggibile: nessun badge isolato -->
+  <div style="position:absolute;left:334px;top:96px;width:360px">
+    <div class="pk__s">Modulo avanzato in sviluppo</div></div>
+  <div style="position:absolute;right:64px;top:72px;width:400px">
+    <div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+    <div class="note" style="margin-top:12px;text-align:right">livello 3 di 3 &middot; comprende Connect e Insight</div>
+  </div>
+  <div class="z" style="top:140px;width:820px;right:auto"><div class="pk__p">Trasforma le priorit&agrave;
+    in un processo di miglioramento verificabile.</div></div>
+
+  <div class="z hr" style="top:212px"></div>
+
+  <!-- il ciclo: tre stazioni su un asse, con il ritorno alle priorita' -->
+  <svg width="1152" height="262" viewBox="0 0 1152 262"
+       style="position:absolute;left:64px;top:244px" role="img" aria-labelledby="r1t r1d">
+    <title id="r1t">Il ciclo di Refyn</title>
+    <desc id="r1d">Tre stazioni su un asse orizzontale: priorit&agrave;, azioni, verifica. Dalla
+      verifica una linea di ritorno riporta alle priorit&agrave; del ciclo successivo.</desc>
+
+    <path d="M0 18.5 L1152 18.5" stroke="rgba(255,255,255,.30)"/>
+    <g fill="#FFFFFF"><rect x="0" y="12" width="13" height="13"/><rect x="430" y="12" width="13" height="13"/></g>
+    <rect x="820" y="12" width="13" height="13" fill="#E6E011"/>
+
+    <g font-family="Geist" font-size="40" font-weight="600" fill="#FFFFFF" letter-spacing="-1.6">
+      <text x="0" y="80">Priorit&#224;</text><text x="430" y="80">Azioni</text>
+      <text x="820" y="80">Verifica</text>
+    </g>
+
+    <g font-family="Geist" font-size="16" fill="rgba(255,255,255,.72)">
+      <text x="0" y="122">Backlog delle opportunit&#224;</text><text x="0" y="150">Impatto</text>
+      <text x="0" y="178">Baseline</text><text x="0" y="206">Target</text>
+
+      <text x="430" y="122">Attivit&#224;</text><text x="430" y="150">Responsabile</text>
+      <text x="430" y="178">Scadenza</text><text x="430" y="206">Stato</text>
+
+      <text x="820" y="122">Confronto con la baseline</text><text x="820" y="150">Periodo</text>
+      <text x="820" y="178">Beneficio</text><text x="820" y="206">Revisione delle priorit&#224;</text>
+    </g>
+
+    <!-- il ritorno: dalla verifica alle priorita' del ciclo successivo -->
+    <path d="M826 226 L826 240 L6 240 L6 230" stroke="rgba(255,255,255,.30)" fill="none"/>
+    <path d="M6 226 L1 236 L11 236 Z" fill="rgba(255,255,255,.44)"/>
+    <text x="24" y="258" font-family="Geist" font-size="14" fill="rgba(255,255,255,.44)">i risultati verificati aggiornano le priorit&#224; del ciclo successivo</text>
+  </svg>
+
+  <div class="z" style="top:520px;width:1000px">
+    <div class="lbl">Risultato</div>
+    <div class="res res--big" style="margin-top:14px">Un ciclo governato,
+      non un elenco di buone intenzioni.</div>
+  </div>
+
+  <div class="z" style="top:626px;width:1152px">
+    <div class="act">Progetto pilota dedicato &middot; perimetro e modello economico concordati</div>
+  </div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>11 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_REFYN_MVP_SCOPE}}</span> <span class="ph">{{PH_REFYN_RELEASE_TARGET}}</span> <span class="ph">{{PH_REFYN_PRICING_MODEL}}</span></span></div>
+</div>
+
+
+<!-- ================= S12 · CONFRONTO E SERVIZI · matrice · lt ===========
+     Storyboard S12: la matrice sale nel corpo, nove righe, corpo >= 15 px,
+     nessuna nota minuscola. I nove servizi restano un layer orizzontale sotto
+     la matrice: valgono su tutti e tre i livelli, non su uno solo.
+     Scala del master: Base · Raccolta · Analisi · Standard · Incluso ·
+     Avanzato · Previsto. La scala a cinque valori della V9.2 resta in A1. -->
+<div class="slide lt" id="s12_confronto" data-tipo="matrice">
+  <div class="z" style="top:44px;width:1140px">
+    <h2 class="sm">Ogni livello contiene il precedente.<br>I servizi accelerano il
+      risultato.</h2>
+  </div>
+
+  <svg width="1152" height="360" viewBox="0 0 1152 360"
+       style="position:absolute;left:64px;top:162px" role="img" aria-labelledby="c12t c12d">
+    <title id="c12t">Perimetro dei tre livelli su nove capacit&agrave;</title>
+    <desc id="c12d">Nove capacit&agrave; confrontate su Connect, Insight e Refyn. Insight
+      comprende Connect, Refyn comprende entrambi. Le ultime due righe, azioni e verifica
+      dei benefici, sono previste nel livello Refyn.</desc>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
+      <text x="26" y="16">Capacit&#224;</text>
+      <text x="770" y="16" text-anchor="middle">Connect</text>
+      <text x="940" y="16" text-anchor="middle">Insight</text>
+      <text x="1110" y="16" text-anchor="middle">Refyn</text>
+    </g>
+    <path d="M0 30 L1152 30" stroke="rgba(10,10,10,.26)"/>
+
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="26" y="60">Stato, produzione e storico</text>
+      <text x="26" y="96">OEE e KPI standard</text>
+      <text x="26" y="132">Energia e utility</text>
+      <text x="26" y="168">Cause, micro-fermate e velocit&#224;</text>
+      <text x="26" y="204">Energia per stato e costo specifico</text>
+      <text x="26" y="240">KPI, formule e confronti</text>
+      <text x="26" y="276">Priorit&#224; economiche</text>
+      <text x="26" y="312">Azioni e owner</text>
+      <text x="26" y="348">Verifica dei benefici</text>
+    </g>
+
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)" text-anchor="middle">
+      <text x="770" y="60">Base</text><text x="940" y="60">Base</text><text x="1110" y="60">Base</text>
+      <text x="770" y="96">Incluso</text><text x="940" y="96">Incluso</text><text x="1110" y="96">Incluso</text>
+      <text x="770" y="132">Incluso</text><text x="940" y="132">Incluso</text><text x="1110" y="132">Incluso</text>
+      <text x="770" y="168">Raccolta</text><text x="940" y="168">Analisi</text><text x="1110" y="168">Analisi</text>
+      <text x="770" y="204">Base</text><text x="940" y="204">Avanzato</text><text x="1110" y="204">Avanzato</text>
+      <text x="770" y="240">Standard</text><text x="940" y="240">Avanzato</text><text x="1110" y="240">Avanzato</text>
+      <text x="940" y="276">Incluso</text><text x="1110" y="276">Incluso</text>
+    </g>
+    <g font-family="Geist" font-size="15" fill="#0A0A0A" font-weight="600" text-anchor="middle">
+      <text x="1110" y="312">Previsto</text><text x="1110" y="348">Previsto</text>
+    </g>
+    <g fill="rgba(10,10,10,.34)" font-family="Geist" font-size="15" text-anchor="middle">
+      <text x="770" y="276">&#8212;</text>
+      <text x="770" y="312">&#8212;</text><text x="940" y="312">&#8212;</text>
+      <text x="770" y="348">&#8212;</text><text x="940" y="348">&#8212;</text>
+    </g>
+    <!-- unico segno giallo: le due righe previste, cioe' l'unica cosa che oggi
+         non c'e' ancora. Marcarle e' piu' onesto che nasconderle -->
+    <rect x="0" y="292" width="4" height="64" fill="#E6E011"/>
+
+    <g stroke="rgba(10,10,10,.12)">
+      <path d="M0 74 L1152 74"/><path d="M0 110 L1152 110"/><path d="M0 146 L1152 146"/>
+      <path d="M0 182 L1152 182"/><path d="M0 218 L1152 218"/><path d="M0 254 L1152 254"/>
+      <path d="M0 290 L1152 290"/><path d="M0 326 L1152 326"/>
+    </g>
+  </svg>
+
+  <div class="z" style="top:544px"><div class="lbl">I nove servizi, su tutti e tre i
+    livelli</div></div>
+  <div class="z" style="top:572px;width:1152px"><div class="fn">assessment e perimetrazione
+    &middot; setup e integrazione &middot; KPI e formule &middot; data quality review &middot;
+    Performance &amp; Energy Review &middot; improvement sprint &middot; formazione &middot;
+    supporto &middot; scale-up</div></div>
+
+  <div class="z" style="top:632px"><div class="note">I servizi sono attivabili su tutti e tre i
+    livelli. Che cosa &egrave; compreso nell&rsquo;avvio &egrave; indicato nella proposta
+    economica.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>12 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SERVICES_INCLUDED}}</span> <span class="ph">{{PH_SERVICES_OPTIONAL}}</span></span></div>
+</div>
+
+
+<!-- ================= S13 · PERCHE' D.FACTORY · azienda · dk =============
+     Storyboard S13: tre principi, nessuna timeline, nessun asse
+     produzione/energia — quella lettura vive gia' su S05 e S06.
+     G5 aperto: nessun numero aziendale, nessun logo cliente, nessun anno.
+     La slide regge sui tre principi, come previsto dal master. -->
+<div class="slide dk" id="s13_perche" data-tipo="azienda">
+  <div class="z" style="top:48px;width:1140px">
+    <h2 class="sm">Costruito per l&rsquo;impianto reale.<br>Non per una demo isolata.</h2>
+  </div>
+
+  <div class="z hr" style="top:238px"></div>
+
+  <div class="z cols" style="top:288px">
+    <div class="col">
+      <div class="lbl">01</div>
+      <div class="nu" style="font-size:27px;margin-top:26px">Brownfield first</div>
+      <div class="cp" style="margin-top:22px">Si parte da PLC, sensori, contatori e sistemi
+        gi&agrave; presenti. Compatibilit&agrave; e gap vengono verificati sull&rsquo;impianto
+        reale.</div>
+    </div>
+    <div class="col">
+      <div class="lbl">02</div>
+      <div class="nu" style="font-size:27px;margin-top:26px">Un solo contesto</div>
+      <div class="cp" style="margin-top:22px">Produzione, energia, prodotto, ordine, stato e
+        causa vengono letti sullo stesso asse.</div>
+    </div>
+    <div class="col">
+      <div class="lbl">03</div>
+      <div class="nu" style="font-size:27px;margin-top:26px">Software e competenze</div>
+      <div class="cp" style="margin-top:22px">La piattaforma viene accompagnata da assessment,
+        configurazione, review e supporto al miglioramento.</div>
+    </div>
+  </div>
+
+  <!-- il giallo marca il principio da cui dipendono gli altri due -->
+  <div style="position:absolute;left:64px;top:274px;width:80px;height:4px;background:var(--acid)"></div>
+
+  <div class="z" style="top:566px"><div class="note">Nessun risultato aziendale &egrave;
+    pubblicato in questa versione: rapporto con il gruppo, anno di fondazione e progetti
+    completati entrano solo quando sono verificati per iscritto.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>13 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_GROUP_RELATIONSHIP}}</span> <span class="ph">{{PH_COMPANY_FOUNDING_YEAR}}</span> <span class="ph">{{PH_PROJECTS_COMPLETED}}</span></span></div>
+</div>
+
+
+<!-- ================= S14 · VALORE E MODELLO · valore · lt ===============
+     Storyboard S14: a sinistra le quattro leve e la formula, a destra le tre
+     voci del modello. Una sola formula economica nel corpo del deck (§11.3).
+     G3 aperto: nessun risultato annualizzato, ne' in cifre ne' in lettere,
+     nemmeno nel testo alternativo della figura.
+     G2 aperto: nel corpo resta il modello, gli importi stanno in A3. -->
+<div class="slide lt" id="s14_valore" data-tipo="valore">
+  <div class="z" style="top:44px;width:1140px">
+    <h2 class="sm">Il valore nasce dal dato.<br>Il contratto cresce con il perimetro.</h2>
+  </div>
+
+  <svg width="700" height="386" viewBox="0 0 700 386"
+       style="position:absolute;left:64px;top:196px" role="img" aria-labelledby="v14t v14d">
+    <title id="v14t">Le quattro leve del valore e la formula</title>
+    <desc id="v14d">Capacit&agrave; potenzialmente recuperabile, energia potenzialmente
+      evitabile, qualit&agrave; e scarti, tempo decisionale ridotto. La formula moltiplica i
+      minuti di perdita per il valore unitario e per la frequenza. Il risultato si calcola
+      sui dati della linea del cliente, durante l&rsquo;audit: qui non compare nessun
+      importo annuo.</desc>
+
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.56)">
+      <text x="0" y="14">01</text><text x="0" y="52">02</text>
+      <text x="0" y="90">03</text><text x="0" y="128">04</text>
+    </g>
+    <g font-family="Geist" font-size="19" fill="#0A0A0A">
+      <text x="44" y="14">Capacit&#224; potenzialmente recuperabile</text>
+      <text x="44" y="52">Energia potenzialmente evitabile</text>
+      <text x="44" y="90">Qualit&#224; e scarti</text>
+      <text x="44" y="128">Tempo decisionale ridotto</text>
+    </g>
+    <path d="M0 168 L700 168" stroke="rgba(10,10,10,.26)"/>
+
+    <text x="0" y="200" font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">Come si calcola</text>
+    <g font-family="Geist" font-size="30" font-weight="600" fill="#0A0A0A" letter-spacing="-1">
+      <text x="0" y="248">minuti di perdita</text>
+      <text x="0" y="288">&times; valore unitario</text>
+      <text x="0" y="328">&times; frequenza</text>
+    </g>
+    <rect x="0" y="352" width="86" height="4" fill="#E6E011"/>
+    <text x="0" y="382" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">Il risultato si calcola sui dati della vostra linea, durante l&#8217;audit.</text>
+  </svg>
+
+  <div style="position:absolute;left:812px;top:196px;width:404px">
+    <div class="lbl">Come si compra</div>
+
+    <div class="nu" style="margin-top:34px">Avvio</div>
+    <div class="fn" style="margin-top:8px">assessment &middot; setup &middot; integrazione
+      &middot; configurazione</div>
+
+    <div class="nu" style="margin-top:30px">Ricorrente</div>
+    <div class="fn" style="margin-top:8px">modulo &middot; sito o linea &middot; supporto
+      &middot; aggiornamenti</div>
+
+    <div class="nu" style="margin-top:30px">Opzionale</div>
+    <div class="fn" style="margin-top:8px">review &middot; improvement sprint &middot;
+      formazione &middot; scale-up</div>
+  </div>
+  <div style="position:absolute;left:788px;top:196px;width:1px;height:386px;background:var(--l-line)"></div>
+
+  <div class="z" style="top:606px"><div class="note">In questo scenario la leva principale
+    &egrave; la capacit&agrave; recuperabile. Il dato energetico completa la lettura e misura
+    il consumo improduttivo dello stesso evento. Gli importi sono nella proposta
+    economica.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Scenario illustrativo &middot; non risultato cliente</span><span>14 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_DATASET_MARGIN_UNIT}}</span> <span class="ph">{{PH_DATASET_RECOVERABLE_SHARE}}</span> <span class="ph">{{PH_AUDIT_PRICE}}</span> <span class="ph">{{PH_CONNECT_ANNUAL_FEE}}</span></span></div>
+</div>
+
+
+<!-- ================= S15 · PILOT E CTA · cta · dk =======================
+     Storyboard S15: tre passi in sequenza orizzontale, generosi di spazio
+     bianco. Nessuna seconda dashboard.
+     G1 aperto: il blocco contatto esiste solo nella working edition. Nella
+     client edition esce e il build emette il warning globale — il deck si
+     presenta dal vivo, non si invia da solo. -->
+<div class="slide dk" id="s15_pilot_cta" data-tipo="cta">
+  <div class="z" style="top:56px;width:1140px">
+    <h2 class="sm">Partiamo da una linea<br>e decidiamo sui risultati.</h2>
+  </div>
+
+  <svg width="1152" height="250" viewBox="0 0 1152 250"
+       style="position:absolute;left:64px;top:236px" role="img" aria-labelledby="c15t c15d">
+    <title id="c15t">I tre passi del percorso</title>
+    <desc id="c15d">Perimetrazione, pilot e decisione, in sequenza. Sotto ciascun passo,
+      quattro voci di che cosa comprende.</desc>
+
+    <path d="M0 12.5 L1152 12.5" stroke="rgba(255,255,255,.30)"/>
+    <g fill="#FFFFFF">
+      <rect x="0" y="6" width="13" height="13"/><rect x="416" y="6" width="13" height="13"/>
+    </g>
+    <rect x="832" y="6" width="13" height="13" fill="#E6E011"/>
+
+    <g font-family="Geist" font-size="36" font-weight="600" fill="#FFFFFF" letter-spacing="-1.4">
+      <text x="0" y="70">Perimetrazione</text><text x="416" y="70">Pilot</text>
+      <text x="832" y="70">Decisione</text>
+    </g>
+    <g font-family="Geist" font-size="17" fill="rgba(255,255,255,.72)">
+      <text x="0" y="118">dati</text><text x="0" y="150">linea</text>
+      <text x="0" y="182">obiettivi</text><text x="0" y="214">vincoli</text>
+
+      <text x="416" y="118">baseline</text><text x="416" y="150">prime cause</text>
+      <text x="416" y="182">consumi</text><text x="416" y="214">priorit&#224;</text>
+
+      <text x="832" y="118">risultati</text><text x="832" y="150">gap</text>
+      <text x="832" y="182">proposta</text><text x="832" y="214">scala</text>
+    </g>
+  </svg>
+
+  <div class="z hr" style="top:512px"></div>
+
+  <div class="z" style="top:540px;width:1010px">
+    <div class="mid" style="font-size:36px">Condividiamo la prima linea, i dati disponibili
+      e la decisione che vuoi migliorare.</div>
+  </div>
+
+  <div data-ed="working">
+    <div class="z" style="top:632px"><div class="lbl">Contatto</div></div>
+    <div style="position:absolute;left:220px;top:630px;width:996px">
+      <div style="font-family:var(--mono);font-size:14px;color:var(--d2)">nome &middot; ruolo
+        &middot; email &mdash; <span class="ph" data-placeholder="PH_CONTACT_NAME">INPUT APERTO</span></div>
+    </div>
+  </div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>15 / 15</span></div>
+</div>
+
+
+<!-- ================= S16 · CASO CLIENTE · appendice · lt ================
+     Solo working. La slide esiste per far vedere che cosa serve, non per
+     suggerire che esista gia'. Finche' il caso non e' autorizzato per
+     iscritto la client edition non la contiene. Ogni campo e' un segnaposto:
+     nessun valore e' stato inventato. -->
+<div data-ph-page="CASE_STUDY_READY" class="slide lt" id="s16_caso" data-tipo="appendice">
+  <div class="z" style="top:44px;width:1152px">
+    <h2 class="sm">Struttura del caso cliente, da compilare.</h2>
+  </div>
+
+  <svg width="1152" height="440" viewBox="0 0 1152 440"
+       style="position:absolute;left:64px;top:130px" role="img" aria-labelledby="s16t s16d">
+    <title id="s16t">Struttura del caso cliente</title>
+    <desc id="s16d">Contesto, problema, intervento e risultati. Ogni campo &egrave; un
+      segnaposto: nessun valore &egrave; stato inventato e la slide non entra nella versione
+      destinata al cliente finch&eacute; il caso non &egrave; autorizzato per iscritto.</desc>
+
+    <g stroke="rgba(10,10,10,.12)">
+      <path d="M282 0 L282 296"/><path d="M570 0 L570 296"/><path d="M858 0 L858 296"/>
+      <path d="M0 296 L1152 296"/>
+    </g>
+
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.42)">
+      <text x="0" y="20">01</text><text x="314" y="20">02</text>
+      <text x="602" y="20">03</text><text x="890" y="20">04</text>
+    </g>
+    <g font-family="Geist" font-size="18" font-weight="600" fill="#0A0A0A">
+      <text x="34" y="20">Contesto</text><text x="348" y="20">Problema</text>
+      <text x="636" y="20">Intervento</text><text x="924" y="20">Risultati</text>
+    </g>
+
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.72)">
+      <text x="0" y="64"><tspan data-placeholder="PH_CASE_CLIENT_DISPLAY_NAME">INPUT APERTO</tspan></text>
+      <text x="0" y="94"><tspan data-placeholder="PH_CASE_CLIENT_SECTOR">DECISIONE COMMERCIALE</tspan></text>
+      <text x="0" y="124"><tspan data-placeholder="PH_CASE_LINE_TYPE">VALIDAZIONE TECNICA</tspan></text>
+      <text x="0" y="154"><tspan data-placeholder="PH_CASE_CLIENT_SITE">DECISIONE COMMERCIALE</tspan></text>
+
+      <text x="314" y="64"><tspan data-placeholder="PH_CASE_INITIAL_PROBLEM">DECISIONE COMMERCIALE</tspan></text>
+      <text x="314" y="94"><tspan data-placeholder="PH_CASE_BASELINE_PERIOD">VALIDAZIONE TECNICA</tspan></text>
+      <text x="314" y="124"><tspan data-placeholder="PH_CASE_BASELINE_DATA">VALIDAZIONE TECNICA</tspan></text>
+      <text x="314" y="154"><tspan data-placeholder="PH_CASE_SCOPE">VALIDAZIONE TECNICA</tspan></text>
+
+      <text x="602" y="64"><tspan data-placeholder="PH_CASE_SOLUTION_MODULE">DECISIONE COMMERCIALE</tspan></text>
+      <text x="602" y="94"><tspan data-placeholder="PH_CASE_INTERVENTION">VALIDAZIONE TECNICA</tspan></text>
+      <text x="602" y="124"><tspan data-placeholder="PH_CASE_PILOT_DURATION">DECISIONE COMMERCIALE</tspan></text>
+      <text x="602" y="154"><tspan data-placeholder="PH_CASE_TIME_TO_USABLE_DATA">VALIDAZIONE TECNICA</tspan></text>
+
+      <text x="890" y="64"><tspan data-placeholder="PH_CASE_RESULT_1_LABEL">VALIDAZIONE TECNICA</tspan></text>
+      <text x="890" y="94"><tspan data-placeholder="PH_CASE_RESULT_1_BASELINE">VALIDAZIONE TECNICA</tspan></text>
+      <text x="890" y="124"><tspan data-placeholder="PH_CASE_RESULT_1_AFTER">VALIDAZIONE TECNICA</tspan></text>
+      <text x="890" y="154"><tspan data-placeholder="PH_CASE_RESULT_1_UNIT">VALIDAZIONE TECNICA</tspan></text>
+      <text x="890" y="184"><tspan data-placeholder="PH_CASE_RESULT_2_LABEL">VALIDAZIONE TECNICA</tspan></text>
+      <text x="890" y="214"><tspan data-placeholder="PH_CASE_RESULT_2_AFTER">VALIDAZIONE TECNICA</tspan></text>
+      <text x="890" y="244"><tspan data-placeholder="PH_CASE_RESULT_3_LABEL">VALIDAZIONE TECNICA</tspan></text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)">
+      <text x="0" y="196">metodo di misura</text><text x="314" y="196">fonti del dato</text>
+      <text x="602" y="196">sensori aggiunti</text>
+    </g>
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.72)">
+      <text x="0" y="224"><tspan data-placeholder="PH_CASE_RESULT_1_METHOD">VALIDAZIONE TECNICA</tspan></text>
+      <text x="314" y="224"><tspan data-placeholder="PH_CASE_DATA_SOURCES">VALIDAZIONE TECNICA</tspan></text>
+      <text x="602" y="224"><tspan data-placeholder="PH_CASE_ADDED_SENSORS">VALIDAZIONE TECNICA</tspan></text>
+    </g>
+
+    <text x="0" y="330" font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)">Citazione autorizzata</text>
+    <text x="0" y="364" font-family="Geist Mono" font-size="15" fill="rgba(10,10,10,.72)">&#8220;<tspan data-placeholder="PH_CASE_QUOTE">INPUT APERTO</tspan>&#8221;</text>
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.60)">
+      <text x="0" y="396"><tspan data-placeholder="PH_CASE_QUOTE_AUTHOR">INPUT APERTO</tspan></text><text x="314" y="396"><tspan data-placeholder="PH_CASE_QUOTE_ROLE">INPUT APERTO</tspan></text>
+      <text x="602" y="396"><tspan data-placeholder="PH_CASE_QUOTE_APPROVAL">INPUT APERTO</tspan></text>
+    </g>
+    <text x="0" y="428" font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)">Limiti dichiarati della misura: <tspan data-placeholder="PH_CASE_CONFIDENCE_NOTE">VALIDAZIONE TECNICA</tspan></text>
+  </svg>
+
+  <div class="z" style="top:602px"><div class="note">Nessun caso cliente &egrave; stato
+    pubblicato. Questa pagina mostra quali campi servono per costruirne uno, e quali
+    autorizzazioni servono per usarlo.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Slide esclusa dalla client edition finch&eacute; il caso non &egrave; autorizzato</span><span>16 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_CASE_STUDY_READY}}</span> <span class="ph">{{PH_CASE_APPROVAL_STATUS}}</span> <span class="ph">{{PH_CASE_APPROVAL_OWNER}}</span> <span class="ph">{{PH_CASE_CONFIDENTIALITY}}</span> <span class="ph">{{PH_CASE_RESULT_PERIOD}}</span></span></div>
+</div>
+
+
+<!-- ================= A1 · MATRICE COMPLETA · appendice · lt =============
+     Storyboard A1: quattordici righe organizzate per area, corpo leggibile,
+     nessuna nota minuscola. Scala della V9.2 — incluso, configurabile,
+     avanzato, previsto, non incluso — che resta valida qui: la scala del
+     master (base, raccolta, analisi, standard) vive su S12, nel corpo. -->
+<div class="slide lt" id="a1_matrice" data-tipo="appendice">
+  <div class="z" style="top:44px;width:1140px">
+    <h2 class="sm">Perimetro funzionale, area per area.</h2>
+  </div>
+
+  <svg width="1152" height="480" viewBox="0 0 1152 480"
+       style="position:absolute;left:64px;top:118px" role="img" aria-labelledby="a1t a1d">
+    <title id="a1t">Quattordici capacit&agrave; su Connect, Insight e Refyn</title>
+    <desc id="a1d">Le aree sono supervisione, produzione, OEE, fermi, energia,
+      qualit&agrave;, analisi, miglioramento e output. Insight comprende Connect, Refyn
+      comprende entrambi. Il perimetro effettivo dipende dai dati disponibili e dalla
+      configurazione dell&rsquo;impianto.</desc>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
+      <text x="0" y="14">Area</text><text x="150" y="14">Capacit&#224;</text>
+      <text x="790" y="14" text-anchor="middle">Connect</text>
+      <text x="950" y="14" text-anchor="middle">Insight</text>
+      <text x="1105" y="14" text-anchor="middle">Refyn</text>
+    </g>
+    <path d="M0 28 L1152 28" stroke="rgba(10,10,10,.26)"/>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)">
+      <text x="0" y="56">Supervisione</text><text x="0" y="88">Supervisione</text>
+      <text x="0" y="120">Produzione</text><text x="0" y="152">Produzione</text>
+      <text x="0" y="184">OEE</text><text x="0" y="216">OEE</text>
+      <text x="0" y="248">Fermi</text><text x="0" y="280">Fermi</text>
+      <text x="0" y="312">Energia</text><text x="0" y="344">Energia</text>
+      <text x="0" y="376">Qualit&#224;</text><text x="0" y="408">Analisi</text>
+      <text x="0" y="440">Miglioramento</text><text x="0" y="472">Output</text>
+    </g>
+
+    <g font-family="Geist" font-size="15" fill="#0A0A0A">
+      <text x="150" y="56">Stato di macchina e linea in tempo reale</text>
+      <text x="150" y="88">Timeline di marcia, fermo e causa associata</text>
+      <text x="150" y="120">Conteggi, velocit&#224; e avanzamento dell&#8217;ordine</text>
+      <text x="150" y="152">Storico per turno, giorno, prodotto e linea</text>
+      <text x="150" y="184">OEE di macchina e linea con i tre fattori</text>
+      <text x="150" y="216">KPI e formule configurabili</text>
+      <text x="150" y="248">Cause di fermo e micro-fermate</text>
+      <text x="150" y="280">Perdite di velocit&#224;, blocking e starvation</text>
+      <text x="150" y="312">Consumi di energia e utility per punto di misura</text>
+      <text x="150" y="344">Energia per stato e costo energetico per pezzo</text>
+      <text x="150" y="376">Scarti e rilavorazioni per causa</text>
+      <text x="150" y="408">Correlazioni, confronti e priorit&#224; economiche</text>
+      <text x="150" y="440">Azioni, owner, target e verifica dei benefici</text>
+      <text x="150" y="472">Dashboard operative, report standard ed export</text>
+    </g>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)" text-anchor="middle">
+      <text x="790" y="56">Incluso</text><text x="950" y="56">Incluso</text><text x="1105" y="56">Incluso</text>
+      <text x="790" y="88">Incluso</text><text x="950" y="88">Incluso</text><text x="1105" y="88">Incluso</text>
+      <text x="790" y="120">Incluso</text><text x="950" y="120">Incluso</text><text x="1105" y="120">Incluso</text>
+      <text x="790" y="152">Incluso</text><text x="950" y="152">Incluso</text><text x="1105" y="152">Incluso</text>
+      <text x="790" y="184">Incluso</text><text x="950" y="184">Incluso</text><text x="1105" y="184">Incluso</text>
+      <text x="790" y="216">Configurabile</text><text x="950" y="216">Avanzato</text><text x="1105" y="216">Avanzato</text>
+      <text x="790" y="248">Configurabile</text><text x="950" y="248">Avanzato</text><text x="1105" y="248">Avanzato</text>
+      <text x="790" y="280">Non incluso</text><text x="950" y="280">Incluso</text><text x="1105" y="280">Incluso</text>
+      <text x="790" y="312">Incluso</text><text x="950" y="312">Incluso</text><text x="1105" y="312">Incluso</text>
+      <text x="790" y="344">Configurabile</text><text x="950" y="344">Avanzato</text><text x="1105" y="344">Avanzato</text>
+      <text x="790" y="376">Configurabile</text><text x="950" y="376">Incluso</text><text x="1105" y="376">Incluso</text>
+      <text x="790" y="408">Non incluso</text><text x="950" y="408">Incluso</text><text x="1105" y="408">Incluso</text>
+      <text x="790" y="440">Non incluso</text><text x="950" y="440">Non incluso</text><text x="1105" y="440">Previsto</text>
+      <text x="790" y="472">Incluso</text><text x="950" y="472">Incluso</text><text x="1105" y="472">Incluso</text>
+    </g>
+
+    <g stroke="rgba(10,10,10,.10)">
+      <path d="M0 68 L1152 68"/><path d="M0 100 L1152 100"/><path d="M0 132 L1152 132"/>
+      <path d="M0 164 L1152 164"/><path d="M0 196 L1152 196"/><path d="M0 228 L1152 228"/>
+      <path d="M0 260 L1152 260"/><path d="M0 292 L1152 292"/><path d="M0 324 L1152 324"/>
+      <path d="M0 356 L1152 356"/><path d="M0 388 L1152 388"/><path d="M0 420 L1152 420"/>
+      <path d="M0 452 L1152 452"/>
+    </g>
+    <rect x="0" y="420" width="4" height="32" fill="#E6E011"/>
+  </svg>
+
+  <div class="z" style="top:612px"><div class="note">Insight comprende Connect, Refyn comprende
+    entrambi. Le interfacce verso i sistemi esterni sono descritte nel dossier tecnico,
+    pagina 15. Il perimetro effettivo dipende dai dati disponibili e dalla configurazione
+    dell&rsquo;impianto.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>A1</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SERVICES_INCLUDED}}</span> <span class="ph">{{PH_REFYN_PRICING_MODEL}}</span></span></div>
+</div>
+
+
+<!-- ================= A2 · CATALOGO SERVIZI · appendice · lt =============
+     Storyboard A2: cinque colonne — servizio, cosa comprende, deliverable,
+     frequenza, incluso o opzionale. La colonna «cosa comprende» e' nuova
+     rispetto alla V9.2.
+     G2 aperto: l'ultima colonna dice «in proposta» su tutte le righe, con una
+     nota unica. Nella working edition al suo posto compare il segnaposto. -->
+<div class="slide lt" id="a2_servizi" data-tipo="appendice">
+  <div class="z" style="top:44px;width:1152px">
+    <h2 class="sm">Il software rende visibile.<br>Le competenze accelerano il risultato.</h2>
+  </div>
+
+  <svg width="1152" height="418" viewBox="0 0 1152 418"
+       style="position:absolute;left:64px;top:176px" role="img" aria-labelledby="a2t a2d">
+    <title id="a2t">Nove servizi con contenuto, deliverable, frequenza e regime</title>
+    <desc id="a2d">Per ogni servizio: che cosa comprende, che cosa produce, quando viene
+      erogato e se &egrave; compreso nell&rsquo;avvio o resta opzionale. Il regime di ogni
+      servizio &egrave; indicato nella proposta economica.</desc>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
+      <text x="0" y="14">Servizio</text><text x="250" y="14">Che cosa comprende</text>
+      <text x="596" y="14">Deliverable</text><text x="836" y="14">Quando</text>
+      <text x="1152" y="14" text-anchor="end">Regime</text>
+    </g>
+    <path d="M0 28 L1152 28" stroke="rgba(10,10,10,.26)"/>
+
+    <g font-family="Geist" font-size="15" fill="#0A0A0A">
+      <text x="0" y="58">Assessment e perimetrazione</text>
+      <text x="0" y="102">Setup e integrazione</text>
+      <text x="0" y="146">KPI e formule</text>
+      <text x="0" y="190">Data quality review</text>
+      <text x="0" y="234">Performance &amp; Energy Review</text>
+      <text x="0" y="278">Improvement sprint</text>
+      <text x="0" y="322">Formazione</text>
+      <text x="0" y="366">Supporto</text>
+      <text x="0" y="410">Estensione a nuove linee</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">
+      <text x="250" y="58">dati disponibili, gap e perimetro</text>
+      <text x="250" y="102">connettori, mapping e ambiente</text>
+      <text x="250" y="146">dizionario, soglie e viste</text>
+      <text x="250" y="190">completezza e coerenza del dato</text>
+      <text x="250" y="234">lettura del periodo con il team</text>
+      <text x="250" y="278">selezione, azioni e verifica</text>
+      <text x="250" y="322">uso operativo e lettura dei KPI</text>
+      <text x="250" y="366">canale, tempi e aggiornamenti</text>
+      <text x="250" y="410">replica della configurazione</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">
+      <text x="596" y="58">mappa dei dati e dei gap</text>
+      <text x="596" y="102">ambiente collegato</text>
+      <text x="596" y="146">dizionario delle formule</text>
+      <text x="596" y="190">elenco delle anomalie</text>
+      <text x="596" y="234">priorit&#224; e report del periodo</text>
+      <text x="596" y="278">azioni, baseline e verifica</text>
+      <text x="596" y="322">referenti abilitati</text>
+      <text x="596" y="366">canale e tempi concordati</text>
+      <text x="596" y="410">nuova linea attivata</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
+      <text x="836" y="58">avvio</text><text x="836" y="102">avvio</text>
+      <text x="836" y="146">avvio</text><text x="836" y="190">periodica</text>
+      <text x="836" y="234">periodica</text><text x="836" y="278">a progetto</text>
+      <text x="836" y="322">a progetto</text><text x="836" y="366">continuativa</text>
+      <text x="836" y="410">a progetto</text>
+    </g>
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.58)" text-anchor="end"
+       data-ed="working">
+      <text x="1152" y="58"><tspan data-placeholder="PH_SERVICES_INCLUDED">DECISIONE COMMERCIALE</tspan></text>
+      <text x="1152" y="102"><tspan data-placeholder="PH_SERVICES_INCLUDED">DECISIONE COMMERCIALE</tspan></text>
+      <text x="1152" y="146"><tspan data-placeholder="PH_SERVICES_INCLUDED">DECISIONE COMMERCIALE</tspan></text>
+      <text x="1152" y="190"><tspan data-placeholder="PH_SERVICES_INCLUDED">DECISIONE COMMERCIALE</tspan></text>
+      <text x="1152" y="234"><tspan data-placeholder="PH_SERVICES_OPTIONAL">DECISIONE COMMERCIALE</tspan></text>
+      <text x="1152" y="278"><tspan data-placeholder="PH_SERVICES_OPTIONAL">DECISIONE COMMERCIALE</tspan></text>
+      <text x="1152" y="322"><tspan data-placeholder="PH_SERVICES_OPTIONAL">DECISIONE COMMERCIALE</tspan></text>
+      <text x="1152" y="366"><tspan data-placeholder="PH_SUPPORT_HOURS">DECISIONE COMMERCIALE</tspan></text>
+      <text x="1152" y="410"><tspan data-placeholder="PH_SERVICES_OPTIONAL">DECISIONE COMMERCIALE</tspan></text>
+    </g>
+    
+
+    <g stroke="rgba(10,10,10,.10)">
+      <path d="M0 72 L1152 72"/><path d="M0 116 L1152 116"/><path d="M0 160 L1152 160"/>
+      <path d="M0 204 L1152 204"/><path d="M0 248 L1152 248"/><path d="M0 292 L1152 292"/>
+      <path d="M0 336 L1152 336"/><path d="M0 380 L1152 380"/>
+    </g>
+  </svg>
+
+  <div class="z" style="top:614px"><div class="note">I nove servizi sono attivabili su Connect,
+    Insight e Refyn. Che cosa &egrave; compreso nell&rsquo;avvio e che cosa resta opzionale
+    &egrave; indicato nella proposta economica.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>A2</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SERVICES_INCLUDED}}</span> <span class="ph">{{PH_SERVICES_OPTIONAL}}</span> <span class="ph">{{PH_SUPPORT_HOURS}}</span></span></div>
+</div>
+
+
+<!-- ================= A3 · STRUTTURA ECONOMICA · appendice · lt ==========
+     Condizionata a G2. Ogni importo e' un segnaposto: nessun prezzo e' stato
+     inventato. Finche' G2 e' aperto questa appendice non entra nella client
+     edition e la numerazione delle appendici scala di uno.
+     Rispetto alla V9.2 il corpo minimo sale a 14 px: la tabella non e' una
+     vista di prodotto e viene misurata con la soglia dei diagrammi. -->
+<div data-ph-page="G2" class="slide lt" id="a3_pricing" data-tipo="appendice">
+  <div class="z" style="top:44px;width:1152px">
+    <h2 class="sm">Avvio, canone, servizi.</h2>
+  </div>
+
+  <svg width="1152" height="482" viewBox="0 0 1152 482"
+       style="position:absolute;left:64px;top:126px" role="img" aria-labelledby="a3t a3d">
+    <title id="a3t">Le voci del modello economico</title>
+    <desc id="a3d">Una tantum di avvio, canone ricorrente per sito, linea e livello, servizi
+      opzionali, condizioni contrattuali. Ogni importo &egrave; un segnaposto: nessun prezzo
+      &egrave; stato inventato.</desc>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
+      <text x="0" y="14">Voce</text><text x="496" y="14">Che cosa comprende</text>
+      <text x="1152" y="14" text-anchor="end">Importo</text>
+    </g>
+    <path d="M0 28 L1152 28" stroke="rgba(10,10,10,.26)"/>
+
+    <text x="0" y="62" font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)"
+          letter-spacing="1">UNA TANTUM</text>
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="0" y="98">Audit e perimetrazione</text><text x="0" y="138">Setup della prima linea</text>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">
+      <text x="496" y="98">mappa dei dati, gap, ipotesi economica</text>
+      <text x="496" y="138">connettori, mapping, formule, utenti</text>
+    </g>
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.72)" text-anchor="end">
+      <text x="1152" y="98"><tspan data-placeholder="PH_AUDIT_PRICE">DECISIONE COMMERCIALE</tspan></text><text x="1152" y="138"><tspan data-placeholder="PH_SETUP_FIRST_LINE">DECISIONE COMMERCIALE</tspan></text>
+    </g>
+    <path d="M0 160 L1152 160" stroke="rgba(10,10,10,.12)"/>
+
+    <text x="0" y="192" font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)"
+          letter-spacing="1">RICORRENTE</text>
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="0" y="228">Canone base per sito</text><text x="0" y="268">Livello Connect</text>
+      <text x="0" y="308">Livello Insight</text><text x="0" y="348">Linee successive</text>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">
+      <text x="496" y="228">ambiente, utenti, supporto standard</text>
+      <text x="496" y="268">stato, OEE, produzione, consumi, storico</text>
+      <text x="496" y="308">cause, correlazioni, costo energetico, CO&#8322;</text>
+      <text x="496" y="348">ogni linea collegata dopo la prima</text>
+    </g>
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.72)" text-anchor="end">
+      <text x="1152" y="228"><tspan data-placeholder="PH_SITE_BASE_FEE">DECISIONE COMMERCIALE</tspan></text><text x="1152" y="268"><tspan data-placeholder="PH_CONNECT_ANNUAL_FEE">DECISIONE COMMERCIALE</tspan></text>
+      <text x="1152" y="308"><tspan data-placeholder="PH_INSIGHT_ANNUAL_FEE">DECISIONE COMMERCIALE</tspan></text><text x="1152" y="348"><tspan data-placeholder="PH_ADDITIONAL_LINE_FEE">DECISIONE COMMERCIALE</tspan></text>
+    </g>
+    <path d="M0 370 L1152 370" stroke="rgba(10,10,10,.12)"/>
+
+    <text x="0" y="402" font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)"
+          letter-spacing="1">OPZIONALE E CONTRATTO</text>
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="0" y="438">Refyn</text><text x="288" y="438">Supporto premium</text>
+      <text x="576" y="438">Durata contrattuale</text><text x="864" y="438">Rinnovo</text>
+    </g>
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.72)">
+      <text x="0" y="470"><tspan data-placeholder="PH_REFYN_PRICING_MODEL">DECISIONE COMMERCIALE</tspan></text><text x="288" y="470"><tspan data-placeholder="PH_PREMIUM_SUPPORT_FEE">DECISIONE COMMERCIALE</tspan></text>
+      <text x="576" y="470"><tspan data-placeholder="PH_CONTRACT_TERM">DECISIONE COMMERCIALE</tspan></text><text x="864" y="470"><tspan data-placeholder="PH_RENEWAL_TERMS">DECISIONE COMMERCIALE</tspan></text>
+    </g>
+  </svg>
+
+  <div class="z" style="top:622px"><div class="note">Nessun importo &egrave; stato inventato:
+    ogni voce resta un segnaposto finch&eacute; il modello commerciale non &egrave;
+    approvato.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Appendice esclusa dalla client edition finch&eacute; gli importi non sono approvati</span><span>A3</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_PRICE_VALIDITY}}</span> <span class="ph">{{PH_PAYMENT_TERMS}}</span> <span class="ph">{{PH_AUDIT_CREDIT_POLICY}}</span></span></div>
+</div>
+
+
+<!-- ================= A4 · FAQ COMMERCIALI · appendice · lt ==============
+     Storyboard A4: sei domande, tutte commerciali. Le due domande IT della
+     V9.2 — residenza dei dati e integrazione con il gestionale — migrano nel
+     dossier, pagine 11 e 15. Nel deck restano i rimandi. -->
+<div class="slide lt" id="a4_faq" data-tipo="appendice">
+  <div class="z" style="top:44px;width:1140px">
+    <h2 class="sm">Le sei domande che arrivano sempre.</h2>
+  </div>
+
+  <svg width="1152" height="430" viewBox="0 0 1152 430"
+       style="position:absolute;left:64px;top:132px" role="img" aria-labelledby="a4t a4d">
+    <title id="a4t">Sei domande commerciali e sei risposte</title>
+    <desc id="a4d">Tempi dei primi risultati, fermo linea, macchine di marche diverse,
+      contenuto dell&rsquo;avvio, passaggio dal pilot alla scala, dati mancanti. Le domande
+      su residenza dei dati e integrazione con il gestionale sono nel dossier tecnico.</desc>
+
+    <g font-family="Geist" font-size="17" font-weight="600" fill="#0A0A0A">
+      <text x="0" y="24">Quanto tempo serve per i primi risultati?</text>
+      <text x="0" y="94">Serve fermare la linea per partire?</text>
+      <text x="0" y="164">Funziona su macchine di marche diverse?</text>
+      <text x="0" y="234">Che cosa comprende l&#8217;avvio?</text>
+      <text x="0" y="304">Come si passa dal pilot alla scala?</text>
+      <text x="0" y="374">Che cosa succede se mancano dei dati?</text>
+    </g>
+    <g font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">
+      <text x="496" y="24">Il pilot produce una baseline e le prime cause ordinate per impatto.</text>
+      <text x="496" y="48">La durata viene fissata in perimetrazione, sui dati disponibili.</text>
+
+      <text x="496" y="94">La configurazione standard privilegia l&#8217;acquisizione in sola lettura.</text>
+      <text x="496" y="118">Eventuali scambi ulteriori si definiscono nel solution design.</text>
+
+      <text x="496" y="164">La compatibilit&#224; viene verificata sull&#8217;impianto reale, durante</text>
+      <text x="496" y="188">l&#8217;audit tecnico.</text>
+
+      <text x="496" y="234">Assessment, setup, integrazione e configurazione di KPI e formule.</text>
+      <text x="496" y="258">Che cosa &egrave; compreso &egrave; indicato nella proposta economica.</text>
+
+      <text x="496" y="304">Il pilot chiude con risultati, gap e proposta di estensione:</text>
+      <text x="496" y="328">la scala si decide sui risultati.</text>
+
+      <text x="496" y="374">Si parte da quello che c&#8217;&egrave;. Dove il dato manca, il progetto pu&#242;</text>
+      <text x="496" y="398">prevedere contatori o sensori aggiuntivi.</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)">
+      <text x="1152" y="48" text-anchor="end">Dossier 16</text>
+      <text x="1152" y="118" text-anchor="end">Dossier 11</text>
+      <text x="1152" y="188" text-anchor="end">Dossier &middot; annesso A1</text>
+      <text x="1152" y="258" text-anchor="end">A2</text>
+      <text x="1152" y="328" text-anchor="end">Dossier 16</text>
+      <text x="1152" y="398" text-anchor="end">Dossier 09</text>
+    </g>
+    <g stroke="rgba(10,10,10,.12)">
+      <path d="M0 68 L1152 68"/><path d="M0 138 L1152 138"/><path d="M0 208 L1152 208"/>
+      <path d="M0 278 L1152 278"/><path d="M0 348 L1152 348"/>
+    </g>
+  </svg>
+
+  <div class="z" style="top:600px"><div class="note">Le domande su residenza dei dati,
+    architettura e integrazione con il gestionale sono nel dossier tecnico, pagine 11 e 15.
+    Questo deck risponde alle domande commerciali.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span><span>A4</span></div>
+</div>
+
+
+<!-- ================= A5 · ASSUNZIONI · appendice · lt ===================
+     Appendice di lavoro, condizionata a G3. Dieci parametri con valore,
+     origine e stato: tutti OPEN. Finche' il dataset non e' validato questa
+     appendice resta fuori dalla client edition.
+     Rispetto alla V9.2 il corpo minimo sale a 14 px: la tabella non e' una
+     vista di prodotto e viene misurata con la soglia dei diagrammi. -->
+<div data-ph-page="G3" class="slide lt" id="a5_assunzioni" data-tipo="appendice">
+  <div class="z" style="top:44px;width:1140px">
+    <h2 class="sm">Le assunzioni dietro i numeri.</h2>
+  </div>
+
+  <svg width="1152" height="474" viewBox="0 0 1152 474"
+       style="position:absolute;left:64px;top:122px" role="img" aria-labelledby="a5t a5d">
+    <title id="a5t">Parametri e formule dello scenario illustrativo</title>
+    <desc id="a5d">I dieci parametri usati in tutto il deck, con la loro origine e il loro
+      stato, e le due formule che li combinano. Nessun parametro &egrave; validato.</desc>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
+      <text x="0" y="14">Parametro</text><text x="520" y="14">Valore</text>
+      <text x="860" y="14">Origine</text><text x="1152" y="14" text-anchor="end">Stato</text>
+    </g>
+    <path d="M0 28 L1152 28" stroke="rgba(10,10,10,.26)"/>
+
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="0" y="60">Cadenza nominale</text><text x="0" y="94">Margine unitario</text>
+      <text x="0" y="128">Margine al minuto</text><text x="0" y="162">Potenza in marcia</text>
+      <text x="0" y="196">Potenza a impianto fermo</text><text x="0" y="230">Prezzo dell&#8217;energia</text>
+      <text x="0" y="264">Fattore di emissione</text><text x="0" y="298">Settimane produttive</text>
+      <text x="0" y="332">Durata del turno</text><text x="0" y="366">Turni all&#8217;anno</text>
+    </g>
+    <g font-family="Geist" font-size="16" font-weight="600" fill="#0A0A0A">
+      <text x="520" y="60">500 pz/min</text><text x="520" y="94">0,14 &euro;/pz</text>
+      <text x="520" y="128">70 &euro;/min</text><text x="520" y="162">95 kW</text>
+      <text x="520" y="196">38 kW</text><text x="520" y="230">0,22 &euro;/kWh</text>
+      <text x="520" y="264">0,35 kgCO&#8322;e/kWh</text><text x="520" y="298">46</text>
+      <text x="520" y="332">480 min</text><text x="520" y="366">230</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.58)">
+      <text x="860" y="60">linea illustrativa</text><text x="860" y="94">da confermare con il cliente</text>
+      <text x="860" y="128">500 &times; 0,14</text><text x="860" y="162">linea illustrativa</text>
+      <text x="860" y="196">linea illustrativa</text><text x="860" y="230">contratto di fornitura</text>
+      <text x="860" y="264">mix dichiarato dal fornitore</text><text x="860" y="298">calendario illustrativo</text>
+      <text x="860" y="332">un turno al giorno</text><text x="860" y="366">46 settimane &times; 5 giorni</text>
+    </g>
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.60)" text-anchor="end">
+      <text x="1152" y="60">OPEN</text><text x="1152" y="94">OPEN</text><text x="1152" y="128">OPEN</text>
+      <text x="1152" y="162">OPEN</text><text x="1152" y="196">OPEN</text><text x="1152" y="230">OPEN</text>
+      <text x="1152" y="264">OPEN</text><text x="1152" y="298">OPEN</text><text x="1152" y="332">OPEN</text>
+      <text x="1152" y="366">OPEN</text>
+    </g>
+    <g stroke="rgba(10,10,10,.10)">
+      <path d="M0 74 L1152 74"/><path d="M0 108 L1152 108"/><path d="M0 142 L1152 142"/>
+      <path d="M0 176 L1152 176"/><path d="M0 210 L1152 210"/><path d="M0 244 L1152 244"/>
+      <path d="M0 278 L1152 278"/><path d="M0 312 L1152 312"/><path d="M0 346 L1152 346"/>
+    </g>
+
+    <path d="M0 390 L1152 390" stroke="rgba(10,10,10,.26)"/>
+    <g font-family="Geist" font-size="17" fill="#0A0A0A">
+      <text x="0" y="424">Perdita di un fermo &#61; durata &times; cadenza nominale &times; margine unitario</text>
+      <text x="0" y="458">Perdita di una causa &#61; minuti osservati &times; margine al minuto</text>
+    </g>
+  </svg>
+
+  <div class="z" style="top:614px"><div class="note">Tutti i valori sono illustrativi e servono
+    a mostrare il metodo di calcolo. Nel progetto reale arrivano dai dati della linea e dal
+    contratto di fornitura dell&rsquo;energia. Nessuna proiezione annua viene pubblicata
+    finch&eacute; il dataset non &egrave; validato.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Appendice di lavoro, esclusa dalla client edition</span><span>A5</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_DATASET_VALIDATOR}}</span> <span class="ph">{{PH_DATASET_VALIDATION_DATE}}</span> <span class="ph">{{PH_DATASET_ASSUMPTION_OWNER}}</span></span></div>
+</div>
+
+</div>

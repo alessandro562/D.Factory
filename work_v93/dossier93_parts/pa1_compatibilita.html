@@ -1,0 +1,77 @@
+<!-- ================= A1 · COMPATIBILITA' TECNICA · annesso · lt ==========
+     Storyboard A1: componente, requisito, modalita' di verifica, esito, nota.
+     Otto componenti. La colonna «owner» esce dalla versione client: nel core
+     non compare mai, e qui compare solo nella working edition, dove serve a
+     chi prepara l'audit.
+     Gli esiti restano «da verificare» finche' l'audit non e' svolto, ma con
+     una nota unica, non ripetuta riga per riga. -->
+<div class="slide lt" id="pa1_compatibilita" data-kind="appendix" data-tipo="annesso">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">ANNESSO A1</div>
+  </div>
+
+  <div class="tt tt--sm">La compatibilit&agrave; si verifica sull&rsquo;impianto reale</div>
+
+  <div style="position:absolute;left:64px;top:154px;width:1060px">
+    <div class="par" style="font-size:16px">Questo annesso &egrave; il modello di censimento
+      che l&rsquo;audit tecnico compila macchina per macchina. Otto componenti, che cosa si
+      verifica su ciascuno e con quale modalit&agrave;. Un elenco generico di protocolli non
+      dice se un impianto &egrave; leggibile: lo dice il rilievo su quella macchina.</div>
+  </div>
+
+  <div class="tb full tb--dense" data-ed="working"
+       style="top:244px;grid-template-columns:190px 400px 290px 272px">
+    <div class="tb__h">Componente</div><div class="tb__h">Che cosa si verifica</div>
+    <div class="tb__h">Modalit&agrave; di verifica</div><div class="tb__h">Chi risponde</div>
+
+    <div><b>PLC</b></div><div>Costruttore, modello e stato del controllore</div>
+    <div>rilievo in campo</div><div>Manutenzione</div>
+    <div><b>Protocollo</b></div><div>Protocollo esposto e interfaccia disponibile</div>
+    <div>prova di lettura</div><div>Audit tecnico</div>
+    <div><b>Versione</b></div><div>Versione installata su quella macchina</div>
+    <div>rilievo in campo</div><div>Audit tecnico</div>
+    <div><b>Accesso</b></div><div>Tag leggibili e frequenza sostenibile</div>
+    <div>prova di lettura</div><div>Audit tecnico</div>
+    <div><b>Gateway</b></div><div>Segmento di rete, gateway e regole firewall</div>
+    <div>documentazione IT</div><div>IT del cliente</div>
+    <div><b>Contatore</b></div><div>Punti di misura dell&rsquo;energia gi&agrave; presenti</div>
+    <div>rilievo in campo</div><div>Audit tecnico</div>
+    <div><b>ERP</b></div><div>Punto di innesto, formato e direzione</div>
+    <div>documentazione IT</div><div>IT del cliente</div>
+    <div><b>Lettura e scrittura</b></div><div>Direzione del flusso verso le macchine</div>
+    <div>definita in progetto</div><div>Progetto</div>
+  </div>
+
+  <div class="tb full tb--dense" data-ed="client"
+       style="top:244px;grid-template-columns:230px 470px 452px">
+    <div class="tb__h">Componente</div><div class="tb__h">Che cosa si verifica</div>
+    <div class="tb__h">Modalit&agrave; di verifica</div>
+
+    <div><b>PLC</b></div><div>Costruttore, modello e stato del controllore</div>
+    <div>rilievo in campo</div>
+    <div><b>Protocollo</b></div><div>Protocollo esposto e interfaccia disponibile</div>
+    <div>prova di lettura</div>
+    <div><b>Versione</b></div><div>Versione installata su quella macchina</div>
+    <div>rilievo in campo</div>
+    <div><b>Accesso</b></div><div>Tag leggibili e frequenza sostenibile</div>
+    <div>prova di lettura</div>
+    <div><b>Gateway</b></div><div>Segmento di rete, gateway e regole firewall</div>
+    <div>documentazione IT</div>
+    <div><b>Contatore</b></div><div>Punti di misura dell&rsquo;energia gi&agrave; presenti</div>
+    <div>rilievo in campo</div>
+    <div><b>ERP</b></div><div>Punto di innesto, formato e direzione</div>
+    <div>documentazione IT</div>
+    <div><b>Lettura e scrittura</b></div><div>Direzione del flusso verso le macchine</div>
+    <div>definita in progetto</div>
+  </div>
+
+  <div class="box full" style="top:536px">
+    <div class="note">Nota unica sugli esiti: prima dell&rsquo;audit tecnico ogni riga &egrave;
+      da verificare. Gli esiti ammessi sono supportato, condizionato, da verificare e da
+      aggiungere, e vengono compilati durante l&rsquo;audit.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Annesso A1 &middot; modello di censimento, compilato durante l&rsquo;audit</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SUPPORTED_PROTOCOLS}}</span> <span class="ph">{{PH_PROTOCOL_VERSIONS}}</span> <span class="ph">{{PH_REQUIRED_PORTS}}</span> <span class="ph">{{PH_READ_ONLY_POLICY}}</span> <span class="ph">{{PH_GATEWAY_REQUIREMENTS}}</span></span></div>
+</div>

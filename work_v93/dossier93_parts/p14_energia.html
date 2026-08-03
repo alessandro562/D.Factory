@@ -1,0 +1,92 @@
+<!-- ================= P14 · METODO · ENERGIA · metodo · lt ================
+     Storyboard P14: stessa grammatica di P13, layout diverso. Su P13 la
+     scomposizione sta a sinistra e i parametri a destra; qui i parametri sono
+     a sinistra e la catena di calcolo occupa la colonna larga a destra. Due
+     pagine di metodo consecutive con lo stesso impianto si leggerebbero come
+     una pagina ripetuta.
+     Mai «costo del pezzo» quando il perimetro e' la sola energia. -->
+<div class="slide lt" id="p14_energia" data-kind="dossier" data-tipo="metodo">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">14 / 17</div>
+  </div>
+
+  <div class="tt tt--sm">Energia, costo e CO&#8322; per unit&agrave; prodotta</div>
+
+  <div style="position:absolute;left:64px;top:154px;width:1060px">
+    <div class="par" style="font-size:16px">Il consumo viene misurato per stato produttivo, non
+      solo per periodo: la stessa ora pesa in modo diverso se la linea &egrave; in marcia o
+      ferma. L&rsquo;energia del periodo viene divisa per i pezzi conformi dello stesso periodo
+      per ottenere il consumo specifico; da l&igrave;, applicando il prezzo di fornitura e il
+      fattore di emissione dichiarati, si ottengono il costo energetico e le emissioni per
+      mille pezzi.</div>
+  </div>
+
+  <div style="position:absolute;left:64px;top:262px;width:368px">
+    <div class="lbl" style="margin-bottom:10px">Parametri del calcolo</div>
+    <div class="spec spec--tight" style="position:static;width:368px">
+      <div class="row"><b>Potenza in marcia</b><span>95 kW</span></div>
+      <div class="row"><b>Potenza a fermo</b><span>38 kW</span></div>
+      <div class="row"><b>Durata del turno</b><span>480 min</span></div>
+      <div class="row"><b>Fermo nel turno</b><span>26 min</span></div>
+      <div class="row"><b>Cadenza nominale</b><span>500 pz/min</span></div>
+      <div class="row"><b>Prezzo energia</b><span>0,22 &euro;/kWh</span></div>
+      <div class="row"><b>Fattore di emissione</b><span>0,35 kgCO&#8322;e/kWh</span></div>
+    </div>
+    <div class="note" style="margin-top:18px">Prezzo e fattore di emissione arrivano dal
+      contratto di fornitura. Il perimetro della potenza a impianto fermo &mdash; linea,
+      macchine o ausiliari &mdash; si dichiara nel solution design.</div>
+  </div>
+
+  <svg width="736" height="340" viewBox="0 0 736 340"
+       style="position:absolute;left:480px;top:262px" role="img" aria-labelledby="e14t e14d">
+    <title id="e14t">Dal consumo per stato al costo per mille pezzi</title>
+    <desc id="e14d">Sopra, la potenza assorbita in marcia e a impianto fermo. Sotto, la catena
+      che porta dall&rsquo;energia del turno al costo e alle emissioni per mille pezzi: 735
+      chilowattora, 162 euro, 227.000 pezzi, e quindi 3,2 chilowattora, 0,71 euro e 1,13
+      chilogrammi di CO&#8322; equivalente ogni mille pezzi.</desc>
+
+    <text x="0" y="12" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">Potenza assorbita per stato</text>
+    <rect x="150" y="26" width="586" height="30" fill="rgba(10,10,10,.13)"/>
+    <rect x="150" y="66" width="234" height="30" fill="rgba(10,10,10,.13)"/>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.78)" text-anchor="end">
+      <text x="138" y="46">In marcia</text><text x="138" y="86">A impianto fermo</text>
+    </g>
+    <g font-family="Geist" font-size="14" font-weight="500" fill="#0A0A0A">
+      <text x="700" y="46" text-anchor="end">95 kW</text><text x="396" y="86">38 kW</text>
+    </g>
+    <text x="0" y="122" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">Nel turno: 454 minuti in marcia, 26 di fermo &#8594; 719 + 16 = 735 kWh</text>
+
+    <path d="M0 142 L736 142" stroke="rgba(10,10,10,.13)"/>
+    <text x="0" y="168" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">Il turno in tre numeri, ognuno con il suo calcolo</text>
+
+    <g fill="#F3F4F0">
+      <rect x="0" y="182" width="232" height="84"/><rect x="252" y="182" width="232" height="84"/>
+      <rect x="504" y="182" width="232" height="84"/>
+    </g>
+    <g font-family="Geist" font-size="25" font-weight="600" fill="#0A0A0A" text-anchor="middle">
+      <text x="116" y="224">735 kWh</text><text x="368" y="224">162 &euro;</text><text x="620" y="224">227.000 pz</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)" text-anchor="middle">
+      <text x="116" y="250">719 in marcia + 16 a fermo</text><text x="368" y="250">735 kWh &#215; 0,22 &euro;/kWh</text>
+      <text x="620" y="250">454 min &#215; 500 pz/min</text>
+    </g>
+
+    <rect x="0" y="284" width="736" height="56" fill="#F3F4F0"/>
+    <rect x="0" y="284" width="5" height="56" fill="#E6E011"/>
+    <text x="24" y="308" font-family="Geist" font-size="14" font-weight="600" fill="#0A0A0A">Per 1.000 pezzi</text>
+    <g font-family="Geist" font-size="21" font-weight="600" fill="#0A0A0A">
+      <text x="180" y="312">3,2 kWh</text><text x="352" y="312">0,71 &euro;</text><text x="516" y="312">1,13 kgCO&#8322;e</text>
+    </g>
+    <text x="24" y="330" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">735 &#247; 227.000 &#215; 1.000, poi &#215; 0,22 &euro;/kWh &middot; CO&#8322; calcolata o stimata con 0,35 kgCO&#8322;e/kWh</text>
+  </svg>
+
+  <div style="position:absolute;left:480px;top:616px;width:736px">
+    <div class="note">Il perimetro di questa misura &egrave; la sola energia: il consumo
+      specifico e il costo energetico per mille pezzi non sono il costo del pezzo, che comprende
+      materiali, manodopera e ammortamenti.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">turno illustrativo &middot; parametri da confermare</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_ENERGY_PRICE_SOURCE}}</span> <span class="ph">{{PH_EMISSION_FACTOR_SOURCE}}</span> <span class="ph">{{PH_CO2_METHOD}}</span> <span class="ph">{{PH_COST_ALLOCATION_RULE}}</span></span></div>
+</div>

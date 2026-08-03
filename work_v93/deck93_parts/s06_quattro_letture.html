@@ -1,0 +1,82 @@
+<!-- ================= S06 · UN EVENTO, QUATTRO LETTURE · prodotto · dk ===
+     Storyboard S06: fusione di v05_energia e v07_ampiezza della V9.2. Una
+     sola timeline con l'intervallo marcato, quattro letture sotto. Non due
+     dashboard sovrapposte: l'imbuto dichiara che la fascia inferiore e' lo
+     stesso intervallo, letto in quattro modi. -->
+<div class="slide dk" id="s06_quattro_letture" data-tipo="prodotto">
+  <div class="z" style="top:48px;width:1120px">
+    <h2 class="sm">Lo stesso evento pesa su capacit&agrave;,<br>energia, costo e servizio.</h2>
+  </div>
+  <div class="z" style="top:162px;width:1040px"><div class="cp">Le quattro letture escono dallo
+    stesso intervallo, senza ricalcoli e senza cambiare strumento.</div></div>
+
+  <svg data-ui="1" width="1280" height="436" viewBox="0 0 1280 436"
+       style="position:absolute;left:0;top:210px" role="img" aria-labelledby="q6t q6d">
+    <title id="q6t">Un intervallo di fermo letto su quattro assi</title>
+    <desc id="q6d">Il turno dalle sei alle quattordici con l&rsquo;intervallo dalle 11:24 alle
+      11:42 marcato. Sotto, lo stesso intervallo letto come capacit&agrave; persa, energia
+      assorbita a linea ferma, costo e impatto sull&rsquo;OEE del turno. Vista ricostruita,
+      dati illustrativi.</desc>
+
+    <rect x="0" y="0" width="1280" height="436" fill="#141414"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(255,255,255,.16)" stroke-width="1.5"/>
+    <text x="64" y="32" font-family="Geist" font-size="15" font-weight="600" fill="#FFFFFF">Linea 1 &middot; Confezionamento</text>
+    <text x="1216" y="32" font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)"
+          text-anchor="end">turno 06:00 &ndash; 14:00</text>
+    <path d="M0 52 L1280 52" stroke="rgba(255,255,255,.16)"/>
+
+    <!-- la timeline del turno: un solo intervallo marcato -->
+    <text x="64" y="118" font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)">Intervallo osservato</text>
+    <rect x="280" y="100" width="936" height="24" fill="rgba(255,255,255,.09)"/>
+    <rect x="280" y="100" width="632" height="24" fill="rgba(255,255,255,.82)"/>
+    <rect x="947" y="100" width="269" height="24" fill="rgba(255,255,255,.82)"/>
+    <rect x="912" y="100" width="35" height="24" fill="#E6E011"/>
+    <text x="929" y="92" font-family="Geist" font-size="13" fill="#FFFFFF"
+          text-anchor="middle">11:24 &ndash; 11:42</text>
+    <g font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.48)">
+      <text x="280" y="146">06:00</text>
+      <text x="1216" y="146" text-anchor="end">14:00</text>
+    </g>
+
+    <!-- l'imbuto: la fascia inferiore e' quell'intervallo, non un'altra vista -->
+    <g stroke="rgba(255,255,255,.30)" fill="none">
+      <path d="M912 128 L64 190"/><path d="M947 128 L1216 190"/>
+    </g>
+    <path d="M0 196 L1280 196" stroke="rgba(255,255,255,.16)"/>
+
+    <g stroke="rgba(255,255,255,.16)">
+      <path d="M332 212 L332 396"/><path d="M624 212 L624 396"/><path d="M916 212 L916 396"/>
+    </g>
+
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)">
+      <text x="64" y="230">Capacit&#224;</text><text x="356" y="230">Energia</text>
+      <text x="648" y="230">Costo</text><text x="940" y="230">Impatto operativo</text>
+    </g>
+    <g font-family="Geist" font-size="38" font-weight="600" fill="#FFFFFF" letter-spacing="-1.4">
+      <text x="64" y="288">18<tspan font-size="21"> min</tspan></text>
+      <text x="356" y="288">11,4<tspan font-size="21"> kWh</tspan></text>
+      <text x="648" y="288">1.260<tspan font-size="21"> &euro;</tspan></text>
+      <text x="940" y="288">71,4<tspan font-size="21">%</tspan></text>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(255,255,255,.72)">
+      <text x="64" y="322">9.000 pezzi non prodotti</text>
+      <text x="356" y="322">38 kW a linea ferma</text>
+      <text x="648" y="322">margine perso sul fermo</text>
+      <text x="940" y="322">OEE del turno</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)">
+      <text x="64" y="352">500 pz/min &times; 18 min</text>
+      <text x="356" y="352">38 kW &times; 18 min &divide; 60</text>
+      <text x="648" y="352">18 min &times; 70 &euro;/min</text>
+      <text x="648" y="374">energia improduttiva 2,5 &euro;</text>
+      <text x="940" y="352">senza questo fermo sarebbe 74,3%</text>
+    </g>
+
+    <path d="M0 396 L1280 396" stroke="rgba(255,255,255,.16)"/>
+    <text x="64" y="422" font-family="Geist" font-size="13" fill="rgba(255,255,255,.48)">Nessun valore &egrave; annualizzato: quello che si vede &egrave; l&#8217;intervallo osservato.</text>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Vista ricostruita &middot; dati illustrativi</span><span>06 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_DATASET_STOPPED_POWER}}</span> <span class="ph">{{PH_REAL_SCREENSHOT_MARENERGY}}</span></span></div>
+</div>

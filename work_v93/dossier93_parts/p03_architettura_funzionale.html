@@ -1,0 +1,70 @@
+<!-- ================= P03 · ARCHITETTURA FUNZIONALE · architettura · lt ===
+     Storyboard P03: un solo schema orizzontale a cinque stazioni, con frase
+     di lettura sopra, legenda sotto e conclusione a chiudere (§12.3).
+     «Che cosa richiede» e «che cosa non presuppone» non stanno qui: sono
+     migrati a P11 deployment. Questa pagina non duplica P11: qui c'e' la
+     catena funzionale, li' i livelli logici e il confine di rete. -->
+<div class="slide lt" id="p03_architettura_funzionale" data-kind="dossier" data-tipo="architettura">
+  <div class="hd">
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">03 / 17</div>
+  </div>
+
+  <div class="tt tt--sm">Dal segnale alla decisione</div>
+
+  <div style="position:absolute;left:64px;top:154px;width:1060px">
+    <div class="par">L&rsquo;acquisizione raccoglie i segnali gi&agrave; disponibili in impianto:
+      stati e conteggi dai controllori, energia e utility dai contatori, anagrafiche e ordini
+      dai sistemi gestionali. La contestualizzazione associa a ogni evento l&rsquo;insieme di
+      attributi che lo rende confrontabile. L&rsquo;elaborazione applica le formule dichiarate
+      e produce indicatori, perdite e costi. La restituzione mette il risultato dove viene
+      usato. La decisione resta alle persone: il sistema fornisce la stessa base a chi la deve
+      prendere.</div>
+  </div>
+
+  <div class="full" style="top:314px">
+    <div class="lbl">Come si legge &middot; da sinistra a destra, una stazione alla volta</div>
+  </div>
+
+  <svg width="1152" height="228" viewBox="0 0 1152 228"
+       style="position:absolute;left:64px;top:350px" role="img" aria-labelledby="f3t f3d">
+    <title id="f3t">Le cinque stazioni della catena funzionale</title>
+    <desc id="f3d">Acquisizione, contestualizzazione, elaborazione, restituzione, decisione.
+      Sotto ogni stazione, che cosa entra e che cosa esce. La quinta stazione non &egrave; una
+      funzione del software: &egrave; il punto in cui il risultato passa alle persone.</desc>
+
+    <path d="M0 14.5 L1152 14.5" stroke="rgba(10,10,10,.30)"/>
+    <g fill="#0A0A0A">
+      <rect x="0" y="8" width="13" height="13"/><rect x="238" y="8" width="13" height="13"/>
+      <rect x="476" y="8" width="13" height="13"/><rect x="714" y="8" width="13" height="13"/>
+    </g>
+    <rect x="952" y="8" width="13" height="13" fill="#E6E011"/>
+
+    <g font-family="Geist" font-size="19" font-weight="600" fill="#0A0A0A" letter-spacing="-.4">
+      <text x="0" y="58">Acquisizione</text><text x="238" y="58">Contestualizzazione</text>
+      <text x="476" y="58">Elaborazione</text><text x="714" y="58">Restituzione</text>
+      <text x="952" y="58">Decisione</text>
+    </g>
+    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.78)">
+      <text x="0" y="96">Stati e conteggi</text><text x="0" y="122">Energia e utility</text>
+      <text x="0" y="148">Ordini e anagrafiche</text>
+
+      <text x="238" y="96">Macchina, linea, turno</text><text x="238" y="122">Prodotto e ordine</text>
+      <text x="238" y="148">Stato e causa associata</text>
+
+      <text x="476" y="96">Formule dichiarate</text><text x="476" y="122">Indicatori e perdite</text>
+      <text x="476" y="148">Costi ed emissioni</text>
+
+      <text x="714" y="96">Dashboard operative</text><text x="714" y="122">Report ed export</text>
+      <text x="714" y="148">Interfacce verso i sistemi</text>
+
+      <text x="952" y="96">Che cosa chiudere</text><text x="952" y="122">In che ordine</text>
+      <text x="952" y="148">Con quale verifica</text>
+    </g>
+
+    <path d="M0 182 L1152 182" stroke="rgba(10,10,10,.13)"/>
+    <text x="0" y="206" font-family="Geist" font-size="14" fill="rgba(10,10,10,.58)">In giallo la sola stazione che non appartiene al software: la decisione resta alle persone, il sistema fornisce a tutte la stessa base.</text>
+  </svg>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>schema funzionale &middot; l&rsquo;architettura applicativa &egrave; a pagina 11</span></div>
+</div>

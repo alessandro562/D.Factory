@@ -1,0 +1,72 @@
+<!-- ================= A5 · ASSUNZIONI · appendice · lt ===================
+     Appendice di lavoro, condizionata a G3. Dieci parametri con valore,
+     origine e stato: tutti OPEN. Finche' il dataset non e' validato questa
+     appendice resta fuori dalla client edition.
+     Rispetto alla V9.2 il corpo minimo sale a 14 px: la tabella non e' una
+     vista di prodotto e viene misurata con la soglia dei diagrammi. -->
+<div data-ph-page="G3" class="slide lt" id="a5_assunzioni" data-tipo="appendice">
+  <div class="z" style="top:44px;width:1140px">
+    <h2 class="sm">Le assunzioni dietro i numeri.</h2>
+  </div>
+
+  <svg width="1152" height="474" viewBox="0 0 1152 474"
+       style="position:absolute;left:64px;top:122px" role="img" aria-labelledby="a5t a5d">
+    <title id="a5t">Parametri e formule dello scenario illustrativo</title>
+    <desc id="a5d">I dieci parametri usati in tutto il deck, con la loro origine e il loro
+      stato, e le due formule che li combinano. Nessun parametro &egrave; validato.</desc>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
+      <text x="0" y="14">Parametro</text><text x="520" y="14">Valore</text>
+      <text x="860" y="14">Origine</text><text x="1152" y="14" text-anchor="end">Stato</text>
+    </g>
+    <path d="M0 28 L1152 28" stroke="rgba(10,10,10,.26)"/>
+
+    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+      <text x="0" y="60">Cadenza nominale</text><text x="0" y="94">Margine unitario</text>
+      <text x="0" y="128">Margine al minuto</text><text x="0" y="162">Potenza in marcia</text>
+      <text x="0" y="196">Potenza a impianto fermo</text><text x="0" y="230">Prezzo dell&#8217;energia</text>
+      <text x="0" y="264">Fattore di emissione</text><text x="0" y="298">Settimane produttive</text>
+      <text x="0" y="332">Durata del turno</text><text x="0" y="366">Turni all&#8217;anno</text>
+    </g>
+    <g font-family="Geist" font-size="16" font-weight="600" fill="#0A0A0A">
+      <text x="520" y="60">500 pz/min</text><text x="520" y="94">0,14 &euro;/pz</text>
+      <text x="520" y="128">70 &euro;/min</text><text x="520" y="162">95 kW</text>
+      <text x="520" y="196">38 kW</text><text x="520" y="230">0,22 &euro;/kWh</text>
+      <text x="520" y="264">0,35 kgCO&#8322;e/kWh</text><text x="520" y="298">46</text>
+      <text x="520" y="332">480 min</text><text x="520" y="366">230</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.58)">
+      <text x="860" y="60">linea illustrativa</text><text x="860" y="94">da confermare con il cliente</text>
+      <text x="860" y="128">500 &times; 0,14</text><text x="860" y="162">linea illustrativa</text>
+      <text x="860" y="196">linea illustrativa</text><text x="860" y="230">contratto di fornitura</text>
+      <text x="860" y="264">mix dichiarato dal fornitore</text><text x="860" y="298">calendario illustrativo</text>
+      <text x="860" y="332">un turno al giorno</text><text x="860" y="366">46 settimane &times; 5 giorni</text>
+    </g>
+    <g font-family="Geist Mono" font-size="14" fill="rgba(10,10,10,.60)" text-anchor="end">
+      <text x="1152" y="60">OPEN</text><text x="1152" y="94">OPEN</text><text x="1152" y="128">OPEN</text>
+      <text x="1152" y="162">OPEN</text><text x="1152" y="196">OPEN</text><text x="1152" y="230">OPEN</text>
+      <text x="1152" y="264">OPEN</text><text x="1152" y="298">OPEN</text><text x="1152" y="332">OPEN</text>
+      <text x="1152" y="366">OPEN</text>
+    </g>
+    <g stroke="rgba(10,10,10,.10)">
+      <path d="M0 74 L1152 74"/><path d="M0 108 L1152 108"/><path d="M0 142 L1152 142"/>
+      <path d="M0 176 L1152 176"/><path d="M0 210 L1152 210"/><path d="M0 244 L1152 244"/>
+      <path d="M0 278 L1152 278"/><path d="M0 312 L1152 312"/><path d="M0 346 L1152 346"/>
+    </g>
+
+    <path d="M0 390 L1152 390" stroke="rgba(10,10,10,.26)"/>
+    <g font-family="Geist" font-size="17" fill="#0A0A0A">
+      <text x="0" y="424">Perdita di un fermo &#61; durata &times; cadenza nominale &times; margine unitario</text>
+      <text x="0" y="458">Perdita di una causa &#61; minuti osservati &times; margine al minuto</text>
+    </g>
+  </svg>
+
+  <div class="z" style="top:614px"><div class="note">Tutti i valori sono illustrativi e servono
+    a mostrare il metodo di calcolo. Nel progetto reale arrivano dai dati della linea e dal
+    contratto di fornitura dell&rsquo;energia. Nessuna proiezione annua viene pubblicata
+    finch&eacute; il dataset non &egrave; validato.</div></div>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Appendice di lavoro, esclusa dalla client edition</span><span>A5</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_DATASET_VALIDATOR}}</span> <span class="ph">{{PH_DATASET_VALIDATION_DATE}}</span> <span class="ph">{{PH_DATASET_ASSUMPTION_OWNER}}</span></span></div>
+</div>

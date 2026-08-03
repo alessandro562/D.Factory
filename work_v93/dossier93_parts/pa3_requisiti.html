@@ -1,0 +1,53 @@
+<!-- ================= A3 · REQUISITI IT E SECURITY · annesso · lt =========
+     Rinominato da «Sicurezza e governo»: e' la sede corretta di chi decide,
+     valore di progetto, stato ed evidenza. Tono da checklist ammesso, qui e
+     soltanto qui: nel core queste colonne non esistono.
+     La proprieta' dei dati resta non pubblicata finche' il legale non
+     approva: la riga dichiara l'ambito, non il diritto. -->
+<div class="slide lt" id="pa3_requisiti" data-kind="appendix" data-tipo="annesso">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">ANNESSO A3</div>
+  </div>
+
+  <div class="tt tt--sm">Requisiti IT e security &middot; raccolta per il solution design</div>
+
+  <div style="position:absolute;left:64px;top:158px;width:1060px">
+    <div class="par" style="font-size:16px">Questo annesso raccoglie, ambito per ambito, il
+      modello che il prodotto mette a disposizione, il valore che il progetto dovr&agrave;
+      fissare e la funzione che lo decide. Le aree corrispondenti sono descritte a pagina 12:
+      qui si compilano, durante il solution design con l&rsquo;IT.</div>
+  </div>
+
+  <div class="tb full tb--dense" style="top:234px;grid-template-columns:280px 350px 290px 232px">
+    <div class="tb__h">Ambito</div><div class="tb__h">Modello di prodotto</div>
+    <div class="tb__h">Valore di progetto</div><div class="tb__h">Chi decide</div>
+
+    <div><b>Autenticazione e identit&agrave;</b></div><div>Directory aziendale o utenze locali</div>
+    <div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_AUTHENTICATION_MODEL}}</span><span data-ed="client">&#8212;</span></div><div>IT del cliente</div>
+    <div><b>Ruoli e permessi</b></div><div>Lettura, configurazione, amministrazione</div>
+    <div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_ROLE_MODEL}}</span><span data-ed="client">&#8212;</span></div><div>Operations e IT</div>
+    <div><b>Registro degli accessi</b></div><div>Eventi registrati e orizzonte di conservazione</div>
+    <div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_AUDIT_LOGGING}}</span><span data-ed="client">&#8212;</span></div><div>IT del cliente</div>
+    <div><b>Cifratura</b></div><div>Dati in transito e dati a riposo</div>
+    <div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_DATA_ENCRYPTION_AT_REST}}</span><span data-ed="client">&#8212;</span></div><div>IT del cliente</div>
+    <div><b>Backup e ripristino</b></div><div>Frequenza, prova di ripristino, orizzonte</div>
+    <div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_BACKUP_POLICY}}</span><span data-ed="client">&#8212;</span></div><div>IT del cliente</div>
+    <div><b>Aggiornamenti e accesso remoto</b></div><div>Patch, versioni e accesso da remoto</div>
+    <div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_PATCHING_POLICY}}</span><span data-ed="client">&#8212;</span></div><div>IT del cliente</div>
+    <div><b>Propriet&agrave; e licenza</b></div><div>Ambito dichiarato, formulazione non pubblicata</div>
+    <div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_DATA_OWNERSHIP}}</span><span data-ed="client">con il legale</span></div><div>Legale</div>
+    <div><b>Fine contratto</b></div><div>Export finale e cancellazione</div>
+    <div><span data-ed="working" style="font-family:var(--mono);font-size:13px">{{PH_END_OF_CONTRACT_DATA}}</span><span data-ed="client">con il legale</span></div><div>Legale</div>
+  </div>
+
+  <div class="box full" style="top:528px">
+    <div class="note">La formulazione contrattuale su titolarit&agrave; e diritti d&rsquo;uso del
+      dato non &egrave; pubblicata in questa versione del dossier: le due ultime righe
+      dichiarano l&rsquo;ambito e rimandano al legale. La colonna del valore di progetto
+      &egrave; vuota per costruzione: si compila insieme all&rsquo;IT del cliente.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Annesso A3 &middot; per la raccolta dei requisiti con l&rsquo;IT</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_RETENTION_DEFAULT}}</span> <span class="ph">{{PH_RPO}}</span> <span class="ph">{{PH_RTO}}</span> <span class="ph">{{PH_LICENSE_RIGHTS}}</span> <span class="ph">{{PH_DATA_EXPORT_AT_EXIT}}</span></span></div>
+</div>

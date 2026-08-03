@@ -1,0 +1,87 @@
+<!-- ================= P09 · ACQUISIZIONE DATI · architettura · lt =========
+     Apertura della sezione 2. Storyboard P09: sei aree di sorgente, schema di
+     linea generico, confine di rete.
+     La tabella Riempitrice / Etichettatrice / Tappatrice della V9.2 non e'
+     qui: anche dichiarata come esempio continuava a leggersi come la
+     configurazione standard del prodotto. Il censimento si compila durante
+     l'audit e il suo modello sta nell'annesso A1. -->
+<div class="slide lt" id="p09_acquisizione" data-kind="dossier" data-tipo="architettura">
+  <div class="band" style="height:190px">
+    <div class="hd">
+      <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+      <div class="pg">09 / 17</div>
+    </div>
+    <div class="lbl" style="position:absolute;left:64px;top:100px">Sezione 2 &middot; Dati e architettura</div>
+    <div class="say" style="top:126px">Il dato che non esiste non si analizza: si misura.</div>
+  </div>
+
+  <div class="tt tt--sm" style="top:222px">Sorgenti, segnali e punti di misura</div>
+
+  <div style="position:absolute;left:64px;top:274px;width:1060px">
+    <div class="par">La configurazione parte dai dati gi&agrave; disponibili sull&rsquo;impianto.
+      Durante l&rsquo;assessment vengono censiti controllori, contatori, sensori, anagrafiche e
+      sistemi gestionali. I segnali mancanti vengono classificati in base alla loro rilevanza
+      per KPI, analisi e business case: alcuni sono necessari, altri migliorano la precisione,
+      altri ancora possono essere rinviati a una fase successiva.</div>
+  </div>
+
+  <svg width="1152" height="252" viewBox="0 0 1152 252"
+       style="position:absolute;left:64px;top:370px" role="img" aria-labelledby="s9t s9d">
+    <title id="s9t">Sorgenti, confine di rete e acquisizione</title>
+    <desc id="s9d">A sinistra le sorgenti in campo: controllori, sensori e contatori. Al
+      centro i sistemi gestionali e le anagrafiche. Un confine di rete, definito con
+      l&rsquo;IT, separa l&rsquo;impianto dall&rsquo;acquisizione. In basso i segnali aggiuntivi,
+      che entrano nel progetto solo dove il dato non esiste o non &egrave; affidabile.</desc>
+
+    <text x="0" y="12" font-family="Geist Mono" font-size="13" letter-spacing="1.2"
+          fill="rgba(10,10,10,.55)">IN CAMPO</text>
+    <text x="500" y="12" font-family="Geist Mono" font-size="13" letter-spacing="1.2"
+          fill="rgba(10,10,10,.55)">SISTEMI</text>
+    <text x="920" y="12" font-family="Geist Mono" font-size="13" letter-spacing="1.2"
+          fill="rgba(10,10,10,.55)">ACQUISIZIONE</text>
+
+    <g fill="#F3F4F0">
+      <rect x="0" y="28" width="140" height="98"/><rect x="152" y="28" width="140" height="98"/>
+      <rect x="304" y="28" width="140" height="98"/>
+      <rect x="500" y="28" width="152" height="98"/><rect x="664" y="28" width="152" height="98"/>
+    </g>
+    <g font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">
+      <text x="16" y="54">PLC</text><text x="168" y="54">Sensori</text>
+      <text x="320" y="54">Contatori</text><text x="516" y="54">Gestionale</text>
+      <text x="680" y="54">Anagrafiche</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">
+      <text x="16" y="78">stati</text><text x="16" y="96">conteggi</text><text x="16" y="114">allarmi e ricette</text>
+      <text x="168" y="78">velocit&#224;</text><text x="168" y="96">temperatura</text><text x="168" y="114">pressione, presenza</text>
+      <text x="320" y="78">energia elettrica</text><text x="320" y="96">aria compressa</text><text x="320" y="114">acqua, gas</text>
+      <text x="516" y="78">ordini</text><text x="516" y="96">articoli e distinte</text><text x="516" y="114">calendari</text>
+      <text x="680" y="78">macchina e linea</text><text x="680" y="96">prodotto e formato</text><text x="680" y="114">turno</text>
+    </g>
+
+    <!-- il confine di rete: e' il punto in cui il progetto incontra l'IT -->
+    <path d="M868 0 L868 158" stroke="rgba(10,10,10,.34)" stroke-dasharray="5 5"/>
+    <text x="880" y="150" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">confine di rete</text>
+
+    <rect x="920" y="28" width="232" height="98" fill="#0A0A0A"/>
+    <text x="940" y="62" font-family="Geist" font-size="16" font-weight="600" fill="#FFFFFF">Acquisizione</text>
+    <text x="940" y="86" font-family="Geist" font-size="13" fill="rgba(255,255,255,.72)">connettori</text>
+    <text x="940" y="104" font-family="Geist" font-size="13" fill="rgba(255,255,255,.72)">normalizzazione</text>
+
+    <g stroke="rgba(10,10,10,.34)" fill="#0A0A0A">
+      <path d="M816 77 L906 77"/><polygon points="914,77 902,71 902,83"/>
+    </g>
+
+    <!-- l'unico segno giallo: quello che oggi non c'e' e va aggiunto -->
+    <rect x="0" y="176" width="1152" height="46" fill="none" stroke="rgba(10,10,10,.30)"
+          stroke-dasharray="5 5"/>
+    <rect x="0" y="176" width="5" height="46" fill="#E6E011"/>
+    <text x="24" y="196" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">Segnali aggiuntivi</text>
+    <text x="196" y="196" font-family="Geist" font-size="14" fill="rgba(10,10,10,.62)">dove il dato non esiste, o esiste e non &egrave; affidabile</text>
+    <text x="24" y="214" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">Precisione, installazione, propriet&#224; dello strumento e calibrazione si decidono in audit: la sensoristica &egrave; una voce separata dal software.</text>
+
+    <text x="0" y="246" font-family="Geist" font-size="13" fill="rgba(10,10,10,.55)">Il censimento di ogni macchina si compila durante l&#8217;audit tecnico: il modello &egrave; nell&#8217;annesso A1.</text>
+  </svg>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>schema generico &middot; non &egrave; la configurazione di una linea specifica</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_STANDARD_SIGNAL_LIST}}</span> <span class="ph">{{PH_SENSOR_ACCURACY_REQUIREMENTS}}</span> <span class="ph">{{PH_METERING_STANDARDS}}</span> <span class="ph">{{PH_SENSOR_PRICING_RULE}}</span></span></div>
+</div>

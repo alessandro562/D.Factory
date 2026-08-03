@@ -32,7 +32,7 @@ JS = r"""
     const rec = { id: slide.id, kind: slide.dataset.kind || 'sales',
                   tipo: slide.dataset.tipo || '', overflow: [],
                   minText: 999, minCont: 999, minMeta: 999, minSvg: 999, minUi: 999,
-                  words: 0, wordsUi: 0, wordsMeta: 0, wordsPh: 0, placeholders: 0, fragments: 0, clipped: [],
+                  words: 0, wordsUi: 0, wordsSvg: 0, wordsMeta: 0, wordsPh: 0, placeholders: 0, fragments: 0, clipped: [],
                   smallText: [], visualPct: 0, collisions: [] };
 
     // ---- testo: cammina i nodi di testo, misura il corpo effettivo ----
@@ -96,6 +96,7 @@ JS = r"""
       const words = t.split(/\s+/).filter(w => /[\p{L}\p{N}]/u.test(w));
       rec.words += words.length;
       if (bucket === 'ui') rec.wordsUi += words.length;
+      if (bucket === 'svg') rec.wordsSvg += words.length;
       if (bucket === 'meta') rec.wordsMeta += words.length;
       if (bucket === 'ph') rec.wordsPh += words.length;
       const ph = t.match(/\{\{PH_[A-Z0-9_]+\}\}/g);
@@ -103,6 +104,9 @@ JS = r"""
       seen.push(t);
     }
     rec.fragments = seen.length;
+    // quante viste di prodotto porta il canvas: una slide pacchetto non
+    // deve portarne nessuna (§5.4 della review D2)
+    rec.uiViews = slide.querySelectorAll('svg[data-ui]').length;
 
     // ---- overflow rispetto al canvas ----
     for (const el of slide.querySelectorAll('*')) {
@@ -255,25 +259,35 @@ LIMITS = {'sales':    (45,  '<=45',  55, 18.0, 12.4, 14.0, 12.0),
 # regola che impone una percentuale a ogni canvas, e sostituirla con un'altra
 # soglia minima sarebbe lo stesso errore. Resta un TETTO per tipologia, che e'
 # quello che serve a impedire che una slide narrativa torni a essere una demo.
-# (parole max, visuale max, min corpo px)
+# Il tetto di parole vale sul testo FUORI dai disegni: e' la regola del §11.2
+# dello storyboard («il conteggio e' del solo testo fuori dai disegni») ed e'
+# la stessa che la V9.2 applicava di fatto, perche' li' ogni diagramma era
+# marcato data-ui. Con la V9.3 i diagrammi non sono piu' viste di prodotto e
+# vanno esclusi esplicitamente, altrimenti una matrice di appendice sforerebbe
+# qualunque tetto. Il testo dei disegni non sparisce dal controllo: ha un suo
+# tetto, piu' alto, che serve a impedire che un disegno diventi un muro di
+# parole travestito da grafico.
+# (parole max fuori dai disegni, parole max dentro i disegni, visuale max,
+#  min corpo px)
 TIPI = {
-    'narrativa':    (85,  45, 17.0),
-    'prodotto':     (45,  75, 17.0),
-    'funzionalita': (75,  55, 16.0),
-    'pacchetto':    (95,  35, 16.0),
-    'azienda':      (60,  50, 17.0),
-    'valore':       (70,  55, 16.0),
-    'cta':          (55,  45, 17.0),
-    'appendice':    (120, 85, 14.0),
+    'narrativa':    (85,   90, 45, 17.0),
+    'prodotto':     (45,  170, 75, 17.0),
+    'funzionalita': (75,  120, 55, 16.0),
+    'pacchetto':    (95,   90, 35, 16.0),
+    'azienda':      (60,   60, 50, 17.0),
+    'valore':       (70,  110, 55, 16.0),
+    'cta':          (55,   60, 45, 17.0),
+    'matrice':      (110, 280, 60, 15.0),
+    'appendice':    (120, 460, 85, 14.0),
     # dossier
-    'apertura':     (60,  35, 14.0),
-    'spiegazione':  (150, 35, 14.0),
-    'funzionale':   (150, 55, 14.0),
-    'architettura': (150, 65, 14.0),
-    'metodo':       (150, 60, 14.0),
-    'tabella':      (150, 75, 14.0),
-    'delivery':     (150, 50, 14.0),
-    'annesso':      (170, 85, 14.0),
+    'apertura':     (60,   70, 35, 14.0),
+    'spiegazione':  (150, 100, 35, 14.0),
+    'funzionale':   (150, 150, 55, 14.0),
+    'architettura': (150, 190, 65, 14.0),
+    'metodo':       (150, 170, 60, 14.0),
+    'tabella':      (185, 400, 75, 14.0),
+    'delivery':     (185, 150, 50, 14.0),
+    'annesso':      (170, 520, 85, 14.0),
 }
 
 
@@ -286,27 +300,29 @@ def report(html, default='sales'):
     print(f'apostrofi diritti o accenti scritti con apostrofo: {len(typo) or "nessuno"}')
     for sid, tag, t in typo[:6]:
         print(f'      ! {sid} <{tag}> "{t[:70]}"')
-    print(f'{"id":24s}{"tipo":>14}{"copy":>6}{"vista":>6}{"ph":>4}{"cont":>7}{"meta":>7}'
-          f'{"diag":>7}{"vista":>7}{"vis%":>7}  flags')
+    print(f'{"id":24s}{"tipo":>14}{"copy":>6}{"pdis":>6}{"pvis":>6}{"ph":>4}{"cont":>7}'
+          f'{"meta":>7}{"diag":>7}{"vista":>7}{"vis%":>7}  flags')
     tot = 0
     bad = 0
     for r in data:
         wmax, wtarget, vmin, cmin, mmin, smin, umin = LIMITS[r.get('kind', default)]
         vmax = 100
+        dmax = 9999
         tipo = r.get('tipo') or ''
         if tipo in TIPI:
-            wmax, vmax, cmin = TIPI[tipo]
+            wmax, dmax, vmax, cmin = TIPI[tipo]
             vmin = 0
         # l'impalcatura working non ha soglia: non e' testo del documento
         floor = {'cont': cmin, 'meta': mmin, 'svg': smin, 'ui': umin, 'ph': 0}
         # filtra il testo piccolo con la soglia della sua popolazione
         r['smallText'] = [s for s in r['smallText'] if s[1] < floor[s[2]]]
-        copy = r['words'] - r['wordsUi'] - r['wordsMeta'] - r['wordsPh']
+        copy = r['words'] - r['wordsUi'] - r['wordsSvg'] - r['wordsMeta'] - r['wordsPh']
         flags = []
         if r['overflow']: flags.append(f'OVERFLOW×{len(r["overflow"])}')
         if r['collisions']: flags.append(f'COLLIS×{len(r["collisions"])}')
         if r.get('clipped'): flags.append(f'CLIP×{len(r["clipped"])}')
         if copy > wmax: flags.append(f'copy>{wmax}')
+        if r['wordsSvg'] > dmax: flags.append(f'diagr>{dmax}')
         if r['minCont'] < cmin: flags.append(f'cont<{cmin}')
         if r['minMeta'] < mmin: flags.append(f'meta<{mmin}')
         if r['minSvg'] < smin: flags.append(f'diag<{smin}')
@@ -317,7 +333,7 @@ def report(html, default='sales'):
         if flags: bad += 1
         tot += copy
         fmt = lambda v: '—' if v == 999 else f'{v}'
-        print(f'{r["id"]:24s}{tipo or "—":>14}{copy:>6}{r["wordsUi"]:>6}'
+        print(f'{r["id"]:24s}{tipo or "—":>14}{copy:>6}{r["wordsSvg"]:>6}{r["wordsUi"]:>6}'
               f'{r["placeholders"]:>4}{fmt(r["minCont"]):>7}'
               f'{fmt(r["minMeta"]):>7}{fmt(r["minSvg"]):>7}{fmt(r["minUi"]):>7}'
               f'{r["visualPct"]:>7}  {" ".join(flags)}')

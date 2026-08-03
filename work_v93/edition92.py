@@ -24,6 +24,8 @@ RENUM = {
     # la FAQ, che deve chiamarsi A3. Un buco nella numerazione si legge come
     # un errore, e questa mappa finisce nel changelog.
     'deck92_c_body.html': [('>A4<', '>A3<')],
+    # V9.3: stessa situazione, stessi gate, stesso rimedio.
+    'deck93_c_body.html': [('>A4<', '>A3<')],
 }
 
 

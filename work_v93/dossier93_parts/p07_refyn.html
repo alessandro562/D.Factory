@@ -1,0 +1,76 @@
+<!-- ================= P07 · REFYN · funzionale · lt =======================
+     Storyboard P07: un ciclo semplice a tre nodi con ritorno alle priorita'.
+     Terzo layout diverso in tre pagine: P05 vista a tutta larghezza, P06
+     colonne piu' report laterale, P07 ciclo centrale con le tre famiglie
+     sotto. Escono le domande, la tabella «che cosa porta con se' un'azione»
+     e le note metodologiche sparse.
+     Unica occorrenza di «modulo avanzato in sviluppo» nel dossier. -->
+<div class="slide lt" id="p07_refyn" data-kind="dossier" data-tipo="funzionale">
+  <div class="hd">
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">07 / 17</div>
+  </div>
+
+  <div class="tt tt--sm">Refyn &middot; Governo delle azioni e verifica dei benefici</div>
+
+  <div style="position:absolute;left:64px;top:154px;width:1060px">
+    <div class="par">Refyn &egrave; il livello dedicato alla gestione del miglioramento. Le
+      opportunit&agrave; individuate attraverso Connect e Insight vengono trasformate in
+      priorit&agrave;, azioni, responsabilit&agrave;, target e periodi di verifica. Il beneficio
+      viene confrontato con una baseline dichiarata prima dell&rsquo;intervento e alimenta il
+      ciclo successivo. &Egrave; la parte della piattaforma che trasforma un elenco di
+      opportunit&agrave; in un processo con un esito verificabile.</div>
+  </div>
+
+  <svg width="1152" height="176" viewBox="0 0 1152 176"
+       style="position:absolute;left:64px;top:250px" role="img" aria-labelledby="r7t r7d">
+    <title id="r7t">Il ciclo di Refyn</title>
+    <desc id="r7d">Tre nodi in sequenza: priorit&agrave;, azioni, verifica. Dalla verifica una
+      linea di ritorno riporta alle priorit&agrave; del ciclo successivo. Il ciclo non si chiude
+      con l&rsquo;azione ma con la misura del suo effetto.</desc>
+
+    <g fill="none" stroke="#0A0A0A" stroke-width="1.5">
+      <rect x="0" y="8" width="300" height="72"/><rect x="426" y="8" width="300" height="72"/>
+    </g>
+    <rect x="852" y="8" width="300" height="72" fill="#0A0A0A"/>
+    <g font-family="Geist" font-size="21" font-weight="600" fill="#0A0A0A" letter-spacing="-.5">
+      <text x="24" y="52">Priorit&#224;</text><text x="450" y="52">Azioni</text>
+    </g>
+    <text x="876" y="52" font-family="Geist" font-size="21" font-weight="600" fill="#FFFFFF"
+          letter-spacing="-.5">Verifica</text>
+
+    <g stroke="#0A0A0A" stroke-width="1.5" fill="#0A0A0A">
+      <path d="M300 44 L414 44"/><polygon points="420,44 408,38 408,50"/>
+      <path d="M726 44 L840 44"/><polygon points="846,44 834,38 834,50"/>
+    </g>
+
+    <!-- il ritorno: e' il punto della pagina, e ha il solo segno giallo -->
+    <path d="M1002 80 L1002 118 L150 118 L150 88" stroke="#E6E011" stroke-width="2" fill="none"/>
+    <polygon points="150,80 143,94 157,94" fill="#E6E011"/>
+    <text x="576" y="142" font-family="Geist" font-size="14" fill="rgba(10,10,10,.62)"
+          text-anchor="middle">il beneficio verificato aggiorna le priorit&#224; del ciclo successivo</text>
+    <text x="0" y="170" font-family="Geist" font-size="14" fill="rgba(10,10,10,.58)">Il ciclo non si chiude con l&#8217;azione: si chiude quando l&#8217;effetto dell&#8217;azione &egrave; stato misurato contro una baseline dichiarata.</text>
+  </svg>
+
+  <div class="full cols" style="top:462px">
+    <div class="col">
+      <div class="lbl" style="margin-bottom:12px">Priorit&agrave;</div>
+      <div class="sp">Backlog delle opportunit&agrave;<br>Ordinamento per impatto<br>Selezione
+        delle iniziative<br>Baseline e target</div>
+    </div>
+    <div class="col">
+      <div class="lbl" style="margin-bottom:12px">Azioni</div>
+      <div class="sp">Attivit&agrave;<br>Responsabile e scadenza<br>Stato ed evidenze<br>Avanzamento</div>
+    </div>
+    <div class="col">
+      <div class="lbl" style="margin-bottom:12px">Verifica</div>
+      <div class="sp">Confronto con la baseline<br>Periodo di osservazione<br>Beneficio
+        verificato<br>Storico dei risultati</div>
+    </div>
+  </div>
+
+  <div class="dev" style="position:absolute;left:64px;top:610px">Modulo avanzato in sviluppo</div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>perimetro e disponibilit&agrave; del modulo si definiscono nella proposta</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_REFYN_MVP_SCOPE}}</span> <span class="ph">{{PH_REFYN_RELEASE_TARGET}}</span> <span class="ph">{{PH_REFYN_PRICING_MODEL}}</span></span></div>
+</div>

@@ -140,3 +140,44 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
 .kp .lbl{margin-bottom:6px}
 .kp p{font-size:15px;line-height:1.55}
 .lt .kp p{color:var(--l2)} .dk .kp p{color:var(--d2)}
+
+/* ==========================================================================
+   V9.3 · correzioni D2 obbligatorie (§17 del Fase E Build Master)
+   ========================================================================== */
+
+/* §2.1 · la sezione attiva della navigazione era distinguibile solo dal peso.
+   Ora porta anche un marcatore sulla riga dell'header: si vede dove si e'
+   senza doverlo leggere. Il marcatore prende il colore del testo, non il
+   giallo: il giallo resta il segnale del contenuto, uno per pagina. */
+.nav span.on{position:relative;font-weight:700}
+.nav span.on::after{content:"";position:absolute;left:0;right:0;bottom:-15px;
+  height:2px;background:currentColor}
+
+/* §2.1 · l'executive summary aveva contrasto e corpo insufficienti:
+   il paragrafo passa da --d2 a bianco all'86%, il corpo da 17 a 17,5 px. */
+.par--hi{font-size:17.5px}
+.dk .par--hi{color:rgba(255,255,255,.86)}
+.lt .par--hi{color:rgba(10,10,10,.86)}
+
+/* §2.1 · i tre principi devono pesare piu' della loro descrizione */
+.pr__t{font-size:19px;line-height:1.24;font-weight:650;letter-spacing:-.018em}
+.pr__d{font-size:16px;line-height:1.5;margin-top:9px}
+.lt .pr__d{color:var(--l2)} .dk .pr__d{color:rgba(255,255,255,.68)}
+
+/* §2.2 · la fascia tecnica: quello che si configura non e' una capability,
+   e' un attributo trasversale. Esce dalle colonne e prende una riga sua. */
+.cfg{position:absolute;left:0;width:1280px;background:var(--paper-2)}
+.dk .cfg{background:var(--ink-2)}
+.cfg__i{font-size:15px;line-height:1.5}
+.lt .cfg__i{color:var(--l2)} .dk .cfg__i{color:var(--d2)}
+
+/* dichiarazione di ricostruzione: nel piede, ma leggibile (§2.2) */
+.ft .decl{font-weight:500}
+.lt .ft .decl{color:var(--l2)} .dk .ft .decl{color:var(--d2)}
+
+/* §14.4 · terzo passo di griglia. Con quattordici righe il passo «tight»
+   (9 px) porta la tabella a 627 px e la fa uscire dal canvas: il documento
+   ha bisogno di un passo piu' stretto, non di meno righe. Il corpo scende a
+   14,5 px, che resta sopra il minimo di 14 px del brief. */
+.tb--dense>div{padding:3px 18px 3px 0;font-size:14.5px;line-height:1.45}
+.tb--dense .tb__h{padding:7px 18px 7px 0!important}

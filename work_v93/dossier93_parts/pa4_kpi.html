@@ -1,0 +1,52 @@
+<!-- ================= A4 · DIZIONARIO KPI · annesso · lt ==================
+     Storyboard A4: indicatore, formula, unita', sorgente, frequenza,
+     versione. Le dodici ripetizioni di «da nominare» e «da approvare» della
+     V9.2 escono: al loro posto una nota unica. Ripetere dodici volte lo
+     stesso stato aperto non lo rende piu' vero, rende la pagina illeggibile. -->
+<div class="slide lt" id="pa4_kpi" data-kind="appendix" data-tipo="annesso">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">ANNESSO A4</div>
+  </div>
+
+  <div class="tt tt--sm">Ogni indicatore ha una formula scritta</div>
+
+  <div style="position:absolute;left:64px;top:154px;width:1060px">
+    <div class="par" style="font-size:16px">Il dizionario &egrave; il documento che rende
+      confrontabili due misure fatte in momenti diversi. Per ogni indicatore riporta la formula,
+      l&rsquo;unit&agrave;, la sorgente del dato e la frequenza di calcolo. Owner, versione e
+      approvazione vengono formalizzati nel dizionario KPI di progetto, non qui.</div>
+  </div>
+
+  <div class="tb full tb--dense" style="top:244px;grid-template-columns:210px 400px 190px 210px 142px">
+    <div class="tb__h">Indicatore</div><div class="tb__h">Formula</div><div class="tb__h">Unit&agrave;</div>
+    <div class="tb__h">Sorgente</div><div class="tb__h">Frequenza</div>
+
+    <div><b>Disponibilit&agrave;</b></div><div>tempo di marcia &#247; tempo pianificato</div>
+    <div>%</div><div>stati, calendario</div><div>turno</div>
+    <div><b>Performance</b></div><div>pezzi &#215; tempo ciclo ideale &#247; marcia</div>
+    <div>%</div><div>conteggi, cadenza</div><div>turno</div>
+    <div><b>Qualit&agrave;</b></div><div>pezzi conformi &#247; pezzi totali</div>
+    <div>%</div><div>conteggi, scarti</div><div>turno</div>
+    <div><b>OEE</b></div><div>disponibilit&agrave; &#215; performance &#215; qualit&agrave;</div>
+    <div>%</div><div>i tre fattori sopra</div><div>turno</div>
+    <div><b>Consumo specifico</b></div><div>energia &#247; pezzi conformi &#215; 1.000</div>
+    <div>kWh/1.000&#8239;pz</div><div>contatori, conteggi</div><div>turno</div>
+    <div><b>Costo energetico</b></div><div>consumo specifico &#215; prezzo di fornitura</div>
+    <div>&euro;/1.000&#8239;pz</div><div>contatori, contratto</div><div>turno</div>
+    <div><b>Emissioni</b></div><div>energia &#215; fattore di emissione</div>
+    <div>kgCO&#8322;e/1.000&#8239;pz</div><div>contatori, fattore</div><div>turno</div>
+    <div><b>Perdita del fermo</b></div><div>durata &#215; cadenza &#215; margine unitario</div>
+    <div>&euro;</div><div>eventi, parametri</div><div>evento</div>
+  </div>
+
+  <div class="box full" style="top:540px">
+    <div class="note">Nota unica: owner e approvazione di ciascun indicatore vengono
+      formalizzati nel dizionario KPI di progetto. Tempo pianificato, fermate programmate e
+      cadenza di riferimento di ogni formato si concordano prima del go-live: due stabilimenti
+      che li contano in modo diverso non hanno lo stesso OEE.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Annesso A4 &middot; dizionario KPI</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_KPI_OWNER}}</span> <span class="ph">{{PH_KPI_VERSION}}</span> <span class="ph">{{PH_KPI_APPROVAL_DATE}}</span> <span class="ph">{{PH_OEE_DEFINITION_OWNER}}</span></span></div>
+</div>

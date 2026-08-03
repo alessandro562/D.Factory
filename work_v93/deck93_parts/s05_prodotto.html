@@ -1,0 +1,81 @@
+<div class="slide lt" id="s05_prodotto" data-tipo="prodotto">
+  <div class="z" style="top:48px;width:1152px">
+    <h2 class="sm">Il fermo, la causa e il costo<br>nello stesso momento.</h2>
+  </div>
+
+  <svg data-ui="1" width="1280" height="488" viewBox="0 0 1280 488"
+       style="position:absolute;left:0;top:164px" role="img" aria-labelledby="p3t p3d">
+    <title id="p3t">Dettaglio di un fermo, vista ricostruita</title>
+    <desc id="p3d">La finestra dalle dieci a mezzogiorno sulle tre macchine della linea.
+      Il fermo della tappatrice è selezionato: durata diciotto minuti, causa associata
+      mancanza tappi a monte, margine perso stimato milleduecentosessanta euro. Sotto, la
+      curva dell’OEE che scende nell’intervallo del fermo. Un solo indicatore verticale
+      attraversa la timeline e la curva.</desc>
+
+    <rect x="0" y="0" width="1280" height="488" fill="#FFFFFF"/>
+    <rect x="0" y="0" width="1280" height="56" fill="#F3F4F0"/>
+    <path d="M0 .75 L1280 .75" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <path d="M0 487.25 L1280 487.25" stroke="rgba(10,10,10,.16)" stroke-width="1.5"/>
+    <text x="64" y="36" font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A">Linea 1 · Confezionamento</text>
+    <text x="1216" y="36" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)"
+          text-anchor="end">10:00 – 12:00</text>
+    <path d="M0 56 L1280 56" stroke="rgba(10,10,10,.16)"/>
+
+    <g fill="rgba(10,10,10,.07)">
+      <rect x="280" y="92" width="580" height="38"/>
+      <rect x="280" y="148" width="580" height="38"/>
+      <rect x="280" y="204" width="580" height="38"/>
+    </g>
+    <!-- il fermo della tappatrice ferma la linea: le tre tracce si
+         interrompono insieme, e il giallo dice quale macchina l’ha causato -->
+    <g fill="#0A0A0A">
+      <rect x="280" y="92" width="406" height="38"/><rect x="773" y="92" width="87" height="38"/>
+      <rect x="280" y="148" width="406" height="38"/><rect x="773" y="148" width="87" height="38"/>
+      <rect x="280" y="204" width="406" height="38"/><rect x="773" y="204" width="87" height="38"/>
+    </g>
+    <rect x="686" y="204" width="87" height="38" fill="#E6E011"/>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">
+      <text x="64" y="116">Riempitrice</text>
+      <text x="64" y="172">Etichettatrice</text>
+      <text x="64" y="228">Tappatrice</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">
+      <text x="280" y="272">10:00</text>
+      <text x="570" y="272" text-anchor="middle">11:00</text>
+      <text x="860" y="272" text-anchor="end">12:00</text>
+    </g>
+
+    <path d="M0 296 L880 296" stroke="rgba(10,10,10,.12)"/>
+    <text x="64" y="326" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">OEE nella finestra · %</text>
+    <g stroke="rgba(10,10,10,.10)">
+      <path d="M280 356 L860 356"/><path d="M280 450 L860 450"/>
+    </g>
+    <g font-family="Geist" font-size="12.5" fill="rgba(10,10,10,.56)" text-anchor="end">
+      <text x="268" y="360">80</text><text x="268" y="454">60</text>
+    </g>
+    <!-- la discesa comincia sull’indicatore, non prima -->
+    <path d="M280 376 L328 371 L376 380 L424 373 L472 378 L520 371 L568 376 L616 381
+             L664 384 L686 386 L706 424 L740 444 L773 438 L812 398 L860 378"
+          fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+
+    <!-- un solo indicatore temporale: attraversa le macchine e la curva OEE -->
+    <path d="M686 84 L686 456" stroke="#E6E011" stroke-width="1.5"/>
+
+    <path d="M880 56 L880 488" stroke="rgba(10,10,10,.16)"/>
+    <rect x="904" y="92" width="12" height="12" fill="#E6E011"/>
+    <text x="904" y="150" font-family="Geist" font-size="26" font-weight="600" fill="#0A0A0A">11:24 – 11:42</text>
+    <text x="904" y="182" font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">Fermo 18 minuti</text>
+    <path d="M904 212 L1216 212" stroke="rgba(10,10,10,.12)"/>
+    <text x="904" y="242" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Causa associata</text>
+    <text x="904" y="272" font-family="Geist" font-size="19" fill="#0A0A0A">Mancanza tappi a monte</text>
+    <path d="M904 302 L1216 302" stroke="rgba(10,10,10,.12)"/>
+    <text x="904" y="332" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">Margine perso stimato</text>
+    <text x="904" y="382" font-family="Geist" font-size="34" font-weight="600" fill="#0A0A0A">1.260 €</text>
+    <text x="904" y="412" font-family="Geist" font-size="13" fill="rgba(10,10,10,.56)">18 min · 500 pz/min · 0,14 €/pz</text>
+  </svg>
+
+  <div class="rail"><span class="wm">D<i>.</i>Factory</span>
+    <span class="nt">Vista ricostruita · dati illustrativi</span><span>05 / 15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_REAL_SCREENSHOT_MAPST}}</span></span></div>
+</div>

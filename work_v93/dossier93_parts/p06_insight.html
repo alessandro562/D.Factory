@@ -1,0 +1,95 @@
+<!-- ================= P06 · INSIGHT · funzionale · lt =====================
+     Storyboard P06: un ranking o un report, non due micro-dashboard.
+     Il layout e' diverso da P05: li' una vista di prodotto a tutta larghezza
+     e tre capability sotto, qui tre famiglie a sinistra e un solo report a
+     destra. Se avessero lo stesso impianto le tre pagine dei moduli
+     sembrerebbero la stessa pagina ripetuta. -->
+<div class="slide lt" id="p06_insight" data-kind="dossier" data-tipo="funzionale">
+  <div class="hd">
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">06 / 17</div>
+  </div>
+
+  <div class="tt tt--sm" style="width:1020px">Insight &middot; Analisi delle perdite e
+    quantificazione del valore</div>
+
+  <div style="position:absolute;left:64px;top:154px;width:1060px">
+    <div class="par">Insight estende Connect con strumenti di analisi delle cause, delle
+      micro-fermate, delle perdite di velocit&agrave; e dei consumi. Le misure di produzione ed
+      energia vengono confrontate sullo stesso contesto per quantificare il peso operativo ed
+      economico degli eventi e costruire priorit&agrave; condivise. La sorgente del dato non
+      cambia rispetto a Connect: cambia la profondit&agrave; con cui viene letto.</div>
+  </div>
+
+  <div style="position:absolute;left:64px;top:262px;width:452px">
+    <div class="kp">
+      <div class="lbl">Perdite produttive</div>
+      <p>Analisi cause di fermo &middot; micro-fermate &middot; perdite di velocit&agrave;
+        &middot; blocking e starvation &middot; confronto tra macchine, linee e periodi</p>
+    </div>
+    <div class="kp">
+      <div class="lbl">Energia e costo</div>
+      <p>Energia per stato produttivo &middot; consumi specifici &middot; costo energetico per
+        pezzo &middot; CO&#8322; calcolata o stimata &middot; confronto per prodotto, ordine e
+        turno</p>
+    </div>
+    <div class="kp" style="margin-bottom:0">
+      <div class="lbl">Analisi avanzate</div>
+      <p>KPI e formule configurabili &middot; correlazioni &middot; ranking &middot;
+        priorit&agrave; economiche &middot; report periodici e direzionali</p>
+    </div>
+  </div>
+
+  <svg data-ui="1" width="636" height="330" viewBox="0 0 636 330"
+       style="position:absolute;left:580px;top:262px" role="img" aria-labelledby="i6t i6d">
+    <title id="i6t">Report di periodo ricostruito</title>
+    <desc id="i6d">Le quattro cause di fermo della settimana ordinate per costo stimato, con
+      eventi, minuti e quota sul totale. Ricostruzione grafica, dati illustrativi.</desc>
+
+    <rect x="0" y="0" width="636" height="330" fill="#F3F4F0"/>
+    <rect x="0" y="0" width="636" height="38" fill="#0A0A0A"/>
+    <text x="20" y="25" font-family="Geist" font-size="14" font-weight="600" fill="#FFFFFF">Report di periodo &middot; Linea 1</text>
+    <text x="616" y="25" font-family="Geist" font-size="13" fill="rgba(255,255,255,.62)"
+          text-anchor="end">ultimi 7 giorni</text>
+
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.55)">
+      <text x="20" y="68">Causa</text><text x="330" y="68" text-anchor="end">Eventi</text>
+      <text x="430" y="68" text-anchor="end">Minuti</text>
+      <text x="616" y="68" text-anchor="end">Costo stimato</text>
+    </g>
+    <path d="M20 80 L616 80" stroke="rgba(10,10,10,.26)"/>
+
+    <rect x="20" y="98" width="10" height="10" fill="#E6E011"/>
+    <g font-family="Geist" font-size="15" fill="#0A0A0A">
+      <text x="40" y="108">Mancanza tappi</text><text x="40" y="152">Cambio formato</text>
+      <text x="40" y="196">Micro-fermate</text><text x="40" y="240">Manutenzione</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.62)" text-anchor="end">
+      <text x="330" y="108">14</text><text x="430" y="108">96</text>
+      <text x="330" y="152">4</text><text x="430" y="152">62</text>
+      <text x="330" y="196">38</text><text x="430" y="196">41</text>
+      <text x="330" y="240">2</text><text x="430" y="240">25</text>
+    </g>
+    <g font-family="Geist" font-size="15" font-weight="600" fill="#0A0A0A" text-anchor="end">
+      <text x="616" y="108">6.720 &euro;</text><text x="616" y="152">4.340 &euro;</text>
+      <text x="616" y="196">2.870 &euro;</text><text x="616" y="240">1.750 &euro;</text>
+    </g>
+    <g stroke="rgba(10,10,10,.13)">
+      <path d="M20 122 L616 122"/><path d="M20 166 L616 166"/><path d="M20 210 L616 210"/>
+    </g>
+    <path d="M20 258 L616 258" stroke="rgba(10,10,10,.26)"/>
+    <text x="20" y="284" font-family="Geist" font-size="14" fill="rgba(10,10,10,.62)">58 eventi &middot; 224 minuti</text>
+    <text x="616" y="286" font-family="Geist" font-size="20" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">15.680 &euro;</text>
+    <text x="20" y="314" font-family="Geist" font-size="13" fill="rgba(10,10,10,.55)">La prima causa vale il 43% del costo di fermo del periodo.</text>
+  </svg>
+
+  <div class="full" style="top:614px">
+    <div class="lbl" style="margin-bottom:8px">Output</div>
+    <div class="sp">Ranking &middot; confronti fra periodi e linee &middot; report direzionali
+      &middot; costi specifici &middot; KPI avanzati</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">report ricostruito &middot; dati illustrativi</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_INSIGHT_EXACT_SCOPE}}</span> <span class="ph">{{PH_COST_CALCULATION_METHOD}}</span> <span class="ph">{{PH_REAL_REPORT_EXPORT}}</span></span></div>
+</div>

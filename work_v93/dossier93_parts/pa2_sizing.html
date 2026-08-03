@@ -1,0 +1,61 @@
+<!-- ================= A2 · DIMENSIONAMENTO · annesso · lt =================
+     Storyboard A2: i parametri di sizing e le tre fasce — piccola, media,
+     grande — anche nella client edition. Nella V9.2 la client edition
+     riceveva soltanto uno schema con delle frecce verso una scatola: era meno
+     utile del metodo che dichiarava di mostrare.
+     G4 aperto: CPU, RAM e storage restano da definire e lo dicono. I
+     parametri di fascia sono ipotesi dichiarate, non un listino. -->
+<div class="slide lt" id="pa2_sizing" data-kind="appendix" data-tipo="annesso">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">ANNESSO A2</div>
+  </div>
+
+  <div class="tt tt--sm">Il dimensionamento si calcola, non si sceglie a listino</div>
+
+  <div style="position:absolute;left:64px;top:154px;width:1060px">
+    <div class="par" style="font-size:16px">Cinque grandezze determinano la taglia
+      dell&rsquo;ambiente: quanti segnali si leggono per linea, ogni quanto si campiona, per
+      quanto tempo si conserva, quante linee sono collegate e quanti utenti lavorano in
+      contemporanea. Le tre fasce qui sotto sono ipotesi di lavoro dichiarate: servono a dare un
+      ordine di grandezza, non a scegliere una configurazione.</div>
+  </div>
+
+  <div class="full" style="top:258px">
+    <div class="lbl">Le cinque grandezze</div>
+  </div>
+  <div class="tb full tb--dense" style="top:286px;grid-template-columns:repeat(5,1fr)">
+    <div class="tb__h">Tag</div><div class="tb__h">Frequenza</div><div class="tb__h">Conservazione</div>
+    <div class="tb__h">Linee</div><div class="tb__h">Utenti</div>
+    <div>quanti segnali per linea</div><div>ogni quanto si campiona</div>
+    <div>per quanto tempo</div><div>oggi e in prospettiva</div><div>quanti in contemporanea</div>
+  </div>
+
+  <div class="full" style="top:384px">
+    <div class="lbl">Le tre fasce &middot; ipotesi di lavoro, da confermare con l&rsquo;IT</div>
+  </div>
+  <div class="tb full tb--dense" style="top:412px;grid-template-columns:150px 190px 130px 140px 160px 190px 192px">
+    <div class="tb__h">Fascia</div><div class="tb__h">Tag</div><div class="tb__h">Linee</div>
+    <div class="tb__h">Frequenza</div><div class="tb__h">Retention</div>
+    <div class="tb__h">Utenti</div><div class="tb__h">CPU, RAM, storage</div>
+
+    <div><b>Piccola</b></div><div>fino a 500</div><div>1</div><div>1 s</div>
+    <div data-placeholder="PH_RETENTION_DEFAULT">12 mesi</div><div>fino a 10</div>
+    <div data-placeholder="PH_MIN_CPU">da definire in audit</div>
+    <div><b>Media</b></div><div>500 &ndash; 2.000</div><div>2 &ndash; 4</div><div>1 s</div>
+    <div data-placeholder="PH_RETENTION_DEFAULT">24 mesi</div><div>10 &ndash; 30</div>
+    <div data-placeholder="PH_MIN_RAM">da definire in audit</div>
+    <div><b>Grande</b></div><div>oltre 2.000</div><div>5 e oltre</div><div>&#8804; 1 s</div>
+    <div data-placeholder="PH_RETENTION_DEFAULT">36 mesi</div><div>oltre 30</div>
+    <div data-placeholder="PH_MIN_STORAGE">da definire in audit</div>
+  </div>
+
+  <div class="box full" style="top:556px">
+    <div class="note">Tag, linee, frequenza, retention e utenti sono ipotesi di fascia. CPU, RAM
+      e storage non sono dichiarati in questa versione: si chiudono con l&rsquo;audit tecnico e
+      il dimensionamento viene consegnato con la proposta di solution design.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Annesso A2 &middot; metodo di dimensionamento e fasce dichiarate</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_MIN_CPU}}</span> <span class="ph">{{PH_MIN_RAM}}</span> <span class="ph">{{PH_MIN_STORAGE}}</span> <span class="ph">{{PH_STORAGE_GROWTH_RULE}}</span> <span class="ph">{{PH_HIGH_AVAILABILITY}}</span></span></div>
+</div>

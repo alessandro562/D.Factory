@@ -1,0 +1,78 @@
+<!-- ================= P13 · METODO · PRODUZIONE · metodo · lt =============
+     Apertura della sezione 3. Storyboard P13: scomposizione a gradini
+     100 -> 94,6 -> 74,7 -> 71,4 con la capacita' persa in giallo a ogni
+     passaggio, frase di lettura, legenda e conclusione (§12.3).
+     Il ranking delle cause non si ripete qui: sta su P06 Insight. -->
+<div class="slide lt" id="p13_oee" data-kind="dossier" data-tipo="metodo">
+  <div class="band" style="height:190px">
+    <div class="hd">
+      <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+      <div class="pg">13 / 17</div>
+    </div>
+    <div class="lbl" style="position:absolute;left:64px;top:100px">Sezione 3 &middot; Misure e analisi</div>
+    <div class="say" style="top:126px">Una misura vale quanto il perimetro che dichiara.</div>
+  </div>
+
+  <div class="tt tt--sm" style="top:222px">OEE e perdite: perimetri dichiarati</div>
+
+  <div style="position:absolute;left:64px;top:274px;width:1060px">
+    <div class="par" style="font-size:16px">Un OEE senza perimetro non &egrave; confrontabile
+      fra due stabilimenti. Prima del calcolo vengono dichiarati il tempo pianificato, le
+      fermate programmate, la cadenza di riferimento di ogni formato e il criterio di conteggio
+      dei pezzi conformi. Le tre componenti vengono calcolate separatamente e moltiplicate; le
+      perdite vengono attribuite alla componente che le ha generate, cos&igrave; che il
+      risultato dica non solo quanto si &egrave; perso, ma dove.</div>
+  </div>
+
+  <div class="lbl" style="position:absolute;left:64px;top:396px">Come si legge &middot; ogni
+    barra &egrave; lunga quanto la percentuale a destra</div>
+
+  <svg width="700" height="212" viewBox="0 0 700 212"
+       style="position:absolute;left:64px;top:424px" role="img" aria-labelledby="o13t o13d">
+    <title id="o13t">Scomposizione dell&rsquo;OEE di linea</title>
+    <desc id="o13d">Il tempo pianificato scende di gradino in gradino: prima la
+      disponibilit&agrave;, poi il ritmo, poi la qualit&agrave;. Ogni barra &egrave; lunga
+      quanto la percentuale cumulativa scritta accanto; in giallo la capacit&agrave; persa in
+      quel passaggio. Turno illustrativo.</desc>
+
+    <rect x="200" y="0" width="440" height="34" fill="rgba(10,10,10,.13)"/>
+    <rect x="200" y="46" width="416" height="34" fill="rgba(10,10,10,.13)"/>
+    <rect x="616" y="46" width="24" height="34" fill="#E6E011"/>
+    <rect x="200" y="92" width="329" height="34" fill="rgba(10,10,10,.13)"/>
+    <rect x="529" y="92" width="87" height="34" fill="#E6E011"/>
+    <rect x="200" y="138" width="314" height="34" fill="#0A0A0A"/>
+    <rect x="514" y="138" width="15" height="34" fill="#E6E011"/>
+
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.78)" text-anchor="end">
+      <text x="188" y="22">Tempo pianificato</text><text x="188" y="62">Tempo di marcia</text>
+      <text x="188" y="108">Ritmo effettivo</text><text x="188" y="154">Pezzi conformi</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)" text-anchor="end">
+      <text x="188" y="78">disponibilit&#224; 94,6%</text><text x="188" y="124">performance 79%</text>
+      <text x="188" y="170">qualit&#224; 95,6%</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.78)">
+      <text x="656" y="22">100%</text><text x="656" y="68">94,6%</text><text x="656" y="114">74,7%</text>
+    </g>
+    <text x="656" y="160" font-family="Geist" font-size="14" font-weight="600" fill="#0A0A0A">71,4%</text>
+
+    <path d="M0 186 L700 186" stroke="rgba(10,10,10,.13)"/>
+    <text x="0" y="206" font-family="Geist" font-size="14" fill="rgba(10,10,10,.78)">94,6% &#215; 79% &#215; 95,6% = <tspan font-weight="600" fill="#0A0A0A">71,4%</tspan> &middot; in giallo la capacit&#224; persa a ogni gradino</text>
+  </svg>
+
+  <div style="position:absolute;left:812px;top:390px;width:404px">
+    <div class="lbl" style="margin-bottom:10px">Le quattro grandezze</div>
+    <div class="spec spec--tight" style="position:static;width:404px">
+      <div class="row"><b>Disponibilit&agrave;</b><span>marcia &#247; pianificato</span></div>
+      <div class="row"><b>Performance</b><span>pezzi &#215; ciclo ideale &#247; marcia</span></div>
+      <div class="row"><b>Qualit&agrave;</b><span>conformi &#247; totali</span></div>
+      <div class="row"><b>OEE</b><span>i tre fattori moltiplicati</span></div>
+    </div>
+    <div class="note" style="margin-top:18px">Tempo pianificato, fermate programmate, cadenza
+      di riferimento e conteggio dei pezzi conformi si dichiarano prima del calcolo. Le cause
+      sono a pagina 06.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">turno illustrativo &middot; perimetri da dichiarare in progetto</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_OEE_CALENDAR_RULES}}</span> <span class="ph">{{PH_IDEAL_CYCLE_TIME_RULE}}</span> <span class="ph">{{PH_GOOD_COUNT_RULE}}</span> <span class="ph">{{PH_LINE_OEE_AGGREGATION}}</span></span></div>
+</div>
