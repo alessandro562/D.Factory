@@ -101,6 +101,11 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
 .box{border:1px solid var(--l-line);padding:20px 24px}
 .lt .box{background:var(--paper-2);border-color:transparent}
 
+/* contenuto a tutta larghezza, per tabelle e schemi che non stanno in 800 */
+.full{position:absolute;left:var(--m);width:1152px}
+.dev{display:inline-block;font-size:14px;letter-spacing:.04em;font-weight:600;
+  text-transform:uppercase;border:1px solid var(--l-rule);padding:5px 10px;color:var(--l2)}
+
 .hr{height:1px;background:var(--l-line)} .dk .hr{background:var(--d-line)}
 .cols{display:flex;gap:44px} .col{flex:1}
 .mk{width:11px;height:11px;background:var(--acid);display:inline-block}
