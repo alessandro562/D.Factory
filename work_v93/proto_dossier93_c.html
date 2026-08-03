@@ -1,0 +1,321 @@
+<div class="doc">
+
+<!-- ==================================================================
+     P02 · EXECUTIVE SUMMARY
+     Tipo spiegazione · pagina editoriale, non diagramma dominante (§8 P02).
+     Paragrafo di 77 parole: il §12.2 ne chiede fra 45 e 100.
+     ================================================================== -->
+<div class="slide lt" id="p02_executive" data-kind="dossier" data-tipo="spiegazione">
+  <div class="hd">
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">02 / 17</div>
+  </div>
+
+  <div class="tt tt--sm" style="width:660px">D.Factory in sintesi</div>
+
+  <div style="position:absolute;left:64px;top:176px;width:648px">
+    <div class="par">D.Factory &egrave; una piattaforma modulare per la supervisione e
+      l&rsquo;analisi integrata di produzione ed energia. Acquisisce dati da sorgenti
+      industriali esistenti, li contestualizza rispetto a macchina, linea, prodotto,
+      ordine, stato e turno, e li rende disponibili attraverso viste operative, KPI,
+      report e analisi economiche. L&rsquo;architettura commerciale &egrave; composta da tre
+      livelli cumulativi: Connect, Insight e Refyn.</div>
+    <div class="hr" style="margin:34px 0 26px"></div>
+    <div class="sp">Ogni livello comprende il precedente e lavora sulla stessa
+      acquisizione. Cambia la profondit&agrave; dell&rsquo;analisi, non la sorgente del dato.</div>
+  </div>
+
+  <div style="position:absolute;left:784px;top:112px;width:432px">
+    <div class="kp">
+      <div class="lbl">Brownfield</div>
+      <p>Si parte da PLC, sensori e contatori gi&agrave; presenti in impianto.</p>
+    </div>
+    <div class="kp">
+      <div class="lbl">Produzione ed energia integrate</div>
+      <p>Le due misure condividono asse dei tempi e contesto operativo.</p>
+    </div>
+    <div class="kp">
+      <div class="lbl">Un solo modello di contesto</div>
+      <p>Nove attributi accompagnano ogni evento acquisito.</p>
+    </div>
+    <div class="kp">
+      <div class="lbl">Livelli cumulativi</div>
+      <p>Insight comprende Connect. Refyn comprende Connect e Insight.</p>
+    </div>
+    <div class="kp" style="margin-bottom:0">
+      <div class="lbl">Software e servizi</div>
+      <p>La piattaforma &egrave; accompagnata da assessment, configurazione e review.</p>
+    </div>
+  </div>
+
+  <!-- i tre livelli chiudono la pagina: la sintesi li nomina, qui si vedono -->
+  <div class="full hr" style="top:576px"></div>
+  <div class="full cols" style="top:600px">
+    <div class="col">
+      <div class="lbl" style="margin-bottom:8px">Connect</div>
+      <div class="note">Supervisione, indicatori e storico: la baseline operativa.</div>
+    </div>
+    <div class="col">
+      <div class="lbl" style="margin-bottom:8px">Insight</div>
+      <div class="note">Analisi delle perdite, costo specifico e priorit&agrave; economiche.</div>
+    </div>
+    <div class="col">
+      <div class="lbl" style="margin-bottom:8px">Refyn</div>
+      <div class="note">Governo delle azioni e verifica dei benefici &middot; modulo avanzato in sviluppo.</div>
+    </div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Dossier tecnico preliminare</span></div>
+</div>
+
+
+<!-- ==================================================================
+     P05 · CONNECT
+     Tipo funzionale · una vista di prodotto grande, le funzioni in chiaro.
+     Fuori: «chi la usa», «decisione abilitata», callout numerati (§8 P05).
+     ================================================================== -->
+<div class="slide lt" id="p05_connect" data-kind="dossier" data-tipo="funzionale">
+  <div class="hd">
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">05 / 17</div>
+  </div>
+
+  <div class="tt tt--sm">Connect &middot; Supervisione e baseline operativa</div>
+
+  <div style="position:absolute;left:64px;top:158px;width:1000px">
+    <div class="par">Connect costituisce il livello di accesso alla piattaforma. Rende
+      disponibili in un unico ambiente lo stato delle macchine e della linea,
+      l&rsquo;avanzamento della produzione, gli eventi, gli indicatori OEE, i consumi e lo
+      storico. Il suo obiettivo &egrave; costruire una base affidabile e condivisa prima di
+      introdurre analisi pi&ugrave; profonde.</div>
+  </div>
+
+  <svg data-ui="1" width="720" height="272" viewBox="0 0 720 272"
+       style="position:absolute;left:64px;top:268px" role="img" aria-labelledby="c5t c5d">
+    <title id="c5t">Vista Connect ricostruita</title>
+    <desc id="c5d">Stato corrente delle tre macchine della linea, timeline del turno con i
+      due fermi gi&agrave; avvenuti, elenco degli eventi con durata e causale. Ricostruzione
+      grafica, dati illustrativi.</desc>
+
+    <rect x="0" y="0" width="720" height="272" fill="#F3F4F0"/>
+    <rect x="0" y="0" width="720" height="34" fill="#0A0A0A"/>
+    <text x="16" y="22" font-family="Geist" font-size="12.5" font-weight="600" fill="#FFFFFF">Linea 1 &middot; Confezionamento</text>
+    <text x="704" y="22" font-family="Geist" font-size="12.5" fill="rgba(255,255,255,.62)"
+          text-anchor="end">turno 06:00 &ndash; 14:00 &middot; aggiornato 11:33</text>
+
+    <text x="16" y="58" font-family="Geist" font-size="12.5" fill="rgba(10,10,10,.58)">Stato di linea</text>
+    <g font-family="Geist" font-size="13" fill="#0A0A0A">
+      <text x="16" y="88">Riempitrice</text><text x="16" y="116">Etichettatrice</text><text x="16" y="144">Tappatrice</text>
+    </g>
+    <g fill="rgba(10,10,10,.10)">
+      <rect x="132" y="78" width="450" height="13"/><rect x="132" y="106" width="450" height="13"/>
+      <rect x="132" y="134" width="450" height="13"/>
+    </g>
+    <g fill="#0A0A0A">
+      <rect x="132" y="78" width="450" height="13"/>
+      <rect x="132" y="106" width="286" height="13"/><rect x="440" y="106" width="142" height="13"/>
+      <rect x="132" y="134" width="368" height="13"/>
+    </g>
+    <rect x="418" y="106" width="22" height="13" fill="rgba(10,10,10,.28)"/>
+    <rect x="500" y="134" width="82" height="13" fill="#E6E011"/>
+    <g font-family="Geist" font-size="12" fill="rgba(10,10,10,.58)" text-anchor="end">
+      <text x="704" y="89">in marcia</text><text x="704" y="117">in marcia</text><text x="704" y="145">ferma da 9 min</text>
+    </g>
+    <path d="M132 160 L582 160" stroke="rgba(10,10,10,.20)"/>
+    <g font-family="Geist" font-size="12.5" fill="rgba(10,10,10,.50)">
+      <text x="132" y="176">06:00</text><text x="357" y="176" text-anchor="middle">10:00</text>
+      <text x="582" y="176" text-anchor="end">14:00</text>
+    </g>
+
+    <path d="M0 196 L720 196" stroke="rgba(10,10,10,.20)"/>
+    <text x="16" y="216" font-family="Geist" font-size="12.5" fill="rgba(10,10,10,.58)">Fermi del turno</text>
+    <g font-family="Geist" font-size="12" fill="rgba(10,10,10,.50)">
+      <text x="132" y="216">durata</text><text x="272" y="216">macchina</text><text x="432" y="216">causa associata</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="#0A0A0A">
+      <text x="16" y="242">11:24</text><text x="132" y="242">in corso &middot; 9 min</text>
+      <text x="272" y="242">Tappatrice</text><text x="432" y="242">Mancanza tappi</text>
+      <text x="16" y="264">07:12</text><text x="132" y="264">5 min</text>
+      <text x="272" y="264">Etichettatrice</text><text x="432" y="264">Causa da assegnare</text>
+    </g>
+  </svg>
+
+  <div style="position:absolute;left:816px;top:268px;width:400px">
+    <div class="lbl" style="margin-bottom:14px">Funzioni</div>
+    <div class="sp">Stato macchina e linea in tempo reale<br>Timeline di marcia e fermo<br>
+      Eventi e cause associate<br>Avanzamento della produzione<br>Conteggi e velocit&agrave;<br>
+      OEE di macchina e di linea<br>Consumi di energia e utility<br>
+      Storico per turno, prodotto e linea</div>
+  </div>
+
+  <div class="full cols" style="top:566px">
+    <div class="col">
+      <div class="lbl" style="margin-bottom:10px">Output</div>
+      <div class="sp">Dashboard operative, report standard, export dei dati, viste per
+        bordo linea e ufficio.</div>
+    </div>
+    <div class="col">
+      <div class="lbl" style="margin-bottom:10px">Configurazioni</div>
+      <div class="sp">Anagrafiche di macchina, linea e prodotto, calendario e turni,
+        soglie e stati, utenti e viste.</div>
+    </div>
+    <div class="col">
+      <div class="lbl" style="margin-bottom:10px">Limiti</div>
+      <div class="sp">Analisi delle cause, correlazioni, costo specifico e governo delle
+        azioni appartengono a Insight e Refyn.</div>
+    </div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>vista ricostruita &middot; dati illustrativi</span></div>
+  
+</div>
+
+
+<!-- ==================================================================
+     P11 · ARCHITETTURA E DEPLOYMENT
+     Tipo architettura · «definito nel prodotto» e «definito nel solution
+     design», mai «chi decide» (§8 P11). Una nota unica, non una per riga.
+     ================================================================== -->
+<div class="slide lt" id="p11_architettura" data-kind="dossier" data-tipo="architettura">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">11 / 17</div>
+  </div>
+
+  <div class="tt tt--sm">Architettura applicativa e integrazione con la rete di stabilimento</div>
+
+  <div style="position:absolute;left:64px;top:196px;width:1000px">
+    <div class="par">L&rsquo;architettura &egrave; organizzata su quattro livelli logici: le sorgenti
+      in campo, l&rsquo;acquisizione, l&rsquo;applicazione con il proprio archivio, gli utenti e i
+      sistemi a valle. Fra impianto e acquisizione corre un confine di rete definito con
+      l&rsquo;IT. La configurazione standard privilegia l&rsquo;acquisizione in sola lettura.</div>
+  </div>
+
+  <svg class="diag" style="top:326px;left:64px;width:768px" width="768" height="248" viewBox="0 0 768 248"
+       role="img" aria-labelledby="a1t a1d">
+    <title id="a1t">Schema logico a quattro livelli</title>
+    <desc id="a1d">Da sinistra a destra: impianto, acquisizione, applicazione con archivio,
+      utenti e sistemi a valle. Fra impianto e acquisizione corre il confine di rete. Il
+      collegamento con il gestionale &egrave; tratteggiato perch&eacute; opzionale.</desc>
+
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">
+      <text x="0" y="12">Impianto</text><text x="212" y="12">Acquisizione</text>
+      <text x="424" y="12">Applicazione e dati</text><text x="636" y="12">Utenti</text>
+    </g>
+
+    <g fill="#F3F4F0">
+      <rect x="0" y="26" width="172" height="52"/><rect x="0" y="88" width="172" height="52"/>
+      <rect x="212" y="26" width="172" height="52"/>
+      <rect x="424" y="26" width="172" height="52"/><rect x="424" y="88" width="172" height="52"/>
+      <rect x="636" y="26" width="132" height="52"/><rect x="636" y="88" width="132" height="52"/>
+    </g>
+    <g font-family="Geist" font-size="14" font-weight="500" fill="#0A0A0A">
+      <text x="14" y="48">Controllori</text><text x="14" y="110">Contatori</text>
+      <text x="226" y="48">Sola lettura</text>
+      <text x="438" y="48">Elaborazione</text><text x="438" y="110">Archivio storico</text>
+      <text x="650" y="48">Postazioni</text><text x="650" y="110">Uffici</text>
+    </g>
+    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.55)">
+      <text x="14" y="66">stati e conteggi</text><text x="14" y="128">energia e utility</text>
+      <text x="226" y="66">normalizzazione e tempo</text>
+      <text x="438" y="66">stati, cause, KPI</text><text x="438" y="128">serie ed eventi</text>
+      <text x="650" y="66">bordo linea</text><text x="650" y="128">analisi e report</text>
+    </g>
+
+    <g stroke="rgba(10,10,10,.34)" fill="none">
+      <path d="M172 52 L212 52"/><path d="M172 114 L192 114 L192 52 L212 52"/>
+      <path d="M384 52 L424 52"/><path d="M500 78 L500 88"/>
+      <path d="M596 52 L636 52"/><path d="M616 52 L616 114 L636 114"/>
+    </g>
+
+    <path d="M196 20 L196 150" stroke="rgba(10,10,10,.30)" stroke-dasharray="3 4"/>
+    <text x="196" y="166" font-family="Geist" font-size="13" fill="rgba(10,10,10,.50)"
+          text-anchor="middle">confine di rete</text>
+
+    <rect x="424" y="182" width="172" height="44" fill="#FFFFFF" stroke="rgba(10,10,10,.30)"
+          stroke-dasharray="4 4"/>
+    <text x="438" y="209" font-family="Geist" font-size="14" fill="rgba(10,10,10,.62)">Gestionale</text>
+    <path d="M510 140 L510 182" stroke="rgba(10,10,10,.30)" stroke-dasharray="4 4" fill="none"/>
+    <text x="768" y="209" font-family="Geist" font-size="13" fill="rgba(10,10,10,.50)" text-anchor="end">scambio opzionale</text>
+
+    <path d="M0 240 L768 240" stroke="rgba(10,10,10,.13)"/>
+  </svg>
+
+  <div class="spec" style="top:326px">
+    <div class="lbl" style="margin-bottom:10px">Definito nel prodotto</div>
+    <div class="sp">Flusso di acquisizione &middot; applicazione e regole &middot; output &middot; logica di
+      calcolo</div>
+    <div class="lbl" style="margin:24px 0 10px">Definito nel solution design</div>
+    <div class="sp">Ambiente &middot; rete &middot; autenticazione &middot; backup &middot; retention &middot; accesso remoto</div>
+  </div>
+
+  <div class="full cols" style="top:582px">
+    <div class="col">
+      <div class="lbl" style="margin-bottom:8px">Richiede</div>
+      <div class="note">Accesso in lettura ai controllori, punti di misura,
+        anagrafiche, ambiente concordato con IT.</div>
+    </div>
+    <div class="col">
+      <div class="lbl" style="margin-bottom:8px">Non presuppone</div>
+      <div class="note">Sostituzione delle macchine, rifacimento completo dei PLC,
+        cloud obbligatorio.</div>
+    </div>
+    <div class="col">
+      <div class="lbl" style="margin-bottom:8px">Valori di progetto</div>
+      <div class="note">Vengono definiti nel solution design e riportati nell&rsquo;annesso
+        tecnico.</div>
+    </div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>schema logico &middot; non &egrave; un disegno di rete</span></div>
+  
+</div>
+
+
+<!-- ==================================================================
+     P15 · OUTPUT E INTEGRAZIONI
+     Tipo tabella · catalogo tecnico, non organizzazione per reparto.
+     Fuori: «chi lo usa» e «che decisione abilita» (§8 P14).
+     ================================================================== -->
+<div class="slide lt" id="p15_output" data-kind="dossier" data-tipo="tabella">
+  <div class="hd">
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="pg">15 / 17</div>
+  </div>
+
+  <div class="tt tt--sm">Dashboard, report, export e integrazioni</div>
+
+  <div style="position:absolute;left:64px;top:158px;width:1000px">
+    <div class="par">Gli output vengono configurati in funzione del processo e del livello
+      acquistato. Le informazioni possono essere consultate in dashboard, distribuite
+      attraverso report, esportate in formati strutturati o rese disponibili a sistemi
+      esterni. Perimetro, formato e frequenza di ogni canale vengono definiti nel solution
+      design insieme ai punti di innesto verso i sistemi a valle.</div>
+  </div>
+
+  <div class="tb full" style="top:290px;grid-template-columns:220px 452px 240px 240px">
+    <div class="tb__h">Output</div><div class="tb__h">Contenuto</div>
+    <div class="tb__h">Frequenza</div><div class="tb__h">Modalit&agrave;</div>
+
+    <div><b>Dashboard</b></div><div>Stato di linea, KPI di turno, eventi in corso</div>
+    <div>continuo</div><div>web</div>
+    <div><b>Report</b></div><div>KPI, confronti fra periodi, sintesi di turno</div>
+    <div>programmata</div><div>PDF, Excel</div>
+    <div><b>Export</b></div><div>Dati elementari e aggregati, serie storiche</div>
+    <div>su richiesta</div><div>CSV, Excel</div>
+    <div><b>API</b></div><div>Sottoinsieme di dati selezionato</div>
+    <div>da definire</div><div>integrazione</div>
+    <div><b>ERP</b></div><div>Ordini e anagrafiche, in entrata e in uscita</div>
+    <div>da verificare</div><div>a progetto</div>
+  </div>
+
+  <div class="box full" style="top:586px">
+    <div class="note">Disponibilit&agrave; e perimetro delle API, e il punto di innesto verso il
+      gestionale, vengono definiti nel solution design e riportati nell&rsquo;annesso tecnico.</div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>catalogo degli output</span></div>
+  
+</div>
+
+</div>
