@@ -19,79 +19,51 @@
     <div class="pg">02 / 14</div>
   </div>
 
-  <div class="tt tt--sm">Che cosa fa, che cosa richiede, che cosa restituisce.
-    <div class="sub" style="margin-top:14px">Una sola catena, dal segnale sull&rsquo;impianto
-      all&rsquo;indicatore che qualcuno usa per decidere.</div>
+  <div class="tt tt--sm">Dal segnale all&rsquo;informazione utilizzabile.
+    <div class="sub" style="margin-top:14px">Che cosa acquisisce, come contestualizza il dato
+      e quali output restituisce.</div>
   </div>
 
-  <svg class="hero" style="top:206px" width="880" height="384" viewBox="0 0 880 384"
+  <svg class="hero" style="top:206px" width="880" height="356" viewBox="0 0 880 356"
        role="img" aria-labelledby="a1t a1d">
-    <title id="a1t">La catena del dato in tre passaggi</title>
-    <desc id="a1d">Le sorgenti già presenti in impianto confluiscono in un unico flusso;
-      il flusso assegna a ogni evento gli stessi sette attributi; da lì escono viste,
-      indicatori e report.</desc>
+    <title id="a1t">Acquisisce, contestualizza, restituisce</title>
+    <desc id="a1d">Un unico flusso da sinistra a destra, diviso in tre passaggi numerati.
+      Le sorgenti già presenti in impianto entrano nel primo; nel secondo ogni evento
+      riceve gli stessi sette attributi; dal terzo escono viste, indicatori e report.</desc>
 
-    <g font-family="Geist" font-size="13.5" fill="rgba(10,10,10,.58)" text-anchor="end">
-      <text x="158" y="52">Acquisisce</text>
-      <text x="158" y="178">Contestualizza</text>
-      <text x="158" y="302">Restituisce</text>
+    <!-- un solo pannello, tre sezioni numerate: e' un flusso, non una matrice -->
+    <rect x="64" y="0" width="800" height="300" fill="#F3F4F0"/>
+    <g stroke="rgba(10,10,10,.13)">
+      <path d="M331 20 L331 78"/><path d="M331 102 L331 280"/>
+      <path d="M598 20 L598 78"/><path d="M598 102 L598 280"/>
     </g>
 
-    <!-- riga A · sorgenti -->
-    <g fill="#F3F4F0">
-      <rect x="186" y="10" width="188" height="72"/>
-      <rect x="394" y="10" width="188" height="72"/>
-      <rect x="602" y="10" width="188" height="72"/>
+    <g font-family="Geist Mono" font-size="13" fill="rgba(10,10,10,.42)">
+      <text x="88" y="42">01</text><text x="355" y="42">02</text><text x="622" y="42">03</text>
     </g>
-    <g font-family="Geist" font-size="14" font-weight="500" fill="#0A0A0A">
-      <text x="204" y="42">Controllori</text><text x="412" y="42">Contatori</text><text x="620" y="42">Ordini</text>
+    <g font-family="Geist" font-size="20" font-weight="600" fill="#0A0A0A">
+      <text x="88" y="72">Acquisisce</text><text x="355" y="72">Contestualizza</text><text x="622" y="72">Restituisce</text>
+    </g>
+    <!-- una sola linea attraversa i tre passaggi: e' la spina del flusso,
+         e i due triangoli sui divisori danno il verso di lettura -->
+    <path d="M88 90 L840 90" stroke="rgba(10,10,10,.13)"/>
+    <g fill="#0A0A0A"><path d="M325 83 L337 90 L325 97 Z"/><path d="M592 83 L604 90 L592 97 Z"/></g>
+
+    <g font-family="Geist" font-size="15" fill="#0A0A0A">
+      <text x="88" y="120">controllori</text><text x="88" y="146">contatori</text><text x="88" y="172">ordini</text>
+      <text x="355" y="120">tempo</text><text x="355" y="146">macchina</text><text x="355" y="172">prodotto</text>
+      <text x="355" y="198">ordine</text><text x="355" y="224">stato</text><text x="355" y="250">causa</text>
+      <text x="355" y="276">turno</text>
+      <text x="622" y="120">viste operative</text><text x="622" y="146">indicatori</text><text x="622" y="172">report ed export</text>
     </g>
     <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">
-      <text x="204" y="64">stati e conteggi</text><text x="412" y="64">energia e utility</text>
-      <text x="620" y="64">prodotto e cadenza</text>
+      <text x="88" y="204">stati, conteggi, energia,</text><text x="88" y="226">prodotto e cadenza</text>
+      <text x="622" y="204">linea, macchina e turno;</text><text x="622" y="226">OEE, fermi e consumi;</text>
+      <text x="622" y="248">file e integrazioni</text>
     </g>
 
-    <g stroke="rgba(10,10,10,.30)" fill="none">
-      <path d="M280 82 L280 104 L696 104 L696 82"/>
-      <path d="M488 82 L488 128"/>
-    </g>
-
-    <!-- riga B · contestualizzazione -->
-    <rect x="186" y="128" width="604" height="88" fill="#F3F4F0"/>
-    <text x="204" y="158" font-family="Geist" font-size="14" font-weight="500" fill="#0A0A0A">Ogni evento riceve gli stessi sette attributi</text>
-    <g fill="#FFFFFF" stroke="rgba(10,10,10,.13)">
-      <rect x="204" y="172" width="54" height="28"/><rect x="266" y="172" width="76" height="28"/>
-      <rect x="350" y="172" width="74" height="28"/><rect x="432" y="172" width="62" height="28"/>
-      <rect x="502" y="172" width="54" height="28"/><rect x="564" y="172" width="56" height="28"/>
-      <rect x="628" y="172" width="54" height="28"/>
-    </g>
-    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.78)" text-anchor="middle">
-      <text x="231" y="190">tempo</text><text x="304" y="190">macchina</text><text x="387" y="190">prodotto</text>
-      <text x="463" y="190">ordine</text><text x="529" y="190">stato</text><text x="592" y="190">causa</text>
-      <text x="655" y="190">turno</text>
-    </g>
-
-    <g stroke="rgba(10,10,10,.30)" fill="none">
-      <path d="M488 216 L488 260"/>
-      <path d="M280 260 L280 238 L696 238 L696 260"/>
-    </g>
-
-    <!-- riga C · restituzione -->
-    <g fill="#F3F4F0">
-      <rect x="186" y="260" width="188" height="72"/>
-      <rect x="394" y="260" width="188" height="72"/>
-      <rect x="602" y="260" width="188" height="72"/>
-    </g>
-    <g font-family="Geist" font-size="14" font-weight="500" fill="#0A0A0A">
-      <text x="204" y="292">Viste operative</text><text x="412" y="292">Indicatori</text><text x="620" y="292">Report ed export</text>
-    </g>
-    <g font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">
-      <text x="204" y="314">linea, macchina, turno</text><text x="412" y="314">OEE, fermi, consumi</text>
-      <text x="620" y="314">file e integrazioni</text>
-    </g>
-
-    <path d="M64 358 L790 358" stroke="rgba(10,10,10,.13)"/>
-    <text x="64" y="378" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">Lo schema descrive il metodo: perimetro, punti di misura e anagrafiche si definiscono nel solution design.</text>
+    <path d="M64 322 L864 322" stroke="rgba(10,10,10,.13)"/>
+    <text x="64" y="344" font-family="Geist" font-size="13" fill="rgba(10,10,10,.58)">Lo schema descrive il metodo: perimetro, punti di misura e anagrafiche si definiscono nel solution design.</text>
   </svg>
 
   <div class="aside" style="top:206px">
@@ -104,7 +76,8 @@
       <div class="sp">Sostituzione delle macchine esistenti<br>Riscrittura dei programmi PLC</div>
     </div>
     <div class="hr" style="margin-bottom:18px"></div>
-    <div class="note">Quantit&agrave; e taglie non sono qui: dipendono dalla linea e si chiudono con IT e OT.</div>
+    <div class="note">Il modello di deployment, le quantit&agrave; e le taglie si definiscono nel
+      solution design, con IT e OT.</div>
   </div>
 
   <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>schema di funzionamento</span></div>

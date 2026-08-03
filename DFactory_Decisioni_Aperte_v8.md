@@ -48,6 +48,17 @@ costa* passare da uno all'altro, che è la domanda vera.
 verificata è l'unica cosa che trasforma «approccio multi-vendor» da affermazione a prova.
 Finché non esiste, l'annesso A1 non si pubblica.
 
+### Tre verifiche aggiunte dalla revisione dei prototipi
+
+| # | domanda | perché conta | dove |
+|---|---|---|---|
+| T11 | la **sola lettura** verso le macchine è una regola tecnica assoluta o la configurazione standard prevista? | se non è assoluta, il claim va riformulato in «configurazione standard prevista in sola lettura» | dossier 08 · deck 07 |
+| T12 | che cosa copre il **perimetro dei 38 kW** a impianto fermo: linea, macchine, ausiliari o stabilimento? | senza il perimetro il consumo specifico non è confrontabile fra siti | dossier 11 · deck 04 |
+| T13 | qual è la **frequenza di aggiornamento** reale delle viste operative? | «aggiornato 11:33» in una vista ricostruita deve corrispondere a un comportamento vero | dossier 04 · deck 03 |
+
+T11 e T13 nascono da claim che oggi stanno nei prototipi e che nessuno ha ancora
+confermato. Sono a costo zero da chiudere e cambiano una parola ciascuno.
+
 ---
 
 ## 3. Aziendale · undici voci
