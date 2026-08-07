@@ -1,0 +1,105 @@
+<!-- ══ P05 · CONNECT · lt ════════════════════════════════════════════════
+     Unica vista di prodotto ricostruita del dossier, riportata alla larghezza
+     A4. Solo barre orizzontali: nessuna linea obliqua, nessuna freccia.
+     «Limiti di Connect» non sta qui: sta nella matrice, a pagina 08. -->
+<section class="page" id="p05_connect" data-kind="dossier" data-tipo="funzionale">
+  {{HD|1|05 / 18}}
+
+  <div class="skim"><span class="who">Produzione</span><span class="gist">Che cosa vede il
+    reparto il primo giorno: stato di linea, eventi e causa associata.</span></div>
+
+  <h2 class="tt">Connect &middot; supervisione e baseline operativa.</h2>
+
+  <div class="par" style="max-width:580px">Connect &egrave; il livello di accesso alla
+    piattaforma. Rende disponibili in un unico ambiente lo stato delle macchine e della linea,
+    gli eventi, l&rsquo;avanzamento della produzione, gli indicatori OEE, i consumi e lo storico.
+    Il suo obiettivo &egrave; costruire una base affidabile e condivisa prima di introdurre
+    analisi pi&ugrave; profonde.</div>
+
+  <div class="lbl">Vista di linea &middot; ricostruzione a scopo illustrativo</div>
+  <svg data-ui="1" width="658" height="212" viewBox="0 0 658 212" role="img"
+       aria-labelledby="c5t c5d">
+    <title id="c5t">Vista Connect ricostruita</title>
+    <desc id="c5d">Stato corrente delle tre macchine della linea sul turno, con i fermi
+      gi&agrave; avvenuti, e l&rsquo;elenco degli eventi con durata, macchina e causa associata.
+      La causa &egrave; proposta sulla base dello stato e validata da chi la conosce.
+      Ricostruzione grafica, dati illustrativi.</desc>
+
+    <rect x="0" y="0" width="658" height="212" fill="#F3F4F0"/>
+    <rect x="0" y="0" width="658" height="32" fill="#0A0A0A"/>
+    <text x="14" y="21" font-family="Geist" font-size="12.5" font-weight="600" fill="#FFFFFF">Linea 1 &middot; Confezionamento</text>
+    <text x="644" y="21" font-family="Geist" font-size="11.5" fill="rgba(255,255,255,.62)"
+          text-anchor="end">turno 06:00 &ndash; 14:00 &middot; aggiornato 11:33</text>
+
+    <text x="14" y="52" font-family="Geist" font-size="11.5" fill="rgba(10,10,10,.56)">Stato di linea</text>
+    <g font-family="Geist" font-size="12.5" fill="#0A0A0A">
+      <text x="14" y="73">Riempitrice</text><text x="14" y="97">Etichettatrice</text>
+      <text x="14" y="121">Tappatrice</text>
+    </g>
+    <g fill="rgba(10,10,10,.10)">
+      <rect x="120" y="62" width="380" height="14"/><rect x="120" y="86" width="380" height="14"/>
+      <rect x="120" y="110" width="380" height="14"/>
+    </g>
+    <g fill="#0A0A0A">
+      <rect x="120" y="62" width="380" height="14"/>
+      <rect x="120" y="86" width="242" height="14"/><rect x="382" y="86" width="118" height="14"/>
+      <rect x="120" y="110" width="310" height="14"/>
+    </g>
+    <rect x="362" y="86" width="20" height="14" fill="rgba(10,10,10,.28)"/>
+    <rect x="430" y="110" width="70" height="14" fill="#E6E011"/>
+    <g font-family="Geist" font-size="11.5" fill="rgba(10,10,10,.56)" text-anchor="end">
+      <text x="644" y="73">in marcia</text><text x="644" y="97">in marcia</text>
+      <text x="644" y="121">ferma da 9 min</text>
+    </g>
+    <path d="M120 132 L500 132" stroke="rgba(10,10,10,.20)"/>
+    <g font-family="Geist" font-size="11" fill="rgba(10,10,10,.50)">
+      <text x="120" y="147">06:00</text><text x="310" y="147" text-anchor="middle">10:00</text>
+      <text x="500" y="147" text-anchor="end">14:00</text>
+    </g>
+
+    <path d="M0 162 L658 162" stroke="rgba(10,10,10,.20)"/>
+    <g font-family="Geist" font-size="11" fill="rgba(10,10,10,.50)">
+      <text x="14" y="180">orario</text><text x="90" y="180">durata</text>
+      <text x="210" y="180">macchina</text><text x="340" y="180">causa associata</text>
+    </g>
+    <!-- la causa associata distingue Connect da una supervisione: va marcata -->
+    <rect x="332" y="186" width="200" height="22" fill="rgba(230,224,17,.40)"/>
+    <g font-family="Geist" font-size="12.5" fill="#0A0A0A">
+      <text x="14" y="202">11:24</text><text x="90" y="202">in corso &middot; 9 min</text>
+      <text x="210" y="202">Tappatrice</text>
+      <text x="340" y="202" font-weight="600">Mancanza tappi</text>
+    </g>
+  </svg>
+
+  <div class="lbl">Che cosa comprende</div>
+  <div class="cols">
+    <div class="col">
+      <div class="ct" style="font-size:14px">Supervisione</div>
+      <div class="cd">Stato di macchina e linea &middot; timeline di marcia e fermo &middot;
+        eventi e cause associate</div>
+    </div>
+    <div class="col">
+      <div class="ct" style="font-size:14px">Indicatori</div>
+      <div class="cd">OEE e i tre fattori &middot; consumi di energia e utility &middot;
+        conteggi e velocit&agrave;</div>
+    </div>
+    <div class="col">
+      <div class="ct" style="font-size:14px">Storico e distribuzione</div>
+      <div class="cd">Storico per turno, prodotto e linea &middot; dashboard e report standard
+        &middot; export</div>
+    </div>
+  </div>
+
+  <div class="lbl">Da dove arriva quello che si vede</div>
+  <div class="kv"><b>Stato di macchina</b><span>segnale del controllore, in sola lettura</span></div>
+  <div class="kv"><b>Causa del fermo</b><span>associata in reparto, validata a fine turno</span></div>
+  <div class="kv"><b>Consumo di energia</b><span>contatore di linea, stesso asse dei tempi</span></div>
+
+  <div class="panel" style="margin-top:22px">Configurabile per anagrafiche, calendari, soglie,
+    stati, utenti e viste. La configurazione non &egrave; una funzione in pi&ugrave;: &egrave;
+    l&rsquo;attributo che rende il livello utilizzabile su un impianto reale.</div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Vista ricostruita
+    &middot; dati illustrativi</span><span>05</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_CONNECT_EXACT_SCOPE}}</span> <span class="ph">{{PH_CONNECT_REPORTS}}</span> <span class="ph">{{PH_REAL_SCREENSHOT_MAPST}}</span></span></div>
+</section>

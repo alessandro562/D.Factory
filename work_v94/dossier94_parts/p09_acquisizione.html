@@ -1,0 +1,61 @@
+<!-- ══ P09 · SORGENTI E PUNTI DI MISURA · lt ═════════════════════════════
+     Apre la sezione 2. Lo schema a scatole della V9.3 diventa una tabella:
+     su A4 la stessa informazione sta in meta' spazio e non ha frecce.
+     La tabella Riempitrice / Etichettatrice / Tappatrice non e' qui: anche
+     dichiarata come esempio si leggeva come la configurazione standard del
+     prodotto. Il censimento si compila in audit, sull'annesso A1. -->
+<section class="page" id="p09_acquisizione" data-kind="dossier" data-tipo="architettura">
+  {{HD|2|09 / 18}}
+
+  <div class="skim"><span class="who">Per l&rsquo;IT</span><span class="gist">Da dove arriva
+    ogni segnale, che cosa si legge in campo e che cosa arriva dai sistemi gestionali.</span></div>
+
+  <h2 class="tt">Sorgenti, segnali e punti di misura.</h2>
+
+  <div class="par" style="max-width:580px">La configurazione parte dai dati gi&agrave;
+    disponibili sull&rsquo;impianto. Durante l&rsquo;assessment vengono censiti controllori,
+    contatori, sensori, anagrafiche e sistemi gestionali. I segnali mancanti vengono classificati
+    in base alla loro rilevanza per KPI, analisi e business case: alcuni sono necessari, altri
+    migliorano la precisione, altri ancora possono essere rinviati a una fase successiva.</div>
+
+  <div class="quote">Il dato che non esiste non si analizza: si misura.</div>
+
+  <div class="lbl">Dove nasce il dato</div>
+  <table>
+    <thead><tr><th style="width:22%">Sorgente</th><th>Che cosa fornisce</th>
+      <th style="width:22%">Dove sta</th></tr></thead>
+    <tbody>
+      <tr><td class="k">PLC</td><td>stati &middot; conteggi &middot; allarmi e ricette</td>
+        <td>in campo</td></tr>
+      <tr><td class="k">Sensori</td><td>velocit&agrave; &middot; temperatura &middot;
+        pressione e presenza</td><td>in campo</td></tr>
+      <tr><td class="k">Contatori</td><td>energia elettrica &middot; aria compressa &middot;
+        acqua e gas</td><td>in campo</td></tr>
+      <tr><td class="k">Gestionale</td><td>ordini &middot; articoli e distinte &middot;
+        calendari</td><td>sistemi</td></tr>
+      <tr><td class="k">Anagrafiche</td><td>macchina e linea &middot; prodotto e formato
+        &middot; turno</td><td>sistemi</td></tr>
+    </tbody>
+  </table>
+
+  <div class="lbl">Quando il dato non c&rsquo;&egrave;</div>
+  <div class="panel panel--acid"><b style="font-weight:600;color:var(--l1)">Segnali
+    aggiuntivi</b> &mdash; dove il dato non esiste, o esiste e non &egrave; affidabile.
+    Precisione, installazione, propriet&agrave; dello strumento e calibrazione si decidono in
+    audit: la sensoristica &egrave; una voce separata dal software e non &egrave; compresa nel
+    canone.</div>
+
+  <div class="lbl">Il confine di rete</div>
+  <div class="kv"><b>Chi lo definisce</b><span>IT del cliente, in fase di progetto</span></div>
+  <div class="kv"><b>Modalit&agrave; standard</b><span>acquisizione in sola lettura</span></div>
+  <div class="kv"><b>Dove &egrave; descritto</b><span>pagina 11, architettura e
+    integrazione</span></div>
+
+  <div class="note">Il censimento di ogni macchina si compila durante l&rsquo;audit tecnico: il
+    modello &egrave; nell&rsquo;annesso A1. Un elenco generico di protocolli non dice se un
+    impianto &egrave; leggibile; lo dice il rilievo su quella macchina.</div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Schema generico
+    &middot; non &egrave; la configurazione di una linea specifica</span><span>09</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_STANDARD_SIGNAL_LIST}}</span> <span class="ph">{{PH_SENSOR_ACCURACY_REQUIREMENTS}}</span> <span class="ph">{{PH_METERING_STANDARDS}}</span> <span class="ph">{{PH_SENSOR_PRICING_RULE}}</span></span></div>
+</section>

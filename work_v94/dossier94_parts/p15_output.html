@@ -1,0 +1,61 @@
+<!-- ══ P15 · OUTPUT E INTEGRAZIONI · lt ══════════════════════════════════
+     Resta la correzione obbligatoria della review D2: l'API non viene
+     dichiarata disponibile. «Interfacce applicative», modalita' «da
+     verificare sul perimetro»; ERP con scopo e modalita' prescritti.
+     E' l'unica occorrenza di «da verificare» nel core del dossier. -->
+<section class="page" id="p15_output" data-kind="dossier" data-tipo="tabella">
+  {{HD|3|15 / 18}}
+
+  <div class="skim"><span class="who">Produzione e IT</span><span class="gist">Che cosa esce dal
+    prodotto, in che formato, e che cosa invece &egrave; un&rsquo;interfaccia da definire in
+    progetto.</span></div>
+
+  <h2 class="tt">Dashboard, report, export e integrazioni.</h2>
+
+  <div class="par" style="max-width:580px">Gli output vengono configurati in funzione del
+    processo e del livello acquistato: le informazioni possono essere consultate in dashboard,
+    distribuite attraverso report o esportate in formati strutturati. Le integrazioni sono una
+    cosa diversa: sono interfacce verso sistemi esterni, e hanno un perimetro e un punto di
+    innesto che si definiscono in solution design.</div>
+
+  <div class="lbl">Output del prodotto</div>
+  <table>
+    <thead><tr><th style="width:22%">Output</th><th>Contenuto</th>
+      <th style="width:20%">Frequenza</th><th style="width:18%">Formato</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Dashboard</td><td>Stato di linea, KPI di turno, eventi</td>
+        <td>continuo</td><td>web</td></tr>
+      <tr><td class="k">Report</td><td>KPI, confronti fra periodi, sintesi</td>
+        <td>programmata</td><td>PDF, Excel</td></tr>
+      <tr><td class="k">Export</td><td>Dati elementari, aggregati e serie storiche</td>
+        <td>su richiesta</td><td>CSV, Excel</td></tr>
+    </tbody>
+  </table>
+
+  <div class="lbl">Integrazioni verso sistemi esterni</div>
+  <table>
+    <thead><tr><th style="width:28%">Interfaccia</th><th>Scopo</th>
+      <th style="width:32%">Modalit&agrave;</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Interfacce applicative</td><td>Scambio di dati selezionati verso sistemi
+        a valle</td><td>da verificare sul perimetro</td></tr>
+      <tr><td class="k">ERP / gestionale</td><td>Ordini, prodotti e anagrafiche, in entrata e in
+        uscita</td><td>a progetto, previa verifica del punto di innesto</td></tr>
+    </tbody>
+  </table>
+
+  <div class="panel" style="margin-top:24px">Le interfacce applicative non sono dichiarate
+    disponibili in questa versione del dossier. Perimetro, formato e punto di innesto si
+    definiscono in progetto: dichiararle disponibili prima di averle verificate sull&rsquo;impianto
+    del cliente sarebbe una promessa, non una specifica.</div>
+
+  <div class="lbl">Dove finisce il prodotto</div>
+  <div class="kv"><b>Definito nel prodotto</b><span>modello dati &middot; logica applicativa
+    &middot; output</span></div>
+  <div class="kv"><b>Definito in progetto</b><span>interfacce &middot; punto di innesto &middot;
+    perimetro dello scambio</span></div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Output e
+    integrazioni &middot; perimetro da definire in progetto</span><span>15</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_EXPORT_FORMATS}}</span> <span class="ph">{{PH_API_AVAILABILITY}}</span> <span class="ph">{{PH_ERP_INTEGRATION_METHODS}}</span></span></div>
+</section>

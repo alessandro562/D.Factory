@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="utf-8"><title>D.Factory · Dossier tecnico A4 · direzione di redesign</title>
+<style>/* D.Factory · webfonts.
+   Estratti dai deliverable v9.3, dove viaggiano incorporati in base64:
+   il documento non fa nessuna richiesta di rete. Stessa regola qui.
+   Geist e Geist Mono sono variabili (100-900). Instrument Serif e' presente
+   nel pacchetto font dei documenti ma non e' usato in v9.3: il QA conta
+   zero statement serif. Vedi readme.md, VISUAL FOUNDATIONS. */
+
+@font-face{font-family:"Geist";src:url("046cad04-3e1b-4348-8df1-7f442f73dd3d") format("woff2");font-weight:100 900;font-style:normal;font-display:block}
+@font-face{font-family:"Geist Mono";src:url("bce467d0-95ad-4fc6-bf6a-c95a875da586") format("woff2");font-weight:100 900;font-style:normal;font-display:block}
+@font-face{font-family:"Instrument Serif";src:url("d15dfa3c-240b-437e-adc7-55908932f489") format("woff2");font-weight:400;font-style:italic;font-display:block}
+
+/* D.Factory · colore.
+   Palette unica, definita dal cliente: nero, bianco, un giallo acido.
+   Nessun altro colore. Nessun grigio caldo: il neutro e' freddo.
+   Il giallo e' ACCENTO, non sfondo diffuso. Regole vincolanti:
+     nero su giallo   OK
+     bianco su nero   OK
+     giallo su chiaro MAI (sparisce)
+   Al massimo 3 ruoli gialli per slide, 2 per pagina di dossier. */
+
+:root{
+  /* --- base: ink ------------------------------------------------------ */
+  --ink:#0A0A0A;          /* nero del documento, testo e fondo scuro */
+  --ink-2:#141414;        /* fondo dei pannelli di prodotto su scuro */
+  --ink-3:#1C1C1C;        /* fondo di terzo livello, raro */
+
+  /* --- base: paper ---------------------------------------------------- */
+  --paper:#FFFFFF;        /* fondo chiaro */
+  --paper-2:#F3F4F0;      /* pannello, fascia risultato, riga di intestazione */
+  --paper-3:#E9EAE5;      /* pannello di terzo livello, solo dossier */
+
+  /* --- base: accento -------------------------------------------------- */
+  --acid:#E6E011;                    /* l'unico colore della palette */
+  --acid-wash:rgba(230,224,17,.40);  /* evidenziazione di cella, dossier */
+
+  /* --- testo e filetti su fondo scuro --------------------------------- */
+  --d1:#FFFFFF;
+  --d2:rgba(255,255,255,.72);
+  --d3:rgba(255,255,255,.44);
+  --d-line:rgba(255,255,255,.14);
+  --d-rule:rgba(255,255,255,.30);
+
+  /* --- testo e filetti su fondo chiaro -------------------------------- */
+  --l1:#0A0A0A;
+  --l2:rgba(10,10,10,.74);
+  --l3:rgba(10,10,10,.56);
+  --l-line:rgba(10,10,10,.12);
+  --l-rule:rgba(10,10,10,.26);
+
+  /* --- varianti dossier: mezzo punto di contrasto in piu' -------------
+     Il dossier si legge da fermi, su schermo e stampato: alza i secondari.
+     Il deck si legge proiettato: tiene i valori del deck. */
+  --d2-doc:rgba(255,255,255,.74);
+  --d3-doc:rgba(255,255,255,.48);
+  --d-line-doc:rgba(255,255,255,.16);
+  --d-rule-doc:rgba(255,255,255,.34);
+  --l2-doc:rgba(10,10,10,.78);
+  --l3-doc:rgba(10,10,10,.58);
+  --l-line-doc:rgba(10,10,10,.13);
+  --l-rule-doc:rgba(10,10,10,.30);
+
+  /* --- scala di progressione delle matrici ---------------------------
+     Il valore e' anche un tono: la riga si legge da sinistra a destra
+     prima ancora di leggere le parole. mv* per SVG (fill), mc* per HTML. */
+  --mv0:rgba(10,10,10,.22);   /* non incluso */
+  --mv1:rgba(10,10,10,.52);   /* base, raccolta, standard, configurabile */
+  --mv2:#0A0A0A;              /* incluso, analisi, avanzato */
+  --mc0:rgba(10,10,10,.30);
+  --mc1:rgba(10,10,10,.56);
+  --mc2:#0A0A0A;
+
+  /* --- alias semantici ------------------------------------------------ */
+  --surface-page:var(--paper);
+  --surface-page-dark:var(--ink);
+  --surface-panel:var(--paper-2);
+  --surface-panel-dark:var(--ink-2);
+  --surface-accent:var(--acid);
+  --surface-desk:#181818;          /* il fondo attorno alle pagine */
+
+  --text-strong:var(--l1);
+  --text-body:var(--l2);
+  --text-muted:var(--l3);
+  --text-strong-invert:var(--d1);
+  --text-body-invert:var(--d2);
+  --text-muted-invert:var(--d3);
+
+  --line-hair:var(--l-line);       /* separatore interno */
+  --line-rule:var(--l-rule);       /* filetto di intestazione */
+  --line-hair-invert:var(--d-line);
+  --line-rule-invert:var(--d-rule);
+
+  --signal:var(--acid);            /* il segnale: uno per pagina */
+}
+
+/* D.Factory · tipografia.
+   Due famiglie. Geist per tutto il testo, Geist Mono per indici, numerazione
+   di pagina, etichette di rail e micro-anagrafiche. Instrument Serif esiste
+   nel pacchetto ma non e' impiegato in v9.3.
+   Vincoli di QA che valgono su tutti i documenti:
+     - nessun testo sotto 9,5 px (minimo di fatto usato: 12 px)
+     - nessun peso 800 o 900
+   La scala non e' modulare: e' una lista di corpi decisi uno per uno.
+   I valori qui sono quelli letterali dei deliverable, mai arrotondati. */
+
+:root{
+  --ui:"Geist",-apple-system,BlinkMacSystemFont,sans-serif; /* @kind font */
+  --mono:"Geist Mono",Menlo,monospace; /* @kind font */
+  /* presente nel pacchetto, non usato in v9.3 */
+  --serif:"Instrument Serif",Georgia,serif; /* @kind font */
+
+  /* --- pesi ----------------------------------------------------------- */
+  --w-regular:400; /* @kind font */
+  --w-medium:500; /* @kind font */
+  --w-semibold:600; /* @kind font */
+  /* titoletti-verbo: 600 e' troppo poco */
+  --w-nucleus:650; /* @kind font */
+  /* solo il marchio */
+  --w-bold:700; /* @kind font */
+
+  /* --- deck · scala --------------------------------------------------- */
+  --t-cover:72px;        /* h1 di copertina, line-height 1.02, ls -.04em  */
+  --t-h:52px;            /* h1/h2, line-height 1.06, ls -.034em           */
+  --t-h-sm:44px;         /* h2.sm, il titolo di lavoro del deck            */
+  --t-package:64px;      /* nome del pacchetto, ls -.045em                 */
+  --t-big:88px;          /* numero grande, line-height .9, ls -.05em       */
+  --t-mid:44px;          /* statement di chiusura, ls -.042em              */
+  --t-result:30px;       /* fascia risultato; --t-result-big 34px          */
+  --t-result-big:34px;
+  --t-promise:24px;      /* promessa del pacchetto, ls -.022em             */
+  --t-transform:23px;    /* coppie della slide trasformazione              */
+  --t-sup:19px;          /* sommario sotto il titolo                       */
+  --t-body:18px;         /* .cp, corpo del deck, line-height 1.55          */
+  --t-nucleus:17px;      /* titoletto-verbo, ls -.012em, peso 650          */
+  --t-list:16.5px;       /* voce di elenco strutturato, line-height 1.34   */
+  --t-function:16px;     /* funzione, line-height 1.75                     */
+  --t-kicker:15px;
+  --t-lbl:14px;          /* etichetta mono, ls .1em, maiuscolo             */
+  --t-note:13px;
+  --t-rail:12.5px;       /* rail e barra applicativa, ls .13em             */
+
+  /* --- dossier · scala ------------------------------------------------ */
+  --t-doc-title-big:42px;
+  --t-doc-title:38px;      /* .tt, line-height 1.12, ls -.03em            */
+  --t-doc-title-sm:34px;
+  --t-doc-num:34px;        /* numero di specifica, ls -.035em             */
+  --t-doc-say:26px;        /* frase della fascia di apertura, ls -.022em  */
+  --t-doc-sub:20px;
+  --t-doc-principle:19px;  /* .pr__t, peso 650, ls -.018em                */
+  --t-doc-par-hi:17.5px;   /* executive summary                           */
+  --t-doc-par:17px;        /* .par e .bd, line-height 1.62 / 1.6          */
+  --t-doc-list:15.5px;
+  --t-doc-spec:15px;       /* .sp, .spec .row, celle di tabella           */
+  --t-doc-dense:14.5px;    /* tabella a quattordici righe                 */
+  --t-doc-lbl:14px;        /* etichetta, ls .05em, peso 600, maiuscolo    */
+  --t-doc-nav:13.5px;
+  --t-doc-note:13px;
+
+  /* --- crenatura ------------------------------------------------------ */
+  --ls-cover:-.04em;
+  --ls-h:-.034em;
+  --ls-package:-.045em;
+  --ls-big:-.05em;
+  --ls-mid:-.042em;
+  --ls-result:-.026em;
+  --ls-doc-title:-.03em;
+  --ls-nucleus:-.012em;
+  --ls-wordmark:-.045em;
+  --ls-rail:.13em;      /* mono maiuscolo del rail   */
+  --ls-lbl:.1em;        /* mono maiuscolo di etichetta */
+  --ls-doc-lbl:.05em;   /* etichetta di dossier, Geist */
+
+  /* --- interlinea ----------------------------------------------------- */
+  --lh-tight:1.02; /* @kind font */
+  --lh-h:1.06; /* @kind font */
+  --lh-doc-title:1.12; /* @kind font */
+  --lh-result:1.16; /* @kind font */
+  --lh-nucleus:1.2; /* @kind font */
+  --lh-list:1.34; /* @kind font */
+  --lh-sup:1.5; /* @kind font */
+  --lh-body:1.55; /* @kind font */
+  --lh-par:1.62; /* @kind font */
+  --lh-function:1.75; /* @kind font */
+}
+
+/* D.Factory · spazio e geometria.
+   Il documento e' una pagina, non un flusso: la posizione e' assoluta e i
+   valori sono decisi pagina per pagina. Quello che e' costante e' il margine
+   e il canvas. Non esiste una scala 4/8: i deliverable usano i numeri che
+   servono e il QA verifica che niente esca dai bordi. */
+
+:root{
+  --canvas-w:1280px;
+  --canvas-h:720px;
+  --m:64px;                 /* margine del documento, sinistra e destra */
+  --content-w:1152px;       /* 1280 - 2 x 64 */
+
+  /* --- colonne -------------------------------------------------------- */
+  --gap-cols:40px;          /* deck  */
+  --gap-cols-doc:44px;      /* dossier */
+  --gap-rule:36px;          /* padding prima del filetto verticale, deck */
+  --gap-rule-doc:34px;
+
+  /* --- ancoraggi ricorrenti ------------------------------------------ */
+  --top-title:48px;         /* titolo di slide */
+  --top-title-doc:100px;    /* titolo di pagina, sotto l'header */
+  --top-header-doc:40px;
+  --bottom-rail:36px;       /* piede del deck */
+  --bottom-foot-doc:34px;   /* piede del dossier */
+
+  /* --- template B/C del dossier --------------------------------------- */
+  --hero-w:880px;   --aside-x:928px; --aside-w:288px;
+  --diag-w:800px;   --spec-x:848px;  --spec-w:368px;
+
+  /* --- passi di tabella ------------------------------------------------ */
+  --row-pad:13px;           /* .tb        */
+  --row-pad-tight:9px;      /* .tb--tight */
+  --row-pad-dense:3px;      /* .tb--dense */
+
+  /* --- geometria ------------------------------------------------------- */
+  --radius:0;               /* nessun raggio: solo il led ne ha uno */
+  --hair:1px;
+  --rule-strong:1.5px;      /* filetto di bordo dei pannelli SVG */
+  --mark:11px;              /* quadrato giallo di marcatura */
+  --tick:13px;              /* stazione su un asse */
+  --seg-h:14px;             /* segmento dell'indicatore di livello */
+}
+
+/* D.Factory · superfici e comportamento.
+   Non ci sono ombre e non ci sono raggi: il QA li rifiuta entrambi fuori dal
+   led di stato. Un pannello si distingue per tono di fondo e per filetto,
+   mai per elevazione. Nessuna trasparenza vetro, nessun blur, nessun
+   gradiente. Le uniche trasparenze sono quelle del testo secondario e dei
+   filetti, gia' cotte nei token di colore. */
+
+:root{
+  --shadow-none:none; /* @kind shadow */
+  --panel-border:1px solid var(--l-line); /* @kind other */
+  --panel-border-invert:1px solid var(--d-line); /* @kind other */
+  --panel-bg:var(--paper-2); /* @kind color */
+  --panel-bg-invert:var(--ink-2); /* @kind color */
+
+  /* Il deck non ha animazioni: e' un documento, si stampa e si proietta.
+     Nelle superfici interattive (sito, dashboard) la transizione e' corta e
+     lineare, e cambia solo il colore o la posizione del filetto. */
+  --motion-fast:120ms; /* @kind other */
+  --motion-base:160ms; /* @kind other */
+  --ease:linear; /* @kind other */
+
+  /* stati: nessun cambio di scala, nessun alone. Cambia il tono. */
+  --state-hover-ink:#1C1C1C; /* @kind color */
+  --state-hover-paper:var(--paper-2); /* @kind color */
+  --state-hover-acid:#D6D010; /* @kind color */
+  --state-press-acid:#C4BE0F; /* @kind color */
+  --state-disabled-opacity:.38; /* @kind other */
+  --focus-ring:2px solid var(--acid); /* @kind other */
+  --focus-offset:2px; /* @kind spacing */
+}
+
+</style>
+<style>
+doc-page:not(:defined){visibility:hidden}
+/* A4 a 96 dpi = 794 x 1123. Il contenuto di ogni pagina sta entro ~890 px
+   di altezza utile, cosi' la stessa pagina regge anche su Letter. */
+.page{font-family:var(--ui);color:var(--l1);background:var(--paper);padding:68px 68px 60px;box-sizing:border-box;position:relative;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1}
+.page.dk{background:var(--ink);color:var(--d1)}
+.mono{font-family:var(--mono)}
+
+/* intestazione: sezione attiva + ruolo + numerazione */
+.hd{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:11px;border-bottom:1px solid var(--l-line)}
+.dk .hd{border-bottom-color:var(--d-line)}
+.nav{display:flex;gap:18px;font-size:12px;letter-spacing:.01em}
+.nav span{color:var(--l3)}
+.dk .nav span{color:var(--d3)}
+.nav span.on{color:var(--l1);font-weight:700;position:relative}
+.dk .nav span.on{color:var(--d1)}
+.nav span.on::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:2px;background:currentColor}
+.nav i{font-style:normal;font-family:var(--mono);font-size:11.5px;margin-right:5px;opacity:.7}
+.pg{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--l3)}
+.dk .pg{color:var(--d3)}
+
+/* IL LIVELLO DI SCREMATURA: la riga che dice cosa c'e' sotto, e per chi */
+.skim{display:flex;gap:14px;align-items:flex-start;margin:22px 0 0}
+.who{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--acid);color:var(--ink);padding:4px 8px;white-space:nowrap;flex:none}
+.gist{font-size:15px;line-height:1.45;color:var(--l2)}
+.dk .gist{color:var(--d2)}
+
+h1.tt{margin:20px 0 0;font-size:29px;line-height:1.1;letter-spacing:-.028em;font-weight:600}
+h2.tt{margin:20px 0 0;font-size:26px;line-height:1.12;letter-spacing:-.026em;font-weight:600}
+.par{font-size:15px;line-height:1.62;color:var(--l2);margin:18px 0 0}
+.dk .par{color:var(--d2)}
+.lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--l3);margin:26px 0 10px}
+.dk .lbl{color:var(--d3)}
+.rule{height:1px;background:var(--l-line);margin:24px 0}
+.dk .rule{background:var(--d-line)}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-family:var(--ui);font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;color:var(--l1);background:var(--paper-2);padding:9px 12px 9px 0;border-bottom:1px solid var(--l-rule)}
+td{padding:9px 12px 9px 0;border-bottom:1px solid var(--l-line);vertical-align:top;line-height:1.45}
+td.k{font-weight:500}
+tr.grp td{border-bottom:none;padding-top:18px;padding-bottom:4px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--l3)}
+.note{font-size:12.5px;line-height:1.5;color:var(--l3);margin-top:14px}
+
+.ft{position:absolute;left:68px;right:68px;bottom:26px;display:flex;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--l3)}
+.dk .ft{color:var(--d3)}
+.wm{font-weight:700;font-size:14px;letter-spacing:-.045em;color:var(--l1)}
+.dk .wm{color:var(--d1)}
+.decl{font-weight:500;color:var(--l2)}
+.dk .decl{color:var(--d2)}
+
+/* pila dell'architettura */
+.stack div.ly{display:flex;align-items:center;gap:16px;padding:13px 18px;margin-bottom:7px;position:relative}
+.stack .ly.o{border:1px solid rgba(10,10,10,.42)}
+.stack .ly.p{background:var(--ink);color:var(--d1)}
+.stack .ly.g{background:var(--paper-3)}
+.stack .ly b{font-size:16px;font-weight:600;letter-spacing:-.02em;display:block}
+.stack .ly em{font-style:normal;font-size:12.5px;color:var(--l2);display:block;margin-top:3px}
+.stack .ly.p em{color:var(--d2)}
+.stack .ly u{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-decoration:none;color:var(--l3);width:22px;flex:none}
+.stack .ly.p u{color:rgba(255,255,255,.5)}
+.mk{position:absolute;left:-5px;top:0;bottom:0;width:5px;background:var(--acid)}
+
+/* indice per ruolo */
+.idx{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+.idx section{border-top:1px solid var(--l-line);padding:14px 0 16px}
+.idx h3{margin:0 0 4px;font-size:15px;font-weight:650;letter-spacing:-.014em}
+.idx p{margin:0;font-size:12.5px;line-height:1.5;color:var(--l3)}
+.idx ol{margin:10px 0 0;padding:0;list-style:none}
+.idx li{display:flex;gap:10px;font-size:13px;line-height:1.7;color:var(--l2)}
+.idx li b{font-family:var(--mono);font-size:11px;font-weight:400;color:rgba(10,10,10,.42);flex:none;width:20px}
+
+.kv{display:flex;justify-content:space-between;gap:14px;font-size:13.5px;padding:8px 0;border-bottom:1px solid var(--l-line)}
+.kv b{font-weight:500}.kv span{color:var(--l3);text-align:right}
+.quote{border-left:4px solid var(--acid);padding-left:16px;font-size:16px;line-height:1.4;font-weight:500;margin-top:22px}
+a{color:var(--l1)}a:hover{color:var(--l2)}
+</style></head>
+<body>
+<doc-page size="a4">
+
+<!-- ══ P01 · copertina ══ -->
+<section class="page dk" id="p01" data-screen-label="A4 · copertina">
+  <div class="wm" style="font-size:22px">D<i style="font-style:normal">.</i>Factory</div>
+  <div style="width:88px;height:5px;background:var(--acid);margin-top:190px"></div>
+  <div style="font-size:52px;line-height:1.04;letter-spacing:-.038em;font-weight:600;margin-top:26px">Dossier<br>tecnico</div>
+  <div style="font-size:17px;line-height:1.5;color:var(--d2);margin-top:24px;max-width:420px">Architettura, acquisizione dati, metodi di misura, deployment e servizi.</div>
+  <div class="rule" style="margin-top:330px"></div>
+  <div style="display:flex;gap:34px;font-size:13px;color:var(--d2)">
+    <div><div class="mono" style="font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--d3);margin-bottom:6px">Edizione</div>preliminare</div>
+    <div><div class="mono" style="font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--d3);margin-bottom:6px">Uso</div>assessment e solution design</div>
+    <div><div class="mono" style="font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--d3);margin-bottom:6px">Formato</div>A4 · 18 pagine</div>
+  </div>
+  <div class="ft"><span class="wm" style="font-size:13px">D<i style="font-style:normal">.</i>Factory</span><span class="decl">Le figure sono ricostruzioni a scopo illustrativo</span><span></span></div>
+</section>
+
+<!-- ══ P02 · indice per ruolo — LA PAGINA NUOVA: risolve la scrematura ══ -->
+<section class="page" id="p02" data-screen-label="A4 · indice per ruolo">
+  <div class="hd">
+    <div class="nav"><span class="on"><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span></div>
+    <div class="pg">02 / 18</div>
+  </div>
+  <div class="skim"><span class="who">Per tutti</span><span class="gist">Questo dossier non si legge dall'inizio. Ogni ruolo ha tre pagine che lo riguardano: qui c'è quali sono.</span></div>
+  <h1 class="tt">Quattro percorsi di lettura.</h1>
+  <div class="par" style="max-width:560px">Ogni pagina porta in testa una riga di sintesi e l'indicazione di chi la deve leggere. Se hai poco tempo, le pagine in grassetto sono quelle che rispondono alla tua domanda.</div>
+  <div class="idx" style="margin-top:34px">
+    <section>
+      <h3>IT di stabilimento</h3>
+      <p>Che cosa mettiamo in rete, in che modo, con quali permessi.</p>
+      <ol><li><b>11</b>Architettura e confine di rete</li><li><b>12</b>Sicurezza e governo dei dati</li><li><b>09</b>Acquisizione e protocolli</li></ol>
+    </section>
+    <section>
+      <h3>Plant manager e produzione</h3>
+      <p>Che cosa vede il reparto e come si valida un numero.</p>
+      <ol><li><b>13</b>Come si calcola l'OEE</li><li><b>05</b>Connect: visibilità e baseline</li><li><b>15</b>Output e report</li></ol>
+    </section>
+    <section>
+      <h3>Energy manager</h3>
+      <p>Come l'energia si lega allo stato produttivo.</p>
+      <ol><li><b>14</b>Metodo di misura dell'energia</li><li><b>06</b>Insight: perdite e costo</li><li><b>09</b>Punti di misura</li></ol>
+    </section>
+    <section>
+      <h3>Direzione e acquisti</h3>
+      <p>Che cosa si compra, in che ordine, con quali servizi.</p>
+      <ol><li><b>03</b>Executive summary</li><li><b>08</b>Matrice dei tre livelli</li><li><b>17</b>Servizi e struttura di prezzo</li></ol>
+    </section>
+  </div>
+  <div class="quote">Se leggi una pagina sola, leggi la 03. Se ne leggi due, aggiungi la 08.</div>
+  <div class="ft"><span class="wm">D<i style="font-style:normal">.</i>Factory</span><span class="decl">Dossier tecnico · edizione preliminare</span><span>02</span></div>
+</section>
+
+<!-- ══ P03 · executive summary ══ -->
+<section class="page dk" id="p03" data-screen-label="A4 · executive summary">
+  <div class="hd">
+    <div class="nav"><span><i>0</i>Come si legge</span><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span></div>
+    <div class="pg">03 / 18</div>
+  </div>
+  <div class="skim"><span class="who">Direzione</span><span class="gist">Che cos'è il prodotto in una pagina, e come i tre livelli si differenziano senza cambiare la sorgente del dato.</span></div>
+  <h1 class="tt" style="max-width:540px">D.Factory unisce dati industriali e contesto operativo in un unico modello.</h1>
+  <div class="par" style="max-width:560px;color:rgba(255,255,255,.86)">Acquisisce dati da sorgenti già in impianto, li contestualizza rispetto a macchina, linea, prodotto, ordine, stato e turno, e li rende disponibili come viste operative, KPI, report e analisi economiche. La stessa acquisizione alimenta tre livelli cumulativi: cambia la profondità dell'analisi, non la sorgente del dato.</div>
+  <div class="rule"></div>
+  <div style="display:flex;gap:0">
+    <div style="flex:1;padding-right:26px;border-right:1px solid var(--d-line)">
+      <div style="font-size:17px;line-height:1.24;font-weight:650;letter-spacing:-.016em">Brownfield first</div>
+      <div style="font-size:13.5px;line-height:1.5;margin-top:8px;color:rgba(255,255,255,.68)">Si parte da PLC, sensori e contatori già presenti. Nessun cantiere.</div>
+    </div>
+    <div style="flex:1;padding:0 26px;border-right:1px solid var(--d-line)">
+      <div style="font-size:17px;line-height:1.24;font-weight:650;letter-spacing:-.016em">Produzione ed energia integrate</div>
+      <div style="font-size:13.5px;line-height:1.5;margin-top:8px;color:rgba(255,255,255,.68)">Le due misure condividono asse dei tempi e contesto.</div>
+    </div>
+    <div style="flex:1;padding-left:26px">
+      <div style="font-size:17px;line-height:1.24;font-weight:650;letter-spacing:-.016em">Un modello dati condiviso</div>
+      <div style="font-size:13.5px;line-height:1.5;margin-top:8px;color:rgba(255,255,255,.68)">Nove attributi accompagnano ogni evento acquisito.</div>
+    </div>
+  </div>
+  <div style="height:5px;background:var(--acid);margin:30px 0 26px"></div>
+  <div class="lbl" style="margin-top:0">I tre livelli</div>
+  <table>
+    <tbody><tr><th style="width:22%">Livello</th><th>Promessa</th><th style="width:26%">Aggiunge</th></tr>
+    <tr><td class="k" style="color:var(--d1)">Connect</td><td style="color:var(--d2)">Rende affidabile ciò che sta succedendo.</td><td style="color:var(--d2)">stato, produzione, energia, KPI standard</td></tr>
+    <tr><td class="k" style="color:var(--d1)">Insight</td><td style="color:var(--d2)">Spiega dove si perde capacità, energia e valore.</td><td style="color:var(--d2)">cause, costo per stato, priorità economiche</td></tr>
+    <tr><td class="k" style="color:var(--d1)">Refyn</td><td style="color:var(--d2)">Chiude il ciclo fra decisione e verifica.</td><td style="color:var(--d2)">azioni, owner, verifica del beneficio</td></tr>
+  </tbody></table>
+  <div class="note" style="color:var(--d3);display:flex;align-items:center;gap:8px"><i style="width:9px;height:9px;background:var(--acid);display:block;flex:none"></i>Refyn è un modulo avanzato in sviluppo. Il perimetro effettivo si conferma in solution design.</div>
+  <div class="ft"><span class="wm">D<i style="font-style:normal">.</i>Factory</span><span class="decl">Dossier tecnico · edizione preliminare</span><span>03</span></div>
+</section>
+
+<!-- ══ P11 · architettura e integrazione ══ -->
+<section class="page" id="p11" data-screen-label="A4 · architettura">
+  <div class="hd">
+    <div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span></div>
+    <div class="pg">11 / 18</div>
+  </div>
+  <div class="skim"><span class="who">Per l'IT</span><span class="gist">Quattro livelli logici, un confine di rete, acquisizione in sola lettura. Che cosa chiediamo e che cosa non presupponiamo.</span></div>
+  <h2 class="tt" style="max-width:520px">Architettura applicativa e integrazione con la rete di stabilimento.</h2>
+  <div class="par" style="max-width:560px">Fra impianto e acquisizione esiste un confine di rete definito con l'IT. La configurazione standard privilegia l'acquisizione in sola lettura; eventuali scambi ulteriori si definiscono in solution design insieme all'ambiente, alla segmentazione e alle politiche di accesso.</div>
+  <div class="lbl">Livelli logici · dal basso verso l'alto</div>
+  <div class="stack">
+    <div class="ly o"><u>04</u><div><b>Output e sistemi esterni</b><em>dashboard · report · export · sistemi a valle (perimetro da definire)</em></div></div>
+    <div class="ly p"><span class="mk"></span><u>03</u><div><b>Piattaforma D.Factory</b><em>applicazione · archivio · elaborazione KPI — qui il dato riceve il contesto</em></div></div>
+    <div class="ly o"><u>02</u><div><b>Acquisizione</b><em>connettori · normalizzazione · accodamento e persistenza temporanea</em></div></div>
+    <div class="ly g"><u>01</u><div><b>Impianto</b><em>PLC · sensori · contatori · sistemi gestionali</em></div></div>
+  </div>
+  <div style="display:flex;gap:34px;margin-top:26px">
+    <div style="flex:1">
+      <div class="lbl" style="margin-top:0">Richiede</div>
+      <div style="font-size:13.5px;line-height:1.6;color:var(--l2)">Accesso in lettura ai controllori · punti di misura per le utility · anagrafiche di prodotto e ordine · un ambiente concordato con l'IT.</div>
+      <div class="lbl">Non presuppone</div>
+      <div style="font-size:13.5px;line-height:1.6;color:var(--l2)">Sostituzione delle macchine · rifacimento dei PLC · cloud obbligatorio.</div>
+    </div>
+    <div style="flex:1">
+      <div class="lbl" style="margin-top:0">Specifica</div>
+      <div class="kv"><b>Protocolli</b><span>OPC UA · Modbus · S7 · file</span></div>
+      <div class="kv"><b>Frequenza</b><span>1 s – 60 s, per punto</span></div>
+      <div class="kv"><b>Modalità</b><span>sola lettura</span></div>
+      <div class="kv"><b>Ritenzione</b><span>24 mesi, configurabile</span></div>
+      <div class="kv"><b>Ambiente</b><span>on-premise o cloud</span></div>
+    </div>
+  </div>
+  <div class="quote">Nessun cantiere: il dato sale in sola lettura da ciò che è già in linea.</div>
+  <div class="ft"><span class="wm">D<i style="font-style:normal">.</i>Factory</span><span class="decl">Schema logico · non è un disegno di rete</span><span>11</span></div>
+</section>
+
+<!-- ══ P13 · metodo di misura ══ -->
+<section class="page" id="p13" data-screen-label="A4 · metodo OEE">
+  <div class="hd">
+    <div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span class="on"><i>3</i>Misure</span><span><i>4</i>Delivery</span></div>
+    <div class="pg">13 / 18</div>
+  </div>
+  <div class="skim"><span class="who">Produzione</span><span class="gist">Da dove viene ogni pezzo del calcolo e chi lo valida. Nessun numero senza il metodo che lo produce.</span></div>
+  <h2 class="tt" style="max-width:480px">Come si calcola la disponibilità e l'OEE di linea.</h2>
+  <div class="par" style="max-width:560px">Il perimetro è una linea, tutte le macchine che la compongono e un turno di riferimento. Ogni passaggio ha una sorgente dichiarata e un punto di validazione: la causa di un fermo è <b style="font-weight:600;color:var(--l1)">associata e validata</b>, mai rilevata automaticamente.</div>
+  <div class="lbl">Catena di calcolo</div>
+  <table>
+    <thead><tr><th style="width:30%">Passaggio</th><th style="width:32%">Sorgente</th><th>Validazione</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Tempo di apertura</td><td>Calendario di turno</td><td>Definito nel prodotto</td></tr>
+      <tr><td class="k">Fermo registrato</td><td>Segnale di macchina</td><td>Associato in reparto</td></tr>
+      <tr><td class="k">Causa del fermo</td><td>Operatore</td><td>Validata a fine turno</td></tr>
+      <tr><td class="k">Pezzi buoni e scarti</td><td>Conteggio di linea</td><td>Riconciliato con l'ordine</td></tr>
+      <tr><td class="k">Velocità di riferimento</td><td>Anagrafica di prodotto</td><td>Definita in solution design</td></tr>
+    </tbody>
+  </table>
+  <div style="display:flex;gap:34px;margin-top:26px">
+    <div style="flex:1">
+      <div class="lbl" style="margin-top:0">Formule</div>
+      <div class="kv"><b>Disponibilità</b><span>tempo utile / apertura</span></div>
+      <div class="kv"><b>Performance</b><span>pezzi / velocità × tempo</span></div>
+      <div class="kv"><b>Qualità</b><span>buoni / totali</span></div>
+      <div class="kv"><b>OEE</b><span>D × P × Q</span></div>
+    </div>
+    <div style="flex:1">
+      <div class="lbl" style="margin-top:0">Frase di lettura</div>
+      <div style="font-size:14px;line-height:1.55;color:var(--l2)">«Nel turno la linea ha perso 18 minuti di capacità, e la causa prevalente è il cambio formato.» Il dossier considera valido un indicatore solo se questa frase si può scrivere.</div>
+    </div>
+  </div>
+  <div style="background:var(--paper-2);padding:16px 20px;margin-top:24px;font-size:13.5px;line-height:1.55;color:var(--l2)">Soglie, turni, centri di costo e alberatura di linea si definiscono in solution design, non nel prodotto. Un OEE senza causa validata è un numero, non una misura.</div>
+  <div class="ft"><span class="wm">D<i style="font-style:normal">.</i>Factory</span><span class="decl">Ricostruzione grafica a scopo illustrativo</span><span>13</span></div>
+</section>
+
+<!-- ══ P17 · servizi e struttura di prezzo ══ -->
+<section class="page" id="p17" data-screen-label="A4 · servizi e prezzo">
+  <div class="hd">
+    <div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span class="on"><i>4</i>Delivery</span></div>
+    <div class="pg">17 / 18</div>
+  </div>
+  <div class="skim"><span class="who">Acquisti</span><span class="gist">Nove servizi, quando si attivano, e la forma del prezzo. Gli importi stanno nella proposta economica.</span></div>
+  <h2 class="tt" style="max-width:500px">I nove servizi, attivabili su tutti e tre i livelli.</h2>
+  <div class="par" style="max-width:560px">I servizi non cambiano il perimetro funzionale del livello: accelerano il risultato e ne verificano la tenuta.</div>
+  <table style="margin-top:26px">
+    <thead><tr><th style="width:36%">Servizio</th><th>Che cosa produce</th><th style="width:22%">Quando</th></tr></thead>
+    <tbody>
+      <tr class="grp"><td colspan="3">Avvio</td></tr>
+      <tr><td class="k">Assessment e perimetrazione</td><td>Perimetro, dati disponibili, obiettivi</td><td>Prima del setup</td></tr>
+      <tr><td class="k">Setup e integrazione</td><td>Connettori attivi e dato che arriva</td><td>Avvio</td></tr>
+      <tr><td class="k">KPI e formule</td><td>Definizioni condivise e verificabili</td><td>Avvio</td></tr>
+      <tr class="grp"><td colspan="3">Esercizio</td></tr>
+      <tr><td class="k">Data quality review</td><td>Scarti, buchi, segnali non affidabili</td><td>Ricorrente</td></tr>
+      <tr><td class="k">Performance &amp; Energy Review</td><td>Lettura periodica di perdite e consumi</td><td>Ricorrente</td></tr>
+      <tr><td class="k">Formazione</td><td>Autonomia di reparto e di direzione</td><td>Su richiesta</td></tr>
+      <tr><td class="k">Supporto</td><td>Presa in carico e risoluzione</td><td>Continuo</td></tr>
+      <tr class="grp"><td colspan="3">Estensione</td></tr>
+      <tr><td class="k">Improvement sprint</td><td>Un ciclo chiuso su una perdita scelta</td><td>Su richiesta</td></tr>
+      <tr><td class="k">Scale-up</td><td>Estensione a linee e stabilimenti</td><td>Dopo il pilot</td></tr>
+    </tbody>
+  </table>
+  <div class="lbl">Struttura di prezzo</div>
+  <div style="display:flex;gap:0;background:var(--paper-2);padding:18px 20px">
+    <div style="flex:1;padding-right:20px;border-right:1px solid rgba(10,10,10,.14)"><b style="font-size:16px;font-weight:600;letter-spacing:-.02em">Setup</b><div style="font-size:12.5px;color:var(--l2);margin-top:5px">una volta, per perimetro</div></div>
+    <div style="flex:1;padding:0 20px;border-right:1px solid rgba(10,10,10,.14)"><b style="font-size:16px;font-weight:600;letter-spacing:-.02em">Canone</b><div style="font-size:12.5px;color:var(--l2);margin-top:5px">ricorrente, per livello</div></div>
+    <div style="flex:1;padding:0 20px;border-right:1px solid rgba(10,10,10,.14)"><b style="font-size:16px;font-weight:600;letter-spacing:-.02em">Servizi</b><div style="font-size:12.5px;color:var(--l2);margin-top:5px">a catalogo, opzionali</div></div>
+    <div style="flex:1;padding-left:20px;border-left:5px solid var(--acid)"><div style="font-size:12.5px;line-height:1.45;color:var(--l2)">Importi nella proposta economica. <b style="font-weight:600;color:var(--l1)">Da compilare.</b></div></div>
+  </div>
+  <div class="note">Condizioni di supporto e SLA si formalizzano nella proposta e nel contratto.</div>
+  <div class="ft"><span class="wm">D<i style="font-style:normal">.</i>Factory</span><span class="decl">Dossier tecnico · edizione preliminare</span><span>17</span></div>
+</section>
+
+</doc-page>
+<script src="1dfb1c4c-f68f-4385-90e8-83d0100dad3f"></script>
+
+</body></html>

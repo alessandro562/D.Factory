@@ -1,0 +1,53 @@
+<!-- ══ A3 · REQUISITI IT E SECURITY · lt ═════════════════════════════════
+     La sede corretta di «chi decide», del valore di progetto e dello stato.
+     Tono da checklist ammesso qui e soltanto qui: nel core queste colonne non
+     esistono.
+     La proprieta' dei dati resta non pubblicata finche' il legale non
+     approva: la riga dichiara l'ambito, non il diritto. -->
+<section class="page" id="pa3_requisiti" data-kind="appendix" data-tipo="annesso">
+  {{HD|A|ANNESSO A3}}
+
+  <div class="skim"><span class="who">Per l&rsquo;IT</span><span class="gist">Ambito per ambito:
+    il modello del prodotto, il valore che il progetto deve fissare e la funzione che lo
+    decide.</span></div>
+
+  <h2 class="tt">Requisiti IT e security.</h2>
+
+  <div class="par" style="max-width:580px">Questo annesso raccoglie, ambito per ambito, il
+    modello che il prodotto mette a disposizione, il valore che il progetto dovr&agrave; fissare
+    e la funzione che lo decide. Le aree corrispondenti sono descritte a pagina 12: qui si
+    compilano, durante il solution design, insieme all&rsquo;IT del cliente.</div>
+
+  <div class="lbl" style="margin-top:16px">Otto ambiti</div>
+  <table class="dense">
+    <thead><tr><th style="width:28%">Ambito</th><th>Modello del prodotto</th>
+      <th style="width:24%">Valore di progetto</th><th style="width:17%">Chi decide</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Autenticazione e identit&agrave;</td><td>Directory aziendale o utenze
+        locali</td><td><span data-ed="working" class="phv">{{PH_AUTHENTICATION_MODEL}}</span><span data-ed="client">&#8212;</span></td><td>IT del cliente</td></tr>
+      <tr><td class="k">Ruoli e permessi</td><td>Lettura, configurazione,
+        amministrazione</td><td><span data-ed="working" class="phv">{{PH_ROLE_MODEL}}</span><span data-ed="client">&#8212;</span></td><td>Operations e IT</td></tr>
+      <tr><td class="k">Registro degli accessi</td><td>Eventi registrati e orizzonte di
+        conservazione</td><td><span data-ed="working" class="phv">{{PH_AUDIT_LOGGING}}</span><span data-ed="client">&#8212;</span></td><td>IT del cliente</td></tr>
+      <tr><td class="k">Cifratura</td><td>Dati in transito e dati a
+        riposo</td><td><span data-ed="working" class="phv">{{PH_DATA_ENCRYPTION_AT_REST}}</span><span data-ed="client">&#8212;</span></td><td>IT del cliente</td></tr>
+      <tr><td class="k">Backup e ripristino</td><td>Frequenza, prova di ripristino,
+        orizzonte</td><td><span data-ed="working" class="phv">{{PH_BACKUP_POLICY}}</span><span data-ed="client">&#8212;</span></td><td>IT del cliente</td></tr>
+      <tr><td class="k">Aggiornamenti e accesso remoto</td><td>Patch, versioni e accesso da
+        remoto</td><td><span data-ed="working" class="phv">{{PH_PATCHING_POLICY}}</span><span data-ed="client">&#8212;</span></td><td>IT del cliente</td></tr>
+      <tr><td class="k">Propriet&agrave; e licenza</td><td>Ambito dichiarato, formulazione non
+        pubblicata</td><td><span data-ed="working" class="phv">{{PH_DATA_OWNERSHIP}}</span><span data-ed="client">con il legale</span></td><td>Legale</td></tr>
+      <tr><td class="k">Fine contratto</td><td>Export finale e
+        cancellazione</td><td><span data-ed="working" class="phv">{{PH_END_OF_CONTRACT_DATA}}</span><span data-ed="client">con il legale</span></td><td>Legale</td></tr>
+    </tbody>
+  </table>
+
+  <div class="panel" style="margin-top:20px">La colonna del valore di progetto &egrave; vuota
+    per costruzione: si compila con l&rsquo;IT, e nella stessa sessione si fissano perdita
+    massima accettata, tempo massimo di ripristino e ritenzione. Le ultime due righe dichiarano
+    l&rsquo;ambito e rimandano al legale.</div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Annesso A3 &middot;
+    per la raccolta dei requisiti con l&rsquo;IT</span><span>A3</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_LICENSE_RIGHTS}}</span> <span class="ph">{{PH_DATA_EXPORT_AT_EXIT}}</span> <span class="ph">{{PH_RPO}}</span> <span class="ph">{{PH_RTO}}</span> <span class="ph">{{PH_RETENTION_DEFAULT}}</span></span></div>
+</section>

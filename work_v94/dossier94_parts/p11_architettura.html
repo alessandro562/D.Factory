@@ -1,0 +1,64 @@
+<!-- ══ P11 · ARCHITETTURA E INTEGRAZIONE · lt ════════════════════════════
+     La pila sostituisce il diagramma: quattro rettangoli sovrapposti sono
+     una pila anche senza frecce, e il verso lo dice la numerazione.
+     Restano le tre correzioni obbligatorie della review D2: «Output e sistemi
+     esterni» con il perimetro da definire, «accodamento e persistenza
+     temporanea» al posto di buffer, «elaborazione KPI» al posto di motore. -->
+<section class="page" id="p11_architettura" data-kind="dossier" data-tipo="architettura">
+  {{HD|2|11 / 18}}
+
+  <div class="skim"><span class="who">Per l&rsquo;IT</span><span class="gist">Quattro livelli
+    logici, un confine di rete, acquisizione in sola lettura. Che cosa chiediamo e che cosa non
+    presupponiamo.</span></div>
+
+  <h2 class="tt" style="max-width:540px">Architettura applicativa e integrazione con la rete di
+    stabilimento.</h2>
+
+  <div class="par" style="max-width:580px">Fra impianto e acquisizione esiste un confine di rete
+    definito con l&rsquo;IT. La configurazione standard privilegia l&rsquo;acquisizione in sola
+    lettura; eventuali scambi ulteriori si definiscono in solution design insieme
+    all&rsquo;ambiente, alla segmentazione e alle politiche di accesso. Nessun livello presuppone
+    interventi sulle macchine gi&agrave; installate.</div>
+
+  <div class="lbl">Livelli logici &middot; dal basso verso l&rsquo;alto</div>
+  <div class="stack">
+    <div class="ly o"><u>04</u><div><b>Output e sistemi esterni</b><em>dashboard &middot; report
+      &middot; export &middot; sistemi a valle, perimetro da definire</em></div></div>
+    <div class="ly p"><span class="mk"></span><u>03</u><div><b>Piattaforma D.Factory</b><em>applicazione
+      &middot; archivio &middot; elaborazione KPI &mdash; qui il dato riceve il contesto</em></div></div>
+    <div class="ly o"><u>02</u><div><b>Acquisizione</b><em>connettori &middot; normalizzazione
+      &middot; accodamento e persistenza temporanea</em></div></div>
+    <div class="ly g"><u>01</u><div><b>Impianto</b><em>PLC &middot; sensori &middot; contatori
+      &middot; sistemi gestionali</em></div></div>
+  </div>
+
+  <div style="display:flex;gap:34px;margin-top:24px">
+    <div style="flex:1">
+      <div class="lbl" style="margin-top:0">Richiede</div>
+      <div style="font-size:13px;line-height:1.6;color:var(--l2)">Accesso in lettura ai
+        controllori &middot; punti di misura per le utility &middot; anagrafiche di prodotto e
+        ordine &middot; un ambiente concordato con l&rsquo;IT.</div>
+      <div class="lbl">Non presuppone</div>
+      <div style="font-size:13px;line-height:1.6;color:var(--l2)">Sostituzione delle macchine
+        &middot; rifacimento dei PLC &middot; cloud obbligatorio.</div>
+    </div>
+    <div style="flex:1">
+      <div class="lbl" style="margin-top:0">Specifica</div>
+      <div class="kv"><b>Protocolli</b><span>OPC UA &middot; Modbus &middot; S7 &middot; file</span></div>
+      <div class="kv"><b>Frequenza</b><span>1 s &ndash; 60 s, per punto</span></div>
+      <div class="kv"><b>Modalit&agrave;</b><span>sola lettura</span></div>
+      <div class="kv"><b>Ritenzione</b><span data-ed="working" class="phv">{{PH_RETENTION_DEFAULT}}</span><span data-ed="client">24 mesi, configurabile</span></div>
+      <div class="kv"><b>Ambiente</b><span data-ed="working" class="phv">{{PH_DEPLOYMENT_MODEL}}</span><span data-ed="client">on-premise o cloud</span></div>
+    </div>
+  </div>
+
+  <div class="quote">Nessun cantiere: il dato sale in sola lettura da ci&ograve; che &egrave;
+    gi&agrave; in linea.</div>
+
+  <div class="note">Ambiente, rete, autenticazione, backup e accesso remoto sono valori di
+    progetto: si compilano con l&rsquo;IT sull&rsquo;annesso A3.</div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Schema logico
+    &middot; non &egrave; un disegno di rete</span><span>11</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SUPPORTED_OS}}</span> <span class="ph">{{PH_REQUIRED_PORTS}}</span> <span class="ph">{{PH_READ_ONLY_POLICY}}</span></span></div>
+</section>

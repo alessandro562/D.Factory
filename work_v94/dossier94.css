@@ -1,0 +1,264 @@
+/* ==========================================================================
+   D.FACTORY · DOSSIER TECNICO V9.4 · A4 verticale
+   Il dossier esce dal formato slide. Un dossier non si proietta: si legge da
+   fermi, si stampa, si passa a un collega che apre solo la sua pagina.
+   Canvas A4 a 96 dpi = 794 x 1123. Font Geist incorporati, nessuna richiesta
+   di rete.
+
+   La differenza sostanziale rispetto alla V9.3 non e' il formato: e' il
+   LIVELLO DI SCREMATURA. Ogni pagina dichiara in testa per chi e' e che cosa
+   dice, prima del contenuto. Chi legge sa in tre secondi se la pagina lo
+   riguarda. Senza quella riga un dossier di ventidue pagine si legge tutto o
+   non si legge affatto.
+
+   Palette invariata: nero, bianco, un giallo acido. Il giallo e' accento e
+   non fondo diffuso, al massimo due ruoli gialli per pagina.
+   ========================================================================== */
+*{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --ink:#0A0A0A; --ink-2:#141414; --ink-3:#1C1C1C;
+  --paper:#FFFFFF; --paper-2:#F3F4F0; --paper-3:#E9EAE5;
+  --acid:#E6E011; --acid-wash:rgba(230,224,17,.40);
+  --d1:#FFFFFF; --d2:rgba(255,255,255,.74); --d3:rgba(255,255,255,.48);
+  --d-line:rgba(255,255,255,.16); --d-rule:rgba(255,255,255,.34);
+  --l1:#0A0A0A; --l2:rgba(10,10,10,.76); --l3:rgba(10,10,10,.56);
+  --l-line:rgba(10,10,10,.12); --l-rule:rgba(10,10,10,.26);
+  --ui:"Geist",-apple-system,sans-serif; --mono:"Geist Mono",Menlo,monospace;
+  --m:68px;
+}
+html{background:#181818}
+body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1}
+.doc{display:flex;flex-direction:column;align-items:center;gap:26px;padding:26px 0}
+
+/* A4 a 96 dpi. Il contenuto scorre da 68 px e non deve superare 1050:
+   sotto ci sono il piede e il margine di rifilo. */
+.page{width:794px;height:1123px;position:relative;overflow:hidden;flex:none;
+  padding:68px var(--m) 60px;background:var(--paper);color:var(--l1)}
+.page.dk{background:var(--ink);color:var(--d1)}
+.mono{font-family:var(--mono)}
+
+/* ---------- intestazione: sezione attiva e numerazione ---------- */
+.hd{display:flex;justify-content:space-between;align-items:baseline;
+  padding-bottom:11px;border-bottom:1px solid var(--l-line)}
+.dk .hd{border-bottom-color:var(--d-line)}
+.nav{display:flex;gap:15px;font-size:11.5px;letter-spacing:.005em}
+.nav span{color:var(--l3);white-space:nowrap}
+.dk .nav span{color:var(--d3)}
+.nav span.on{color:var(--l1);font-weight:700;position:relative}
+.dk .nav span.on{color:var(--d1)}
+.nav span.on::after{content:"";position:absolute;left:0;right:0;bottom:-12px;
+  height:2px;background:currentColor}
+.nav i{font-style:normal;font-family:var(--mono);font-size:11px;margin-right:5px;opacity:.7}
+.pg{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--l3);
+  white-space:nowrap;padding-left:14px}
+.dk .pg{color:var(--d3)}
+
+/* ---------- il livello di scrematura ----------
+   .who dice per chi e' la pagina, .gist che cosa ci trova. Insieme sono la
+   ragione per cui questo dossier si puo' leggere per pezzi. */
+.skim{display:flex;gap:14px;align-items:flex-start;margin:22px 0 0}
+.who{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--acid);color:var(--ink);padding:4px 8px;white-space:nowrap;flex:none}
+.gist{font-size:15px;line-height:1.45;color:var(--l2)}
+.dk .gist{color:var(--d2)}
+
+/* ---------- tipografia ---------- */
+h1.tt{margin:20px 0 0;font-size:29px;line-height:1.1;letter-spacing:-.028em;font-weight:600}
+h2.tt{margin:20px 0 0;font-size:25px;line-height:1.14;letter-spacing:-.026em;font-weight:600}
+.par{font-size:15px;line-height:1.64;color:var(--l2);margin:18px 0 0}
+.dk .par{color:var(--d2)}
+.par b{font-weight:600;color:var(--l1)}
+.dk .par b{color:var(--d1)}
+.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--l3);margin:30px 0 11px}
+.dk .lbl{color:var(--d3)}
+.rule{height:1px;background:var(--l-line);margin:24px 0}
+.dk .rule{background:var(--d-line)}
+.note{font-size:12.5px;line-height:1.52;color:var(--l3);margin-top:16px}
+.dk .note{color:var(--d3)}
+.sub{font-size:16.5px;line-height:1.5;color:var(--l2)}
+.dk .sub{color:var(--d2)}
+
+/* ---------- tabelle vere, non griglie disegnate ---------- */
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  font-weight:600;color:var(--l1);background:var(--paper-2);
+  padding:8px 12px 8px 0;border-bottom:1px solid var(--l-rule)}
+th:first-child{padding-left:8px}
+td{padding:8px 12px 8px 0;border-bottom:1px solid var(--l-line);vertical-align:top;
+  line-height:1.42;color:var(--l2)}
+td:first-child{padding-left:8px}
+td.k{font-weight:500;color:var(--l1)}
+td.n{text-align:right;font-feature-settings:"tnum" 1}
+tr.grp td{border-bottom:none;padding-top:16px;padding-bottom:3px;font-family:var(--mono);
+  font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--l3)}
+table.dense td{padding-top:6px;padding-bottom:6px;font-size:13px}
+table.dense th{padding-top:7px;padding-bottom:7px}
+.dk th{background:var(--ink-2);color:var(--d1);border-bottom-color:var(--d-rule)}
+.dk td{border-bottom-color:var(--d-line);color:var(--d2)}
+.dk td.k{color:var(--d1)}
+/* la matrice si legge come progressione prima di essere letta parola per parola */
+.m0{color:rgba(10,10,10,.30)} .m1{color:rgba(10,10,10,.56)} .m2{color:#0A0A0A;font-weight:500}
+.dk .m0{color:rgba(255,255,255,.32)} .dk .m1{color:rgba(255,255,255,.60)}
+.dk .m2{color:#FFFFFF;font-weight:500}
+
+/* ---------- piede ---------- */
+.ft{position:absolute;left:var(--m);right:var(--m);bottom:26px;display:flex;
+  justify-content:space-between;align-items:baseline;gap:18px;font-size:11px;color:var(--l3)}
+.dk .ft{color:var(--d3)}
+.wm{font-weight:700;font-size:13.5px;letter-spacing:-.045em;color:var(--l1);white-space:nowrap}
+.dk .wm{color:var(--d1)}
+.wm i{font-style:normal;color:inherit}
+.decl{font-weight:500;color:var(--l2)}
+.dk .decl{color:var(--d2)}
+
+/* ---------- pila dei livelli logici ----------
+   Sostituisce il diagramma SVG della V9.3. Quattro rettangoli sovrapposti
+   sono una pila anche senza frecce: il verso lo dice la numerazione. */
+.stack .ly{display:flex;align-items:center;gap:16px;padding:12px 18px;margin-bottom:7px;
+  position:relative}
+.stack .ly.o{border:1px solid rgba(10,10,10,.42)}
+.stack .ly.p{background:var(--ink);color:var(--d1)}
+.stack .ly.g{background:var(--paper-3)}
+.stack .ly b{font-size:15.5px;font-weight:600;letter-spacing:-.02em;display:block}
+.stack .ly em{font-style:normal;font-size:12px;color:var(--l2);display:block;margin-top:3px}
+.stack .ly.p em{color:var(--d2)}
+.stack .ly u{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+  text-decoration:none;color:var(--l3);width:22px;flex:none}
+.stack .ly.p u{color:rgba(255,255,255,.5)}
+.mk{position:absolute;left:-5px;top:0;bottom:0;width:5px;background:var(--acid)}
+
+/* ---------- indice per ruolo ---------- */
+.idx{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+.idx section{border-top:1px solid var(--l-line);padding:13px 0 15px}
+.idx h3{margin:0 0 4px;font-size:14.5px;font-weight:650;letter-spacing:-.014em}
+.idx p{margin:0;font-size:12.5px;line-height:1.5;color:var(--l3)}
+.idx ol{margin:9px 0 0;padding:0;list-style:none}
+.idx li{display:flex;gap:10px;font-size:13px;line-height:1.7;color:var(--l2)}
+.idx li b{font-family:var(--mono);font-size:11px;font-weight:400;
+  color:rgba(10,10,10,.42);flex:none;width:20px}
+
+/* ---------- coppie chiave/valore ---------- */
+.kv{display:flex;justify-content:space-between;gap:14px;font-size:13.5px;padding:8px 0;
+  border-bottom:1px solid var(--l-line)}
+.dk .kv{border-bottom-color:var(--d-line)}
+.kv b{font-weight:500}
+.kv span{color:var(--l3);text-align:right}
+.dk .kv span{color:var(--d3)}
+
+/* ---------- la frase che porta il senso della pagina ---------- */
+.quote{border-left:4px solid var(--acid);padding-left:18px;font-size:16px;line-height:1.42;
+  font-weight:500;margin-top:26px}
+
+/* ---------- colonne ---------- */
+.cols{display:flex;gap:0}
+.cols .col{flex:1;padding:0 22px;border-right:1px solid var(--l-line)}
+.dk .cols .col{border-right-color:var(--d-line)}
+.cols .col:first-child{padding-left:0}
+.cols .col:last-child{padding-right:0;border-right:none}
+.cols--plain .col{border-right:none;padding-left:0;padding-right:26px}
+.ct{font-size:15.5px;line-height:1.24;font-weight:650;letter-spacing:-.016em}
+.cd{font-size:13px;line-height:1.5;margin-top:8px;color:var(--l2)}
+.dk .cd{color:rgba(255,255,255,.68)}
+
+/* ---------- pannello ---------- */
+.panel{background:var(--paper-2);padding:16px 20px;font-size:13.5px;line-height:1.56;
+  color:var(--l2)}
+.dk .panel{background:var(--ink-2);color:var(--d2)}
+.panel--acid{border-left:5px solid var(--acid)}
+
+/* ---------- elenco strutturato ----------
+   Un elenco separato da <br> non ha ne' ritmo ne' ancore. Qui ogni voce ha
+   un numero e una riga: si scorre con l'occhio, non si legge. */
+.ls{display:block;margin:0;padding:0}
+.ls li{list-style:none;display:flex;gap:14px;align-items:baseline;padding:6px 0;
+  border-top:1px solid var(--l-line)}
+.dk .ls li{border-top-color:var(--d-line)}
+.ls li:last-child{border-bottom:1px solid var(--l-line)}
+.dk .ls li:last-child{border-bottom-color:var(--d-line)}
+.ls b{font-family:var(--mono);font-size:11px;font-weight:400;flex:none;width:16px;
+  letter-spacing:.04em;color:rgba(10,10,10,.42)}
+.dk .ls b{color:rgba(255,255,255,.38)}
+.ls span{font-size:14px;line-height:1.38}
+.dk .ls span{color:rgba(255,255,255,.92)}
+
+/* ---------- sequenza di stazioni o di fasi ----------
+   Le frecce sono uscite: una sequenza numerata su una linea si legge da
+   sinistra a destra senza bisogno di dirlo, e non ha geometria da sbagliare. */
+.seq{display:flex;border-top:1px solid var(--l-rule);gap:0}
+.dk .seq{border-top-color:var(--d-rule)}
+.seq .st{flex:1;padding:0 14px 0 0;position:relative}
+.seq .st::before{content:"";position:absolute;left:0;top:-1px;width:11px;height:11px;
+  background:var(--l1)}
+.dk .seq .st::before{background:var(--d1)}
+.seq .st.acid::before{background:var(--acid)}
+.seq .st u{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+  text-decoration:none;color:var(--l3);margin-top:20px}
+.dk .seq .st u{color:var(--d3)}
+.seq .st b{display:block;font-size:14px;font-weight:600;letter-spacing:-.018em;margin-top:6px}
+.seq .st em{display:block;font-style:normal;font-size:12px;line-height:1.48;
+  color:var(--l2);margin-top:5px}
+.dk .seq .st em{color:var(--d2)}
+
+/* ---------- griglia degli attributi di contesto ---------- */
+.attr{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.attr div{background:rgba(255,255,255,.07);padding:11px 13px}
+/* il giallo al 16% su nero non e' giallo: e' oliva. La cella marcata si
+   distingue con il filetto e con un fondo piu' chiaro, non con una velatura. */
+.attr div.acid{background:rgba(255,255,255,.13);border-left:4px solid var(--acid)}
+.attr u{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;
+  text-decoration:none;color:var(--d3)}
+.attr b{display:block;font-size:14.5px;font-weight:500;margin-top:5px}
+
+/* ---------- fascia di numeri ---------- */
+.nums{display:flex;gap:8px}
+.nums div{flex:1;background:var(--paper-2);padding:12px 14px}
+.nums u{display:block;font-size:21px;font-weight:600;letter-spacing:-.03em;
+  text-decoration:none;color:var(--l1)}
+.nums em{display:block;font-style:normal;font-size:11px;line-height:1.4;color:var(--l3);
+  margin-top:5px}
+
+/* ---------- marchio di stato ---------- */
+.dev{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;border:1px solid var(--l-rule);padding:4px 9px;color:var(--l2)}
+.dk .dev{border-color:var(--d-rule);color:var(--d2)}
+
+/* ---------- working edition · impalcatura editoriale ---------- */
+.phb{position:absolute;left:var(--m);right:var(--m);bottom:6px;display:flex;gap:10px;
+  font-family:var(--mono);font-size:10px;line-height:1.4;align-items:baseline}
+.phb b{font-weight:400;opacity:.6;white-space:nowrap;letter-spacing:.06em}
+.phb>span{opacity:.85}
+.dk .phb{color:rgba(255,255,255,.58)} .phb{color:rgba(10,10,10,.58)}
+.ph{font-family:var(--mono);font-size:inherit;padding:1px 4px;
+  border:1px dashed currentColor;border-radius:2px;white-space:nowrap}
+
+/* valore di segnaposto dentro una tabella o una coppia chiave/valore:
+   e' impalcatura della working edition, non testo del documento */
+.phv{font-family:var(--mono);font-size:11.5px;letter-spacing:-.01em;
+  color:rgba(10,10,10,.62);overflow-wrap:anywhere}
+.dk .phv{color:rgba(255,255,255,.62)}
+
+a{color:var(--l1)}
+
+@media print{
+  html,body{background:#fff}
+  .doc{gap:0;padding:0}
+  .page{page-break-after:always;break-after:page}
+  .page:last-child{page-break-after:auto}
+}
+@page{size:A4;margin:0}
+
+/* ---------- rifiniture di tabella ---------- */
+td.ar{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--l3);white-space:nowrap}
+td em{display:block;font-style:normal;font-size:12px;line-height:1.42;color:var(--l3);
+  margin-top:3px}
+.dk td em{color:var(--d3)}
+
+/* tre cifre in fila, per i risultati di un calcolo */
+.fig{display:flex;gap:0;align-items:baseline}
+.fig div{flex:1}
+.fig u{text-decoration:none;font-size:19px;font-weight:600;letter-spacing:-.03em;color:var(--l1)}
+.fig em{font-style:normal;font-size:11px;line-height:1.4;color:var(--l3);display:block;
+  margin-top:4px}

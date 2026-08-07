@@ -1,0 +1,90 @@
+<!-- ══ A1 · COMPATIBILITA' TECNICA · lt ══════════════════════════════════
+     Il modello di censimento che l'audit compila macchina per macchina.
+     La colonna «chi risponde» esiste solo nella working edition: serve a chi
+     prepara l'audit, non a chi riceve il dossier.
+     Gli esiti restano da verificare finche' l'audit non e' svolto, ma con una
+     nota unica: ripeterlo otto volte non lo rende piu' vero. -->
+<section class="page" id="pa1_compatibilita" data-kind="appendix" data-tipo="annesso">
+  {{HD|A|ANNESSO A1}}
+
+  <div class="skim"><span class="who">Per l&rsquo;IT e manutenzione</span><span class="gist">Il
+    modulo che si compila in audit, una riga per componente, macchina per macchina.</span></div>
+
+  <h2 class="tt" style="max-width:540px">La compatibilit&agrave; si verifica sull&rsquo;impianto
+    reale.</h2>
+
+  <div class="par" style="max-width:580px">Questo annesso &egrave; il modello di censimento che
+    l&rsquo;audit tecnico compila macchina per macchina: otto componenti, che cosa si verifica su
+    ciascuno e con quale modalit&agrave;. Un elenco generico di protocolli non dice se un
+    impianto &egrave; leggibile; lo dice il rilievo su quella macchina, con quel controllore e
+    quella versione.</div>
+
+  <div class="lbl" style="margin-top:22px">Otto componenti</div>
+  <table class="dense" data-ed="working">
+    <thead><tr><th style="width:22%">Componente</th><th>Che cosa si verifica</th>
+      <th style="width:22%">Modalit&agrave;</th><th style="width:20%">Chi risponde</th></tr></thead>
+    <tbody>
+      <tr><td class="k">PLC</td><td>Costruttore, modello e stato del controllore</td>
+        <td>rilievo in campo</td><td>Manutenzione</td></tr>
+      <tr><td class="k">Protocollo</td><td>Protocollo esposto e interfaccia disponibile</td>
+        <td>prova di lettura</td><td>Audit tecnico</td></tr>
+      <tr><td class="k">Versione</td><td>Versione installata su quella macchina</td>
+        <td>rilievo in campo</td><td>Audit tecnico</td></tr>
+      <tr><td class="k">Accesso</td><td>Tag leggibili e frequenza sostenibile</td>
+        <td>prova di lettura</td><td>Audit tecnico</td></tr>
+      <tr><td class="k">Gateway</td><td>Segmento di rete, gateway e regole firewall</td>
+        <td>documentazione IT</td><td>IT del cliente</td></tr>
+      <tr><td class="k">Contatore</td><td>Punti di misura dell&rsquo;energia gi&agrave;
+        presenti</td><td>rilievo in campo</td><td>Audit tecnico</td></tr>
+      <tr><td class="k">ERP</td><td>Punto di innesto, formato e direzione</td>
+        <td>documentazione IT</td><td>IT del cliente</td></tr>
+      <tr><td class="k">Lettura e scrittura</td><td>Direzione del flusso verso le macchine</td>
+        <td>definita in progetto</td><td>Progetto</td></tr>
+    </tbody>
+  </table>
+  <table class="dense" data-ed="client">
+    <thead><tr><th style="width:26%">Componente</th><th>Che cosa si verifica</th>
+      <th style="width:28%">Modalit&agrave; di verifica</th></tr></thead>
+    <tbody>
+      <tr><td class="k">PLC</td><td>Costruttore, modello e stato del controllore</td>
+        <td>rilievo in campo</td></tr>
+      <tr><td class="k">Protocollo</td><td>Protocollo esposto e interfaccia disponibile</td>
+        <td>prova di lettura</td></tr>
+      <tr><td class="k">Versione</td><td>Versione installata su quella macchina</td>
+        <td>rilievo in campo</td></tr>
+      <tr><td class="k">Accesso</td><td>Tag leggibili e frequenza sostenibile</td>
+        <td>prova di lettura</td></tr>
+      <tr><td class="k">Gateway</td><td>Segmento di rete, gateway e regole firewall</td>
+        <td>documentazione IT</td></tr>
+      <tr><td class="k">Contatore</td><td>Punti di misura dell&rsquo;energia gi&agrave;
+        presenti</td><td>rilievo in campo</td></tr>
+      <tr><td class="k">ERP</td><td>Punto di innesto, formato e direzione</td>
+        <td>documentazione IT</td></tr>
+      <tr><td class="k">Lettura e scrittura</td><td>Direzione del flusso verso le macchine</td>
+        <td>definita in progetto</td></tr>
+    </tbody>
+  </table>
+
+  <div class="lbl">I quattro esiti ammessi</div>
+  <table class="dense">
+    <thead><tr><th style="width:26%">Esito</th><th>Che cosa significa</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Supportato</td><td>il segnale si legge con quello che c&rsquo;&egrave;
+        gi&agrave;, alla frequenza richiesta</td></tr>
+      <tr><td class="k">Condizionato</td><td>si legge, ma serve un intervento: una licenza, un
+        gateway, una configurazione</td></tr>
+      <tr><td class="k">Da chiarire</td><td>il rilievo non &egrave; concludente e va ripreso con
+        il costruttore o con l&rsquo;IT</td></tr>
+      <tr><td class="k">Da aggiungere</td><td>il dato non esiste in campo: serve un punto di
+        misura nuovo</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">La colonna dell&rsquo;esito si compila durante il rilievo, non prima: una
+    riga condizionata non &egrave; un problema, &egrave; una voce di costo che va vista subito.
+    Le sorgenti a cui il censimento si riferisce sono descritte a pagina 09.</div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Annesso A1 &middot;
+    modello di censimento, compilato durante l&rsquo;audit</span><span>A1</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SUPPORTED_PROTOCOLS}}</span> <span class="ph">{{PH_PROTOCOL_VERSIONS}}</span> <span class="ph">{{PH_GATEWAY_REQUIREMENTS}}</span></span></div>
+</section>

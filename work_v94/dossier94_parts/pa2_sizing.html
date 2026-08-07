@@ -1,0 +1,67 @@
+<!-- ══ A2 · DIMENSIONAMENTO · lt ═════════════════════════════════════════
+     Le cinque grandezze e le tre fasce, anche nella client edition: nella
+     V9.2 il cliente riceveva uno schema con delle frecce, che era meno utile
+     del metodo che diceva di mostrare.
+     G4 aperto: CPU, RAM e storage restano da definire e lo dichiarano. Le
+     fasce sono ipotesi di lavoro, non un listino. -->
+<section class="page" id="pa2_sizing" data-kind="appendix" data-tipo="annesso">
+  {{HD|A|ANNESSO A2}}
+
+  <div class="skim"><span class="who">Per l&rsquo;IT</span><span class="gist">Da che cosa
+    dipende la taglia dell&rsquo;ambiente, e tre ordini di grandezza dichiarati per
+    orientarsi.</span></div>
+
+  <h2 class="tt" style="max-width:560px">Il dimensionamento si calcola, non si sceglie a
+    listino.</h2>
+
+  <div class="par" style="max-width:580px">Cinque grandezze determinano la taglia
+    dell&rsquo;ambiente: quanti segnali si leggono per linea, ogni quanto si campiona, per quanto
+    tempo si conserva, quante linee sono collegate e quanti utenti lavorano in contemporanea. Le
+    tre fasce qui sotto sono ipotesi di lavoro dichiarate: servono a dare un ordine di grandezza,
+    non a scegliere una configurazione.</div>
+
+  <div class="lbl" style="margin-top:18px">Le cinque grandezze</div>
+  <table class="dense">
+    <thead><tr><th style="width:24%">Grandezza</th><th>Che cosa misura</th>
+      <th style="width:30%">Dove si legge</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Tag</td><td>quanti segnali per linea</td><td>censimento A1</td></tr>
+      <tr><td class="k">Frequenza</td><td>ogni quanto si campiona ciascun punto</td>
+        <td>censimento A1</td></tr>
+      <tr><td class="k">Conservazione</td><td>per quanto tempo si tiene la serie storica</td>
+        <td>requisiti A3</td></tr>
+      <tr><td class="k">Linee</td><td>quante linee collegate, oggi e in prospettiva</td>
+        <td>perimetrazione</td></tr>
+      <tr><td class="k">Utenti</td><td>quanti lavorano in contemporanea</td>
+        <td>perimetrazione</td></tr>
+    </tbody>
+  </table>
+
+  <div class="lbl" style="margin-top:18px">Le tre fasce &middot; ipotesi di lavoro, da confermare con l&rsquo;IT</div>
+  <table class="dense">
+    <thead><tr><th style="width:15%">Fascia</th><th style="width:17%">Tag</th>
+      <th style="width:13%">Linee</th><th style="width:13%">Frequenza</th>
+      <th style="width:15%">Retention</th><th>Utenti</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Piccola</td><td>fino a 500</td><td>1</td><td>1 s</td>
+        <td>12 mesi</td><td>fino a 10</td></tr>
+      <tr><td class="k">Media</td><td>500 &ndash; 2.000</td><td>2 &ndash; 4</td><td>1 s</td>
+        <td>24 mesi</td><td>10 &ndash; 30</td></tr>
+      <tr><td class="k">Grande</td><td>oltre 2.000</td><td>5 e oltre</td><td>&#8804; 1 s</td>
+        <td>36 mesi</td><td>oltre 30</td></tr>
+    </tbody>
+  </table>
+
+  <div class="lbl" style="margin-top:18px">Che cosa non &egrave; dichiarato in questa versione</div>
+  <div class="kv"><b>CPU</b><span data-ed="working" class="phv">{{PH_MIN_CPU}}</span><span data-ed="client">si chiude con l&rsquo;audit tecnico</span></div>
+  <div class="kv"><b>RAM</b><span data-ed="working" class="phv">{{PH_MIN_RAM}}</span><span data-ed="client">si chiude con l&rsquo;audit tecnico</span></div>
+  <div class="kv"><b>Storage</b><span data-ed="working" class="phv">{{PH_MIN_STORAGE}}</span><span data-ed="client">si chiude con l&rsquo;audit tecnico</span></div>
+  <div class="kv"><b>Alta disponibilit&agrave;</b><span data-ed="working" class="phv">{{PH_HIGH_AVAILABILITY}}</span><span data-ed="client">si definisce con l&rsquo;IT</span></div>
+
+  <div class="panel" style="margin-top:14px">CPU, RAM e storage dipendono dal censimento: il
+    dimensionamento si consegna con la proposta tecnica, dopo l&rsquo;audit.</div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Annesso A2 &middot;
+    metodo di dimensionamento e fasce dichiarate</span><span>A2</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_STORAGE_GROWTH_RULE}}</span> <span class="ph">{{PH_RETENTION_DEFAULT}}</span></span></div>
+</section>

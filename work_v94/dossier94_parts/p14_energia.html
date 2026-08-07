@@ -1,0 +1,63 @@
+<!-- ══ P14 · METODO · ENERGIA · lt ═══════════════════════════════════════
+     Stessa grammatica di P13, impaginazione diversa: li' un grafico e una
+     catena, qui i parametri e tre numeri. Due pagine di metodo consecutive
+     con lo stesso impianto si leggerebbero come una pagina ripetuta.
+     Mai «costo del pezzo» quando il perimetro e' la sola energia. -->
+<section class="page" id="p14_energia" data-kind="dossier" data-tipo="metodo">
+  {{HD|3|14 / 18}}
+
+  <div class="skim"><span class="who">Energy manager</span><span class="gist">Come il consumo si
+    lega allo stato produttivo, e da quali parametri dipendono costo ed emissioni.</span></div>
+
+  <h2 class="tt" style="max-width:540px">Energia, costo e CO&#8322; per unit&agrave;
+    prodotta.</h2>
+
+  <div class="par" style="max-width:580px">Il consumo viene misurato per stato produttivo, non
+    solo per periodo: la stessa ora pesa in modo diverso se la linea &egrave; in marcia o ferma.
+    L&rsquo;energia del periodo viene divisa per i pezzi conformi dello stesso periodo per
+    ottenere il consumo specifico; da l&igrave;, applicando il prezzo di fornitura e il fattore
+    di emissione dichiarati, si ottengono il costo energetico e le emissioni per mille pezzi.</div>
+
+  <div class="lbl">Parametri del calcolo &middot; turno illustrativo</div>
+  <table class="dense">
+    <thead><tr><th style="width:46%">Parametro</th><th>Valore</th>
+      <th style="width:30%">Da dove viene</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Potenza in marcia</td><td>95 kW</td><td>contatore di linea</td></tr>
+      <tr><td class="k">Potenza a impianto fermo</td><td>38 kW</td><td>contatore di linea</td></tr>
+      <tr><td class="k">Durata del turno</td><td>480 min</td><td>calendario</td></tr>
+      <tr><td class="k">Fermo nel turno</td><td>26 min</td><td>stati di macchina</td></tr>
+      <tr><td class="k">Cadenza nominale</td><td>500 pz/min</td><td>anagrafica di prodotto</td></tr>
+      <tr><td class="k">Prezzo dell&rsquo;energia</td><td>0,22 &euro;/kWh</td><td>contratto di
+        fornitura</td></tr>
+      <tr><td class="k">Fattore di emissione</td><td>0,35 kgCO&#8322;e/kWh</td><td>contratto di
+        fornitura</td></tr>
+    </tbody>
+  </table>
+
+  <div class="lbl">Il turno in tre numeri, ognuno con il suo calcolo</div>
+  <div class="nums">
+    <div><u>735 kWh</u><em>454 min in marcia + 26 a fermo<br>719 + 16</em></div>
+    <div><u>162 &euro;</u><em>735 kWh &#215; 0,22 &euro;/kWh</em></div>
+    <div><u>227.000 pz</u><em>454 min &#215; 500 pz/min</em></div>
+  </div>
+
+  <div class="panel panel--acid" style="margin-top:10px">
+    <div class="fig">
+      <div><u>3,2 kWh</u><em>735 &#247; 227.000 &#215; 1.000</em></div>
+      <div><u>0,71 &euro;</u><em>&#215; 0,22 &euro;/kWh</em></div>
+      <div><u>1,13 kgCO&#8322;e</u><em>&#215; 0,35 kgCO&#8322;e/kWh</em></div>
+      <div style="flex:.9"><em style="margin-top:0">ogni <b style="font-weight:600;
+        color:var(--l1)">1.000 pezzi</b> conformi</em></div>
+    </div>
+  </div>
+
+  <div class="note">Il perimetro di questa misura &egrave; la sola energia: il consumo specifico
+    e il costo energetico per mille pezzi non sono il costo del pezzo, che comprende anche
+    materiali, manodopera e ammortamenti. Il perimetro della potenza a impianto fermo &mdash;
+    linea, macchine o ausiliari &mdash; si dichiara in fase di progetto.</div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Turno illustrativo
+    &middot; parametri da confermare</span><span>14</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_ENERGY_PRICE_SOURCE}}</span> <span class="ph">{{PH_EMISSION_FACTOR_SOURCE}}</span> <span class="ph">{{PH_CO2_METHOD}}</span> <span class="ph">{{PH_COST_ALLOCATION_RULE}}</span></span></div>
+</section>

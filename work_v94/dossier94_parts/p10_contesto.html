@@ -1,0 +1,54 @@
+<!-- ══ P10 · MODELLO DI CONTESTO · dk ════════════════════════════════════
+     Il cuore tecnico del prodotto, e per questo l'unica pagina scura della
+     sezione 2. Nove attributi in griglia: il nono, la causa, e' l'unico che
+     non arriva dal campo ed e' l'unico segno giallo della pagina.
+     La causa e' associata e validata, mai «rilevata automaticamente». -->
+<section class="page dk" id="p10_contesto" data-kind="dossier" data-tipo="spiegazione">
+  {{HD|2|10 / 18}}
+
+  <div class="skim"><span class="who">Per l&rsquo;IT e produzione</span><span class="gist">I
+    nove attributi che accompagnano ogni evento acquisito, e perch&eacute; senza di loro il dato
+    resta un numero.</span></div>
+
+  <h2 class="tt" style="max-width:540px">Tempo, asset, prodotto e stato nello stesso
+    modello.</h2>
+
+  <div class="par" style="max-width:580px;color:rgba(255,255,255,.86)">Un conteggio senza
+    contesto non si pu&ograve; confrontare. Lo stesso numero di pezzi pu&ograve; appartenere a
+    un formato veloce o a uno lento, a un turno pieno o a uno interrotto, a un ordine in
+    tolleranza o a uno fuori specifica. Per questo ogni evento acquisito riceve un insieme fisso
+    di attributi prima di essere archiviato: sono quelli a rendere possibili
+    l&rsquo;aggregazione, il confronto e l&rsquo;attribuzione di un costo.</div>
+
+  <div class="lbl">I nove attributi di ogni evento</div>
+  <div class="attr">
+    <div><u>01</u><b>timestamp</b></div>
+    <div><u>02</u><b>sito</b></div>
+    <div><u>03</u><b>linea</b></div>
+    <div><u>04</u><b>macchina</b></div>
+    <div><u>05</u><b>prodotto</b></div>
+    <div><u>06</u><b>ordine</b></div>
+    <div><u>07</u><b>turno</b></div>
+    <div><u>08</u><b>stato</b></div>
+    <div class="acid"><u>09</u><b>causa</b></div>
+  </div>
+
+  <div class="note">La causa &egrave; proposta sulla base dello stato e validata da chi la
+    conosce: non viene rilevata automaticamente. &Egrave; l&rsquo;unico dei nove attributi che
+    non arriva dal campo, ed &egrave; per questo che &egrave; marcata.</div>
+
+  <div class="lbl">Che cosa rende possibile</div>
+  <ul class="ls">
+    <li><b>01</b><span>Aggregare eventi diversi sullo stesso perimetro</span></li>
+    <li><b>02</b><span>Confrontare turni, formati, linee e periodi</span></li>
+    <li><b>03</b><span>Attribuire a ogni evento una durata, una perdita e un costo</span></li>
+    <li><b>04</b><span>Ricostruire un indicatore risalendo agli eventi che lo compongono</span></li>
+  </ul>
+
+  <div class="quote">Senza questi nove attributi due misure fatte in momenti diversi non sono
+    confrontabili, e un indicatore non &egrave; verificabile.</div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Modello di contesto
+    &middot; nove attributi per ogni evento</span><span>10</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_TIME_SYNC_REQUIREMENT}}</span> <span class="ph">{{PH_STANDARD_TAG_MODEL}}</span> <span class="ph">{{PH_CAUSE_VALIDATION_PROCESS}}</span></span></div>
+</section>

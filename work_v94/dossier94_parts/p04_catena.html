@@ -1,0 +1,66 @@
+<!-- ══ P04 · DAL SEGNALE ALLA DECISIONE · lt ═════════════════════════════
+     Fonde le due pagine V9.3 «architettura funzionale» e «base comune»: la
+     catena e la base sono lo stesso argomento visto due volte, e su A4 stanno
+     in una pagina sola senza comprimere niente.
+     Le frecce sono uscite: una sequenza numerata su una linea si legge da
+     sinistra a destra senza bisogno di disegnarlo. -->
+<section class="page" id="p04_catena" data-kind="dossier" data-tipo="architettura">
+  {{HD|1|04 / 18}}
+
+  <div class="skim"><span class="who">Per tutti</span><span class="gist">La catena che porta il
+    segnale alla decisione, e la base di dati che i tre livelli condividono.</span></div>
+
+  <h2 class="tt" style="max-width:520px">Dal segnale alla decisione, e la base che i tre livelli
+    condividono.</h2>
+
+  <div class="par" style="max-width:580px">L&rsquo;acquisizione raccoglie i segnali gi&agrave;
+    disponibili in impianto. La contestualizzazione associa a ogni evento gli attributi che lo
+    rendono confrontabile. L&rsquo;elaborazione applica le formule dichiarate e produce
+    indicatori, perdite e costi. La restituzione mette il risultato dove viene usato. La
+    decisione resta alle persone: il sistema fornisce a tutte la stessa base.</div>
+
+  <div class="lbl">Le cinque stazioni &middot; da sinistra a destra</div>
+  <div class="seq">
+    <div class="st"><u>01</u><b>Acquisizione</b><em>stati e conteggi &middot; energia e utility
+      &middot; ordini e anagrafiche</em></div>
+    <div class="st"><u>02</u><b>Contesto</b><em>macchina, linea e turno &middot; prodotto e
+      ordine &middot; stato e causa</em></div>
+    <div class="st"><u>03</u><b>Elaborazione</b><em>formule dichiarate &middot; indicatori e
+      perdite &middot; costi ed emissioni</em></div>
+    <div class="st"><u>04</u><b>Restituzione</b><em>dashboard &middot; report ed export
+      &middot; interfacce verso i sistemi</em></div>
+    <div class="st acid"><u>05</u><b>Decisione</b><em>che cosa chiudere &middot; in che ordine
+      &middot; con quale verifica</em></div>
+  </div>
+  <div class="note">In giallo la sola stazione che non appartiene al software.</div>
+
+  <div class="lbl">La base comune ai tre livelli</div>
+  <table class="dense">
+    <thead><tr><th style="width:24%">Famiglia</th><th>Che cosa contiene</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Dati operativi</td><td>stati &middot; conteggi &middot;
+        velocit&agrave; &middot; qualit&agrave; e scarti &middot; eventi</td></tr>
+      <tr><td class="k">Dati energetici</td><td>energia &middot; potenza &middot; utility
+        &middot; costi &middot; fattori di emissione</td></tr>
+      <tr><td class="k">Contesto</td><td>macchina e linea &middot; turno &middot; prodotto
+        &middot; ordine &middot; causa associata</td></tr>
+      <tr><td class="k">Output comuni</td><td>dashboard &middot; storico &middot; report
+        &middot; export</td></tr>
+    </tbody>
+  </table>
+
+  <div style="background:var(--ink);color:var(--d1);padding:15px 18px;margin-top:18px;
+              position:relative">
+    <div class="lbl" style="margin:0;color:rgba(255,255,255,.62)">BASE COMUNE</div>
+    <div style="font-size:15px;font-weight:500;margin-top:7px">Una sola acquisizione &middot; un
+      solo modello di contesto &middot; uno storico condiviso</div>
+    <div style="position:absolute;right:0;top:0;bottom:0;width:14px;background:var(--acid)"></div>
+  </div>
+
+  <div class="note">Connect, Insight e Refyn leggono questa base. Il perimetro riga per riga dei
+    tre livelli &egrave; a pagina 08.</div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Schema funzionale
+    &middot; l&rsquo;architettura applicativa &egrave; a pagina 11</span><span>04</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_STANDARD_TAG_MODEL}}</span> <span class="ph">{{PH_CONNECT_EXACT_SCOPE}}</span></span></div>
+</section>

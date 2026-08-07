@@ -1,0 +1,81 @@
+<!-- ══ P13 · METODO · OEE DI LINEA · lt ══════════════════════════════════
+     Apre la sezione 3. Un solo grafico, e solo barre orizzontali: la
+     scomposizione del turno. Le formule non si ripetono qui, stanno
+     nell'annesso A4 e il dossier non le dice due volte.
+     Il ranking delle cause non si ripete qui: sta su P06. -->
+<section class="page" id="p13_oee" data-kind="dossier" data-tipo="metodo">
+  {{HD|3|13 / 18}}
+
+  <div class="skim"><span class="who">Produzione</span><span class="gist">Da dove viene ogni
+    pezzo del calcolo e chi lo valida. Nessun numero senza il metodo che lo produce.</span></div>
+
+  <h2 class="tt" style="max-width:560px">Come si calcola la disponibilit&agrave; e l&rsquo;OEE
+    di linea.</h2>
+
+  <div class="par" style="max-width:580px">Il perimetro &egrave; una linea, tutte le macchine
+    che la compongono e un turno di riferimento. Prima del calcolo vengono dichiarati il tempo
+    pianificato, le fermate programmate, la cadenza di riferimento di ogni formato e il criterio
+    di conteggio dei pezzi conformi. Le perdite vengono attribuite alla componente che le ha
+    generate, cos&igrave; che il risultato dica non solo quanto si &egrave; perso, ma dove.</div>
+
+  <div class="lbl">Scomposizione di un turno &middot; ogni barra &egrave; lunga quanto la
+    percentuale a destra</div>
+  <svg width="658" height="186" viewBox="0 0 658 186" role="img" aria-labelledby="o13t o13d">
+    <title id="o13t">Scomposizione dell&rsquo;OEE di linea</title>
+    <desc id="o13d">Il tempo pianificato scende di gradino in gradino: prima la
+      disponibilit&agrave;, poi il ritmo, poi la qualit&agrave;. Ogni barra &egrave; lunga quanto
+      la percentuale cumulativa scritta accanto; in giallo la capacit&agrave; persa in quel
+      passaggio. Turno illustrativo.</desc>
+
+    <rect x="190" y="0" width="420" height="28" fill="rgba(10,10,10,.13)"/>
+    <rect x="190" y="40" width="397" height="28" fill="rgba(10,10,10,.13)"/>
+    <rect x="587" y="40" width="23" height="28" fill="#E6E011"/>
+    <rect x="190" y="80" width="314" height="28" fill="rgba(10,10,10,.13)"/>
+    <rect x="504" y="80" width="83" height="28" fill="#E6E011"/>
+    <rect x="190" y="120" width="300" height="28" fill="#0A0A0A"/>
+    <rect x="490" y="120" width="14" height="28" fill="#E6E011"/>
+
+    <g font-family="Geist" font-size="12.5" fill="rgba(10,10,10,.76)" text-anchor="end">
+      <text x="178" y="19">Tempo pianificato</text><text x="178" y="59">Tempo di marcia</text>
+      <text x="178" y="99">Ritmo effettivo</text><text x="178" y="139">Pezzi conformi</text>
+    </g>
+    <g font-family="Geist" font-size="12.5" fill="rgba(10,10,10,.76)" text-anchor="end">
+      <text x="658" y="19">100%</text><text x="658" y="59">94,6%</text>
+      <text x="658" y="99">74,7%</text>
+    </g>
+    <text x="658" y="139" font-family="Geist" font-size="12.5" font-weight="600" fill="#0A0A0A"
+          text-anchor="end">71,4%</text>
+
+    <path d="M0 162 L658 162" stroke="rgba(10,10,10,.13)"/>
+    <text x="0" y="180" font-family="Geist" font-size="12" fill="rgba(10,10,10,.56)">94,6% &#215; 79% &#215; 95,6% = <tspan font-weight="600" fill="#0A0A0A">71,4%</tspan> &middot; in giallo la capacit&#224; persa a ogni gradino</text>
+  </svg>
+
+  <div class="lbl">Catena di calcolo &middot; ogni passaggio ha una sorgente e una
+    validazione</div>
+  <table class="dense">
+    <thead><tr><th style="width:32%">Passaggio</th><th style="width:32%">Sorgente</th>
+      <th>Validazione</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Tempo di apertura</td><td>Calendario di turno</td><td>Definito nel
+        prodotto</td></tr>
+      <tr><td class="k">Fermo registrato</td><td>Segnale di macchina</td><td>Associato in
+        reparto</td></tr>
+      <tr><td class="k">Causa del fermo</td><td>Operatore</td><td>Validata a fine turno</td></tr>
+      <tr><td class="k">Pezzi buoni e scarti</td><td>Conteggio di linea</td><td>Riconciliato con
+        l&rsquo;ordine</td></tr>
+      <tr><td class="k">Velocit&agrave; di riferimento</td><td>Anagrafica di prodotto</td>
+        <td>Definita in fase di progetto</td></tr>
+    </tbody>
+  </table>
+
+  <div class="panel" style="margin-top:22px">Soglie, turni, centri di costo e alberatura di linea
+    si definiscono in progetto, non nel prodotto. Il dossier considera valido un indicatore solo
+    se si pu&ograve; scrivere la frase che lo spiega: &laquo;nel turno la linea ha perso 18
+    minuti di capacit&agrave;, e la causa prevalente &egrave; il cambio formato&raquo;.</div>
+
+  <div class="quote">Un OEE senza causa validata &egrave; un numero, non una misura.</div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Turno illustrativo
+    &middot; perimetri da dichiarare in progetto</span><span>13</span></div>
+  <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_OEE_CALENDAR_RULES}}</span> <span class="ph">{{PH_IDEAL_CYCLE_TIME_RULE}}</span> <span class="ph">{{PH_GOOD_COUNT_RULE}}</span> <span class="ph">{{PH_LINE_OEE_AGGREGATION}}</span></span></div>
+</section>
