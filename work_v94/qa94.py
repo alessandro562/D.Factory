@@ -33,10 +33,9 @@ JS = r"""
     const r = pg.getBoundingClientRect();
     const rec = {id: pg.id, w: Math.round(r.width), h: Math.round(r.height),
                  scuro: pg.classList.contains('dk'),
-                 sfora: [], corpi: [], staccoPiede: null, skim: false,
+                 sfora: [], corpi: [], staccoPiede: null,
                  visivi: 0, parole: {cont: 0, meta: 0, svg: 0, ui: 0, ph: 0}};
 
-    rec.skim = !!pg.querySelector('.skim .who') && !!pg.querySelector('.skim .gist');
     rec.visivi = pg.querySelectorAll('svg, table, .stack, .attr, .seq, .idx, .nums, .fig, .ls').length;
 
     // 1 · niente deve uscire dalla pagina
@@ -78,7 +77,7 @@ JS = r"""
     // un'ancora. Contarlo come corpo faceva scattare la soglia sbagliata.
     const meta = e => {
       const tag = e.tagName.toLowerCase();
-      if (e.closest('.lbl, .pg, .nav, .ft, .note, .who, .dev, .phb')) return true;
+      if (e.closest('.lbl, .pg, .nav, .ft, .note, .dev, .phb, .logo')) return true;
       if (e.classList.contains('phv')) return true;
       if (['th', 'u', 'em'].includes(tag)) return true;
       if (e.classList.contains('ar')) return true;
@@ -151,8 +150,6 @@ def report(path):
                 piccoli.setdefault((c['bucket'], c['px']), c['t'])
         for (bucket, px), t in sorted(piccoli.items())[:4]:
             prob.append(f'corpo {px}px sotto {MIN[bucket]} [{bucket}] «{t}»')
-        if r['id'] not in ('p01_cover', 'p18_chiusura') and not r['skim']:
-            prob.append('riga di scrematura assente')
         # copertina e chiusura non hanno un visivo: sono la pagina stessa
         if not r['visivi'] and r['id'] not in ('p01_cover', 'p18_chiusura'):
             prob.append('nessun elemento visivo')

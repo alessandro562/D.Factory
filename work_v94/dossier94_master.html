@@ -3,9 +3,13 @@
 <!-- ══ P01 · COPERTINA · dk ══════════════════════════════════════════════
      Marchio, titolo, una riga. Il blocco di emissione sta in chiusura, dove
      si va a cercarlo; l'indice sta a pagina 02, dove serve.
+     Il wordmark composto in HTML e' uscito: al suo posto va il marchio
+     originale, e finche' non arriva lo spazio resta riservato e vuoto.
      G4 aperto: «edizione preliminare» resta ed e' una condizione di build. -->
 <section class="page dk" id="p01_cover" data-kind="dossier" data-tipo="apertura">
-  <div class="wm" style="font-size:21px">D<i>.</i>Factory</div>
+  <!-- Il marchio. Lo spazio e' riservato in altezza: quando arriva il file
+       originale entra qui e non sposta niente di quello che sta sotto. -->
+  <div class="logo"><span class="logo__slot" data-ed="working">LOGO D.FACTORY &middot; FILE ORIGINALE MANCANTE</span></div>
 
   <div style="width:88px;height:5px;background:var(--acid);margin-top:196px"></div>
   <div style="font-size:52px;line-height:1.04;letter-spacing:-.038em;font-weight:600;margin-top:26px">Dossier<br>tecnico</div>
@@ -19,7 +23,7 @@
     <div><div class="lbl" style="margin:0 0 6px">Formato</div>A4 &middot; 18 pagine e 4 annessi</div>
   </div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Le figure sono
+  <div class="ft"><span class="decl">Le figure sono
     ricostruzioni a scopo illustrativo</span><span></span></div>
 </section>
 
@@ -27,22 +31,18 @@
 <!-- ══ P02 · COME SI LEGGE · indice per ruolo · lt ════════════════════════
      La pagina che il formato slide non permetteva. Un dossier di ventidue
      pagine non si legge dall'inizio: ogni ruolo apre tre pagine e chiude.
-     Senza questa pagina, e senza la riga di scrematura in testa a tutte le
-     altre, il documento si legge tutto o non si legge affatto. -->
+     Senza questa pagina il documento si legge tutto o non si legge affatto. -->
 <section class="page" id="p02_lettura" data-kind="dossier" data-tipo="indice">
   <div class="hd"><div class="nav"><span class="on"><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">02 / 18</div></div>
 
-  <div class="skim"><span class="who">Per tutti</span><span class="gist">Questo dossier non si
-    legge dall&rsquo;inizio. Ogni ruolo ha tre pagine che lo riguardano: qui c&rsquo;&egrave;
-    quali sono.</span></div>
 
   <h1 class="tt">Quattro percorsi di lettura.</h1>
 
-  <div class="par" style="max-width:560px">Ogni pagina porta in testa una riga di sintesi e
-    l&rsquo;indicazione di chi la deve leggere: bastano tre secondi per sapere se quella pagina
-    riguarda il tuo ruolo. Le quattro colonne qui sotto sono i percorsi minimi. Chi ha poco
-    tempo legge quelle tre pagine e ha gi&agrave; la risposta alla domanda che si sta
-    ponendo.</div>
+  <div class="par" style="max-width:560px">Il dossier non si legge
+    dall&rsquo;inizio alla fine. Ogni ruolo ha tre pagine che rispondono alla sua domanda, e le
+    quattro colonne qui sotto sono i percorsi minimi: chi ha poco tempo legge quelle tre e ha
+    gi&agrave; quello che gli serve. Gli annessi in fondo non si leggono, si compilano, durante
+    l&rsquo;audit tecnico e il solution design.</div>
 
   <div class="idx" style="margin-top:30px">
     <section>
@@ -91,7 +91,7 @@
     </tbody>
   </table>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Dossier tecnico
+  <div class="ft"><span class="decl">Dossier tecnico
     &middot; edizione preliminare</span><span>02</span></div>
 </section>
 
@@ -103,9 +103,6 @@
 <section class="page dk" id="p03_executive" data-kind="dossier" data-tipo="spiegazione">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">03 / 18</div></div>
 
-  <div class="skim"><span class="who">Direzione</span><span class="gist">Che cos&rsquo;&egrave;
-    il prodotto in una pagina, e come i tre livelli si differenziano senza cambiare la sorgente
-    del dato.</span></div>
 
   <h1 class="tt" style="max-width:560px">D.Factory unisce dati industriali e contesto operativo
     in un unico modello.</h1>
@@ -164,7 +161,7 @@
       sono a pagina 17.</div></div>
   </div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Dossier tecnico
+  <div class="ft"><span class="decl">Dossier tecnico
     &middot; edizione preliminare</span><span>03</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_REFYN_MVP_SCOPE}}</span> <span class="ph">{{PH_REFYN_RELEASE_TARGET}}</span></span></div>
 </section>
@@ -179,8 +176,6 @@
 <section class="page" id="p04_catena" data-kind="dossier" data-tipo="architettura">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">04 / 18</div></div>
 
-  <div class="skim"><span class="who">Per tutti</span><span class="gist">La catena che porta il
-    segnale alla decisione, e la base di dati che i tre livelli condividono.</span></div>
 
   <h2 class="tt" style="max-width:520px">Dal segnale alla decisione, e la base che i tre livelli
     condividono.</h2>
@@ -232,7 +227,7 @@
   <div class="note">Connect, Insight e Refyn leggono questa base. Il perimetro riga per riga dei
     tre livelli &egrave; a pagina 08.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Schema funzionale
+  <div class="ft"><span class="decl">Schema funzionale
     &middot; l&rsquo;architettura applicativa &egrave; a pagina 11</span><span>04</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_STANDARD_TAG_MODEL}}</span> <span class="ph">{{PH_CONNECT_EXACT_SCOPE}}</span></span></div>
 </section>
@@ -245,8 +240,6 @@
 <section class="page" id="p05_connect" data-kind="dossier" data-tipo="funzionale">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">05 / 18</div></div>
 
-  <div class="skim"><span class="who">Produzione</span><span class="gist">Che cosa vede il
-    reparto il primo giorno: stato di linea, eventi e causa associata.</span></div>
 
   <h2 class="tt">Connect &middot; supervisione e baseline operativa.</h2>
 
@@ -339,7 +332,7 @@
     stati, utenti e viste. La configurazione non &egrave; una funzione in pi&ugrave;: &egrave;
     l&rsquo;attributo che rende il livello utilizzabile su un impianto reale.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Vista ricostruita
+  <div class="ft"><span class="decl">Vista ricostruita
     &middot; dati illustrativi</span><span>05</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_CONNECT_EXACT_SCOPE}}</span> <span class="ph">{{PH_CONNECT_REPORTS}}</span> <span class="ph">{{PH_REAL_SCREENSHOT_MAPST}}</span></span></div>
 </section>
@@ -352,9 +345,6 @@
 <section class="page" id="p06_insight" data-kind="dossier" data-tipo="funzionale">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">06 / 18</div></div>
 
-  <div class="skim"><span class="who">Produzione ed energia</span><span class="gist">Come le
-    perdite diventano una lista di priorit&agrave; con un ordine di grandezza economico
-    accanto.</span></div>
 
   <h2 class="tt" style="max-width:540px">Insight &middot; analisi delle perdite e
     quantificazione del valore.</h2>
@@ -410,7 +400,7 @@
     dichiarati: &egrave; un ordine di grandezza per mettere in fila le priorit&agrave;, non un
     valore contabile.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Report ricostruito
+  <div class="ft"><span class="decl">Report ricostruito
     &middot; dati illustrativi</span><span>06</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_INSIGHT_EXACT_SCOPE}}</span> <span class="ph">{{PH_COST_CALCULATION_METHOD}}</span> <span class="ph">{{PH_REAL_REPORT_EXPORT}}</span></span></div>
 </section>
@@ -425,8 +415,6 @@
 <section class="page" id="p07_refyn" data-kind="dossier" data-tipo="funzionale">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">07 / 18</div></div>
 
-  <div class="skim"><span class="who">Direzione</span><span class="gist">Il livello che
-    trasforma un elenco di opportunit&agrave; in un processo con un esito verificabile.</span></div>
 
   <h2 class="tt" style="max-width:540px">Refyn &middot; governo delle azioni e verifica dei
     benefici.</h2>
@@ -491,7 +479,7 @@
 
   <div class="lbl">Stato del modulo</div>
   <div class="dev">Modulo avanzato in sviluppo</div>
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Perimetro e disponibilit&agrave;
+  <div class="ft"><span class="decl">Perimetro e disponibilit&agrave;
     del modulo si definiscono nella proposta</span><span>07</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_REFYN_MVP_SCOPE}}</span> <span class="ph">{{PH_REFYN_RELEASE_TARGET}}</span> <span class="ph">{{PH_REFYN_PRICING_MODEL}}</span></span></div>
 </section>
@@ -506,8 +494,6 @@
 <section class="page" id="p08_matrice" data-kind="dossier" data-tipo="tabella">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">08 / 18</div></div>
 
-  <div class="skim"><span class="who">Direzione e acquisti</span><span class="gist">Dove finisce
-    un livello e dove comincia il successivo, capacit&agrave; per capacit&agrave;.</span></div>
 
   <h2 class="tt">Perimetro funzionale dei tre livelli.</h2>
 
@@ -559,7 +545,7 @@
     sviluppo descritto a pagina 07. Il perimetro effettivo su un impianto dipende dai dati
     disponibili e dalla configurazione, e si conferma durante l&rsquo;audit tecnico.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">I servizi
+  <div class="ft"><span class="decl">I servizi
     professionali sono attivabili su tutti e tre i livelli</span><span>08</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_CONNECT_EXACT_SCOPE}}</span> <span class="ph">{{PH_INSIGHT_EXACT_SCOPE}}</span> <span class="ph">{{PH_REFYN_MVP_SCOPE}}</span></span></div>
 </section>
@@ -574,8 +560,6 @@
 <section class="page" id="p09_acquisizione" data-kind="dossier" data-tipo="architettura">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">09 / 18</div></div>
 
-  <div class="skim"><span class="who">Per l&rsquo;IT</span><span class="gist">Da dove arriva
-    ogni segnale, che cosa si legge in campo e che cosa arriva dai sistemi gestionali.</span></div>
 
   <h2 class="tt">Sorgenti, segnali e punti di misura.</h2>
 
@@ -622,7 +606,7 @@
     modello &egrave; nell&rsquo;annesso A1. Un elenco generico di protocolli non dice se un
     impianto &egrave; leggibile; lo dice il rilievo su quella macchina.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Schema generico
+  <div class="ft"><span class="decl">Schema generico
     &middot; non &egrave; la configurazione di una linea specifica</span><span>09</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_STANDARD_SIGNAL_LIST}}</span> <span class="ph">{{PH_SENSOR_ACCURACY_REQUIREMENTS}}</span> <span class="ph">{{PH_METERING_STANDARDS}}</span> <span class="ph">{{PH_SENSOR_PRICING_RULE}}</span></span></div>
 </section>
@@ -636,9 +620,6 @@
 <section class="page dk" id="p10_contesto" data-kind="dossier" data-tipo="spiegazione">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">10 / 18</div></div>
 
-  <div class="skim"><span class="who">Per l&rsquo;IT e produzione</span><span class="gist">I
-    nove attributi che accompagnano ogni evento acquisito, e perch&eacute; senza di loro il dato
-    resta un numero.</span></div>
 
   <h2 class="tt" style="max-width:540px">Tempo, asset, prodotto e stato nello stesso
     modello.</h2>
@@ -678,7 +659,7 @@
   <div class="quote">Senza questi nove attributi due misure fatte in momenti diversi non sono
     confrontabili, e un indicatore non &egrave; verificabile.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Modello di contesto
+  <div class="ft"><span class="decl">Modello di contesto
     &middot; nove attributi per ogni evento</span><span>10</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_TIME_SYNC_REQUIREMENT}}</span> <span class="ph">{{PH_STANDARD_TAG_MODEL}}</span> <span class="ph">{{PH_CAUSE_VALIDATION_PROCESS}}</span></span></div>
 </section>
@@ -693,9 +674,6 @@
 <section class="page" id="p11_architettura" data-kind="dossier" data-tipo="architettura">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">11 / 18</div></div>
 
-  <div class="skim"><span class="who">Per l&rsquo;IT</span><span class="gist">Quattro livelli
-    logici, un confine di rete, acquisizione in sola lettura. Che cosa chiediamo e che cosa non
-    presupponiamo.</span></div>
 
   <h2 class="tt" style="max-width:540px">Architettura applicativa e integrazione con la rete di
     stabilimento.</h2>
@@ -744,7 +722,7 @@
   <div class="note">Ambiente, rete, autenticazione, backup e accesso remoto sono valori di
     progetto: si compilano con l&rsquo;IT sull&rsquo;annesso A3.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Schema logico
+  <div class="ft"><span class="decl">Schema logico
     &middot; non &egrave; un disegno di rete</span><span>11</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SUPPORTED_OS}}</span> <span class="ph">{{PH_REQUIRED_PORTS}}</span> <span class="ph">{{PH_READ_ONLY_POLICY}}</span></span></div>
 </section>
@@ -759,8 +737,6 @@
 <section class="page" id="p12_security" data-kind="dossier" data-tipo="tabella">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">12 / 18</div></div>
 
-  <div class="skim"><span class="who">Per l&rsquo;IT</span><span class="gist">Le nove aree da
-    coprire e il modello che il prodotto mette a disposizione su ciascuna.</span></div>
 
   <h2 class="tt">Sicurezza, accessi e ciclo di vita del dato.</h2>
 
@@ -805,7 +781,7 @@
   <div class="note">Parametri, responsabilit&agrave; e scadenze di ciascuna area si compilano
     sull&rsquo;annesso A3.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Aree da coprire
+  <div class="ft"><span class="decl">Aree da coprire
     &middot; i valori di progetto sono nell&rsquo;annesso A3</span><span>12</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_AUTHENTICATION_MODEL}}</span> <span class="ph">{{PH_ROLE_MODEL}}</span> <span class="ph">{{PH_DATA_ENCRYPTION_AT_REST}}</span> <span class="ph">{{PH_DATA_OWNERSHIP}}</span></span></div>
 </section>
@@ -819,8 +795,6 @@
 <section class="page" id="p13_oee" data-kind="dossier" data-tipo="metodo">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span class="on"><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">13 / 18</div></div>
 
-  <div class="skim"><span class="who">Produzione</span><span class="gist">Da dove viene ogni
-    pezzo del calcolo e chi lo valida. Nessun numero senza il metodo che lo produce.</span></div>
 
   <h2 class="tt" style="max-width:560px">Come si calcola la disponibilit&agrave; e l&rsquo;OEE
     di linea.</h2>
@@ -888,7 +862,7 @@
 
   <div class="quote">Un OEE senza causa validata &egrave; un numero, non una misura.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Turno illustrativo
+  <div class="ft"><span class="decl">Turno illustrativo
     &middot; perimetri da dichiarare in progetto</span><span>13</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_OEE_CALENDAR_RULES}}</span> <span class="ph">{{PH_IDEAL_CYCLE_TIME_RULE}}</span> <span class="ph">{{PH_GOOD_COUNT_RULE}}</span> <span class="ph">{{PH_LINE_OEE_AGGREGATION}}</span></span></div>
 </section>
@@ -902,8 +876,6 @@
 <section class="page" id="p14_energia" data-kind="dossier" data-tipo="metodo">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span class="on"><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">14 / 18</div></div>
 
-  <div class="skim"><span class="who">Energy manager</span><span class="gist">Come il consumo si
-    lega allo stato produttivo, e da quali parametri dipendono costo ed emissioni.</span></div>
 
   <h2 class="tt" style="max-width:540px">Energia, costo e CO&#8322; per unit&agrave;
     prodotta.</h2>
@@ -953,7 +925,7 @@
     materiali, manodopera e ammortamenti. Il perimetro della potenza a impianto fermo &mdash;
     linea, macchine o ausiliari &mdash; si dichiara in fase di progetto.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Turno illustrativo
+  <div class="ft"><span class="decl">Turno illustrativo
     &middot; parametri da confermare</span><span>14</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_ENERGY_PRICE_SOURCE}}</span> <span class="ph">{{PH_EMISSION_FACTOR_SOURCE}}</span> <span class="ph">{{PH_CO2_METHOD}}</span> <span class="ph">{{PH_COST_ALLOCATION_RULE}}</span></span></div>
 </section>
@@ -967,9 +939,6 @@
 <section class="page" id="p15_output" data-kind="dossier" data-tipo="tabella">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span class="on"><i>3</i>Misure</span><span><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">15 / 18</div></div>
 
-  <div class="skim"><span class="who">Produzione e IT</span><span class="gist">Che cosa esce dal
-    prodotto, in che formato, e che cosa invece &egrave; un&rsquo;interfaccia da definire in
-    progetto.</span></div>
 
   <h2 class="tt">Dashboard, report, export e integrazioni.</h2>
 
@@ -1016,7 +985,7 @@
   <div class="kv"><b>Definito in progetto</b><span>interfacce &middot; punto di innesto &middot;
     perimetro dello scambio</span></div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Output e
+  <div class="ft"><span class="decl">Output e
     integrazioni &middot; perimetro da definire in progetto</span><span>15</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_EXPORT_FORMATS}}</span> <span class="ph">{{PH_API_AVAILABILITY}}</span> <span class="ph">{{PH_ERP_INTEGRATION_METHODS}}</span></span></div>
 </section>
@@ -1032,8 +1001,6 @@
 <section class="page dk" id="p16_delivery" data-kind="dossier" data-tipo="delivery">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span class="on"><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">16 / 18</div></div>
 
-  <div class="skim"><span class="who">Direzione</span><span class="gist">Il percorso completo,
-    fase per fase, e il deliverable verificabile che ognuna produce.</span></div>
 
   <h2 class="tt" style="max-width:520px">Dall&rsquo;assessment alla decisione di scala.</h2>
 
@@ -1088,7 +1055,7 @@
     </div>
   </div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Struttura del
+  <div class="ft"><span class="decl">Struttura del
     percorso &middot; durate da confermare</span><span>16</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_PILOT_DURATION}}</span> <span class="ph">{{PH_PILOT_SCOPE}}</span> <span class="ph">{{PH_PILOT_SUCCESS_CRITERIA}}</span> <span class="ph">{{PH_PILOT_PRICE}}</span></span></div>
 </section>
@@ -1102,8 +1069,6 @@
 <section class="page" id="p17_servizi" data-kind="dossier" data-tipo="delivery">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span class="on"><i>4</i>Delivery</span><span><i>A</i>Annessi</span></div><div class="pg">17 / 18</div></div>
 
-  <div class="skim"><span class="who">Acquisti</span><span class="gist">Nove servizi, quando si
-    attivano, e la forma del prezzo. Gli importi stanno nella proposta economica.</span></div>
 
   <h2 class="tt" style="max-width:540px">I nove servizi, attivabili su tutti e tre i
     livelli.</h2>
@@ -1163,7 +1128,7 @@
   <div class="kv"><b>Tempi di risposta</b><span data-ed="working" class="phv">{{PH_SLA_RESPONSE_TIMES}}</span><span data-ed="client">concordati nella proposta</span></div>
   <div class="kv"><b>Aggiornamenti</b><span data-ed="working" class="phv">{{PH_UPDATE_POLICY}}</span><span data-ed="client">finestre concordate con l&rsquo;IT</span></div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Condizioni di supporto e SLA si
+  <div class="ft"><span class="decl">Condizioni di supporto e SLA si
     formalizzano nella proposta e nel contratto</span><span>17</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SUPPORT_HOURS}}</span> <span class="ph">{{PH_REMOTE_SUPPORT_POLICY}}</span> <span class="ph">{{PH_SERVICES_INCLUDED}}</span> <span class="ph">{{PH_SERVICES_OPTIONAL}}</span></span></div>
 </section>
@@ -1175,7 +1140,7 @@
      reale, e con l'indicazione di quali annessi si compilano insieme.
      G1 aperto: il referente compare solo nella working edition. -->
 <section class="page dk" id="p18_chiusura" data-kind="dossier" data-tipo="apertura">
-  <div class="wm" style="font-size:21px">D<i>.</i>Factory</div>
+  <div class="logo"><span class="logo__slot" data-ed="working">LOGO D.FACTORY &middot; FILE ORIGINALE MANCANTE</span></div>
 
   <div style="width:88px;height:5px;background:var(--acid);margin-top:180px"></div>
   <div style="font-size:44px;line-height:1.08;letter-spacing:-.035em;font-weight:600;
@@ -1203,8 +1168,7 @@
     </div>
   </div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span>
-    <span data-ed="working">{{PH_COMPANY_LEGAL_NAME}} &middot; {{PH_CONTACT_NAME}} &middot; {{PH_CONTACT_EMAIL}} &middot; {{PH_VERSION_DATE}}</span>
+  <div class="ft"><span data-ed="working">{{PH_COMPANY_LEGAL_NAME}} &middot; {{PH_CONTACT_NAME}} &middot; {{PH_CONTACT_EMAIL}} &middot; {{PH_VERSION_DATE}}</span>
     <span data-ed="client">Denominazione, referente e data si compilano prima
       dell&rsquo;invio</span><span>18</span></div>
 </section>
@@ -1219,8 +1183,6 @@
 <section class="page" id="pa1_compatibilita" data-kind="appendix" data-tipo="annesso">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span class="on"><i>A</i>Annessi</span></div><div class="pg">ANNESSO A1</div></div>
 
-  <div class="skim"><span class="who">Per l&rsquo;IT e manutenzione</span><span class="gist">Il
-    modulo che si compila in audit, una riga per componente, macchina per macchina.</span></div>
 
   <h2 class="tt" style="max-width:540px">La compatibilit&agrave; si verifica sull&rsquo;impianto
     reale.</h2>
@@ -1296,7 +1258,7 @@
     riga condizionata non &egrave; un problema, &egrave; una voce di costo che va vista subito.
     Le sorgenti a cui il censimento si riferisce sono descritte a pagina 09.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Annesso A1 &middot;
+  <div class="ft"><span class="decl">Annesso A1 &middot;
     modello di censimento, compilato durante l&rsquo;audit</span><span>A1</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_SUPPORTED_PROTOCOLS}}</span> <span class="ph">{{PH_PROTOCOL_VERSIONS}}</span> <span class="ph">{{PH_GATEWAY_REQUIREMENTS}}</span></span></div>
 </section>
@@ -1311,9 +1273,6 @@
 <section class="page" id="pa2_sizing" data-kind="appendix" data-tipo="annesso">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span class="on"><i>A</i>Annessi</span></div><div class="pg">ANNESSO A2</div></div>
 
-  <div class="skim"><span class="who">Per l&rsquo;IT</span><span class="gist">Da che cosa
-    dipende la taglia dell&rsquo;ambiente, e tre ordini di grandezza dichiarati per
-    orientarsi.</span></div>
 
   <h2 class="tt" style="max-width:560px">Il dimensionamento si calcola, non si sceglie a
     listino.</h2>
@@ -1365,7 +1324,7 @@
   <div class="panel" style="margin-top:14px">CPU, RAM e storage dipendono dal censimento: il
     dimensionamento si consegna con la proposta tecnica, dopo l&rsquo;audit.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Annesso A2 &middot;
+  <div class="ft"><span class="decl">Annesso A2 &middot;
     metodo di dimensionamento e fasce dichiarate</span><span>A2</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_STORAGE_GROWTH_RULE}}</span> <span class="ph">{{PH_RETENTION_DEFAULT}}</span></span></div>
 </section>
@@ -1380,9 +1339,6 @@
 <section class="page" id="pa3_requisiti" data-kind="appendix" data-tipo="annesso">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span class="on"><i>A</i>Annessi</span></div><div class="pg">ANNESSO A3</div></div>
 
-  <div class="skim"><span class="who">Per l&rsquo;IT</span><span class="gist">Ambito per ambito:
-    il modello del prodotto, il valore che il progetto deve fissare e la funzione che lo
-    decide.</span></div>
 
   <h2 class="tt">Requisiti IT e security.</h2>
 
@@ -1420,7 +1376,7 @@
     massima accettata, tempo massimo di ripristino e ritenzione. Le ultime due righe dichiarano
     l&rsquo;ambito e rimandano al legale.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Annesso A3 &middot;
+  <div class="ft"><span class="decl">Annesso A3 &middot;
     per la raccolta dei requisiti con l&rsquo;IT</span><span>A3</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_LICENSE_RIGHTS}}</span> <span class="ph">{{PH_DATA_EXPORT_AT_EXIT}}</span> <span class="ph">{{PH_RPO}}</span> <span class="ph">{{PH_RTO}}</span> <span class="ph">{{PH_RETENTION_DEFAULT}}</span></span></div>
 </section>
@@ -1435,9 +1391,6 @@
 <section class="page" id="pa4_kpi" data-kind="appendix" data-tipo="annesso">
   <div class="hd"><div class="nav"><span><i>0</i>Come si legge</span><span><i>1</i>Prodotto</span><span><i>2</i>Dati</span><span><i>3</i>Misure</span><span><i>4</i>Delivery</span><span class="on"><i>A</i>Annessi</span></div><div class="pg">ANNESSO A4</div></div>
 
-  <div class="skim"><span class="who">Produzione ed energia</span><span class="gist">La formula
-    scritta di ogni indicatore: &egrave; quello che rende confrontabili due misure fatte in
-    momenti diversi.</span></div>
 
   <h2 class="tt">Ogni indicatore ha una formula scritta.</h2>
 
@@ -1480,7 +1433,7 @@
   <div class="note">Il metodo di calcolo dell&rsquo;OEE &egrave; a pagina 13, quello
     dell&rsquo;energia a pagina 14. Questo annesso non li ripete: li rende scrivibili.</div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Annesso A4 &middot;
+  <div class="ft"><span class="decl">Annesso A4 &middot;
     dizionario dei KPI e delle formule</span><span>A4</span></div>
   <div class="phb" data-ed="working"><b>INPUT APERTI</b><span><span class="ph">{{PH_KPI_OWNER}}</span> <span class="ph">{{PH_KPI_VERSION}}</span> <span class="ph">{{PH_KPI_APPROVAL_DATE}}</span> <span class="ph">{{PH_OEE_DEFINITION_OWNER}}</span></span></div>
 </section>

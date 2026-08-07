@@ -18,6 +18,7 @@ Colonne richieste per ogni asset, quando arriverà:
 
 | # | asset | token | dove andrebbe | stato |
 |--:|---|---|---|:--:|
+| 0 | **Marchio D.Factory, file originale** (SVG preferito, PNG a 3× accettabile, versione per fondo scuro) | — | dossier A4 · copertina e chiusura · deck 01 e 15 | **mancante** |
 | 1 | Screenshot reale MAPST 4.0 | `PH_REAL_SCREENSHOT_MAPST` | deck 04 · dossier 04 | mancante |
 | 2 | Screenshot reale MarEnergy | `PH_REAL_SCREENSHOT_MARENERGY` | deck 05 · dossier 05 | mancante |
 | 3 | Report reale anonimizzato | `PH_REAL_REPORT_EXPORT` | dossier 12 | mancante |
@@ -26,4 +27,13 @@ Colonne richieste per ogni asset, quando arriverà:
 | 6 | Foto di sensore o contatore | `PH_REAL_SENSOR_PHOTO` | dossier 07 | mancante |
 
 **Soglia dichiarata:** deck 1 asset reale, dossier 2. Raggiunti: 0 e 0.
+
+## Il marchio
+
+Il dossier A4 V9.4 ha tolto il wordmark ricomposto in HTML da tutte le pagine.
+Copertina e chiusura tengono lo spazio riservato in altezza (34 px): quando
+arriva il file originale entra lì, viene incorporato in base64 come i font, e
+non sposta niente di quello che sta sotto. Cercato anche dentro
+`Refyn_SalesDeck.pdf` e `Refyn_CompanyDeck.pdf`: contengono solo pagine
+rasterizzate, nessun asset separato.
 

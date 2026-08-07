@@ -54,14 +54,15 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
   white-space:nowrap;padding-left:14px}
 .dk .pg{color:var(--d3)}
 
-/* ---------- il livello di scrematura ----------
-   .who dice per chi e' la pagina, .gist che cosa ci trova. Insieme sono la
-   ragione per cui questo dossier si puo' leggere per pezzi. */
-.skim{display:flex;gap:14px;align-items:flex-start;margin:22px 0 0}
-.who{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
-  background:var(--acid);color:var(--ink);padding:4px 8px;white-space:nowrap;flex:none}
-.gist{font-size:15px;line-height:1.45;color:var(--l2)}
-.dk .gist{color:var(--d2)}
+/* ---------- il marchio ----------
+   Il wordmark composto in HTML e' uscito da tutte le pagine: un marchio si
+   incorpora, non si ricompone. Qui viaggia il file originale in base64.
+   L'altezza e' riservata perche' l'arrivo del file non sposti la pagina. */
+.logo{height:34px;display:flex;align-items:center}
+.logo img{height:100%;width:auto;display:block}
+.logo__slot{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:rgba(255,255,255,.42);padding:6px 10px;
+  border:1px dashed rgba(255,255,255,.30)}
 
 /* ---------- tipografia ---------- */
 h1.tt{margin:20px 0 0;font-size:29px;line-height:1.1;letter-spacing:-.028em;font-weight:600}

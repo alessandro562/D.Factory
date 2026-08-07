@@ -100,25 +100,6 @@ for nome in ORDINE:
     print(f'    {nome:22s} {k:>3} parole {"ok" if ok else "FUORI INTERVALLO"}')
 assert not fuori, f'§12.2 violato: {fuori}'
 
-# V9.4 · la riga di scrematura: e' il componente che giustifica il formato.
-# Deve esserci su ogni pagina che ha un'intestazione, e deve dire qualcosa:
-# sotto le otto parole e' un'etichetta, sopra le trenta e' un altro paragrafo.
-print('  V9.4 · riga di scrematura, 8-30 parole su ogni pagina con testata')
-skim_fuori = []
-for nome in ORDINE:
-    if nome in SENZA_HD:
-        continue
-    pg = open(os.path.join('dossier94_parts', nome + '.html'), encoding='utf-8').read()
-    m = re.search(r'<span class="who">(.*?)</span><span class="gist">(.*?)</span>', pg, re.S)
-    if not m:
-        skim_fuori.append((nome, 'assente'))
-        continue
-    k = parole(m.group(2))
-    if not 8 <= k <= 30:
-        skim_fuori.append((nome, k))
-assert not skim_fuori, f'riga di scrematura fuori norma: {skim_fuori}'
-print(f'    20 pagine su 20 · chi + che cosa dichiarati in testa')
-
 vis = visibile(body)
 core = vis.split('id="pa1_compatibilita"')[0]
 annessi = vis[vis.index('id="pa1_compatibilita"'):]

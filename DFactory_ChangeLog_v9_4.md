@@ -27,24 +27,30 @@ collega che apre solo la sua pagina. A4 verticale è il formato di quel gesto.
 | diagrammi SVG | 11 | 2 |
 | frecce | 11 | 0 |
 
-### 1.2 Il livello di scrematura — la ragione vera del rifacimento
+### 1.2 Niente etichette in testa alle pagine
 
-Ogni pagina porta in testa una riga sola, prima del titolo:
+Una prima versione di questa release metteva su ogni pagina una riga di
+scrematura: un tassello giallo con il ruolo — `PER L'IT`, `PRODUZIONE` — e una
+frase che riassumeva la pagina prima del titolo. È uscita.
 
-```
-[ PER L'IT ]   Quattro livelli logici, un confine di rete, acquisizione in
-               sola lettura. Che cosa chiediamo e che cosa non presupponiamo.
-```
+Diceva al lettore quello che il titolo già gli dice, e lo diceva con la voce di
+un sistema che classifica invece che di una persona che scrive. Un documento
+tecnico non ha bisogno di annunciarsi: comincia.
 
-Il tassello giallo dice **per chi** è la pagina. La riga accanto dice **che
-cosa** ci trova. Chi legge sa in tre secondi se quella pagina lo riguarda.
+Chi legge trova il proprio percorso a pagina 02, una volta sola, e poi legge.
 
-È il componente che rende leggibile per pezzi un documento di ventidue pagine, e
-il build lo verifica: deve esserci su tutte e venti le pagine con intestazione, e
-deve stare fra 8 e 30 parole. Sotto le otto è un'etichetta; sopra le trenta è un
-secondo paragrafo, e allora tanto vale leggere il primo.
+### 1.3 Il wordmark composto in HTML è uscito da tutte le pagine
 
-### 1.3 La pagina 02 · «Come si legge»
+La V9.3 ricomponeva «D.Factory» in HTML — testo in grassetto e un punto giallo —
+e lo ripeteva nel piede di ventidue pagine. Un marchio non si ricompone: si
+incorpora. E ripeterlo a ogni piede è un'abitudine da slide, non da documento.
+
+Adesso il piede porta la riga di dichiarazione e il numero di pagina, niente
+altro. Il marchio compare due volte in tutto il documento, in copertina e in
+chiusura, e lo spazio è **riservato in altezza** in attesa del file originale:
+quando arriva entra lì e non sposta niente.
+
+### 1.4 La pagina 02 · «Come si legge»
 
 Nuova. Quattro percorsi di lettura da tre pagine ciascuno — IT di stabilimento,
 produzione, energy manager, direzione e acquisti — più l'elenco dei quattro
@@ -54,19 +60,20 @@ annessi con l'indicazione di quando si compilano. In fondo, una frase sola:
 Nel formato slide questa pagina non poteva esistere: sarebbe stata una slide di
 indice, che nessuno guarda.
 
-### 1.4 Le fusioni e i tagli
+### 1.5 Le fusioni e i tagli
 
 | V9.3 | V9.4 |
 |---|---|
 | P03 architettura funzionale + P04 base comune | **P04** · una pagina sola |
 | — | **P02** · come si legge (nuova) |
 | 11 diagrammi SVG | 2 (vista Connect, scomposizione OEE) |
+| wordmark ricomposto in HTML | 22 volte → 0 |
 
 Le due pagine fuse dicevano lo stesso argomento due volte: la catena che porta
 il segnale alla decisione, e la base di dati che la rende possibile. Su A4 stanno
 insieme senza comprimere niente.
 
-### 1.5 Le frecce sono uscite tutte
+### 1.6 Le frecce sono uscite tutte
 
 La V9.3 conteneva undici frecce SVG, e le frecce sono state il difetto visivo
 più segnalato di tutto il progetto. In V9.4 non ce ne sono più: non perché siano
@@ -82,7 +89,7 @@ state disegnate meglio, ma perché ogni cosa che facevano la fa qualcos'altro.
 Una sequenza numerata si legge da sinistra a destra senza bisogno di dirlo, e non
 ha geometria da sbagliare.
 
-### 1.6 I diagrammi che restano, e perché
+### 1.7 I diagrammi che restano, e perché
 
 Due, e sono entrambi grafici veri con solo barre orizzontali:
 
@@ -122,7 +129,9 @@ stampa meglio, e si può copiare.
 | 3 | ventidue pagine finivano fra 100 e 315 px sopra il piede | scala tipografica alzata del 4% e quattro pagine allungate con contenuto vero, non con aria |
 | 4 | il QA leggeva i numeri d'ordine degli elenchi come corpo del testo | classificati come ancore: la soglia di 12 px vale per il testo, non per un «01» |
 | 5 | la cella marcata di P10 era oliva | il giallo al 16% su nero non è giallo. Filetto giallo e fondo più chiaro, niente velatura |
-| 6 | «solution design» compariva dodici volte | sei. Sopra le otto la formula diventa un tic e smette di significare qualcosa |
+| 6 | «solution design» compariva dodici volte | sette. Sopra le otto la formula diventa un tic e smette di significare qualcosa |
+| 7 | la riga di scrematura classificava le pagine invece di lasciarle parlare | tolta da tutte e venti le pagine |
+| 8 | il marchio era testo ricomposto, ripetuto ventidue volte | uscito dai piedi; in copertina e in chiusura lo spazio aspetta il file originale |
 
 ### 3.1 Le quattro pagine allungate con contenuto
 
@@ -142,11 +151,10 @@ Non con interlinea:
 | difetti QA, working edition | **0** su 22 pagine |
 | difetti QA, client edition | **0** su 22 pagine |
 | formato di ogni pagina | 794 × 1123 |
-| stacco minimo dal piede | 26,7 px (working) · 33,8 px (client) |
+| stacco minimo dal piede | 96,2 px (working) · 103,3 px (client) |
 | corpo minimo del testo di contenuto | 12,0 px |
 | corpo minimo delle etichette | 10,5 px |
 | paragrafo esplicativo §12.2 | 16 pagine core su 16, fra 45 e 100 parole |
-| riga di scrematura | 20 pagine su 20 |
 | pagine scure | 5 (§9.5 chiede da 3 a 5) |
 | placeholder nella client edition | 0 |
 | richieste di rete | 0 |
@@ -158,12 +166,16 @@ Non con interlinea:
 
 Invariato rispetto alla V9.3, e non è il formato a chiuderlo:
 
-1. **Nessuno screenshot reale di prodotto.** La vista di P05 è una ricostruzione
+1. **Il marchio originale non c'è.** Il file non è mai stato consegnato e non è
+   nel repository: cercato anche dentro i due PDF Refyn, che contengono solo
+   pagine rasterizzate. Copertina e chiusura tengono lo spazio pronto; la
+   working edition lo dichiara con una casella tratteggiata.
+2. **Nessuno screenshot reale di prodotto.** La vista di P05 è una ricostruzione
    e lo dichiara. Finché non arriva una schermata vera, resta tale.
-2. **G1 · referente e denominazione** — il documento non si invia senza.
-3. **G2 · struttura di prezzo senza importi.**
-4. **G4 · dimensionamento e requisiti IT da chiudere in audit.**
-5. **Il dataset illustrativo non è validato.** I numeri di P06, P13 e P14 sono
+3. **G1 · referente e denominazione** — il documento non si invia senza.
+4. **G2 · struttura di prezzo senza importi.**
+5. **G4 · dimensionamento e requisiti IT da chiudere in audit.**
+6. **Il dataset illustrativo non è validato.** I numeri di P06, P13 e P14 sono
    coerenti fra loro e dichiarati illustrativi, ma non vengono da un impianto.
 
 ---

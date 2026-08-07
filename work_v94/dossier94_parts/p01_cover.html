@@ -1,9 +1,13 @@
 <!-- ══ P01 · COPERTINA · dk ══════════════════════════════════════════════
      Marchio, titolo, una riga. Il blocco di emissione sta in chiusura, dove
      si va a cercarlo; l'indice sta a pagina 02, dove serve.
+     Il wordmark composto in HTML e' uscito: al suo posto va il marchio
+     originale, e finche' non arriva lo spazio resta riservato e vuoto.
      G4 aperto: «edizione preliminare» resta ed e' una condizione di build. -->
 <section class="page dk" id="p01_cover" data-kind="dossier" data-tipo="apertura">
-  <div class="wm" style="font-size:21px">D<i>.</i>Factory</div>
+  <!-- Il marchio. Lo spazio e' riservato in altezza: quando arriva il file
+       originale entra qui e non sposta niente di quello che sta sotto. -->
+  <div class="logo"><span class="logo__slot" data-ed="working">LOGO D.FACTORY &middot; FILE ORIGINALE MANCANTE</span></div>
 
   <div style="width:88px;height:5px;background:var(--acid);margin-top:196px"></div>
   <div style="font-size:52px;line-height:1.04;letter-spacing:-.038em;font-weight:600;margin-top:26px">Dossier<br>tecnico</div>
@@ -17,6 +21,6 @@
     <div><div class="lbl" style="margin:0 0 6px">Formato</div>A4 &middot; 18 pagine e 4 annessi</div>
   </div>
 
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Le figure sono
+  <div class="ft"><span class="decl">Le figure sono
     ricostruzioni a scopo illustrativo</span><span></span></div>
 </section>

@@ -19,7 +19,6 @@ Su A4 il contenuto scorre, e collidere è impossibile. I difetti sono altri:
 | corpo del testo di contenuto | ≥ 12,0 px | distanza di lettura di un A4 in mano |
 | corpo delle etichette | ≥ 10,4 px | mono maiuscolo, ancore e numeri d'ordine |
 | corpo dentro i disegni | ≥ 10,9 px | misurato con la scala del `viewBox` |
-| riga di scrematura | presente su ogni pagina con testata | è il componente che regge il formato |
 | elemento visivo | ≥ 1 per pagina | copertina e chiusura esenti: sono la pagina stessa |
 | pagine scure | fra 3 e 5 | §9.5 |
 | mai 4 pagine di fila senza visivo | — | §9.5 |
@@ -51,7 +50,7 @@ resta piena per il testo vero.
 
 | misura | working | client |
 |---|---|---|
-| stacco minimo dal piede | 26,7 px (P17) | 33,8 px (A2) |
+| stacco minimo dal piede | 96,2 px (P17) | 103,3 px (A2) |
 | corpo minimo del contenuto | 12,0 px | 12,0 px |
 | corpo minimo delle etichette | 10,5 px | 10,5 px |
 | pagine scure | 5 | 5 |
@@ -68,28 +67,28 @@ resta piena per il testo vero.
 
 | # | pagina | sez. | vuoto | visivi | copy | fondo |
 |---|---|---|---|---|---|---|
-| 01 | copertina | — | 195 px | — | 22 | scuro |
-| 02 | come si legge | 0 | 161 px | 2 | 243 | chiaro |
-| 03 | executive summary | 1 | 168 px | 1 | 187 | scuro |
-| 04 | dal segnale alla decisione | 1 | 161 px | 2 | 131 | chiaro |
-| 05 | Connect | 1 | 108 px | 1 | 170 | chiaro |
-| 06 | Insight | 1 | 68 px | 2 | 178 | chiaro |
-| 07 | Refyn | 1 | 56 px | 4 | 188 | chiaro |
-| 08 | perimetro dei tre livelli | 1 | 156 px | 1 | 164 | chiaro |
-| 09 | sorgenti e punti di misura | 2 | 49 px | 1 | 189 | chiaro |
-| 10 | modello di contesto | 2 | 143 px | 2 | 146 | scuro |
-| 11 | architettura e integrazione | 2 | 38 px | 1 | 149 | chiaro |
-| 12 | sicurezza e ciclo di vita | 2 | 164 px | 1 | 192 | chiaro |
-| 13 | OEE di linea | 3 | 76 px | 2 | 200 | chiaro |
-| 14 | energia, costo e CO₂ | 3 | 119 px | 3 | 143 | chiaro |
-| 15 | output e integrazioni | 3 | 75 px | 2 | 194 | chiaro |
-| 16 | delivery e pilot | 4 | 62 px | 1 | 210 | scuro |
-| 17 | servizi e continuità | 4 | 43 px | 1 | 204 | chiaro |
-| 18 | chiusura | — | 206 px | — | 60 | scuro |
-| A1 | compatibilità tecnica | A | 162 px | 2 | 205 | chiaro |
-| A2 | dimensionamento | A | 34 px | 2 | 195 | chiaro |
-| A3 | requisiti IT e security | A | 206 px | 1 | 198 | chiaro |
-| A4 | dizionario KPI | A | 64 px | 1 | 161 | chiaro |
+| 01 | copertina | — | 192 px | — | 22 | scuro |
+| 02 | come si legge | 0 | 231 px | 2 | 243 | chiaro |
+| 03 | executive summary | 1 | 237 px | 1 | 187 | scuro |
+| 04 | dal segnale alla decisione | 1 | 230 px | 2 | 131 | chiaro |
+| 05 | Connect | 1 | 156 px | 1 | 170 | chiaro |
+| 06 | Insight | 1 | 137 px | 2 | 178 | chiaro |
+| 07 | Refyn | 1 | 125 px | 4 | 188 | chiaro |
+| 08 | perimetro dei tre livelli | 1 | 226 px | 1 | 164 | chiaro |
+| 09 | sorgenti e punti di misura | 2 | 119 px | 1 | 189 | chiaro |
+| 10 | modello di contesto | 2 | 212 px | 2 | 146 | scuro |
+| 11 | architettura e integrazione | 2 | 107 px | 1 | 149 | chiaro |
+| 12 | sicurezza e ciclo di vita | 2 | 233 px | 1 | 192 | chiaro |
+| 13 | OEE di linea | 3 | 145 px | 2 | 200 | chiaro |
+| 14 | energia, costo e CO₂ | 3 | 189 px | 3 | 143 | chiaro |
+| 15 | output e integrazioni | 3 | 144 px | 2 | 194 | chiaro |
+| 16 | delivery e pilot | 4 | 131 px | 1 | 210 | scuro |
+| 17 | servizi e continuità | 4 | 112 px | 1 | 204 | chiaro |
+| 18 | chiusura | — | 203 px | — | 60 | scuro |
+| A1 | compatibilità tecnica | A | 232 px | 2 | 205 | chiaro |
+| A2 | dimensionamento | A | 103 px | 2 | 195 | chiaro |
+| A3 | requisiti IT e security | A | 276 px | 1 | 198 | chiaro |
+| A4 | dizionario KPI | A | 133 px | 1 | 161 | chiaro |
 
 ### 3.1 Sulla colonna «vuoto»
 
@@ -99,9 +98,9 @@ respirano di più sono le due di apertura e chiusura, l'indice e A3 — dove la
 colonna del valore di progetto è vuota per costruzione, perché si compila con
 l'IT del cliente.
 
-La working edition e la client edition differiscono su quattro pagine (P11, P17,
-A1, A2, A3): i valori di segnaposto occupano più spazio delle formulazioni
-prudenti che li sostituiscono. È la ragione per cui la working edition è la
+La working edition e la client edition differiscono su tre pagine (P17, A1, A3):
+i valori di segnaposto occupano più spazio delle formulazioni prudenti che li
+sostituiscono. È la ragione per cui la working edition è la
 versione stretta, e il QA gira su entrambe.
 
 ---
@@ -113,10 +112,9 @@ versione stretta, e il QA gira su entrambe.
 | controllo | soglia | esito |
 |---|---|---|
 | paragrafo esplicativo §12.2 | 45–100 parole su ogni pagina core | 16 su 16 ✓ |
-| riga di scrematura | 8–30 parole, `.who` + `.gist` | 20 su 20 ✓ |
-| «solution design» | ≤ 8 nel documento | 6 ✓ |
+| «solution design» | ≤ 8 nel documento | 7 ✓ |
 | «da verificare» nel core | ≤ 1 | 1 ✓ |
-| «da verificare» negli annessi | ≤ 2 | 1 ✓ |
+| «da verificare» negli annessi | ≤ 2 | 0 ✓ |
 | «da approvare» | 0 | 0 ✓ |
 | «da nominare» | 0 | 0 ✓ |
 | «chi decide» nel core | 0 | 0 ✓ |
@@ -135,7 +133,9 @@ versione stretta, e il QA gira su entrambe.
    data si compilano prima dell'invio, e la pagina di chiusura lo dice.
 3. **Che la vista di P05 sia il prodotto.** È una ricostruzione grafica.
    L'asset register non contiene nessuno screenshot reale.
-4. **Che il dimensionamento sia dichiarato.** G4 è aperto: CPU, RAM e storage si
+4. **Che il marchio sia quello giusto.** Il file originale non è mai stato
+   consegnato: copertina e chiusura tengono lo spazio riservato e vuoto.
+5. **Che il dimensionamento sia dichiarato.** G4 è aperto: CPU, RAM e storage si
    chiudono con l'audit tecnico, e A2 lo dichiara riga per riga.
 
 ---
