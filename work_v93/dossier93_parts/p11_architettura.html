@@ -29,7 +29,7 @@
       accesso.</div>
   </div>
 
-  <svg width="748" height="388" viewBox="0 0 748 388"
+  <svg width="748" height="352" viewBox="0 0 748 352"
        style="position:absolute;left:64px;top:274px" role="img" aria-labelledby="ar11t ar11d">
     <title id="ar11t">I quattro livelli logici dell&rsquo;architettura</title>
     <desc id="ar11d">Dal basso verso l&rsquo;alto: impianto, acquisizione, piattaforma, output e
@@ -39,70 +39,68 @@
 
     <!-- 4 · output e sistemi esterni · gli output del prodotto a sinistra,
          i sistemi a valle a destra, separati da una linea -->
-    <rect x="0" y="0" width="748" height="84" fill="#FFFFFF" stroke="rgba(10,10,10,.42)"/>
-    <text x="20" y="28" font-family="Geist Mono" font-size="13" letter-spacing="1.2"
+    <rect x="0" y="0" width="748" height="76" fill="#FFFFFF" stroke="rgba(10,10,10,.42)"/>
+    <text x="20" y="26" font-family="Geist Mono" font-size="13" letter-spacing="1.2"
           fill="rgba(10,10,10,.62)">4 &middot; OUTPUT E SISTEMI ESTERNI</text>
     <g font-family="Geist" font-size="17" font-weight="500" fill="#0A0A0A">
-      <text x="20" y="64">Dashboard</text><text x="160" y="64">Report</text>
-      <text x="280" y="64">Export</text>
+      <text x="20" y="60">Dashboard</text><text x="160" y="60">Report</text>
+      <text x="280" y="60">Export</text>
     </g>
-    <path d="M400 12 L400 72" stroke="rgba(10,10,10,.26)"/>
-    <rect x="424" y="38" width="304" height="30" fill="#FFFFFF" stroke="rgba(10,10,10,.42)"
+    <path d="M400 10 L400 66" stroke="rgba(10,10,10,.26)"/>
+    <rect x="424" y="34" width="304" height="30" fill="#FFFFFF" stroke="rgba(10,10,10,.42)"
           stroke-dasharray="4 4"/>
-    <text x="576" y="59" font-family="Geist" font-size="16" fill="rgba(10,10,10,.72)"
+    <text x="576" y="55" font-family="Geist" font-size="16" fill="rgba(10,10,10,.72)"
           text-anchor="middle">Sistemi esterni &middot; perimetro da definire</text>
 
     <!-- 3 · piattaforma · l'unico livello nero: e' il prodotto -->
-    <rect x="0" y="104" width="748" height="92" fill="#0A0A0A"/>
-    <text x="20" y="132" font-family="Geist Mono" font-size="13" letter-spacing="1.2"
+    <rect x="0" y="96" width="748" height="84" fill="#0A0A0A"/>
+    <text x="20" y="122" font-family="Geist Mono" font-size="13" letter-spacing="1.2"
           fill="rgba(255,255,255,.68)">3 &middot; PIATTAFORMA</text>
     <g font-family="Geist" font-size="17" font-weight="500" fill="#FFFFFF">
-      <text x="20" y="170">Applicazione</text><text x="220" y="170">Archivio</text>
-      <text x="400" y="170">Elaborazione KPI</text>
+      <text x="20" y="158">Applicazione</text><text x="220" y="158">Archivio</text>
+      <text x="400" y="158">Elaborazione KPI</text>
     </g>
 
     <!-- 2 · acquisizione -->
-    <rect x="0" y="216" width="748" height="84" fill="#FFFFFF" stroke="rgba(10,10,10,.42)"/>
-    <text x="20" y="244" font-family="Geist Mono" font-size="13" letter-spacing="1.2"
+    <rect x="0" y="196" width="748" height="76" fill="#FFFFFF" stroke="rgba(10,10,10,.42)"/>
+    <text x="20" y="222" font-family="Geist Mono" font-size="13" letter-spacing="1.2"
           fill="rgba(10,10,10,.62)">2 &middot; ACQUISIZIONE</text>
     <g font-family="Geist" font-size="17" font-weight="500" fill="#0A0A0A">
-      <text x="20" y="282">Connettori</text><text x="180" y="282">Normalizzazione</text>
-      <text x="400" y="282">Accodamento e persistenza temporanea</text>
+      <text x="20" y="256">Connettori</text><text x="180" y="256">Normalizzazione</text>
+      <text x="400" y="256">Accodamento e persistenza temporanea</text>
     </g>
 
     <!-- 1 · impianto -->
-    <rect x="0" y="320" width="748" height="68" fill="#E9EAE5"/>
-    <text x="20" y="348" font-family="Geist Mono" font-size="13" letter-spacing="1.2"
+    <rect x="0" y="288" width="748" height="64" fill="#E9EAE5"/>
+    <text x="20" y="312" font-family="Geist Mono" font-size="13" letter-spacing="1.2"
           fill="rgba(10,10,10,.62)">1 &middot; IMPIANTO</text>
     <g font-family="Geist" font-size="17" font-weight="500" fill="#0A0A0A">
-      <text x="20" y="376">PLC</text><text x="180" y="376">Sensori</text>
-      <text x="360" y="376">Contatori</text>
+      <text x="20" y="342">PLC</text><text x="180" y="342">Sensori</text>
+      <text x="360" y="342">Contatori</text>
     </g>
 
     <!-- flussi · frecce piu' spesse, il giallo marca il solo passaggio che conta -->
-    <g stroke="#0A0A0A" stroke-width="2" fill="#0A0A0A">
-      <path d="M300 320 L300 306"/><path d="M300 300 L292 313 L308 313 Z"/>
-      <path d="M300 104 L300 90"/><path d="M300 84 L292 97 L308 97 Z"/>
+    <g>
+      <path d="M300 320 L300 312" stroke="#0A0A0A" stroke-width="2" fill="none"/><polygon points="300,300 294.5,312 305.5,312" fill="#0A0A0A" stroke="none"/>
+      <path d="M300 104 L300 96" stroke="#0A0A0A" stroke-width="2" fill="none"/><polygon points="300,84 294.5,96 305.5,96" fill="#0A0A0A" stroke="none"/>
+      <path d="M300 216 L300 208" stroke="#E6E011" stroke-width="2.5" fill="none"/><polygon points="300,196 294.5,208 305.5,208" fill="#E6E011" stroke="none"/>
     </g>
-    <g stroke="#E6E011" fill="#E6E011" stroke-width="3">
-      <path d="M300 216 L300 202"/><path d="M300 196 L291 211 L309 211 Z"/>
-    </g>
-    <text x="326" y="212" font-family="Geist" font-size="14" fill="rgba(10,10,10,.66)">qui il dato riceve il contesto</text>
+    <text x="326" y="192" font-family="Geist" font-size="14" fill="rgba(10,10,10,.66)">qui il dato riceve il contesto</text>
   </svg>
 
   <div style="position:absolute;left:848px;top:274px;width:368px">
     <div class="lbl" style="margin-bottom:10px">Definito nel prodotto</div>
     <div class="sp">Modello dati &middot; logica applicativa &middot; output</div>
 
-    <div class="lbl" style="margin:22px 0 10px">Definito in progetto</div>
+    <div class="lbl" style="margin:16px 0 8px">Definito in progetto</div>
     <div class="sp">Ambiente &middot; rete &middot; autenticazione &middot; backup &middot;
       retention &middot; accesso remoto</div>
 
-    <div class="lbl" style="margin:22px 0 10px">Richiede</div>
+    <div class="lbl" style="margin:16px 0 8px">Richiede</div>
     <div class="sp">Accesso in lettura ai controllori &middot; punti di misura per le utility
       &middot; anagrafiche di prodotto e ordine &middot; un ambiente concordato con l&rsquo;IT</div>
 
-    <div class="lbl" style="margin:22px 0 10px">Non presuppone</div>
+    <div class="lbl" style="margin:16px 0 8px">Non presuppone</div>
     <div class="sp">Sostituzione delle macchine &middot; rifacimento dei PLC &middot; cloud
       obbligatorio</div>
   </div>

@@ -33,7 +33,7 @@ JS = r"""
                   tipo: slide.dataset.tipo || '', overflow: [],
                   minText: 999, minCont: 999, minMeta: 999, minSvg: 999, minUi: 999,
                   words: 0, wordsUi: 0, wordsSvg: 0, wordsMeta: 0, wordsPh: 0, placeholders: 0, fragments: 0, clipped: [],
-                  smallText: [], visualPct: 0, collisions: [] };
+                  smallText: [], visualPct: 0, collisions: [], vicini: [] };
 
     // ---- testo: cammina i nodi di testo, misura il corpo effettivo ----
     const seen = [];
@@ -137,10 +137,34 @@ JS = r"""
         const a = blocks[i].r, b = blocks[j].r;
         const ox = Math.min(a.right, b.right) - Math.max(a.left, b.left);
         const oy = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+        // Prossimita': due blocchi di testo che quasi si toccano si leggono
+        // come un errore quanto due che si sovrappongono. Il controllo
+        // precedente vedeva solo la sovrapposizione, e un piede appiccicato
+        // all'ultima riga passava.
+        const at0 = (blocks[i].e.textContent || '').trim();
+        const bt0 = (blocks[j].e.textContent || '').trim();
+        // Due soglie, perche' due rapporti diversi: un titolo e il suo
+        // paragrafo possono stare vicini, sono un gruppo. Un blocco e il piede
+        // del documento no: sotto i 24 px si legge come un errore.
+        const oriz = Math.min(a.right, b.right) - Math.max(a.left, b.left) > 40;
+        const gap = oy <= 0 ? -oy : 0;
+        // L'impalcatura della working edition sta sotto il piede per scelta:
+        // non e' testo del documento e non entra nel controllo.
+        const piede = e => e.classList.contains('ft') || e.classList.contains('rail');
+        const scaff = blocks[i].e.classList.contains('phb') || blocks[j].e.classList.contains('phb');
+        // 6 px fra un titolo e il suo paragrafo sono un gruppo, non un errore.
+        // 24 px verso il piede sono il minimo perche' non sembri attaccato.
+        const soglia = scaff ? 0 : ((piede(blocks[i].e) || piede(blocks[j].e)) ? 24 : 6);
+        if (at0 && bt0 && oriz && oy <= 0 && gap < soglia) {
+          rec.vicini.push({ a: blocks[i].e.className.baseVal || blocks[i].e.className || '',
+                            b: blocks[j].e.className.baseVal || blocks[j].e.className || '',
+                            gap: Math.round(gap),
+                            at: at0.replace(/\s+/g,' ').slice(0,28),
+                            bt: bt0.replace(/\s+/g,' ').slice(0,28) });
+        }
         if (ox > 4 && oy > 4) {
           // ignora se uno dei due non ha testo proprio (fondali, griglie)
-          const at = (blocks[i].e.textContent || '').trim();
-          const bt = (blocks[j].e.textContent || '').trim();
+          const at = at0, bt = bt0;
           if (at && bt) rec.collisions.push({
             a: blocks[i].e.className.baseVal || blocks[i].e.className || blocks[i].e.tagName,
             b: blocks[j].e.className.baseVal || blocks[j].e.className || blocks[j].e.tagName,
@@ -320,6 +344,7 @@ def report(html, default='sales'):
         flags = []
         if r['overflow']: flags.append(f'OVERFLOW×{len(r["overflow"])}')
         if r['collisions']: flags.append(f'COLLIS×{len(r["collisions"])}')
+        if r.get('vicini'): flags.append(f'VICINI×{len(r["vicini"])}')
         if r.get('clipped'): flags.append(f'CLIP×{len(r["clipped"])}')
         if copy > wmax: flags.append(f'copy>{wmax}')
         if r['wordsSvg'] > dmax: flags.append(f'diagr>{dmax}')
@@ -339,6 +364,9 @@ def report(html, default='sales'):
               f'{r["visualPct"]:>7}  {" ".join(flags)}')
         for o in r['overflow'][:4]:
             print(f'      ! overflow {o["tag"]}.{o["cls"]} dx={o["dx"]} dy={o["dy"]} "{o["txt"]}"')
+        for v in r.get('vicini', [])[:4]:
+            print(f'      ! {v["gap"]}px fra {v["a"]} e {v["b"]}: '
+                  f'"{v["at"]}" / "{v["bt"]}"')
         for c in r['collisions'][:4]:
             print(f'      ! collisione {c["a"]} / {c["b"]} {c["ox"]}×{c["oy"]}px '
                   f'"{c["at"]}" ~ "{c["bt"]}"')
