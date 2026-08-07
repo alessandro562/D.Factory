@@ -1,50 +1,27 @@
 <div class="doc">
 
-<!-- ================= P01 · COVER · apertura · dk ========================
-     Storyboard P01: destinatari su una sola riga discreta, non sei reparti in
-     evidenza. Indice delle quattro sezioni, elenco dei quattro annessi,
-     blocco di emissione.
-     G4 aperto: il titolo resta «preliminare» — condizione di build n. 4. -->
+<!-- ================= P01 · COPERTINA · apertura · dk ====================
+     Copertina pulita: marchio, titolo, una riga. L'indice delle sezioni e il
+     blocco di emissione sono usciti — la navigazione in testa a ogni pagina
+     porta gia' le sezioni, e l'emissione sta nella pagina di chiusura, che e'
+     il posto dove si cerca.
+     G4 aperto: «Edizione preliminare» resta, ed e' una condizione di build. -->
 <div class="slide dk" id="p01_cover" data-kind="dossier" data-tipo="apertura">
   <div style="position:absolute;left:64px;top:64px">
-    <span class="wm" style="font-size:19px">D<i>.</i>Factory</span>
+    <span class="wm" style="font-size:26px">D<i>.</i>Factory</span>
   </div>
 
-  <div style="position:absolute;left:64px;top:152px;width:940px">
-    <div style="font-size:42px;line-height:1.12;letter-spacing:-.03em;font-weight:600">Dossier
-      tecnico preliminare<br>per assessment e solution design</div>
-    <div class="sub" style="margin-top:22px;max-width:820px">Architettura funzionale,
-      acquisizione dati, metodi di misura, deployment e servizi.</div>
-    <div class="note" style="margin-top:18px">Destinatari: Operations, Engineering e IT/OT.</div>
+  <div style="position:absolute;left:64px;top:300px;width:96px;height:5px;background:var(--acid)"></div>
+
+  <div style="position:absolute;left:64px;top:336px;width:1000px">
+    <div style="font-size:76px;line-height:1.02;letter-spacing:-.042em;font-weight:600">Dossier
+      tecnico</div>
+    <div class="sub" style="margin-top:26px;max-width:820px;font-size:21px">Edizione preliminare
+      per assessment e solution design.</div>
   </div>
 
-  <!-- l'unico segno giallo della copertina: marca la parola «preliminare» -->
-  <div style="position:absolute;left:64px;top:132px;width:96px;height:4px;background:var(--acid)"></div>
-
-  <div class="hr" style="position:absolute;left:64px;right:64px;top:396px"></div>
-
-  <div style="position:absolute;left:64px;top:432px;width:520px">
-    <div class="lbl">Le quattro sezioni</div>
-    <div class="sp" style="margin-top:14px;line-height:1.9">
-      1 &middot; Prodotto &mdash; pagine 02&ndash;08<br>
-      2 &middot; Dati e architettura &mdash; pagine 09&ndash;12<br>
-      3 &middot; Misure e analisi &mdash; pagine 13&ndash;15<br>
-      4 &middot; Delivery e supporto &mdash; pagine 16&ndash;17</div>
-  </div>
-
-  <div style="position:absolute;left:672px;top:432px;width:544px">
-    <div class="lbl">Annessi tecnici</div>
-    <div class="sp" style="margin-top:14px;line-height:1.9">A1 compatibilit&agrave; &middot;
-      A2 dimensionamento<br>A3 requisiti IT e security &middot; A4 dizionario KPI</div>
-    <div class="lbl" style="margin-top:30px">Emesso da</div>
-    
-    <div class="sp" style="margin-top:12px;line-height:1.9" data-ed="client">Denominazione,
-      referente e data si compilano prima dell&rsquo;invio.</div>
-  </div>
-
-  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Le viste di prodotto
-    sono ricostruzioni con dati illustrativi, dichiarate pagina per pagina</span></div>
-  
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span><span class="decl">Architettura,
+    acquisizione dati, metodi di misura, deployment e servizi</span></div>
 </div>
 
 
@@ -55,7 +32,7 @@
      700 e riceve un marcatore sulla riga dell'header. -->
 <div class="slide dk" id="p02_executive" data-kind="dossier" data-tipo="spiegazione">
   <div class="hd">
-    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">02 / 17</div>
   </div>
 
@@ -123,7 +100,7 @@
      catena funzionale, li' i livelli logici e il confine di rete. -->
 <div class="slide lt" id="p03_architettura_funzionale" data-kind="dossier" data-tipo="architettura">
   <div class="hd">
-    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">03 / 17</div>
   </div>
 
@@ -194,7 +171,7 @@
      tre i livelli, li' solo quello che ciascuno aggiunge. -->
 <div class="slide lt" id="p04_base_comune" data-kind="dossier" data-tipo="funzionale">
   <div class="hd">
-    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">04 / 17</div>
   </div>
 
@@ -265,7 +242,7 @@
      «Limiti» non sta qui: e' passato alla matrice funzionale P08. -->
 <div class="slide lt" id="p05_connect" data-kind="dossier" data-tipo="funzionale">
   <div class="hd">
-    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">05 / 17</div>
   </div>
 
@@ -370,7 +347,7 @@
      sembrerebbero la stessa pagina ripetuta. -->
 <div class="slide lt" id="p06_insight" data-kind="dossier" data-tipo="funzionale">
   <div class="hd">
-    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">06 / 17</div>
   </div>
 
@@ -468,7 +445,7 @@
      Unica occorrenza di «modulo avanzato in sviluppo» nel dossier. -->
 <div class="slide lt" id="p07_refyn" data-kind="dossier" data-tipo="funzionale">
   <div class="hd">
-    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">07 / 17</div>
   </div>
 
@@ -546,7 +523,7 @@
      del deck (quattordici righe, scala a cinque valori). -->
 <div class="slide lt" id="p08_matrice" data-kind="dossier" data-tipo="tabella">
   <div class="hd">
-    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span class="on"><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">08 / 17</div>
   </div>
 
@@ -566,33 +543,33 @@
     <div class="tb__h">Connect</div><div class="tb__h">Insight</div><div class="tb__h">Refyn</div>
 
     <div><b>Supervisione</b></div><div>Stato macchina e linea</div>
-    <div>Incluso</div><div>Incluso</div><div>Incluso</div>
+    <div class="mc2">Incluso</div><div class="mc2">Incluso</div><div class="mc2">Incluso</div>
     <div><b>Supervisione</b></div><div>Eventi e cause associate</div>
-    <div>Raccolta</div><div>Analisi</div><div>Analisi</div>
+    <div class="mc1">Raccolta</div><div class="mc2">Analisi</div><div class="mc2">Analisi</div>
     <div><b>Produzione</b></div><div>Conteggi, velocit&agrave; e avanzamento</div>
-    <div>Incluso</div><div>Incluso</div><div>Incluso</div>
+    <div class="mc2">Incluso</div><div class="mc2">Incluso</div><div class="mc2">Incluso</div>
     <div><b>Produzione</b></div><div>Storico per turno, prodotto e ordine</div>
-    <div>Incluso</div><div>Incluso</div><div>Incluso</div>
+    <div class="mc2">Incluso</div><div class="mc2">Incluso</div><div class="mc2">Incluso</div>
     <div><b>OEE</b></div><div>Disponibilit&agrave;, performance, qualit&agrave;</div>
-    <div>Incluso</div><div>Incluso</div><div>Incluso</div>
+    <div class="mc2">Incluso</div><div class="mc2">Incluso</div><div class="mc2">Incluso</div>
     <div><b>OEE</b></div><div>Aggregazione di linea e regole</div>
-    <div>Standard</div><div>Avanzato</div><div>Avanzato</div>
+    <div class="mc1">Standard</div><div class="mc2">Avanzato</div><div class="mc2">Avanzato</div>
     <div><b>Fermi</b></div><div>Micro-fermate e perdite di velocit&agrave;</div>
-    <div>&#8212;</div><div>Incluso</div><div>Incluso</div>
+    <div class="mc0">&#8212;</div><div class="mc2">Incluso</div><div class="mc2">Incluso</div>
     <div><b>Energia</b></div><div>Consumi e utility</div>
-    <div>Incluso</div><div>Incluso</div><div>Incluso</div>
+    <div class="mc2">Incluso</div><div class="mc2">Incluso</div><div class="mc2">Incluso</div>
     <div><b>Energia</b></div><div>Energia per stato e consumo specifico</div>
-    <div>Base</div><div>Avanzato</div><div>Avanzato</div>
+    <div class="mc1">Base</div><div class="mc2">Avanzato</div><div class="mc2">Avanzato</div>
     <div><b>Energia</b></div><div>Costo energetico e CO&#8322;</div>
-    <div>&#8212;</div><div>Incluso</div><div>Incluso</div>
+    <div class="mc0">&#8212;</div><div class="mc2">Incluso</div><div class="mc2">Incluso</div>
     <div><b>Analisi</b></div><div>KPI e formule configurabili</div>
-    <div>Standard</div><div>Avanzato</div><div>Avanzato</div>
+    <div class="mc1">Standard</div><div class="mc2">Avanzato</div><div class="mc2">Avanzato</div>
     <div><b>Analisi</b></div><div>Priorit&agrave; economiche e ranking</div>
-    <div>&#8212;</div><div>Incluso</div><div>Incluso</div>
+    <div class="mc0">&#8212;</div><div class="mc2">Incluso</div><div class="mc2">Incluso</div>
     <div><b>Miglioramento</b></div><div>Azioni, responsabili e target</div>
-    <div>&#8212;</div><div>&#8212;</div><div>Previsto</div>
+    <div class="mc0">&#8212;</div><div class="mc0">&#8212;</div><div class="mc2">Previsto</div>
     <div><b>Miglioramento</b></div><div>Verifica dei benefici</div>
-    <div>&#8212;</div><div>&#8212;</div><div>Previsto</div>
+    <div class="mc0">&#8212;</div><div class="mc0">&#8212;</div><div class="mc2">Previsto</div>
   </div>
 
   <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>I servizi professionali sono attivabili su tutti e tre i livelli</span></div>
@@ -610,7 +587,7 @@
 <div class="slide lt" id="p09_acquisizione" data-kind="dossier" data-tipo="architettura">
   <div class="band" style="height:190px">
     <div class="hd">
-      <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+      <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
       <div class="pg">09 / 17</div>
     </div>
     <div class="lbl" style="position:absolute;left:64px;top:100px">Sezione 2 &middot; Dati e architettura</div>
@@ -698,7 +675,7 @@
      automaticamente». -->
 <div class="slide dk" id="p10_contesto" data-kind="dossier" data-tipo="spiegazione">
   <div class="hd">
-    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">10 / 17</div>
   </div>
 
@@ -787,7 +764,7 @@
      solution design». -->
 <div class="slide lt" id="p11_architettura" data-kind="dossier" data-tipo="architettura">
   <div class="hd">
-    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">11 / 17</div>
   </div>
 
@@ -895,7 +872,7 @@
      legale non approva: la voce dichiara l'area, non il diritto. -->
 <div class="slide lt" id="p12_security" data-kind="dossier" data-tipo="tabella">
   <div class="hd">
-    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">12 / 17</div>
   </div>
 
@@ -976,7 +953,7 @@
 <div class="slide lt" id="p13_oee" data-kind="dossier" data-tipo="metodo">
   <div class="band" style="height:190px">
     <div class="hd">
-      <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+      <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
       <div class="pg">13 / 17</div>
     </div>
     <div class="lbl" style="position:absolute;left:64px;top:100px">Sezione 3 &middot; Misure e analisi</div>
@@ -1057,7 +1034,7 @@
      Mai «costo del pezzo» quando il perimetro e' la sola energia. -->
 <div class="slide lt" id="p14_energia" data-kind="dossier" data-tipo="metodo">
   <div class="hd">
-    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">14 / 17</div>
   </div>
 
@@ -1152,7 +1129,7 @@
      Escono «reparto», «chi lo usa» e «che decisione abilita». -->
 <div class="slide lt" id="p15_output" data-kind="dossier" data-tipo="tabella">
   <div class="hd">
-    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">15 / 17</div>
   </div>
 
@@ -1214,7 +1191,7 @@
      proposta di pilot. -->
 <div class="slide dk" id="p16_delivery" data-kind="dossier" data-tipo="delivery">
   <div class="hd">
-    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span class="on"><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span class="on"><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">16 / 17</div>
   </div>
 
@@ -1294,7 +1271,7 @@
      nel contratto. Unica citazione di MAPST 4.0 e MarEnergy nel dossier. -->
 <div class="slide lt" id="p17_servizi" data-kind="dossier" data-tipo="delivery">
   <div class="hd">
-    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span class="on"><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span class="on"><i>4</i>Delivery e supporto</span><span><i>A</i>Annessi</span></div>
     <div class="pg">17 / 17</div>
   </div>
 
@@ -1349,7 +1326,7 @@
      una nota unica, non ripetuta riga per riga. -->
 <div class="slide lt" id="pa1_compatibilita" data-kind="appendix" data-tipo="annesso">
   <div class="hd">
-    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span class="on"><i>A</i>Annessi</span></div>
     <div class="pg">ANNESSO A1</div>
   </div>
 
@@ -1407,7 +1384,7 @@
      parametri di fascia sono ipotesi dichiarate, non un listino. -->
 <div class="slide lt" id="pa2_sizing" data-kind="appendix" data-tipo="annesso">
   <div class="hd">
-    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span class="on"><i>A</i>Annessi</span></div>
     <div class="pg">ANNESSO A2</div>
   </div>
 
@@ -1469,11 +1446,11 @@
      approva: la riga dichiara l'ambito, non il diritto. -->
 <div class="slide lt" id="pa3_requisiti" data-kind="appendix" data-tipo="annesso">
   <div class="hd">
-    <div class="nav"><span><i>1</i>Prodotto</span><span class="on"><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span class="on"><i>A</i>Annessi</span></div>
     <div class="pg">ANNESSO A3</div>
   </div>
 
-  <div class="tt tt--sm">Requisiti IT e security &middot; raccolta per il solution design</div>
+  <div class="tt tt--sm">Requisiti IT e security &middot; da compilare con l&rsquo;IT</div>
 
   <div style="position:absolute;left:64px;top:158px;width:1060px">
     <div class="par" style="font-size:16px">Questo annesso raccoglie, ambito per ambito, il
@@ -1523,7 +1500,7 @@
      stesso stato aperto non lo rende piu' vero, rende la pagina illeggibile. -->
 <div class="slide lt" id="pa4_kpi" data-kind="appendix" data-tipo="annesso">
   <div class="hd">
-    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span class="on"><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span></div>
+    <div class="nav"><span><i>1</i>Prodotto</span><span><i>2</i>Dati e architettura</span><span><i>3</i>Misure e analisi</span><span><i>4</i>Delivery e supporto</span><span class="on"><i>A</i>Annessi</span></div>
     <div class="pg">ANNESSO A4</div>
   </div>
 
@@ -1567,6 +1544,49 @@
 
   <div class="ft"><span class="wm">D<i>.</i>Factory</span><span>Annesso A4 &middot; dizionario KPI</span></div>
   
+</div>
+
+
+<!-- ================= P18 · CHIUSURA · apertura · dk =====================
+     Ultima pagina. Un dossier tecnico non si chiude con una call to action
+     commerciale: si chiude con il passo tecnico successivo, che e' l'audit
+     sull'impianto reale, e con l'indicazione di quali annessi vanno compilati
+     insieme. Marchio, tre passi, blocco di emissione.
+     G1 aperto: il referente compare solo nella working edition. -->
+<div class="slide dk" id="p18_chiusura" data-kind="dossier" data-tipo="apertura">
+  <div style="position:absolute;left:64px;top:64px">
+    <span class="wm" style="font-size:26px">D<i>.</i>Factory</span>
+  </div>
+
+  <div style="position:absolute;left:64px;top:196px;width:96px;height:5px;background:var(--acid)"></div>
+
+  <div style="position:absolute;left:64px;top:232px;width:1000px">
+    <div style="font-size:52px;line-height:1.08;letter-spacing:-.035em;font-weight:600">Il passo
+      successivo &egrave; un audit<br>sull&rsquo;impianto reale.</div>
+  </div>
+
+  <div style="position:absolute;left:64px;top:414px;width:1152px" class="cols cols--rule">
+    <div class="col">
+      <div class="lbl" style="margin-bottom:12px">01 &middot; Perimetrazione</div>
+      <div class="sp">La prima linea, gli obiettivi e i vincoli, concordati prima di
+        misurare.</div>
+    </div>
+    <div class="col">
+      <div class="lbl" style="margin-bottom:12px">02 &middot; Audit tecnico</div>
+      <div class="sp">Il censimento di controllori, contatori e anagrafiche, con gli annessi
+        A1 e A2 compilati sul campo.</div>
+    </div>
+    <div class="col">
+      <div class="lbl" style="margin-bottom:12px">03 &middot; Solution design</div>
+      <div class="sp">Ambiente, rete e requisiti di sicurezza definiti con l&rsquo;IT,
+        sull&rsquo;annesso A3.</div>
+    </div>
+  </div>
+
+  <div class="ft"><span class="wm">D<i>.</i>Factory</span>
+    
+    <span data-ed="client">Denominazione, referente e data si compilano prima
+      dell&rsquo;invio</span></div>
 </div>
 
 </div>

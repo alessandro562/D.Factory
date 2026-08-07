@@ -163,3 +163,46 @@ h2.sm{font-size:44px}
 .tf__t{font-size:23px;line-height:1.32}
 .dk .tf__t{color:rgba(255,255,255,.66)}
 .tf__t--on{font-weight:500;color:var(--l1)}
+
+/* ==========================================================================
+   V9.3 · revisione di design · elenchi e matrici
+   ========================================================================== */
+
+/* ---------- elenco strutturato ----------
+   Un elenco separato da <br> e' una pila di frasi: non ha ritmo, non ha
+   ancore, a colpo d'occhio non si distingue da un paragrafo. Qui ogni voce ha
+   un indice monospazio e un filetto: si conta, si cita, si legge. */
+.ls{display:block;margin:0;padding:0}
+.ls li{list-style:none;display:flex;gap:16px;align-items:baseline;
+  padding:7px 0;border-top:1px solid var(--l-line)}
+.dk .ls li{border-top-color:var(--d-line)}
+.ls li:last-child{border-bottom:1px solid var(--l-line)}
+.dk .ls li:last-child{border-bottom-color:var(--d-line)}
+.ls b{font-family:var(--mono);font-size:13px;font-weight:400;flex:none;width:16px;
+  letter-spacing:.04em}
+.lt .ls b{color:rgba(10,10,10,.42)} .dk .ls b{color:rgba(255,255,255,.38)}
+.ls span{font-size:16.5px;line-height:1.34}
+.lt .ls span{color:var(--l1)} .dk .ls span{color:rgba(255,255,255,.92)}
+/* la riga di apertura del gruppo: dice a che cosa serve l'elenco, cosi' le
+   voci non arrivano nude */
+.ls__k{font-size:15px;line-height:1.45;margin:6px 0 14px}
+.lt .ls__k{color:var(--l3)} .dk .ls__k{color:var(--d3)}
+
+/* colonne separate da un filetto: tre gruppi accostati senza divisione si
+   leggono come un unico blocco di testo giustificato male */
+.cols--rule .col{padding-right:36px;border-right:1px solid var(--l-line)}
+.dk .cols--rule .col{border-right-color:var(--d-line)}
+.cols--rule .col:last-child{border-right:none;padding-right:0}
+
+/* ---------- matrice a livelli ----------
+   Il difetto della prima versione: «Base», «Incluso» e «Avanzato» avevano
+   tutti lo stesso peso, e una matrice che serve a mostrare una progressione
+   non mostrava nessuna progressione. Il valore adesso e' anche un tono: la
+   riga si legge da sinistra a destra prima ancora di leggere le parole. */
+.mv0{fill:rgba(10,10,10,.22)}      /* non incluso */
+.mv1{fill:rgba(10,10,10,.52)}      /* base, raccolta, standard */
+.mv2{fill:#0A0A0A}                 /* incluso, analisi, avanzato */
+/* la stessa scala di toni per le celle HTML del dossier */
+.mc0{color:rgba(10,10,10,.30)}
+.mc1{color:rgba(10,10,10,.56)}
+.mc2{color:#0A0A0A;font-weight:500}

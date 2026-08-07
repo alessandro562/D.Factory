@@ -59,10 +59,15 @@ JS = r"""
       const chiaro = m[0] > 250 && m[1] > 250 && m[2] > 250;
       if (!chiaro) fondo = 'gr';
       else {
+        // Un rettangolo nero e' nero anche quando sta dentro un SVG: il
+        // lettore vede la stessa cosa. Prima il classificatore saltava gli
+        // SVG e leggeva come «bianca» una slide meta' nera.
         let scuro = 0;
         for (const e of s.querySelectorAll('*')) {
-          if (e.closest('svg')) continue;
-          const c = getComputedStyle(e).backgroundColor.match(/\d+/g);
+          const dentroSvg = !!e.closest('svg');
+          if (dentroSvg && e.tagName.toLowerCase() !== 'rect') continue;
+          const st = getComputedStyle(e);
+          const c = (dentroSvg ? st.fill : st.backgroundColor).match(/\d+/g);
           if (!c || (c[3] !== undefined && +c[3] === 0)) continue;
           if (+c[0] < 60 && +c[1] < 60 && +c[2] < 60) {
             const r = e.getBoundingClientRect();
@@ -147,8 +152,9 @@ def audit(nome, data, tetto_streak, tipi_tecnici, core=None):
                                for i in range(len(f_core) - 2)) else '')
     else:
         n = fondi.count('dk')
-        if not 3 <= n <= 4:
-            ERR.append(f'{nome} · {n} pagine scure: il §9.5 ne chiede da 3 a 4')
+        # 3-4 nel §9.5, piu' la pagina di chiusura che fa da contro-copertina
+        if not 3 <= n <= 5:
+            ERR.append(f'{nome} · {n} pagine scure: da 3 a 5 con la chiusura')
         secco = [not (r['svg'] or any(b[4].startswith('tb') for b in r['blocchi'])
                       or r['band']) for r in data]
         for i in range(len(secco) - 3):

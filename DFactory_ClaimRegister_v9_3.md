@@ -30,7 +30,7 @@ che lo copra: `accept93.py` condizione 6.
 | marcatore | deck client | dossier client |
 |---|--:|--:|
 | `sola lettura` | 1 | 1 |
-| `solution design` | 1 | 8 |
+| `solution design` | 1 | 7 |
 | `disponibilit` | 1 | 4 |
 | `costo energetico` | 2 | 3 |
 | `calcolata o stimata` | 1 | 2 |
@@ -39,7 +39,7 @@ che lo copra: `accept93.py` condizione 6.
 | `gi&agrave; presenti` | 1 | 1 |
 | `da verificare sul perimetro` | 0 | 1 |
 | `previa verifica` | 0 | 1 |
-| `impianto reale` | 3 | 1 |
+| `impianto reale` | 3 | 2 |
 
 ## Formulazioni vietate dal §12
 

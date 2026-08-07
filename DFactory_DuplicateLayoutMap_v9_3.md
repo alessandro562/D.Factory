@@ -12,17 +12,17 @@ slide ripetuta tre volte.
 
 | # | canvas | blocchi | firma |
 |--:|---|--:|---|
-| 01 | `s01_promessa` | 4 | `dk/narrativa/div@48h24w1120|div@144h120w1120|div@264h72w1040|svg@408h240w1280` |
+| 01 | `s01_promessa` | 5 | `dk/narrativa/div@72h24w1120|div@288h0w80|div@312h144w1120|div@504h24w800|div@672h24w1120` |
 | 02 | `s02_problema` | 5 | `lt/narrativa/div@48h96w1120|div@216h96w1120|svg@384h144w1120|div@576h72w1120|div@672h24w1120` |
 | 03 | `s03_visione` | 5 | `lt/narrativa/div@48h96w1120|div@192h48w1040|svg@312h192w1120|div@552h24w1120|div@672h24w1120` |
-| 04 | `s04_trasformazione` | 6 | `mx/narrativa/div@48h96w1120|div@192h360w560|div@192h360w0|div@216h312w560|div@600h48w1120|div@67` |
+| 04 | `s04_trasformazione` | 4 | `mx/narrativa/div@48h96w1120|svg@192h360w1120|div@552h24w1120|div@672h24w1120` |
 | 05 | `s05_prodotto` | 3 | `lt/prodotto/div@48h96w1120|svg@168h480w1280|div@672h24w1120` |
 | 06 | `s06_quattro_letture` | 4 | `dk/prodotto/div@48h96w1120|div@168h24w1040|svg@216h432w1280|div@672h24w1120` |
 | 07 | `s07_priorita` | 4 | `lt/valore/div@48h96w1120|div@192h48w1120|svg@336h288w1120|div@672h24w1120` |
 | 08 | `s08_mappa` | 3 | `dk/funzionalita/div@48h48w1120|svg@168h432w1120|div@672h24w1120` |
-| 09 | `s09_connect` | 7 | `lt/pacchetto/div@48h72w720|div@144h24w800|div@72h48w400|div@240h144w1120|div@408h120w1280|div@55` |
-| 10 | `s10_insight` | 7 | `gr/pacchetto/div@48h72w720|div@144h24w880|div@72h48w400|div@240h168w1120|div@408h120w1280|div@55` |
-| 11 | `s11_refyn` | 8 | `dk/pacchetto/div@48h72w240|div@96h24w400|div@72h48w400|div@144h24w800|svg@240h264w1120|div@528h7` |
+| 09 | `s09_connect` | 7 | `lt/pacchetto/div@48h72w720|div@144h24w800|div@72h48w400|div@240h216w1120|div@456h96w1280|div@576` |
+| 10 | `s10_insight` | 7 | `gr/pacchetto/div@48h72w720|div@144h24w880|div@72h48w400|div@240h216w1120|div@456h96w1280|div@576` |
+| 11 | `s11_refyn` | 9 | `dk/pacchetto/div@48h72w240|div@96h24w400|div@72h48w400|div@144h24w800|svg@240h24w1120|div@264h24` |
 | 12 | `s12_confronto` | 6 | `lt/matrice/div@48h96w1120|svg@168h360w1120|div@552h24w1120|div@576h48w1120|div@624h24w1120|div@6` |
 | 13 | `s13_perche` | 5 | `dk/azienda/div@48h96w1120|div@288h192w1120|div@264h0w80|div@576h24w1120|div@672h24w1120` |
 | 14 | `s14_valore` | 5 | `lt/valore/div@48h96w1120|svg@192h384w720|div@192h288w400|div@600h48w1120|div@672h24w1120` |
@@ -37,7 +37,7 @@ slide ripetuta tre volte.
 
 | # | canvas | blocchi | firma |
 |--:|---|--:|---|
-| 01 | `p01_cover` | 6 | `dk/apertura/div@72h24w80|div@144h192w960|div@144h0w80|div@432h144w560|div@432h168w560|div@672h24` |
+| 01 | `p01_cover` | 4 | `dk/apertura/div@72h24w80|div@312h0w80|div@336h144w1040|div@672h24w1120` |
 | 02 | `p02_executive` | 7 | `dk/spiegazione/div@48h24w1120|div@120h72w1040|div@240h120w720|div@240h240w400|div@504h0w1120|div` |
 | 03 | `p03_architettura_funzionale` | 6 | `lt/architettura/div@48h24w1120|div@96h48w1040|div@144h120w1040|div@312h24w1120|svg@360h240w1120|` |
 | 04 | `p04_base_comune` | 6 | `lt/funzionale/div@48h24w1120|div@96h48w1040|div@168h72w1040|div@288h144w1120|svg@480h120w1120|di` |
@@ -58,5 +58,6 @@ slide ripetuta tre volte.
 | 19 | `pa2_sizing` | 9 | `lt/annesso/div@48h24w1120|div@96h48w1040|div@144h72w1040|div@264h24w1120|div@288h72w1120|div@384` |
 | 20 | `pa3_requisiti` | 6 | `lt/annesso/div@48h24w1120|div@96h48w1040|div@168h48w1040|div@240h264w1120|div@528h72w1120|div@67` |
 | 21 | `pa4_kpi` | 6 | `lt/annesso/div@48h24w1120|div@96h48w1040|div@144h48w1040|div@240h264w1120|div@552h72w1120|div@67` |
+| 22 | `p18_chiusura` | 5 | `dk/apertura/div@72h24w80|div@192h0w80|div@240h120w1040|div@408h96w1120|div@672h24w1120` |
 
 **Firme ripetute:** nessuna

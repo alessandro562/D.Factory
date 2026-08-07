@@ -14,7 +14,8 @@
        style="position:absolute;left:0;top:210px" role="img" aria-labelledby="q6t q6d">
     <title id="q6t">Un intervallo di fermo letto su quattro assi</title>
     <desc id="q6d">Il turno dalle sei alle quattordici con l&rsquo;intervallo dalle 11:24 alle
-      11:42 marcato. Sotto, lo stesso intervallo letto come capacit&agrave; persa, energia
+      11:42 marcato, e una verticale che lo collega alle quattro letture sottostanti.
+      Lo stesso intervallo &egrave; letto come capacit&agrave; persa, energia
       assorbita a linea ferma, costo e impatto sull&rsquo;OEE del turno. Vista ricostruita,
       dati illustrativi.</desc>
 
@@ -38,11 +39,15 @@
       <text x="1216" y="146" text-anchor="end">14:00</text>
     </g>
 
-    <!-- l'imbuto: la fascia inferiore e' quell'intervallo, non un'altra vista -->
-    <g stroke="rgba(255,255,255,.30)" fill="none">
-      <path d="M912 128 L64 190"/><path d="M947 128 L1216 190"/>
-    </g>
+    <!-- il legame fra l'intervallo e le quattro letture: una sola verticale,
+         allineata al centro del blocco giallo. Le due oblique che stavano qui
+         tagliavano le etichette dell'asse ed erano un errore, non un
+         espediente: in questo documento non esistono linee oblique. -->
+    <path d="M929 124 L929 196" stroke="#E6E011" stroke-width="2"/>
+    <text x="917" y="170" font-family="Geist" font-size="14" fill="rgba(255,255,255,.62)"
+          text-anchor="end">lo stesso intervallo, letto in quattro modi</text>
     <path d="M0 196 L1280 196" stroke="rgba(255,255,255,.16)"/>
+    <rect x="905" y="194" width="48" height="4" fill="#E6E011"/>
 
     <g stroke="rgba(255,255,255,.16)">
       <path d="M332 212 L332 396"/><path d="M624 212 L624 396"/><path d="M916 212 L916 396"/>

@@ -18,6 +18,7 @@ ORDINE = [
     'p13_oee', 'p14_energia', 'p15_output',
     'p16_delivery', 'p17_servizi',
     'pa1_compatibilita', 'pa2_sizing', 'pa3_requisiti', 'pa4_kpi',
+    'p18_chiusura',
 ]
 
 parts = []
@@ -50,7 +51,7 @@ core = vis.split('id="pa1_compatibilita"')[0]
 print('  §12.2 · paragrafo esplicativo, 45-100 parole per pagina core')
 fuori = []
 for nome in ORDINE:
-    if nome == 'p01_cover' or nome.startswith('pa'):
+    if nome in ('p01_cover', 'p18_chiusura') or nome.startswith('pa'):
         continue
     pg = open(os.path.join('dossier93_parts', nome + '.html'), encoding='utf-8').read()
     pars = re.findall(r'<div class="par[^"]*"[^>]*>(.*?)</div>', pg, re.S)

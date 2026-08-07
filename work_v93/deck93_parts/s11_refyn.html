@@ -19,38 +19,50 @@
 
   <div class="z hr" style="top:212px"></div>
 
-  <!-- il ciclo: tre stazioni su un asse, con il ritorno alle priorita' -->
-  <svg width="1152" height="262" viewBox="0 0 1152 262"
-       style="position:absolute;left:64px;top:244px" role="img" aria-labelledby="r1t r1d">
-    <title id="r1t">Il ciclo di Refyn</title>
-    <desc id="r1d">Tre stazioni su un asse orizzontale: priorit&agrave;, azioni, verifica. Dalla
-      verifica una linea di ritorno riporta alle priorit&agrave; del ciclo successivo.</desc>
-
-    <path d="M0 18.5 L1152 18.5" stroke="rgba(255,255,255,.30)"/>
-    <g fill="#FFFFFF"><rect x="0" y="12" width="13" height="13"/><rect x="430" y="12" width="13" height="13"/></g>
-    <rect x="820" y="12" width="13" height="13" fill="#E6E011"/>
-
-    <g font-family="Geist" font-size="40" font-weight="600" fill="#FFFFFF" letter-spacing="-1.6">
-      <text x="0" y="80">Priorit&#224;</text><text x="430" y="80">Azioni</text>
-      <text x="820" y="80">Verifica</text>
-    </g>
-
-    <g font-family="Geist" font-size="16" fill="rgba(255,255,255,.72)">
-      <text x="0" y="122">Backlog delle opportunit&#224;</text><text x="0" y="150">Impatto</text>
-      <text x="0" y="178">Baseline</text><text x="0" y="206">Target</text>
-
-      <text x="430" y="122">Attivit&#224;</text><text x="430" y="150">Responsabile</text>
-      <text x="430" y="178">Scadenza</text><text x="430" y="206">Stato</text>
-
-      <text x="820" y="122">Confronto con la baseline</text><text x="820" y="150">Periodo</text>
-      <text x="820" y="178">Beneficio</text><text x="820" y="206">Revisione delle priorit&#224;</text>
-    </g>
-
-    <!-- il ritorno: dalla verifica alle priorita' del ciclo successivo -->
-    <path d="M826 226 L826 240 L6 240 L6 230" stroke="rgba(255,255,255,.30)" fill="none"/>
-    <path d="M6 226 L1 236 L11 236 Z" fill="rgba(255,255,255,.44)"/>
-    <text x="24" y="258" font-family="Geist" font-size="14" fill="rgba(255,255,255,.44)">i risultati verificati aggiornano le priorit&#224; del ciclo successivo</text>
+  <!-- l'asse del ciclo: solo la linea e le tre stazioni. I contenuti stanno
+       negli elenchi HTML sotto, che hanno indice e filetto come ovunque. -->
+  <svg width="1152" height="26" viewBox="0 0 1152 26"
+       style="position:absolute;left:64px;top:238px" role="img" aria-labelledby="r1t r1d">
+    <title id="r1t">Le tre stazioni del ciclo</title>
+    <desc id="r1d">Priorit&agrave;, azioni e verifica su un asse orizzontale. La verifica
+      riporta alle priorit&agrave; del ciclo successivo.</desc>
+    <path d="M0 6.5 L1152 6.5" stroke="rgba(255,255,255,.30)"/>
+    <g fill="#FFFFFF"><rect x="0" y="0" width="13" height="13"/><rect x="430" y="0" width="13" height="13"/></g>
+    <rect x="820" y="0" width="13" height="13" fill="#E6E011"/>
   </svg>
+
+  <div style="position:absolute;left:64px;top:268px;width:1152px" class="cols cols--rule">
+    <div class="col">
+      <div class="pk__n" style="font-size:38px">Priorit&agrave;</div>
+      <div class="ls__k">che cosa vale la pena aprire</div>
+      <ul class="ls">
+        <li><b>01</b><span>Backlog delle opportunit&agrave;</span></li>
+        <li><b>02</b><span>Ordinamento per impatto</span></li>
+        <li><b>03</b><span>Baseline dichiarata</span></li>
+        <li><b>04</b><span>Target concordato</span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="pk__n" style="font-size:38px">Azioni</div>
+      <div class="ls__k">chi fa che cosa, entro quando</div>
+      <ul class="ls">
+        <li><b>05</b><span>Attivit&agrave;</span></li>
+        <li><b>06</b><span>Responsabile</span></li>
+        <li><b>07</b><span>Scadenza</span></li>
+        <li><b>08</b><span>Stato ed evidenze</span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="pk__n" style="font-size:38px">Verifica</div>
+      <div class="ls__k">se ha funzionato, e di quanto</div>
+      <ul class="ls">
+        <li><b>09</b><span>Confronto con la baseline</span></li>
+        <li><b>10</b><span>Periodo di osservazione</span></li>
+        <li><b>11</b><span>Beneficio verificato</span></li>
+        <li><b>12</b><span>Revisione delle priorit&agrave;</span></li>
+      </ul>
+    </div>
+  </div>
 
   <div class="z" style="top:520px;width:1000px">
     <div class="lbl">Risultato</div>
@@ -58,7 +70,7 @@
       non un elenco di buone intenzioni.</div>
   </div>
 
-  <div class="z" style="top:626px;width:1152px">
+  <div class="z" style="top:616px;width:1152px">
     <div class="act">Progetto pilota dedicato &middot; perimetro e modello economico concordati</div>
   </div>
 

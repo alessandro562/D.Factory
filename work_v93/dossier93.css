@@ -181,3 +181,35 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
    14,5 px, che resta sopra il minimo di 14 px del brief. */
 .tb--dense>div{padding:3px 18px 3px 0;font-size:14.5px;line-height:1.45}
 .tb--dense .tb__h{padding:7px 18px 7px 0!important}
+
+/* ==========================================================================
+   V9.3 · revisione di design · elenchi e matrici
+   ========================================================================== */
+
+/* elenco strutturato: vale la stessa ragione del deck. Un elenco separato da
+   <br> non ha ritmo ne' ancore. */
+.ls{display:block;margin:0;padding:0}
+.ls li{list-style:none;display:flex;gap:16px;align-items:baseline;
+  padding:7px 0;border-top:1px solid var(--l-line)}
+.dk .ls li{border-top-color:var(--d-line)}
+.ls li:last-child{border-bottom:1px solid var(--l-line)}
+.dk .ls li:last-child{border-bottom-color:var(--d-line)}
+.ls b{font-family:var(--mono);font-size:13px;font-weight:400;flex:none;width:16px;
+  letter-spacing:.04em}
+.lt .ls b{color:rgba(10,10,10,.42)} .dk .ls b{color:rgba(255,255,255,.38)}
+.ls span{font-size:15.5px;line-height:1.34}
+.lt .ls span{color:var(--l1)} .dk .ls span{color:rgba(255,255,255,.92)}
+.ls__k{font-size:14.5px;line-height:1.45;margin:6px 0 14px}
+.lt .ls__k{color:var(--l3)} .dk .ls__k{color:var(--d3)}
+
+.cols--rule .col{padding-right:34px;border-right:1px solid var(--l-line)}
+.dk .cols--rule .col{border-right-color:var(--d-line)}
+.cols--rule .col:last-child{border-right:none;padding-right:0}
+
+/* la matrice legge come progressione: il valore e' anche un tono */
+.mv0{fill:rgba(10,10,10,.22)}
+.mv1{fill:rgba(10,10,10,.52)}
+.mv2{fill:#0A0A0A}
+.mc0{color:rgba(10,10,10,.30)}
+.mc1{color:rgba(10,10,10,.56)}
+.mc2{color:#0A0A0A;font-weight:500}

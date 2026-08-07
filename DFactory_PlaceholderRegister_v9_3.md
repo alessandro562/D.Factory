@@ -30,10 +30,10 @@ impalcatura e non testo del documento.
 | `PH_AUTHENTICATION_MODEL` | P0 | G4 | SECTION | VALIDAZIONE TECNICA | p12_security* · pa3_requisiti |
 | `PH_BACKUP_POLICY` | P0 | G4 | SECTION | VALIDAZIONE TECNICA | pa3_requisiti |
 | `PH_CASE_STUDY_READY` | P0 | CASE | PAGE | INPUT APERTO | s16_caso* |
-| `PH_COMPANY_LEGAL_NAME` | P0 | G1 | GLOBAL | INPUT APERTO | p01_cover · p01_cover* |
+| `PH_COMPANY_LEGAL_NAME` | P0 | G1 | GLOBAL | INPUT APERTO | p18_chiusura |
 | `PH_CONNECT_ANNUAL_FEE` | P0 | G2 | SECTION | DECISIONE COMMERCIALE | a3_pricing · s09_connect* · s14_valore* |
-| `PH_CONTACT_EMAIL` | P0 | G1 | GLOBAL | INPUT APERTO | p01_cover · p01_cover* |
-| `PH_CONTACT_NAME` | P0 | G1 | GLOBAL | INPUT APERTO | p01_cover · p01_cover* · s15_pilot_cta |
+| `PH_CONTACT_EMAIL` | P0 | G1 | GLOBAL | INPUT APERTO | p18_chiusura |
+| `PH_CONTACT_NAME` | P0 | G1 | GLOBAL | INPUT APERTO | p18_chiusura · s15_pilot_cta |
 | `PH_CONTACT_ROLE` | P0 | G1 | GLOBAL | INPUT APERTO | — |
 | `PH_CONTRACT_TERM` | P0 | G2 | SECTION | DECISIONE COMMERCIALE | a3_pricing |
 | `PH_DATASET_ENERGY_PRICE` | P0 | G3 | SECTION | VALIDAZIONE TECNICA | — |
@@ -230,7 +230,7 @@ impalcatura e non testo del documento.
 | `PH_TERMINATION_TERMS` | P1 | — | NONE | INPUT APERTO | — |
 | `PH_TIME_SYNC_REQUIREMENT` | P1 | — | NONE | VALIDAZIONE TECNICA | p10_contesto* |
 | `PH_UPDATE_POLICY` | P1 | — | NONE | VALIDAZIONE TECNICA | p17_servizi* |
-| `PH_VERSION_DATE` | P1 | — | NONE | INPUT APERTO | p01_cover · p01_cover* |
+| `PH_VERSION_DATE` | P1 | — | NONE | INPUT APERTO | p18_chiusura |
 | `PH_VIRTUALIZATION_SUPPORT` | P1 | — | NONE | VALIDAZIONE TECNICA | — |
 | `PH_VULNERABILITY_POLICY` | P1 | — | NONE | VALIDAZIONE TECNICA | — |
 | `PH_BANDWIDTH_REQUIREMENT` | P2 | — | NONE | VALIDAZIONE TECNICA | — |

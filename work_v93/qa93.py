@@ -77,7 +77,7 @@ JS = r"""
       // impalcatura editoriale della working edition: e' metadato sul documento,
       // non testo del documento. Nella client edition non esiste.
       const isPh = !!p.closest('[data-ed="working"]');
-      const isMeta = !!(p.closest('.hd, .ft, .rail, .note, .lbl, .seg, .dev, .act') ||
+      const isMeta = !!(p.closest('.hd, .ft, .rail, .note, .lbl, .seg, .dev, .act, .ls__k, .ls b') ||
                         p.classList.contains('note') || p.classList.contains('pg') ||
                         p.classList.contains('lbl') || p.classList.contains('seg') ||
                         p.classList.contains('dev') || p.classList.contains('act') ||

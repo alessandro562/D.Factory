@@ -11,7 +11,7 @@ di quanto una pagina mostra il prodotto invece di raccontarlo.
 
 | # | canvas | fondo | tipo | vis | fascia | titolo |
 |--:|---|:--:|---|--:|--:|---|
-| 01 | `s01_promessa` | dk | narrativa | 1 | 0 | Dalla linea al margine,nello stesso dato. |
+| 01 | `s01_promessa` | dk | narrativa | 0 | 0 | Dalla linea al margine,nello stesso dato. |
 | 02 | `s02_problema` | lt | narrativa | 0 | 0 | I dati esistono.Le decisioni restano frammentate. |
 | 03 | `s03_visione` | lt | narrativa | 0 | 0 | Un solo contesto operativo per macchina,linea, turno e prodo |
 | 04 | `s04_trasformazione` | mx | narrativa | 0 | 0 | Dalla lettura separataa una gestione condivisa. |
@@ -33,7 +33,7 @@ di quanto una pagina mostra il prodotto invece di raccontarlo.
 **Fondi** · dk lt lt mx lt dk lt dk lt gr dk lt dk lt dk lt lt lt
 
 - pagine scure: 6 su 18
-- canvas con vista di prodotto: 3
+- canvas con vista di prodotto: 2
 - tre fondi uguali di fila: PRESENTE
 
 ## Dossier tecnico
@@ -59,11 +59,12 @@ di quanto una pagina mostra il prodotto invece di raccontarlo.
 | 17 | `p17_servizi` | lt | delivery | 0 | 0 | Servizi professionali e continuità operativa |
 | 18 | `pa1_compatibilita` | lt | annesso | 0 | 0 | La compatibilità si verifica sull’impianto reale |
 | 19 | `pa2_sizing` | lt | annesso | 0 | 0 | Il dimensionamento si calcola, non si sceglie a listino |
-| 20 | `pa3_requisiti` | lt | annesso | 0 | 0 | Requisiti IT e security · raccolta per il solution design |
+| 20 | `pa3_requisiti` | lt | annesso | 0 | 0 | Requisiti IT e security · da compilare con l’IT |
 | 21 | `pa4_kpi` | lt | annesso | 0 | 0 | Ogni indicatore ha una formula scritta |
+| 22 | `p18_chiusura` | dk | apertura | 0 | 0 |  |
 
-**Fondi** · dk dk lt lt lt lt lt lt mx dk lt lt mx lt lt dk lt lt lt lt lt
+**Fondi** · dk dk lt lt lt lt lt lt mx dk lt lt mx lt lt dk lt lt lt lt lt dk
 
-- pagine scure: 4 su 21
+- pagine scure: 5 su 22
 - canvas con vista di prodotto: 2
 - tre fondi uguali di fila: PRESENTE
