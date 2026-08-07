@@ -24,23 +24,44 @@
     </div>
   </div>
 
-  <svg width="1152" height="150" viewBox="0 0 1152 150"
-       style="position:absolute;left:64px;top:376px" role="img" aria-labelledby="p2t p2d">
-    <title id="p2t">Tre letture che non si incontrano</title>
-    <desc id="p2d">Tre linee parallele procedono senza toccarsi. A destra il punto in cui
-      dovrebbe nascere la decisione resta vuoto.</desc>
-    <g stroke="rgba(10,10,10,.26)">
-      <path d="M0 20.5 L880 20.5"/><path d="M0 60.5 L880 60.5"/><path d="M0 100.5 L880 100.5"/>
+  <!-- Il disegno precedente erano tre linee parallele: non mostrava niente,
+       perche' una mancata convergenza si veda deve prima esserci
+       l'aspettativa che convergano. Qui l'argomento e' un altro e si vede:
+       le tre funzioni misurano lo stesso impianto su finestre temporali che
+       non coincidono. Un asse solo, tre barre che non si sovrappongono. -->
+  <svg width="1152" height="200" viewBox="0 0 1152 200"
+       style="position:absolute;left:64px;top:356px" role="img" aria-labelledby="p2t p2d">
+    <title id="p2t">Tre funzioni, tre finestre di osservazione sullo stesso impianto</title>
+    <desc id="p2d">Un solo asse: un mese di produzione. La produzione guarda il singolo
+      turno, l&rsquo;energia il mese della bolletta, la direzione la settimana del report.
+      Le tre finestre non coincidono, e per questo le tre letture non arrivano alla stessa
+      priorit&agrave;.</desc>
+
+    <text x="0" y="12" font-family="Geist" font-size="14" fill="rgba(10,10,10,.55)">Lo stesso impianto, un mese di produzione</text>
+
+    <g fill="rgba(10,10,10,.07)">
+      <rect x="210" y="40" width="670" height="24"/>
+      <rect x="210" y="94" width="670" height="24"/>
+      <rect x="210" y="148" width="670" height="24"/>
     </g>
-    <g fill="#0A0A0A"><rect x="0" y="15" width="11" height="11"/>
-      <rect x="0" y="55" width="11" height="11"/><rect x="0" y="95" width="11" height="11"/></g>
-    <rect x="946" y="14" width="206" height="94" fill="none" stroke="rgba(10,10,10,.26)"
-          stroke-dasharray="5 5"/>
-    <text x="1049" y="58" font-family="Geist" font-size="15" fill="rgba(10,10,10,.56)"
-          text-anchor="middle">nessuna</text>
-    <text x="1049" y="80" font-family="Geist" font-size="15" fill="rgba(10,10,10,.56)"
-          text-anchor="middle">priorit&#224; comune</text>
-    <text x="0" y="140" font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">tre letture della stessa linea, su tempi e perimetri diversi</text>
+    <g fill="#0A0A0A">
+      <rect x="210" y="40" width="56" height="24"/>
+      <rect x="210" y="94" width="670" height="24"/>
+      <rect x="378" y="148" width="168" height="24"/>
+    </g>
+
+    <g font-family="Geist" font-size="16" font-weight="600" fill="#0A0A0A">
+      <text x="0" y="58">Produzione</text><text x="0" y="112">Energia</text>
+      <text x="0" y="166">Direzione</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.60)">
+      <text x="900" y="58">il turno &middot; quanto si &egrave; perso</text>
+      <text x="900" y="112">il mese &middot; quanto si &egrave; consumato</text>
+      <text x="900" y="166">la settimana &middot; dove intervenire</text>
+    </g>
+
+    <path d="M210 186 L880 186" stroke="rgba(10,10,10,.20)"/>
+    <text x="0" y="196" font-family="Geist" font-size="14" fill="rgba(10,10,10,.55)">Nessuna finestra coincide con le altre.</text>
   </svg>
 
   <div class="z" style="top:566px;width:1100px">

@@ -271,23 +271,44 @@ h2.sm{font-size:44px}
     </div>
   </div>
 
-  <svg width="1152" height="150" viewBox="0 0 1152 150"
-       style="position:absolute;left:64px;top:376px" role="img" aria-labelledby="p2t p2d">
-    <title id="p2t">Tre letture che non si incontrano</title>
-    <desc id="p2d">Tre linee parallele procedono senza toccarsi. A destra il punto in cui
-      dovrebbe nascere la decisione resta vuoto.</desc>
-    <g stroke="rgba(10,10,10,.26)">
-      <path d="M0 20.5 L880 20.5"/><path d="M0 60.5 L880 60.5"/><path d="M0 100.5 L880 100.5"/>
+  <!-- Il disegno precedente erano tre linee parallele: non mostrava niente,
+       perche' una mancata convergenza si veda deve prima esserci
+       l'aspettativa che convergano. Qui l'argomento e' un altro e si vede:
+       le tre funzioni misurano lo stesso impianto su finestre temporali che
+       non coincidono. Un asse solo, tre barre che non si sovrappongono. -->
+  <svg width="1152" height="200" viewBox="0 0 1152 200"
+       style="position:absolute;left:64px;top:356px" role="img" aria-labelledby="p2t p2d">
+    <title id="p2t">Tre funzioni, tre finestre di osservazione sullo stesso impianto</title>
+    <desc id="p2d">Un solo asse: un mese di produzione. La produzione guarda il singolo
+      turno, l&rsquo;energia il mese della bolletta, la direzione la settimana del report.
+      Le tre finestre non coincidono, e per questo le tre letture non arrivano alla stessa
+      priorit&agrave;.</desc>
+
+    <text x="0" y="12" font-family="Geist" font-size="14" fill="rgba(10,10,10,.55)">Lo stesso impianto, un mese di produzione</text>
+
+    <g fill="rgba(10,10,10,.07)">
+      <rect x="210" y="40" width="670" height="24"/>
+      <rect x="210" y="94" width="670" height="24"/>
+      <rect x="210" y="148" width="670" height="24"/>
     </g>
-    <g fill="#0A0A0A"><rect x="0" y="15" width="11" height="11"/>
-      <rect x="0" y="55" width="11" height="11"/><rect x="0" y="95" width="11" height="11"/></g>
-    <rect x="946" y="14" width="206" height="94" fill="none" stroke="rgba(10,10,10,.26)"
-          stroke-dasharray="5 5"/>
-    <text x="1049" y="58" font-family="Geist" font-size="15" fill="rgba(10,10,10,.56)"
-          text-anchor="middle">nessuna</text>
-    <text x="1049" y="80" font-family="Geist" font-size="15" fill="rgba(10,10,10,.56)"
-          text-anchor="middle">priorit&#224; comune</text>
-    <text x="0" y="140" font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">tre letture della stessa linea, su tempi e perimetri diversi</text>
+    <g fill="#0A0A0A">
+      <rect x="210" y="40" width="56" height="24"/>
+      <rect x="210" y="94" width="670" height="24"/>
+      <rect x="378" y="148" width="168" height="24"/>
+    </g>
+
+    <g font-family="Geist" font-size="16" font-weight="600" fill="#0A0A0A">
+      <text x="0" y="58">Produzione</text><text x="0" y="112">Energia</text>
+      <text x="0" y="166">Direzione</text>
+    </g>
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.60)">
+      <text x="900" y="58">il turno &middot; quanto si &egrave; perso</text>
+      <text x="900" y="112">il mese &middot; quanto si &egrave; consumato</text>
+      <text x="900" y="166">la settimana &middot; dove intervenire</text>
+    </g>
+
+    <path d="M210 186 L880 186" stroke="rgba(10,10,10,.20)"/>
+    <text x="0" y="196" font-family="Geist" font-size="14" fill="rgba(10,10,10,.55)">Nessuna finestra coincide con le altre.</text>
   </svg>
 
   <div class="z" style="top:566px;width:1100px">
@@ -615,16 +636,16 @@ h2.sm{font-size:44px}
       il quarantatr&eacute; per cento del costo di fermo della settimana. Scenario
       illustrativo.</desc>
 
-    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
-      <text x="26" y="16">Causa</text>
-      <text x="560" y="16" text-anchor="end">Eventi</text>
-      <text x="700" y="16" text-anchor="end">Durata</text>
-      <text x="1152" y="16" text-anchor="end">Costo stimato</text>
+    <g font-family="Geist" font-size="14" font-weight="500" fill="rgba(10,10,10,.50)" letter-spacing=".04em">
+      <text x="26" y="16">CAUSA</text>
+      <text x="560" y="16" text-anchor="end">EVENTI</text>
+      <text x="700" y="16" text-anchor="end">DURATA</text>
+      <text x="1152" y="16" text-anchor="end">COSTO STIMATO</text>
     </g>
     <path d="M0 30 L1152 30" stroke="rgba(10,10,10,.26)"/>
 
     <rect x="0" y="56" width="12" height="12" fill="#E6E011"/>
-    <g font-family="Geist" font-size="17" fill="#0A0A0A">
+    <g font-family="Geist" font-size="16.5" font-weight="600" fill="#0A0A0A">
       <text x="26" y="67">Mancanza tappi</text>
       <text x="26" y="121">Cambio formato</text>
       <text x="26" y="175">Micro-fermate</text>
@@ -636,7 +657,7 @@ h2.sm{font-size:44px}
       <rect x="760" y="163" width="85" height="14"/>
       <rect x="760" y="217" width="52" height="14"/>
     </g>
-    <g font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)" text-anchor="end">
+    <g font-family="Geist" font-size="14.5" fill="rgba(10,10,10,.62)" text-anchor="end">
       <text x="560" y="67">14</text><text x="700" y="67">96 min</text>
       <text x="560" y="121">4</text><text x="700" y="121">62 min</text>
       <text x="560" y="175">38</text><text x="700" y="175">41 min</text>
@@ -650,7 +671,7 @@ h2.sm{font-size:44px}
       <path d="M0 86 L1152 86"/><path d="M0 140 L1152 140"/><path d="M0 194 L1152 194"/>
     </g>
     <path d="M0 248 L1152 248" stroke="rgba(10,10,10,.26)"/>
-    <text x="0" y="278" font-family="Geist" font-size="15" fill="rgba(10,10,10,.74)">Sette giorni &middot; 58 eventi &middot; 224 minuti</text>
+    <text x="0" y="278" font-family="Geist" font-size="14.5" fill="rgba(10,10,10,.62)">Sette giorni &middot; 58 eventi &middot; 224 minuti</text>
     <text x="1152" y="280" font-family="Geist" font-size="24" font-weight="600" fill="#0A0A0A"
           text-anchor="end">15.680 &euro;</text>
   </svg>
@@ -968,15 +989,15 @@ h2.sm{font-size:44px}
       comprende Connect, Refyn comprende entrambi. Le ultime due righe, azioni e verifica
       dei benefici, sono previste nel livello Refyn.</desc>
 
-    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
-      <text x="26" y="16">Capacit&#224;</text>
-      <text x="770" y="16" text-anchor="middle">Connect</text>
-      <text x="940" y="16" text-anchor="middle">Insight</text>
-      <text x="1110" y="16" text-anchor="middle">Refyn</text>
+    <g font-family="Geist" font-size="14" font-weight="500" fill="rgba(10,10,10,.50)" letter-spacing=".04em">
+      <text x="26" y="16">CAPACIT&#192;</text>
+      <text x="770" y="16" text-anchor="middle">CONNECT</text>
+      <text x="940" y="16" text-anchor="middle">INSIGHT</text>
+      <text x="1110" y="16" text-anchor="middle">REFYN</text>
     </g>
     <path d="M0 30 L1152 30" stroke="rgba(10,10,10,.26)"/>
 
-    <g font-family="Geist" font-size="16" fill="#0A0A0A">
+    <g font-family="Geist" font-size="16" font-weight="500" fill="#0A0A0A">
       <text x="26" y="60">Stato, produzione e storico</text>
       <text x="26" y="96">OEE e KPI standard</text>
       <text x="26" y="132">Energia e utility</text>
@@ -1236,15 +1257,15 @@ h2.sm{font-size:44px}
       comprende entrambi. Il perimetro effettivo dipende dai dati disponibili e dalla
       configurazione dell&rsquo;impianto.</desc>
 
-    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
-      <text x="0" y="14">Area</text><text x="150" y="14">Capacit&#224;</text>
+    <g font-family="Geist" font-size="14" font-weight="500" fill="rgba(10,10,10,.50)" letter-spacing=".04em">
+      <text x="0" y="14">AREA</text><text x="150" y="14">CAPACIT&#192;</text>
       <text x="790" y="14" text-anchor="middle">Connect</text>
       <text x="950" y="14" text-anchor="middle">Insight</text>
       <text x="1105" y="14" text-anchor="middle">Refyn</text>
     </g>
     <path d="M0 28 L1152 28" stroke="rgba(10,10,10,.26)"/>
 
-    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.50)">
+    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.44)">
       <text x="0" y="56">Supervisione</text><text x="0" y="88">Supervisione</text>
       <text x="0" y="120">Produzione</text><text x="0" y="152">Produzione</text>
       <text x="0" y="184">OEE</text><text x="0" y="216">OEE</text>
@@ -1254,7 +1275,7 @@ h2.sm{font-size:44px}
       <text x="0" y="440">Miglioramento</text><text x="0" y="472">Output</text>
     </g>
 
-    <g font-family="Geist" font-size="15" fill="#0A0A0A">
+    <g font-family="Geist" font-size="15.5" font-weight="500" fill="#0A0A0A">
       <text x="150" y="56">Stato di macchina e linea in tempo reale</text>
       <text x="150" y="88">Timeline di marcia, fermo e causa associata</text>
       <text x="150" y="120">Conteggi, velocit&#224; e avanzamento dell&#8217;ordine</text>
@@ -1352,14 +1373,14 @@ h2.sm{font-size:44px}
       erogato e se &egrave; compreso nell&rsquo;avvio o resta opzionale. Il regime di ogni
       servizio &egrave; indicato nella proposta economica.</desc>
 
-    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.56)">
-      <text x="0" y="14">Servizio</text><text x="250" y="14">Che cosa comprende</text>
-      <text x="596" y="14">Deliverable</text><text x="836" y="14">Quando</text>
-      <text x="1152" y="14" text-anchor="end">Regime</text>
+    <g font-family="Geist" font-size="14" font-weight="500" fill="rgba(10,10,10,.50)" letter-spacing=".04em">
+      <text x="0" y="14">SERVIZIO</text><text x="250" y="14">CHE COSA COMPRENDE</text>
+      <text x="596" y="14">DELIVERABLE</text><text x="836" y="14">QUANDO</text>
+      <text x="1152" y="14" text-anchor="end">REGIME</text>
     </g>
     <path d="M0 28 L1152 28" stroke="rgba(10,10,10,.26)"/>
 
-    <g font-family="Geist" font-size="15" fill="#0A0A0A">
+    <g font-family="Geist" font-size="16" font-weight="600" fill="#0A0A0A">
       <text x="0" y="58">Assessment e perimetrazione</text>
       <text x="0" y="102">Setup e integrazione</text>
       <text x="0" y="146">KPI e formule</text>
@@ -1370,7 +1391,7 @@ h2.sm{font-size:44px}
       <text x="0" y="366">Supporto</text>
       <text x="0" y="410">Estensione a nuove linee</text>
     </g>
-    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">
+    <g font-family="Geist" font-size="14.5" fill="rgba(10,10,10,.62)">
       <text x="250" y="58">dati disponibili, gap e perimetro</text>
       <text x="250" y="102">connettori, mapping e ambiente</text>
       <text x="250" y="146">dizionario, soglie e viste</text>
@@ -1381,7 +1402,7 @@ h2.sm{font-size:44px}
       <text x="250" y="366">canale, tempi e aggiornamenti</text>
       <text x="250" y="410">replica della configurazione</text>
     </g>
-    <g font-family="Geist" font-size="14" fill="rgba(10,10,10,.74)">
+    <g font-family="Geist" font-size="14.5" fill="rgba(10,10,10,.62)">
       <text x="596" y="58">mappa dei dati e dei gap</text>
       <text x="596" y="102">ambiente collegato</text>
       <text x="596" y="146">dizionario delle formule</text>
@@ -1450,7 +1471,7 @@ h2.sm{font-size:44px}
       contenuto dell&rsquo;avvio, passaggio dal pilot alla scala, dati mancanti. Le domande
       su residenza dei dati e integrazione con il gestionale sono nel dossier tecnico.</desc>
 
-    <g font-family="Geist" font-size="17" font-weight="600" fill="#0A0A0A">
+    <g font-family="Geist" font-size="17" font-weight="650" fill="#0A0A0A">
       <text x="0" y="24">Quanto tempo serve per i primi risultati?</text>
       <text x="0" y="94">Serve fermare la linea per partire?</text>
       <text x="0" y="164">Funziona su macchine di marche diverse?</text>
@@ -1458,7 +1479,7 @@ h2.sm{font-size:44px}
       <text x="0" y="304">Come si passa dal pilot alla scala?</text>
       <text x="0" y="374">Che cosa succede se mancano dei dati?</text>
     </g>
-    <g font-family="Geist" font-size="16" fill="rgba(10,10,10,.74)">
+    <g font-family="Geist" font-size="15.5" fill="rgba(10,10,10,.66)">
       <text x="496" y="24">Il pilot produce una baseline e le prime cause ordinate per impatto.</text>
       <text x="496" y="48">La durata viene fissata in perimetrazione, sui dati disponibili.</text>
 

@@ -34,7 +34,7 @@ che lo copra: `accept93.py` condizione 6.
 | `disponibilit` | 1 | 4 |
 | `costo energetico` | 2 | 3 |
 | `calcolata o stimata` | 1 | 2 |
-| `comprende` | 12 | 2 |
+| `comprende` | 11 | 2 |
 | `in sviluppo` | 1 | 1 |
 | `gi&agrave; presenti` | 1 | 1 |
 | `da verificare sul perimetro` | 0 | 1 |

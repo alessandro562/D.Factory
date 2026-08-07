@@ -13,7 +13,7 @@ slide ripetuta tre volte.
 | # | canvas | blocchi | firma |
 |--:|---|--:|---|
 | 01 | `s01_promessa` | 5 | `dk/narrativa/div@72h24w1120|div@288h0w80|div@312h144w1120|div@504h24w800|div@672h24w1120` |
-| 02 | `s02_problema` | 5 | `lt/narrativa/div@48h96w1120|div@216h96w1120|svg@384h144w1120|div@576h72w1120|div@672h24w1120` |
+| 02 | `s02_problema` | 5 | `lt/narrativa/div@48h96w1120|div@216h96w1120|svg@360h192w1120|div@576h72w1120|div@672h24w1120` |
 | 03 | `s03_visione` | 5 | `lt/narrativa/div@48h96w1120|div@192h48w1040|svg@312h192w1120|div@552h24w1120|div@672h24w1120` |
 | 04 | `s04_trasformazione` | 4 | `mx/narrativa/div@48h96w1120|svg@192h360w1120|div@552h24w1120|div@672h24w1120` |
 | 05 | `s05_prodotto` | 3 | `lt/prodotto/div@48h96w1120|svg@144h480w1280|div@672h24w1120` |

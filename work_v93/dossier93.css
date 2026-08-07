@@ -213,3 +213,11 @@ body{font-family:var(--ui);-webkit-font-smoothing:antialiased;font-feature-setti
 .mc0{color:rgba(10,10,10,.30)}
 .mc1{color:rgba(10,10,10,.56)}
 .mc2{color:#0A0A0A;font-weight:500}
+
+/* Scala di pesi nelle tabelle: prima intestazione, concetto e spiegazione
+   avevano quasi lo stesso peso e la tabella si leggeva come un blocco unico.
+   La prima colonna porta il concetto, le altre lo spiegano — e si vede. */
+.tb>div:not(.tb__h) b{font-weight:600}
+.tb--dense>div,.tb--tight>div{color:rgba(10,10,10,.66)}
+.tb--dense>div:has(b),.tb--tight>div:has(b){color:var(--l1)}
+.tb__h{letter-spacing:.06em}
